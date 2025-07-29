@@ -1,0 +1,49 @@
+{
+  "gadgets": [
+    {
+      "id": "gadget_001",
+      "name": "Smartphone X",
+      "category": "Mobile",
+      "features": "6GB RAM, 128GB Storage, 48MP Camera",
+      "target_price": 299,
+      "supplier": "TechCorp",
+      "status": "available"
+    },
+    {
+      "id": "gadget_002", 
+      "name": "Smartwatch Y",
+      "category": "Wearable",
+      "features": "Heart Rate Monitor, GPS, Water Resistant",
+      "target_price": 99,
+      "supplier": "WearTech",
+      "status": "available"
+    },
+    {
+      "id": "gadget_003",
+      "name": "Wireless Earbuds Pro",
+      "category": "Audio",
+      "features": "Noise Cancelling, 24hr Battery, Touch Controls",
+      "target_price": 149,
+      "supplier": "AudioMax",
+      "status": "available"
+    },
+    {
+      "id": "gadget_004",
+      "name": "Tablet Z",
+      "category": "Computing",
+      "features": "10.1 inch Display, 64GB Storage, 4G LTE",
+      "target_price": 199,
+      "supplier": "TabTech",
+      "status": "available"
+    },
+    {
+      "id": "gadget_005",
+      "name": "Smart Speaker",
+      "category": "Home",
+      "features": "Voice Assistant, Bluetooth, Multi-room Audio",
+      "target_price": 79,
+      "supplier": "HomeTech",
+      "status": "available"
+    }
+  ]
+} 

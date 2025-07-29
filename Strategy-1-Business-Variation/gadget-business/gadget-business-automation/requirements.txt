@@ -1,0 +1,53 @@
+# Web scraping and HTTP requests
+requests>=2.28.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# Data processing and analysis
+pandas>=1.5.0
+numpy>=1.24.0
+
+# API integration
+google-api-python-client>=2.0.0
+tweepy>=4.12.0
+facebook-sdk>=3.1.0
+
+# Database and storage
+sqlite3
+sqlalchemy>=1.4.0
+
+# Email and messaging
+smtplib
+twilio>=7.17.0
+
+# Payment processing
+stripe>=5.0.0
+paypalrestsdk>=1.13.0
+
+# Social media automation
+facebook-business>=16.0.0
+tweepy>=4.12.0
+
+# E-commerce APIs
+shopify>=8.0.0
+woocommerce>=3.0.0
+
+# Analytics and monitoring
+google-analytics-api>=0.1.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Utilities
+python-dotenv>=0.19.0
+click>=8.1.0
+rich>=12.0.0
+tqdm>=4.64.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development tools
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.991 
