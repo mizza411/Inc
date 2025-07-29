@@ -260,17 +260,92 @@ def run_step_by_step_wizard(gadget):
 
 def run_funding_stage(gadget):
     """Step 1: Funding & Capital Acquisition"""
-    print("💰 Applying for grants and funding opportunities...")
+    print("💰 Analyzing pricing and financial data for funding...")
+    
+    # Get pricing information from sourcing options
+    sourcing_options = gadget.get('sourcing_options', [])
+    best_source = gadget.get('best_source', 'Unknown')
+    
+    # Extract pricing data
+    product_cost = None
+    retail_price = None
+    profit_margin = None
+    
+    for option in sourcing_options:
+        if option.get('platform') == best_source:
+            price_str = option.get('price', 'N/A')
+            if price_str != 'N/A':
+                # Extract numeric price (remove currency symbols)
+                import re
+                price_match = re.search(r'[\d,]+\.?\d*', price_str)
+                if price_match:
+                    product_cost = float(price_match.group().replace(',', ''))
+                    # Estimate retail price (2.5x markup for B2B, 3x for B2C)
+                    if best_source in ['Alibaba', 'Local Suppliers']:
+                        retail_price = product_cost * 2.5
+                    else:
+                        retail_price = product_cost * 3.0
+                    profit_margin = ((retail_price - product_cost) / retail_price) * 100
+            break
+    
+    print(f"📊 Product Cost: ${product_cost:.2f}" if product_cost else "📊 Product Cost: N/A")
+    print(f"💰 Estimated Retail Price: ${retail_price:.2f}" if retail_price else "💰 Estimated Retail Price: N/A")
+    print(f"📈 Estimated Profit Margin: {profit_margin:.1f}%" if profit_margin else "📈 Estimated Profit Margin: N/A")
+    print(f"🎯 Best Source: {best_source}")
+    
+    # Calculate funding requirements based on pricing
+    if product_cost and retail_price:
+        initial_inventory_cost = product_cost * 100  # 100 units
+        marketing_budget = retail_price * 50  # 50 units worth
+        operational_costs = retail_price * 25  # 25 units worth
+        total_funding_needed = initial_inventory_cost + marketing_budget + operational_costs
+        
+        print(f"💼 Initial Inventory Cost: ${initial_inventory_cost:.2f}")
+        print(f"📢 Marketing Budget: ${marketing_budget:.2f}")
+        print(f"🏢 Operational Costs: ${operational_costs:.2f}")
+        print(f"🎯 Total Funding Needed: ${total_funding_needed:.2f}")
+    else:
+        total_funding_needed = 10000  # Default fallback
+        print(f"🎯 Total Funding Needed: ${total_funding_needed:.2f} (estimated)")
+    
+    print("\n💰 Applying for grants and funding opportunities...")
     grants = ["https://example.com/grant1", "https://example.com/loan2"]
-    business = {"name": f"{gadget['name']} Business", "owner": "Jane Doe"}
+    business = {
+        "name": f"{gadget['name']} Business", 
+        "owner": "Jane Doe",
+        "product_cost": product_cost,
+        "retail_price": retail_price,
+        "profit_margin": profit_margin,
+        "funding_needed": total_funding_needed
+    }
     print(apply_for_grants(grants, business))
     
     print("🎯 Launching crowdfunding campaign...")
-    print(launch_crowdfunding_campaign("Kickstarter", {"title": f"{gadget['name']} Launch", "goal": 10000}))
+    campaign_data = {
+        "title": f"{gadget['name']} Launch", 
+        "goal": total_funding_needed,
+        "product_cost": product_cost,
+        "retail_price": retail_price,
+        "profit_margin": profit_margin,
+        "demand_score": gadget.get('demand_score', 0),
+        "trend": gadget.get('trend', 'Unknown')
+    }
+    print(launch_crowdfunding_campaign("Kickstarter", campaign_data))
     
     print("📧 Sending pitch to investors...")
     investors = ["investor1@email.com", "investor2@email.com"]
-    print(send_pitch_to_investors(investors, "pitch_deck.pdf"))
+    pitch_data = {
+        "product_name": gadget['name'],
+        "product_cost": product_cost,
+        "retail_price": retail_price,
+        "profit_margin": profit_margin,
+        "funding_needed": total_funding_needed,
+        "demand_score": gadget.get('demand_score', 0),
+        "trend": gadget.get('trend', 'Unknown'),
+        "best_source": best_source,
+        "recommendation": gadget.get('recommendation', 'N/A')
+    }
+    print(send_pitch_to_investors(investors, pitch_data))
 
 def run_sourcing_stage(gadget):
     """Step 2: Supplier Sourcing & Inventory Management"""
