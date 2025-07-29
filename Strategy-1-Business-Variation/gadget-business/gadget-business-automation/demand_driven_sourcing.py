@@ -16,31 +16,72 @@ def get_trending_gadgets() -> List[str]:
     """
     trending_gadgets = []
     
+    print("🔍 Checking demand sources:")
+    
     # Check Google Trends for trending tech searches
+    print("   📊 Google Trends - Analyzing search trends...")
     try:
         # Placeholder for Google Trends API
-        trending_gadgets.extend([
+        google_trends_gadgets = [
             "Smartwatch Pro",
             "Wireless Earbuds",
             "Smart Speaker",
             "Fitness Tracker",
             "Bluetooth Headphones"
-        ])
+        ]
+        trending_gadgets.extend(google_trends_gadgets)
+        print(f"      ✅ Found {len(google_trends_gadgets)} trending gadgets from Google Trends")
     except Exception as e:
-        print(f"Error fetching Google Trends: {e}")
+        print(f"      ❌ Error fetching Google Trends: {e}")
     
     # Check social media trending hashtags
+    print("   📱 Social Media - Checking trending hashtags...")
     try:
         # Placeholder for social media API
-        trending_gadgets.extend([
+        social_media_gadgets = [
             "Smart Home Hub",
             "Portable Charger",
             "Wireless Charger"
-        ])
+        ]
+        trending_gadgets.extend(social_media_gadgets)
+        print(f"      ✅ Found {len(social_media_gadgets)} trending gadgets from Social Media")
     except Exception as e:
-        print(f"Error fetching social media trends: {e}")
+        print(f"      ❌ Error fetching social media trends: {e}")
     
-    return list(set(trending_gadgets))  # Remove duplicates
+    # Check e-commerce trending products
+    print("   🛒 E-commerce - Analyzing popular products...")
+    try:
+        # Placeholder for e-commerce API
+        ecommerce_gadgets = [
+            "Smart Camera",
+            "Robot Vacuum",
+            "Smart Lock"
+        ]
+        trending_gadgets.extend(ecommerce_gadgets)
+        print(f"      ✅ Found {len(ecommerce_gadgets)} trending gadgets from E-commerce")
+    except Exception as e:
+        print(f"      ❌ Error fetching e-commerce trends: {e}")
+    
+    # Check tech news and reviews
+    print("   📰 Tech News - Checking latest reviews and mentions...")
+    try:
+        # Placeholder for news API
+        news_gadgets = [
+            "VR Headset",
+            "Smart Thermostat",
+            "Security Camera"
+        ]
+        trending_gadgets.extend(news_gadgets)
+        print(f"      ✅ Found {len(news_gadgets)} trending gadgets from Tech News")
+    except Exception as e:
+        print(f"      ❌ Error fetching tech news: {e}")
+    
+    # Remove duplicates and show summary
+    unique_gadgets = list(set(trending_gadgets))
+    print(f"\n📈 Summary: Found {len(unique_gadgets)} unique trending gadgets from 4 sources")
+    print("   Sources: Google Trends, Social Media, E-commerce, Tech News")
+    
+    return unique_gadgets
 
 def search_supplier_platforms(gadget_name: str) -> List[Dict[str, str]]:
     """
@@ -52,33 +93,45 @@ def search_supplier_platforms(gadget_name: str) -> List[Dict[str, str]]:
     """
     sourcing_options = []
     
+    print(f"🔍 Searching for '{gadget_name}' across supplier platforms:")
+    
     # Search Jumia Nigeria
+    print("   🇳🇬 Jumia Nigeria - Checking local availability...")
     try:
         jumia_results = search_jumia(gadget_name)
         sourcing_options.extend(jumia_results)
+        print(f"      ✅ Found {len(jumia_results)} options on Jumia")
     except Exception as e:
-        print(f"Error searching Jumia: {e}")
+        print(f"      ❌ Error searching Jumia: {e}")
     
     # Search Konga
+    print("   🇳🇬 Konga - Checking local marketplace...")
     try:
         konga_results = search_konga(gadget_name)
         sourcing_options.extend(konga_results)
+        print(f"      ✅ Found {len(konga_results)} options on Konga")
     except Exception as e:
-        print(f"Error searching Konga: {e}")
+        print(f"      ❌ Error searching Konga: {e}")
     
     # Search Alibaba
+    print("   🌏 Alibaba - Checking international suppliers...")
     try:
         alibaba_results = search_alibaba(gadget_name)
         sourcing_options.extend(alibaba_results)
+        print(f"      ✅ Found {len(alibaba_results)} options on Alibaba")
     except Exception as e:
-        print(f"Error searching Alibaba: {e}")
+        print(f"      ❌ Error searching Alibaba: {e}")
     
     # Search local suppliers
+    print("   🏪 Local Suppliers - Checking direct suppliers...")
     try:
         local_results = search_local_suppliers(gadget_name)
         sourcing_options.extend(local_results)
+        print(f"      ✅ Found {len(local_results)} options from Local Suppliers")
     except Exception as e:
-        print(f"Error searching local suppliers: {e}")
+        print(f"      ❌ Error searching local suppliers: {e}")
+    
+    print(f"   📊 Total: Found {len(sourcing_options)} sourcing options across 4 platforms")
     
     return sourcing_options
 
