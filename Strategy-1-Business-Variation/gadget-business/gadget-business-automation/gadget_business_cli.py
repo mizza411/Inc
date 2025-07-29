@@ -41,15 +41,12 @@ def display_gadgets(gadgets):
     for idx, gadget in enumerate(gadgets):
         demand_level = gadget.get('demand_level', 'N/A')
         demand_score = gadget.get('demand_score', 0)
-        trending = gadget.get('trending', 'N/A')
+        trend = gadget.get('trend', 'N/A')  # Changed from 'trending' to 'trend'
         
-        # Get best sourcing option
-        sourcing_options = gadget.get('sourcing_options', [])
-        best_source = "N/A"
-        if sourcing_options:
-            best_source = sourcing_options[0]['platform']
+        # Use the best_source field from demand-driven sourcing
+        best_source = gadget.get('best_source', 'N/A')  # Use the calculated best source
         
-        print(f"{idx:<6} {gadget['name']:<25} {demand_level:<8} {demand_score:<6} {trending:<10} {best_source:<20}")
+        print(f"{idx:<6} {gadget['name']:<25} {demand_level:<8} {demand_score:<6} {trend:<10} {best_source:<20}")
     print("-" * 120)
 
 def main():
