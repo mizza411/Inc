@@ -231,6 +231,7 @@ def run_step_by_step_wizard(gadget):
     print(f"💡 Recommendation: {gadget['recommendation']}")
     
     stages = [
+        ("Business Idea Validation", run_validation_stage),
         ("Funding & Capital Acquisition", run_funding_stage),
         ("Supplier Sourcing & Inventory", run_sourcing_stage),
         ("Inventory Monitoring", run_inventory_stage),
@@ -258,9 +259,130 @@ def run_step_by_step_wizard(gadget):
     print(f"\n🎉 Automation pipeline completed for {gadget['name']}!")
     print("📊 Check your dashboard for detailed results and analytics.")
 
+def run_validation_stage(gadget):
+    """Step 0: Business Idea Validation using objective data"""
+    print("🔍 Business Idea Validation - Analyzing Objective Data...")
+    
+    # 1. DEMAND PROOF ANALYSIS
+    print("\n📊 1. DEMAND PROOF ANALYSIS:")
+    demand_score = gadget.get('demand_score', 0)
+    demand_level = gadget.get('demand_level', 'Unknown')
+    trend = gadget.get('trend', 'Unknown')
+    
+    print(f"   📈 Demand Score: {demand_score}/100")
+    print(f"   📊 Demand Level: {demand_level}")
+    print(f"   📈 Market Trend: {trend}")
+    
+    # Demand validation logic
+    demand_validated = demand_score >= 70 and demand_level == 'high'
+    print(f"   ✅ Demand Validation: {'PASSED' if demand_validated else 'NEEDS REVIEW'}")
+    
+    # 2. MARKET VALIDATION ANALYSIS
+    print("\n🏪 2. MARKET VALIDATION ANALYSIS:")
+    sourcing_options = gadget.get('sourcing_options', [])
+    best_source = gadget.get('best_source', 'Unknown')
+    
+    print(f"   🎯 Best Source: {best_source}")
+    print(f"   📦 Available Suppliers: {len(sourcing_options)}")
+    
+    # Check if suppliers are actively selling
+    active_suppliers = len([opt for opt in sourcing_options if opt.get('availability', '').lower() != 'out of stock'])
+    print(f"   ✅ Active Suppliers: {active_suppliers}/{len(sourcing_options)}")
+    
+    # Market validation logic
+    market_validated = len(sourcing_options) >= 2 and active_suppliers >= 1
+    print(f"   ✅ Market Validation: {'PASSED' if market_validated else 'NEEDS REVIEW'}")
+    
+    # 3. COMPETITIVE ANALYSIS
+    print("\n👥 3. COMPETITIVE ANALYSIS:")
+    
+    # Analyze pricing from different sources to understand competition
+    prices = []
+    for option in sourcing_options:
+        price_str = option.get('price', 'N/A')
+        if price_str != 'N/A':
+            import re
+            price_match = re.search(r'[\d,]+\.?\d*', price_str)
+            if price_match:
+                prices.append(float(price_match.group().replace(',', '')))
+    
+    if prices:
+        avg_price = sum(prices) / len(prices)
+        price_range = max(prices) - min(prices)
+        print(f"   💰 Average Market Price: ${avg_price:.2f}")
+        print(f"   📊 Price Range: ${min(prices):.2f} - ${max(prices):.2f}")
+        print(f"   📈 Price Variation: ${price_range:.2f}")
+        
+        # Competitive analysis logic
+        competitive_advantage = price_range > 10  # Good price variation indicates market opportunity
+        print(f"   ✅ Competitive Advantage: {'YES' if competitive_advantage else 'NEEDS ANALYSIS'}")
+    else:
+        print(f"   ⚠️  Price data unavailable for competitive analysis")
+        competitive_advantage = False
+    
+    # 4. BUSINESS VIABILITY ASSESSMENT
+    print("\n🎯 4. BUSINESS VIABILITY ASSESSMENT:")
+    
+    # Calculate viability score
+    viability_score = 0
+    if demand_validated:
+        viability_score += 40
+    if market_validated:
+        viability_score += 30
+    if competitive_advantage:
+        viability_score += 30
+    
+    print(f"   📊 Viability Score: {viability_score}/100")
+    
+    # Determine validation status
+    if viability_score >= 80:
+        validation_status = "STRONGLY VALIDATED"
+        recommendation = "Proceed with confidence - strong market opportunity"
+        print(f"   ✅ Status: {validation_status}")
+        print(f"   💡 Recommendation: {recommendation}")
+    elif viability_score >= 60:
+        validation_status = "VALIDATED"
+        recommendation = "Proceed with caution - monitor market conditions"
+        print(f"   ✅ Status: {validation_status}")
+        print(f"   💡 Recommendation: {recommendation}")
+    elif viability_score >= 40:
+        validation_status = "NEEDS IMPROVEMENT"
+        recommendation = "Consider alternative approaches or market segments"
+        print(f"   ⚠️  Status: {validation_status}")
+        print(f"   💡 Recommendation: {recommendation}")
+    else:
+        validation_status = "NOT VALIDATED"
+        recommendation = "Reconsider business idea or pivot strategy"
+        print(f"   ❌ Status: {validation_status}")
+        print(f"   💡 Recommendation: {recommendation}")
+    
+    # Store validation results in gadget object
+    gadget['validation_status'] = validation_status
+    gadget['viability_score'] = viability_score
+    gadget['recommendation'] = recommendation
+    gadget['demand_validated'] = demand_validated
+    gadget['market_validated'] = market_validated
+    gadget['competitive_advantage'] = competitive_advantage
+    
+    print(f"\n📋 VALIDATION SUMMARY:")
+    print(f"   Product: {gadget['name']}")
+    print(f"   Demand Score: {demand_score}/100")
+    print(f"   Viability Score: {viability_score}/100")
+    print(f"   Status: {validation_status}")
+    print(f"   Recommendation: {recommendation}")
+    
+    return validation_status != "NOT VALIDATED"  # Return True if validation passed
+
 def run_funding_stage(gadget):
     """Step 1: Funding & Capital Acquisition"""
     print("💰 Analyzing pricing and financial data for funding...")
+    
+    # Include validation results in funding analysis
+    validation_status = gadget.get('validation_status', 'NOT VALIDATED')
+    viability_score = gadget.get('viability_score', 0)
+    
+    print(f"🔍 Validation Status: {validation_status}")
+    print(f"📊 Viability Score: {viability_score}/100")
     
     # Get pricing information from sourcing options
     sourcing_options = gadget.get('sourcing_options', [])
@@ -316,7 +438,11 @@ def run_funding_stage(gadget):
         "product_cost": product_cost,
         "retail_price": retail_price,
         "profit_margin": profit_margin,
-        "funding_needed": total_funding_needed
+        "funding_needed": total_funding_needed,
+        "validation_status": validation_status,
+        "viability_score": viability_score,
+        "demand_score": gadget.get('demand_score', 0),
+        "trend": gadget.get('trend', 'Unknown')
     }
     print(apply_for_grants(grants, business))
     
@@ -328,7 +454,10 @@ def run_funding_stage(gadget):
         "retail_price": retail_price,
         "profit_margin": profit_margin,
         "demand_score": gadget.get('demand_score', 0),
-        "trend": gadget.get('trend', 'Unknown')
+        "trend": gadget.get('trend', 'Unknown'),
+        "validation_status": validation_status,
+        "viability_score": viability_score,
+        "recommendation": gadget.get('recommendation', 'N/A')
     }
     print(launch_crowdfunding_campaign("Kickstarter", campaign_data))
     
@@ -343,7 +472,12 @@ def run_funding_stage(gadget):
         "demand_score": gadget.get('demand_score', 0),
         "trend": gadget.get('trend', 'Unknown'),
         "best_source": best_source,
-        "recommendation": gadget.get('recommendation', 'N/A')
+        "recommendation": gadget.get('recommendation', 'N/A'),
+        "validation_status": validation_status,
+        "viability_score": viability_score,
+        "demand_validated": gadget.get('demand_validated', False),
+        "market_validated": gadget.get('market_validated', False),
+        "competitive_advantage": gadget.get('competitive_advantage', False)
     }
     print(send_pitch_to_investors(investors, pitch_data))
 
