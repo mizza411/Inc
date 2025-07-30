@@ -8,6 +8,7 @@ import sys
 import argparse
 import os
 from demand_driven_sourcing import get_demand_driven_gadgets
+from pitch_deck_generator import generate_pitch_deck_for_gadget
 
 # Import all automation modules
 from funding_application import apply_for_grants, launch_crowdfunding_campaign, send_pitch_to_investors
@@ -480,6 +481,14 @@ def run_funding_stage(gadget):
         "competitive_advantage": gadget.get('competitive_advantage', False)
     }
     print(send_pitch_to_investors(investors, pitch_data))
+    
+    print("\n📄 Generating automated pitch deck...")
+    pitch_deck_path = generate_pitch_deck_for_gadget(gadget)
+    if pitch_deck_path:
+        print(f"✅ Pitch deck generated successfully!")
+        print(f"🖱️  Ctrl+Click to open: {os.path.abspath(pitch_deck_path)}")
+    else:
+        print("❌ Pitch deck generation failed")
 
 def run_sourcing_stage(gadget):
     """Step 2: Supplier Sourcing & Inventory Management"""
