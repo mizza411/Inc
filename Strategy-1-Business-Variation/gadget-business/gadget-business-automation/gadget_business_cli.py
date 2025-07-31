@@ -485,8 +485,7 @@ def run_funding_stage(gadget):
     print("\n📄 Generating automated pitch deck...")
     pitch_deck_path = generate_pitch_deck_for_gadget(gadget)
     if pitch_deck_path:
-        print(f"✅ Pitch deck generated successfully!")
-        print(f"🖱️  Ctrl+Click to open: {os.path.abspath(pitch_deck_path)}")
+        print(f"✅ Pitch deck generated and opened successfully!")
     else:
         print("❌ Pitch deck generation failed")
 

@@ -4,6 +4,8 @@ Creates pitch decks following the proven template structure with business valida
 """
 
 import os
+import subprocess
+import platform
 from datetime import datetime
 from pptx import Presentation
 from pptx.util import Inches, Pt
@@ -460,6 +462,20 @@ class PitchDeckGenerator:
             if hasattr(shape, 'text_frame') and shape != slide.shapes.title:
                 shape.text_frame.text = content
 
+def open_file_automatically(filepath):
+    """Automatically open a file using the default system application."""
+    try:
+        if platform.system() == "Windows":
+            os.startfile(filepath)
+        elif platform.system() == "Darwin":  # macOS
+            subprocess.run(["open", filepath])
+        else:  # Linux
+            subprocess.run(["xdg-open", filepath])
+        return True
+    except Exception as e:
+        print(f"Could not open file automatically: {e}")
+        return False
+
 def generate_pitch_deck_for_gadget(gadget_data):
     """Generate a pitch deck for a specific gadget."""
     generator = PitchDeckGenerator()
@@ -467,7 +483,14 @@ def generate_pitch_deck_for_gadget(gadget_data):
     
     if filepath:
         print(f"📄 Pitch deck generated: {filepath}")
-        print(f"🖱️  Ctrl+Click to open: {os.path.abspath(filepath)}")
+        print(f"🚀 Opening pitch deck automatically...")
+        
+        # Automatically open the file
+        if open_file_automatically(filepath):
+            print(f"✅ Pitch deck opened successfully!")
+        else:
+            print(f"⚠️  Could not open automatically. Please open manually: {filepath}")
+        
         return filepath
     else:
         print("❌ Failed to generate pitch deck")
