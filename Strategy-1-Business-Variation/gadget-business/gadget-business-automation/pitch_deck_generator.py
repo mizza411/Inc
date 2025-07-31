@@ -13,8 +13,14 @@ from pptx.enum.text import PP_ALIGN
 from pptx.dml.color import RGBColor
 
 class PitchDeckGenerator:
-    def __init__(self, template_path="Pitch Deck (YOURS).. (2).pptx"):
+    def __init__(self, template_path=None):
         """Initialize with the template path."""
+        if template_path is None:
+            # Get the current script directory and navigate to the root
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            root_dir = os.path.join(current_dir, "..", "..", "..")
+            template_path = os.path.join(root_dir, "Pitch Deck (YOURS).. (2).pptx")
+        
         self.template_path = template_path
         self.output_dir = "generated_pitch_decks"
         
