@@ -1,177 +1,53 @@
-# Environment variables and secrets
-.env
-.env.local
-.env.production
-.env.development
-secrets.json
-config.json
-credentials.json
-
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+*.pyo
+*.pyd
 *.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+.eggs/
 
-# Virtual environments
+# Environments
+.venv/
+.env/
 venv/
-env/
 ENV/
-env.bak/
-venv.bak/
 
-# IDE and editor files
-.vscode/
-.idea/
+# OS / Editor
+.DS_Store
+Thumbs.db
 *.swp
 *.swo
-*~
-.DS_Store
-Thumbs.db
+.vscode/
+.idea/
+
+# Node/Frontend (in case)
+node_modules/
+dist/
+build/
+
+# Project-specific (Problem Identification Tool)
+problem_identification_tool/qr_codes/
+problem_identification_tool/generated_content/
+qr_codes/
+generated_content/
+
+# Do not commit data (responses, analytics, exports)
+problem_identification_tool/data/**
+!problem_identification_tool/data/README.md
+
+# Do not commit real configs; commit only example templates
+problem_identification_tool/config/*.json
+!problem_identification_tool/config/*.example.json
+
+# Local environment files
+problem_identification_tool/.env
+*.env
+problem_identification_tool/problem_identification_export_*.json
+problem_identification_tool/problem_identification_export_*.csv
+problem_identification_tool/data/*.csv
+# Keep seed JSONs tracked; ignore only large or temp files
+# If you prefer to ignore all data, uncomment next line:
+# problem_identification_tool/data/
 
 # Logs
-*.log
-logs/
-log/
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-database/
-databases/
-
-# Generated content and reports
-generated_images/
-reports/
-temp/
-tmp/
-output/
-results/
-
-# API keys and sensitive data
-api_keys.txt
-secrets/
-private/
-sensitive/
-
-# Business data
-customer_data/
-financial_data/
-supplier_data/
-inventory_data/
-
-# Cache and temporary files
-.cache/
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Backup files
-*.bak
-*.backup
-*.old
-
-# Test files
-test_*.py
-*_test.py
-tests/
-test/
-
-# Documentation builds
-docs/_build/
-site/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile.lock
-
-# PEP 582
-__pypackages__/
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# Business documents (exclude from script repository)
-*.md
-!README.md
-!requirements.txt
-!*.py
-!*.json
-!*.txt
-!*.yml
-!*.yaml
-
-# Exclude business strategy documents but keep technical docs
-Strategy-1-Business-Variation/*.md
-Strategy-2-Problem-Solving/*.md
-Started-Businesses/*.md
-cursor_business_development_plan_for_cl.md
-
-# Keep script folders and technical files
-!Strategy-1-Business-Variation/gadget-business/gadget-business-automation/
-!Strategy-2-Problem-Solving/Content-Automation/
-!Strategy-2-Problem-Solving/automated-thank-you-note-generator/
-!Strategy-2-Problem-Solving/problem_finder/
-!abuja_lead_generator/ 
+*.log 

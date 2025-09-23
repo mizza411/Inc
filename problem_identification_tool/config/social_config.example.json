@@ -1,0 +1,27 @@
+{
+  "questionnaire_url": "https://your-site.netlify.app/",
+  "posting_schedule": {
+    "twitter": ["10:00", "15:00", "19:00"],
+    "linkedin": ["09:00", "14:00"],
+    "reddit": ["12:00", "18:00"]
+  },
+  "hashtags": {
+    "primary": ["#problemsolving", "#communityhelp", "#feedback"],
+    "secondary": ["#survey", "#research", "#insights", "#community"],
+    "niche": ["#entrepreneur", "#smallbusiness", "#productivity"]
+  },
+  "communities": {
+    "reddit": [
+      "r/entrepreneur",
+      "r/smallbusiness",
+      "r/productivity"
+    ],
+    "linkedin_groups": [
+      "Small Business Owners",
+      "Entrepreneurs Network"
+    ]
+  },
+  "posting_enabled": false
+}
+
+
