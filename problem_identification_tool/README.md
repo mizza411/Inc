@@ -116,6 +116,33 @@ Modify the CSS in `web/index.html` to match your brand.
 - No database required
 - Easy to maintain
 
+### Netlify Deployment (Upload/Drag & Drop)
+1. Go to Netlify Drop: https://app.netlify.com/drop
+2. Drag the folder `problem_identification_tool/web` into the drop area
+3. Wait for the deploy to finish; copy the live URL (ends with `.netlify.app`)
+4. Optional: set a custom domain in Site settings → Domains
+
+### Netlify Deployment (Connect Git)
+1. Push this repository to GitHub
+2. In Netlify: New site → Import from Git → choose your repo
+3. Build settings:
+   - Framework preset: None (static site)
+   - Build command: (leave empty)
+   - Publish directory: `problem_identification_tool/web`
+4. Deploy
+
+### Netlify Deployment (CLI, optional)
+```
+npm i -g netlify-cli
+netlify deploy --prod --dir "problem_identification_tool/web"
+```
+
+### Delete a Netlify Project (if no longer needed)
+1. Open the project in Netlify (Site overview)
+2. Go to Site settings → General → Danger zone → Delete site
+3. Confirm deletion (type the site name if prompted)
+4. If a custom domain is attached, remove it first in Site settings → Domains
+
 ## 🔧 Technical Details
 
 ### Frontend
@@ -199,18 +226,18 @@ For questions or issues:
 
 ### Open Live Site
 - Windows (PowerShell):
-  - `start https://moonlit-crostata-3f8b85.netlify.app/`
-- macOS: `open https://moonlit-crostata-3f8b85.netlify.app/`
-- Linux: `xdg-open https://moonlit-crostata-3f8b85.netlify.app/`
+  - `start https://vermillion-figolla-b9efb8.netlify.app/`
+- macOS: `open https://vermillion-figolla-b9efb8.netlify.app/`
+- Linux: `xdg-open https://vermillion-figolla-b9efb8.netlify.app/`
 
 ### Check Site is Up (HTTP 200)
 ```
-curl -I https://moonlit-crostata-3f8b85.netlify.app/
+curl -I https://vermillion-figolla-b9efb8.netlify.app/
 ```
 
 ### Test UTM Links
 ```
-start "https://moonlit-crostata-3f8b85.netlify.app/?utm_source=instagram&utm_medium=story&utm_campaign=launch"
+start "https://vermillion-figolla-b9efb8.netlify.app/?utm_source=instagram&utm_medium=story&utm_campaign=launch"
 ```
 
 ### Dashboard
@@ -219,7 +246,7 @@ start "https://moonlit-crostata-3f8b85.netlify.app/?utm_source=instagram&utm_med
 ### Embed Test
 Add this snippet to any HTML page and open it:
 ```
-<iframe src="https://moonlit-crostata-3f8b85.netlify.app/embed.html" width="100%" height="900" style="border:0;" allowfullscreen></iframe>
+<iframe src="https://vermillion-figolla-b9efb8.netlify.app/embed.html" width="100%" height="900" style="border:0;" allowfullscreen></iframe>
 ```
 
 ### Local Data Processing (Optional)
@@ -232,7 +259,7 @@ python problem_identification_tool/src/report_emailer.py --print
 ### Generate Sharing Assets (Safe One‑Liners)
 ```
 # QR codes
-python -c "import sys; sys.path.append('problem_identification_tool'); from src.qr_generator import QRCodeGenerator; QRCodeGenerator('https://moonlit-crostata-3f8b85.netlify.app').generate_contextual_qrs('/')"
+python -c "import sys; sys.path.append('problem_identification_tool'); from src.qr_generator import QRCodeGenerator; QRCodeGenerator('https://vermillion-figolla-b9efb8.netlify.app').generate_contextual_qrs('/')"
 
 # Social posts (daily JSON)
 python -c "import sys, json, os; sys.path.append('problem_identification_tool'); from src.social_automation import SocialMediaAutomation; a=SocialMediaAutomation(); p=a.generate_daily_posts(); os.makedirs('problem_identification_tool/generated_content', exist_ok=True); open('problem_identification_tool/generated_content/generated_posts.json','w').write(json.dumps(p, indent=2)); print('generated_content/generated_posts.json')"
@@ -243,3 +270,19 @@ python -c "import sys; sys.path.append('problem_identification_tool'); from src.
 # Community posts
 python -c "import sys, json, os; sys.path.append('problem_identification_tool'); from src.social_automation import SocialMediaAutomation; a=SocialMediaAutomation(); c=a.generate_community_posts(); os.makedirs('problem_identification_tool/generated_content', exist_ok=True); open('problem_identification_tool/generated_content/community_posts.json','w').write(json.dumps(c, indent=2)); print('generated_content/community_posts.json')"
 ```
+
+## 👤 Admin: Viewing Results
+
+### Quick View (same device that submitted)
+- Open the dashboard directly: `https://vermillion-figolla-b9efb8.netlify.app/dashboard.html`
+- Click "Load from this browser" to see responses saved in this browser's localStorage.
+
+### Load Consolidated Exports
+- Generate an export locally on your machine:
+  - JSON: `python problem_identification_tool/src/questionnaire_engine.py --export json`
+  - CSV: `python problem_identification_tool/src/questionnaire_engine.py --export csv`
+- On the dashboard, click "Upload export JSON" and select the generated JSON file to view aggregated charts.
+
+### Important (Current Architecture)
+- This is a JSON‑first, privacy‑friendly setup. By default, survey responses are saved to each respondent's browser (localStorage) and are not sent to a central server.
+- Use exports to consolidate and analyze data, or switch to a centralized collection (e.g., serverless functions/Sheets) if you need real‑time, multi‑device aggregation.
