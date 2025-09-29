@@ -146,6 +146,22 @@
 
   function bind(){
     $('loadLocal').addEventListener('click', loadFromLocalStorage);
+    $('loadServer').addEventListener('click', async ()=>{
+      try {
+        const res = await fetch('/.netlify/functions/get-analytics');
+        if (!res.ok) throw new Error('Server analytics not available');
+        const data = await res.json();
+        // Convert server analytics into state
+        state.categories = data.analytics?.categories || {};
+        state.severities = data.analytics?.severities || {};
+        state.responses = []; // not listing raw responses in this minimal view
+        state.problems = [];  // charts are aggregate-only here
+        render();
+      } catch (e) {
+        alert('Could not load from server. Ensure functions are deployed.');
+        console.error(e);
+      }
+    });
     $('fileInput').addEventListener('change', (e)=>{
       if (e.target.files && e.target.files[0]) loadFromFile(e.target.files[0]);
     });
