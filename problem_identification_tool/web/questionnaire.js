@@ -22,7 +22,11 @@ class QuestionnaireEngine {
 
     async loadQuestionnaire() {
         try {
-            const response = await fetch('../data/questionnaires.json');
+            // Try web/data first (for GitHub Pages), then fallback to ../data (for local dev)
+            let response = await fetch('./data/questionnaires.json').catch(() => null);
+            if (!response || !response.ok) {
+                response = await fetch('../data/questionnaires.json');
+            }
             const data = await response.json();
             const activeQuestionnaire = data.questionnaires.find(q => q.id === data.active_questionnaire);
             
@@ -121,17 +125,69 @@ class QuestionnaireEngine {
 
         this.updateProgress();
         this.updateButtons();
+        
+        // Restore "Other" input state if previously selected
+        this.restoreOtherInputState(question);
+    }
+
+    restoreOtherInputState(question) {
+        if (question.type === 'multiple_choice' && this.responses[question.id]) {
+            const responseValue = this.responses[question.id];
+            // Check if response starts with "Other:"
+            if (responseValue.startsWith('Other:')) {
+                const otherText = responseValue.replace('Other:', '').trim();
+                const otherRadio = document.querySelector(`input[name="${question.id}"][data-is-other="true"]`);
+                const otherInputContainer = document.getElementById(`${question.id}_other_input`);
+                const otherTextInput = document.getElementById(`${question.id}_other_text`);
+                
+                if (otherRadio && otherInputContainer && otherTextInput) {
+                    // Select the "Other" radio button
+                    otherRadio.checked = true;
+                    otherRadio.closest('.option').classList.add('selected');
+                    // Show and populate the text input
+                    otherInputContainer.style.display = 'block';
+                    otherTextInput.value = otherText;
+                }
+            } else {
+                // Restore regular option selection
+                const selectedRadio = document.querySelector(`input[name="${question.id}"][value="${responseValue}"]`);
+                if (selectedRadio) {
+                    selectedRadio.checked = true;
+                    selectedRadio.closest('.option').classList.add('selected');
+                }
+            }
+        }
     }
 
     renderQuestionInput(question) {
         switch (question.type) {
             case 'multiple_choice':
-                return question.options.map(option => `
+                const hasOther = question.options.some(opt => opt.toLowerCase() === 'other');
+                const optionsHtml = question.options.map(option => `
                     <label class="option">
-                        <input type="radio" name="${question.id}" value="${option}">
+                        <input type="radio" name="${question.id}" value="${option}" data-is-other="${option.toLowerCase() === 'other'}">
                         ${option}
                     </label>
                 `).join('');
+                
+                // Add text input for "Other" option (initially hidden)
+                const otherInputHtml = hasOther ? `
+                    <div class="other-input-container" id="${question.id}_other_input" style="display: none; margin-top: 15px;">
+                        <label for="${question.id}_other_text" style="display: block; margin-bottom: 8px; font-weight: 500;">
+                            Please specify:
+                        </label>
+                        <input 
+                            type="text" 
+                            id="${question.id}_other_text" 
+                            name="${question.id}_other" 
+                            class="other-text-input" 
+                            placeholder="Enter your answer..."
+                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;"
+                        >
+                    </div>
+                ` : '';
+                
+                return optionsHtml + otherInputHtml;
 
             case 'rating':
                 let ratingHtml = '<div class="rating-scale">';
@@ -179,6 +235,8 @@ class QuestionnaireEngine {
         document.addEventListener('change', (e) => {
             if (e.target.type === 'radio') {
                 this.updateOptionSelection(e.target);
+                // Show/hide "Other" text input
+                this.handleOtherOption(e.target);
             }
         });
 
@@ -197,6 +255,29 @@ class QuestionnaireEngine {
             option.closest('.option').classList.remove('selected');
         });
         selectedInput.closest('.option').classList.add('selected');
+    }
+
+    handleOtherOption(selectedInput) {
+        const questionId = selectedInput.name;
+        const isOther = selectedInput.dataset.isOther === 'true';
+        const otherInputContainer = document.getElementById(`${questionId}_other_input`);
+        const otherTextInput = document.getElementById(`${questionId}_other_text`);
+        
+        if (otherInputContainer) {
+            if (isOther) {
+                // Show the text input when "Other" is selected
+                otherInputContainer.style.display = 'block';
+                if (otherTextInput) {
+                    otherTextInput.focus();
+                }
+            } else {
+                // Hide the text input and clear it when another option is selected
+                otherInputContainer.style.display = 'none';
+                if (otherTextInput) {
+                    otherTextInput.value = '';
+                }
+            }
+        }
     }
 
     selectRating(ratingElement) {
@@ -227,6 +308,17 @@ class QuestionnaireEngine {
                 alert('Please select an option before continuing.');
                 return false;
             }
+            // If "Other" is selected, require text input
+            if (selected.dataset.isOther === 'true') {
+                const otherTextInput = document.getElementById(`${questionId}_other_text`);
+                if (!otherTextInput || !otherTextInput.value.trim()) {
+                    alert('Please specify what "Other" means before continuing.');
+                    if (otherTextInput) {
+                        otherTextInput.focus();
+                    }
+                    return false;
+                }
+            }
         } else if (question.type === 'rating') {
             if (!this.responses[questionId]) {
                 alert('Please select a rating before continuing.');
@@ -250,7 +342,15 @@ class QuestionnaireEngine {
         if (question.type === 'multiple_choice') {
             const selected = document.querySelector(`input[name="${questionId}"]:checked`);
             if (selected) {
-                this.responses[questionId] = selected.value;
+                // If "Other" is selected, save both the "Other" option and the user's text
+                if (selected.dataset.isOther === 'true') {
+                    const otherTextInput = document.getElementById(`${questionId}_other_text`);
+                    const otherText = otherTextInput ? otherTextInput.value.trim() : '';
+                    // Save as "Other: [user's text]"
+                    this.responses[questionId] = otherText ? `Other: ${otherText}` : 'Other';
+                } else {
+                    this.responses[questionId] = selected.value;
+                }
             }
         } else if (question.type === 'open_text') {
             const textarea = document.querySelector(`textarea[name="${questionId}"]`);
@@ -315,13 +415,16 @@ class QuestionnaireEngine {
             anonymous: this.settings.anonymous
         };
 
-        // Try to save to JSON file (this would require a backend in production)
-        // For now, we'll store in localStorage as a fallback
+        // PRIMARY STORAGE: Save to browser localStorage
+        // This is the main storage method - works offline and is privacy-first
+        // Data is stored in the user's browser and never leaves their device
         const existingResponses = JSON.parse(localStorage.getItem('questionnaire_responses') || '[]');
         existingResponses.push(responseData);
         localStorage.setItem('questionnaire_responses', JSON.stringify(existingResponses));
 
-        // Try to send to Netlify Function with localStorage fallback
+        // OPTIONAL: Try to send to server (Netlify Function) for centralized storage
+        // This will fail on GitHub Pages (which is fine - localStorage is primary)
+        // If you need centralized storage, see DATA_STORAGE_GUIDE.md for alternatives
         try {
             const response = await fetch('/.netlify/functions/submit-response', {
                 method: 'POST',
@@ -361,6 +464,11 @@ class QuestionnaireEngine {
         
         // Hide progress bar
         document.getElementById('progressFill').style.width = '100%';
+        
+        // NOTE: "View Analytics Dashboard" link is intentionally NOT shown here
+        // The dashboard is admin-only and should be accessed directly at:
+        // https://mizza411.github.io/Inc/problem_identification_tool/web/dashboard.html
+        // Regular users should not see analytics - it's for the survey creator only
     }
 
     showError(message) {
