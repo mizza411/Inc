@@ -1,0 +1,70 @@
+{
+  "questionnaires": [
+    {
+      "id": "general_problems_v1",
+      "title": "General Problem Identification Survey",
+      "description": "Help us understand common challenges people face",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "multiple_choice",
+          "question": "What area of your life would you like to improve most?",
+          "options": [
+            "Work/Career",
+            "Health & Fitness",
+            "Personal Relationships",
+            "Financial Situation",
+            "Learning & Education",
+            "Technology & Digital Life",
+            "Home & Environment",
+            "Personal Development",
+            "Business/Entrepreneurship",
+            "Other"
+          ],
+          "required": true
+        },
+        {
+          "id": "q2",
+          "type": "rating",
+          "question": "On a scale of 1-10, how satisfied are you with this area?",
+          "min": 1,
+          "max": 10,
+          "required": true
+        },
+        {
+          "id": "q3",
+          "type": "open_text",
+          "question": "What specific challenges do you face in this area?",
+          "placeholder": "Please describe your main challenges...",
+          "required": true
+        },
+        {
+          "id": "q4",
+          "type": "multiple_choice",
+          "question": "How often do these challenges affect your daily life?",
+          "options": [
+            "Constantly",
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Rarely"
+          ],
+          "required": true
+        }
+      ],
+      "settings": {
+        "anonymous": true,
+        "allow_skipping": true,
+        "estimated_time": "3-5 minutes",
+        "completion_reward": "Thank you for helping us understand community needs!"
+      }
+    }
+  ],
+  "active_questionnaire": "general_problems_v1"
+}
+
+
+
+
+
+

@@ -93,13 +93,6 @@ class QuestionnaireEngine {
                     "Rarely"
                 ],
                 required: true
-            },
-            {
-                id: "q5",
-                type: "open_text",
-                question: "What would be your ideal solution to these challenges?",
-                placeholder: "Describe what would help you most...",
-                required: false
             }
         ];
     }
