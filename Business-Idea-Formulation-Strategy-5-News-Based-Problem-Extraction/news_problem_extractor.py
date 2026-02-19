@@ -338,23 +338,137 @@ class NewsProblemExtractor:
                             print("    ✓ Fetched via NewsAPI")
             
             if not content:
-                print("\nManual collection:")
-                print("1. Visit the website")
-                print("2. Use Ctrl + A to select all content")
-                print("3. Copy and paste here")
-                print("(Press Enter twice when done)\n")
+                # If auto-fetch was attempted and failed, offer retry option
+                if use_api:
+                    # Offer retry option before manual collection
+                    while True:
+                        print("\n⚠ Connection failed. Retry automatic fetch?")
+                        print("Press (R) to retry | (M) for manual collection | (S) to skip this source | (N) to select a different source: ", end="")
+                        retry_choice = input().strip().upper()
+                        
+                        if retry_choice == 'R':
+                            print("  Retrying automatic fetch...")
+                            
+                            # Retry all auto methods
+                            if HAS_SCRAPING:
+                                print("    Trying web scraping (BeautifulSoup)...")
+                                content = self.fetch_content_via_api(source)
+                                if content:
+                                    print("    ✓ Fetched via BeautifulSoup scraping")
+                                    break
+                            
+                            if not content and HAS_RSS:
+                                print("    Trying RSS feed (fallback)...")
+                                content = self.fetch_via_rss(source)
+                                if content:
+                                    print("    ✓ Fetched via RSS")
+                                    break
+                            
+                            if not content and NEWSAPI_KEY:
+                                print("    Trying NewsAPI (fallback)...")
+                                articles = self.fetch_via_newsapi(source)
+                                if articles:
+                                    content_parts = []
+                                    for article in articles:
+                                        content_parts.append(f"{article['title']}\n{article['description']}\n---")
+                                    content = '\n'.join(content_parts)[:15000]
+                                    if content:
+                                        print("    ✓ Fetched via NewsAPI")
+                                        break
+                            
+                            # Retry failed again
+                            if not content:
+                                print("  ⚠ Retry failed. Please choose another option.")
+                                continue
+                        
+                        elif retry_choice == 'M':
+                            # Manual collection
+                            break
+                        
+                        elif retry_choice == 'S':
+                            # Skip this source
+                            print(f"  ⊘ Skipping {source}")
+                            content = None
+                            break
+                        
+                        elif retry_choice == 'N':
+                            # Select a different source
+                            print("\nAvailable Nigerian News Sources:")
+                            for i, src in enumerate(self.news_sources, 1):
+                                print(f"{i}. {src}")
+                            
+                            print("\nSelect a different source (enter number):")
+                            selection = input("Selection: ").strip()
+                            
+                            try:
+                                index = int(selection.strip()) - 1
+                                if 0 <= index < len(self.news_sources):
+                                    new_source = self.news_sources[index]
+                                    print(f"\n  ✓ Selected new source: {new_source}")
+                                    source = new_source  # Replace current source
+                                    print(f"  Attempting to fetch from {source}...")
+                                    
+                                    # Try fetching from new source
+                                    if HAS_SCRAPING:
+                                        print("    Trying web scraping (BeautifulSoup)...")
+                                        content = self.fetch_content_via_api(source)
+                                        if content:
+                                            print("    ✓ Fetched via BeautifulSoup scraping")
+                                            break
+                                    
+                                    if not content and HAS_RSS:
+                                        print("    Trying RSS feed (fallback)...")
+                                        content = self.fetch_via_rss(source)
+                                        if content:
+                                            print("    ✓ Fetched via RSS")
+                                            break
+                                    
+                                    if not content and NEWSAPI_KEY:
+                                        print("    Trying NewsAPI (fallback)...")
+                                        articles = self.fetch_via_newsapi(source)
+                                        if articles:
+                                            content_parts = []
+                                            for article in articles:
+                                                content_parts.append(f"{article['title']}\n{article['description']}\n---")
+                                            content = '\n'.join(content_parts)[:15000]
+                                            if content:
+                                                print("    ✓ Fetched via NewsAPI")
+                                                break
+                                    
+                                    # New source also failed
+                                    if not content:
+                                        print("  ⚠ New source also failed. Please choose another option.")
+                                        continue
+                                else:
+                                    print("  ⚠ Invalid source number. Please try again.")
+                                    continue
+                            except (ValueError, IndexError):
+                                print("  ⚠ Invalid selection. Please enter a valid number.")
+                                continue
+                        
+                        else:
+                            print("  ⚠ Invalid choice. Please enter R, M, S, or N.")
+                            continue
                 
-                lines = []
-                while True:
-                    line = input()
-                    if not line and not lines:
-                        break
-                    if not line and lines:
-                        break
-                    lines.append(line)
-                
-                if lines:
-                    content = '\n'.join(lines)
+                # Manual collection (if retry not chosen, or user chose M, or use_api was False)
+                if not content:
+                    print("\nManual collection:")
+                    print("1. Visit the website")
+                    print("2. Use Ctrl + A to select all content")
+                    print("3. Copy and paste here")
+                    print("(Press Enter twice when done)\n")
+                    
+                    lines = []
+                    while True:
+                        line = input()
+                        if not line and not lines:
+                            break
+                        if not line and lines:
+                            break
+                        lines.append(line)
+                    
+                    if lines:
+                        content = '\n'.join(lines)
             
             if content:
                 # Truncate if too long (keep under 15000 chars for best ChatGPT results)
@@ -388,8 +502,9 @@ class NewsProblemExtractor:
         prompt_1a = "Give me problems that can be solved with digital solutions (web apps and others), based on content on nigerian news websites today. Output should have \"With the mention of\"\n\n"
         
         for item in self.news_content:
+            content = self._ensure_space_after_date(item['content'])
             prompt_1a += f"Content from {item['source']}:\n"
-            prompt_1a += f"{item['content']}\n\n"
+            prompt_1a += f"{content}\n\n"
             prompt_1a += "---\n\n"
         
         # Prompt 1b
@@ -412,11 +527,34 @@ class NewsProblemExtractor:
         
         return prompt_1a, prompt_1b
     
+    def _ensure_space_after_date(self, text: str) -> str:
+        """Insert newline after date/time when directly followed by next article title (no space)."""
+        # Full month: January 13, 2026
+        full_month = (
+            r'(January|February|March|April|May|June|July|August|'
+            r'September|October|November|December)\s+\d{1,2},\s*\d{4}'
+        )
+        # Abbreviated month: Feb 14, 2026
+        abbr_month = (
+            r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2},\s*\d{4}'
+        )
+        # Relative times: 14 hrs ago, 53 minutes ago, an hour ago
+        relative_time = (
+            r'(\d+\s*(?:minutes?|mins?|hours?|hrs?)\s+ago|'
+            r'an?\s+(?:hour|minute)\s+ago)'
+        )
+        pattern = r'(' + full_month + r'|' + abbr_month + r'|' + relative_time + r')(?=[A-Za-z])'
+        return re.sub(pattern, r'\1\n', text)
+
     def format_content_for_display(self, content: str) -> str:
         """Format content with proper line breaks so each article/item appears on separate lines"""
         if not content:
             return ""
-        
+        content = self._ensure_space_after_date(content)
+        # If content is one big block with no line breaks (common on some sites like Nairametrics),
+        # try to split it into sentences so the output looks more regular.
+        if "\n" not in content and len(content) > 1000:
+            content = re.sub(r"([\.!?])\s+(?=[A-Z])", r"\1\n", content)
         # Split by common separators that indicate article boundaries
         lines = content.split('\n')
         formatted_lines = []
