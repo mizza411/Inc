@@ -14,6 +14,13 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional
 
+# Reusable Cursor copy-block helper (repo root)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+try:
+    from cursor_copy_helper import offer_cursor_copy_block
+except ImportError:
+    offer_cursor_copy_block = None
+
 try:
     import requests
     from bs4 import BeautifulSoup
@@ -648,7 +655,8 @@ class NewsProblemExtractor:
         print(f"\n✓ All data saved to '{self.output_file}'")
         print(f"✓ Text summary saved to '{txt_path.name}'")
         open_file_automatically(str(txt_path))
-    
+        self._last_txt_path = txt_path
+
     def run(self):
         """Main execution flow"""
         print("\n" + "="*60)
@@ -668,14 +676,23 @@ class NewsProblemExtractor:
         # Save data
         self.save_data()
         
+        # Offer copy-block for Cursor (reusable helper)
+        if offer_cursor_copy_block is not None:
+            txt_path = getattr(self, "_last_txt_path", None)
+            if txt_path is not None:
+                offer_cursor_copy_block(
+                    document_path=txt_path,
+                    prompt_1a_ref='Give me problems that can be solved with digital solutions (web apps and others), based on content on nigerian news websites today. Output should have "With the mention of".',
+                    prompt_1b_ref="Tabulate output (Columns: Linked Website, Problem Identified, Potential Digital Solution, Estimated daily sales, ...).",
+                )
+        
         print("\n" + "="*60)
         print("Process Complete!")
         print("="*60)
         print("\nNext steps:")
-        print("1. Open ChatGPT with required plugins")
-        print("2. Use Prompt 1a from 'chatgpt_prompt_1a.txt'")
-        print("3. After response, use Prompt 1b from 'chatgpt_prompt_1b.txt'")
-        print("4. Review and analyze the generated business ideas")
+        print("1. (If you copied) Paste in Cursor chat and send for business ideas table.")
+        print("2. Or open ChatGPT: use Prompt 1a from 'chatgpt_prompt_1a.txt', then Prompt 1b from 'chatgpt_prompt_1b.txt'.")
+        print("3. Review and analyze the generated business ideas.")
 
 if __name__ == "__main__":
     extractor = NewsProblemExtractor()
