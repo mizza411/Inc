@@ -1,0 +1,6 @@
+{
+  "document_path": "",
+  "prompt_1a_ref": "Give me problems that can be solved with digital solutions (web apps and others), based on content on nigerian news websites today. Output should have \"With the mention of\".",
+  "prompt_1b_ref": "Tabulate output (Columns: Linked Website, Problem Identified, Potential Digital Solution, Estimated daily sales, ...).",
+  "instruction": "Read the document at the path above. Apply Prompt 1a then Prompt 1b. Output the business ideas table in markdown format and save it to a new .md file in the same directory as the document, named business_ideas_YYYYMMDD.md (use today's date)."
+}

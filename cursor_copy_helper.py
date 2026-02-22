@@ -3,17 +3,53 @@
 Reusable Cursor copy-block helper for Strategy scripts.
 Copy a document path + prompts to clipboard; optional auto-paste after delay.
 Use from Strategy 5, Strategy 1, Strategy 9, etc.
+
+Config file (Phase 1):
+  Sub-phase 1.1: Load config from JSON (path + safe load); no behavior change.
+  Sub-phase 1.2: Apply config overrides in offer_cursor_copy_block.
+  Sub-phase 1.3: Add example config file and README docs.
 """
 
+import json
 import os
 import subprocess
 import sys
 from pathlib import Path
-from typing import Union
+from typing import Any, Dict, Optional, Union
+
+CONFIG_FILENAME = "cursor_copy_block_config.json"
+CONFIG_EXAMPLE_FILENAME = "cursor_copy_block_config.example.json"
 
 DEFAULT_INSTRUCTION = (
-    "Read the document at the path above. Apply Prompt 1a then Prompt 1b. Output the business ideas table."
+    "Read the document at the path above. Apply Prompt 1a then Prompt 1b. "
+    "Output the business ideas table in markdown format and save it to a new .md file in the same directory as the document, "
+    "named business_ideas_YYYYMMDD.md (use today's date)."
 )
+
+
+def _config_path() -> Path:
+    """Path to the copy-block config file (same directory as this module)."""
+    return Path(__file__).resolve().parent / CONFIG_FILENAME
+
+
+def _load_copy_block_config() -> Optional[Dict[str, Any]]:
+    """
+    Load cursor copy-block config from JSON. Tries cursor_copy_block_config.json
+    first, then cursor_copy_block_config.example.json if the first is missing.
+    Returns None if both missing or invalid.
+    """
+    base_dir = Path(__file__).resolve().parent
+    for name in (CONFIG_FILENAME, CONFIG_EXAMPLE_FILENAME):
+        path = base_dir / name
+        if not path.exists():
+            continue
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data if isinstance(data, dict) else None
+        except (OSError, json.JSONDecodeError, TypeError):
+            continue
+    return None
 
 
 def copy_to_clipboard(text: str) -> bool:
@@ -89,31 +125,76 @@ def offer_cursor_copy_block(
     Print a copyable block (document path + prompts) and offer to copy to clipboard;
     optional auto-paste after user focuses Cursor chat.
 
+    Values can be overridden by cursor_copy_block_config.json (Sub-phase 1.2).
     Any Strategy script can call this after saving its output document.
     """
-    path = Path(document_path)
+    doc_path_val = document_path
+    p1a = prompt_1a_ref
+    p1b = prompt_1b_ref
+    inst = instruction
+
+    config = _load_copy_block_config()
+    if config:
+        v = config.get("document_path")
+        if isinstance(v, str) and v.strip():
+            doc_path_val = v.strip()
+        v = config.get("prompt_1a_ref")
+        if isinstance(v, str) and v.strip():
+            p1a = v.strip()
+        v = config.get("prompt_1b_ref")
+        if isinstance(v, str) and v.strip():
+            p1b = v.strip()
+        v = config.get("instruction")
+        if isinstance(v, str) and v.strip():
+            inst = v.strip()
+
+    path = Path(doc_path_val)
     if not path.exists():
         return
     doc_path = str(path.resolve())
     block = (
         f"Document: {doc_path}\n\n"
-        f"Prompt 1a: {prompt_1a_ref}\n"
-        f"Prompt 1b: {prompt_1b_ref}\n\n"
-        f"{instruction}"
+        f"Prompt 1a: {p1a}\n"
+        f"Prompt 1b: {p1b}\n\n"
+        f"{inst}"
     )
+    config_path = _config_path()
     print("\n" + "="*70)
-    print("Ready for Cursor (paste in chat for analysis)")
+    print("READY FOR CURSOR — COPY THIS BLOCK INTO CHAT")
     print("="*70)
-    print("\n1. Press C to copy the block (then focus Cursor chat; script can auto-paste).")
-    print("2. Send in Cursor. It will read the file and output business ideas.\n")
-    print("--- BEGIN (paste this in Cursor) ---")
+    print()
+    print("  STEP 1: Press the \"C\" key (and only C) to copy the entire block below")
+    print("           to your clipboard. To skip, press \"Q\".")
+    print()
+    print("  STEP 2: Open Cursor and click inside the chat message box (where you")
+    print("           type your question).")
+    print()
+    print("  STEP 3: Either:")
+    print("           (A) If you chose auto-paste: keep the chat box focused and wait")
+    print("               6 seconds; the block will be pasted for you.")
+    print("           (B) If you did not: press Ctrl+V to paste the block yourself.")
+    print()
+    print("  STEP 4: Press Enter (or click Send) to send the message. Cursor will")
+    print("           read the document and output the business ideas table.")
+    print()
+    example_path = config_path.parent / CONFIG_EXAMPLE_FILENAME
+    print("  TO CHANGE THIS BLOCK (i.e. prompts, file paths and instruction) BELOW NEXT TIME,")
+    print("  edit the config file in the repo root:")
+    print(f"           {example_path}")
+    print("           Keys: document_path, prompt_1a_ref, prompt_1b_ref, instruction.")
+    print("           (Optional: copy to cursor_copy_block_config.json to keep overrides separate.)")
+    print("           FALLBACK DEFAULTS WHEN NO CONFIG EXISTS: cursor_copy_helper.py (DEFAULT_INSTRUCTION AND CALLER PROMPTS).")
+    print()
+    print("--- BEGIN (copy everything below this line into Cursor) ---")
+    print()
     print(block)
-    print("--- END ---\n")
-
+    print()
+    print("--- END (stop copying here) ---")
+    print()
     try:
         if sys.platform == "win32":
             import msvcrt
-            print("Press C to copy (or Q to skip): ", end="", flush=True)
+            print("Press C to copy the block above, or Q to skip: ", end="", flush=True)
             while True:
                 k = msvcrt.getch()
                 if k in (b"c", b"C"):
@@ -123,11 +204,11 @@ def offer_cursor_copy_block(
                     return
             print("C")
         else:
-            choice = input("Press C then Enter to copy (or Enter to skip): ").strip().upper()
+            choice = input("Press C then Enter to copy the block above, or Enter to skip: ").strip().upper()
             if choice != "C":
                 return
     except (ImportError, AttributeError):
-        choice = input("Press Enter to copy (or type skip to skip): ").strip().lower()
+        choice = input("Press Enter to copy the block above (or type skip to skip): ").strip().lower()
         if choice == "skip":
             return
 
