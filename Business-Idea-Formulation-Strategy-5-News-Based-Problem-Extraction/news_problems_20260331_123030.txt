@@ -1,0 +1,188 @@
+News-Based Problem Extraction - Saved Run
+Timestamp: 2026-03-31T13:12:37.670350
+
+Selected sources:
+  - https://businessday.ng/
+
+======================================================================
+COLLECTED CONTENT (Formatted for Readability)
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+SOURCE 1: https://businessday.ng/
+Method: api | Length: 15000 characters
+──────────────────────────────────────────────────────────────────────
+
+Home - Businessday NG
+Tinubu vows punishment for ‘heartless cowards’ behind Plateau, Kaduna killings By Anthony Ailemen March 31, 2026 3 Min
+Read President Bola Tinubu has charged security agencies to be more proactive in preventing attacks on communities by
+acting on early warning intelligence. This directive follows his strong condemnation of the barbaric and cowardly
+attacks by gunmen on innocent citizens in the Angwan Rukuba district of…
+Read More			              Latest
+Resignation deadline triggers cabinet members’ exits ahead of 2027 election		      Politics     March 31, 2026
+OneHealth unveils Free Clinical Excellence programme for frontline health professionals in Nigeria Health March 31, 2026
+El-Rufai returns to court after mother’s burial for ICPC arraignment		      News     March 31, 2026
+Kwankwaso decries ‘tragic’ Plateau attack, warns of deepening security crisis		      News     March 31, 2026
+Nigeria approves indigenous chicken breed to boost poultry output News March 31, 2026 Topics to
+Follow:TechnologyAviationEconomyStart
+UpsWorldNewsbdothernewsBDrecentUncategorizedCompaniesExclusivesBDleadOpinionSportsPolitics Top Stories NewsPREMIUM
+Nigeria’s bigger banks face credit test as recapitalisation ends Nigeria’s banks are now bigger than ever, thanks to the
+sweeping recapitalisation drive by the Central Bank of Nigeria (CBN), which has reshaped balance sheets and strengthened
+buffers across the… By Wasiu Alli 5 Min Read Economy
+Land conflicts force farmers off fields, hamper food security For many years, China Peters, a Benue State farmer,
+cultivated yams and cassava on a large acre of land that provided his family with a livelihood. After several planting
+seasons… By Feyishola Jaiyesimi 7 Min Read Big Read
+Union Bank caught in board tussle as recapitalisation ends ...CBN cites systemic risk in Union Bank's case Union Bank of
+Nigeria Plc has been plunged into a deepening governance crisis after a court ruling overturned regulatory intervention,
+setting off… By Hope Moses-Ashike 7 Min Read News
+Eight common tax filing errors, their penalties Tax filing errors remain a persistent challenge in Nigeria, where many
+taxpayers continue to incur avoidable penalties due to mistakes in documentation, computation, and reporting. Despite
+ongoing reforms and the… By Chioma Nwangwu 7 Min Read EnergyPREMIUM
+Nigeria’s solar boom hits cost wall as China ends export subsidies …To take effect April 1 Nigeria’s fast-growing solar
+power sector… 8 Min Read News
+Jos massacre exposes gap in intelligence gathering Fresh anxieties regarding Nigeria’s intelligence capabilities and
+security framework have… 7 Min Read News
+Budget passage, state police, defections top agenda as lawmakers resume to packed calendar As the National Assembly
+prepares to resume plenary on Tuesday… 6 Min Read News
+FG launches report to unlock $3.5tn AfCFTA market for MSMEs The federal government on Monday launched the "Cross-Border
+Digital Payments… 4 Min Read Most Read
+Access Bank Lagos City Marathon holds April 10		         Sports   3 Min Read
+Lagos commuters lose 75% of weekly working hours to traffic		         News   4 Min Read
+‘Nigerian unemployed graduates do not have skillset necessary for this 21st century’		         Interview   15 Min Read
+CowryWise ends year on list of top 50 global startups to watch		         Technology   3 Min Read
+Saraki commends Team Offshore Nigeria’s investment in new vessel acquisition Maritime 4 Min Read
+AfricaAgricultureAIAviationBankingCareersCompaniesEconomyEditorialEnergyEntertainmentEntrepreneurshipFin-TechBanking &
+FinanceHealthLawLife & ArtsOpinionPoliticsSportsStart-upTaxTechnologyWorld Energy
+Nigeria’s solar boom hits cost wall as China ends export subsidies		  …To take effect April 1…
+Schneider Electric bets on Africa’s industrial security gap		  When a single infected USB…
+Middle East war drives $25bn energy damage – Rystad Energy		  The ongoing conflict in the…
+Data centre boom overtakes oil, solar investments as capex hits $770bn		  Global investment in data centres…
+Nigeria’s renewable energy sector gets $20m blended finance push A coalition of development finance… Technology
+Why UNIBEN medical students gain spotlight for FG’s N50m venture grant		  Four final-year medical students from…
+Kuda lays off staff in restructuring push despite narrowing losses		  Kuda Technologies Limited, a Nigerian…
+Inside Reflect Orbital’s plan to deliver sunlight on demand		  Reflect Orbital, a California-based space…
+Explainer: Why Nigerians are paying more for less internet		  Nigeria’s internet paradox is deepening…
+5G rollout fails to deliver revenue for mobile operators		  5G is everywhere, but the…              Newsletters
+Nigeria’s oil windfall rerun: Grab it or waste it again		  A geopolitical shock handed Nigeria…
+UK Steel for Nigerian ports upgrade exposes Ajaokuta’s lost decades		  The £746 million ($997 million)…
+Zenith’s London ambition: Capital, credibility, and a global reach		  As Nigeria’s Zenith Bank plans…
+Akande faults Tinubu for lacking empathy amid renewed North-East terror attacks Laolu Akande,Former Presidential
+Aide,has…
+From waste to resource: Nigeria’s rPET plant brews a circular economy		  As the race to align…              Politics
+Resignation deadline triggers cabinet members’ exits ahead of 2027 election		  With the deadline for political…
+2027: Tinubu’s camp weighs options on re-election campaign structure		  With just months to the…
+Former Kano deputy governor Gawuna quits APC		  Nasiru Gawuna, former deputy governor…
+2027: I haven’t stepped down for anyone — Atiku		  Former Vice President Atiku Abubakar…
+Wike’s ally Boma Iyaye, denies guber interest Controversy over would-be governorship aspirants'… Companies
+BUA Foods plans record N504bn dividend payout after nearly doubling profit		  BUA Foods Plc has announced…
+GreyHound Pavilion CEO leads Diaspora engagement in USA, showcases real estate opportunities Opeyemi Ebagua, chief
+executive officer…
+SFS Capital’s ratings upgrade signals shift in Nigeria’s REIT market		  SFS Capital Nigeria Limited has…
+Sanwo-Olu, Nola break ground for Veritasi Homes, COOPLAG’s Oyster Towers in Eko Atlantic City Babajide Sanwo-Olu, Lagos
+State governor,…
+Cadbury bolsters board with Doyin Salami, Ezz El Arab as stock hits new low Rasaq Adedoyin Salami and Hisham Ezz… Africa
+Equity Bank Uganda leads profit surge as regional units deliver half of earnings		  Equity Bank Uganda Limited emerged…
+Ethiopia, Kenya drive $20bn FDI surge into Africa despite Middle East crisis		  The surge in FDI was…
+S&P affirms Morocco, Ghana ratings; outlook stable amid global uncertainties		  S&P Global has affirmed the…
+AFRICA FINANCE BRIEF: Rate pause, FDI risks, banking strength		  In the last week of…
+Nigeria’s biggest banks lead Africa in brand value growth rate …recapitalisation drive lifts combined value… -
+Advertisement - Editoral Editorial
+What a stable naira can do for the economy After one of the most turbulent currency episodes in its history, Nigeria’s
+naira is beginning to find its footing again. The question now confronting policymakers is not merely whether the… By
+The Editorial Board 7 Min Read Editorial
+Built with public funds, priced beyond the public: Rethinking student housing A federally funded student hostel at the
+University of Lagos, built to ease a long-standing accommodation crisis, now sits at the centre of a troubling
+contradiction. Reports indicate that bed… By The Editorial Board 6 Min Read Editorial
+The graduate unemployment crisis is an economic failure, not an educational one For years, a convenient narrative has
+dominated public discussions about unemployment in Nigeria: that universities are producing unemployable graduates.
+Employers complain that graduates lack practical skills, cannot communicate effectively, or… By The Editorial Board 6
+Min Read Editorial
+Why high oil prices hurt Nigerian households When global oil prices climb, most producing nations benefit. In Nigeria,
+the story is more complicated and far less celebratory. Each upward swing in crude prices often translates into higher…
+By The Editorial Board 6 Min Read Editorial
+Recapitalisation and the quiet reshaping of Nigeria’s insurance industry Nigeria’s insurance industry is undergoing a
+silent but thoughtful transformation. With the July 31, 2026, recapitalisation deadline approaching, the market is
+already responding in ways that could permanently reshape the… By The Editorial Board 6 Min Read Editorial
+Nigeria’s oil sector needs fresh thinking before the wells run dry For decades, crude oil has been the backbone of
+Nigeria’s economy, providing the bulk of foreign exchange earnings and funding government budgets. Despite its strategic
+importance, the nation’s oil sector… By The Editorial Board 7 Min Read Editorial
+Why Nigeria’s system defeats even its best leaders For over two decades, Nigeria’s elections have arrived wrapped in… 7
+Min Read Editorial
+Why Nigeria still misses out on oil booms As geopolitical tensions in the Middle East intensify, particularly around… 7
+Min Read Editorial
+Making President Tinubu’s poverty reduction plan work Poverty remains Nigeria’s most persistent national emergency, more
+dangerous than… 8 Min Read Editorial
+Fixing transportation to save productivity in Lagos Transportation is not merely about moving people from one point… 8
+Min Read Today's E-paper
+BusinessDay 31st Mar 2026
+Past Edtions
+Analysis              Analysis
+Rewiring Nigeria’s housing finance: Can QShelter turn a 20-million-plus-unit deficit into an investment opportunity? On
+a humid evening in Lagos, a young banker earning above the national average scrolls… By Muhammad Akanji 8 Min Read
+AnalysisPREMIUM
+Nigeria cannot decarbonise in darkness Nigeria’s climate crisis is often framed as an emissions problem. In reality, it
+is a… By Oluwatobi Ojabello 6 Min Read AnalysisPREMIUM
+Flooding becomes Nigeria’s most ignored economic shock Like government, like communities: losses fade from memory once
+the waters recede, and responses remain… By Oluwatobi Ojabello 5 Min Read Podcast Explainers News
+Explainer: Winners and losers from Nigeria’s remittance overhaul Nigeria’s Central Bank on Tuesday moved to tighten
+oversight of diaspora inflows, directing all International Money Transfer Operators (IMTOs) to route transactions
+through designated naira settlement accounts in banks in… By Hope Moses-Ashike 4 Min Read EducationNews
+Explainer: What the Learner ID Number means for Nigeria’s basic education The federal government has announced a
+comprehensive set of reforms aimed at eliminating examination malpractice, and improving children’s learning outcomes.
+The Learner Identification Number (LIN) is a unique identifier introduced… By Charles Ogwo 8 Min Read Technology
+Explainer: How cybercrime outpaces digital revolution As Nigeria accelerates into a digital-first economy powered by
+mobile banking, e-commerce, and fintech innovation, cybercrime poses itself as another force growing. As there have been
+a digital boom, likewise… By Folake Balogun 5 Min Read Technology
+Explainer: How Nigerians can retrieve funds from dormant bank accounts Millions of Nigerians hold dormant bank accounts
+that have remained inactive for years, often because the owners forgot about them, relocated, or stopped using the
+account. According to the Nigeria… By Chinwe Michael 5 Min Read News
+Explainer: How to file annual tax returns before March 31 – LIRS Ahead of the March 31 deadline for filing individual
+annual tax returns, the Lagos State Internal Revenue Service (LIRS) has provided guidance on who must file, the
+documents required, and… By Ayomide Odunlami 7 Min Read Companies
+Explainer: Inside Neimeth’s N1.98bn capital restructuring Neimeth International Pharmaceuticals Plc is seeking
+shareholder approval for a N1.98 billion capital restructuring that could significantly reshape its balance sheet and
+future dividend capacity. The move follows a February… By Chima Chima 6 Min Read Opinion
+AI on the battlefield: How algorithms are rewriting modern war (An explainer) War is no longer decided solely by
+firepower, manpower, or… 9 Min Read Technology
+Explainer: How Nigerians can retrieve funds from dormant bank accounts Millions of Nigerians hold dormant bank accounts
+that have remained… 5 Min Read Companies
+Explainer: Inside Neimeth’s N1.98bn capital restructuring Neimeth International Pharmaceuticals Plc is seeking
+shareholder approval for a… 6 Min Read News
+Explainer: Presumptive Tax – How Nigeria plans to tax its informal economy Most small businesses in Nigeria make money
+without keeping records… 9 Min Read News
+Explainer: Winners and losers from Nigeria’s remittance overhaul		     By  Hope Moses-Ashike    4 Min Read
+Explainer: What the Learner ID Number means for Nigeria’s basic education The federal government has announced a
+comprehensive set of reforms aimed at… 8 Min Read Cartoon of the day SON
+Past Edtions
+Opinion
+Why alignment moves systems more than ideas In many of the environments I work in, across governments,… By BusinessDay
+‘Equipment pilfering hindering Iju-Apapa rail project’ Nigeria’s transportation minister, Rotimi Amaechi has… By Mike
+Ochonma
+China, Nigeria should unite to strengthen bilateral cooperation, says Consul General Yan Yuqing, Consul General of
+China… By Iwok Iniobong
+Senate’s Budget Defence of Commotion and Zero Releases If the National Assembly’s budget defence… By Cynthia Egboboh
+China says premier’s Africa visit about more than just oil deals Chinese Premier Li Keqiang is to… By BusinessDay
+Senate to amend EFCC Act to enable it probe corrupt military officers The Nigerian Senate has announced plans… By
+Ojochenemi Onje
+Expectations high as Heritage Bank concludes merger deals Expectations are high as Heritage Bank… By BusinessDay
+
+
+======================================================================
+FULL JSON DATA (for reference)
+======================================================================
+
+{
+  "selected_sources": [
+    "https://businessday.ng/"
+  ],
+  "news_content": [
+    {
+      "source": "https://businessday.ng/",
+      "content": "Home - Businessday NG\nTinubu vows punishment for ‘heartless cowards’ behind Plateau, Kaduna killings\t\t               By  Anthony Ailemen     March 31, 2026   3 Min Read\t\t\t    President Bola Tinubu has charged security agencies to be more proactive in preventing attacks on communities by acting on early warning intelligence. This directive follows his strong condemnation of the barbaric and cowardly attacks by gunmen on innocent citizens in the Angwan Rukuba district of…\nRead More\t\t\t              Latest\nResignation deadline triggers cabinet members’ exits ahead of 2027 election\t\t      Politics     March 31, 2026\nOneHealth unveils Free Clinical Excellence programme for frontline health professionals in Nigeria\t\t      Health     March 31, 2026\nEl-Rufai returns to court after mother’s burial for ICPC arraignment\t\t      News     March 31, 2026\nKwankwaso decries ‘tragic’ Plateau attack, warns of deepening security crisis\t\t      News     March 31, 2026\nNigeria approves indigenous chicken breed to boost poultry output\t\t      News     March 31, 2026                    Topics to Follow:TechnologyAviationEconomyStart UpsWorldNewsbdothernewsBDrecentUncategorizedCompaniesExclusivesBDleadOpinionSportsPolitics                 Top Stories                  NewsPREMIUM\nNigeria’s bigger banks face credit test as recapitalisation ends\t\t  Nigeria’s banks are now bigger than ever, thanks to the sweeping recapitalisation drive by the Central Bank of Nigeria (CBN), which has reshaped balance sheets and strengthened buffers across the…    By  Wasiu Alli    5 Min Read\t\t\t                   Economy\nLand conflicts force farmers off fields, hamper food security\t\t  For many years, China Peters, a Benue State farmer, cultivated yams and cassava on a large acre of land that provided his family with a livelihood. After several planting seasons…    By  Feyishola Jaiyesimi    7 Min Read\t\t\t                   Big Read\nUnion Bank caught in board tussle as recapitalisation ends\t\t  ...CBN cites systemic risk in Union Bank's case Union Bank of Nigeria Plc has been plunged into a deepening governance crisis after a court ruling overturned regulatory intervention, setting off…    By  Hope Moses-Ashike    7 Min Read\t\t\t                   News\nEight common tax filing errors, their penalties\t\t  Tax filing errors remain a persistent challenge in Nigeria, where many taxpayers continue to incur avoidable penalties due to mistakes in documentation, computation, and reporting. Despite ongoing reforms and the…    By  Chioma Nwangwu    7 Min Read\t\t\t                   EnergyPREMIUM\nNigeria’s solar boom hits cost wall as China ends export subsidies\t\t  …To take effect April 1 Nigeria’s fast-growing solar power sector…    8 Min Read\t\t\t        News\nJos massacre exposes gap in intelligence gathering\t\t  Fresh anxieties regarding Nigeria’s intelligence capabilities and security framework have…    7 Min Read\t\t\t        News\nBudget passage, state police, defections top agenda as lawmakers resume to packed calendar\t\t  As the National Assembly prepares to resume plenary on Tuesday…    6 Min Read\t\t\t        News\nFG launches report to unlock $3.5tn AfCFTA market for MSMEs\t\t  The federal government on Monday launched the \"Cross-Border Digital Payments…    4 Min Read\t\t\t                       Most Read\nAccess Bank Lagos City Marathon holds April 10\t\t         Sports   3 Min Read\nLagos commuters lose 75% of weekly working hours to traffic\t\t         News   4 Min Read\n‘Nigerian unemployed graduates do not have skillset necessary for this 21st century’\t\t         Interview   15 Min Read\nCowryWise ends year on list of top 50 global startups to watch\t\t         Technology   3 Min Read\nSaraki commends Team Offshore Nigeria’s investment in new vessel acquisition\t\t         Maritime   4 Min Read\t\t\t                  AfricaAgricultureAIAviationBankingCareersCompaniesEconomyEditorialEnergyEntertainmentEntrepreneurshipFin-TechBanking & FinanceHealthLawLife & ArtsOpinionPoliticsSportsStart-upTaxTechnologyWorld             Energy\nNigeria’s solar boom hits cost wall as China ends export subsidies\t\t  …To take effect April 1…\nSchneider Electric bets on Africa’s industrial security gap\t\t  When a single infected USB…\nMiddle East war drives $25bn energy damage – Rystad Energy\t\t  The ongoing conflict in the…\nData centre boom overtakes oil, solar investments as capex hits $770bn\t\t  Global investment in data centres…\nNigeria’s renewable energy sector gets $20m blended finance push\t\t  A coalition of development finance…              Technology\nWhy UNIBEN medical students gain spotlight for FG’s N50m venture grant\t\t  Four final-year medical students from…\nKuda lays off staff in restructuring push despite narrowing losses\t\t  Kuda Technologies Limited, a Nigerian…\nInside Reflect Orbital’s plan to deliver sunlight on demand\t\t  Reflect Orbital, a California-based space…\nExplainer: Why Nigerians are paying more for less internet\t\t  Nigeria’s internet paradox is deepening…\n5G rollout fails to deliver revenue for mobile operators\t\t  5G is everywhere, but the…              Newsletters\nNigeria’s oil windfall rerun: Grab it or waste it again\t\t  A geopolitical shock handed Nigeria…\nUK Steel for Nigerian ports upgrade exposes Ajaokuta’s lost decades\t\t  The £746 million ($997 million)…\nZenith’s London ambition: Capital, credibility, and a global reach\t\t  As Nigeria’s Zenith Bank plans…\nAkande faults Tinubu for lacking empathy amid renewed North-East terror attacks\t\t    Laolu Akande,Former Presidential Aide,has…\nFrom waste to resource: Nigeria’s rPET plant brews a circular economy\t\t  As the race to align…              Politics\nResignation deadline triggers cabinet members’ exits ahead of 2027 election\t\t  With the deadline for political…\n2027: Tinubu’s camp weighs options on re-election campaign structure\t\t  With just months to the…\nFormer Kano deputy governor Gawuna quits APC\t\t  Nasiru Gawuna, former deputy governor…\n2027: I haven’t stepped down for anyone — Atiku\t\t  Former Vice President Atiku Abubakar…\nWike’s ally Boma Iyaye, denies guber interest\t\t  Controversy over would-be governorship aspirants'…              Companies\nBUA Foods plans record N504bn dividend payout after nearly doubling profit\t\t  BUA Foods Plc has announced…\nGreyHound Pavilion CEO leads Diaspora engagement in USA, showcases real estate opportunities\t\t  Opeyemi Ebagua, chief executive officer…\nSFS Capital’s ratings upgrade signals shift in Nigeria’s REIT market\t\t  SFS Capital Nigeria Limited has…\nSanwo-Olu, Nola break ground for Veritasi Homes, COOPLAG’s Oyster Towers in Eko Atlantic City\t\t  Babajide Sanwo-Olu, Lagos State governor,…\nCadbury bolsters board with Doyin Salami, Ezz El Arab as stock hits new low\t\t  Rasaq Adedoyin Salami and Hisham Ezz…              Africa\nEquity Bank Uganda leads profit surge as regional units deliver half of earnings\t\t  Equity Bank Uganda Limited emerged…\nEthiopia, Kenya drive $20bn FDI surge into Africa despite Middle East crisis\t\t  The surge in FDI was…\nS&P affirms Morocco, Ghana ratings; outlook stable amid global uncertainties\t\t  S&P Global has affirmed the…\nAFRICA FINANCE BRIEF: Rate pause, FDI risks, banking strength\t\t  In the last week of…\nNigeria’s biggest banks lead Africa in brand value growth rate\t\t  …recapitalisation drive lifts combined value…                            - Advertisement -                 Editoral               Editorial\nWhat a stable naira can do for the economy\t\t  After one of the most turbulent currency episodes in its history, Nigeria’s naira is beginning to find its footing again. The question now confronting policymakers is not merely whether the…    By  The Editorial Board    7 Min Read\t\t\t                Editorial\nBuilt with public funds, priced beyond the public: Rethinking student housing\t\t  A federally funded student hostel at the University of Lagos, built to ease a long-standing accommodation crisis, now sits at the centre of a troubling contradiction. Reports indicate that bed…    By  The Editorial Board    6 Min Read\t\t\t                Editorial\nThe graduate unemployment crisis is an economic failure, not an educational one\t\t  For years, a convenient narrative has dominated public discussions about unemployment in Nigeria: that universities are producing unemployable graduates. Employers complain that graduates lack practical skills, cannot communicate effectively, or…    By  The Editorial Board    6 Min Read\t\t\t                Editorial\nWhy high oil prices hurt Nigerian households\t\t  When global oil prices climb, most producing nations benefit. In Nigeria, the story is more complicated and far less celebratory. Each upward swing in crude prices often translates into higher…    By  The Editorial Board    6 Min Read\t\t\t                Editorial\nRecapitalisation and the quiet reshaping of Nigeria’s insurance industry\t\t  Nigeria’s insurance industry is undergoing a silent but thoughtful transformation. With the July 31, 2026, recapitalisation deadline approaching, the market is already responding in ways that could permanently reshape the…    By  The Editorial Board    6 Min Read\t\t\t                Editorial\nNigeria’s oil sector needs fresh thinking before the wells run dry\t\t  For decades, crude oil has been the backbone of Nigeria’s economy, providing the bulk of foreign exchange earnings and funding government budgets. Despite its strategic importance, the nation’s oil sector…    By  The Editorial Board    7 Min Read\t\t\t                       Editorial\nWhy Nigeria’s system defeats even its best leaders\t\t  For over two decades, Nigeria’s elections have arrived wrapped in…    7 Min Read\t\t\t        Editorial\nWhy Nigeria still misses out on oil booms\t\t  As geopolitical tensions in the Middle East intensify, particularly around…    7 Min Read\t\t\t        Editorial\nMaking President Tinubu’s poverty reduction plan work\t\t  Poverty remains Nigeria’s most persistent national emergency, more dangerous than…    8 Min Read\t\t\t        Editorial\nFixing transportation to save productivity in Lagos\t\t  Transportation is not merely about moving people from one point…    8 Min Read\t\t\t                   Today's E-paper\nBusinessDay 31st Mar 2026\nPast Edtions\nAnalysis              Analysis\nRewiring Nigeria’s housing finance: Can QShelter turn a 20-million-plus-unit deficit into an investment opportunity?\t\t  On a humid evening in Lagos, a young banker earning above the national average scrolls…    By  Muhammad Akanji    8 Min Read\t\t\t              AnalysisPREMIUM\nNigeria cannot decarbonise in darkness\t\t  Nigeria’s climate crisis is often framed as an emissions problem. In reality, it is a…    By  Oluwatobi Ojabello    6 Min Read\t\t\t              AnalysisPREMIUM\nFlooding becomes Nigeria’s most ignored economic shock\t\t  Like government, like communities: losses fade from memory once the waters recede, and responses remain…    By  Oluwatobi Ojabello    5 Min Read\t\t\t                 Podcast                  Explainers               News\nExplainer: Winners and losers from Nigeria’s remittance overhaul\t\t  Nigeria’s Central Bank on Tuesday moved to tighten oversight of diaspora inflows, directing all International Money Transfer Operators (IMTOs) to route transactions through designated naira settlement accounts in banks in…    By  Hope Moses-Ashike    4 Min Read\t\t\t                EducationNews\nExplainer: What the Learner ID Number means for Nigeria’s basic education\t\t  The federal government has announced a comprehensive set of reforms aimed at eliminating examination malpractice, and improving children’s learning outcomes. The Learner Identification Number (LIN) is a unique identifier introduced…    By  Charles Ogwo    8 Min Read\t\t\t                Technology\nExplainer: How cybercrime outpaces digital revolution\t\t  As Nigeria accelerates into a digital-first economy powered by mobile banking, e-commerce, and fintech innovation, cybercrime poses itself as another force growing. As there have been a digital boom, likewise…    By  Folake Balogun    5 Min Read\t\t\t                Technology\nExplainer: How Nigerians can retrieve funds from dormant bank accounts\t\t  Millions of Nigerians hold dormant bank accounts that have remained inactive for years, often because the owners forgot about them, relocated, or stopped using the account. According to the Nigeria…    By  Chinwe Michael    5 Min Read\t\t\t                News\nExplainer: How to file annual tax returns before March 31 –  LIRS\t\t  Ahead of the March 31 deadline for filing individual annual tax returns, the Lagos State Internal Revenue Service (LIRS) has provided guidance on who must file, the documents required, and…    By  Ayomide Odunlami    7 Min Read\t\t\t                Companies\nExplainer: Inside Neimeth’s N1.98bn capital restructuring\t\t  Neimeth International Pharmaceuticals Plc is seeking shareholder approval for a N1.98 billion capital restructuring that could significantly reshape its balance sheet and future dividend capacity. The move follows a February…    By  Chima Chima    6 Min Read\t\t\t                       Opinion\nAI on the battlefield: How algorithms are rewriting modern war (An explainer)\t\t  War is no longer decided solely by firepower, manpower, or…    9 Min Read\t\t\t        Technology\nExplainer: How Nigerians can retrieve funds from dormant bank accounts\t\t  Millions of Nigerians hold dormant bank accounts that have remained…    5 Min Read\t\t\t        Companies\nExplainer: Inside Neimeth’s N1.98bn capital restructuring\t\t  Neimeth International Pharmaceuticals Plc is seeking shareholder approval for a…    6 Min Read\t\t\t        News\nExplainer: Presumptive Tax – How Nigeria plans to tax its informal economy\t\t  Most small businesses in Nigeria make money without keeping records…    9 Min Read\t\t\t                         News\nExplainer: Winners and losers from Nigeria’s remittance overhaul\t\t     By  Hope Moses-Ashike    4 Min Read\nExplainer: What the Learner ID Number means for Nigeria’s basic education\t\t  The federal government has announced a comprehensive set of reforms aimed at…    8 Min Read\t\t\t                   Cartoon of the day    SON\nPast Edtions\nOpinion\nWhy alignment moves systems more than ideas\t\t  In many of the environments I work in, across governments,…       By  BusinessDay\n‘Equipment pilfering hindering Iju-Apapa rail project’\t\t  Nigeria’s transportation minister, Rotimi Amaechi has…       By  Mike Ochonma\nChina, Nigeria should unite to strengthen bilateral cooperation, says Consul General\t\t  Yan Yuqing, Consul General of China…       By  Iwok Iniobong\nSenate’s Budget Defence of Commotion and Zero Releases\t\t  If the National Assembly’s budget defence…       By  Cynthia Egboboh\nChina says premier’s Africa visit about more than just oil deals\t\t  Chinese Premier Li Keqiang is to…       By  BusinessDay\nSenate to amend EFCC Act to enable it probe corrupt military officers\t\t  The Nigerian Senate has announced plans…       By  Ojochenemi Onje\nExpectations high as Heritage Bank concludes merger deals\t\t  Expectations are high as Heritage Bank…       By  BusinessDay\n",
+      "length": 15000,
+      "method": "api",
+      "timestamp": "2026-03-31T13:12:37.666444"
+    }
+  ],
+  "timestamp": "2026-03-31T13:12:37.670350"
+}

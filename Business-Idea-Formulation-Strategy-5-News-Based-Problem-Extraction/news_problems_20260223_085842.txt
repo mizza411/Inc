@@ -1,0 +1,74 @@
+News-Based Problem Extraction - Saved Run
+Timestamp: 2026-02-23T09:01:05.894878
+
+Selected sources:
+  - https://nairametrics.com/
+
+======================================================================
+COLLECTED CONTENT (Formatted for Readability)
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+SOURCE 1: https://businessday.ng/
+Method: api | Length: 3085 characters
+──────────────────────────────────────────────────────────────────────
+
+Title: African tech debt hits $1.64B in 2025, signaling a structural shift in startup funding
+Summary: <img alt="" class=" pl" src="https://cdn.businessday.ng/wp-content/uploads/2026/02/African-tech-debt-large.png" /><p>African tech startups raised a record $1.64 billion through debt financing in 2025, a 63 percent increase from $1.01 billion</p>
+<p>read more <a
+href="https://businessday.ng/technology/article/african-tech-debt-hits-1-64b-in-2025-signaling-a-structural-shift-in-startup-funding/">African
+tech debt hits $1.64B in 2025, signaling a structural shift in startup funding</a></p>
+
+---
+
+Title: GigaLayer buys registeram, deepens push for Nigerian cloud sovereignty
+Summary: <img alt="GigaLayer buys registeram, deepens push for Nigerian cloud sovereignty" class=" pl" src="https://cdn.businessday.ng/wp-content/uploads/2026/02/GigaLayer-large.png" /><p>GigaLayer has acquired Nigerian domain registration and hosting firm Registeram in a move aimed at consolidating locally operated cloud and</p>
+<p>read more <a
+href="https://businessday.ng/technology/article/gigalayer-buys-registeram-deepens-push-for-nigerian-cloud-sovereignty-2/">GigaLayer
+buys registeram, deepens push for Nigerian cloud sovereignty</a></p>
+
+---
+
+Title: Crafting a strategy for private sector initiatives in LNG development in Nigeria
+Summary: <img alt="Crafting a strategy for private sector initiatives in LNG development in Nigeria" class=" pl" src="https://cdn.businessday.ng/2021/01/gssgvda.png" /><p>The purpose of this article, a follow-up to last week’s article titled, “Nigeria and the global LNG surge 2026-2030,” is</p>
+<p>read more <a
+href="https://businessday.ng/insight-2/article/crafting-a-strategy-for-private-sector-initiatives-in-lng-development-in-nigeria/">Crafting
+a strategy for private sector initiatives in LNG development in Nigeria</a></p>
+
+---
+
+Title: AI on the battlefield: How algorithms are rewriting modern war (Part 2)
+Summary: <img alt="AI on the battlefield: How algorithms are rewriting modern war (Part 2)" class=" pl" src="https://cdn.businessday.ng/wp-content/uploads/2026/02/AI-on-the-battlefield-large.png" /><p>As major powers accelerate the military use of artificial intelligence, the consequences for countries that fail to adapt are becoming</p>
+<p>read more <a
+href="https://businessday.ng/insight-2/article/ai-on-the-battlefield-how-algorithms-are-rewriting-modern-war-part-2/">AI
+on the battlefield: How algorithms are rewriting modern war (Part 2)</a></p>
+
+---
+
+Title: Dollar holders rethink bet as naira gains gather pace
+Summary: <img alt="Naira hits five-month high of N1,497.46 as demand pressure drops" class=" pl" src="https://cdn.businessday.ng/wp-content/uploads/2025/02/Naira-to-Dollars-Currency-tips-for-Nigerians-planning-to-travel.png" /><p>As the naira continues to extend its rally, investors who hoarded dollars as a hedge against devaluation are being forced</p>
+<p>read more <a href="https://businessday.ng/pro/article/dollar-holders-rethink-bet-as-naira-gains-gather-pace/">Dollar
+holders rethink bet as naira gains gather pace</a></p>
+
+---
+
+
+======================================================================
+FULL JSON DATA (for reference)
+======================================================================
+
+{
+  "selected_sources": [
+    "https://nairametrics.com/"
+  ],
+  "news_content": [
+    {
+      "source": "https://businessday.ng/",
+      "content": "Title: African tech debt hits $1.64B in 2025, signaling a structural shift in startup funding\nSummary: <img alt=\"\" class=\" pl\" src=\"https://cdn.businessday.ng/wp-content/uploads/2026/02/African-tech-debt-large.png\" /><p>African tech startups raised a record $1.64 billion through debt financing in 2025, a 63 percent increase from $1.01 billion</p>\n<p>read more <a href=\"https://businessday.ng/technology/article/african-tech-debt-hits-1-64b-in-2025-signaling-a-structural-shift-in-startup-funding/\">African tech debt hits $1.64B in 2025, signaling a structural shift in startup funding</a></p>\n---\nTitle: GigaLayer buys registeram, deepens push for Nigerian cloud sovereignty\nSummary: <img alt=\"GigaLayer buys registeram, deepens push for Nigerian cloud sovereignty\" class=\" pl\" src=\"https://cdn.businessday.ng/wp-content/uploads/2026/02/GigaLayer-large.png\" /><p>GigaLayer has acquired Nigerian domain registration and hosting firm Registeram in a move aimed at consolidating locally operated cloud and</p>\n<p>read more <a href=\"https://businessday.ng/technology/article/gigalayer-buys-registeram-deepens-push-for-nigerian-cloud-sovereignty-2/\">GigaLayer buys registeram, deepens push for Nigerian cloud sovereignty</a></p>\n---\nTitle: Crafting a strategy for private sector initiatives in LNG development in Nigeria\nSummary: <img alt=\"Crafting a strategy for private sector initiatives in LNG development in Nigeria\" class=\" pl\" src=\"https://cdn.businessday.ng/2021/01/gssgvda.png\" /><p>The purpose of this article, a follow-up to last week’s article titled, “Nigeria and the global LNG surge 2026-2030,” is</p>\n<p>read more <a href=\"https://businessday.ng/insight-2/article/crafting-a-strategy-for-private-sector-initiatives-in-lng-development-in-nigeria/\">Crafting a strategy for private sector initiatives in LNG development in Nigeria</a></p>\n---\nTitle: AI on the battlefield: How algorithms are rewriting modern war (Part 2)\nSummary: <img alt=\"AI on the battlefield: How algorithms are rewriting modern war (Part 2)\" class=\" pl\" src=\"https://cdn.businessday.ng/wp-content/uploads/2026/02/AI-on-the-battlefield-large.png\" /><p>As major powers accelerate the military use of artificial intelligence, the consequences for countries that fail to adapt are becoming</p>\n<p>read more <a href=\"https://businessday.ng/insight-2/article/ai-on-the-battlefield-how-algorithms-are-rewriting-modern-war-part-2/\">AI on the battlefield: How algorithms are rewriting modern war (Part 2)</a></p>\n---\nTitle: Dollar holders rethink bet as naira gains gather pace\nSummary: <img alt=\"Naira hits five-month high of N1,497.46 as demand pressure drops\" class=\" pl\" src=\"https://cdn.businessday.ng/wp-content/uploads/2025/02/Naira-to-Dollars-Currency-tips-for-Nigerians-planning-to-travel.png\" /><p>As the naira continues to extend its rally, investors who hoarded dollars as a hedge against devaluation are being forced</p>\n<p>read more <a href=\"https://businessday.ng/pro/article/dollar-holders-rethink-bet-as-naira-gains-gather-pace/\">Dollar holders rethink bet as naira gains gather pace</a></p>\n---",
+      "length": 3085,
+      "method": "api",
+      "timestamp": "2026-02-23T09:01:05.889878"
+    }
+  ],
+  "timestamp": "2026-02-23T09:01:05.894878"
+}

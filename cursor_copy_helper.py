@@ -8,6 +8,11 @@ Config file (Phase 1):
   Sub-phase 1.1: Load config from JSON (path + safe load); no behavior change.
   Sub-phase 1.2: Apply config overrides in offer_cursor_copy_block.
   Sub-phase 1.3: Add example config file and README docs.
+
+Past-ideas file (replace long in-block paragraph):
+  Phase 1 (this module): Build/update past_business_ideas.md from business_ideas_*.md. DONE.
+  Phase 2: Use path to past_business_ideas.md in block + instruction; stop inlining long list. DONE.
+  Phase 3: refresh_past_business_ideas_for_directory() + Strategy 5 run() start. DONE.
 """
 
 import json
@@ -50,6 +55,79 @@ def _load_copy_block_config() -> Optional[Dict[str, Any]]:
         except (OSError, json.JSONDecodeError, TypeError):
             continue
     return None
+
+
+# Past-ideas file (Phase 1): aggregate file built from business_ideas_*.md
+PAST_IDEAS_FILENAME = "past_business_ideas.md"
+_MAX_PAST_IDEAS_FILES = 10   # Max files to merge into past_business_ideas.md
+_MAX_PAST_IDEAS_TITLES = 100 # Max idea lines in the file
+
+
+def _write_past_ideas_from_parent(parent: Path) -> Optional[Path]:
+    """
+    Merge business_ideas_*.md in parent into past_business_ideas.md.
+    Returns path to past_business_ideas.md, or None if nothing to write.
+    """
+    try:
+        if not parent.is_dir():
+            return None
+        pattern = "business_ideas_*.md"
+        files = sorted(parent.glob(pattern), key=lambda p: p.stat().st_mtime, reverse=True)
+        files = files[:_MAX_PAST_IDEAS_FILES]
+        if not files:
+            return None
+        titles: list[str] = []
+        for f in files:
+            if len(titles) >= _MAX_PAST_IDEAS_TITLES:
+                break
+            with open(f, "r", encoding="utf-8") as fp:
+                for line in fp:
+                    line = line.strip()
+                    if line.startswith("## Idea ") or line.startswith("### Idea "):
+                        titles.append(line.lstrip("# ").strip())
+                    if len(titles) >= _MAX_PAST_IDEAS_TITLES:
+                        break
+        if not titles:
+            return None
+        out_path = parent / PAST_IDEAS_FILENAME
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write("# Past business ideas (avoid repeating)\n\n")
+            f.write("Use this list to avoid proposing the same or near-identical ideas again.\n\n")
+            for t in titles:
+                f.write("- " + t + "\n")
+        return out_path
+    except (OSError, ValueError):
+        return None
+
+
+def _ensure_past_ideas_file(document_path: Union[str, Path]) -> Optional[Path]:
+    """
+    Build or update past_business_ideas.md in the same directory as document_path,
+    from existing business_ideas_*.md files (newest first). Returns path to the
+    file, or None on any error or if no source files exist.
+    """
+    try:
+        path = Path(document_path).resolve()
+        if not path.exists():
+            return None
+        return _write_past_ideas_from_parent(path.parent)
+    except (OSError, ValueError):
+        return None
+
+
+def refresh_past_business_ideas_for_directory(directory: Union[str, Path]) -> Optional[Path]:
+    """
+    Public API (Phase 3): Rebuild past_business_ideas.md from business_ideas_*.md
+    in the given directory. Call after new business_ideas_*.md files appear (e.g.
+    at the start of a Strategy 5 run). Returns path to past file or None.
+    """
+    try:
+        d = Path(directory).resolve()
+        if not d.is_dir():
+            return None
+        return _write_past_ideas_from_parent(d)
+    except (OSError, ValueError):
+        return None
 
 
 def copy_to_clipboard(text: str) -> bool:
@@ -120,12 +198,15 @@ def offer_cursor_copy_block(
     prompt_1a_ref: str,
     prompt_1b_ref: str,
     instruction: str = DEFAULT_INSTRUCTION,
+    use_config: bool = True,
 ) -> None:
     """
     Print a copyable block (document path + prompts) and offer to copy to clipboard;
     optional auto-paste after user focuses Cursor chat.
 
-    Values can be overridden by cursor_copy_block_config.json (Sub-phase 1.2).
+    Values can be overridden by cursor_copy_block_config.json (Sub-phase 1.2)
+    when use_config is True (default). Pass use_config=False so caller arguments
+    are always used (e.g. Strategy 15 vs Strategy 5 prompts in the same repo).
     Any Strategy script can call this after saving its output document.
     """
     doc_path_val = document_path
@@ -133,7 +214,7 @@ def offer_cursor_copy_block(
     p1b = prompt_1b_ref
     inst = instruction
 
-    config = _load_copy_block_config()
+    config = _load_copy_block_config() if use_config else None
     if config:
         v = config.get("document_path")
         if isinstance(v, str) and v.strip():
@@ -152,8 +233,11 @@ def offer_cursor_copy_block(
     if not path.exists():
         return
     doc_path = str(path.resolve())
-    block = (
-        f"Document: {doc_path}\n\n"
+    past_path = _ensure_past_ideas_file(path)
+    block = f"Document: {doc_path}\n\n"
+    if past_path is not None:
+        block += f"Past ideas (avoid repeating): {past_path.resolve()}\n\n"
+    block += (
         f"Prompt 1a: {p1a}\n"
         f"Prompt 1b: {p1b}\n\n"
         f"{inst}"
@@ -178,12 +262,17 @@ def offer_cursor_copy_block(
     print("           read the document and output the business ideas table.")
     print()
     example_path = config_path.parent / CONFIG_EXAMPLE_FILENAME
-    print("  TO CHANGE THIS BLOCK (i.e. prompts, file paths and instruction) BELOW NEXT TIME,")
-    print("  edit the config file in the repo root:")
-    print(f"           {example_path}")
-    print("           Keys: document_path, prompt_1a_ref, prompt_1b_ref, instruction.")
-    print("           (Optional: copy to cursor_copy_block_config.json to keep overrides separate.)")
-    print("           FALLBACK DEFAULTS WHEN NO CONFIG EXISTS: cursor_copy_helper.py (DEFAULT_INSTRUCTION AND CALLER PROMPTS).")
+    if use_config:
+        print("  TO CHANGE THIS BLOCK (i.e. prompts, file paths and instruction) BELOW NEXT TIME,")
+        print("  edit the config file in the repo root:")
+        print(f"           {example_path}")
+        print("           Keys: document_path, prompt_1a_ref, prompt_1b_ref, instruction.")
+        print("           (Optional: copy to cursor_copy_block_config.json to keep overrides separate.)")
+        print("           FALLBACK DEFAULTS WHEN NO CONFIG EXISTS: cursor_copy_helper.py (DEFAULT_INSTRUCTION AND CALLER PROMPTS).")
+    else:
+        print("  This block uses this run's caller arguments only; repo-root cursor_copy_block_config.json")
+        print("  is not applied. To change prompts or instruction next time, edit the strategy's")
+        print("  prompt files or the script that calls offer_cursor_copy_block(..., use_config=False).")
     print()
     print("--- BEGIN (copy everything below this line into Cursor) ---")
     print()

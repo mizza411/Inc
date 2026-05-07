@@ -1,0 +1,49 @@
+# Past business ideas (avoid repeating)
+
+Use this list to avoid proposing the same or near-identical ideas again.
+
+- Idea 1 – With the mention of kidnap ransoms now flowing through Nigerian banks
+- Idea 2 – With the mention of NAFDAC alerting Nigerians over counterfeit Herceptin in circulation
+- Idea 3 – With the mention of SMEs struggling as fuel costs rise and inflation pressure worsens
+- Idea 4 – With the mention of frequent electricity outages and calls for improved funding in the power sector
+- Idea 5 – With the mention of delayed disbursements and contractor cash-flow stress in public infrastructure
+- Idea 6 – With the mention of healthcare recruitment drives to close staffing gaps in states
+- Idea 7 – With the mention of poultry farmers resisting a large Nigeria–China poultry deal
+- Idea 8 – With the mention of SEC reform focus and Nigeria’s infrastructure financing gap
+- Idea 9 – With the mention of growing LNG demand for Nigerian cargoes
+- Idea 10 – With the mention of recapitalization offers and retail confusion around rights issues/commercial papers
+- Idea 1 – With the mention of the Chief Judge’s undeclared accounts and judicial corruption
+- Idea 2 – With the mention of luxury SUVs for ex‑officials while pupils sit on floors in Akwa Ibom
+- Idea 3 – With the mention of gas flaring turning oil communities into a furnace
+- Idea 4 – With the mention of extra‑budgetary spending and weak fiscal discipline in Edo
+- Idea 5 – With the mention of vulnerable communities suffering from US aid cuts
+- Idea 1 – With the mention of the medical negligence leading to the death of Chimamanda Adichie’s son
+- Idea 2 – With the mention of Nigerians needing to understand and claim their rights to confront injustice
+- Idea 3 – With the mention of negative professional conduct among health workers
+- Idea 4 – With the mention of exam malpractice and forged results at UNICAL
+- Idea 5 – With the mention of residents of Mile 12 repeatedly protesting demolitions
+- Idea 6 – With the mention of tropical disease prevention being threatened by drug shortages and funding cuts
+- Idea 7 – With the mention of rising drug prices despite executive interventions
+- Idea 8 – With the mention of Nigeria’s poor electricity due to inadequate gas supply
+- Idea 9 – With the mention of Nigeria’s digital boom reshaping work but not ending unemployment
+- Idea 10 – With the mention of Nigeria and South Africa leading stablecoin adoption towards 80%
+- Idea 1 – With the mention of the trusted public figures endorsing fraudulent schemes in Nigeria’s digital ad space
+- Idea 2 – With the mention of Nigeria’s petrol prices rising 39.5% and ranking second-highest globally
+- Idea 3 – With the mention of the Nigerian Exchange crossing N130 trillion market cap and large weekly trading gains
+- Idea 4 – With the mention of Nigerian companies rethinking currency strategy as China’s RMB gains ground in global trade
+- Idea 5 – With the mention of the Shippers’ Council ordering tariff rollbacks amid an escalating port dispute
+- Idea 6 – With the mention of Nigeria’s displacement crisis threatening food security and the economy
+- Idea 7 – With the mention of the United States expanding a $15,000 visa bond policy to 50 countries
+- Idea 8 – With the mention of Nigeria’s evolving digital asset governance and VASP obligations
+- Idea 9 – With the mention of Canal+ ending Showmax and the struggling streaming market in Nigeria
+- Idea 10 – With the mention of US and UK visitors topping Lagos Detty December arrivals and diaspora spending hitting N396bn
+- Idea 1 – With the mention of Dangote Cement, BUA Cement, and Lafarge being compared for which offers the best value for investors in 2026
+- Idea 2 – With the mention of Bonny Light surging to $110 per barrel as oil prices hit multi-year highs
+- Idea 3 – With the mention of Nigeria’s imports from Europe dropping by N5.36 trillion in 2025
+- Idea 4 – With the mention of food prices spiking in Lagos as Eid celebrations slow market activity
+- Idea 5 – With the mention of two deaths and shops burnt after a gas tanker and truck collided in Lagos
+- Idea 6 – With the mention of a report linking social media to declining life satisfaction among youth
+- Idea 7 – With the mention of an energy crisis report citing roughly 400 million barrels lost and prices surging about 50%
+- Idea 8 – With the mention of the UK planning to raise visa, ETA, and citizenship fees from April 2026 amid “Japa” coverage
+- Idea 9 – With the mention of Lagos sealing a non-LASRERA-certified estate agent office in Ikorodu
+- Idea 10 – With the mention of the FMDQ debt market shrinking by about N720 billion in two days as OMO and T-bill yields fall

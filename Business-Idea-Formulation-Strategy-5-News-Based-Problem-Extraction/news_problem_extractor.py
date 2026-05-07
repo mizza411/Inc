@@ -17,9 +17,10 @@ from typing import List, Dict, Optional
 # Reusable Cursor copy-block helper (repo root)
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 try:
-    from cursor_copy_helper import offer_cursor_copy_block
+    from cursor_copy_helper import offer_cursor_copy_block, refresh_past_business_ideas_for_directory
 except ImportError:
     offer_cursor_copy_block = None
+    refresh_past_business_ideas_for_directory = None
 
 try:
     import requests
@@ -37,6 +38,20 @@ except ImportError:
     HAS_RSS = False
     print("Note: Install 'feedparser' for RSS feed support:")
     print("  pip install feedparser")
+
+# Prompt 1b for ChatGPT tabulate step — single source of truth (also written to chatgpt_prompt_1b.txt).
+PROMPT_1B_TABULATE = (
+    "Tabulate output (Columns: Proposed domain (not verified)/Problem Identified/"
+    "Potential Digital Solution/Estimated daily sales/ Actualization strategy, Target Audience, Problem it solves, "
+    "Competition Analysis, Estimated Costs (in dollars), Funding Sources (provide links to possible investors "
+    "and VCs), No-code Tools to build solution, How to test the viability of the idea, Potential Challenges, "
+    "Solution to those potential challenges, landing page platform, Monetization Strategy, "
+    "Market Size and Growth Potential, Technical Expertise and Skill Requirements, Partnerships and Collaboration, "
+    "Timeline, Key Performance Indicators (KPIs), Team Requirements, Time to Market, Required Skills, "
+    "Risks and Mitigation, Scalability, Social Impact.\n\n"
+    "In the \"Proposed domain (not verified)\" column: use TBD or illustrative placeholder domains only "
+    "(e.g. productname.ng); do not present them as existing live websites unless you have verified them."
+)
 
 # NewsAPI (Free tier: 100 requests/day)
 NEWSAPI_KEY = os.getenv('NEWSAPI_KEY', '')
@@ -110,15 +125,15 @@ RSS_FEEDS = {
 
 class NewsProblemExtractor:
     def __init__(self):
-        # Mixed general + financial Nigerian news sources
+        # Business sources first (positions 1–2); keep them there. General news follows.
         self.news_sources = [
+            "https://nairametrics.com/",           # 1 – Business / financial (prefer for business ideas)
+            "https://businessday.ng/",             # 2 – Business / financial (prefer for business ideas)
             "https://www.vanguardngr.com/",
             "https://punchng.com/",
             "https://guardian.ng/",
             "https://www.thisdaylive.com/",
             "https://www.premiumtimesng.com/",
-            "https://nairametrics.com/",      # Financial / business news
-            "https://businessday.ng/",        # Financial / business news
             "https://www.thenationonlineng.net/",
         ]
         self.selected_sources = []
@@ -132,10 +147,10 @@ class NewsProblemExtractor:
         print("STEP 1: Select News Sources")
         print("="*60)
         
-        print("\nAvailable Nigerian News Sources:")
+        print("\nAvailable Nigerian News Sources (1–2 = business; prefer these for business ideas):")
         for i, source in enumerate(self.news_sources, 1):
             print(f"{i}. {source}")
-        
+        print("\nTip: Prioritise business-focused news sources (1–2) over general news as they yield stronger, more commercially focused ideas.")
         print("\nSelect 2-3 sources (enter numbers separated by commas):")
         selection = input("Selection: ").strip()
         
@@ -515,7 +530,7 @@ class NewsProblemExtractor:
             prompt_1a += "---\n\n"
         
         # Prompt 1b
-        prompt_1b = """Tabulate output (Columns: Linked Website/Problem Identified/Potential Digital Solution/Estimated daily sales/ Actualization strategy, Target Audience, Problem it solves, Competition Analysis, Estimated Costs (in dollars), Funding Sources (provide links to possible investors and VCs), No-code Tools to build solution, How to test the viability of the idea, Potential Challenges, Solution to those potential challenges, landing page platform, Monetization Strategy, Market Size and Growth Potential, Technical Expertise and Skill Requirements, Partnerships and Collaboration, Timeline, Key Performance Indicators (KPIs), Team Requirements, Time to Market, Required Skills, Risks and Mitigation, Scalability, Social Impact."""
+        prompt_1b = PROMPT_1B_TABULATE
         
         # Save prompts
         with open('chatgpt_prompt_1a.txt', 'w', encoding='utf-8') as f:
@@ -663,6 +678,14 @@ class NewsProblemExtractor:
         print("Business Idea Formulation Strategy 5")
         print("News-Based Problem Extraction")
         print("="*60)
+
+        # Phase 3: refresh past_business_ideas.md from any business_ideas_*.md in this folder
+        # (picks up files saved since the last run, e.g. from Cursor)
+        if refresh_past_business_ideas_for_directory is not None:
+            strat_dir = Path(__file__).resolve().parent
+            past = refresh_past_business_ideas_for_directory(strat_dir)
+            if past is not None:
+                print(f"  ✓ Past ideas aggregate updated: {past.name}")
         
         # Step 1: Select sources
         self.select_news_sources()
@@ -683,7 +706,11 @@ class NewsProblemExtractor:
                 offer_cursor_copy_block(
                     document_path=txt_path,
                     prompt_1a_ref='Give me problems that can be solved with digital solutions (web apps and others), based on content on nigerian news websites today. Output should have "With the mention of".',
-                    prompt_1b_ref="Tabulate output (Columns: Linked Website, Problem Identified, Potential Digital Solution, Estimated daily sales, ...).",
+                    prompt_1b_ref=(
+                        "Tabulate output (Columns: Proposed domain (not verified), "
+                        "Problem Identified, Potential Digital Solution, Estimated daily sales, ...). "
+                        "Proposed domain: TBD/illustrative unless verified."
+                    ),
                 )
         
         print("\n" + "="*60)

@@ -1,0 +1,427 @@
+News-Based Problem Extraction - Saved Run
+Timestamp: 2026-03-21T13:10:34.922806
+
+Selected sources:
+  - https://businessday.ng/
+
+======================================================================
+COLLECTED CONTENT (Formatted for Readability)
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+SOURCE 1: https://businessday.ng/
+Method: api | Length: 15000 characters
+──────────────────────────────────────────────────────────────────────
+
+Business News Nigeria | Daily Updates | Nigerian News
+X
+BusinessDay
+Home
+Tax Calculator
+Companies
+Markets
+Economy
+Real Estate
+Agriculture
+Aviation
+Banking
+Transportation
+Maritime
+Legal Business
+Research post
+Sports
+BDFX
+BD Conferences
+BD Foundation
+BusinessDay Intelligence
+Adverts & Rates
+About US
+Our Board
+Our Management
+Our Profile
+Go Premium
+TOP NEWS
+Nigeria's petrol import bill dropped by 42% to N8.9trn in 2025
+4 hrs ago
+AFRICA FINANCE IN BRIEF: Banking boom, rising debt, policy shifts reshape outlook
+4 hrs ago
+Nigeria’s petrol prices rise 39.5%, second highest globally
+4 hrs ago
+BUA Cement, Lafarge Africa join Nigeria’s trillion-naira revenue club in 2025
+6 hrs ago
+Shippers’ Council orders tariff rollback as port dispute escalates
+15 hrs ago
+Nigeria's displacement crisis threatens food security, economy - Ikiebe
+20 hrs ago
+Read more >>
+Dangote raises petrol price again to N1,275/litre within 24 hours
+Abubakar Ibrahim
+just now
+Barely 12 hours after a fresh hike, the Dangote Petroleum Refinery has again increased petrol prices, signalling
+intensifying pressure in...
+Recent
+2026 World Cup: Mexico ready to host Iran matches as FIFA says no
+just now
+Carrick slams ‘baffling’ penalty calls as United held by Bournemouth
+just now
+Report suspicious movements around you, Tinubu urges Nigerians
+58 minutes ago
+Outfits that graced the Eid al-Fitr celebration
+4 hrs ago
+9 most notable watches at the 2026 Oscars
+4 hrs ago
+5 peppers that shape the taste of Nigerian cooking
+4 hrs ago
+Read more >>
+U.S./Israel - Iran war
+View More
+2026 World Cup: Mexico ready to host Iran matches as FIFA says no
+Claudia Sheinbaum has confirmed that Mexico is prepared to host Iran’s 2026 World Cup matches if FIFA approves a venue
+Mar 21, 2026
+Iran risks $320,000 FIFA fine over World Cup boycott
+World football governing body FIFA could fine Iran’s national team at least $320,000 if it follows through on plans to
+Mar 20, 2026
+WORLD IN BRIEF: Israel says it acted alone in strike on Iran’s key gas field, US approves $16.5bn Gulf arms deal, South
+Africa grapples with deepening water crisis and other stories
+Netanyahu says Israel acted alone in Iran gas field strike Benjamin Netanyahu has said Israel “acted alone” in its
+attack
+Mar 20, 2026
+Iran to boycott U.S. matches but compete at 2026 World Cup — Taj
+Mehdi Taj, President of the Iran Football Federation (FFIRI), has declared that Iran could boycott matches in the United
+States
+Mar 19, 2026
+PREMIUM
+The forgotten authority of African women and the lessons Nigeria must learn
+Mar 20, 2026
+The brutal truth behind streaming in Nigeria
+Mar 20, 2026
+N73bn meets N544bn Tuberculosis funding gap: Progress or survival?
+Mar 20, 2026
+Nigeria’s education crisis is driven by systemic waste and inefficiency, not scarcity
+Mar 19, 2026
+IN OTHER NEWS
+News
+2026 World Cup: Mexico ready to host Iran matches as FIFA says no
+Anthony Nlebem
+just now
+Claudia Sheinbaum has confirmed that Mexico is prepared to host Iran’s 2026 World Cup matches if FIFA approves a
+venue...
+News
+US expands $15,000 visa bond policy to 50 countries
+Ojochenemi Onje
+just now
+The United States has expanded its visa bond policy to 50 countries, requiring certain short-term travellers to post up
+to...
+News
+Carrick slams ‘baffling’ penalty calls as United held by Bournemouth
+Anthony Nlebem
+just now
+Michael Carrick has slammed inconsistent officiating after Manchester United twice surrendered the lead in a 2-2 draw at
+Bournemouth on...
+News
+How brand design shapes consumer perception
+BusinessDay
+4 hrs ago
+In today’s fast-paced, competitive world, branding isn’t just about logos and colours—it’s the story, the values, and
+the experiences that...
+News
+4 places to get the best suya in Lagos
+Esther Emoekpere
+4 hrs ago
+Suya is one of Nigeria’s most popular street foods, made by seasoning thin slices of meat with a spiced mix...
+News
+The 50 Club: Fastest players to reach 50 UCL goals
+Anthony Nlebem
+6 hrs ago
+A historic night in European football saw two former Premier League icons join the most elite scoring circle in the...
+COLUMNISTS
+Why the Presco and Radisson deals signal a new era for Abia State
+Chido Nwakanma
+Mar 20, 2026
+Cuba in the crosshairs of Donald Trump and the Miami ‘Mafia’
+Femi Olugbile
+Mar 20, 2026
+How corporate governance shapes the survival and growth of emerging enterprises
+Prisca Ndu
+Mar 19, 2026
+The mentorship maps were wrong! On wisdom and the new architecture of African women’s power
+Udo Maryanne Okonjo
+Mar 18, 2026
+The data dignity deficit: Nigerians and the fight for digital citizenship
+Hani Okoroafor
+Mar 17, 2026
+President Bola Ahmed Tinubu and The King’s College tie
+BusinessDay
+Mar 16, 2026
+WHO IS THINKING FOR NIGERIA
+YSOT
+The forgotten authority of African women and the lessons Nigeria must learn
+Mar 20, 2026
+YSOT
+Nigeria’s national academies and the intellectual foundations of development
+Mar 18, 2026
+YSOT
+Current Nigerian politicians cannot fix Nigeria
+Mar 16, 2026
+Today's E-paper
+Economy
+Rethinking an advert regulatory system that protects Nigerians without straining businesses
+Ruth Okwumbu-Imafidon
+Mar 20, 2026
+In recent months, a disturbing pattern has emerged across Nigeria’s digital space: videos of trusted public figures
+endorsing schemes that...
+US, UK top Lagos Detty December arrivals as diaspora spending hits N396bn
+Chinwe Michael
+Mar 20, 2026
+The United States emerged as the largest source of diaspora visitors to Lagos during the 2025 Detty December season,
+overtaking...
+Energy
+Nigeria's petrol import bill dropped by 42% to N8.9trn in 2025
+[email protected]
+Mar 21, 2026
+Nigeria’s total spending on importation of Premium Motor Spirit (petrol) reduced significantly by 41.9 percent to N8.96
+trillion in 2025...
+Nigeria’s petrol prices rise 39.5%, second highest globally
+Abubakar Ibrahim
+Mar 21, 2026
+…Only African country in top 20 Nigeria has recorded one of the sharpest increases in petrol prices globally following
+the...
+Technology
+Google reshuffles AI team amid Nvidia-inspired industry shift
+Folake Balogun
+Mar 20, 2026
+Google is reorganising parts of its artificial intelligence division as the global race to define the next phase of
+AI...
+Rethinking an advert regulatory system that protects Nigerians without straining businesses
+Ruth Okwumbu-Imafidon
+Mar 20, 2026
+In recent months, a disturbing pattern has emerged across Nigeria’s digital space: videos of trusted public figures
+endorsing schemes that...
+Market
+Nigeria stocks defy shortened week to post massive N1.77trn gain
+Iheanyi Nwachukwu
+Mar 19, 2026
+The Nigerian Exchange Limited (NGX) capped off a historic, albeit brief, trading week with a gain of N1.77 trillion
+in...
+Nigeria’s equity boom pushes market value beyond N130trn
+Iheanyi Nwachukwu
+Mar 18, 2026
+The Nigerian Exchange Limited (NGX) has officially crossed the N130 trillion market capitalisation mark, a milestone
+that says much about...
+Legal Business
+An agent cannot claim commission for merely introducing a buyer or tenant
+BusinessDay
+Mar 19, 2026
+PHILIP KAYODE OLUSEGUN OJO v. SDV NIGERIA LIMITED & ANOR. SUPREME COURT OF NIGERIA (GARBA; JAURO; ADUMEIN; OGBUINYA;
+UMAR, JJ.CA)...
+Corporate purpose: What it is and what it is not
+BusinessDay
+Mar 19, 2026
+Few concepts in contemporary corporate governance have attracted as much attention, or generated as much confusion, as
+corporate purpose. Boards...
+The Evolution of Digital Asset Governance in Nigeria: A strategic guide for virtual asset service providers (VASPs)
+BusinessDay
+Mar 19, 2026
+INTRODUCTION Nigeria’s digital economy is currently navigating a pivotal transition. What began as a fragmented
+landscape of peer-to-peer activity has...
+Beyond The Bar: Law, leadership and influence
+Nkem Umeadi-Onyedika
+Mar 19, 2026
+The legal profession is often viewed through the narrow lens of courtrooms, transactions, and technical expertise. Yet
+beyond these visible...
+Partner Content
+Nigeria’s National Single Window Faces Its Real Test: Execution
+Sponsored Post
+Mar 05, 2026
+Why 9th Marketplace Is Redefining the Future of Online Shopping in Africa
+Stephen Onyekwelu
+Mar 05, 2026
+The ATBU Years: How University Life Prepared Kashifu Inuwa Abdullahi for a Career in National Digital Transformation
+BusinessDay
+Feb 11, 2026
+Sponsored
+Why External Accreditation is key to Strengthening Trust in African Healthcare
+Sponsored Post
+Mar 21, 2026
+SCL Marks 11 Years of Growth with New Lagos HQ and Cross-Border Intelligence Suite
+Sponsored Post
+Mar 20, 2026
+TECNO Launches Camon 50 Series With Flagship Camera Power, AI Productivity  And Exclusive Launch Gifts
+Sponsored Post
+Mar 20, 2026
+BD TV
+APGA's Soludo wins Anambra governorship election
+Nov 14, 2025
+Should private universities join ASUU ?
+Nov 14, 2025
+Nigeria's Eurobond offer meets with record oversubscription
+Nov 14, 2025
+Ex-CAN president backs Trump's threat to terrorists
+Nov 14, 2025
+Government 15% fuel import tariff: Boost for local refining or burden on Nigerians
+Nov 14, 2025
+Wike bans Phones at AGIS as Defence Minister backs Naval Officer
+Nov 14, 2025
+Why Nigeria tech start-ups fail: Lessons from Okra & Lidya
+Nov 05, 2025
+Africans be proud one of us is ending slavery - Dangote
+Nov 05, 2025
+BD Weekender
+10 high-paying careers where women lead the workforce
+Chisom Michael
+Mar 21, 2026
+Women are increasingly taking the lead in several high-paying careers, particularly across finance, healthcare, and
+corporate management, even as broader...
+Top 5 African countries where tourism drives growth
+Chisom Michael
+Mar 21, 2026
+Tourism continues to play a pivotal role in shaping African economies, driving employment, income, and foreign exchange
+earnings across the...
+Meet Adeola Akinwunmi: A young force shaping narratives for brands in Nigeria
+Chisom Michael
+Mar 21, 2026
+In a world where perception is reality, the art of corporate communications and branding has become a crucial
+differentiator for...
+How brand design shapes consumer perception
+BusinessDay
+Mar 21, 2026
+In today’s fast-paced, competitive world, branding isn’t just about logos and colours—it’s the story, the values, and
+the experiences that...
+Companies
+Linkage Assurance eyes N16bn from ongoing right issue
+Iheanyi Nwachukwu
+Mar 20, 2026
+Linkage Assurance Plc has commenced its Rights Issue of 12.320 billion ordinary shares at N1. 32 per share. The
+ongoing...
+Dangote refinery flooded with demand as Iran war squeezes Africa's fuel supply
+Oluwatosin Ogunjuyigbe
+Mar 20, 2026
+Aliko Dangote’s Nigerian oil refinery is facing a surge in demand from African governments scrambling to secure fuel
+supplies after...
+Low-priced tech stocks lead NGX gains in 2026
+Chima Chima
+Mar 20, 2026
+Smaller technology stocks are emerging as a key source of returns for investors on the Nigerian Exchange (NGX) in
+2026,...
+Nigerian companies face currency rethink as RMB gains ground in global trade
+Chinwe Michael
+Mar 20, 2026
+A growing shift in global finance toward the internationalisation of China’s Renminbi (RMB) is set to reshape how
+Nigerian companies...
+See Past Editions
+See Past Editions
+View
+View
+See Past Editions
+Interview
+'We are favoured to be open for business while in the middle of renovation'
+Obinna Emelike
+Mar 20, 2026
+When The Wheatbaker Lagos debuted, about15 years ago, it took the Nigerian hospitality market by storm with the unique
+offerings...
+Natures Gentle Touch: Meet founder behind Africa's haircare revolution
+BusinessDay
+Mar 20, 2026
+In the 1990s, Nigerian women were paying the price for beauty — scalp burns, breakage, and the quiet belief that...
+Nigeria is the only major palm oil producing country without a replanting plan - OPGAN President
+BusinessDay
+Mar 18, 2026
+JOE ONYIUKE is the National President of the Oil Palm Growers Association of Nigeria (OPGAN) and the Vice Chairman of...
+How govt., operators and host communities can curb pipeline vandalism in Nigeria, by Adeleke
+BusinessDay
+Mar 18, 2026
+Ngozi Adeleke is a seasoned engineer and strategic leader with over two decades of experience in the energy sector.
+Her...
+Life + Art
+Hollywood legend Chuck Norris dies at 86
+Anthony Udugba
+Mar 20, 2026
+Hollywood actor Chuck Norris dies at the age of 86 on March 19 2026 in Hawaii following a medical emergency...
+The brutal truth behind streaming in Nigeria
+Anthony Udugba
+Mar 20, 2026
+The recent decision by Canal+ to pull the plug on Showmax serves as a post-mortem for the streaming market in...
+Trump administration to receive $10bn fee for US TikTok deal
+Anthony Udugba
+Mar 18, 2026
+The Trump administration is set to receive roughly $10 billion from investors who acquired control of TikTok‘s US
+operations, as...
+Black trailblazers who shaped Oscar history in the leading categories
+Anthony Udugba
+Mar 18, 2026
+Michael B. Jordan’s triumphant victory at the 98th Academy Awards for his powerhouse dual role in Sinners marks him
+as...
+TOON OF THE DAY
+See Past Editions
+PODCAST
+Sports
+2026 World Cup: Mexico ready to host Iran matches as FIFA says no
+Anthony Nlebem
+Mar 21, 2026
+Claudia Sheinbaum has confirmed that Mexico is prepared to host Iran’s 2026 World Cup matches if FIFA approves a
+venue...
+Carrick slams ‘baffling’ penalty calls as United held by Bournemouth
+Anthony Nlebem
+Mar 21, 2026
+Michael Carrick has slammed inconsistent officiating after Manchester United twice surrendered the lead in a 2-2 draw at
+Bournemouth on...
+Carabao Cup Final: Arteta urges Arsenal to ‘bring it home’
+Anthony Nlebem
+Mar 20, 2026
+Mikel Arteta has challenged his Arsenal squad to seize the moment and “bring it home” as they prepare for Sunday’s...
+Cristiano Ronaldo left out of Portugal’s pre-World Cup friendlies
+Anthony Nlebem
+Mar 20, 2026
+Cristiano Ronaldo has been left out of Portugal’s squad for their pre-World Cup friendlies against Mexico and the United
+States...
+Africa
+AFRICA FINANCE IN BRIEF: Banking boom, rising debt, policy shifts reshape outlook
+Bunmi Bailey
+Mar 21, 2026
+Africa’s financial landscape is entering a pivotal phase, with strong banking sector performance, rising sovereign
+borrowing and diverging policy decisions...
+How the Middle East war is forcing a leaner Eid in Africa’s biggest markets
+Bunmi Bailey
+Mar 20, 2026
+As Ramadan draws to a close, families across Africa’s biggest economies — from Cairo to Lagos, Cape Town to Nairobi...
+More South African banks eye Kenya as next expansion frontier
+Bunmi Bailey
+Mar 20, 2026
+More South African banking giants are turning to Kenya for their next phase of expansion, betting that the East
+African...
+Ghana cuts rates to lowest in 4 years while peers pause amid global uncertainty
+Bunmi Bailey
+Mar 19, 2026
+While some African central banks are pausing to assess the economic fallout from the escalating conflict in the Middle
+East,...
+World
+FG clarifies UK asylum agreement, says deportees will be Nigerians only
+Faith Omoboye
+Mar 20, 2026
+The presidency has moved to calm public concern over its new migration arrangement with the United Kingdom, making clear
+that...
+Top 5 countries with the largest aircraft fleets in 2026
+Faith Omoboye
+Mar 20, 2026
+Global military
+
+
+======================================================================
+FULL JSON DATA (for reference)
+======================================================================
+
+{
+  "selected_sources": [
+    "https://businessday.ng/"
+  ],
+  "news_content": [
+    {
+      "source": "https://businessday.ng/",
+      "content": "Business News Nigeria | Daily Updates | Nigerian News\nX\nBusinessDay\nHome\nTax Calculator\nCompanies\nMarkets\nEconomy\nReal Estate\nAgriculture\nAviation\nBanking\nTransportation\nMaritime\nLegal Business\nResearch post\nSports\nBDFX\nBD Conferences\nBD Foundation\nBusinessDay Intelligence\nAdverts & Rates\nAbout US\nOur Board\nOur Management\nOur Profile\nGo Premium\nTOP NEWS\nNigeria's petrol import bill dropped by 42% to N8.9trn in 2025\n4 hrs ago\nAFRICA FINANCE IN BRIEF: Banking boom, rising debt, policy shifts reshape outlook\n4 hrs ago\nNigeria’s petrol prices rise 39.5%, second highest globally\n4 hrs ago\nBUA Cement, Lafarge Africa join Nigeria’s trillion-naira revenue club in 2025\n6 hrs ago\nShippers’ Council orders tariff rollback as port dispute escalates\n15 hrs ago\nNigeria's displacement crisis threatens food security, economy - Ikiebe\n20 hrs ago\nRead more >>\nDangote raises petrol price again to N1,275/litre within 24 hours\nAbubakar Ibrahim\njust now\nBarely 12 hours after a fresh hike, the Dangote Petroleum Refinery has again increased petrol prices, signalling intensifying pressure in...\nRecent\n2026 World Cup: Mexico ready to host Iran matches as FIFA says no\njust now\nCarrick slams ‘baffling’ penalty calls as United held by Bournemouth\njust now\nReport suspicious movements around you, Tinubu urges Nigerians\n58 minutes ago\nOutfits that graced the Eid al-Fitr celebration\n4 hrs ago\n9 most notable watches at the 2026 Oscars\n4 hrs ago\n5 peppers that shape the taste of Nigerian cooking\n4 hrs ago\nRead more >>\nU.S./Israel - Iran war\nView More\n2026 World Cup: Mexico ready to host Iran matches as FIFA says no\nClaudia Sheinbaum has confirmed that Mexico is prepared to host Iran’s 2026 World Cup matches if FIFA approves a venue\nMar 21, 2026\nIran risks $320,000 FIFA fine over World Cup boycott\nWorld football governing body FIFA could fine Iran’s national team at least $320,000 if it follows through on plans to\nMar 20, 2026\nWORLD IN BRIEF: Israel says it acted alone in strike on Iran’s key gas field, US approves $16.5bn Gulf arms deal, South Africa grapples with deepening water crisis and other stories\nNetanyahu says Israel acted alone in Iran gas field strike Benjamin Netanyahu has said Israel “acted alone” in its attack\nMar 20, 2026\nIran to boycott U.S. matches but compete at 2026 World Cup — Taj\nMehdi Taj, President of the Iran Football Federation (FFIRI), has declared that Iran could boycott matches in the United States\nMar 19, 2026\nPREMIUM\nThe forgotten authority of African women and the lessons Nigeria must learn\nMar 20, 2026\nThe brutal truth behind streaming in Nigeria\nMar 20, 2026\nN73bn meets N544bn Tuberculosis funding gap: Progress or survival?\nMar 20, 2026\nNigeria’s education crisis is driven by systemic waste and inefficiency, not scarcity\nMar 19, 2026\nIN OTHER NEWS\nNews\n2026 World Cup: Mexico ready to host Iran matches as FIFA says no\nAnthony Nlebem\njust now\nClaudia Sheinbaum has confirmed that Mexico is prepared to host Iran’s 2026 World Cup matches if FIFA approves a venue...\nNews\nUS expands $15,000 visa bond policy to 50 countries\nOjochenemi Onje\njust now\nThe United States has expanded its visa bond policy to 50 countries, requiring certain short-term travellers to post up to...\nNews\nCarrick slams ‘baffling’ penalty calls as United held by Bournemouth\nAnthony Nlebem\njust now\nMichael Carrick has slammed inconsistent officiating after Manchester United twice surrendered the lead in a 2-2 draw at Bournemouth on...\nNews\nHow brand design shapes consumer perception\nBusinessDay\n4 hrs ago\nIn today’s fast-paced, competitive world, branding isn’t just about logos and colours—it’s the story, the values, and the experiences that...\nNews\n4 places to get the best suya in Lagos\nEsther Emoekpere\n4 hrs ago\nSuya is one of Nigeria’s most popular street foods, made by seasoning thin slices of meat with a spiced mix...\nNews\nThe 50 Club: Fastest players to reach 50 UCL goals\nAnthony Nlebem\n6 hrs ago\nA historic night in European football saw two former Premier League icons join the most elite scoring circle in the...\nCOLUMNISTS\nWhy the Presco and Radisson deals signal a new era for Abia State\nChido Nwakanma\nMar 20, 2026\nCuba in the crosshairs of Donald Trump and the Miami ‘Mafia’\nFemi Olugbile\nMar 20, 2026\nHow corporate governance shapes the survival and growth of emerging enterprises\nPrisca Ndu\nMar 19, 2026\nThe mentorship maps were wrong! On wisdom and the new architecture of African women’s power\nUdo Maryanne Okonjo\nMar 18, 2026\nThe data dignity deficit: Nigerians and the fight for digital citizenship\nHani Okoroafor\nMar 17, 2026\nPresident Bola Ahmed Tinubu and The King’s College tie\nBusinessDay\nMar 16, 2026\nWHO IS THINKING FOR NIGERIA\nYSOT\nThe forgotten authority of African women and the lessons Nigeria must learn\nMar 20, 2026\nYSOT\nNigeria’s national academies and the intellectual foundations of development\nMar 18, 2026\nYSOT\nCurrent Nigerian politicians cannot fix Nigeria\nMar 16, 2026\nToday's E-paper\nEconomy\nRethinking an advert regulatory system that protects Nigerians without straining businesses\nRuth Okwumbu-Imafidon\nMar 20, 2026\nIn recent months, a disturbing pattern has emerged across Nigeria’s digital space: videos of trusted public figures endorsing schemes that...\nUS, UK top Lagos Detty December arrivals as diaspora spending hits N396bn\nChinwe Michael\nMar 20, 2026\nThe United States emerged as the largest source of diaspora visitors to Lagos during the 2025 Detty December season, overtaking...\nEnergy\nNigeria's petrol import bill dropped by 42% to N8.9trn in 2025\n[email protected]\nMar 21, 2026\nNigeria’s total spending on importation of Premium Motor Spirit (petrol) reduced significantly by 41.9 percent to N8.96 trillion in 2025...\nNigeria’s petrol prices rise 39.5%, second highest globally\nAbubakar Ibrahim\nMar 21, 2026\n…Only African country in top 20 Nigeria has recorded one of the sharpest increases in petrol prices globally following the...\nTechnology\nGoogle reshuffles AI team amid Nvidia-inspired industry shift\nFolake Balogun\nMar 20, 2026\nGoogle is reorganising parts of its artificial intelligence division as the global race to define the next phase of AI...\nRethinking an advert regulatory system that protects Nigerians without straining businesses\nRuth Okwumbu-Imafidon\nMar 20, 2026\nIn recent months, a disturbing pattern has emerged across Nigeria’s digital space: videos of trusted public figures endorsing schemes that...\nMarket\nNigeria stocks defy shortened week to post massive N1.77trn gain\nIheanyi Nwachukwu\nMar 19, 2026\nThe Nigerian Exchange Limited (NGX) capped off a historic, albeit brief, trading week with a gain of N1.77 trillion in...\nNigeria’s equity boom pushes market value beyond N130trn\nIheanyi Nwachukwu\nMar 18, 2026\nThe Nigerian Exchange Limited (NGX) has officially crossed the N130 trillion market capitalisation mark, a milestone that says much about...\nLegal Business\nAn agent cannot claim commission for merely introducing a buyer or tenant\nBusinessDay\nMar 19, 2026\nPHILIP KAYODE OLUSEGUN OJO v. SDV NIGERIA LIMITED & ANOR. SUPREME COURT OF NIGERIA  (GARBA; JAURO; ADUMEIN; OGBUINYA; UMAR, JJ.CA)...\nCorporate purpose: What it is and what it is not\nBusinessDay\nMar 19, 2026\nFew concepts in contemporary corporate governance have attracted as much attention, or generated as much confusion, as corporate purpose. Boards...\nThe Evolution of Digital Asset Governance in Nigeria: A strategic guide for virtual asset service providers (VASPs)\nBusinessDay\nMar 19, 2026\nINTRODUCTION Nigeria’s digital economy is currently navigating a pivotal transition. What began as a fragmented landscape of peer-to-peer activity has...\nBeyond The Bar: Law, leadership and influence\nNkem Umeadi-Onyedika\nMar 19, 2026\nThe legal profession is often viewed through the narrow lens of courtrooms, transactions, and technical expertise. Yet beyond these visible...\nPartner Content\nNigeria’s National Single Window Faces Its Real Test: Execution\nSponsored Post\nMar 05, 2026\nWhy 9th Marketplace Is Redefining the Future of Online Shopping in Africa\nStephen Onyekwelu\nMar 05, 2026\nThe ATBU Years: How University Life Prepared Kashifu Inuwa Abdullahi for a Career in National Digital Transformation\nBusinessDay\nFeb 11, 2026\nSponsored\nWhy External Accreditation is key to Strengthening Trust in African Healthcare\nSponsored Post\nMar 21, 2026\nSCL Marks 11 Years of Growth with New Lagos HQ and Cross-Border Intelligence Suite\nSponsored Post\nMar 20, 2026\nTECNO Launches Camon 50 Series With Flagship Camera Power, AI Productivity  And Exclusive Launch Gifts\nSponsored Post\nMar 20, 2026\nBD TV\nAPGA's Soludo wins Anambra governorship election\nNov 14, 2025\nShould private universities join ASUU ?\nNov 14, 2025\nNigeria's Eurobond offer meets with record oversubscription\nNov 14, 2025\nEx-CAN president backs Trump's threat to terrorists\nNov 14, 2025\nGovernment 15% fuel import tariff: Boost for local refining or burden on Nigerians\nNov 14, 2025\nWike bans Phones at AGIS as Defence Minister backs Naval Officer\nNov 14, 2025\nWhy Nigeria tech start-ups fail: Lessons from Okra & Lidya\nNov 05, 2025\nAfricans be proud one of us is ending slavery - Dangote\nNov 05, 2025\nBD Weekender\n10 high-paying careers where women lead the workforce\nChisom Michael\nMar 21, 2026\nWomen are increasingly taking the lead in several high-paying careers, particularly across finance, healthcare, and corporate management, even as broader...\nTop 5 African countries where tourism drives growth\nChisom Michael\nMar 21, 2026\nTourism continues to play a pivotal role in shaping African economies, driving employment, income, and foreign exchange earnings across the...\nMeet Adeola Akinwunmi: A young force shaping narratives for brands in Nigeria\nChisom Michael\nMar 21, 2026\nIn a world where perception is reality, the art of corporate communications and branding has become a crucial differentiator for...\nHow brand design shapes consumer perception\nBusinessDay\nMar 21, 2026\nIn today’s fast-paced, competitive world, branding isn’t just about logos and colours—it’s the story, the values, and the experiences that...\nCompanies\nLinkage Assurance eyes N16bn from ongoing right issue\nIheanyi Nwachukwu\nMar 20, 2026\nLinkage Assurance Plc has commenced its Rights Issue of 12.320 billion ordinary shares at N1. 32 per share. The ongoing...\nDangote refinery flooded with demand as Iran war squeezes Africa's fuel supply\nOluwatosin Ogunjuyigbe\nMar 20, 2026\nAliko Dangote’s Nigerian oil refinery is facing a surge in demand from African governments scrambling to secure fuel supplies after...\nLow-priced tech stocks lead NGX gains in 2026\nChima Chima\nMar 20, 2026\nSmaller technology stocks are emerging as a key source of returns for investors on the Nigerian Exchange (NGX) in 2026,...\nNigerian companies face currency rethink as RMB gains ground in global trade\nChinwe Michael\nMar 20, 2026\nA growing shift in global finance toward the internationalisation of China’s Renminbi (RMB) is set to reshape how Nigerian companies...\nSee Past Editions\nSee Past Editions\nView\nView\nSee Past Editions\nInterview\n'We are favoured to be open for business while in the middle of renovation'\nObinna Emelike\nMar 20, 2026\nWhen The Wheatbaker Lagos debuted, about15 years ago, it took the Nigerian hospitality market by storm with the unique offerings...\nNatures Gentle Touch: Meet founder behind Africa's haircare revolution\nBusinessDay\nMar 20, 2026\nIn the 1990s, Nigerian women were paying the price for beauty — scalp burns, breakage, and the quiet belief that...\nNigeria is the only major palm oil producing country without a replanting plan - OPGAN President\nBusinessDay\nMar 18, 2026\nJOE ONYIUKE is the National President of the Oil Palm Growers Association of Nigeria (OPGAN) and the Vice Chairman of...\nHow govt., operators and host communities can curb pipeline vandalism in Nigeria, by Adeleke\nBusinessDay\nMar 18, 2026\nNgozi Adeleke is a seasoned engineer and strategic leader with over two decades of experience in the energy sector. Her...\nLife + Art\nHollywood legend Chuck Norris dies at 86\nAnthony Udugba\nMar 20, 2026\nHollywood actor Chuck Norris dies at the age of 86 on March 19 2026 in Hawaii following a medical emergency...\nThe brutal truth behind streaming in Nigeria\nAnthony Udugba\nMar 20, 2026\nThe recent decision by Canal+ to pull the plug on Showmax serves as a post-mortem for the streaming market in...\nTrump administration to receive $10bn fee for US TikTok deal\nAnthony Udugba\nMar 18, 2026\nThe Trump administration is set to receive roughly $10 billion from investors who acquired control of TikTok‘s US operations, as...\nBlack trailblazers who shaped Oscar history in the leading categories\nAnthony Udugba\nMar 18, 2026\nMichael B. Jordan’s triumphant victory at the 98th Academy Awards for his powerhouse dual role in Sinners marks him as...\nTOON OF THE DAY\nSee Past Editions\nPODCAST\nSports\n2026 World Cup: Mexico ready to host Iran matches as FIFA says no\nAnthony Nlebem\nMar 21, 2026\nClaudia Sheinbaum has confirmed that Mexico is prepared to host Iran’s 2026 World Cup matches if FIFA approves a venue...\nCarrick slams ‘baffling’ penalty calls as United held by Bournemouth\nAnthony Nlebem\nMar 21, 2026\nMichael Carrick has slammed inconsistent officiating after Manchester United twice surrendered the lead in a 2-2 draw at Bournemouth on...\nCarabao Cup Final: Arteta urges Arsenal to ‘bring it home’\nAnthony Nlebem\nMar 20, 2026\nMikel Arteta has challenged his Arsenal squad to seize the moment and “bring it home” as they prepare for Sunday’s...\nCristiano Ronaldo left out of Portugal’s pre-World Cup friendlies\nAnthony Nlebem\nMar 20, 2026\nCristiano Ronaldo has been left out of Portugal’s squad for their pre-World Cup friendlies against Mexico and the United States...\nAfrica\nAFRICA FINANCE IN BRIEF: Banking boom, rising debt, policy shifts reshape outlook\nBunmi Bailey\nMar 21, 2026\nAfrica’s financial landscape is entering a pivotal phase, with strong banking sector performance, rising sovereign borrowing and diverging policy decisions...\nHow the Middle East war is forcing a leaner Eid in Africa’s biggest markets\nBunmi Bailey\nMar 20, 2026\nAs Ramadan draws to a close, families across Africa’s biggest economies — from Cairo to Lagos, Cape Town to Nairobi...\nMore South African banks eye Kenya as next expansion frontier\nBunmi Bailey\nMar 20, 2026\nMore South African banking giants are turning to Kenya for their next phase of expansion, betting that the East African...\nGhana cuts rates to lowest in 4 years while peers pause amid global uncertainty\nBunmi Bailey\nMar 19, 2026\nWhile some African central banks are pausing to assess the economic fallout from the escalating conflict in the Middle East,...\nWorld\nFG clarifies UK asylum agreement, says deportees will be Nigerians only\nFaith Omoboye\nMar 20, 2026\nThe presidency has moved to calm public concern over its new migration arrangement with the United Kingdom, making clear that...\nTop 5 countries with the largest aircraft fleets in 2026\nFaith Omoboye\nMar 20, 2026\nGlobal military ",
+      "length": 15000,
+      "method": "api",
+      "timestamp": "2026-03-21T13:10:34.905145"
+    }
+  ],
+  "timestamp": "2026-03-21T13:10:34.922806"
+}
