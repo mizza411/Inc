@@ -1,0 +1,17 @@
+You are given Nigeria **official or open statistical** material (aggregated releases, tables, or excerpts—not news headlines as the primary source).
+
+**How material reaches you (Strategy 15 wizard):**
+- The bundle may include a **short excerpt** in this chat/payload **and/or** a **local file path** under **Local source file** — typically a download from an official portal (spreadsheet, CSV, PDF export, HTML save, etc.) captured with Step **F** when collecting data.
+- When a **file path** is present, treat the **combination of** (a) the excerpt, (b) that path/label, and (c) whatever appears in the excerpt as your working source. **Open the file on your machine when possible** so series names, units, footnotes, and tables match the publisher’s release; the excerpt keeps context when the full file is not loaded into the model.
+- If only an excerpt is present (no local file line), work from the excerpt only and say clearly when a detail is not visible in what you were given.
+
+Use **only** what the excerpt and any accessible file support. Do not invent periods, units, or series labels that are not evidenced there.
+
+**Task:** Propose **digital** business directions for Nigeria (web, mobile, SaaS, data/ops tools, marketplaces, analytics, etc.) that are **directly motivated** by what the statistics show (trend, level, volatility, sector split, reporting gaps, access friction, revision patterns, etc.).
+
+**Output format for this step:** A **numbered list of problem–opportunity hooks** (aim for up to 10; fewer if the material is narrow). For each item:
+- One line: what the data **suggests** (plain language).
+- One line: who is **affected** (segment or market—aggregated, not individuals).
+- One line: **product angle** (what you would build) in a single sentence.
+
+Do **not** produce the full business-plan sections here—that is Prompt 1b. Do **not** add hardware detail here—that is Prompt 1c.

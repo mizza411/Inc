@@ -1,0 +1,3 @@
+# Strategy 15 — optional dependencies for future Nigeria data fetch / parse (Phase 3+)
+# requests>=2.31.0
+# beautifulsoup4>=4.12.0

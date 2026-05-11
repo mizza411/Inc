@@ -26,9 +26,9 @@ CONFIG_FILENAME = "cursor_copy_block_config.json"
 CONFIG_EXAMPLE_FILENAME = "cursor_copy_block_config.example.json"
 
 DEFAULT_INSTRUCTION = (
-    "Read the document at the path above. Apply Prompt 1a then Prompt 1b. "
-    "Output the business ideas table in markdown format and save it to a new .md file in the same directory as the document, "
-    "named business_ideas_YYYYMMDD.md (use today's date)."
+    "Read the document at the path above. Apply Prompt 1a, then Prompt 1b, then Prompt 1c in the same chat (when Prompt 1c is included in this block). "
+    "Output one markdown file named business_ideas_YYYYMMDD.md (use today's date) where each idea contains "
+    "Business Idea + Digital Solution + Hardware Solution (hardware under each idea, not a separate section)."
 )
 
 
@@ -197,8 +197,10 @@ def offer_cursor_copy_block(
     document_path: Union[str, Path],
     prompt_1a_ref: str,
     prompt_1b_ref: str,
+    prompt_1c_ref: str = "",
     instruction: str = DEFAULT_INSTRUCTION,
     use_config: bool = True,
+    supplementary_block: str = "",
 ) -> None:
     """
     Print a copyable block (document path + prompts) and offer to copy to clipboard;
@@ -208,10 +210,13 @@ def offer_cursor_copy_block(
     when use_config is True (default). Pass use_config=False so caller arguments
     are always used (e.g. Strategy 15 vs Strategy 5 prompts in the same repo).
     Any Strategy script can call this after saving its output document.
+    Optional prompt_1c_ref: when non-empty, included in the block as Prompt 1c (hardware track, etc.).
+    Optional supplementary_block: extra text inserted after the Document line (e.g. local file paths).
     """
     doc_path_val = document_path
     p1a = prompt_1a_ref
     p1b = prompt_1b_ref
+    p1c = prompt_1c_ref
     inst = instruction
 
     config = _load_copy_block_config() if use_config else None
@@ -225,6 +230,9 @@ def offer_cursor_copy_block(
         v = config.get("prompt_1b_ref")
         if isinstance(v, str) and v.strip():
             p1b = v.strip()
+        v = config.get("prompt_1c_ref")
+        if isinstance(v, str) and v.strip():
+            p1c = v.strip()
         v = config.get("instruction")
         if isinstance(v, str) and v.strip():
             inst = v.strip()
@@ -235,13 +243,15 @@ def offer_cursor_copy_block(
     doc_path = str(path.resolve())
     past_path = _ensure_past_ideas_file(path)
     block = f"Document: {doc_path}\n\n"
+    supp = supplementary_block
+    if isinstance(supp, str) and supp.strip():
+        block += supp.strip() + "\n\n"
     if past_path is not None:
         block += f"Past ideas (avoid repeating): {past_path.resolve()}\n\n"
-    block += (
-        f"Prompt 1a: {p1a}\n"
-        f"Prompt 1b: {p1b}\n\n"
-        f"{inst}"
-    )
+    block += f"Prompt 1a: {p1a}\n" f"Prompt 1b: {p1b}\n"
+    if isinstance(p1c, str) and p1c.strip():
+        block += f"Prompt 1c: {p1c.strip()}\n"
+    block += f"\n{inst}"
     config_path = _config_path()
     print("\n" + "="*70)
     print("READY FOR CURSOR — COPY THIS BLOCK INTO CHAT")
@@ -259,14 +269,14 @@ def offer_cursor_copy_block(
     print("           (B) If you did not: press Ctrl+V to paste the block yourself.")
     print()
     print("  STEP 4: Press Enter (or click Send) to send the message. Cursor will")
-    print("           read the document and output the business ideas table.")
+    print("           read the document and output business ideas, including hardware under each idea if Prompt 1c is present.")
     print()
     example_path = config_path.parent / CONFIG_EXAMPLE_FILENAME
     if use_config:
         print("  TO CHANGE THIS BLOCK (i.e. prompts, file paths and instruction) BELOW NEXT TIME,")
         print("  edit the config file in the repo root:")
         print(f"           {example_path}")
-        print("           Keys: document_path, prompt_1a_ref, prompt_1b_ref, instruction.")
+        print("           Keys: document_path, prompt_1a_ref, prompt_1b_ref, prompt_1c_ref, instruction.")
         print("           (Optional: copy to cursor_copy_block_config.json to keep overrides separate.)")
         print("           FALLBACK DEFAULTS WHEN NO CONFIG EXISTS: cursor_copy_helper.py (DEFAULT_INSTRUCTION AND CALLER PROMPTS).")
     else:

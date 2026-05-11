@@ -6,7 +6,7 @@ Reusable Python module at the repo root for **Strategy** scripts (Strategy 5, St
 
 ## What it does
 
-1. **Builds a block** — Document path + optional **Past ideas** path (`past_business_ideas.md`, built from existing `business_ideas_*.md` in the same folder) + Prompt 1a ref + Prompt 1b ref + instruction (e.g. “Read the document… read the Past ideas file if present… output the business ideas”).
+1. **Builds a block** — Document path + optional **Past ideas** path (`past_business_ideas.md`, built from existing `business_ideas_*.md` in the same folder) + Prompt 1a ref + Prompt 1b ref + optional **Prompt 1c** ref + instruction (e.g. “Read the document… read the Past ideas file if present… output ideas with hardware under each idea”).
 2. **Prints the block** — Shows “Ready for Cursor” and the block between `--- BEGIN` / `--- END`.
 3. **Waits for C** — Press **C** (or Enter on some setups) to copy the block to the clipboard.
 4. **Optional auto-paste** — Asks “Auto-paste in 6 sec?”; if yes, after you focus Cursor chat it sends Ctrl+V so you don’t have to paste manually.
@@ -26,7 +26,7 @@ Use this checklist when you add prompt copy-and-paste (Cursor block) support for
 | 2 | **Put prompts in your strategy folder** (e.g. `chatgpt_prompt_1a.txt`, `chatgpt_prompt_1b.txt`) and treat them as the source of truth for what you want in the block. |
 | 3 | **Choose `use_config` once** (see table below). Wrong choice = wrong prompts in the block. |
 | 4 | **Optional:** Call `refresh_past_business_ideas_for_directory(strategy_dir)` before the copy block so `past_business_ideas.md` is up to date for “avoid repeating” (same pattern as Strategy 5). |
-| 5 | **Verify:** Run the script, scroll to `--- BEGIN ---` / `--- END ---`, and confirm **Prompt 1a** and **Prompt 1b** match *this* strategy—not news wording from Strategy 5 unless this *is* Strategy 5. |
+| 5 | **Verify:** Run the script, scroll to `--- BEGIN ---` / `--- END ---`, and confirm **Prompt 1a**, **Prompt 1b**, and (if used) **Prompt 1c** match *this* strategy—not another strategy’s wording unless intentional. |
 
 **When to use which `use_config`:**
 
@@ -35,7 +35,7 @@ Use this checklist when you add prompt copy-and-paste (Cursor block) support for
 | `True` (default) | You want **optional** overrides from **`cursor_copy_block_config.json`** at repo root (e.g. one shared “production” block you edit without touching Python). Accept that **the same JSON applies to every caller** that leaves `use_config=True`. |
 | `False` | This strategy must **always** use the arguments passed from your script (e.g. full text read from **this** folder’s `chatgpt_prompt_*.txt`). **Required** if you also use a repo-root config that was written for a *different* strategy—otherwise that config will replace your prompts. Strategy 15 uses this. |
 
-**Shared-config hazard (why Strategy 5 and 15 looked “mixed up”):** There is only **one** optional file, `cursor_copy_block_config.json`, at repo root. It can override `document_path`, `prompt_1a_ref`, `prompt_1b_ref`, and `instruction` for **any** script that calls `offer_cursor_copy_block` with **`use_config=True`**. So a config created for news-based Strategy 5 will still override a new strategy unless that strategy passes **`use_config=False`** or you clear those keys in the JSON.
+**Shared-config hazard (why Strategy 5 and 15 looked “mixed up”):** There is only **one** optional file, `cursor_copy_block_config.json`, at repo root. It can override `document_path`, `prompt_1a_ref`, `prompt_1b_ref`, `prompt_1c_ref`, and `instruction` for **any** script that calls `offer_cursor_copy_block` with **`use_config=True`**. So a config created for news-based Strategy 5 will still override a new strategy unless that strategy passes **`use_config=False`** or you clear those keys in the JSON.
 
 **Recommended pattern for a new formulation strategy:** Read `chatgpt_prompt_1a.txt` and `chatgpt_prompt_1b.txt` from `Path(__file__).parent`, pass them into `offer_cursor_copy_block`, set **`instruction=`** to your save/output wording, and use **`use_config=False`** unless you explicitly want repo-root JSON to govern this script.
 
@@ -54,6 +54,7 @@ offer_cursor_copy_block(
     document_path=Path("news_problems_20260216_172940.txt"),  # or self._last_txt_path
     prompt_1a_ref="Give me problems that can be solved with digital solutions...",
     prompt_1b_ref="Tabulate output (Columns: Proposed domain (not verified), Problem Identified, ...)",
+    prompt_1c_ref="After 1b, add Hardware Solution under each idea; full wording in chatgpt_prompt_1c.txt.",
 )
 ```
 
@@ -94,7 +95,8 @@ You can override the block by editing a JSON config file so you don’t need to 
 | `document_path` | Full path to the document. If empty or omitted, the path passed by the script (e.g. last saved run) is used. |
 | `prompt_1a_ref` | Short text for “Prompt 1a” in the block. |
 | `prompt_1b_ref` | Short text for “Prompt 1b” in the block. |
-| `instruction` | Instruction line (e.g. “Read the document… output the business ideas table.”). |
+| `prompt_1c_ref` | Optional short text for “Prompt 1c” (e.g. hardware track). Omit or leave empty to skip Prompt 1c in the block. |
+| `instruction` | Instruction line (e.g. “Read the document… output business ideas with hardware under each idea.”). |
 
 Only non-empty string values override; missing or invalid keys are ignored. If the file is missing or invalid JSON, the script uses the values passed by the caller.
 
@@ -119,7 +121,7 @@ offer_cursor_copy_block(
 |----------|-------------|
 | `copy_to_clipboard(text: str) -> bool` | Copy `text` to the system clipboard. Returns `True` if successful. |
 | `paste_after_delay(seconds: float = 6.0) -> None` | After a delay, send Ctrl+V to the focused window (requires `pyautogui`). |
-| `offer_cursor_copy_block(document_path, prompt_1a_ref, prompt_1b_ref, instruction=None, use_config=True) -> None` | Print the block, wait for C, copy, then optionally run auto-paste. If `use_config=False`, repo-root JSON overrides are skipped. |
+| `offer_cursor_copy_block(..., supplementary_block=\"\")` | Optional text after the **Document** line (e.g. local download paths). Other args: `document_path`, `prompt_1a_ref`, `prompt_1b_ref`, `prompt_1c_ref`, `instruction`, `use_config`. |
 | `refresh_past_business_ideas_for_directory(directory) -> Optional[Path]` | Rebuild `past_business_ideas.md` from `business_ideas_*.md` in that folder (Phase 3; Strategy 5 calls this at run start). |
 
 **Past ideas file:** `past_business_ideas.md` is built from existing `business_ideas_*.md` in the same directory. Strategy 5 refreshes it at the **start** of each run so new idea files saved from Cursor are included before you copy the block.
