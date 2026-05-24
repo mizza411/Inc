@@ -21,6 +21,7 @@ from core.script_generator import ScriptGenerator
 from core.video_assembler import VideoAssembler
 from core.performance_tracker import ContentPerformanceTracker
 from core.content_scheduler import ContentScheduler
+from core.analytics_dashboard import AnalyticsDashboard
 from config.settings import Settings
 
 
@@ -48,6 +49,7 @@ class YouTubeBusinessSystem:
             uploads_per_week=_parse_uploads_per_week(self.settings.youtube.upload_frequency),
             target_duration_minutes=self.settings.youtube.video_length_target,
         )
+        self.analytics_dashboard = AnalyticsDashboard()
         
         print("🎥 YouTube Business Automation System Initialized!")
         print(f"Channel: {self.settings.youtube.channel_name}")
@@ -208,6 +210,7 @@ class YouTubeBusinessSystem:
                 "video_assembler": "ready",
                 "performance_tracker": "ready",
                 "content_scheduler": "ready",
+                "analytics_dashboard": "ready",
             },
         }
         
@@ -421,10 +424,15 @@ def main():
                         )
             else:
                 print("Usage: schedule plan [days] | schedule list | schedule run-due [--dry-run]")
+        elif command == "dashboard":
+            path = system.analytics_dashboard.generate_html()
+            print("Analytics dashboard generated")
+            print(f"  Open: {path}")
+            print("  Tip: python -m http.server 8000 from youtube/ then visit web/analytics_dashboard.html")
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule"
+                "trends, performance, schedule, dashboard"
             )
     else:
         # Interactive mode
@@ -440,6 +448,7 @@ def main():
         print("  schedule plan [days] - Generate content calendar from trends")
         print("  schedule list - Show upcoming planned slots")
         print("  schedule run-due [--dry-run] - Run due scheduled creations")
+        print("  dashboard - Generate analytics HTML dashboard (Phase 3.4)")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default

@@ -697,6 +697,46 @@ class YouTubeDatabase:
         except Exception as e:
             logger.error("Error updating schedule status: %s", e)
             raise
+
+    def get_schedule_summary(self) -> Dict[str, int]:
+        """Count schedule rows by status."""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(
+                """
+                SELECT status, COUNT(*) AS count
+                FROM content_schedule
+                GROUP BY status
+                """
+            )
+            return {row["status"]: row["count"] for row in cursor.fetchall()}
+        except Exception as e:
+            logger.error("Error getting schedule summary: %s", e)
+            raise
+
+    def get_performance_totals(self) -> Dict[str, Any]:
+        """Aggregate latest-day YouTube performance metrics."""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(
+                """
+                SELECT
+                    COUNT(DISTINCT video_id) AS videos_with_metrics,
+                    COALESCE(SUM(views), 0) AS total_views,
+                    COALESCE(SUM(likes), 0) AS total_likes,
+                    COALESCE(SUM(comments), 0) AS total_comments,
+                    COALESCE(AVG(audience_retention_rate), 0) AS avg_retention
+                FROM video_performance
+                WHERE date_recorded = (
+                    SELECT MAX(date_recorded) FROM video_performance
+                )
+                """
+            )
+            row = cursor.fetchone()
+            return dict(row) if row else {}
+        except Exception as e:
+            logger.error("Error getting performance totals: %s", e)
+            raise
     
     def get_top_performing_videos(self, limit: int = 10) -> List[Dict]:
         """Get top performing videos based on views"""
