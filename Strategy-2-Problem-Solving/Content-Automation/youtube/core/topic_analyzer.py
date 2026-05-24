@@ -160,7 +160,11 @@ class TrendingTopicAnalyzer:
             logger.warning("pytrends not installed; skipping live Google Trends")
             return topics, regions
 
-        pytrends = TrendReq(hl="en-US", tz=60)
+        try:
+            pytrends = TrendReq(hl="en-US", tz=60, timeout=(3, 5))
+        except Exception as exc:
+            logger.warning("Google Trends unavailable: %s", exc)
+            return topics, regions
 
         for geo in (self.geo_primary, self.geo_fallback):
             try:

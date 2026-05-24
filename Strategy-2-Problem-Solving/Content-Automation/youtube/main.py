@@ -513,10 +513,13 @@ def main():
                 print(f"  VTT: {track.vtt_path}")
             else:
                 print("Usage: python main.py subtitles <topic>")
+        elif command == "test":
+            from test_phase3_completion import main as run_phase3_tests
+            raise SystemExit(run_phase3_tests())
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard, research, subtitles"
+                "trends, performance, schedule, dashboard, research, subtitles, test"
             )
     else:
         # Interactive mode
@@ -535,6 +538,7 @@ def main():
         print("  dashboard - Generate analytics HTML dashboard (Phase 3.4)")
         print("  research <topic> - Run research and fact-check (Phase 3.5)")
         print("  subtitles <topic> - Generate SRT/VTT subtitles (Phase 3.6)")
+        print("  test - Run Phase 3.7 pytest suite and smoke checks")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default
