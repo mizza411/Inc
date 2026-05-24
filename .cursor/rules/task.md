@@ -129,6 +129,60 @@
 
 ---
 
+### 4. Inc Tray Icon + Super Main Launcher
+**Status:** Phase 1 complete (tray icon MVP); Phase 2–3 pending  
+**Goal:** Windows **tray icon** (notification area, near the clock) + optional super main hub; all `C:\dev\Inc` entry points organized under **4 pillars** (extensible to 5+ later).  
+**Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`
+
+> **Terminology:** “Tray icon” = the small icon you right-click in the Windows notification area. Same as “system tray app” — one background process, one icon, menu on right-click.
+
+#### Four pillars (top-level nav — tray icon right-click + super main sidebar)
+
+| Pillar | Purpose | Initial `Inc` mapping |
+|--------|---------|------------------------|
+| **My Established business ideas** | Businesses you are running or committed to | `Started-Businesses/`, `Strategy-1-Business-Variation/`, live ops (e.g. YouTube publish workflow when channel is active) |
+| **My leads** | Contacts, outreach, campaigns | `abuja_lead_generator/` (DB, scraper, email/WhatsApp, reports) |
+| **Formulated ideas** | Idea pipeline outputs & strategy runs | `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `business_ideas_*.md`, `past_business_ideas.md`, `business_research/` |
+| **Problem identification** | Discovering & capturing problems (inputs to formulation) | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/`, problem-collection strategies (3, 4, 5, 10, 11, 12, etc.) |
+
+**Flow:** Problem identification → Formulated ideas → Established businesses; **My leads** supports outreach alongside that pipeline.
+
+#### Layout (proposed — approve before creating files)
+**Recommendation:** New folder `inc_launcher/` at repo root (`C:\dev\Inc\inc_launcher\`).
+
+| Signal | Why |
+|--------|-----|
+| Own tray icon process + config | Not part of Problem ID or YouTube |
+| `launcher_config.json` for pillars/items | Add 5th pillar later without code churn |
+| Windows-only tray icon (Phase 1) | Matches your daily workflow |
+
+**Layout checklist:**
+- [x] `inc_launcher/` — tray icon app, config, super main stub (Phase 2)
+- [x] `inc_launcher/launcher_config.json` — 4 pillars + child launch targets
+- [x] `inc_launcher/README.md` — install/run on Windows
+- [x] Keep shared repo tools at root; do not move Strategy folders
+
+#### Phases
+
+**Phase 1 — Tray icon + config (MVP)** ✅
+- [x] Windows tray icon (background process; visible near clock)
+- [x] Right-click menu: 4 pillars → submenus (open folder, URL, or `python main.py …`)
+- [x] `launcher_config.json` drives menu (no hardcoded paths in code)
+- [x] Global actions: Open `Inc` in Explorer, Open in Cursor, Open `task.md`, Quit
+
+**Phase 2 — Super main app**
+- [ ] Left-click tray icon or menu item opens hub window (same 4-pillar nav)
+- [ ] Launcher grid per pillar (icons/labels from config)
+- [ ] Optional: show last-opened / pinned items
+
+**Phase 3 — Scale beyond 4**
+- [ ] Add pillars via config only (e.g. Automation hub, Research)
+- [ ] Optional: start at login, single-instance lock, custom icon
+
+**Stack (proposed):** Python + `pystray` + minimal UI (tkinter or lightweight webview for super main) — confirm at Phase 1 kickoff.
+
+---
+
 ## 📋 General Maintenance Tasks
 
 - [ ] Set up Git version control for Problem Identification Tool

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "app_name": "Inc Launcher",
+  "pillars": [
+    {
+      "id": "established",
+      "label": "My Established business ideas",
+      "items": [
+        {
+          "label": "Started Businesses folder",
+          "action": "folder",
+          "path": "Started-Businesses"
+        },
+        {
+          "label": "Strategy 1 — Business Variation",
+          "action": "folder",
+          "path": "Strategy-1-Business-Variation"
+        },
+        {
+          "label": "Gadget business automation",
+          "action": "folder",
+          "path": "Strategy-1-Business-Variation/gadget-business/gadget-business-automation"
+        },
+        {
+          "label": "YouTube automation (status)",
+          "action": "command",
+          "command": "python main.py status",
+          "cwd": "Strategy-2-Problem-Solving/Content-Automation/youtube"
+        }
+      ]
+    },
+    {
+      "id": "leads",
+      "label": "My leads",
+      "items": [
+        {
+          "label": "Abuja lead generator folder",
+          "action": "folder",
+          "path": "abuja_lead_generator"
+        },
+        {
+          "label": "Lead generator README",
+          "action": "file",
+          "path": "abuja_lead_generator/README.md"
+        },
+        {
+          "label": "Business development plan",
+          "action": "file",
+          "path": "abuja_lead_generator/business_development_plan.md"
+        }
+      ]
+    },
+    {
+      "id": "formulated",
+      "label": "Formulated ideas",
+      "items": [
+        {
+          "label": "Run all strategies",
+          "action": "command",
+          "command": "python run_all_strategies.py",
+          "cwd": "."
+        },
+        {
+          "label": "Latest business ideas (May 2026)",
+          "action": "file",
+          "path": "business_ideas_20260508.md"
+        },
+        {
+          "label": "Past business ideas",
+          "action": "file",
+          "path": "past_business_ideas.md"
+        },
+        {
+          "label": "Business research folder",
+          "action": "folder",
+          "path": "business_research"
+        },
+        {
+          "label": "Strategy 5 — News extraction",
+          "action": "folder",
+          "path": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction"
+        },
+        {
+          "label": "Strategy 15 — Nigeria open data",
+          "action": "folder",
+          "path": "Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data"
+        }
+      ]
+    },
+    {
+      "id": "problem_identification",
+      "label": "Problem identification",
+      "items": [
+        {
+          "label": "Problem ID tool (local web)",
+          "action": "file",
+          "path": "problem_identification_tool/web/index.html"
+        },
+        {
+          "label": "Problem ID tool — live site",
+          "action": "url",
+          "url": "https://mizza411.github.io/Inc/problem_identification_tool/web/index.html"
+        },
+        {
+          "label": "Problem ID dashboard",
+          "action": "file",
+          "path": "problem_identification_tool/web/dashboard.html"
+        },
+        {
+          "label": "Problem finder folder",
+          "action": "folder",
+          "path": "Strategy-2-Problem-Solving/problem_finder"
+        },
+        {
+          "label": "Strategy 3 — Network problems",
+          "action": "folder",
+          "path": "Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification"
+        },
+        {
+          "label": "Strategy 12 — High-value filtering",
+          "action": "folder",
+          "path": "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering"
+        }
+      ]
+    }
+  ],
+  "global_actions": [
+    {
+      "label": "Open Inc workspace",
+      "action": "folder",
+      "path": "."
+    },
+    {
+      "label": "Open task.md",
+      "action": "file",
+      "path": ".cursor/rules/task.md"
+    },
+    {
+      "label": "Open in Cursor",
+      "action": "cursor"
+    }
+  ]
+}
