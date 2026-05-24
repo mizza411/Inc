@@ -121,7 +121,7 @@
 
 #### Phase 4 — Launch Prep
 - [x] **4.1** Final system testing (end-to-end `create` pipeline, extend `tests/`, `test_phase4_completion.py`, `main.py test`)
-- [ ] **4.2** Create launch content batch — 10+ videos (`main.py batch`, `schedule run-due`)
+- [x] **4.2** Create launch content batch — 10+ videos (`core/launch_batch.py`, `main.py launch`, `main.py batch` manifest)
 - [ ] **4.3** Set up monitoring and alerts (pipeline failures, schedule misses, quality drops)
 - [ ] **4.4** Prepare documentation and user guides (CLI reference, launch checklist)
 - [ ] **4.5** Launch system and monitor performance (`dashboard`, `performance` tracking)

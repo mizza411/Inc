@@ -24,6 +24,7 @@ from core.content_scheduler import ContentScheduler
 from core.analytics_dashboard import AnalyticsDashboard
 from core.research_engine import ResearchEngine
 from core.subtitle_generator import SubtitleGenerator
+from core.launch_batch import LaunchBatchRunner
 from config.settings import Settings
 
 
@@ -383,9 +384,42 @@ def main():
                 topics = sys.argv[2].split(",")
                 context = sys.argv[3] if len(sys.argv) > 3 else "music"
                 results = system.generate_content_batch(topics, context)
+                runner = LaunchBatchRunner(system)
+                planned = [{"topic": t.strip(), "context": context} for t in topics]
+                entries = [
+                    runner._manifest_entry(i + 1, item, result)
+                    for i, (item, result) in enumerate(
+                        zip(planned, results)
+                    )
+                ]
+                export_path = runner._export(
+                    f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+                    False,
+                    len(topics),
+                    planned,
+                    entries,
+                    sum(1 for r in results if r.get("success")),
+                    sum(1 for r in results if not r.get("success")),
+                )
                 print(f"Batch creation completed: {len(results)} videos")
+                print(f"  Manifest: {export_path}")
             else:
                 print("Usage: python main.py batch <topic1,topic2,topic3> [context]")
+        elif command == "launch":
+            dry_run = "--dry-run" in sys.argv
+            count = 12
+            for arg in sys.argv[2:]:
+                if arg.isdigit():
+                    count = int(arg)
+            runner = LaunchBatchRunner(system)
+            manifest = runner.run(count=count, dry_run=dry_run)
+            mode = "dry-run" if dry_run else "live"
+            print(f"Launch batch ({mode}): {manifest.planned_count} video(s) planned")
+            print(f"  Success: {manifest.success_count}  Failed: {manifest.failure_count}")
+            print(f"  Manifest: {manifest.export_path}")
+            for row in manifest.topics[:12]:
+                status = row.get("status", row.get("success", "?"))
+                print(f"  - [{row.get('index')}] {row.get('topic')} ({status})")
         elif command == "report":
             export_path = sys.argv[2] if len(sys.argv) > 2 else "reports"
             report_path = system.export_system_report(export_path)
@@ -519,7 +553,7 @@ def main():
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard, research, subtitles, test"
+                "trends, performance, schedule, dashboard, research, subtitles, test, launch"
             )
     else:
         # Interactive mode
@@ -527,7 +561,8 @@ def main():
         print("  demo    - Run system demonstration")
         print("  status  - Show system status")
         print("  create  - Create a single video")
-        print("  batch   - Create multiple videos")
+        print("  batch   - Create multiple videos (exports manifest)")
+        print("  launch [count] [--dry-run] - Launch content batch, 10+ videos (Phase 4.2)")
         print("  report  - Export system report")
         print("  trends  - Run trending topic analysis (Phase 3.1)")
         print("  performance - Show/export performance summary (Phase 3.2)")
