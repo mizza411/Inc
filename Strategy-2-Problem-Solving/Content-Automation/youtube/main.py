@@ -18,6 +18,7 @@ from core.song_analyzer import SongAnalyzer
 from core.topic_analyzer import TrendingTopicAnalyzer
 from core.script_generator import ScriptGenerator
 from core.video_assembler import VideoAssembler
+from core.performance_tracker import ContentPerformanceTracker
 from config.settings import Settings
 
 class YouTubeBusinessSystem:
@@ -34,6 +35,7 @@ class YouTubeBusinessSystem:
         self.topic_analyzer = TrendingTopicAnalyzer()
         self.script_generator = ScriptGenerator()
         self.video_assembler = VideoAssembler()
+        self.performance_tracker = ContentPerformanceTracker()
         
         print("🎥 YouTube Business Automation System Initialized!")
         print(f"Channel: {self.settings.youtube.channel_name}")
@@ -117,7 +119,24 @@ class YouTubeBusinessSystem:
             print(f"Title: {script.title}")
             print(f"Duration: {script.estimated_duration} minutes")
             print(f"Language Blends: {len(results['language_blends'])}")
-            
+
+            if self.settings.content_generation.quality_validation_enabled:
+                print("5️⃣ Recording content performance metrics...")
+                tracking = self.performance_tracker.track_created_video(
+                    topic,
+                    context,
+                    script,
+                    extra_metadata={
+                        "trending_topics": topic_terms,
+                        "trending_songs": results["trending_songs"],
+                    },
+                )
+                results["performance_tracking"] = tracking
+                print(
+                    f"   Tracked video_id={tracking['video_id']} "
+                    f"quality_score={tracking['validation_score']:.2f}"
+                )
+
             return results
             
         except Exception as e:
@@ -175,6 +194,7 @@ class YouTubeBusinessSystem:
                 "topic_analyzer": "ready",
                 "script_generator": "ready",
                 "video_assembler": "ready",
+                "performance_tracker": "ready",
             },
         }
         
@@ -325,9 +345,28 @@ def main():
                 print("\nSuggested video ideas:")
                 for idea in report.video_ideas[:5]:
                     print(f"  - {idea['title']}")
+        elif command == "performance":
+            sub = sys.argv[2].lower() if len(sys.argv) > 2 else "summary"
+            if sub == "import" and len(sys.argv) >= 4:
+                count = system.performance_tracker.import_metrics_file(sys.argv[3])
+                print(f"Imported performance metrics for {count} video(s)")
+            else:
+                summary = system.performance_tracker.get_summary()
+                export_path = system.performance_tracker.export_summary()
+                print("Content performance summary")
+                print(f"  Database: {summary['database']}")
+                cq = summary.get("content_quality") or {}
+                print(f"  Videos tracked: {cq.get('video_count', 0)}")
+                print(f"  Avg quality score: {cq.get('avg_quality')}")
+                print(f"  Exported: {export_path}")
+                for row in summary.get("recent_videos", [])[:5]:
+                    print(
+                        f"  - [{row.get('id')}] {row.get('title')} "
+                        f"({row.get('status')}, score={row.get('high_effort_score')})"
+                    )
         else:
             print(
-                "Unknown command. Available: demo, status, create, batch, report, trends"
+                "Unknown command. Available: demo, status, create, batch, report, trends, performance"
             )
     else:
         # Interactive mode
@@ -338,6 +377,8 @@ def main():
         print("  batch   - Create multiple videos")
         print("  report  - Export system report")
         print("  trends  - Run trending topic analysis (Phase 3.1)")
+        print("  performance - Show/export performance summary (Phase 3.2)")
+        print("  performance import <file.json> - Import YouTube metrics")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default
