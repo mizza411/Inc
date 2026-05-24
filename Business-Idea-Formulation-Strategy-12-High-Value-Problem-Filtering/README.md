@@ -7,7 +7,7 @@ This strategy filters a list of problems down to the **highest-value opportuniti
 
 ### Step 1: Gather a Problem List
 - Collect problems from:
-  - Other strategies (news, TrendHunter, Crunchbase, personal problems, etc.)
+  - Other strategies (news, Strategy 14 / OurWorldInData, Crunchbase, personal problems, etc.)
   - Existing notes, spreadsheets, or idea backlogs
 - For each problem, keep at least:
   - Short description

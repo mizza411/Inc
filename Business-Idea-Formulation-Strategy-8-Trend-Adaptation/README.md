@@ -1,5 +1,7 @@
 # Business Idea Formulation Strategy 8: Trend Adaptation
 
+> **Deprecated (May 2026):** Strategy 8 is **retired** from `run_all_strategies.py`. TrendHunter has no licensed automation path (manual paste / unofficial scraping only). Use **[Strategy 14: Global Data Trend Adaptation](../Business-Idea-Formulation-Strategy-14-Global-Data-Trend-Adaptation/)** (OurWorldInData) for global trend → Nigeria adaptation instead. See **[DEPRECATED.md](./DEPRECATED.md)**. Legacy script: `_archive/trend_adapter_legacy.py`.
+
 ## Overview
 This strategy helps you generate business ideas by adapting **global trends from TrendHunter** for implementation in Nigeria, while differentiating your ideas by combining them with other niches or concepts.
 

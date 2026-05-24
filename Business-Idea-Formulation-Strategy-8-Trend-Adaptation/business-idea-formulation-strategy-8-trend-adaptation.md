@@ -1,6 +1,8 @@
-# Strategy 8: Trend Adaptation
+# Strategy 8: Trend Adaptation — DEPRECATED
 
-## 🎯 Core Strategy
+> **Retired May 2026.** TrendHunter removed from active workflows. See [DEPRECATED.md](./DEPRECATED.md) and use **Strategy 14** (OurWorldInData) instead.
+
+## 🎯 Core Strategy (historical)
 Generate business ideas by adapting trends from TrendHunter for implementation in Nigeria, differentiated by combining with different niches or concepts.
 
 ## Process

@@ -74,10 +74,10 @@ class HighValueProblemFilter:
         print("=" * 60)
 
         print(
-            "\nEnter problems you want to evaluate (from news, TrendHunter,\n"
-            "personal problems, questionnaires, etc.). For each problem, you\n"
-            "can also specify a source/tag. Press Enter on an empty description\n"
-            "when you're done.\n"
+            "\nEnter problems you want to evaluate (from news, Strategy 14\n"
+            "global data, Crunchbase, personal problems, questionnaires, etc.).\n"
+            "For each problem, you can also specify a source/tag. Press Enter on\n"
+            "an empty description when you're done.\n"
         )
 
         problems = []

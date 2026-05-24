@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Master Orchestrator: Run Business Idea Formulation Strategies 3–14 from one place.
+Master Orchestrator: Run Business Idea Formulation Strategies 3–15 from one place.
+
+Active executable strategies: 3–7, 9–15 (Strategy 8 / TrendHunter retired).
 
 Phase 1 (implemented):
 - Simple, linear runner (run all strategies in fixed order).
 
 Phase 2 (implemented):
 - Adds a CLI menu.
-- Option to run ALL strategies 3–14.
+- Option to run ALL strategies 3–15.
 - Option to run a SELECTED subset (e.g. 3,5,9,13).
 
 Phase 3 (now implemented):
@@ -32,13 +34,13 @@ STRATEGY_SCRIPTS: Dict[int, Path] = {
     5: ROOT / "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction" / "news_problem_extractor.py",
     6: ROOT / "Business-Idea-Formulation-Strategy-6-Startup-Niche-Combination" / "startup_niche_combiner.py",
     7: ROOT / "Business-Idea-Formulation-Strategy-7-Trending-Startup-Adaptation" / "trending_startup_adapter.py",
-    8: ROOT / "Business-Idea-Formulation-Strategy-8-Trend-Adaptation" / "trend_adapter.py",
     9: ROOT / "Business-Idea-Formulation-Strategy-9-Financial-News-Problem-Extraction" / "financial_news_extractor.py",
     10: ROOT / "Business-Idea-Formulation-Strategy-10-Visual-Content-Analysis" / "visual_content_analyzer.py",
     11: ROOT / "Business-Idea-Formulation-Strategy-11-Personal-Problem-Conversion" / "personal_problem_converter.py",
     12: ROOT / "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering" / "problem_filter.py",
     13: ROOT / "Business-Idea-Formulation-Strategy-13-Multi-Source-Comprehensive-Analysis" / "multisource_analyzer.py",
     14: ROOT / "Business-Idea-Formulation-Strategy-14-Global-Data-Trend-Adaptation" / "global_trend_adapter.py",
+    15: ROOT / "Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data" / "nigeria_national_open_data.py",
 }
 
 
@@ -62,10 +64,6 @@ STRATEGY_META: Dict[int, Dict[str, str]] = {
     7: {
         "name": "Trending Startup Adaptation",
         "desc": "Uses Crunchbase 'Trending Profiles' + ChatGPT Vision to adapt trending startups for Nigeria.",
-    },
-    8: {
-        "name": "Trend Adaptation",
-        "desc": "Adapts global trends from TrendHunter to the Nigerian context.",
     },
     9: {
         "name": "Financial News Problem Extraction",
@@ -91,7 +89,56 @@ STRATEGY_META: Dict[int, Dict[str, str]] = {
         "name": "Global Data Trend Adaptation",
         "desc": "Adapts global trends from OurWorldInData to Nigerian opportunities.",
     },
+    15: {
+        "name": "Nigeria National / Open Data",
+        "desc": "Derives opportunities from Nigeria official and open statistical inputs; each row ties to indicator, period, and source.",
+    },
 }
+
+# Retired from the master runner (folder may remain for reference until Phase 2+ cleanup).
+RETIRED_STRATEGIES: Dict[int, str] = {
+    8: (
+        "Trend Adaptation (TrendHunter) — no licensed automation path. "
+        "Use Strategy 14 (OurWorldInData) for global trend adaptation."
+    ),
+}
+
+
+def _expand_selection_tokens(selection: str) -> List[int]:
+    """Parse strategy numbers/ranges from user input (includes retired numbers)."""
+    numbers: List[int] = []
+    if not selection.strip():
+        return numbers
+
+    parts = [p.strip() for p in selection.split(",") if p.strip()]
+    for part in parts:
+        if "-" in part:
+            start_str, end_str = [x.strip() for x in part.split("-", 1)]
+            if start_str.isdigit() and end_str.isdigit():
+                start, end = int(start_str), int(end_str)
+                if start > end:
+                    start, end = end, start
+                for n in range(start, end + 1):
+                    if n not in numbers:
+                        numbers.append(n)
+        elif part.isdigit():
+            n = int(part)
+            if n not in numbers:
+                numbers.append(n)
+
+    return sorted(numbers)
+
+
+def warn_if_retired_requested(selection: str) -> None:
+    """Print a clear note when the user asks for a retired strategy number."""
+    requested = set(_expand_selection_tokens(selection))
+    retired = sorted(requested & RETIRED_STRATEGIES.keys())
+    if not retired:
+        return
+
+    print("\nRetired strategies (skipped by the master runner):")
+    for number in retired:
+        print(f"  - Strategy {number}: {RETIRED_STRATEGIES[number]}")
 
 
 def run_strategy(number: int) -> bool:
@@ -193,13 +240,16 @@ def parse_selection(selection: str) -> List[int]:
 
 
 def main() -> None:
-    """Phase 3: menu-based runner for strategies 3–14 with single strategy option."""
+    """Phase 3: menu-based runner for strategies 3–15 with single strategy option."""
     while True:
         print("\n" + "=" * 80)
         print("Business Idea Formulation - Master Runner (Phase 3)")
         print("=" * 80)
         print("\nNote: Strategies 1 and 2 are verbal instructions only (no scripts to run).")
-        print("Only Strategies 3–14 are executable scripts.\n")
+        print(
+            "Executable scripts: 3–7, 9–15 "
+            f"({len(STRATEGY_SCRIPTS)} strategies; Strategy 8 retired)."
+        )
         print("Available strategies:")
         print("  - Strategy 1: [Verbal instructions only - not a script]")
         print("  - Strategy 2: [Verbal instructions only - not a script]")
@@ -207,9 +257,11 @@ def main() -> None:
             meta = STRATEGY_META.get(num, {})
             name = meta.get("name", f"Strategy {num}")
             print(f"  - Strategy {num}: {name}")
+        for num in sorted(RETIRED_STRATEGIES.keys()):
+            print(f"  - Strategy {num}: [Retired — {RETIRED_STRATEGIES[num]}]")
 
         print("\nMenu:")
-        print("  1) Run ALL strategies (3–14) in order")
+        print("  1) Run ALL active strategies (3–7, 9–15) in order")
         print("  2) Run SELECTED strategies (e.g. 3,5,7-9)")
         print("  3) Run ONE strategy (e.g. 5)")
         print("  4) Exit")
@@ -218,7 +270,7 @@ def main() -> None:
 
         if choice in ("", "1"):
             confirm = input(
-                "\nRun ALL strategies 3–14 in order? (y/n, default=y): "
+                "\nRun ALL active strategies (3–7, 9–15) in order? (y/n, default=y): "
             ).strip().lower()
             if confirm in ("", "y", "yes"):
                 run_sequence(sorted(STRATEGY_SCRIPTS.keys()))
@@ -231,13 +283,17 @@ def main() -> None:
                 "Examples:\n"
                 "  3,5,9\n"
                 "  3-6\n"
-                "  3,5-7,10,14\n"
+                "  3,5-7,10,15\n"
             )
             selection = input("Your selection: ")
+            warn_if_retired_requested(selection)
             selected = parse_selection(selection)
             if not selected:
                 print("\nNo valid strategies selected. Nothing to run.")
                 print("Note: Strategies 1 and 2 are not executable scripts (verbal instructions only).")
+                if RETIRED_STRATEGIES:
+                    retired_nums = ", ".join(str(n) for n in sorted(RETIRED_STRATEGIES))
+                    print(f"Note: Strategy {retired_nums} is retired from the master runner.")
             else:
                 print(f"\nSelected strategies: {', '.join(str(n) for n in selected)}")
                 confirm = input(
@@ -249,13 +305,17 @@ def main() -> None:
                     print("Cancelled running selected strategies.")
 
         elif choice == "3":
-            print("\nEnter a single strategy number (3–14):")
+            print("\nEnter a single strategy number (3–15):")
             selection = input("Strategy number: ").strip()
             if not selection.isdigit():
-                print("\nInvalid input. Please enter a number between 3 and 14.")
+                print("\nInvalid input. Please enter a number between 3 and 15.")
             else:
                 num = int(selection)
-                if num not in STRATEGY_SCRIPTS:
+                if num in RETIRED_STRATEGIES:
+                    print(f"\nStrategy {num} is retired from the master runner.")
+                    print(RETIRED_STRATEGIES[num])
+                    print(f"Available strategies: {', '.join(str(n) for n in sorted(STRATEGY_SCRIPTS.keys()))}")
+                elif num not in STRATEGY_SCRIPTS:
                     print(f"\nStrategy {num} is not available.")
                     print("Note: Strategies 1 and 2 are not executable scripts (verbal instructions only).")
                     print(f"Available strategies: {', '.join(str(n) for n in sorted(STRATEGY_SCRIPTS.keys()))}")

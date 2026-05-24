@@ -88,13 +88,16 @@ Select option `3` to exit the master runner without executing any strategies.
 | 5 | News-Based Problem Extraction | `news_problem_extractor.py` |
 | 6 | Startup Niche Combination | `startup_niche_combiner.py` |
 | 7 | Trending Startup Adaptation | `trending_startup_adapter.py` |
-| 8 | Trend Adaptation | `trend_adapter.py` |
+| ~~8~~ | ~~Trend Adaptation (TrendHunter)~~ | **Retired** — use Strategy 14 |
 | 9 | Financial News Problem Extraction | `financial_news_extractor.py` |
 | 10 | Visual Content Analysis | `visual_content_analyzer.py` |
 | 11 | Personal Problem Conversion | `personal_problem_converter.py` |
 | 12 | High-Value Problem Filtering | `problem_filter.py` |
 | 13 | Multi-Source Comprehensive Analysis | `multisource_analyzer.py` |
 | 14 | Global Data Trend Adaptation | `global_trend_adapter.py` |
+| 15 | Nigeria National / Open Data | `nigeria_national_open_data.py` |
+
+**Note:** Strategy **8** (TrendHunter) was removed from the master runner — no licensed automation path. Use **Strategy 14** for global trend adaptation instead.
 
 ## How It Works
 
