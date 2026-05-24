@@ -26,6 +26,7 @@ from core.research_engine import ResearchEngine
 from core.subtitle_generator import SubtitleGenerator
 from core.launch_batch import LaunchBatchRunner
 from core.pipeline_monitor import PipelineMonitor
+from core.launch_controller import LaunchController
 from config.settings import Settings
 
 
@@ -435,6 +436,27 @@ def main():
                 print(f"  ... and {len(report.alerts) - 15} more")
             if not report.healthy:
                 raise SystemExit(1)
+        elif command in ("go-live", "launch-system"):
+            skip_monitor = "--skip-monitor" in sys.argv
+            no_schedule = "--no-schedule" in sys.argv
+            controller = LaunchController(system)
+            try:
+                report = controller.go_live(
+                    skip_monitor=skip_monitor,
+                    plan_schedule=not no_schedule,
+                )
+            except RuntimeError as exc:
+                print(f"Go-live blocked: {exc}")
+                raise SystemExit(1) from exc
+            print("YouTube automation system: LIVE")
+            print(f"  Channel: {report.channel_name}")
+            print(f"  System status: {report.system_status}")
+            print(f"  Videos tracked: {report.videos_tracked}")
+            print(f"  Avg quality: {report.avg_quality_score}")
+            print(f"  Dashboard: {report.dashboard_path}")
+            print(f"  Performance export: {report.performance_export}")
+            print(f"  Schedule slots: {report.schedule_slots_planned}")
+            print(f"  Launch report: {report.export_path}")
         elif command == "report":
             export_path = sys.argv[2] if len(sys.argv) > 2 else "reports"
             report_path = system.export_system_report(export_path)
@@ -568,7 +590,7 @@ def main():
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard, research, subtitles, test, launch, monitor"
+                "trends, performance, schedule, dashboard, research, subtitles, test, launch, monitor, go-live"
             )
     else:
         # Interactive mode
@@ -579,6 +601,7 @@ def main():
         print("  batch   - Create multiple videos (exports manifest)")
         print("  launch [count] [--dry-run] - Launch content batch, 10+ videos (Phase 4.2)")
         print("  monitor - Check alerts: schedule misses, quality drops, pipeline failures (Phase 4.3)")
+        print("  go-live [--skip-monitor] [--no-schedule] - Launch system + dashboard/performance snapshot (Phase 4.5)")
         print("  report  - Export system report")
         print("  trends  - Run trending topic analysis (Phase 3.1)")
         print("  performance - Show/export performance summary (Phase 3.2)")

@@ -18,5 +18,5 @@ def test_user_guides_exist():
 
 def test_cli_reference_lists_main_commands():
     text = (ROOT / "docs" / "CLI_REFERENCE.md").read_text(encoding="utf-8")
-    for cmd in ("create", "launch", "monitor", "test", "dashboard", "schedule"):
+    for cmd in ("create", "launch", "monitor", "go-live", "test", "dashboard", "schedule"):
         assert cmd in text

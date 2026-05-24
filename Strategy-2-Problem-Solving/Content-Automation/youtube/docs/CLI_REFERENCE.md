@@ -131,6 +131,16 @@ Output: `exports/subtitles/*.srt` and `*.vtt`
 
 ## Monitoring & testing (Phase 4)
 
+### `go-live [--skip-monitor] [--no-schedule]`
+Launch the system: runs monitor check, generates dashboard + performance export, writes launch report.
+
+```powershell
+python main.py go-live
+python main.py go-live --skip-monitor
+```
+
+Report: `exports/launch_status/go_live_*.json`
+
 ### `monitor`
 Checks schedule misses, quality drops, and launch batch failures.
 

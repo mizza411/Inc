@@ -46,7 +46,8 @@ python main.py launch 12
 python main.py batch "Topic 1,Topic 2,Topic 3,..." music
 ```
 
-### After creation
+### After go-live
+- [ ] Run `python main.py go-live` — dashboard + performance snapshot + launch report
 - [ ] Run `python main.py performance` — videos tracked in SQLite
 - [ ] Run `python main.py dashboard` — open HTML dashboard
 - [ ] Run `python main.py monitor` — confirm no pipeline failures
