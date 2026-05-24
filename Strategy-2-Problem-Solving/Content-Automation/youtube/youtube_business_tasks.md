@@ -79,7 +79,7 @@ Develop a YouTube business creating **automated, faceless videos** using English
 - [x] **3.3** Create automated scheduling system
 - [x] **3.4** Build analytics dashboard
 - [x] **3.5** Implement automated research and fact-checking
-- [ ] **3.6** Add automated subtitle generation
+- [x] **3.6** Add automated subtitle generation
 - [ ] **3.7** Comprehensive testing and bug fixes
 
 ### Deliverables:

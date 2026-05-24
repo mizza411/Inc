@@ -23,6 +23,7 @@ from core.performance_tracker import ContentPerformanceTracker
 from core.content_scheduler import ContentScheduler
 from core.analytics_dashboard import AnalyticsDashboard
 from core.research_engine import ResearchEngine
+from core.subtitle_generator import SubtitleGenerator
 from config.settings import Settings
 
 
@@ -52,6 +53,7 @@ class YouTubeBusinessSystem:
         )
         self.analytics_dashboard = AnalyticsDashboard()
         self.research_engine = ResearchEngine()
+        self.subtitle_generator = SubtitleGenerator()
         
         print("🎥 YouTube Business Automation System Initialized!")
         print(f"Channel: {self.settings.youtube.channel_name}")
@@ -135,6 +137,15 @@ class YouTubeBusinessSystem:
             )
             print(f"   Exported: {research_path}")
 
+            print("3c️⃣ Generating subtitles (SRT + VTT)...")
+            subtitle_track = self.subtitle_generator.generate_from_script(script_data)
+            print(
+                f"   {len(subtitle_track.cues)} cues, "
+                f"{subtitle_track.total_duration:.1f}s total"
+            )
+            print(f"   SRT: {subtitle_track.srt_path}")
+            print(f"   VTT: {subtitle_track.vtt_path}")
+
             # Step 4: Assemble video
             print("4️⃣ Assembling video...")
             assembled_video = self.video_assembler.assemble_video(script_data)
@@ -150,6 +161,7 @@ class YouTubeBusinessSystem:
                 "trending_topics": topic_terms,
                 "topic_analysis": topic_report.to_dict() if topic_report else None,
                 "research": research_report.to_dict(),
+                "subtitles": subtitle_track.to_dict(),
                 "creation_date": datetime.now().isoformat(),
                 "estimated_duration": script.estimated_duration,
                 "target_length": script.target_length
@@ -238,6 +250,7 @@ class YouTubeBusinessSystem:
                 "content_scheduler": "ready",
                 "analytics_dashboard": "ready",
                 "research_engine": "ready",
+                "subtitle_generator": "ready",
             },
         }
         
@@ -480,10 +493,30 @@ def main():
                     print(f"  - [{item.status}] {item.claim[:90]}...")
             else:
                 print("Usage: python main.py research <topic>")
+        elif command == "subtitles":
+            if len(sys.argv) >= 3:
+                topic = " ".join(sys.argv[2:])
+                script = system.script_generator.generate_script(topic, "culture", 8)
+                script_data = {
+                    "title": script.title,
+                    "hook": script.hook,
+                    "introduction": script.introduction,
+                    "main_content": script.main_content,
+                    "conclusion": script.conclusion,
+                    "call_to_action": script.call_to_action,
+                }
+                track = system.subtitle_generator.generate_from_script(script_data)
+                print(f"Subtitles for: {topic}")
+                print(f"  Cues: {len(track.cues)}")
+                print(f"  Duration: {track.total_duration:.1f}s")
+                print(f"  SRT: {track.srt_path}")
+                print(f"  VTT: {track.vtt_path}")
+            else:
+                print("Usage: python main.py subtitles <topic>")
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard, research"
+                "trends, performance, schedule, dashboard, research, subtitles"
             )
     else:
         # Interactive mode
@@ -501,6 +534,7 @@ def main():
         print("  schedule run-due [--dry-run] - Run due scheduled creations")
         print("  dashboard - Generate analytics HTML dashboard (Phase 3.4)")
         print("  research <topic> - Run research and fact-check (Phase 3.5)")
+        print("  subtitles <topic> - Generate SRT/VTT subtitles (Phase 3.6)")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default
