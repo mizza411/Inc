@@ -3,6 +3,7 @@
 Main entry point that integrates all components for automated video creation
 """
 
+import json
 import sys
 import os
 from datetime import datetime
@@ -12,8 +13,9 @@ from typing import Dict, List, Optional
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import our YouTube business modules
-from core.language_blender import LanguageBlender
+from core.language_blender import EnhancedLanguageBlender as LanguageBlender
 from core.song_analyzer import SongAnalyzer
+from core.topic_analyzer import TrendingTopicAnalyzer
 from core.script_generator import ScriptGenerator
 from core.video_assembler import VideoAssembler
 from config.settings import Settings
@@ -29,6 +31,7 @@ class YouTubeBusinessSystem:
         self.settings = Settings()
         self.language_blender = LanguageBlender()
         self.song_analyzer = SongAnalyzer()
+        self.topic_analyzer = TrendingTopicAnalyzer()
         self.script_generator = ScriptGenerator()
         self.video_assembler = VideoAssembler()
         
@@ -61,10 +64,23 @@ class YouTubeBusinessSystem:
             # Step 2: Analyze trending songs for viral terms
             print("2️⃣ Analyzing trending songs...")
             trending_songs = self.song_analyzer.analyze_trending_songs(3)
-            
+
+            topic_terms: List[str] = []
+            topic_report = None
+            if self.settings.content_generation.trending_topic_integration:
+                print("2b️⃣ Analyzing trending topics (search & culture)...")
+                topic_report = self.topic_analyzer.analyze()
+                topic_terms = self.topic_analyzer.topic_terms(topic_report)
+                export_path = self.topic_analyzer.export_report(topic_report)
+                print(f"   📁 Topic report: {export_path}")
+                if topic_report.top_picks:
+                    print(f"   🔥 Top topic: {topic_report.top_picks[0].query}")
+
             # Step 3: Generate video script
             print("3️⃣ Generating video script...")
-            script = self.script_generator.generate_script(topic, context, target_minutes)
+            script = self.script_generator.generate_script(
+                topic, context, target_minutes, extra_trending_terms=topic_terms or None
+            )
             
             # Step 4: Assemble video
             print("4️⃣ Assembling video...")
@@ -90,6 +106,8 @@ class YouTubeBusinessSystem:
                 "assembled_video": assembled_video,
                 "language_blends": [term.blended_result for term in language_blends],
                 "trending_songs": [song.title for song in trending_songs],
+                "trending_topics": topic_terms,
+                "topic_analysis": topic_report.to_dict() if topic_report else None,
                 "creation_date": datetime.now().isoformat(),
                 "estimated_duration": script.estimated_duration,
                 "target_length": script.target_length
@@ -153,10 +171,11 @@ class YouTubeBusinessSystem:
             "monetization_checklist": self.settings.get_monetization_checklist(),
             "components": {
                 "language_blender": "ready",
-                "song_analyzer": "ready", 
+                "song_analyzer": "ready",
+                "topic_analyzer": "ready",
                 "script_generator": "ready",
-                "video_assembler": "ready"
-            }
+                "video_assembler": "ready",
+            },
         }
         
         # Check for any validation errors
@@ -186,15 +205,25 @@ class YouTubeBusinessSystem:
             print(f"   🎵 {song.title} by {song.artist}")
             print(f"      Viral Terms: {', '.join(song.viral_terms[:3])}")
         
-        # Demo 3: Script Generation
-        print("\n3️⃣ Script Generation Demo:")
-        script = self.script_generator.generate_script("Trending Music", "music", 8)
+        # Demo 3: Trending topic analysis
+        print("\n3️⃣ Trending Topic Analysis Demo:")
+        topic_report = self.topic_analyzer.analyze()
+        for i, pick in enumerate(topic_report.top_picks[:3], 1):
+            print(f"   {i}. {pick.query} ({pick.category}, {pick.source})")
+        print(f"   Live data: {topic_report.used_live_data}")
+
+        # Demo 4: Script Generation
+        print("\n4️⃣ Script Generation Demo:")
+        extra = self.topic_analyzer.topic_terms(topic_report)
+        script = self.script_generator.generate_script(
+            "Trending Music", "music", 8, extra_trending_terms=extra
+        )
         print(f"   📝 Title: {script.title}")
         print(f"   ⏱️ Duration: {script.estimated_duration} minutes")
         print(f"   📚 Content Sections: {len(script.main_content)}")
         
-        # Demo 4: System Status
-        print("\n4️⃣ System Status:")
+        # Demo 5: System Status
+        print("\n5️⃣ System Status:")
         status = self.get_system_status()
         print(f"   Status: {status['status']}")
         print(f"   Channel: {status['settings']['youtube']['channel_name']}")
@@ -245,7 +274,12 @@ class YouTubeBusinessSystem:
 
 def main():
     """Main entry point for the YouTube Business System"""
-    print("🎥 YouTube Business Automation System")
+    if hasattr(sys.stdout, "reconfigure"):
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
+    print("YouTube Business Automation System")
     print("=" * 50)
     
     # Initialize the system
@@ -280,8 +314,21 @@ def main():
             export_path = sys.argv[2] if len(sys.argv) > 2 else "reports"
             report_path = system.export_system_report(export_path)
             print(f"System report exported to: {report_path}")
+        elif command == "trends":
+            report = system.topic_analyzer.analyze()
+            path = system.topic_analyzer.export_report(report)
+            print(f"Trending topic analysis (live={report.used_live_data})")
+            print(f"Exported: {path}")
+            for i, t in enumerate(report.top_picks[:10], 1):
+                print(f"  {i}. {t.query} [{t.category}] ({t.region})")
+            if report.video_ideas:
+                print("\nSuggested video ideas:")
+                for idea in report.video_ideas[:5]:
+                    print(f"  - {idea['title']}")
         else:
-            print("Unknown command. Available commands: demo, status, create, batch, report")
+            print(
+                "Unknown command. Available: demo, status, create, batch, report, trends"
+            )
     else:
         # Interactive mode
         print("\nAvailable commands:")
@@ -290,6 +337,7 @@ def main():
         print("  create  - Create a single video")
         print("  batch   - Create multiple videos")
         print("  report  - Export system report")
+        print("  trends  - Run trending topic analysis (Phase 3.1)")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default

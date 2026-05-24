@@ -90,16 +90,22 @@ class ScriptGenerator:
             "This reminds me of something else..."
         ]
     
-    def generate_script(self, topic: str, context: str = "general", 
-                       target_minutes: int = 8) -> VideoScript:
+    def generate_script(
+        self,
+        topic: str,
+        context: str = "general",
+        target_minutes: int = 8,
+        extra_trending_terms: Optional[List[str]] = None,
+    ) -> VideoScript:
         """
         Generate a complete video script for a given topic
-        
+
         Args:
             topic: Main topic of the video
             context: Context (music, food, culture, etc.)
             target_minutes: Target video length in minutes
-            
+            extra_trending_terms: Optional terms from trending topic analysis
+
         Returns:
             Complete VideoScript object
         """
@@ -117,7 +123,10 @@ class ScriptGenerator:
         # Extract language blends and trending terms
         language_blends = self._extract_language_blends(main_content)
         trending_terms = self._extract_trending_terms(main_content)
-        
+        if extra_trending_terms:
+            merged = list(dict.fromkeys(trending_terms + extra_trending_terms))
+            trending_terms = merged[:12]
+
         # Calculate estimated duration
         total_words = len(' '.join([hook, introduction] + main_content + 
                                  transitions + [conclusion, call_to_action]).split())
