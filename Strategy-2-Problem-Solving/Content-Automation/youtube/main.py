@@ -22,6 +22,7 @@ from core.video_assembler import VideoAssembler
 from core.performance_tracker import ContentPerformanceTracker
 from core.content_scheduler import ContentScheduler
 from core.analytics_dashboard import AnalyticsDashboard
+from core.research_engine import ResearchEngine
 from config.settings import Settings
 
 
@@ -50,6 +51,7 @@ class YouTubeBusinessSystem:
             target_duration_minutes=self.settings.youtube.video_length_target,
         )
         self.analytics_dashboard = AnalyticsDashboard()
+        self.research_engine = ResearchEngine()
         
         print("🎥 YouTube Business Automation System Initialized!")
         print(f"Channel: {self.settings.youtube.channel_name}")
@@ -97,9 +99,7 @@ class YouTubeBusinessSystem:
             script = self.script_generator.generate_script(
                 topic, context, target_minutes, extra_trending_terms=topic_terms or None
             )
-            
-            # Step 4: Assemble video
-            print("4️⃣ Assembling video...")
+
             script_data = {
                 "title": script.title,
                 "hook": script.hook,
@@ -109,9 +109,34 @@ class YouTubeBusinessSystem:
                 "call_to_action": script.call_to_action,
                 "description": f"Automated video about {topic} with English-Yoruba language blending",
                 "tags": ["nigerian", "yoruba", "culture", "humor", "trending"],
-                "category": "Entertainment"
+                "category": "Entertainment",
             }
-            
+
+            print("3b️⃣ Running research and fact-check...")
+            extra_sources = []
+            if topic_report:
+                for pick in topic_report.top_picks[:5]:
+                    extra_sources.append(
+                        {
+                            "title": pick.query,
+                            "url": "",
+                            "snippet": f"Trending topic in {pick.region} via {pick.source}",
+                            "source_type": "trend",
+                            "credibility_score": 0.65,
+                        }
+                    )
+            research_report = self.research_engine.analyze_topic(
+                topic, script_data, extra_sources=extra_sources or None
+            )
+            research_path = self.research_engine.export_report(research_report)
+            print(
+                f"   Research quality={research_report.research_quality_score:.2f} "
+                f"status={research_report.fact_checking_status}"
+            )
+            print(f"   Exported: {research_path}")
+
+            # Step 4: Assemble video
+            print("4️⃣ Assembling video...")
             assembled_video = self.video_assembler.assemble_video(script_data)
             
             # Step 5: Prepare results
@@ -124,6 +149,7 @@ class YouTubeBusinessSystem:
                 "trending_songs": [song.title for song in trending_songs],
                 "trending_topics": topic_terms,
                 "topic_analysis": topic_report.to_dict() if topic_report else None,
+                "research": research_report.to_dict(),
                 "creation_date": datetime.now().isoformat(),
                 "estimated_duration": script.estimated_duration,
                 "target_length": script.target_length
@@ -211,6 +237,7 @@ class YouTubeBusinessSystem:
                 "performance_tracker": "ready",
                 "content_scheduler": "ready",
                 "analytics_dashboard": "ready",
+                "research_engine": "ready",
             },
         }
         
@@ -429,10 +456,34 @@ def main():
             print("Analytics dashboard generated")
             print(f"  Open: {path}")
             print("  Tip: python -m http.server 8000 from youtube/ then visit web/analytics_dashboard.html")
+        elif command == "research":
+            if len(sys.argv) >= 3:
+                topic = " ".join(sys.argv[2:])
+                script = system.script_generator.generate_script(topic, "culture", 8)
+                script_data = {
+                    "title": script.title,
+                    "hook": script.hook,
+                    "introduction": script.introduction,
+                    "main_content": script.main_content,
+                    "conclusion": script.conclusion,
+                    "call_to_action": script.call_to_action,
+                }
+                report = system.research_engine.analyze_topic(topic, script_data)
+                path = system.research_engine.export_report(report)
+                print(f"Research report for: {topic}")
+                print(f"  Quality score: {report.research_quality_score:.2f}")
+                print(f"  Fact-check status: {report.fact_checking_status}")
+                print(f"  Sources gathered: {len(report.sources)}")
+                print(f"  Claims checked: {len(report.fact_checks)}")
+                print(f"  Exported: {path}")
+                for item in report.fact_checks[:5]:
+                    print(f"  - [{item.status}] {item.claim[:90]}...")
+            else:
+                print("Usage: python main.py research <topic>")
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard"
+                "trends, performance, schedule, dashboard, research"
             )
     else:
         # Interactive mode
@@ -449,6 +500,7 @@ def main():
         print("  schedule list - Show upcoming planned slots")
         print("  schedule run-due [--dry-run] - Run due scheduled creations")
         print("  dashboard - Generate analytics HTML dashboard (Phase 3.4)")
+        print("  research <topic> - Run research and fact-check (Phase 3.5)")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default
