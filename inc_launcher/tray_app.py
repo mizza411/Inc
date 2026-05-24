@@ -15,6 +15,9 @@ if str(_INC_ROOT) not in sys.path:
 from inc_launcher.actions import run_action
 from inc_launcher.config import INC_ROOT, load_config, list_global_actions, list_pillars
 from inc_launcher.hub_window import show_hub
+from inc_launcher.icon_loader import load_tray_icon
+from inc_launcher.single_instance import ensure_single_instance
+from inc_launcher.startup import is_login_startup_enabled, set_login_startup
 
 logger = logging.getLogger(__name__)
 
@@ -26,15 +29,13 @@ def _open_hub() -> None:
         show_hub(_hub_config)
 
 
-def _make_icon():
-    from PIL import Image, ImageDraw
-
-    size = 64
-    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(img)
-    draw.ellipse((4, 4, size - 4, size - 4), fill=(34, 139, 230, 255))
-    draw.text((18, 20), "I", fill=(255, 255, 255, 255))
-    return img
+def _toggle_login_startup() -> None:
+    try:
+        set_login_startup(not is_login_startup_enabled())
+        state = "enabled" if is_login_startup_enabled() else "disabled"
+        logger.info("Login startup %s", state)
+    except Exception as exc:
+        logger.exception("Failed to toggle login startup: %s", exc)
 
 
 def _item_handler(item: Dict[str, Any]) -> Callable[[], None]:
@@ -69,6 +70,14 @@ def build_menu(config: Dict[str, Any]):
         entries.append(item(global_item["label"], _item_handler(global_item)))
 
     entries.append(Menu.SEPARATOR)
+    login_on = is_login_startup_enabled()
+    entries.append(
+        item(
+            "Start at Windows login [ON]" if login_on else "Start at Windows login [OFF]",
+            _toggle_login_startup,
+        )
+    )
+    entries.append(Menu.SEPARATOR)
     entries.append(item("Quit", lambda icon, item: icon.stop()))
 
     return pystray.Menu(*entries)
@@ -90,7 +99,7 @@ def run_tray(config_path: str | None = None) -> None:
 
     icon = pystray.Icon(
         "inc_launcher",
-        _make_icon(),
+        load_tray_icon(config),
         config.get("app_name", "Inc Launcher"),
         build_menu(config),
     )
@@ -99,6 +108,10 @@ def run_tray(config_path: str | None = None) -> None:
 
 
 def main() -> None:
+    config = load_config()
+    settings = config.get("settings") or {}
+    if settings.get("single_instance", True) and not ensure_single_instance():
+        sys.exit(0)
     run_tray()
 
 

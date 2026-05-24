@@ -130,7 +130,7 @@
 ---
 
 ### 4. Inc Tray Icon + Super Main Launcher
-**Status:** Phase 2 complete (super main hub); Phase 3 pending  
+**Status:** Phase 3 complete; manual Phase 2 UI checks still pending  
 **Goal:** Windows **tray icon** (notification area, near the clock) + optional super main hub; all `C:\dev\Inc` entry points organized under **4 pillars** (extensible to 5+ later).  
 **Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`
 
@@ -185,11 +185,13 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 - [ ] **Run a launcher** — Click a card (e.g. opens `task.md` or a folder); target opens in Explorer/default app
 - [ ] **Recently opened** — Re-open Inc Hub; same pillar shows the item under **Recently opened**
 - [ ] **Right-click tray menu** — Menu shows **Open Inc Hub**, four pillar submenus, global actions, **Quit** (no crash)
-- [ ] **Optional: commit Phase 2** — After all above pass, stage/commit/push `inc_launcher/` + `task.md` (not done until you confirm)
+- [x] **Optional: commit Phase 2** — Pushed `c5057d3` on `main` (2026-05-24); tick UI items below when you finish hands-on checks
 
-**Phase 3 — Scale beyond 4**
-- [ ] Add pillars via config only (e.g. Automation hub, Research)
-- [ ] Optional: start at login, single-instance lock, custom icon
+**Phase 3 — Scale beyond 4** ✅
+- [x] Add pillars via config only — **Automation hub** pillar in `launcher_config.json` (add more without code changes)
+- [x] Single-instance lock — second `tray_app.py` exits if one is already running
+- [x] Start at login — tray menu **Start at Windows login [ON/OFF]** (writes `Inc Launcher.bat` to Startup folder)
+- [x] Custom icon — optional `inc_launcher/assets/icon.png` or `settings.icon_path` in config
 
 **Stack (proposed):** Python + `pystray` + minimal UI (tkinter or lightweight webview for super main) — confirm at Phase 1 kickoff.
 

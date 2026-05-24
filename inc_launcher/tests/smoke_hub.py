@@ -22,7 +22,7 @@ def main() -> int:
     errors: list[str] = []
     cfg = load_config()
     pillars = list_pillars(cfg)
-    print(f"[OK] Config: {len(pillars)} pillars")
+    print(f"[OK] Config: {len(pillars)} pillars (Phase 3: 5+ supported via config)")
 
     for pillar in pillars:
         n = len(pillar.get("items", []))

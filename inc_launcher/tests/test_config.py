@@ -5,15 +5,16 @@ from pathlib import Path
 from inc_launcher.config import INC_ROOT, load_config, list_pillars, resolve_path
 
 
-def test_load_config_has_four_pillars():
+def test_load_config_has_core_pillars():
     config = load_config()
     pillars = list_pillars(config)
-    assert len(pillars) == 4
+    assert len(pillars) >= 4
     labels = [p["label"] for p in pillars]
     assert "My Established business ideas" in labels
     assert "My leads" in labels
     assert "Formulated ideas" in labels
     assert "Problem identification" in labels
+    assert "Automation hub" in labels
 
 
 def test_resolve_inc_root_paths():

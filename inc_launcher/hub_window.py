@@ -133,9 +133,10 @@ class HubWindow(tk.Toplevel):
             anchor="w",
         ).pack(fill="x", padx=16, pady=(16, 8))
 
+        pillar_count = len(list_pillars(self.config_data))
         tk.Label(
             sidebar,
-            text="Four pillars",
+            text=f"{pillar_count} pillars",
             bg=SIDEBAR_BG,
             fg="#94a3b8",
             font=("Segoe UI", 9),

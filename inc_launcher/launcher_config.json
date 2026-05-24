@@ -1,6 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "app_name": "Inc Launcher",
+  "settings": {
+    "single_instance": true,
+    "icon_path": "inc_launcher/assets/icon.png"
+  },
   "pillars": [
     {
       "id": "established",
@@ -122,6 +126,33 @@
           "label": "Strategy 12 — High-value filtering",
           "action": "folder",
           "path": "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering"
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "label": "Automation hub",
+      "items": [
+        {
+          "label": "Content Automation folder",
+          "action": "folder",
+          "path": "Strategy-2-Problem-Solving/Content-Automation"
+        },
+        {
+          "label": "YouTube automation",
+          "action": "folder",
+          "path": "Strategy-2-Problem-Solving/Content-Automation/youtube"
+        },
+        {
+          "label": "YouTube CLI (help)",
+          "action": "command",
+          "command": "python main.py --help",
+          "cwd": "Strategy-2-Problem-Solving/Content-Automation/youtube"
+        },
+        {
+          "label": "Inc Launcher folder",
+          "action": "folder",
+          "path": "inc_launcher"
         }
       ]
     }
