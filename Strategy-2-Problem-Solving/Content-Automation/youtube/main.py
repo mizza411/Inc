@@ -25,6 +25,7 @@ from core.analytics_dashboard import AnalyticsDashboard
 from core.research_engine import ResearchEngine
 from core.subtitle_generator import SubtitleGenerator
 from core.launch_batch import LaunchBatchRunner
+from core.pipeline_monitor import PipelineMonitor
 from config.settings import Settings
 
 
@@ -55,6 +56,7 @@ class YouTubeBusinessSystem:
         self.analytics_dashboard = AnalyticsDashboard()
         self.research_engine = ResearchEngine()
         self.subtitle_generator = SubtitleGenerator()
+        self.pipeline_monitor = PipelineMonitor()
         
         print("🎥 YouTube Business Automation System Initialized!")
         print(f"Channel: {self.settings.youtube.channel_name}")
@@ -252,6 +254,7 @@ class YouTubeBusinessSystem:
                 "analytics_dashboard": "ready",
                 "research_engine": "ready",
                 "subtitle_generator": "ready",
+                "pipeline_monitor": "ready",
             },
         }
         
@@ -420,6 +423,18 @@ def main():
             for row in manifest.topics[:12]:
                 status = row.get("status", row.get("success", "?"))
                 print(f"  - [{row.get('index')}] {row.get('topic')} ({status})")
+        elif command == "monitor":
+            report = system.pipeline_monitor.check_all()
+            status = "HEALTHY" if report.healthy else "ATTENTION NEEDED"
+            print(f"Pipeline monitoring: {status}")
+            print(f"  Alerts: {report.alert_count} (critical={report.critical_count}, warning={report.warning_count})")
+            print(f"  Report: {report.export_path}")
+            for alert in report.alerts[:15]:
+                print(f"  - [{alert.severity}] {alert.category}: {alert.message}")
+            if len(report.alerts) > 15:
+                print(f"  ... and {len(report.alerts) - 15} more")
+            if not report.healthy:
+                raise SystemExit(1)
         elif command == "report":
             export_path = sys.argv[2] if len(sys.argv) > 2 else "reports"
             report_path = system.export_system_report(export_path)
@@ -553,7 +568,7 @@ def main():
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard, research, subtitles, test, launch"
+                "trends, performance, schedule, dashboard, research, subtitles, test, launch, monitor"
             )
     else:
         # Interactive mode
@@ -563,6 +578,7 @@ def main():
         print("  create  - Create a single video")
         print("  batch   - Create multiple videos (exports manifest)")
         print("  launch [count] [--dry-run] - Launch content batch, 10+ videos (Phase 4.2)")
+        print("  monitor - Check alerts: schedule misses, quality drops, pipeline failures (Phase 4.3)")
         print("  report  - Export system report")
         print("  trends  - Run trending topic analysis (Phase 3.1)")
         print("  performance - Show/export performance summary (Phase 3.2)")

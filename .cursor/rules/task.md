@@ -122,7 +122,7 @@
 #### Phase 4 — Launch Prep
 - [x] **4.1** Final system testing (end-to-end `create` pipeline, extend `tests/`, `test_phase4_completion.py`, `main.py test`)
 - [x] **4.2** Create launch content batch — 10+ videos (`core/launch_batch.py`, `main.py launch`, `main.py batch` manifest)
-- [ ] **4.3** Set up monitoring and alerts (pipeline failures, schedule misses, quality drops)
+- [x] **4.3** Set up monitoring and alerts (`core/pipeline_monitor.py`, `main.py monitor`)
 - [ ] **4.4** Prepare documentation and user guides (CLI reference, launch checklist)
 - [ ] **4.5** Launch system and monitor performance (`dashboard`, `performance` tracking)
 - [ ] **4.6** Set up YouTube monetization application process (8+ min, high-effort checklist)
