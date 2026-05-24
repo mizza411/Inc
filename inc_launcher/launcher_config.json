@@ -58,7 +58,8 @@
           "label": "Run all strategies",
           "action": "command",
           "command": "python run_all_strategies.py",
-          "cwd": "."
+          "cwd": ".",
+          "pinned": true
         },
         {
           "label": "Latest business ideas (May 2026)",
@@ -94,7 +95,8 @@
         {
           "label": "Problem ID tool (local web)",
           "action": "file",
-          "path": "problem_identification_tool/web/index.html"
+          "path": "problem_identification_tool/web/index.html",
+          "pinned": true
         },
         {
           "label": "Problem ID tool — live site",

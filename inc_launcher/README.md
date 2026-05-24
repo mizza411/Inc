@@ -1,6 +1,6 @@
 # Inc Tray Icon Launcher
 
-Windows **tray icon** (notification area) for `C:\dev\Inc`. Right-click the icon for **4 pillars** and quick actions.
+Windows **tray icon** (notification area) for `C:\dev\Inc`. Right-click the icon for **4 pillars** and quick actions. **Left-click** (or choose **Open Inc Hub**) for the super main launcher window.
 
 ## Install
 
@@ -15,7 +15,20 @@ pip install -r requirements.txt
 python tray_app.py
 ```
 
-The icon appears near the clock. **Right-click** for the menu.
+The icon appears near the clock.
+
+| Interaction | Result |
+|-------------|--------|
+| **Left-click** icon | Opens **Inc Hub** window |
+| **Right-click** icon | Tray menu (4 pillars + global actions) |
+| **Open Inc Hub** (menu, default) | Same hub window |
+
+## Inc Hub (Phase 2)
+
+- Left sidebar: same **4 pillars** as the tray menu
+- Main area: launcher **grid** (labels + action type from config)
+- **Pinned** items (`"pinned": true` in config) show at the top
+- **Recently opened** items tracked in `recent_items.json` (local, not committed)
 
 ## Four pillars
 
@@ -30,10 +43,17 @@ Global: Open Inc workspace, task.md, Cursor.
 
 ## Customize
 
-Edit `launcher_config.json` — add pillars or items without changing Python code.
+Edit `launcher_config.json` — add pillars, items, or `"pinned": true` without changing Python code.
 
 Action types: `folder`, `file`, `url`, `command`, `cursor`.
 
-## Phase 2 (planned)
+## Tests
 
-Super main hub window — same 4 pillars as a full launcher UI.
+```powershell
+cd C:\dev\Inc
+python -m pytest inc_launcher/tests -q
+```
+
+## Phase 3 (planned)
+
+Add pillars via config only; optional login startup and single-instance lock.

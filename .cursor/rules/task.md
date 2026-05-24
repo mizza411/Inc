@@ -130,7 +130,7 @@
 ---
 
 ### 4. Inc Tray Icon + Super Main Launcher
-**Status:** Phase 1 complete (tray icon MVP); Phase 2–3 pending  
+**Status:** Phase 2 complete (super main hub); Phase 3 pending  
 **Goal:** Windows **tray icon** (notification area, near the clock) + optional super main hub; all `C:\dev\Inc` entry points organized under **4 pillars** (extensible to 5+ later).  
 **Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`
 
@@ -170,10 +170,22 @@
 - [x] `launcher_config.json` drives menu (no hardcoded paths in code)
 - [x] Global actions: Open `Inc` in Explorer, Open in Cursor, Open `task.md`, Quit
 
-**Phase 2 — Super main app**
-- [ ] Left-click tray icon or menu item opens hub window (same 4-pillar nav)
-- [ ] Launcher grid per pillar (icons/labels from config)
-- [ ] Optional: show last-opened / pinned items
+**Phase 2 — Super main app** ✅
+- [x] Left-click tray icon or menu item opens hub window (same 4-pillar nav)
+- [x] Launcher grid per pillar (icons/labels from config)
+- [x] Optional: show last-opened / pinned items
+
+#### Manual verification (you — do later on your PC)
+
+Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `python -m inc_launcher.tests.smoke_hub` from `C:\dev\Inc`). Complete these **on your machine** before treating Phase 2 as fully signed off:
+
+- [ ] **Start tray app** — `cd C:\dev\Inc\inc_launcher` then `python tray_app.py`; icon appears near the clock
+- [ ] **Left-click tray icon** — Inc Hub window opens (sidebar + launcher cards; no error dialog)
+- [ ] **Pillar switch** — Click **Formulated ideas** in sidebar; **Run all strategies** shows under **Pinned**
+- [ ] **Run a launcher** — Click a card (e.g. opens `task.md` or a folder); target opens in Explorer/default app
+- [ ] **Recently opened** — Re-open Inc Hub; same pillar shows the item under **Recently opened**
+- [ ] **Right-click tray menu** — Menu shows **Open Inc Hub**, four pillar submenus, global actions, **Quit** (no crash)
+- [ ] **Optional: commit Phase 2** — After all above pass, stage/commit/push `inc_launcher/` + `task.md` (not done until you confirm)
 
 **Phase 3 — Scale beyond 4**
 - [ ] Add pillars via config only (e.g. Automation hub, Research)

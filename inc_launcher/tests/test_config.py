@@ -27,3 +27,10 @@ def test_config_items_have_actions():
         for item in pillar.get("items", []):
             assert "action" in item
             assert "label" in item
+
+
+def test_tray_menu_builds():
+    from inc_launcher.tray_app import build_menu
+
+    menu = build_menu(load_config())
+    assert menu is not None
