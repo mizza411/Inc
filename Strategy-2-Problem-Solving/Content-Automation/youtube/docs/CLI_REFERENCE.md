@@ -141,6 +141,16 @@ python main.py go-live --skip-monitor
 
 Report: `exports/launch_status/go_live_*.json`
 
+### `monetization [check|init-metrics] [--metrics path]`
+YouTube Partner Program application readiness (8+ min, high-effort, YPP thresholds).
+
+```powershell
+python main.py monetization init-metrics
+python main.py monetization check
+```
+
+See [MONETIZATION_APPLICATION.md](MONETIZATION_APPLICATION.md)
+
 ### `monitor`
 Checks schedule misses, quality drops, and launch batch failures.
 

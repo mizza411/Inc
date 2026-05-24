@@ -17,6 +17,7 @@ python main.py create "Afrobeats" music
 |-------|-------------|
 | [docs/CLI_REFERENCE.md](docs/CLI_REFERENCE.md) | All `main.py` commands |
 | [docs/LAUNCH_CHECKLIST.md](docs/LAUNCH_CHECKLIST.md) | Pre-launch and go-live steps |
+| [docs/MONETIZATION_APPLICATION.md](docs/MONETIZATION_APPLICATION.md) | YPP application process |
 | [youtube_business_tasks.md](youtube_business_tasks.md) | Project phases and deliverables |
 
 ## Common commands
@@ -26,10 +27,10 @@ python main.py launch --dry-run   # Plan 12 launch videos
 python main.py launch 12          # Create launch batch
 python main.py monitor            # Health alerts
 python main.py test               # Run test suite
-python main.py dashboard          # Analytics HTML
+python main.py monetization check    # YPP readiness
 ```
 
 ## Project status
 
 - **Phase 3:** Complete (trends, performance, schedule, dashboard, research, subtitles, tests)
-- **Phase 4:** Launch prep in progress (see `.cursor/rules/task.md`)
+- **Phase 4:** Complete (launch batch, monitoring, docs, go-live, monetization)

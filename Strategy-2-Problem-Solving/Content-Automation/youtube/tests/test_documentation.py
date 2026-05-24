@@ -8,6 +8,7 @@ REQUIRED_DOCS = [
     ROOT / "README.md",
     ROOT / "docs" / "CLI_REFERENCE.md",
     ROOT / "docs" / "LAUNCH_CHECKLIST.md",
+    ROOT / "docs" / "MONETIZATION_APPLICATION.md",
 ]
 
 
@@ -18,5 +19,5 @@ def test_user_guides_exist():
 
 def test_cli_reference_lists_main_commands():
     text = (ROOT / "docs" / "CLI_REFERENCE.md").read_text(encoding="utf-8")
-    for cmd in ("create", "launch", "monitor", "go-live", "test", "dashboard", "schedule"):
+    for cmd in ("create", "launch", "monitor", "go-live", "monetization", "test", "dashboard", "schedule"):
         assert cmd in text

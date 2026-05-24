@@ -1,0 +1,13 @@
+# Local YouTube channel metrics — update from YouTube Studio weekly
+# Used by: python main.py monetization
+
+{
+  "subscribers": 0,
+  "watch_hours_12mo": 0,
+  "channel_url": "",
+  "adsense_linked": false,
+  "two_factor_enabled": false,
+  "application_submitted": false,
+  "last_updated": null,
+  "notes": "Update subscribers and watch_hours_12mo from YouTube Studio → Analytics"
+}

@@ -27,6 +27,7 @@ from core.subtitle_generator import SubtitleGenerator
 from core.launch_batch import LaunchBatchRunner
 from core.pipeline_monitor import PipelineMonitor
 from core.launch_controller import LaunchController
+from database.monetization_checker import MonetizationChecker
 from config.settings import Settings
 
 
@@ -457,6 +458,36 @@ def main():
             print(f"  Performance export: {report.performance_export}")
             print(f"  Schedule slots: {report.schedule_slots_planned}")
             print(f"  Launch report: {report.export_path}")
+        elif command == "monetization":
+            sub = sys.argv[2].lower() if len(sys.argv) > 2 else "check"
+            metrics_path = None
+            for i, arg in enumerate(sys.argv[2:], 2):
+                if arg == "--metrics" and i + 1 < len(sys.argv):
+                    metrics_path = sys.argv[i + 1]
+            checker = MonetizationChecker(
+                metrics_path=metrics_path or None,
+            )
+            if sub == "init-metrics":
+                path = checker.init_metrics_template()
+                print(f"Metrics template created: {path}")
+                print("  Update subscribers and watch_hours_12mo from YouTube Studio")
+            else:
+                report = checker.assess()
+                status = "READY TO APPLY" if report.ready_to_apply else "NOT READY"
+                print(f"Monetization application: {status}")
+                print(f"  System ready: {report.system_ready}")
+                print(f"  Content eligible: {report.content_eligible_count} video(s)")
+                print(f"  YPP thresholds: {report.channel_metrics.get('subscribers', 0)}/{1000} subs, "
+                      f"{report.channel_metrics.get('watch_hours_12mo', 0)}/{4000} hrs")
+                print(f"  Report: {report.export_path}")
+                for step in report.application_steps:
+                    mark = "x" if step["completed"] else " "
+                    print(f"  [{mark}] {step['step']}. {step['label']}")
+                if report.blockers:
+                    print("  Blockers:")
+                    for b in report.blockers[:8]:
+                        print(f"    - {b}")
+            checker.close()
         elif command == "report":
             export_path = sys.argv[2] if len(sys.argv) > 2 else "reports"
             report_path = system.export_system_report(export_path)
@@ -590,7 +621,7 @@ def main():
         else:
             print(
                 "Unknown command. Available: demo, status, create, batch, report, "
-                "trends, performance, schedule, dashboard, research, subtitles, test, launch, monitor, go-live"
+                "trends, performance, schedule, dashboard, research, subtitles, test, launch, monitor, go-live, monetization"
             )
     else:
         # Interactive mode
@@ -602,6 +633,7 @@ def main():
         print("  launch [count] [--dry-run] - Launch content batch, 10+ videos (Phase 4.2)")
         print("  monitor - Check alerts: schedule misses, quality drops, pipeline failures (Phase 4.3)")
         print("  go-live [--skip-monitor] [--no-schedule] - Launch system + dashboard/performance snapshot (Phase 4.5)")
+        print("  monetization [check|init-metrics] - YPP application readiness (Phase 4.6)")
         print("  report  - Export system report")
         print("  trends  - Run trending topic analysis (Phase 3.1)")
         print("  performance - Show/export performance summary (Phase 3.2)")
