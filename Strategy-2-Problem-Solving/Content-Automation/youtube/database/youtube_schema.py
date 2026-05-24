@@ -610,6 +610,93 @@ class YouTubeDatabase:
         except Exception as e:
             logger.error("Error getting content quality summary: %s", e)
             raise
+
+    def insert_schedule_item(self, item: Dict[str, Any]) -> int:
+        """Insert a row into content_schedule."""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(
+                """
+                INSERT INTO content_schedule (
+                    scheduled_date, content_niche, topic_title, trending_topic_id,
+                    target_duration_minutes, priority_level, status,
+                    assigned_automation_workflow, estimated_completion_time
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    item.get("scheduled_date"),
+                    item.get("content_niche", "general"),
+                    item.get("topic_title"),
+                    item.get("trending_topic_id"),
+                    item.get("target_duration_minutes", 8),
+                    item.get("priority_level", "normal"),
+                    item.get("status", "planned"),
+                    item.get("assigned_automation_workflow", "create_complete_video"),
+                    item.get("estimated_completion_time"),
+                ),
+            )
+            row_id = cursor.lastrowid
+            self.connection.commit()
+            return row_id
+        except Exception as e:
+            logger.error("Error inserting schedule item: %s", e)
+            raise
+
+    def list_schedule(
+        self,
+        status: Optional[str] = None,
+        from_date: Optional[str] = None,
+        to_date: Optional[str] = None,
+        limit: int = 50,
+    ) -> List[Dict]:
+        """List scheduled content items."""
+        try:
+            cursor = self.connection.cursor()
+            query = """
+                SELECT id, scheduled_date, content_niche, topic_title, status,
+                       target_duration_minutes, priority_level, created_at
+                FROM content_schedule
+                WHERE 1=1
+            """
+            params: List[Any] = []
+            if status:
+                query += " AND status = ?"
+                params.append(status)
+            if from_date:
+                query += " AND scheduled_date >= ?"
+                params.append(from_date)
+            if to_date:
+                query += " AND scheduled_date <= ?"
+                params.append(to_date)
+            query += " ORDER BY scheduled_date ASC, id ASC LIMIT ?"
+            params.append(limit)
+            cursor.execute(query, params)
+            return [dict(row) for row in cursor.fetchall()]
+        except Exception as e:
+            logger.error("Error listing schedule: %s", e)
+            raise
+
+    def get_due_schedule_items(self, for_date: Optional[str] = None) -> List[Dict]:
+        """Return planned items scheduled on or before the given date (default today)."""
+        target = for_date or date.today().isoformat()
+        return self.list_schedule(status="planned", to_date=target)
+
+    def update_schedule_status(self, schedule_id: int, status: str) -> None:
+        """Update status for a schedule row."""
+        try:
+            cursor = self.connection.cursor()
+            cursor.execute(
+                """
+                UPDATE content_schedule
+                SET status = ?, updated_at = CURRENT_TIMESTAMP
+                WHERE id = ?
+                """,
+                (status, schedule_id),
+            )
+            self.connection.commit()
+        except Exception as e:
+            logger.error("Error updating schedule status: %s", e)
+            raise
     
     def get_top_performing_videos(self, limit: int = 10) -> List[Dict]:
         """Get top performing videos based on views"""

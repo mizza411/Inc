@@ -4,6 +4,7 @@ Main entry point that integrates all components for automated video creation
 """
 
 import json
+import re
 import sys
 import os
 from datetime import datetime
@@ -19,7 +20,13 @@ from core.topic_analyzer import TrendingTopicAnalyzer
 from core.script_generator import ScriptGenerator
 from core.video_assembler import VideoAssembler
 from core.performance_tracker import ContentPerformanceTracker
+from core.content_scheduler import ContentScheduler
 from config.settings import Settings
+
+
+def _parse_uploads_per_week(freq: str) -> int:
+    match = re.search(r"(\d+)", freq or "")
+    return int(match.group(1)) if match else 3
 
 class YouTubeBusinessSystem:
     """
@@ -36,6 +43,11 @@ class YouTubeBusinessSystem:
         self.script_generator = ScriptGenerator()
         self.video_assembler = VideoAssembler()
         self.performance_tracker = ContentPerformanceTracker()
+        self.content_scheduler = ContentScheduler(
+            topic_analyzer=self.topic_analyzer,
+            uploads_per_week=_parse_uploads_per_week(self.settings.youtube.upload_frequency),
+            target_duration_minutes=self.settings.youtube.video_length_target,
+        )
         
         print("🎥 YouTube Business Automation System Initialized!")
         print(f"Channel: {self.settings.youtube.channel_name}")
@@ -195,6 +207,7 @@ class YouTubeBusinessSystem:
                 "script_generator": "ready",
                 "video_assembler": "ready",
                 "performance_tracker": "ready",
+                "content_scheduler": "ready",
             },
         }
         
@@ -364,9 +377,54 @@ def main():
                         f"  - [{row.get('id')}] {row.get('title')} "
                         f"({row.get('status')}, score={row.get('high_effort_score')})"
                     )
+        elif command == "schedule":
+            sub = sys.argv[2].lower() if len(sys.argv) > 2 else "list"
+            if sub == "plan":
+                days = int(sys.argv[3]) if len(sys.argv) > 3 else 14
+                created = system.content_scheduler.generate_plan(days_ahead=days)
+                export_path = system.content_scheduler.export_plan()
+                print(f"Scheduled {len(created)} slots over {days} days")
+                print(f"Exported: {export_path}")
+                for row in created[:8]:
+                    print(
+                        f"  - {row['scheduled_date']}: {row['topic_title']} "
+                        f"[{row['content_niche']}]"
+                    )
+            elif sub == "list":
+                rows = system.content_scheduler.list_upcoming(limit=20)
+                print(f"Upcoming planned slots: {len(rows)}")
+                for row in rows:
+                    print(
+                        f"  - [{row['id']}] {row['scheduled_date']}: "
+                        f"{row['topic_title']} ({row['status']})"
+                    )
+            elif sub == "run-due":
+                dry_run = "--dry-run" in sys.argv
+                results = system.content_scheduler.run_due(
+                    lambda topic, ctx, mins: system.create_complete_video(
+                        topic, ctx, target_minutes=mins
+                    ),
+                    dry_run=dry_run,
+                )
+                mode = "dry-run" if dry_run else "live"
+                print(f"Processed {len(results)} due slot(s) ({mode})")
+                for row in results:
+                    if dry_run:
+                        print(
+                            f"  - [{row['schedule_id']}] would create: "
+                            f"{row['topic']} ({row['context']})"
+                        )
+                    else:
+                        print(
+                            f"  - [{row['schedule_id']}] {row['topic']} -> "
+                            f"{row['status']}"
+                        )
+            else:
+                print("Usage: schedule plan [days] | schedule list | schedule run-due [--dry-run]")
         else:
             print(
-                "Unknown command. Available: demo, status, create, batch, report, trends, performance"
+                "Unknown command. Available: demo, status, create, batch, report, "
+                "trends, performance, schedule"
             )
     else:
         # Interactive mode
@@ -379,6 +437,9 @@ def main():
         print("  trends  - Run trending topic analysis (Phase 3.1)")
         print("  performance - Show/export performance summary (Phase 3.2)")
         print("  performance import <file.json> - Import YouTube metrics")
+        print("  schedule plan [days] - Generate content calendar from trends")
+        print("  schedule list - Show upcoming planned slots")
+        print("  schedule run-due [--dry-run] - Run due scheduled creations")
         print("\nOr run with command: python main.py <command>")
         
         # Run demo by default
