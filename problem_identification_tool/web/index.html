@@ -4,280 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problem Identification Survey</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-        
-        .progress-bar {
-            background: rgba(255,255,255,0.2);
-            height: 6px;
-            border-radius: 3px;
-            margin-top: 20px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            background: white;
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-        
-        .question-container {
-            padding: 40px;
-        }
-        
-        .question {
-            display: none;
-            animation: fadeIn 0.5s ease-in;
-        }
-        
-        .question.active {
-            display: block;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .question h3 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-            line-height: 1.4;
-        }
-        
-        .options {
-            margin-bottom: 30px;
-        }
-        
-        .option {
-            display: block;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .option:hover {
-            background: #e3f2fd;
-            border-color: #2196f3;
-            transform: translateY(-2px);
-        }
-        
-        .option.selected {
-            background: #e3f2fd;
-            border-color: #2196f3;
-            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
-        }
-        
-        .option input[type="radio"] {
-            margin-right: 10px;
-        }
-        
-        .rating-scale {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-        
-        .rating-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .rating-option:hover {
-            background: #f0f0f0;
-        }
-        
-        .rating-option.selected {
-            background: #e3f2fd;
-            color: #2196f3;
-        }
-        
-        .rating-number {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .rating-label {
-            font-size: 0.8em;
-            text-align: center;
-        }
-        
-        .text-input {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            font-size: 1em;
-            resize: vertical;
-            min-height: 100px;
-            font-family: inherit;
-        }
-        
-        .text-input:focus {
-            outline: none;
-            border-color: #2196f3;
-            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
-        }
-        
-        .button-group {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4);
-        }
-        
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-        
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-        
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-        .completion-message {
-            text-align: center;
-            padding: 40px;
-        }
-        
-        .completion-message h2 {
-            color: #28a745;
-            margin-bottom: 20px;
-        }
-        
-        .completion-message p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .skip-notice {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                margin: 10px;
-                border-radius: 10px;
-            }
-            
-            .question-container {
-                padding: 20px;
-            }
-            
-            .rating-scale {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="questionnaire.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🔍 Problem Identification Survey</h1>
-            <p>Help us understand common challenges and create better solutions</p>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
+        <header class="header">
+            <h1>Problem Identification Survey</h1>
+            <p>Help us understand common challenges so we can build better solutions.</p>
+            <div class="progress-section" role="group" aria-label="Survey progress">
+                <div class="progress-meta">
+                    <span id="progressStepLabel">Question 1 of 1</span>
+                    <span id="progressPercentLabel" aria-hidden="true">0%</span>
+                </div>
+                <div class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="step-dots" id="stepDots" aria-hidden="true"></div>
             </div>
-        </div>
-        
-        <div class="question-container">
-            <form id="questionnaireForm">
-                <!-- Questions will be dynamically loaded here -->
+        </header>
+
+        <main class="question-container">
+            <div id="validationBanner" class="validation-banner" role="alert" hidden></div>
+            <form id="questionnaireForm" novalidate>
+                <!-- Questions loaded by questionnaire.js -->
             </form>
-            
+
             <div class="button-group">
                 <button type="button" id="prevBtn" class="btn btn-secondary" style="display: none;">Previous</button>
+                <span class="nav-hint" id="navHint">Press Enter to continue</span>
                 <button type="button" id="nextBtn" class="btn btn-primary">Next</button>
             </div>
-        </div>
+        </main>
     </div>
 
     <script src="questionnaire.js"></script>
     <script>
-      // Notify parent frame about height for auto-resize when embedded
-      function notifyHeight(){
+      function notifyHeight() {
         const h = document.body.scrollHeight;
-        try { parent.postMessage(JSON.stringify({ type: 'survey:height', height: h }), '*'); } catch(_){}
+        try {
+          parent.postMessage(JSON.stringify({ type: 'survey:height', height: h }), '*');
+        } catch (_) {}
       }
       window.addEventListener('load', notifyHeight);
-      new ResizeObserver(notifyHeight).observe(document.body);
+      if (typeof ResizeObserver !== 'undefined') {
+        new ResizeObserver(notifyHeight).observe(document.body);
+      }
     </script>
 </body>
 </html>

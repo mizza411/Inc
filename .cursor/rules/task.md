@@ -7,11 +7,11 @@
 **Status:** Deployed and operational at https://vermillion-figolla-b9efb8.netlify.app/
 
 #### High Priority - Next Steps (This Week)
-- [ ] **UX Improvements**
-  - [ ] Add progress indicators to questionnaire
-  - [ ] Implement smooth transitions between questions
-  - [ ] Create engaging visual design refresh
-  - [ ] Design intuitive navigation flow
+- [x] **UX Improvements** (Phase 1 — May 2026: `web/questionnaire.css`, step label + dots, transitions, inline validation, keyboard Enter)
+  - [x] Add progress indicators to questionnaire
+  - [x] Implement smooth transitions between questions
+  - [x] Create engaging visual design refresh
+  - [x] Design intuitive navigation flow
 
 - [ ] **Achievement System** (Gamification)
   - [ ] Design achievement badges/rewards

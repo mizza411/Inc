@@ -5,6 +5,8 @@ class QuestionnaireEngine {
         this.responses = {};
         this.questions = [];
         this.totalQuestions = 0;
+        this.startTime = Date.now();
+        this.isTransitioning = false;
         this.init();
     }
 
@@ -98,9 +100,13 @@ class QuestionnaireEngine {
     }
 
     renderQuestion() {
+        this.renderQuestionInner();
+    }
+
+    renderQuestionInner() {
         const form = document.getElementById('questionnaireForm');
         const question = this.questions[this.currentQuestion];
-        
+
         if (!question) {
             this.showCompletion();
             return;
@@ -108,19 +114,44 @@ class QuestionnaireEngine {
 
         form.innerHTML = `
             <div class="question active">
-                <h3>${question.question}</h3>
+                <h3>${this.escapeHtml(question.question)}</h3>
                 <div class="options">
                     ${this.renderQuestionInput(question)}
                 </div>
-                ${question.required ? '' : '<p class="skip-notice">This question is optional</p>'}
+                ${question.required ? '' : '<p class="skip-notice">This question is optional — you can skip with Next</p>'}
             </div>
         `;
 
         this.updateProgress();
         this.updateButtons();
-        
-        // Restore "Other" input state if previously selected
         this.restoreOtherInputState(question);
+        notifyHeightIfEmbedded();
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    async transitionToQuestion(updateIndexFn) {
+        if (this.isTransitioning) return;
+        this.isTransitioning = true;
+
+        const form = document.getElementById('questionnaireForm');
+        const current = form.querySelector('.question');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (current && !reduceMotion) {
+            current.classList.remove('active');
+            current.classList.add('exiting');
+            await new Promise((resolve) => setTimeout(resolve, 200));
+        }
+
+        updateIndexFn();
+        this.clearValidationError();
+        this.renderQuestionInner();
+        this.isTransitioning = false;
     }
 
     restoreOtherInputState(question) {
@@ -173,9 +204,8 @@ class QuestionnaireEngine {
                             type="text" 
                             id="${question.id}_other_text" 
                             name="${question.id}_other" 
-                            class="other-text-input" 
+                            class="other-text-input"
                             placeholder="Enter your answer..."
-                            style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;"
                         >
                     </div>
                 ` : '';
@@ -237,7 +267,61 @@ class QuestionnaireEngine {
         document.addEventListener('click', (e) => {
             if (e.target.closest('.rating-option')) {
                 this.selectRating(e.target.closest('.rating-option'));
+                this.clearValidationError();
             }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key !== 'Enter' || e.shiftKey || this.isTransitioning) return;
+            const tag = document.activeElement?.tagName;
+            if (tag === 'TEXTAREA') return;
+            const nextBtn = document.getElementById('nextBtn');
+            if (nextBtn && !nextBtn.disabled && nextBtn.offsetParent !== null) {
+                e.preventDefault();
+                nextBtn.click();
+            }
+        });
+
+        document.getElementById('questionnaireForm').addEventListener('input', () => {
+            this.clearValidationError();
+        });
+    }
+
+    showValidationError(message) {
+        const banner = document.getElementById('validationBanner');
+        if (!banner) return;
+        banner.textContent = message;
+        banner.hidden = false;
+        banner.classList.add('visible');
+    }
+
+    clearValidationError() {
+        const banner = document.getElementById('validationBanner');
+        if (!banner) return;
+        banner.textContent = '';
+        banner.hidden = true;
+        banner.classList.remove('visible');
+    }
+
+    renderStepDots() {
+        const container = document.getElementById('stepDots');
+        if (!container || this.totalQuestions < 1) return;
+
+        if (container.dataset.built !== '1') {
+            container.innerHTML = '';
+            for (let i = 0; i < this.totalQuestions; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'step-dot';
+                dot.title = `Question ${i + 1}`;
+                container.appendChild(dot);
+            }
+            container.dataset.built = '1';
+        }
+
+        container.querySelectorAll('.step-dot').forEach((dot, index) => {
+            dot.classList.remove('completed', 'current');
+            if (index < this.currentQuestion) dot.classList.add('completed');
+            if (index === this.currentQuestion) dot.classList.add('current');
         });
     }
 
@@ -298,33 +382,32 @@ class QuestionnaireEngine {
         if (question.type === 'multiple_choice') {
             const selected = document.querySelector(`input[name="${questionId}"]:checked`);
             if (!selected) {
-                alert('Please select an option before continuing.');
+                this.showValidationError('Please select an option before continuing.');
                 return false;
             }
-            // If "Other" is selected, require text input
             if (selected.dataset.isOther === 'true') {
                 const otherTextInput = document.getElementById(`${questionId}_other_text`);
                 if (!otherTextInput || !otherTextInput.value.trim()) {
-                    alert('Please specify what "Other" means before continuing.');
-                    if (otherTextInput) {
-                        otherTextInput.focus();
-                    }
+                    this.showValidationError('Please describe what you mean by "Other".');
+                    otherTextInput?.focus();
                     return false;
                 }
             }
         } else if (question.type === 'rating') {
             if (!this.responses[questionId]) {
-                alert('Please select a rating before continuing.');
+                this.showValidationError('Please select a rating on the scale before continuing.');
                 return false;
             }
         } else if (question.type === 'open_text') {
             const textarea = document.querySelector(`textarea[name="${questionId}"]`);
-            if (!textarea.value.trim()) {
-                alert('Please provide a response before continuing.');
+            if (!textarea?.value.trim()) {
+                this.showValidationError('Please enter a short answer before continuing.');
+                textarea?.focus();
                 return false;
             }
         }
 
+        this.clearValidationError();
         return true;
     }
 
@@ -356,8 +439,9 @@ class QuestionnaireEngine {
 
     nextQuestion() {
         if (this.currentQuestion < this.totalQuestions - 1) {
-            this.currentQuestion++;
-            this.renderQuestion();
+            this.transitionToQuestion(() => {
+                this.currentQuestion++;
+            });
         } else {
             this.completeQuestionnaire();
         }
@@ -365,26 +449,44 @@ class QuestionnaireEngine {
 
     previousQuestion() {
         if (this.currentQuestion > 0) {
-            this.currentQuestion--;
-            this.renderQuestion();
+            this.transitionToQuestion(() => {
+                this.currentQuestion--;
+            });
         }
     }
 
     updateProgress() {
-        const progress = ((this.currentQuestion + 1) / this.totalQuestions) * 100;
-        document.getElementById('progressFill').style.width = `${progress}%`;
+        const total = Math.max(this.totalQuestions, 1);
+        const current = this.currentQuestion + 1;
+        const percent = Math.round((current / total) * 100);
+
+        document.getElementById('progressFill').style.width = `${percent}%`;
+
+        const stepLabel = document.getElementById('progressStepLabel');
+        const percentLabel = document.getElementById('progressPercentLabel');
+        if (stepLabel) stepLabel.textContent = `Question ${current} of ${total}`;
+        if (percentLabel) percentLabel.textContent = `${percent}%`;
+
+        const bar = document.getElementById('progressBar');
+        if (bar) {
+            bar.setAttribute('aria-valuenow', String(current));
+            bar.setAttribute('aria-valuemax', String(total));
+        }
+
+        this.renderStepDots();
     }
 
     updateButtons() {
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        
+        const navHint = document.getElementById('navHint');
+
         prevBtn.style.display = this.currentQuestion === 0 ? 'none' : 'block';
-        
-        if (this.currentQuestion === this.totalQuestions - 1) {
-            nextBtn.textContent = 'Complete Survey';
-        } else {
-            nextBtn.textContent = 'Next';
+
+        const isLast = this.currentQuestion === this.totalQuestions - 1;
+        nextBtn.textContent = isLast ? 'Complete Survey' : 'Next';
+        if (navHint) {
+            navHint.textContent = isLast ? 'Press Enter to submit' : 'Press Enter to continue';
         }
     }
 
@@ -444,19 +546,24 @@ class QuestionnaireEngine {
     showCompletion() {
         const form = document.getElementById('questionnaireForm');
         const buttonGroup = document.querySelector('.button-group');
-        
+
+        this.clearValidationError();
         form.innerHTML = `
             <div class="completion-message">
-                <h2>✅ Thank You!</h2>
+                <h2>Thank you!</h2>
                 <p>Your responses have been recorded and will help us understand common challenges better.</p>
-                <p>We appreciate you taking the time to share your insights!</p>
+                <p>We appreciate you taking the time to share your insights.</p>
             </div>
         `;
-        
+
         buttonGroup.style.display = 'none';
-        
-        // Hide progress bar
+
         document.getElementById('progressFill').style.width = '100%';
+        const stepLabel = document.getElementById('progressStepLabel');
+        const percentLabel = document.getElementById('progressPercentLabel');
+        if (stepLabel) stepLabel.textContent = 'Complete';
+        if (percentLabel) percentLabel.textContent = '100%';
+        notifyHeightIfEmbedded();
         
         // NOTE: "View Analytics Dashboard" link is intentionally NOT shown here
         // The dashboard is admin-only and should be accessed directly at:
@@ -474,6 +581,10 @@ class QuestionnaireEngine {
             </div>
         `;
     }
+}
+
+function notifyHeightIfEmbedded() {
+    if (typeof notifyHeight === 'function') notifyHeight();
 }
 
 // Initialize the questionnaire when the page loads
