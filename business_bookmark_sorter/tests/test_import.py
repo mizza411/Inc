@@ -17,10 +17,14 @@ def test_suggest_leads_keyword():
     assert "abuja" in reason.lower() or "lead" in reason.lower()
 
 
-def test_parse_inbox_urls_and_folder():
-    rows = parse_inbox_markdown(
-        Path(__file__).resolve().parent.parent / "Business Links.md"
+def test_parse_inbox_urls_and_folder(tmp_path):
+    inbox = tmp_path / "Business Links.md"
+    inbox.write_text(
+        "https://example.com/inbox\n"
+        "My Business folder label\n",
+        encoding="utf-8",
     )
+    rows = parse_inbox_markdown(inbox)
     assert any(r["type"] == "url" for r in rows)
     assert any(r["type"] == "folder" for r in rows)
 

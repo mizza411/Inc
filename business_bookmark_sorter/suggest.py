@@ -15,9 +15,9 @@ def suggest_destination(entry: Dict[str, Any], config: Dict[str, Any]) -> Tuple[
     destination_id is a key in config.destinations.
     """
     destinations = config.get("destinations", {})
-    default = "inbox"
+    default = "other"
     if entry.get("type") == "folder":
-        return default, "Bookmark folder — review in Chrome first"
+        return default, "Bookmark folder — review in Chrome first (suggested Other)"
 
     haystack = " ".join(
         [
@@ -48,4 +48,4 @@ def suggest_destination(entry: Dict[str, Any], config: Dict[str, Any]) -> Tuple[
         label = destinations.get(best_id, {}).get("label", best_id)
         return best_id, f"Keyword '{best_kw}' → {label}"
 
-    return default, "No keyword match — default to staging inbox"
+    return default, "No keyword match — suggested Other (not forced into a pillar)"

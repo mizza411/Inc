@@ -55,7 +55,10 @@ def build_queue_item(
         "source": source,
         "suggested_destination": dest_id,
         "suggested_reason": reason,
-        "suggested_links_file": dest.get("links_file"),
+        "suggested_links_file": config.get("export", {}).get(
+            "master_links_file",
+            "business_bookmark_sorter/Business Links.md",
+        ),
         "chrome_id": entry.get("chrome_id"),
         "note": entry.get("note"),
         "imported_at": _now(),

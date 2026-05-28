@@ -1,4 +1,20 @@
 {
+  "review": {
+    "auto_export_on_mark": true,
+    "open_docx_on_mark": true
+  },
+  "export": {
+    "master_links_file": "business_bookmark_sorter/Business Links.md"
+  },
+  "export_section_order": [
+    "started",
+    "formulated",
+    "formulation_strategy",
+    "problem_identification",
+    "leads",
+    "automation",
+    "other"
+  ],
   "chrome_filter": {
     "folder_name_contains": ["business"],
     "match_url_or_title": true
@@ -6,43 +22,42 @@
   "destinations": {
     "started": {
       "label": "Business started",
-      "folder": "Started-Businesses",
-      "links_file": "Started-Businesses/links.md"
+      "folder": "Started-Businesses"
     },
     "formulated": {
       "label": "Formulated ideas",
-      "folder": "business_research",
-      "links_file": "business_research/links.md"
+      "folder": "business_research"
     },
     "formulation_strategy": {
       "label": "Idea formulation (strategy folder)",
-      "folder": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction",
-      "links_file": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction/links.md"
+      "folder": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction"
     },
     "problem_identification": {
       "label": "Problem identification",
-      "folder": "problem_identification_tool",
-      "links_file": "problem_identification_tool/links.md"
+      "folder": "problem_identification_tool"
     },
     "leads": {
       "label": "My leads",
-      "folder": "abuja_lead_generator",
-      "links_file": "abuja_lead_generator/links.md"
+      "folder": "abuja_lead_generator"
     },
     "automation": {
       "label": "Automation / content",
-      "folder": "Strategy-2-Problem-Solving/Content-Automation",
-      "links_file": "Strategy-2-Problem-Solving/Content-Automation/links.md"
+      "folder": "Strategy-2-Problem-Solving/Content-Automation"
+    },
+    "other": {
+      "label": "Other",
+      "folder": "business_bookmark_sorter",
+      "assignable": true
     },
     "inbox": {
-      "label": "Staging inbox (not final)",
+      "label": "Staging inbox (legacy)",
       "folder": "business_bookmark_sorter",
-      "links_file": "business_bookmark_sorter/Business Links.md"
+      "assignable": false
     },
     "stay_in_chrome": {
       "label": "Stay in Chrome",
       "folder": null,
-      "links_file": null
+      "assignable": false
     }
   },
   "keyword_rules": [

@@ -27,7 +27,9 @@ from business_bookmark_sorter.queue_store import (
     merge_import,
     next_pending,
 )
-from business_bookmark_sorter.review_actions import apply_file, apply_skip, apply_stay_in_chrome
+from business_bookmark_sorter.export_markdown import export_filed_to_markdown
+from business_bookmark_sorter.file_workflow import file_item
+from business_bookmark_sorter.review_actions import apply_mark_filed, apply_skip, apply_stay_in_chrome
 from business_bookmark_sorter.review_ui import run_review_panel
 
 
@@ -133,7 +135,7 @@ def cmd_review(_args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_file(args: argparse.Namespace) -> int:
+def cmd_mark(args: argparse.Namespace) -> int:
     config = load_routes_config(CONFIG_PATH)
     queue = load_queue()
     item = next_pending(queue) if not args.id else None
@@ -145,9 +147,31 @@ def cmd_file(args: argparse.Namespace) -> int:
         print("No matching item.")
         return 1
     dest = args.dest or item.get("suggested_destination")
-    ok, msg = apply_file(item["id"], dest, config)
-    print(msg)
-    return 0 if ok else 1
+    if args.queue_only:
+        ok, msg = apply_mark_filed(item["id"], dest, config)
+        print(msg)
+        return 0 if ok else 1
+    result = file_item(item["id"], dest, config, open_docx=not args.no_docx)
+    print(result.message)
+    if result.md_path:
+        print(f"  Markdown: {result.md_path}")
+    if result.docx_path:
+        print(f"  Docx: {result.docx_path}")
+    return 0 if result.ok else 1
+
+
+def cmd_file(args: argparse.Namespace) -> int:
+    return cmd_mark(args)
+
+
+def cmd_export_md(_args: argparse.Namespace) -> int:
+    config = load_routes_config(CONFIG_PATH)
+    queue = load_queue()
+    count, paths = export_filed_to_markdown(config, queue)
+    print(f"Exported {count} filed link(s) to master document:")
+    for p in paths:
+        print(f"  - {p}")
+    return 0
 
 
 def cmd_skip(args: argparse.Namespace) -> int:
@@ -195,7 +219,8 @@ def cmd_next(args: argparse.Namespace) -> int:
         print(f"URL:      {item.get('url')}")
     print(f"Folder:   {item.get('folder_path')}")
     print(f"Suggest:  {item.get('suggested_destination')} — {item.get('suggested_reason')}")
-    print(f"Target:   {dest.get('links_file')}")
+    master = config.get("export", {}).get("master_links_file", "business_bookmark_sorter/Business Links.md")
+    print(f"Section:  {dest.get('label')} → {master}")
     if item.get("note"):
         print(f"Note:     {item.get('note')}")
     if args.open and item.get("url"):
@@ -234,10 +259,22 @@ def main(argv: list[str] | None = None) -> int:
     p_rev = sub.add_parser("review", help="Phase 2: floating review panel")
     p_rev.set_defaults(func=cmd_review)
 
-    p_file = sub.add_parser("file", help="File current/next item to destination")
+    p_mark = sub.add_parser("mark", help="File item: queue + export md + open docx (default)")
+    p_mark.add_argument("--dest", required=True, help="Destination id from routes.json")
+    p_mark.add_argument("--id", default="", help="Queue item UUID (default: next pending)")
+    p_mark.add_argument("--queue-only", action="store_true", help="Update queue.json only (no export)")
+    p_mark.add_argument("--no-docx", action="store_true", help="Export markdown but do not open docx")
+    p_mark.set_defaults(func=cmd_mark)
+
+    p_file = sub.add_parser("file", help="Alias for mark")
     p_file.add_argument("--dest", required=True, help="Destination id from routes.json")
     p_file.add_argument("--id", default="", help="Queue item UUID (default: next pending)")
+    p_file.add_argument("--queue-only", action="store_true", help="Update queue.json only (no export)")
+    p_file.add_argument("--no-docx", action="store_true", help="Export markdown but do not open docx")
     p_file.set_defaults(func=cmd_file)
+
+    p_exp = sub.add_parser("export-md", help="Export filed queue items to markdown files")
+    p_exp.set_defaults(func=cmd_export_md)
 
     p_skip = sub.add_parser("skip", help="Skip current/next item")
     p_skip.add_argument("--id", default="")

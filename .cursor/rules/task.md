@@ -198,8 +198,8 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 ---
 
 ### 5. Business Bookmark Sorting (Chrome → Inc folders)
-**Status:** Phase 0–2 implemented; Phase 3 (de-bookmark) pending — **~1937** items in queue  
-**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**).
+**Status:** Phase 0–2b implemented; Phase 3 (de-bookmark) pending — **~1937** items in queue  
+**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**). After Phase 2b, filing one bookmark should mean: **saved in queue, visible in the right markdown, docx open for eyeball check** — then user may delete from Chrome (Phase 3 still manual until built).
 
 #### Problem (what “sorting” means)
 
@@ -262,12 +262,59 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] Suggested destination per item (`keyword_rules` in config)
 
 **Phase 2 — Review UI (minimal manual work)** ✅
-- [x] Tkinter review panel (`python -m business_bookmark_sorter review`) — File / Skip / Stay in Chrome / Open URL
-- [x] On confirm: append to destination `links.md` (`file_link.py`); CLI `file --dest <id>`
+- [x] Tkinter review panel (`python -m business_bookmark_sorter review`) — Mark Filed / Skip / Stay in Chrome / Open URL
+- [x] JSON-first: `queue.json` is source of truth; markdown via **Export Filed to Markdown** (`export-md`)
+- [x] Mark Filed success/error toast (top-right banner)
 - [x] Audit log: `data/actions.log`
 - [x] Startup sync from current Chrome before first item is shown
-- [x] Post-action sync after File/Skip/Stay + `Refresh now` button
+- [x] Post-action sync after Mark Filed/Skip/Stay + `Refresh now` button
 - [x] Missing pending links auto-mark `gone_from_chrome` (prevents stale first item)
+
+**Phase 2b — One-click “File & open doc”** ✅  
+*Replaces separate Mark Filed + Export flow in the UI. CLI `export-md` stays for recovery.*
+
+**User requirement (single button):**
+1. User picks destination → clicks one button (rename from **Mark Filed** → e.g. **File & open doc**).
+2. On success, in order: update `queue.json` (`status: filed`, `filed_destination`, `filed_at`) → export that item’s destination to the correct `links.md` (per `config/routes.json`) → regenerate paired `.docx` from that `.md` → open the `.docx` in Word/default app.
+3. Remove standalone **Export Filed to Markdown** button from review UI once 2b is stable (keep CLI / hidden recovery path).
+4. User expectation: after success toast + doc open, they can **confidently delete the Chrome bookmark** (still manual until Phase 3; no auto-delete in 2b).
+
+**Risks & mitigations (must implement, not optional):**
+
+| Risk | Mitigation |
+|------|------------|
+| Export fails after mark → user deletes bookmark and loses link | **Atomic flow:** if export or docx step fails, show **red toast**, do **not** advance to next item; keep item `filed` only if export succeeded, or roll back to `pending` (pick one policy in code and document in README). |
+| Force-closing Word loses unsaved edits | **Prefer:** save + polite close via COM; if file locked, **abort** with clear message — do not claim “safe to delete.” Never silent `taskkill` on `WINWORD.EXE`. |
+| OneDrive/sync locks `.md` / `.docx` | Catch write errors; retry once with short delay; surface path in error toast. |
+| Full rebuild of all destinations on every click (slow with ~2k filed) | **Destination-scoped export** on each action (rewrite only that destination’s `links.md` + optional summary). Full rebuild only via CLI `export-md` or Shift+recovery. |
+| Wrong doc opened | Open **only** the `links_file` for the chosen destination (e.g. `abuja_lead_generator/links.docx`), not every destination. For `inbox`, use `business_bookmark_sorter/Business Links.md` (+ its docx). |
+| `queue.json` vs markdown drift | Keep **`queue.json` source of truth**; set `exported_at` (and optionally `exported_path`) on item when export succeeds. |
+| DOCX pipeline missing today | New module (e.g. `docx_export.py`); pick tool at kickoff: **Pandoc** (preferred if installed) or **Word COM** on Windows (close/reopen only when needed). |
+
+**Recommendations (include in build):**
+- [x] Config flag `auto_export_on_mark` / `open_docx_on_mark` in `config/routes.json` → `review`
+- [x] Toast copy: destination label + md/docx names or failure reason
+- [x] **Recovery:** Shift+click **File & open doc** = full re-export; CLI `export-md` retained
+- [ ] Optional: append-only fast path later; **v1 = rewrite destination file** for consistency
+- [ ] Manual verification: file one link → see it in opened docx → delete bookmark in Chrome → confirm gone from queue sync only after intentional delete
+
+**Phase 2b tasks:**
+- [x] **2b.1** `export_markdown.py`: `export_destination(dest_id, queue)` — single-destination rewrite; keep `export_filed_to_markdown()` for full rebuild.
+- [x] **2b.2** `review_actions.py`: `revert_filed`, `mark_exported` (`exported_at` / `exported_path`).
+- [x] **2b.3** `docx_export.py` + `file_workflow.py`: md → docx (Pandoc or Word COM); polite close if open; rollback pending on export fail.
+- [x] **2b.4** `review_ui.py`: **File & open doc**; Export button removed; Shift+click = full re-export; no advance on failure.
+- [x] **2b.5** Tests: `test_file_workflow.py`; inbox fixture in `test_import.py`.
+- [x] **2b.6** README + `config/routes.json` `review` settings.
+
+**Layout:** No new folder; modules stay under `business_bookmark_sorter/` (new `docx_export.py`, keep files under ~500 lines).
+
+**Phase 2c — Single master doc + Other category** ✅
+- [x] **One export target:** `business_bookmark_sorter/Business Links.md` (+ one `.docx` opened every time)
+- [x] **Sections** inside master doc = dropdown categories (`## Leads`, `## Other`, …)
+- [x] **Other** in dropdown; auto-suggest **Other** when no keyword match (not forced into a pillar)
+- [x] User may deliberately pick **Other** even when a keyword match exists
+- [x] Legacy `inbox` filings export under **## Other**; `inbox` hidden from dropdown (`assignable: false`)
+- [x] Per-folder `links.md` files no longer written on file/export
 
 **Phase 3 — De-bookmark (optional / on demand)**
 - [ ] After Inc filing: mark for Chrome removal; **manual** checklist export first
@@ -281,6 +328,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 
 - [ ] Import produces expected count vs Chrome business folder
 - [ ] One link filed to `Started-Businesses/` (or chosen folder) and visible in repo
+- [ ] **Phase 2b:** File one item → docx opens with new line → delete Chrome bookmark → link still in docx/queue
 - [ ] “Stay in Chrome” leaves bookmark untouched
 - [ ] De-bookmark step (if enabled) removes only confirmed URLs; backup restores if mistake
 
@@ -290,7 +338,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - Auto-classifying without user confirm (beyond suggestions)
 - Sorting non-business Chrome collections
 
-**Run (from `C:\dev\Inc`):** `import` → `python -m business_bookmark_sorter review` — see `business_bookmark_sorter/README.md`
+**Run (from `C:\dev\Inc`):** `import` → `python -m business_bookmark_sorter review` — see `business_bookmark_sorter/README.md`  
+**After Phase 2b:** one button in review UI; `python -m business_bookmark_sorter export-md` only for full re-export / repair.
 
 ---
 

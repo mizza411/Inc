@@ -1,6 +1,8 @@
 # Business Bookmark Sorter
 
-Sort Chrome **business** bookmarks into the right **Inc** folders (not into `business_bookmark_sorter/Business Links.md` as the final home — that file is staging only).
+Sort Chrome **business** bookmarks into Inc project areas using **`data/queue.json` as the source of truth**.
+
+All filed links export to **one document**: `business_bookmark_sorter/Business Links.md` (and `Business Links.docx` when you file).
 
 ## Phase 0 — Discover
 
@@ -9,26 +11,16 @@ cd C:\dev\Inc
 python -m business_bookmark_sorter discover --dry-run
 ```
 
-Reads Chrome `Bookmarks` JSON (close Chrome first if the file is locked).  
-Report: `business_bookmark_sorter/data/discover_report.json`
-
 ## Phase 1 — Import + queue
 
 ```powershell
-python -m business_bookmark_sorter import --merge-inbox
+python -m business_bookmark_sorter import
 python -m business_bookmark_sorter status
-python -m business_bookmark_sorter list
 python -m business_bookmark_sorter next
-python -m business_bookmark_sorter next --open
 ```
 
-- **import** — Chrome business tree + lines from `business_bookmark_sorter/Business Links.md`
-- **next** — next pending item with **suggested** Inc destination (`config/routes.json`)
-- Filed links (Phase 2) will append to per-destination `links.md` files
-
-## Customize routing
-
-Edit `config/routes.json` — destinations and `keyword_rules`.
+- **import** — loads Chrome business bookmarks into `data/queue.json`
+- Optional legacy inbox merge: plain URLs/lines in `Business Links.md` (import only)
 
 ## Phase 2 — Review panel
 
@@ -36,27 +28,40 @@ Edit `config/routes.json` — destinations and `keyword_rules`.
 python -m business_bookmark_sorter review
 ```
 
-Floating panel (like Batch Link Reviewer):
-
 | Button | Action |
 |--------|--------|
 | **Open URL** | Opens link in browser |
-| **File here** | Appends to destination `links.md`, marks **filed** |
+| **File & open doc** | Filed in queue → rebuild **Business Links.md** (all sections) → open **Business Links.docx** |
 | **Skip** | Skip for now |
-| **Stay in Chrome** | Keep bookmark; mark **stay_in_chrome** |
+| **Stay in Chrome** | Keep bookmark; mark `stay_in_chrome` |
 | **Refresh now** | Re-sync from current Chrome bookmarks |
 
-Sync behavior:
-- On startup, `review` performs a Chrome sync before showing first item.
-- After `File here`, `Skip`, or `Stay in Chrome`, it re-syncs automatically.
-- Missing pending items become `gone_from_chrome` so stale links stop blocking the top.
+**Categories (dropdown):** Business started, Formulated ideas, Idea formulation, Problem identification, My leads, Automation / content, **Other**, Stay in Chrome (separate).
 
-CLI (no UI):
+**Other means:**
+- System could not match keywords → suggested **Other** (not forced into a pillar)
+- You chose **Other** on purpose
+
+**Shift + File & open doc** — full re-export of all filed links into the master doc.
+
+Workflow after success:
+1. Scroll to the **section** you picked (e.g. `## My leads` or `## Other`) in the opened doc.
+2. Confirm the link is there.
+3. Delete the Chrome bookmark manually.
+
+Settings in `config/routes.json`:
+- `export.master_links_file`
+- `export_section_order` — section order in the doc
+- `review.auto_export_on_mark`, `review.open_docx_on_mark`
+
+**Docx:** Pandoc on PATH, or Microsoft Word + `pywin32`.
+
+CLI:
 
 ```powershell
-python -m business_bookmark_sorter file --dest started
-python -m business_bookmark_sorter skip
-python -m business_bookmark_sorter stay
+python -m business_bookmark_sorter mark --dest leads
+python -m business_bookmark_sorter mark --dest other
+python -m business_bookmark_sorter export-md
 ```
 
 Audit log: `data/actions.log` (local, gitignored).
