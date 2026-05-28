@@ -36,8 +36,8 @@
     },
     "inbox": {
       "label": "Staging inbox (not final)",
-      "folder": "Business Links Sort",
-      "links_file": "Business Links Sort/Business Links.md"
+      "folder": "business_bookmark_sorter",
+      "links_file": "business_bookmark_sorter/Business Links.md"
     },
     "stay_in_chrome": {
       "label": "Stay in Chrome",

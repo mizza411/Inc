@@ -137,7 +137,7 @@ def parse_inbox_markdown(path: Path) -> List[Dict[str, Any]]:
                     "type": "url",
                     "title": text[:80],
                     "url": text,
-                    "folder_path": "Business Links Sort / inbox.md",
+                    "folder_path": "business_bookmark_sorter / Business Links.md",
                     "source_hint": "inbox",
                 }
             )
@@ -147,7 +147,7 @@ def parse_inbox_markdown(path: Path) -> List[Dict[str, Any]]:
                     "type": "folder",
                     "title": text,
                     "url": "",
-                    "folder_path": "Business Links Sort / inbox.md",
+                    "folder_path": "business_bookmark_sorter / Business Links.md",
                     "note": "Folder label from inbox — locate in Chrome",
                     "source_hint": "inbox",
                 }

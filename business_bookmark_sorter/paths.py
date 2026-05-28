@@ -11,7 +11,7 @@ CONFIG_PATH = PACKAGE_DIR / "config" / "routes.json"
 DATA_DIR = PACKAGE_DIR / "data"
 QUEUE_PATH = DATA_DIR / "queue.json"
 DISCOVER_PATH = DATA_DIR / "discover_report.json"
-INBOX_MD = INC_ROOT / "Business Links Sort" / "Business Links.md"
+INBOX_MD = INC_ROOT / "business_bookmark_sorter" / "Business Links.md"
 
 
 def default_chrome_bookmarks_path() -> Path:

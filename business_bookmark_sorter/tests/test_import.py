@@ -19,7 +19,7 @@ def test_suggest_leads_keyword():
 
 def test_parse_inbox_urls_and_folder():
     rows = parse_inbox_markdown(
-        Path(__file__).resolve().parent.parent.parent / "Business Links Sort" / "Business Links.md"
+        Path(__file__).resolve().parent.parent / "Business Links.md"
     )
     assert any(r["type"] == "url" for r in rows)
     assert any(r["type"] == "folder" for r in rows)

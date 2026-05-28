@@ -199,7 +199,7 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 
 ### 5. Business Bookmark Sorting (Chrome → Inc folders)
 **Status:** Phase 0–2 implemented; Phase 3 (de-bookmark) pending — **~1937** items in queue  
-**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `Business Links Sort\Business Links.md` (that path is a **temporary inbox only**).
+**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**).
 
 #### Problem (what “sorting” means)
 
@@ -222,7 +222,7 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 | **My leads** | `abuja_lead_generator/` |
 | **Automation / content** | `Strategy-2-Problem-Solving/Content-Automation/` |
 | **Stay in Chrome** | No Inc write; bookmark unchanged |
-| **Inbox (staging)** | `Business Links Sort/` — import queue only, not final home |
+| **Inbox (staging)** | `business_bookmark_sorter/Business Links.md` — import queue only, not final home |
 
 Final link storage format (per-destination `.md` link lists vs `links.json` registry) — **decide in Phase 1**.
 
@@ -235,17 +235,17 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 
 #### Layout (proposed — approve before creating files)
 
-**Recommendation:** New folder `business_bookmark_sorter/` at repo root (or extend `Business Links Sort/` with scripts subfolder — prefer **`business_bookmark_sorter/`** to keep inbox separate from tooling).
+**Recommendation:** Use `business_bookmark_sorter/` at repo root; keep inbox at `business_bookmark_sorter/Business Links.md`.
 
 | Signal | Why |
 |--------|-----|
 | Chrome import + review queue + routing rules | Own module, not `inc_launcher` |
 | May reuse extension pattern from Batch Link Reviewer | Separate `chrome/` subfolder or fork |
-| Staging inbox stays `Business Links Sort/` | User already started there |
+| Staging inbox stays in sorter folder | Simpler references and one-tool ownership |
 
 **Layout checklist:**
 - [x] `business_bookmark_sorter/` — CLI, config (`routes.json`), queue (`data/queue.json`)
-- [x] `Business Links Sort/` — inbox only (`Business Links.md`)
+- [x] `business_bookmark_sorter/Business Links.md` — inbox only
 - [ ] Optional: thin Chrome extension + local server (Batch Link Reviewer pattern)
 - [x] Long-term store = per-destination `links.md` (Phase 2), not `Business Links.md` alone
 

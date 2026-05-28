@@ -1,6 +1,6 @@
 # Business Bookmark Sorter
 
-Sort Chrome **business** bookmarks into the right **Inc** folders (not into `Business Links Sort/Business Links.md` as the final home — that file is staging only).
+Sort Chrome **business** bookmarks into the right **Inc** folders (not into `business_bookmark_sorter/Business Links.md` as the final home — that file is staging only).
 
 ## Phase 0 — Discover
 
@@ -22,7 +22,7 @@ python -m business_bookmark_sorter next
 python -m business_bookmark_sorter next --open
 ```
 
-- **import** — Chrome business tree + lines from `Business Links Sort/Business Links.md`
+- **import** — Chrome business tree + lines from `business_bookmark_sorter/Business Links.md`
 - **next** — next pending item with **suggested** Inc destination (`config/routes.json`)
 - Filed links (Phase 2) will append to per-destination `links.md` files
 

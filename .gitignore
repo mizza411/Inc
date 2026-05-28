@@ -51,3 +51,6 @@ problem_identification_tool/data/*.csv
 
 # Logs
 *.log 
+
+# Local bookmark inbox file
+business_bookmark_sorter/Business Links.md
