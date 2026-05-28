@@ -52,5 +52,11 @@ problem_identification_tool/data/*.csv
 # Logs
 *.log 
 
-# Local bookmark inbox file
+# Business bookmark sorter — local/personal data (never commit)
+business_bookmark_sorter/data/**
+!business_bookmark_sorter/data/.gitignore
+!business_bookmark_sorter/data/README.md
 business_bookmark_sorter/Business Links.md
+business_bookmark_sorter/Business Links.docx
+business_bookmark_sorter/~$*
+business_bookmark_sorter/*.docx
