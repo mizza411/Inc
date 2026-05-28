@@ -1,0 +1,56 @@
+{
+  "chrome_filter": {
+    "folder_name_contains": ["business"],
+    "match_url_or_title": true
+  },
+  "destinations": {
+    "started": {
+      "label": "Business started",
+      "folder": "Started-Businesses",
+      "links_file": "Started-Businesses/links.md"
+    },
+    "formulated": {
+      "label": "Formulated ideas",
+      "folder": "business_research",
+      "links_file": "business_research/links.md"
+    },
+    "formulation_strategy": {
+      "label": "Idea formulation (strategy folder)",
+      "folder": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction",
+      "links_file": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction/links.md"
+    },
+    "problem_identification": {
+      "label": "Problem identification",
+      "folder": "problem_identification_tool",
+      "links_file": "problem_identification_tool/links.md"
+    },
+    "leads": {
+      "label": "My leads",
+      "folder": "abuja_lead_generator",
+      "links_file": "abuja_lead_generator/links.md"
+    },
+    "automation": {
+      "label": "Automation / content",
+      "folder": "Strategy-2-Problem-Solving/Content-Automation",
+      "links_file": "Strategy-2-Problem-Solving/Content-Automation/links.md"
+    },
+    "inbox": {
+      "label": "Staging inbox (not final)",
+      "folder": "Business Links Sort",
+      "links_file": "Business Links Sort/Business Links.md"
+    },
+    "stay_in_chrome": {
+      "label": "Stay in Chrome",
+      "folder": null,
+      "links_file": null
+    }
+  },
+  "keyword_rules": [
+    { "destination": "leads", "keywords": ["lead", "abuja", "outreach"] },
+    { "destination": "problem_identification", "keywords": ["problem", "questionnaire", "problem_finder"] },
+    { "destination": "automation", "keywords": ["youtube", "content-automation", "netlify"] },
+    { "destination": "formulation_strategy", "keywords": ["formulation", "strategy-", "news_problems", "business-idea"] },
+    { "destination": "formulated", "keywords": ["business_ideas", "past_business", "business_research", "crunchbase"] },
+    { "destination": "started", "keywords": ["started-business", "software-development", "gadget-business"] }
+  ]
+}

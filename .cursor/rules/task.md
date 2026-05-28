@@ -197,6 +197,103 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 
 ---
 
+### 5. Business Bookmark Sorting (Chrome → Inc folders)
+**Status:** Phase 0–2 implemented; Phase 3 (de-bookmark) pending — **~1937** items in queue  
+**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `Business Links Sort\Business Links.md` (that path is a **temporary inbox only**).
+
+#### Problem (what “sorting” means)
+
+| Decision per item | Action |
+|-------------------|--------|
+| **Belongs in Inc** | Write link (or note) into the right Inc destination (see taxonomy below), then **remove from Chrome bookmarks** (manual preferred; optional automation later if volume is stressful). |
+| **Does not belong in Inc** | **Leave in Chrome** (personal, other projects, out of scope). |
+
+**Hard cases:** Some Chrome entries are **folders** (e.g. `Google Go Voice Listen - Business..`) containing more bookmarks — workflow must expand folders, not only flat URLs.
+
+**Source of truth for import:** Chrome profile `Bookmarks` JSON (typical: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Bookmarks`), not the `chrome://` UI (not automatable as a page).
+
+#### Destination taxonomy (Inc — align with launcher pillars)
+
+| Category | Example Inc destinations |
+|----------|---------------------------|
+| **Business started** | `Started-Businesses/`, live ops folders |
+| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `business_ideas_*.md`, `past_business_ideas.md` |
+| **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
+| **My leads** | `abuja_lead_generator/` |
+| **Automation / content** | `Strategy-2-Problem-Solving/Content-Automation/` |
+| **Stay in Chrome** | No Inc write; bookmark unchanged |
+| **Inbox (staging)** | `Business Links Sort/` — import queue only, not final home |
+
+Final link storage format (per-destination `.md` link lists vs `links.json` registry) — **decide in Phase 1**.
+
+#### Existing tools (outside Inc — reuse assessment)
+
+| Tool | Location | Fit |
+|------|----------|-----|
+| **Batch Link Reviewer** | `...\JavaScript Programming - Learning et al\` — Chrome extension + `scripts/links-cli.js` | **Strong UX** (Open Next / Reviewed / Skip / Delete / Pause banner). Built for JS learning links; needs Inc categories + Chrome business import. |
+| **Saved Links Organizer** | `...\Digi\saved_links_organizer\` — `organizer/chrome_bookmarks.py`, `import_chrome` | **Strong import** of Chrome `Bookmarks` JSON; different product (Reddit queue). Borrow parser/import patterns. |
+
+#### Layout (proposed — approve before creating files)
+
+**Recommendation:** New folder `business_bookmark_sorter/` at repo root (or extend `Business Links Sort/` with scripts subfolder — prefer **`business_bookmark_sorter/`** to keep inbox separate from tooling).
+
+| Signal | Why |
+|--------|-----|
+| Chrome import + review queue + routing rules | Own module, not `inc_launcher` |
+| May reuse extension pattern from Batch Link Reviewer | Separate `chrome/` subfolder or fork |
+| Staging inbox stays `Business Links Sort/` | User already started there |
+
+**Layout checklist:**
+- [x] `business_bookmark_sorter/` — CLI, config (`routes.json`), queue (`data/queue.json`)
+- [x] `Business Links Sort/` — inbox only (`Business Links.md`)
+- [ ] Optional: thin Chrome extension + local server (Batch Link Reviewer pattern)
+- [x] Long-term store = per-destination `links.md` (Phase 2), not `Business Links.md` alone
+
+#### Phases
+
+**Phase 0 — Discovery** ✅
+- [x] Export/count business bookmarks from Chrome `Bookmarks` JSON (`python -m business_bookmark_sorter discover`)
+- [x] Route taxonomy in `business_bookmark_sorter/config/routes.json` (edit as needed)
+- [x] Batch Link Reviewer path noted in `data/discover_report.json` for Phase 2 reuse
+
+**Phase 1 — Import + queue (MVP)** ✅
+- [x] Import business tree + inbox into `data/queue.json` (`python -m business_bookmark_sorter import`)
+- [x] CLI: `status`, `list`, `next` (`--open` opens URL)
+- [x] Suggested destination per item (`keyword_rules` in config)
+
+**Phase 2 — Review UI (minimal manual work)** ✅
+- [x] Tkinter review panel (`python -m business_bookmark_sorter review`) — File / Skip / Stay in Chrome / Open URL
+- [x] On confirm: append to destination `links.md` (`file_link.py`); CLI `file --dest <id>`
+- [x] Audit log: `data/actions.log`
+- [x] Startup sync from current Chrome before first item is shown
+- [x] Post-action sync after File/Skip/Stay + `Refresh now` button
+- [x] Missing pending links auto-mark `gone_from_chrome` (prevents stale first item)
+
+**Phase 3 — De-bookmark (optional / on demand)**
+- [ ] After Inc filing: mark for Chrome removal; **manual** checklist export first
+- [ ] Optional automation: update Chrome `Bookmarks` JSON (backup first; Chrome closed) or extension delete API
+- [ ] Never delete from Chrome without explicit user action or setting
+
+**Phase 4 — Inc launcher integration (optional)**
+- [ ] Add **Business bookmark sorter** item under Formulated ideas or new pillar in `inc_launcher/launcher_config.json`
+
+#### Manual verification (after build)
+
+- [ ] Import produces expected count vs Chrome business folder
+- [ ] One link filed to `Started-Businesses/` (or chosen folder) and visible in repo
+- [ ] “Stay in Chrome” leaves bookmark untouched
+- [ ] De-bookmark step (if enabled) removes only confirmed URLs; backup restores if mistake
+
+#### Out of scope (unless added later)
+
+- Syncing with Google account cloud bookmarks beyond local profile file
+- Auto-classifying without user confirm (beyond suggestions)
+- Sorting non-business Chrome collections
+
+**Run (from `C:\dev\Inc`):** `import` → `python -m business_bookmark_sorter review` — see `business_bookmark_sorter/README.md`
+
+---
+
 ## 📋 General Maintenance Tasks
 
 - [ ] Set up Git version control for Problem Identification Tool
