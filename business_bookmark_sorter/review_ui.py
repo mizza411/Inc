@@ -12,6 +12,8 @@ import webbrowser
 
 from tkinter import font as tkfont
 
+from tkinter import messagebox
+
 from tkinter import ttk
 
 from typing import Any, Dict, List, Optional
@@ -38,7 +40,7 @@ from business_bookmark_sorter.queue_store import (
 
 )
 
-from business_bookmark_sorter.review_actions import apply_skip, apply_stay_in_chrome
+from business_bookmark_sorter.review_actions import apply_skip, apply_stay_in_chrome, find_item
 from business_bookmark_sorter.ui_tooltips import bind_tooltip
 
 
@@ -237,6 +239,20 @@ class ReviewPanel:
             "Shift+click: re-export all filed links without filing the current item.",
         )
 
+        self._removal_btn = tk.Button(
+            btn_row,
+            text="Bookmark removed — next",
+            command=self._advance_after_removal,
+            width=18,
+            bg="#5cb85c",
+            fg="white",
+        )
+        bind_tooltip(
+            self._removal_btn,
+            "You filed this link but have not confirmed Chrome removal yet. "
+            "Delete the bookmark in Chrome, then click here to go to the next item.",
+        )
+
         skip_btn = tk.Button(btn_row, text="Skip", command=self._skip, width=8)
         skip_btn.pack(side="left", padx=3)
         bind_tooltip(
@@ -415,65 +431,75 @@ class ReviewPanel:
 
 
 
-    def _load_current(self) -> None:
-
-        queue = load_queue()
-
+    def _update_stats_bar(self, queue: Dict[str, Any]) -> None:
         counts = count_by_status(queue)
-
         pending = counts.get("pending", 0)
-
         self._stats.configure(
-
             text=f"Pending: {pending} | Filed: {counts.get('filed', 0)} | "
-
             f"Stay in Chrome: {counts.get('stay_in_chrome', 0)} | Skipped: {counts.get('skipped', 0)} | "
-
             f"Gone: {counts.get('gone_from_chrome', 0)}"
-
         )
-
         self._sync_label.configure(text=f"Last synced: {self._last_sync or 'not yet'}")
 
-
-
-        item = next_pending(queue)
-
+    def _display_item(self, item: Dict[str, Any], *, extra_note: str = "") -> None:
         self._item = item
-
-        if not item:
-
-            self._title.configure(text="All pending items reviewed.")
-
-            self._url.configure(text="")
-
-            self._folder.configure(text="")
-
-            self._suggest.configure(text="")
-
-            self._note.configure(text="")
-
-            return
-
-
-
         self._title.configure(text=item.get("title", "(no title)"))
-
         url = item.get("url") or "(folder — open in Chrome)"
-
         self._url.configure(text=url)
-
         self._folder.configure(text=f"Chrome path: {item.get('folder_path', '')}")
+        filed = item.get("status") == "filed"
+        if filed:
+            dest = item.get("filed_destination", "")
+            label = self.config.get("destinations", {}).get(dest, {}).get("label", dest)
+            self._suggest.configure(text=f"Filed → {label}")
+        else:
+            self._suggest.configure(
+                text=f"Suggest: {item.get('suggested_destination')} — {item.get('suggested_reason', '')}"
+            )
+        note = item.get("note") or ""
+        if extra_note:
+            note = f"{extra_note}\n{note}".strip() if note else extra_note
+        self._note.configure(text=note)
+        dest_pick = item.get("filed_destination") or item.get("suggested_destination", self.dest_ids[0])
+        self._set_combo_dest(dest_pick)
 
-        self._suggest.configure(
+    def _show_removal_continue(self, show: bool) -> None:
+        if show:
+            self._removal_btn.pack(side="left", padx=3, after=self._file_btn)
+        else:
+            self._removal_btn.pack_forget()
 
-            text=f"Suggest: {item.get('suggested_destination')} — {item.get('suggested_reason', '')}"
-
+    def _ask_bookmark_removed(self, title: str) -> bool:
+        short = (title or "this bookmark")[:100]
+        return messagebox.askyesno(
+            "Remove bookmark from Chrome?",
+            f"Have you removed this bookmark from Chrome?\n\n{short}\n\n"
+            "Yes = removed — go to next link\n"
+            "No = not yet — stay on this link",
+            parent=self.root,
+            default=messagebox.NO,
+            icon="question",
         )
 
-        self._note.configure(text=item.get("note") or "")
+    def _advance_after_removal(self) -> None:
+        self._show_removal_continue(False)
+        self._sync_queue(startup=False)
+        self._load_current()
 
-        self._set_combo_dest(item.get("suggested_destination", self.dest_ids[0]))
+    def _load_current(self) -> None:
+        self._show_removal_continue(False)
+        queue = load_queue()
+        self._update_stats_bar(queue)
+        item = next_pending(queue)
+        if not item:
+            self._item = None
+            self._title.configure(text="All pending items reviewed.")
+            self._url.configure(text="")
+            self._folder.configure(text="")
+            self._suggest.configure(text="")
+            self._note.configure(text="")
+            return
+        self._display_item(item)
 
 
 
@@ -522,22 +548,29 @@ class ReviewPanel:
             docx_name = result.docx_path.name if result.docx_path else ""
 
             self._show_toast(
-
                 "Filed & exported",
-
                 f"Section: {result.destination_label}\n{md_name}"
-
-                + (f"\nOpened {docx_name}" if docx_name else "")
-
-                + "\nFind link under that heading — then safe to delete bookmark.",
-
+                + (f"\nOpened {docx_name}" if docx_name else ""),
                 success=True,
-
             )
-
-            self._sync_queue(startup=False)
-
-            self._load_current()
+            filed_id = item["id"]
+            queue = load_queue()
+            filed_item = find_item(queue, filed_id) or item
+            self._update_stats_bar(queue)
+            self._display_item(filed_item)
+            if self._ask_bookmark_removed(filed_item.get("title", "")):
+                self._advance_after_removal()
+            else:
+                self._show_removal_continue(True)
+                self._display_item(
+                    filed_item,
+                    extra_note="Remove this bookmark in Chrome, then click "
+                    '"Bookmark removed — next" or file again and choose Yes.',
+                )
+                self._status_msg.configure(
+                    text="Waiting for Chrome removal — staying on this link.",
+                    fg="#a60",
+                )
 
         else:
 

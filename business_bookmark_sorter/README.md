@@ -47,7 +47,8 @@ python -m business_bookmark_sorter review
 Workflow after success:
 1. Scroll to the **section** you picked (e.g. `## My leads` or `## Other`) in the opened doc.
 2. Confirm the link is there.
-3. Delete the Chrome bookmark manually.
+3. Delete the Chrome bookmark in Chrome.
+4. Answer **Yes** in the dialog (or click **Bookmark removed — next**) to move to the next link.
 
 Settings in `config/routes.json`:
 - `export.master_links_file`
