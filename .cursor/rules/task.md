@@ -296,7 +296,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] Toast copy: destination label + md/docx names or failure reason
 - [x] **Recovery:** Shift+click **File & open doc** = full re-export; CLI `export-md` retained
 - [ ] Optional: append-only fast path later; **v1 = rewrite destination file** for consistency
-- [ ] Manual verification: file one link → see it in opened docx → delete bookmark in Chrome → confirm gone from queue sync only after intentional delete
+- [ ] Manual verification: file one link → see it in opened docx → delete bookmark in Chrome → confirm removal dialog → next link
+- [x] Post-file dialog: “Have you removed bookmark from Chrome?” — Yes = next; No = stay + **Bookmark removed — next** button
 
 **Phase 2b tasks:**
 - [x] **2b.1** `export_markdown.py`: `export_destination(dest_id, queue)` — single-destination rewrite; keep `export_filed_to_markdown()` for full rebuild.
@@ -340,6 +341,128 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 
 **Run (from `C:\dev\Inc`):** `import` → `python -m business_bookmark_sorter review` — see `business_bookmark_sorter/README.md`  
 **After Phase 2b:** one button in review UI; `python -m business_bookmark_sorter export-md` only for full re-export / repair.
+
+---
+
+### 6. Abuja PropTech B2B — Verify-Ops (Phase 1)
+**Status:** Research complete (B2B pivot) — **implementation not started**  
+**Goal:** **B2B verify-ops infrastructure** for FCT intermediaries — agents, Kuje/Lugbe developers, law firms submit plots via partner portal; you orchestrate AGIS + lawyer/surveyor → **48h white-label PDF** (**₦35k–₦50k**/report wholesale). **End-buyers are their clients, not yours.**  
+**Folder:** `Abuja-Real-Estate-Research/` (research); build TBD under `abuja_land_verify/` or similar when kickoff  
+**Spec:** [abuja-real-estate-profitable-sub-niches.md](../Abuja-Real-Estate-Research/abuja-real-estate-profitable-sub-niches.md) §3.10 · §6  
+**GTM:** `abuja_lead_generator/` → **paying B2B accounts** (agents + developers), not diaspora retail  
+**Later phases (defer):** broker comps dashboard (Phase 2), white-label PM module (Phase 3), `titletrail.ng` escrow (Phase Later); NLRDTP/AGIS API as partnership narrative only — not v1 product
+
+#### Phase 1 — B2B verify-ops portal (target: first **paying partner account** by **Day 21** from kickoff)
+
+**Week 1 — Partners, portal & contracts**
+- [ ] Sign MOU with **1 FCT property lawyer** + **1 licensed surveyor** (per-report fees or rev share)
+- [ ] CAC registration — **B2B PropTech / verification ops** (not brokerage; not consumer-facing brand)
+- [ ] Partner portal MVP: login, case submit (district, plot #, file #, uploads), case status
+- [ ] White-label PDF report template (Proceed / Conditions / Do not proceed) + partner branding option
+- [ ] B2B pricing sheet: **₦35k–₦50k**/report wholesale; 10-report pack discount
+- [ ] Partner agreement: wholesale terms, white-label rights, SLA, liability disclaimer
+
+**Week 2 — Pilot partners (not end-users)**
+- [ ] Onboard **2 pilot B2B partners** (1 agent + 1 Kuje/Lugbe developer) — **free** pilot cases for testimonial
+- [ ] T&Cs: not legal advice; 48h SLA; AGIS human-in-the-loop; no implied govt endorsement
+- [ ] NDPA: minimal PII; delete uploads after 12 months unless partner opts in
+
+**Week 3–4 — Paid B2B GTM**
+- [ ] `abuja_lead_generator`: outreach → Abuja agents + Kuje/Lugbe developers as **subscription/wholesale customers**
+- [ ] **Target:** 3 paying partner accounts + 10 wholesale reports in 30 days
+- [ ] **Explicitly out:** B2C Paystack checkout, diaspora WhatsApp/Facebook campaigns, retail ₦75k pricing
+
+**v1 corridors only:** Kuje, Lugbe, Lokogoma, outer Gwarinpa estates
+
+#### 90-day success metrics
+- [ ] ≥5 active B2B partner accounts
+- [ ] ≥25 wholesale reports completed
+- [ ] Avg turnaround ≤48h
+- [ ] ≥2 anchor partners (agent or dev) each doing ≥3 reports/month
+- [ ] Partner churn <20% in first 90 days
+
+#### Out of scope (v1)
+- B2C verify concierge / end-user sales
+- AGIS API / NLRDTP product integration
+- Escrow or holding funds for land purchase
+- Nationwide coverage; broker comps (Phase 2); white-label PM (Phase 3)
+
+**Budget:** ₦500k–₦1.5M (CAC, domain, portal build, ops float, subsidized pilot cases)
+
+---
+
+### 7. Post-Wedding Comms Pack (Wedding — B2C digital)
+**Status:** P0 complete — **P1 & Phase 0b not started**  
+**Goal:** WhatsApp-first **post-wedding comms** for couples — AI-drafted guest thank-yous (gift/spray-aware), vendor wrap-up, checklist — **one-time B2C fee**; no MC/planner SaaS.  
+**Folder:** `Strategy-2-Problem-Solving/post-wedding-comms-pack/` — run: `python -m streamlit run app.py` from that folder  
+**Spec:** [post-wedding-comms-pack.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack.md) · [README](../Strategy-2-Problem-Solving/post-wedding-comms-pack/README.md) · [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md)  
+**Related (defer):** [wedding-games-icebreakers-app.md](../Strategy-2-Problem-Solving/wedding-games-icebreakers-app.md) — guest link feeds comms import in Phase 3 (P2)
+
+> **Phased plan:** Already defined in spec + folder README (P0/P1/P2). This section mirrors that in `task.md` for execution tracking — **not a duplicate doc**; tick here as you ship.
+
+#### v1 definition of done (locked)
+
+| Milestone | Includes | Manual UI (`MANUAL_TEST.md`) | Ship meaning |
+|-----------|----------|------------------------------|--------------|
+| **v0.5 — P0 code** | Phase 0 ✅ + Phase 1 (P0) ✅ + `test_p0_flow.py` green | **Do not run** | Agent-only; not user-facing launch |
+| **v1.0 — soft launch** | v0.5 + **Phase 0b go** (≥2 couples WTP ₦10k–20k Wizard-of-Oz) | **P0 sections only** | Couples pay manually; copy-to-WhatsApp export; no Paystack required |
+| **v1 — launch-ready** | v1.0 + **Phase 2 (P1) Paystack** one-time unlock per wedding | **P0 + P1 sections** | Self-serve paid product; hosted deploy OK |
+| **v1.x optional** | P1 WhatsApp Business API auto-send | Extra rows in MANUAL_TEST §P1 | Only if copy-export insufficient after v1 |
+
+**WhatsApp API:** **Not required for v1.** v1 ships with copy-export + Paystack; API is v1.x if couples demand in-app send.
+
+**Order of gates:** P0 code → Phase 0b (before P1 **launch**, may overlap P1 **build**) → P1 code → single `MANUAL_TEST.md` pass → stage/commit/deploy.
+
+**Agent during build:** automated tests only (see `deferred-manual-testing.mdc`). **User once:** manual pass at **v1.0** (P0 only) or **v1** (P0+P1) — whichever milestone you declare complete.
+
+#### Layout (locked — no new folder)
+- [x] `post-wedding-comms-pack.md` — strategy one-pager
+- [x] `post-wedding-comms-pack/` — MVP code (`app.py`, `README.md`, `requirements.txt`, `MANUAL_TEST.md`)
+- [ ] Optional later: `post-wedding-comms-pack_tasks.md` only if P0 checklist outgrows this entry
+
+#### Phase 0 — Strategy & repo ✅
+- [x] Reposition from email thank-you generator → Post-Wedding Comms Pack (WhatsApp-first, vendor module)
+- [x] Rename `automated-thank-you-note-generator` → `post-wedding-comms-pack` (md + folder + cross-links)
+- [x] P0 Streamlit MVP (modular `app.py` + helpers)
+
+#### Phase 0b — Validation (before P1 **launch**; target: **3 Wizard-of-Oz couples**)
+- [ ] Landing page or simple pitch — “Post-wedding WhatsApp thank-yous in one afternoon”
+- [ ] Wizard-of-Oz: CSV (name, phone, gift) → you generate → couple sends → charge ₦10k–20k
+- [ ] **Go/no-go:** ≥2 couples pay for self-serve → unlock **v1.0** manual test; kill if “in-person only” + zero WTP
+- [ ] **Do not launch P1 (Paystack)** to public until 0b passes
+
+#### Phase 1 (P0) — Nigeria-usable MVP ✅
+- [x] Replace `text-davinci-003` with Chat Completions API
+- [x] CSV schema: `Name`, `Phone`, `GiftOrSpray`, `Relationship`, `Email` (optional)
+- [x] Prompt templates with gift/relationship context
+- [x] “Copy to WhatsApp” batch export (no API cost)
+- [x] Vendor list + templates (thank-you, review request)
+- [x] Checklist UI: pending / sent / skipped
+- [x] Automated smoke test: `test_p0_flow.py`
+
+#### Phase 2 (P1) — Monetization (required for **v1**, not v1.0)
+- [ ] Paystack one-time unlock per wedding
+- [ ] Paystack webhook + basic auth
+- [ ] (Optional v1.x) WhatsApp Business API or local BSP integration
+
+#### Phase 3 (P2) — Stack integration (post-v1)
+- [ ] Import from guest engagement export (`wedding-games-icebreakers-app.md` product)
+- [ ] Printable PDF export (print-shop affiliate)
+- [ ] English + Yoruba/Igbo/Hausa/Pidgin template picker
+
+#### v1 sign-off checklist (user — once)
+- [ ] **v1.0:** Phase 0b go + run `MANUAL_TEST.md` §P0 → soft launch OK
+- [ ] **v1:** P1 complete + run `MANUAL_TEST.md` §P0+P1 → launch-ready OK
+
+#### Out of scope (v1)
+- MC or planner subscription / white-label
+- Native iOS/Android app store app
+- Full wedding planning suite
+- Physical print ops (affiliate export only)
+
+**Priority note:** Ship **post-event comms (this project)** before guest engagement link code.
+
+> **Manual UI testing:** Deferred — see [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md) and `.cursor/rules/deferred-manual-testing.mdc`.
 
 ---
 
