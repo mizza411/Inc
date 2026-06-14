@@ -30,7 +30,7 @@ A **one-time post-wedding dashboard** where couples upload a guest/vendor list, 
 ## Who pays (explicit)
 
 ### Primary — **Couples (B2C)**
-- One-time fee **1–8 weeks after** the wedding (e.g. ₦15,000–₦50,000).
+- One-time fee **1–8 weeks after** the wedding: **₦10,000 flat** (self-serve).
 - Sold when guilt peaks: Instagram “newlywed” content, church WhatsApp groups, friend referrals.
 - **Why couples pay:** 150+ guests, spray/gift guilt, procrastination, fear of forgetting aunties.
 
@@ -93,13 +93,16 @@ Validated globally: ~80% of couples report post-wedding comms stress ([The Knot 
 
 ## Revenue model
 
-| Tier | Buyer | Price signal | Includes |
-|------|-------|--------------|----------|
-| **Comms Basic** | Couple | ₦15,000–₦25,000 | Guest messages + export/copy (up to 100 recipients) |
-| **Comms Plus** | Couple | ₦30,000–₦50,000 | + vendor module + gift merge + local language templates |
-| **Print export add-on** | Couple | ₦5,000–₦10,000 | PDF card layout for printer affiliate |
+**Flat pricing only (v1)** — no tiers until Phase 0b data says otherwise.
 
-No couple subscription unless repeat events (corporate/baby shower expansion later).
+| Offer | Buyer | Price | Includes |
+|-------|-------|-------|----------|
+| **Self-serve unlock** | Couple | **₦10,000** one-time | Guest AI drafts, vendor templates, checklist, WhatsApp export |
+| **Done-for-you pilot** (Phase 0b only) | Couple | **₦15,000** | You generate + deliver drafts; not the app — separate labor offer |
+
+Paystack default: `PAYSTACK_AMOUNT_KOBO=1000000` (₦10,000).
+
+**Later (post-validation):** print PDF add-on, guest-count tiers — only if couples ask for them.
 
 ---
 
@@ -120,8 +123,8 @@ No couple subscription unless repeat events (corporate/baby shower expansion lat
 ## Validation (minimal)
 
 1. **Landing page** — “Post-wedding WhatsApp thank-yous in one afternoon”
-2. **Wizard-of-Oz** — 3 couples, CSV with phone + gift, you generate + they send; charge ₦10k–20k
-3. **Success metrics:** ≥70% complete list; couple would pay ₦25k for self-serve; ≥1 referral
+2. **Wizard-of-Oz** — 3 couples, CSV with phone + gift, you generate + they send; charge ₦15k (done-for-you) **or** test ₦10k self-serve
+3. **Success metrics:** ≥70% complete list; couple would pay **₦10k** for self-serve; ≥1 referral
 4. **Kill criteria:** “We only thank in person” + zero willingness to pay
 
 ---

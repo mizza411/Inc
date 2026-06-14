@@ -34,7 +34,7 @@ Sources: [The Knot Real Weddings Study](https://www.theknot.com/content/real-wed
 
 ## Who pays
 
-- **Couple (B2C)** — one-time ₦15k–₦50k per wedding  
+- **Couple (B2C)** — **₦10,000 flat** per wedding (self-serve via Paystack)
 - **Print shop** — affiliate only, optional  
 
 ---
@@ -98,7 +98,7 @@ python webhook_server.py
 
 ## Validation before P1
 
-Wizard-of-Oz with 3 couples: manual CSV → generated WhatsApp text → they send → charge ₦10k–20k. Proceed to API send only if ≥2 pay for self-serve.
+Wizard-of-Oz with 3 couples: test **₦10k self-serve** willingness-to-pay; optional **₦15k done-for-you** pilot. Proceed to public launch only if ≥2 say yes to ₦10k app.
 
 ---
 

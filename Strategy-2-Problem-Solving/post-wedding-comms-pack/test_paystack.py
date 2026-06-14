@@ -59,7 +59,7 @@ class PaystackClientTests(unittest.TestCase):
                 "data": {
                     "status": "success",
                     "reference": "PWC_test_1",
-                    "amount": 2500000,
+                    "amount": 1000000,
                     "currency": "NGN",
                     "customer": {"email": "couple@example.com"},
                     "paid_at": "2026-06-14T12:00:00.000Z",
@@ -100,7 +100,7 @@ class UnlockTests(unittest.TestCase):
     @patch("unlock.verify_transaction")
     def test_try_unlock_records_payment(self, mock_verify):
         mock_verify.return_value = (
-            {"reference": "REF999", "amount": 2500000, "email": "x@y.com"},
+            {"reference": "REF999", "amount": 1000000, "email": "x@y.com"},
             None,
         )
         with patch.dict(
@@ -136,7 +136,7 @@ class WebhookTests(unittest.TestCase):
             "event": "charge.success",
             "data": {
                 "reference": "WH_REF_1",
-                "amount": 2500000,
+                "amount": 1000000,
                 "currency": "NGN",
                 "customer": {"email": "c@d.com"},
             },

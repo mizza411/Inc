@@ -26,7 +26,7 @@ def payments_configured() -> bool:
 
 
 def default_amount_kobo() -> int:
-    return int(os.getenv("PAYSTACK_AMOUNT_KOBO", "2500000"))
+    return int(os.getenv("PAYSTACK_AMOUNT_KOBO", "1000000"))
 
 
 def generate_reference() -> str:

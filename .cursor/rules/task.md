@@ -405,8 +405,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 | Milestone | Includes | Manual UI (`MANUAL_TEST.md`) | Ship meaning |
 |-----------|----------|------------------------------|--------------|
 | **v0.5 — P0 code** | Phase 0 ✅ + Phase 1 (P0) ✅ + `test_p0_flow.py` green | **Do not run** | Agent-only; not user-facing launch |
-| **v1.0 — soft launch** | v0.5 + **Phase 0b go** (≥2 couples WTP ₦10k–20k Wizard-of-Oz) | **P0 sections only** | Couples pay manually; copy-to-WhatsApp export; no Paystack required |
-| **v1 — launch-ready** | v1.0 + **Phase 2 (P1) Paystack** one-time unlock per wedding | **P0 + P1 sections** | Self-serve paid product; hosted deploy OK |
+| **v1.0 — soft launch** | v0.5 + **Phase 0b go** (≥2 couples WTP **₦10k flat** self-serve) | **P0 + P1 sections** | Paystack ₦10,000 unlock live |
+| **v1 — launch-ready** | v1.0 + hosted deploy + manual test pass | Same | Public URL, same **₦10k flat** |
 | **v1.x optional** | P1 WhatsApp Business API auto-send | Extra rows in MANUAL_TEST §P1 | Only if copy-export insufficient after v1 |
 
 **WhatsApp API:** **Not required for v1.** v1 ships with copy-export + Paystack; API is v1.x if couples demand in-app send.
@@ -428,8 +428,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 #### Phase 0b — Validation (before P1 **launch**; target: **3 Wizard-of-Oz couples**)
 - [x] Landing / pitch copy draft — [`PHASE_0b_PITCH.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/PHASE_0b_PITCH.md)
 - [ ] Publish landing (Carrd / Notion / Google Site) from pitch doc
-- [ ] Wizard-of-Oz: CSV (name, phone, gift) → you generate → couple sends → charge ₦10k–20k
-- [ ] **Go/no-go:** ≥2 couples pay for self-serve → unlock **v1.0** manual test; kill if “in-person only” + zero WTP
+- [ ] Wizard-of-Oz (optional): CSV → you generate → deliver; **₦15k** done-for-you OR test **₦10k** self-serve Paystack
+- [ ] **Go/no-go:** ≥2 couples WTP **₦10,000 flat** self-serve; kill if “in-person only” + zero WTP
 - [ ] **Do not launch P1 (Paystack)** to public until 0b passes
 
 #### Phase 1 (P0) — Nigeria-usable MVP ✅
