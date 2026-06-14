@@ -1,5 +1,18 @@
 # Technical intuition log
 
+## 2026-06-14 — Post-Wedding Comms Pack P1 (Paystack)
+
+**What we did**
+- Added `paystack_client.py`, `payment_store.py`, `unlock.py`, `payment_ui.py`, `webhook_server.py`; gated AI/export/email behind one-time unlock.
+- Automated: `test_paystack.py` (9 tests, mocked Paystack API + webhook). Dev mode: `PAYMENTS_DISABLED=1`.
+- Updated MANUAL_TEST §P1 with “why not automated” for live Paystack only.
+
+**Why it matters**
+- v1 monetization without WhatsApp API; webhook + verify-reference covers Streamlit’s lack of native payment callbacks.
+
+**Intuition analogy**
+- Like Gumroad’s paywall on a download link — pay once, then the tool unlocks; webhook is the receipt filing cabinet.
+
 ## 2026-06-14 — Post-Wedding Comms Pack P0 (modular Streamlit MVP)
 
 **What we did**

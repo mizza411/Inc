@@ -19,6 +19,7 @@ from csv_schema import (
 )
 from email_send import send_thank_you_email
 from generation import generate_message
+from payment_ui import render_payment_sidebar, require_unlock
 from prompts import build_guest_prompt, build_vendor_review_request, build_vendor_thank_you
 from whatsapp_export import build_export_dataframe, export_copy_text
 
@@ -34,11 +35,14 @@ if "guest_df" not in st.session_state:
     st.session_state.guest_df = None
 if "vendor_df" not in st.session_state:
     st.session_state.vendor_df = None
+if "unlocked" not in st.session_state:
+    st.session_state.unlocked = False
 
 st.session_state.couple_names = st.sidebar.text_input(
     "Sign-off names (e.g. Ada & Emeka)",
     value=st.session_state.couple_names,
 )
+render_payment_sidebar(st.session_state)
 
 
 def _status_summary(df: pd.DataFrame) -> None:
@@ -116,6 +120,8 @@ def _guest_tab() -> None:
     _status_summary(df)
 
     if st.button("Generate guest messages (AI)", key="gen_guest"):
+        if not require_unlock(st.session_state):
+            return
         progress = st.progress(0.0)
         couple = st.session_state.couple_names
         errors: list[str] = []
@@ -138,22 +144,25 @@ def _guest_tab() -> None:
     st.session_state.guest_df = df
 
     export_df = build_export_dataframe(df)
-    st.download_button(
-        "Download export CSV (messages + WhatsApp links)",
-        data=export_df.to_csv(index=False).encode("utf-8"),
-        file_name="guest_comms_export.csv",
-        mime="text/csv",
-        key="guest_csv_dl",
-    )
-    st.download_button(
-        "Download copy-paste text",
-        data=export_copy_text(export_df).encode("utf-8"),
-        file_name="guest_comms_whatsapp.txt",
-        mime="text/plain",
-        key="guest_txt_dl",
-    )
+    if require_unlock(st.session_state):
+        st.download_button(
+            "Download export CSV (messages + WhatsApp links)",
+            data=export_df.to_csv(index=False).encode("utf-8"),
+            file_name="guest_comms_export.csv",
+            mime="text/csv",
+            key="guest_csv_dl",
+        )
+        st.download_button(
+            "Download copy-paste text",
+            data=export_copy_text(export_df).encode("utf-8"),
+            file_name="guest_comms_whatsapp.txt",
+            mime="text/plain",
+            key="guest_txt_dl",
+        )
 
     if st.button("Send email to guests with Email column (optional)", key="guest_email"):
+        if not require_unlock(st.session_state):
+            return
         sent = 0
         failures: list[str] = []
         for _, row in df.iterrows():
@@ -201,12 +210,16 @@ def _vendor_tab() -> None:
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Apply thank-you template to all", key="vendor_thanks"):
+            if not require_unlock(st.session_state):
+                return
             for i, row in df.iterrows():
                 df.at[i, "Message"] = build_vendor_thank_you(row.to_dict(), couple_names=couple)
             st.session_state.vendor_df = df
             st.success("Thank-you templates applied.")
     with col2:
         if st.button("Apply review-request template to all", key="vendor_review"):
+            if not require_unlock(st.session_state):
+                return
             for i, row in df.iterrows():
                 df.at[i, "Message"] = build_vendor_review_request(
                     row.to_dict(), couple_names=couple
@@ -218,20 +231,21 @@ def _vendor_tab() -> None:
     st.session_state.vendor_df = df
 
     export_df = build_export_dataframe(df)
-    st.download_button(
-        "Download vendor export CSV",
-        data=export_df.to_csv(index=False).encode("utf-8"),
-        file_name="vendor_comms_export.csv",
-        mime="text/csv",
-        key="vendor_csv_dl",
-    )
-    st.download_button(
-        "Download vendor copy-paste text",
-        data=export_copy_text(export_df).encode("utf-8"),
-        file_name="vendor_comms_whatsapp.txt",
-        mime="text/plain",
-        key="vendor_txt_dl",
-    )
+    if require_unlock(st.session_state):
+        st.download_button(
+            "Download vendor export CSV",
+            data=export_df.to_csv(index=False).encode("utf-8"),
+            file_name="vendor_comms_export.csv",
+            mime="text/csv",
+            key="vendor_csv_dl",
+        )
+        st.download_button(
+            "Download vendor copy-paste text",
+            data=export_copy_text(export_df).encode("utf-8"),
+            file_name="vendor_comms_whatsapp.txt",
+            mime="text/plain",
+            key="vendor_txt_dl",
+        )
 
 
 guest_tab, vendor_tab = st.tabs(["Guests", "Vendors"])

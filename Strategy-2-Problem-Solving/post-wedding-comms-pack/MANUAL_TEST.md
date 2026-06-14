@@ -92,11 +92,22 @@ Open the Local URL shown (usually http://localhost:8501).
 
 ---
 
-## P1 — Monetization & send (add sections when built)
+## P1 — Paystack unlock (run at **v1** sign-off)
 
-<!-- Agent: append checklist items here when Paystack / WhatsApp API ships -->
+_Automated: `python -m unittest test_paystack.py` (mocked API + webhook). Live Paystack requires your keys._
 
-- [ ] _Not in build yet — skip until P1 complete_
+- [ ] Set `PAYMENTS_DISABLED=0` and `PAYSTACK_SECRET_KEY` in `.env`  
+  _Why not automated: live money + Paystack test/live keys on your account_
+- [ ] Sidebar **Get Paystack payment link** opens checkout  
+  _Why not automated: hosted Paystack UI in browser_
+- [ ] After test payment, **Verify payment** with reference unlocks exports/AI  
+  _Why not automated: end-to-end needs real or Paystack test transaction_
+- [ ] Gated actions blocked before unlock: AI generate, exports, vendor templates, email send  
+  _Why not automated: Streamlit widget visibility — smoke-tested via unit tests for logic only_
+- [ ] Optional: `python webhook_server.py` receives `charge.success`  
+  _Why not automated: needs public URL + Paystack dashboard config_
+
+**Webhook (production):** `POST /paystack/webhook` on port `WEBHOOK_PORT` (default 5001).
 
 ---
 

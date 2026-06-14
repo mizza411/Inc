@@ -392,7 +392,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 ---
 
 ### 7. Post-Wedding Comms Pack (Wedding — B2C digital)
-**Status:** P0 complete — **P1 & Phase 0b not started**  
+**Status:** P1 Paystack complete — **Phase 0b not started**; manual UI deferred to v1 sign-off  
 **Goal:** WhatsApp-first **post-wedding comms** for couples — AI-drafted guest thank-yous (gift/spray-aware), vendor wrap-up, checklist — **one-time B2C fee**; no MC/planner SaaS.  
 **Folder:** `Strategy-2-Problem-Solving/post-wedding-comms-pack/` — run: `python -m streamlit run app.py` from that folder  
 **Spec:** [post-wedding-comms-pack.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack.md) · [README](../Strategy-2-Problem-Solving/post-wedding-comms-pack/README.md) · [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md)  
@@ -440,9 +440,9 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] Checklist UI: pending / sent / skipped
 - [x] Automated smoke test: `test_p0_flow.py`
 
-#### Phase 2 (P1) — Monetization (required for **v1**, not v1.0)
-- [ ] Paystack one-time unlock per wedding
-- [ ] Paystack webhook + basic auth
+#### Phase 2 (P1) — Monetization (required for **v1**, not v1.0) ✅
+- [x] Paystack one-time unlock per wedding
+- [x] Paystack webhook + basic auth (`webhook_server.py`)
 - [ ] (Optional v1.x) WhatsApp Business API or local BSP integration
 
 #### Phase 3 (P2) — Stack integration (post-v1)

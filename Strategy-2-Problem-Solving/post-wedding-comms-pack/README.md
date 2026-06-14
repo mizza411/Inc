@@ -49,7 +49,7 @@ Streamlit app with **Guests** and **Vendors** tabs:
 4. Export CSV with WhatsApp links or copy-paste text
 5. Optional: SendGrid email for rows with Email (diaspora)
 
-**Modules:** `csv_schema.py`, `prompts.py`, `generation.py`, `whatsapp_export.py`, `email_send.py`
+**Modules:** `csv_schema.py`, `prompts.py`, `generation.py`, `whatsapp_export.py`, `email_send.py`, `paystack_client.py`, `payment_ui.py`, `webhook_server.py`
 **Run locally:**
 
 ```bash
@@ -60,8 +60,16 @@ python -m streamlit run app.py
 ```
 
 **Sample CSVs:** `samples/guests_sample.csv`, `samples/vendors_sample.csv`  
-**Automated smoke test (no UI):** `python test_p0_flow.py`  
+**Automated tests:** `python test_p0_flow.py` · `python -m unittest test_paystack.py`  
 **Manual UI (once at v1 sign-off):** [`MANUAL_TEST.md`](MANUAL_TEST.md)
+
+Copy `.env.example` → `.env`. Default `PAYMENTS_DISABLED=1` unlocks all features for dev.
+
+**Webhook server (separate process):**
+
+```bash
+python webhook_server.py
+```
 
 ---
 
@@ -75,10 +83,10 @@ python -m streamlit run app.py
 - [x] Vendor list + separate templates (thank-you, review request)
 - [x] Checklist UI: pending / sent / skipped
 
-### P1 — Monetization & send
-- [ ] Paystack one-time unlock per wedding
-- [ ] WhatsApp Business API or local BSP integration
-- [ ] Paystack webhook + basic auth
+### P1 — Monetization (Paystack)
+- [x] Paystack one-time unlock per wedding (sidebar pay + verify reference)
+- [x] Paystack webhook + optional basic auth (`webhook_server.py`)
+- [ ] (Optional v1.x) WhatsApp Business API or local BSP integration
 
 ### P2 — Stack integration
 - [ ] Import from guest engagement export

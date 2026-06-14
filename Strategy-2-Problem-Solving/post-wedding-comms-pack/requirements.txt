@@ -2,4 +2,6 @@ streamlit
 pandas
 openai
 sendgrid
-python-dotenv 
+python-dotenv
+requests
+flask 
