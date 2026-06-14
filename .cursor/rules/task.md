@@ -426,7 +426,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] P0 Streamlit MVP (modular `app.py` + helpers)
 
 #### Phase 0b — Validation (before P1 **launch**; target: **3 Wizard-of-Oz couples**)
-- [ ] Landing page or simple pitch — “Post-wedding WhatsApp thank-yous in one afternoon”
+- [x] Landing / pitch copy draft — [`PHASE_0b_PITCH.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/PHASE_0b_PITCH.md)
+- [ ] Publish landing (Carrd / Notion / Google Site) from pitch doc
 - [ ] Wizard-of-Oz: CSV (name, phone, gift) → you generate → couple sends → charge ₦10k–20k
 - [ ] **Go/no-go:** ≥2 couples pay for self-serve → unlock **v1.0** manual test; kill if “in-person only” + zero WTP
 - [ ] **Do not launch P1 (Paystack)** to public until 0b passes

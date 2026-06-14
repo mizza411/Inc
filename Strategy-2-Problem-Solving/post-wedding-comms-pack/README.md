@@ -61,7 +61,8 @@ python -m streamlit run app.py
 
 **Sample CSVs:** `samples/guests_sample.csv`, `samples/vendors_sample.csv`  
 **Automated tests:** `python test_p0_flow.py` · `python -m unittest test_paystack.py`  
-**Manual UI (once at v1 sign-off):** [`MANUAL_TEST.md`](MANUAL_TEST.md)
+**Manual UI (once at v1 sign-off):** [`MANUAL_TEST.md`](MANUAL_TEST.md)  
+**Phase 0b validation copy:** [`PHASE_0b_PITCH.md`](PHASE_0b_PITCH.md)
 
 Copy `.env.example` → `.env`. Default `PAYMENTS_DISABLED=1` unlocks all features for dev.
 
