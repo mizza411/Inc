@@ -641,3 +641,12 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] **Phase 1 — Master runner:** Remove Strategy 8 from `STRATEGY_SCRIPTS` / `STRATEGY_META` in `run_all_strategies.py`; add `RETIRED_STRATEGIES` with clear menu messaging; update `run_all_strategies_README.md`.
 - [x] **Phase 2 — Cross-references:** Remove TrendHunter mentions from Strategy 12, API docs, and related READMEs (point to Strategy 14 where relevant).
 - [x] **Phase 3 — Strategy 8 folder:** Archive legacy script to `_archive/trend_adapter_legacy.py`; stub `trend_adapter.py`; add `DEPRECATED.md`; deprecate playbook markdown.
+
+---
+
+### 7. Retire ChatGPT Vision / Strategy 10 (phased)
+**Goal:** Remove manual ChatGPT Vision image workflow from the active automation pipeline (no in-repo Vision API; manual upload/paste only). Use Strategies 3–5 for construction/real estate problem discovery.
+
+- [x] **Phase 1 — Master runner:** Remove Strategy 10 from `STRATEGY_SCRIPTS` / `STRATEGY_META` in `run_all_strategies.py`; add to `RETIRED_STRATEGIES` with clear menu messaging; update `run_all_strategies_README.md`.
+- [x] **Phase 2 — Cross-references:** Remove Strategy 10 from API docs; update Drive mapping in this task file.
+- [x] **Phase 3 — Strategy 10 folder:** Archive legacy script to `_archive/visual_content_analyzer_legacy.py`; stub `visual_content_analyzer.py`; add `DEPRECATED.md`; deprecate playbook markdown.
