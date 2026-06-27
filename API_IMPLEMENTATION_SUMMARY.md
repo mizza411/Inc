@@ -97,7 +97,6 @@ export SIMILARWEB_API_KEY="your_key_here"
 These are better as manual processes:
 - **Strategy 3**: Network-Based (personal contacts)
 - **Strategy 4**: Business Owner Problem Collection (questionnaires)
-- **Strategy 10**: Visual Content Analysis (ChatGPT Vision - manual upload)
 - **Strategy 11**: Personal Problem Conversion (personal list)
 - **Strategy 12**: High-Value Problem Filtering (manual evaluation)
 

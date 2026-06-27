@@ -1,5 +1,18 @@
 # Technical intuition log
 
+## 2026-06-27 — Strategy 10 (ChatGPT Vision) retirement
+
+**What we did**
+- Removed Strategy 10 from `run_all_strategies.py` active scripts; added to `RETIRED_STRATEGIES` alongside Strategy 8.
+- Archived `visual_content_analyzer_legacy.py`; stubbed `visual_content_analyzer.py`; added `DEPRECATED.md` and deprecated banners in README/playbook.
+- Updated API docs, `run_all_strategies_README.md`, and `task.md` §7; added `_smoke_test_strategy10_retirement.py`.
+
+**Why it matters**
+- Manual ChatGPT Vision upload/paste did not meet the repo's automate-first policy; retiring keeps numbering stable while pointing users to Strategies 3–5 for real-estate/construction problem discovery.
+
+**Intuition analogy**
+- Like removing a fax-only intake desk from a digital clinic — the workflow still exists in the archive, but the front door now routes to channels that actually run on autopilot.
+
 ## 2026-06-14 — Post-Wedding Comms Pack P1 (Paystack)
 
 **What we did**

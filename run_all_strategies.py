@@ -2,7 +2,7 @@
 """
 Master Orchestrator: Run Business Idea Formulation Strategies 3–15 from one place.
 
-Active executable strategies: 3–7, 9–15 (Strategy 8 / TrendHunter retired).
+Active executable strategies: 3–7, 9, 11–15 (Strategies 8 and 10 retired).
 
 Phase 1 (implemented):
 - Simple, linear runner (run all strategies in fixed order).
@@ -35,7 +35,6 @@ STRATEGY_SCRIPTS: Dict[int, Path] = {
     6: ROOT / "Business-Idea-Formulation-Strategy-6-Startup-Niche-Combination" / "startup_niche_combiner.py",
     7: ROOT / "Business-Idea-Formulation-Strategy-7-Trending-Startup-Adaptation" / "trending_startup_adapter.py",
     9: ROOT / "Business-Idea-Formulation-Strategy-9-Financial-News-Problem-Extraction" / "financial_news_extractor.py",
-    10: ROOT / "Business-Idea-Formulation-Strategy-10-Visual-Content-Analysis" / "visual_content_analyzer.py",
     11: ROOT / "Business-Idea-Formulation-Strategy-11-Personal-Problem-Conversion" / "personal_problem_converter.py",
     12: ROOT / "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering" / "problem_filter.py",
     13: ROOT / "Business-Idea-Formulation-Strategy-13-Multi-Source-Comprehensive-Analysis" / "multisource_analyzer.py",
@@ -69,10 +68,6 @@ STRATEGY_META: Dict[int, Dict[str, str]] = {
         "name": "Financial News Problem Extraction",
         "desc": "Extracts problems from Nigerian financial/business news (Nairametrics, Financial Nigeria, BusinessDay).",
     },
-    10: {
-        "name": "Visual Content Analysis",
-        "desc": "Uses ChatGPT Vision on real-estate/project images to generate business/IT solutions.",
-    },
     11: {
         "name": "Personal Problem Conversion",
         "desc": "Turns your own recurring personal problems into structured business ideas.",
@@ -100,6 +95,10 @@ RETIRED_STRATEGIES: Dict[int, str] = {
     8: (
         "Trend Adaptation (TrendHunter) — no licensed automation path. "
         "Use Strategy 14 (OurWorldInData) for global trend adaptation."
+    ),
+    10: (
+        "Visual Content Analysis (ChatGPT Vision) — manual image upload only. "
+        "Use Strategies 3–5 (network, questionnaires, news) for problem discovery."
     ),
 }
 
@@ -247,8 +246,8 @@ def main() -> None:
         print("=" * 80)
         print("\nNote: Strategies 1 and 2 are verbal instructions only (no scripts to run).")
         print(
-            "Executable scripts: 3–7, 9–15 "
-            f"({len(STRATEGY_SCRIPTS)} strategies; Strategy 8 retired)."
+            "Executable scripts: 3–7, 9, 11–15 "
+            f"({len(STRATEGY_SCRIPTS)} strategies; Strategies 8 and 10 retired)."
         )
         print("Available strategies:")
         print("  - Strategy 1: [Verbal instructions only - not a script]")
@@ -261,7 +260,7 @@ def main() -> None:
             print(f"  - Strategy {num}: [Retired — {RETIRED_STRATEGIES[num]}]")
 
         print("\nMenu:")
-        print("  1) Run ALL active strategies (3–7, 9–15) in order")
+        print("  1) Run ALL active strategies (3–7, 9, 11–15) in order")
         print("  2) Run SELECTED strategies (e.g. 3,5,7-9)")
         print("  3) Run ONE strategy (e.g. 5)")
         print("  4) Exit")
@@ -270,7 +269,7 @@ def main() -> None:
 
         if choice in ("", "1"):
             confirm = input(
-                "\nRun ALL active strategies (3–7, 9–15) in order? (y/n, default=y): "
+                "\nRun ALL active strategies (3–7, 9, 11–15) in order? (y/n, default=y): "
             ).strip().lower()
             if confirm in ("", "y", "yes"):
                 run_sequence(sorted(STRATEGY_SCRIPTS.keys()))
@@ -283,7 +282,7 @@ def main() -> None:
                 "Examples:\n"
                 "  3,5,9\n"
                 "  3-6\n"
-                "  3,5-7,10,15\n"
+                "  3,5-7,11,15\n"
             )
             selection = input("Your selection: ")
             warn_if_retired_requested(selection)

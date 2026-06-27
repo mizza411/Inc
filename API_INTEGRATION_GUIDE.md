@@ -95,7 +95,6 @@ pytrends.build_payload(['keyword'], geo='NG', timeframe='today 3-m')
 ### Manual Input Only:
 - **Strategy 3**: Network-Based (personal contacts)
 - **Strategy 4**: Business Owner Problem Collection (questionnaires)
-- **Strategy 10**: Visual Content Analysis (ChatGPT Vision - manual image upload)
 - **Strategy 11**: Personal Problem Conversion (personal list)
 - **Strategy 12**: High-Value Problem Filtering (manual problem evaluation)
 

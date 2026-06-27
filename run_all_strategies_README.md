@@ -90,14 +90,14 @@ Select option `3` to exit the master runner without executing any strategies.
 | 7 | Trending Startup Adaptation | `trending_startup_adapter.py` |
 | ~~8~~ | ~~Trend Adaptation (TrendHunter)~~ | **Retired** — use Strategy 14 |
 | 9 | Financial News Problem Extraction | `financial_news_extractor.py` |
-| 10 | Visual Content Analysis | `visual_content_analyzer.py` |
+| ~~10~~ | ~~Visual Content Analysis~~ | **Retired** — use Strategies 3, 4, or 5 |
 | 11 | Personal Problem Conversion | `personal_problem_converter.py` |
 | 12 | High-Value Problem Filtering | `problem_filter.py` |
 | 13 | Multi-Source Comprehensive Analysis | `multisource_analyzer.py` |
 | 14 | Global Data Trend Adaptation | `global_trend_adapter.py` |
 | 15 | Nigeria National / Open Data | `nigeria_national_open_data.py` |
 
-**Note:** Strategy **8** (TrendHunter) was removed from the master runner — no licensed automation path. Use **Strategy 14** for global trend adaptation instead.
+**Note:** Strategy **8** (TrendHunter) and Strategy **10** (ChatGPT Vision) were removed from the master runner — no licensed in-repo automation path. Use **Strategy 14** for global trends; use **Strategies 3–5** for construction/real-estate problem discovery.
 
 ## How It Works
 

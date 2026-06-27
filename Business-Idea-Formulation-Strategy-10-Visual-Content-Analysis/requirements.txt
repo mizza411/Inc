@@ -1,0 +1,4 @@
+# Strategy 10 — dependencies (archived legacy script only)
+
+# No third-party packages required for the retirement stub.
+# Inspect _archive/visual_content_analyzer_legacy.py if you need the original stdlib-only script.

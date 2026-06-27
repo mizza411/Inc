@@ -1,5 +1,7 @@
 # Business Idea Formulation Strategy 10: Visual Content Analysis
 
+> **Deprecated (June 2026):** Strategy 10 is **retired** from `run_all_strategies.py`. ChatGPT Vision has no in-repo automation path (manual image upload / paste only). Use **[Strategy 3](../Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification/)** (network), **[Strategy 4](../Business-Idea-Formulation-Strategy-4-Business-Owner-Problem-Collection/)** (questionnaires), or **[Strategy 5](../Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction/)** (news) for problem discovery instead. See **[DEPRECATED.md](./DEPRECATED.md)**. Legacy script: `_archive/visual_content_analyzer_legacy.py`.
+
 ## Overview
 This strategy helps you generate **business and IT solutions** by analyzing **visual content** (e.g. real estate projects, uncompleted buildings, infrastructure) using **ChatGPT Vision**, and then expanding viable ideas into full business tables.
 

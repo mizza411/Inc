@@ -1,4 +1,6 @@
-# Strategy 10: Visual Content Analysis
+# Strategy 10: Visual Content Analysis — DEPRECATED
+
+> **Retired (June 2026):** Removed from the master runner. See [DEPRECATED.md](./DEPRECATED.md). Use Strategies 3, 4, or 5 instead.
 
 ## 🎯 Core Strategy
 Generate business ideas and IT solutions by analyzing visual content (real estate projects, buildings, etc.) using ChatGPT Vision to identify opportunities for architects, builders, and project developers.
