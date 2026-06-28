@@ -3,7 +3,8 @@
   "app_name": "Inc Launcher",
   "settings": {
     "single_instance": true,
-    "icon_path": "inc_launcher/assets/icon.png"
+    "icon_path": "inc_launcher/assets/icon.png",
+    "youtube_ops_active": true
   },
   "pillars": [
     {
@@ -16,7 +17,7 @@
           "path": "Started-Businesses"
         },
         {
-          "label": "Strategy 1 — Business Variation",
+          "label": "Strategy 1 \u2014 Business Variation",
           "action": "folder",
           "path": "Strategy-1-Business-Variation"
         },
@@ -26,6 +27,7 @@
           "path": "Strategy-1-Business-Variation/gadget-business/gadget-business-automation"
         },
         {
+          "id": "youtube_status",
           "label": "YouTube automation (status)",
           "action": "command",
           "command": "python main.py status",
@@ -81,12 +83,12 @@
           "path": "business_research"
         },
         {
-          "label": "Strategy 5 — News extraction",
+          "label": "Strategy 5 \u2014 News extraction",
           "action": "folder",
           "path": "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction"
         },
         {
-          "label": "Strategy 15 — Nigeria open data",
+          "label": "Strategy 15 \u2014 Nigeria open data",
           "action": "folder",
           "path": "Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data"
         }
@@ -103,7 +105,8 @@
           "pinned": true
         },
         {
-          "label": "Problem ID tool — live site",
+          "id": "problem_id_live",
+          "label": "Problem ID tool \u2014 live site",
           "action": "url",
           "url": "https://mizza411.github.io/Inc/problem_identification_tool/web/index.html"
         },
@@ -118,12 +121,12 @@
           "path": "Strategy-2-Problem-Solving/problem_finder"
         },
         {
-          "label": "Strategy 3 — Network problems",
+          "label": "Strategy 3 \u2014 Network problems",
           "action": "folder",
           "path": "Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification"
         },
         {
-          "label": "Strategy 12 — High-value filtering",
+          "label": "Strategy 12 \u2014 High-value filtering",
           "action": "folder",
           "path": "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering"
         }
@@ -164,6 +167,7 @@
       "path": "."
     },
     {
+      "id": "open_task_md",
       "label": "Open task.md",
       "action": "file",
       "path": ".cursor/rules/task.md"
@@ -172,5 +176,60 @@
       "label": "Open in Cursor",
       "action": "cursor"
     }
-  ]
+  ],
+  "schedules": {
+    "enabled": true,
+    "items": [
+      {
+        "id": "daily_task_md",
+        "time": "09:00",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat",
+          "sun"
+        ],
+        "target": "open_task_md"
+      },
+      {
+        "id": "daily_inc_hub",
+        "time": "09:15",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat",
+          "sun"
+        ],
+        "target": "hub"
+      },
+      {
+        "id": "problem_id_live_mwf",
+        "time": "10:00",
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "target": "problem_id_live"
+      },
+      {
+        "id": "youtube_status_sunday",
+        "time": "18:00",
+        "days": [
+          "sun"
+        ],
+        "target": "youtube_status",
+        "skip_when": {
+          "setting": "youtube_ops_active",
+          "equals": false
+        }
+      }
+    ]
+  }
 }

@@ -74,10 +74,13 @@ def main() -> int:
     def _open_and_check():
         try:
             controller.show(cfg)
-            time.sleep(2)
+            deadline = time.time() + 10
+            while controller._window is None and time.time() < deadline:
+                time.sleep(0.1)
             if controller._window is None:
                 errors.append("Hub window was not created")
             elif controller._queue is not None:
+                time.sleep(0.5)
                 controller._queue.put("hide")
                 time.sleep(0.3)
         except Exception as exc:

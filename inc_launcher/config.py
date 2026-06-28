@@ -31,3 +31,23 @@ def list_pillars(config: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 def list_global_actions(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     return config.get("global_actions", [])
+
+
+def config_file_path(config_path: Path | None = None) -> Path:
+    return Path(config_path or DEFAULT_CONFIG)
+
+
+def is_interval_nudges_enabled(config_path: Path | None = None) -> bool:
+    config = load_config(config_path)
+    return bool((config.get("schedules") or {}).get("enabled", False))
+
+
+def set_interval_nudges_enabled(enabled: bool, config_path: Path | None = None) -> None:
+    path = config_file_path(config_path)
+    with path.open(encoding="utf-8") as handle:
+        data = json.load(handle)
+    schedules = data.setdefault("schedules", {})
+    schedules["enabled"] = enabled
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, indent=2)
+        handle.write("\n")

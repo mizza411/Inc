@@ -193,6 +193,31 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 - [x] Start at login — tray menu **Start at Windows login [ON/OFF]** (writes `Inc Launcher.bat` to Startup folder)
 - [x] Custom icon — optional `inc_launcher/assets/icon.png` or `settings.icon_path` in config
 
+**Phase 4 — Interval nudges (approved schedule — not implemented)**  
+**Problem:** Too many tray icons; Inc Hub is easy to forget. **Not** Windows login — tray already runs; **timer** fires existing menu actions so work surfaces without hunting the notification area.  
+**Approved:** 2026-05-30 (user option **1** — starter interval list).
+
+| When | Action (existing tray target) | Config ref |
+|------|------------------------------|------------|
+| **Daily 09:00** | **Open task.md** | `global_actions` → `.cursor/rules/task.md` |
+| **Daily 09:15** | **Open Inc Hub** | Same as left-click / menu default (hub window) |
+| **Mon / Wed / Fri 10:00** | **Problem ID tool — live site** | `problem_identification` pillar → live URL |
+| **Sunday 18:00** | **YouTube automation (status)** | `established` pillar → `python main.py status` (skip if YouTube ops inactive) |
+
+**Rules (approved):**
+- Max **3 nudges per weekday**, **2 on Sunday** (YouTube only that day) — no folder-spam, no **Run all strategies**, no **Open in Cursor** on timers.
+- Scheduler lives **inside** `inc_launcher` tray process; reuses `run_action` / hub open — no extra tray icons.
+- Optional later: toast + Snooze before opening (not in v1 scope until built).
+
+**Phase 4 tasks (build when user picks implement):**
+- [x] **4.1** Schedule config + `scheduled_nudges.py` (parse, resolve targets, due logic) — **`enabled: false`**; no tray/timer wiring yet (zero runtime change)
+- [x] **4.2** Background timer in `nudge_scheduler.py` + `tray_app.py`; calls `run_action` / `show_hub`; persists fired keys in `schedule_fired.json` (gitignored). **Still idle while `schedules.enabled` is false.**
+- [x] **4.3** Tray submenu: **Interval nudges [ON/OFF]** — persists `schedules.enabled` in `launcher_config.json`; menu label refreshes after toggle
+- [x] **4.4** Tests: scheduler + sign-off automation in `test_phase4_signoff.py`, `test_nudge_scheduler.py`, `test_phase4_toggle.py`, `smoke_hub.py`
+- [x] **4.5** `inc_launcher/MANUAL_TEST.md` — one manual pass at Phase 4 sign-off (deferred per `deferred-manual-testing.mdc`)
+
+**Boot note:** External-repo `auto_launcher.py` starts tray at login; keep Inc **Start at Windows login [OFF]** to avoid duplicate starts (`single_instance` prevents double tray, but one boot path is clearer). Phase 4 timer runs inside the tray process Layer 1 already started.
+
 **Stack (proposed):** Python + `pystray` + minimal UI (tkinter or lightweight webview for super main) — confirm at Phase 1 kickoff.
 
 ---
@@ -464,6 +489,148 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 **Priority note:** Ship **post-event comms (this project)** before guest engagement link code.
 
 > **Manual UI testing:** Deferred — see [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md) and `.cursor/rules/deferred-manual-testing.mdc`.
+
+---
+
+### 8. Google Drive Business Sorting (Drive → Inc folders)
+**Status:** Planning — **implementation not started**  
+**Goal:** Sort items from Google Drive `?q=business` (and related trees) into the **correct Inc destinations** under the **four launcher pillars**, without exposing private Drive content in chat or commits. Drive is a second inbox (like Chrome bookmarks); Inc is the filing cabinet.
+
+#### Problem (what “sorting” means)
+
+| Decision per item | Action |
+|-------------------|--------|
+| **Belongs in Inc** | File into the right folder/markdown (see taxonomy); optional local mirror under `Google Drive Business Files/` |
+| **Already in Inc** | Mark **synced** — no duplicate write |
+| **Does not belong in Inc** | Leave in Drive only |
+
+**Privacy (non-negotiable):**
+- No Drive API login or cloud sync from the agent unless you explicitly approve a later phase
+- No Google Doc IDs, ChatGPT chat URLs, or personal network notes in repo outputs or chat pastebacks
+- Work from **user-exported** mirrors (e.g. `Google Drive Business Files/`) or a file list you provide
+
+#### Known mapping (12 local prompt cards → Inc strategies)
+
+| Drive step (SaaS / Business) | Inc strategy / folder |
+|------------------------------|------------------------|
+| SaaS 1st — Network | Strategy **3** — `Business-Idea-Formulation-Strategy-3-*` |
+| SaaS 2nd — Questionnaire | Strategy **4** |
+| SaaS 3rd — Nigerian news | Strategy **5** |
+| SaaS 4th — Crunchbase niche | Strategy **6** |
+| SaaS 5th — Crunchbase trending | Strategy **7** |
+| SaaS 6th — TrendHunter | Strategy **8** (retired) → use Strategy **14** |
+| SaaS 7th — Nairametrics et al | Strategy **9** |
+| SaaS 8th — ChatGPT Vision | Strategy **10** (retired) → use Strategies **3**, **4**, or **5** |
+| SaaS 9th — Personal problems | Strategy **11** |
+| Business 10th — GUEMF | Strategy **12** |
+| Business 11th — Multi-pronged / SimilarWeb | Strategy **13** |
+| Business 12th — OurWorldInData | Strategy **14** |
+| *(not in Drive export)* | Strategy **15** — Inc-only (Nigeria open data) |
+
+**Gaps to close:** anything in Drive `business` search **beyond** the 12 mirrored cards; macros, Forms templates, screenshots, and threads not yet exported locally.
+
+#### Destination taxonomy (align with bookmark sorter + launcher pillars)
+
+| Pillar | Inc destinations |
+|--------|------------------|
+| **Established** | `Started-Businesses/`, live ops folders |
+| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `business_ideas_*.md`, `past_business_ideas.md` |
+| **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
+| **My leads** | `abuja_lead_generator/` |
+| **Automation / content** | `Strategy-2-Problem-Solving/Content-Automation/` |
+| **Staging** | `Google Drive Business Files/` — mirror/inbox only, not final home |
+
+#### Layout (proposed — approve before creating files)
+
+**Recommendation:** Extend `business_bookmark_sorter/` patterns **or** new folder `google_drive_business_sorter/` at repo root if Drive-specific logic grows (inventory diff, export manifest, pillar routing). Reuse `config/routes.json` taxonomy where possible.
+
+#### Phases
+
+**Phase 0 — Discovery (read-only)** ✅ *partial — chat analysis 2026-06-16*
+- [x] Map 12 local `Google Drive Business Files/` cards to Strategies 3–14
+- [ ] User provides Drive `business` file list export (titles only — no private links in repo)
+- [ ] Diff export vs local mirror vs Inc strategy folders; produce gap report
+
+**Phase 1 — Inventory + routing rules**
+- [ ] `routes` or manifest: Drive title patterns → Inc destination (reuse bookmark sorter pillars)
+- [ ] CLI: `discover` / `status` / `list` for mirrored + inventoried items
+- [ ] Mark items: `synced` | `inc_only` | `drive_only` | `needs_review`
+
+**Phase 2 — Review UI (minimal manual work)**
+- [ ] Tkinter or markdown checklist: confirm destination per item
+- [ ] On file: write pointer line to correct `links.md` or master `Business Links.md` section (no raw Doc URLs in committed files unless you opt in)
+
+**Phase 3 — Inc launcher integration (optional)**
+- [ ] Add **Google Drive business sorter** under **Formulated ideas** in `inc_launcher/launcher_config.json`
+
+#### Out of scope (v1)
+- Automated Google Drive API sync
+- Auto-delete or move files in Drive
+- Committing private Doc/chat URLs
+
+**Related:** Business Bookmark Sorting (task §5) — same pillar taxonomy, different source inbox.
+
+---
+
+### 9. Cybersecurity Vertical — Nigerian News (Strategies 5 + 9)
+**Status:** Planning — **implementation not started**  
+**Goal:** Derive **cybersecurity solution ideas** from Nigerian news and financial press using existing formulation pipelines — **not** physical security, insurgency, or generic “national security” headlines.
+
+#### Scope (in)
+
+| Signal type | Examples already in Inc captures |
+|-------------|----------------------------------|
+| Payment / fintech cyber risk | “digital payment boom faces rising cybersecurity threats” |
+| Fraud / scams | EFCC cases, celebrity endorsement fraud, deepfake ad scams |
+| Compliance | NDPR / NDPA friction in digital products |
+| Enterprise / data | Breach-adjacent, AML/fraud tooling, trade-data cybersecurity |
+
+#### Scope (out)
+
+- Route-risk / Borno / Amotekun / communal violence (separate civic-security track if needed)
+- New Strategy **16** unless cyber-only volume justifies its own playbook folder
+
+#### Approach (recommended)
+
+Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian news) + **Strategy 9** (Nairametrics, Financial Nigeria, BusinessDay) — not a replacement strategy.
+
+**Flow:** News extract (S5/S9) → keyword/sector tag → Prompt 1b tabulation → optional **Strategy 12** GUEMF score → ranked cyber backlog markdown.
+
+**Privacy:** Same as Strategy 5 alignment — `Proposed domain (not verified)`; no mandatory source article URLs in committed idea tables.
+
+#### Phases
+
+**Phase 0 — Backlog from existing outputs (read-only)**
+- [ ] Grep/collect cyber-adjacent rows from `business_ideas_*.md`, `news_problems_*.json`, `past_business_ideas.md`
+- [ ] Single ranked list: `business_research/cybersecurity_ideas_backlog.md` (or Strategy 5 subfolder)
+
+**Phase 1 — Filter config**
+- [ ] `cyber_keywords.json` or config block in Strategy 5/9: cyber, fraud, phishing, ransomware, deepfake, NDPR, NDPA, breach, AML, identity, PSP, etc.
+- [ ] Exclude patterns: physical security, Amotekun, kidnapping (unless explicitly cyber-enabled fraud angle)
+
+**Phase 2 — CLI / script hook**
+- [ ] `--sector cyber` or post-process command on latest `news_problems_*.json`
+- [ ] Output: `cyber_news_problems_YYYYMMDD.json` + Prompt 1a payload scoped to cyber headlines only
+
+**Phase 3 — Optional GUEMF pass**
+- [ ] Pipe Phase 2 output through Strategy **12** for high-value problem scoring
+
+**Phase 4 — Launcher (optional)**
+- [ ] Shortcut under **Formulated ideas**: “Run cyber news slice (S5+S9)”
+
+#### v1 definition of done
+
+- [ ] One automated pass produces a cyber-filtered artifact from existing Strategy 5/9 machinery
+- [ ] Backlog markdown with ≥10 ranked ideas traced to “With the mention of” headlines (domains TBD)
+- [ ] No new privacy regressions (no forced article URLs in repo)
+
+#### Out of scope (v1)
+
+- Building a cyber product MVP
+- Licensed threat-intel API integrations
+- Scraping paywalled security vendor blogs
+
+**Folders (when approved):** extend `Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction/` and/or `Business-Idea-Formulation-Strategy-9-*`; backlog under `business_research/`.
 
 ---
 

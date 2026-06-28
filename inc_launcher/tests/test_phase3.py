@@ -42,10 +42,20 @@ def test_login_startup_roundtrip(tmp_path, monkeypatch):
 
 
 def test_ensure_single_instance_on_windows(monkeypatch):
-    if not __import__("sys").platform == "win32":
+    import sys
+
+    if sys.platform != "win32":
         return
-    monkeypatch.setattr(
-        "inc_launcher.single_instance.ensure_single_instance",
-        lambda: True,
-    )
+
+    import inc_launcher.single_instance as single_instance_mod
+
+    class _FakeKernel32:
+        def CreateMutexW(self, _a, _b, _name):
+            return 1
+
+        def GetLastError(self):
+            return 0
+
+    single_instance_mod._mutex_handle = None
+    monkeypatch.setattr("ctypes.windll.kernel32", _FakeKernel32())
     assert ensure_single_instance() is True

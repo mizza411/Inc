@@ -13,15 +13,31 @@ if str(_INC_ROOT) not in sys.path:
     sys.path.insert(0, str(_INC_ROOT))
 
 from inc_launcher.actions import run_action
-from inc_launcher.config import INC_ROOT, load_config, list_global_actions, list_pillars
+from inc_launcher.config import (
+    INC_ROOT,
+    load_config,
+    list_global_actions,
+    list_pillars,
+    is_interval_nudges_enabled,
+    set_interval_nudges_enabled,
+)
 from inc_launcher.hub_window import show_hub
 from inc_launcher.icon_loader import load_tray_icon
+from inc_launcher.nudge_scheduler import start_nudge_scheduler, stop_nudge_scheduler
 from inc_launcher.single_instance import ensure_single_instance
 from inc_launcher.startup import is_login_startup_enabled, set_login_startup
 
 logger = logging.getLogger(__name__)
 
 _hub_config: Dict[str, Any] | None = None
+_config_path: Path | None = None
+_tray_icon: Any = None
+
+
+def _refresh_tray_menu() -> None:
+    if _tray_icon is None:
+        return
+    _tray_icon.menu = build_menu(load_config(_config_path))
 
 
 def _open_hub() -> None:
@@ -34,8 +50,22 @@ def _toggle_login_startup() -> None:
         set_login_startup(not is_login_startup_enabled())
         state = "enabled" if is_login_startup_enabled() else "disabled"
         logger.info("Login startup %s", state)
+        _refresh_tray_menu()
     except Exception as exc:
         logger.exception("Failed to toggle login startup: %s", exc)
+
+
+def _toggle_interval_nudges() -> None:
+    try:
+        set_interval_nudges_enabled(
+            not is_interval_nudges_enabled(_config_path),
+            _config_path,
+        )
+        state = "enabled" if is_interval_nudges_enabled(_config_path) else "disabled"
+        logger.info("Interval nudges %s", state)
+        _refresh_tray_menu()
+    except Exception as exc:
+        logger.exception("Failed to toggle interval nudges: %s", exc)
 
 
 def _item_handler(item: Dict[str, Any]) -> Callable[[], None]:
@@ -74,13 +104,24 @@ def build_menu(config: Dict[str, Any]):
     entries.append(
         item(
             "Start at Windows login [ON]" if login_on else "Start at Windows login [OFF]",
-            _toggle_login_startup,
+            lambda icon, item: _toggle_login_startup(),
+        )
+    )
+    nudges_on = is_interval_nudges_enabled(_config_path)
+    entries.append(
+        item(
+            "Interval nudges [ON]" if nudges_on else "Interval nudges [OFF]",
+            lambda icon, item: _toggle_interval_nudges(),
         )
     )
     entries.append(Menu.SEPARATOR)
     entries.append(item("Quit", lambda icon, item: icon.stop()))
 
     return pystray.Menu(*entries)
+
+
+def _run_menu_action(item: Dict[str, Any]) -> None:
+    run_action(item, INC_ROOT)
 
 
 def run_tray(config_path: str | None = None) -> None:
@@ -93,9 +134,17 @@ def run_tray(config_path: str | None = None) -> None:
             pass
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
-    config = load_config(None if config_path is None else __import__("pathlib").Path(config_path))
-    global _hub_config
+    config_path_obj = None if config_path is None else Path(config_path)
+    config = load_config(config_path_obj)
+    global _hub_config, _config_path, _tray_icon
     _hub_config = config
+    _config_path = config_path_obj
+
+    start_nudge_scheduler(
+        config_path_obj,
+        open_hub=show_hub,
+        run_menu_action=_run_menu_action,
+    )
 
     icon = pystray.Icon(
         "inc_launcher",
@@ -103,8 +152,13 @@ def run_tray(config_path: str | None = None) -> None:
         config.get("app_name", "Inc Launcher"),
         build_menu(config),
     )
+    _tray_icon = icon
     logger.info("Inc tray icon running (Inc root: %s)", INC_ROOT)
-    icon.run()
+    try:
+        icon.run()
+    finally:
+        _tray_icon = None
+        stop_nudge_scheduler()
 
 
 def main() -> None:
