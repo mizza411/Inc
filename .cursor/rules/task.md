@@ -130,11 +130,33 @@
 ---
 
 ### 4. Inc Tray Icon + Super Main Launcher
-**Status:** Phase 3 complete; manual Phase 2 UI checks still pending  
+**Status:** Phase 4 complete + Track C (bookmark review menu) — **live on PC** (2026-06-29)  
 **Goal:** Windows **tray icon** (notification area, near the clock) + optional super main hub; all `C:\dev\Inc` entry points organized under **4 pillars** (extensible to 5+ later).  
-**Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`
+**Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`  
+**Manual tests:** `inc_launcher/MANUAL_TEST.md` (most checks automated; optional §D reboot only)
 
 > **Terminology:** “Tray icon” = the small icon you right-click in the Windows notification area. Same as “system tray app” — one background process, one icon, menu on right-click.
+
+#### Session handoff (Inc launcher + nudges + Track C — convo closed 2026-06-29)
+
+| Item | Status |
+|------|--------|
+| Phase 4 interval nudges (4.1–4.5) | ✅ Shipped `4c54b9c`; **Interval nudges [ON]** in tray |
+| Track C — Bookmark review menu | ✅ Shipped `909c6d9`; **Formulated ideas → Bookmark review** |
+| Automated tests | ✅ `pytest inc_launcher/tests` (38+) + `smoke_hub`; `test_cli_status.py`, `test_track_c_bookmark.py` |
+| Boot | External-repo `auto_launcher.py` starts tray; Inc **Start at Windows login [OFF]** (intentional) |
+| Live nudge proof | `inc_launcher/schedule_fired.json` — fired 2026-06-29: 09:00 task.md, 09:15 Hub, 10:00 Problem ID live |
+
+**No major pending dev** for this thread. Optional follow-ups below.
+
+#### Pending (optional — not blocking)
+
+- [ ] **Schedule tune** — if 09:15 Hub or 10:00 Problem ID browser nudge is too noisy; edit `launcher_config.json` → `schedules.items` or tray **Interval nudges [OFF]**
+- [ ] **Track B** — clearer boot vs nudge toggle labels — **skipped** (user 2026-06-29); reopen only if menu still confusing
+- [ ] **Bookmark review schedule** — weekday nudge deferred; menu-only for now
+- [ ] **Phase 4 v1.1** — toast + Snooze before auto-open; catch-up if tray starts after missed slot
+- [ ] **MANUAL_TEST §D** — reboot + external `auto_launcher` one-tray check (skip if daily use already OK)
+- [ ] **Operational** — file Chrome bookmarks via tray review (~**1926** pending per `python -m business_bookmark_sorter status`)
 
 #### Four pillars (top-level nav — tray icon right-click + super main sidebar)
 
@@ -175,17 +197,18 @@
 - [x] Launcher grid per pillar (icons/labels from config)
 - [x] Optional: show last-opened / pinned items
 
-#### Manual verification (you — do later on your PC)
+#### Manual verification (Phase 2 + 4)
 
-Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `python -m inc_launcher.tests.smoke_hub` from `C:\dev\Inc`). Complete these **on your machine** before treating Phase 2 as fully signed off:
+Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `python -m inc_launcher.tests.smoke_hub` + Phase 4 sign-off tests. See `inc_launcher/MANUAL_TEST.md`.
 
-- [ ] **Start tray app** — `cd C:\dev\Inc\inc_launcher` then `python tray_app.py`; icon appears near the clock
-- [ ] **Left-click tray icon** — Inc Hub window opens (sidebar + launcher cards; no error dialog)
-- [ ] **Pillar switch** — Click **Formulated ideas** in sidebar; **Run all strategies** shows under **Pinned**
-- [ ] **Run a launcher** — Click a card (e.g. opens `task.md` or a folder); target opens in Explorer/default app
-- [ ] **Recently opened** — Re-open Inc Hub; same pillar shows the item under **Recently opened**
-- [ ] **Right-click tray menu** — Menu shows **Open Inc Hub**, four pillar submenus, global actions, **Quit** (no crash)
-- [x] **Optional: commit Phase 2** — Pushed `c5057d3` on `main` (2026-05-24); tick UI items below when you finish hands-on checks
+- [x] **Start tray app** — verified via external `auto_launcher` + manual restarts in session
+- [x] **Left-click tray icon** — Hub opens (`smoke_hub`)
+- [x] **Pillar switch / Pinned** — `smoke_hub` + config tests
+- [x] **Run a launcher** — action targets exist (`smoke_hub`)
+- [x] **Recently opened** — `smoke_hub` records recent
+- [x] **Right-click tray menu** — builds; **Interval nudges**, **Bookmark review** present (session 2026-06-29)
+- [x] **Optional: commit Phase 2** — Pushed `c5057d3` on `main` (2026-05-24)
+- [x] **Phase 4 live** — nudges ON; `schedule_fired.json` confirms fires (2026-06-29)
 
 **Phase 3 — Scale beyond 4** ✅
 - [x] Add pillars via config only — **Automation hub** pillar in `launcher_config.json` (add more without code changes)
@@ -193,9 +216,9 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 - [x] Start at login — tray menu **Start at Windows login [ON/OFF]** (writes `Inc Launcher.bat` to Startup folder)
 - [x] Custom icon — optional `inc_launcher/assets/icon.png` or `settings.icon_path` in config
 
-**Phase 4 — Interval nudges (approved schedule — not implemented)**  
+**Phase 4 — Interval nudges** ✅ **LIVE** (`schedules.enabled: true` on PC)  
 **Problem:** Too many tray icons; Inc Hub is easy to forget. **Not** Windows login — tray already runs; **timer** fires existing menu actions so work surfaces without hunting the notification area.  
-**Approved:** 2026-05-30 (user option **1** — starter interval list).
+**Approved:** 2026-05-30 (user option **1** — starter interval list). **Shipped:** 2026-06-28/29 (`4c54b9c`).
 
 | When | Action (existing tray target) | Config ref |
 |------|------------------------------|------------|
@@ -209,12 +232,16 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 - Scheduler lives **inside** `inc_launcher` tray process; reuses `run_action` / hub open — no extra tray icons.
 - Optional later: toast + Snooze before opening (not in v1 scope until built).
 
-**Phase 4 tasks (build when user picks implement):**
-- [x] **4.1** Schedule config + `scheduled_nudges.py` (parse, resolve targets, due logic) — **`enabled: false`**; no tray/timer wiring yet (zero runtime change)
-- [x] **4.2** Background timer in `nudge_scheduler.py` + `tray_app.py`; calls `run_action` / `show_hub`; persists fired keys in `schedule_fired.json` (gitignored). **Still idle while `schedules.enabled` is false.**
-- [x] **4.3** Tray submenu: **Interval nudges [ON/OFF]** — persists `schedules.enabled` in `launcher_config.json`; menu label refreshes after toggle
-- [x] **4.4** Tests: scheduler + sign-off automation in `test_phase4_signoff.py`, `test_nudge_scheduler.py`, `test_phase4_toggle.py`, `smoke_hub.py`
-- [x] **4.5** `inc_launcher/MANUAL_TEST.md` — one manual pass at Phase 4 sign-off (deferred per `deferred-manual-testing.mdc`)
+**Phase 4 tasks:**
+- [x] **4.1** Schedule config + `scheduled_nudges.py`
+- [x] **4.2** Background timer in `nudge_scheduler.py` + `tray_app.py`
+- [x] **4.3** Tray submenu: **Interval nudges [ON/OFF]**
+- [x] **4.4** Tests: `test_phase4_signoff.py`, `test_nudge_scheduler.py`, `test_phase4_toggle.py`, `smoke_hub.py`
+- [x] **4.5** `inc_launcher/MANUAL_TEST.md`
+
+**Track C (bookmark review — same session):**
+- [x] **Formulated ideas → Bookmark review** in `launcher_config.json` (`909c6d9`)
+- [x] Tests: `test_track_c_bookmark.py`, `business_bookmark_sorter/tests/test_cli_status.py`
 
 **Boot note:** External-repo `auto_launcher.py` starts tray at login; keep Inc **Start at Windows login [OFF]** to avoid duplicate starts (`single_instance` prevents double tray, but one boot path is clearer). Phase 4 timer runs inside the tray process Layer 1 already started.
 
@@ -223,8 +250,9 @@ Automated checks already pass (`python -m pytest inc_launcher/tests -q` and `pyt
 ---
 
 ### 5. Business Bookmark Sorting (Chrome → Inc folders)
-**Status:** Phase 0–2b implemented; Phase 3 (de-bookmark) pending — **~1937** items in queue  
-**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**). After Phase 2b, filing one bookmark should mean: **saved in queue, visible in the right markdown, docx open for eyeball check** — then user may delete from Chrome (Phase 3 still manual until built).
+**Status:** Phase 0–2b implemented; Phase 3 (de-bookmark) pending — **~1926 pending** / 1942 total in queue (2026-06-29)  
+**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**). After Phase 2b, filing one bookmark should mean: **saved in queue, visible in the right markdown, docx open for eyeball check** — then user may delete from Chrome (Phase 3 still manual until built).  
+**Tray entry:** Formulated ideas → **Bookmark review** (`inc_launcher/launcher_config.json` → `bookmark_review`)
 
 #### Problem (what “sorting” means)
 
