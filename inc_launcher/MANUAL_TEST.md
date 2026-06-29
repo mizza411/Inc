@@ -25,6 +25,16 @@ Run **both** commands. Pytest covers A/B/C/E logic; `smoke_hub` (~7s) covers Hub
 | **Phase 2 hub** | `python -m inc_launcher.tests.smoke_hub` | Hub opens/closes; config paths; menu build |
 | Schedule parsing | `test_scheduled_nudges.py` | Times, days, targets, skip rules |
 | Regression | Full `inc_launcher/tests` | No module regressions |
+| **Track C** — Bookmark review | `test_track_c_bookmark.py`, `test_config.py::test_formulated_has_bookmark_review` | Tray menu item + `review` CLI registered |
+| **Bookmark queue status** | `business_bookmark_sorter/tests/test_cli_status.py` | `status` command + pending counts |
+
+**Bookmark backlog check (automated):**
+
+```powershell
+cd C:\dev\Inc
+python -m business_bookmark_sorter status
+python -m pytest business_bookmark_sorter/tests/test_cli_status.py -q
+```
 
 **Expected:** all pytest tests pass; `smoke_hub` prints `=== SMOKE TEST PASSED ===`.
 

@@ -68,6 +68,13 @@
           "pinned": true
         },
         {
+          "id": "bookmark_review",
+          "label": "Bookmark review",
+          "action": "command",
+          "command": "python -m business_bookmark_sorter review",
+          "cwd": "."
+        },
+        {
           "label": "Latest business ideas (May 2026)",
           "action": "file",
           "path": "business_ideas_20260508.md"

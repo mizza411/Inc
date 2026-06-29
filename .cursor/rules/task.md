@@ -348,7 +348,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [ ] Never delete from Chrome without explicit user action or setting
 
 **Phase 4 — Inc launcher integration (optional)**
-- [ ] Add **Business bookmark sorter** item under Formulated ideas or new pillar in `inc_launcher/launcher_config.json`
+- [x] Add **Business bookmark sorter** item under Formulated ideas in `inc_launcher/launcher_config.json` (Track C menu only — `bookmark_review` → `python -m business_bookmark_sorter review`; no schedule yet)
 
 #### Manual verification (after build)
 

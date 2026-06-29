@@ -30,6 +30,16 @@ def test_config_items_have_actions():
             assert "label" in item
 
 
+def test_formulated_has_bookmark_review():
+    config = load_config()
+    formulated = next(p for p in list_pillars(config) if p["id"] == "formulated")
+    by_id = {item.get("id"): item for item in formulated.get("items", []) if item.get("id")}
+    assert "bookmark_review" in by_id
+    review = by_id["bookmark_review"]
+    assert review["action"] == "command"
+    assert "business_bookmark_sorter review" in review["command"]
+
+
 def test_tray_menu_builds():
     from inc_launcher.tray_app import build_menu
 
