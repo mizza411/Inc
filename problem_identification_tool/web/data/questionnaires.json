@@ -58,13 +58,95 @@
         "estimated_time": "3-5 minutes",
         "completion_reward": "Thank you for helping us understand community needs!"
       }
+    },
+    {
+      "id": "ill_pay_to_v1",
+      "title": "I'll pay to..",
+      "description": "Tell us what problems you'd pay to have solved — your answers help us build solutions that matter.",
+      "questions": [
+        {
+          "id": "q1_email",
+          "type": "email",
+          "question": "Email",
+          "placeholder": "your.email@example.com",
+          "help_text": "Used only to follow up about solutions to the problem you describe. Not sold or shared.",
+          "required": true
+        },
+        {
+          "id": "q2_problem",
+          "type": "open_text",
+          "question": "What problem(s) would you pay to have solved?",
+          "placeholder": "Describe the problem...",
+          "required": true
+        },
+        {
+          "id": "q3_tried_solutions",
+          "type": "multiple_choice",
+          "question": "Have you tried any existing solutions?",
+          "options": ["Yes", "No"],
+          "required": true
+        },
+        {
+          "id": "q4_solutions_lacking",
+          "type": "open_text",
+          "question": "If yes, what were the existing solutions lacking?",
+          "placeholder": "Describe what was missing or frustrating...",
+          "required": true,
+          "show_if": {
+            "question_id": "q3_tried_solutions",
+            "value": "Yes"
+          }
+        },
+        {
+          "id": "q5_payment_model",
+          "type": "multiple_choice",
+          "question": "What payment model do you prefer?",
+          "options": ["One-time fee", "Subscription"],
+          "required": true
+        },
+        {
+          "id": "q6_one_time_fee",
+          "type": "short_text",
+          "question": "How much one-time fee are you willing to pay for the solution?",
+          "placeholder": "e.g. 5000 NGN or $50",
+          "required": true,
+          "show_if": {
+            "question_id": "q5_payment_model",
+            "value": "One-time fee"
+          }
+        },
+        {
+          "id": "q7_subscription_fee",
+          "type": "short_text",
+          "question": "How much subscription fee are you willing to pay for the solution?",
+          "placeholder": "e.g. 2000 NGN/month or $9/month",
+          "required": true,
+          "show_if": {
+            "question_id": "q5_payment_model",
+            "value": "Subscription"
+          }
+        },
+        {
+          "id": "q8_urgency",
+          "type": "multiple_choice",
+          "question": "How urgent is this problem for you?",
+          "options": [
+            "Not urgent at all - I can live with this problem indefinitely",
+            "Slightly urgent - It would be nice to solve eventually, but no rush",
+            "Moderately urgent - I'd like to solve this within the next few months",
+            "Very urgent - I need a solution within the next few weeks",
+            "Extremely urgent - I need this solved as soon as possible, it's affecting my daily life/work"
+          ],
+          "required": true
+        }
+      ],
+      "settings": {
+        "anonymous": false,
+        "allow_skipping": false,
+        "estimated_time": "2-3 minutes",
+        "completion_reward": "Thank you for sharing what you'd pay to solve — we'll be in touch if we build something for your problem."
+      }
     }
   ],
-  "active_questionnaire": "general_problems_v1"
+  "active_questionnaire": "ill_pay_to_v1"
 }
-
-
-
-
-
-

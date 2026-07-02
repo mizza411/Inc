@@ -3,8 +3,11 @@ class QuestionnaireEngine {
     constructor() {
         this.currentQuestion = 0;
         this.responses = {};
-        this.questions = [];
+        this.allQuestions = [];
+        this.visibleQuestions = [];
         this.totalQuestions = 0;
+        this.questionnaireId = null;
+        this.refParam = null;
         this.startTime = Date.now();
         this.isTransitioning = false;
         this.init();
@@ -22,6 +25,14 @@ class QuestionnaireEngine {
         }
     }
 
+    getUrlParam(name) {
+        try {
+            return new URLSearchParams(window.location.search).get(name);
+        } catch (_) {
+            return null;
+        }
+    }
+
     async loadQuestionnaire() {
         try {
             // Try web/data first (for GitHub Pages), then fallback to ../data (for local dev)
@@ -30,22 +41,82 @@ class QuestionnaireEngine {
                 response = await fetch('../data/questionnaires.json');
             }
             const data = await response.json();
-            const activeQuestionnaire = data.questionnaires.find(q => q.id === data.active_questionnaire);
-            
+            const surveyParam = this.getUrlParam('survey');
+            const targetId = surveyParam || data.active_questionnaire;
+            const activeQuestionnaire = data.questionnaires.find(q => q.id === targetId);
+
             if (!activeQuestionnaire) {
-                throw new Error('No active questionnaire found');
+                throw new Error(`No questionnaire found for id: ${targetId}`);
             }
-            
-            this.questions = activeQuestionnaire.questions;
-            this.totalQuestions = this.questions.length;
-            this.settings = activeQuestionnaire.settings;
+
+            this.allQuestions = activeQuestionnaire.questions;
+            this.questionnaireId = activeQuestionnaire.id;
+            this.settings = activeQuestionnaire.settings || { anonymous: true, allow_skipping: true };
+            this.refParam = this.getUrlParam('ref') || this.getUrlParam('utm_source') || null;
+            this.refreshVisibleQuestions();
+            this.applyQuestionnaireMeta(activeQuestionnaire);
         } catch (error) {
             console.error('Error loading questionnaire:', error);
             // Fallback to hardcoded questions if JSON fails
-            this.questions = this.getFallbackQuestions();
-            this.totalQuestions = this.questions.length;
+            this.allQuestions = this.getFallbackQuestions();
+            this.questionnaireId = 'general_problems_v1_fallback';
+            this.refreshVisibleQuestions();
             this.settings = { anonymous: true, allow_skipping: true };
         }
+    }
+
+    applyQuestionnaireMeta(questionnaire) {
+        const h1 = document.querySelector('.header h1');
+        const desc = document.querySelector('.header p');
+        if (h1 && questionnaire.title) {
+            h1.textContent = questionnaire.title;
+        }
+        if (desc && questionnaire.description) {
+            desc.textContent = questionnaire.description;
+        }
+        if (questionnaire.title) {
+            document.title = questionnaire.title;
+        }
+    }
+
+    isQuestionVisible(question) {
+        if (!question.show_if) {
+            return true;
+        }
+        const { question_id, value } = question.show_if;
+        const response = this.responses[question_id];
+        if (Array.isArray(value)) {
+            return value.includes(response);
+        }
+        return response === value;
+    }
+
+    getVisibleQuestions() {
+        return this.allQuestions.filter(q => this.isQuestionVisible(q));
+    }
+
+    refreshVisibleQuestions() {
+        this.visibleQuestions = this.getVisibleQuestions();
+        this.totalQuestions = this.visibleQuestions.length;
+        if (this.currentQuestion >= this.totalQuestions) {
+            this.currentQuestion = Math.max(0, this.totalQuestions - 1);
+        }
+        const container = document.getElementById('stepDots');
+        if (container) {
+            delete container.dataset.built;
+        }
+    }
+
+    getCurrentQuestion() {
+        return this.visibleQuestions[this.currentQuestion];
+    }
+
+    pruneHiddenResponses() {
+        this.allQuestions.forEach(q => {
+            if (!this.isQuestionVisible(q) && Object.prototype.hasOwnProperty.call(this.responses, q.id)) {
+                delete this.responses[q.id];
+            }
+        });
     }
 
     getFallbackQuestions() {
@@ -56,7 +127,7 @@ class QuestionnaireEngine {
                 question: "What area of your life would you like to improve most?",
                 options: [
                     "Work/Career",
-                    "Health & Fitness", 
+                    "Health & Fitness",
                     "Personal Relationships",
                     "Financial Situation",
                     "Learning & Education",
@@ -89,7 +160,7 @@ class QuestionnaireEngine {
                 question: "How often do these challenges affect your daily life?",
                 options: [
                     "Constantly",
-                    "Daily", 
+                    "Daily",
                     "Weekly",
                     "Monthly",
                     "Rarely"
@@ -105,7 +176,7 @@ class QuestionnaireEngine {
 
     renderQuestionInner() {
         const form = document.getElementById('questionnaireForm');
-        const question = this.questions[this.currentQuestion];
+        const question = this.getCurrentQuestion();
 
         if (!question) {
             this.showCompletion();
@@ -115,6 +186,7 @@ class QuestionnaireEngine {
         form.innerHTML = `
             <div class="question active">
                 <h3>${this.escapeHtml(question.question)}</h3>
+                ${question.help_text ? `<p class="question-help">${this.escapeHtml(question.help_text)}</p>` : ''}
                 <div class="options">
                     ${this.renderQuestionInput(question)}
                 </div>
@@ -124,7 +196,7 @@ class QuestionnaireEngine {
 
         this.updateProgress();
         this.updateButtons();
-        this.restoreOtherInputState(question);
+        this.restoreInputState(question);
         notifyHeightIfEmbedded();
     }
 
@@ -154,65 +226,82 @@ class QuestionnaireEngine {
         this.isTransitioning = false;
     }
 
-    restoreOtherInputState(question) {
+    restoreInputState(question) {
         if (question.type === 'multiple_choice' && this.responses[question.id]) {
             const responseValue = this.responses[question.id];
-            // Check if response starts with "Other:"
             if (responseValue.startsWith('Other:')) {
                 const otherText = responseValue.replace('Other:', '').trim();
                 const otherRadio = document.querySelector(`input[name="${question.id}"][data-is-other="true"]`);
                 const otherInputContainer = document.getElementById(`${question.id}_other_input`);
                 const otherTextInput = document.getElementById(`${question.id}_other_text`);
-                
+
                 if (otherRadio && otherInputContainer && otherTextInput) {
-                    // Select the "Other" radio button
                     otherRadio.checked = true;
                     otherRadio.closest('.option').classList.add('selected');
-                    // Show and populate the text input
                     otherInputContainer.style.display = 'block';
                     otherTextInput.value = otherText;
                 }
             } else {
-                // Restore regular option selection
-                const selectedRadio = document.querySelector(`input[name="${question.id}"][value="${responseValue}"]`);
+                const selectedRadio = document.querySelector(`input[name="${question.id}"][value="${CSS.escape(responseValue)}"]`);
                 if (selectedRadio) {
                     selectedRadio.checked = true;
                     selectedRadio.closest('.option').classList.add('selected');
                 }
             }
         }
+
+        if ((question.type === 'email' || question.type === 'short_text') && this.responses[question.id]) {
+            const input = document.querySelector(`input[name="${question.id}"]`);
+            if (input) {
+                input.value = this.responses[question.id];
+            }
+        }
+
+        if (question.type === 'open_text' && this.responses[question.id]) {
+            const textarea = document.querySelector(`textarea[name="${question.id}"]`);
+            if (textarea) {
+                textarea.value = this.responses[question.id];
+            }
+        }
+
+        if (question.type === 'rating' && this.responses[question.id]) {
+            const ratingOption = document.querySelector(`.rating-option[data-value="${this.responses[question.id]}"]`);
+            if (ratingOption) {
+                ratingOption.classList.add('selected');
+            }
+        }
     }
 
     renderQuestionInput(question) {
         switch (question.type) {
-            case 'multiple_choice':
+            case 'multiple_choice': {
                 const hasOther = question.options.some(opt => opt.toLowerCase() === 'other');
                 const optionsHtml = question.options.map(option => `
                     <label class="option">
-                        <input type="radio" name="${question.id}" value="${option}" data-is-other="${option.toLowerCase() === 'other'}">
-                        ${option}
+                        <input type="radio" name="${question.id}" value="${option.replace(/"/g, '&quot;')}" data-is-other="${option.toLowerCase() === 'other'}">
+                        ${this.escapeHtml(option)}
                     </label>
                 `).join('');
-                
-                // Add text input for "Other" option (initially hidden)
+
                 const otherInputHtml = hasOther ? `
                     <div class="other-input-container" id="${question.id}_other_input" style="display: none; margin-top: 15px;">
                         <label for="${question.id}_other_text" style="display: block; margin-bottom: 8px; font-weight: 500;">
                             Please specify:
                         </label>
-                        <input 
-                            type="text" 
-                            id="${question.id}_other_text" 
-                            name="${question.id}_other" 
+                        <input
+                            type="text"
+                            id="${question.id}_other_text"
+                            name="${question.id}_other"
                             class="other-text-input"
                             placeholder="Enter your answer..."
                         >
                     </div>
                 ` : '';
-                
-                return optionsHtml + otherInputHtml;
 
-            case 'rating':
+                return optionsHtml + otherInputHtml;
+            }
+
+            case 'rating': {
                 let ratingHtml = '<div class="rating-scale">';
                 for (let i = question.min; i <= question.max; i++) {
                     ratingHtml += `
@@ -224,15 +313,37 @@ class QuestionnaireEngine {
                 }
                 ratingHtml += '</div>';
                 return ratingHtml;
+            }
 
             case 'open_text':
                 return `
-                    <textarea 
-                        class="text-input" 
-                        name="${question.id}" 
-                        placeholder="${question.placeholder || 'Please enter your response...'}"
+                    <textarea
+                        class="text-input"
+                        name="${question.id}"
+                        placeholder="${this.escapeHtml(question.placeholder || 'Please enter your response...')}"
                         rows="4"
                     ></textarea>
+                `;
+
+            case 'email':
+                return `
+                    <input
+                        type="email"
+                        class="text-input short-input"
+                        name="${question.id}"
+                        placeholder="${this.escapeHtml(question.placeholder || 'your.email@example.com')}"
+                        autocomplete="email"
+                    >
+                `;
+
+            case 'short_text':
+                return `
+                    <input
+                        type="text"
+                        class="text-input short-input"
+                        name="${question.id}"
+                        placeholder="${this.escapeHtml(question.placeholder || 'Please enter your response...')}"
+                    >
                 `;
 
             default:
@@ -241,7 +352,6 @@ class QuestionnaireEngine {
     }
 
     setupEventListeners() {
-        // Next button
         document.getElementById('nextBtn').addEventListener('click', () => {
             if (this.validateCurrentQuestion()) {
                 this.saveCurrentResponse();
@@ -249,21 +359,17 @@ class QuestionnaireEngine {
             }
         });
 
-        // Previous button
         document.getElementById('prevBtn').addEventListener('click', () => {
             this.previousQuestion();
         });
 
-        // Option selection for multiple choice
         document.addEventListener('change', (e) => {
             if (e.target.type === 'radio') {
                 this.updateOptionSelection(e.target);
-                // Show/hide "Other" text input
                 this.handleOtherOption(e.target);
             }
         });
 
-        // Rating selection
         document.addEventListener('click', (e) => {
             if (e.target.closest('.rating-option')) {
                 this.selectRating(e.target.closest('.rating-option'));
@@ -307,7 +413,7 @@ class QuestionnaireEngine {
         const container = document.getElementById('stepDots');
         if (!container || this.totalQuestions < 1) return;
 
-        if (container.dataset.built !== '1') {
+        if (container.dataset.built !== String(this.totalQuestions)) {
             container.innerHTML = '';
             for (let i = 0; i < this.totalQuestions; i++) {
                 const dot = document.createElement('span');
@@ -315,7 +421,7 @@ class QuestionnaireEngine {
                 dot.title = `Question ${i + 1}`;
                 container.appendChild(dot);
             }
-            container.dataset.built = '1';
+            container.dataset.built = String(this.totalQuestions);
         }
 
         container.querySelectorAll('.step-dot').forEach((dot, index) => {
@@ -339,16 +445,14 @@ class QuestionnaireEngine {
         const isOther = selectedInput.dataset.isOther === 'true';
         const otherInputContainer = document.getElementById(`${questionId}_other_input`);
         const otherTextInput = document.getElementById(`${questionId}_other_text`);
-        
+
         if (otherInputContainer) {
             if (isOther) {
-                // Show the text input when "Other" is selected
                 otherInputContainer.style.display = 'block';
                 if (otherTextInput) {
                     otherTextInput.focus();
                 }
             } else {
-                // Hide the text input and clear it when another option is selected
                 otherInputContainer.style.display = 'none';
                 if (otherTextInput) {
                     otherTextInput.value = '';
@@ -358,27 +462,28 @@ class QuestionnaireEngine {
     }
 
     selectRating(ratingElement) {
-        const questionId = this.questions[this.currentQuestion].id;
+        const question = this.getCurrentQuestion();
+        if (!question) return;
         const value = ratingElement.dataset.value;
-        
-        // Remove previous selection
+
         document.querySelectorAll('.rating-option').forEach(option => {
             option.classList.remove('selected');
         });
-        
-        // Add selection to clicked option
+
         ratingElement.classList.add('selected');
-        
-        // Store the value
-        this.responses[questionId] = value;
+        this.responses[question.id] = value;
+    }
+
+    isValidEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
     }
 
     validateCurrentQuestion() {
-        const question = this.questions[this.currentQuestion];
-        if (!question.required) return true;
+        const question = this.getCurrentQuestion();
+        if (!question || !question.required) return true;
 
         const questionId = question.id;
-        
+
         if (question.type === 'multiple_choice') {
             const selected = document.querySelector(`input[name="${questionId}"]:checked`);
             if (!selected) {
@@ -405,6 +510,26 @@ class QuestionnaireEngine {
                 textarea?.focus();
                 return false;
             }
+        } else if (question.type === 'email') {
+            const input = document.querySelector(`input[name="${questionId}"]`);
+            const value = input?.value.trim() || '';
+            if (!value) {
+                this.showValidationError('Please enter your email address before continuing.');
+                input?.focus();
+                return false;
+            }
+            if (!this.isValidEmail(value)) {
+                this.showValidationError('Please enter a valid email address.');
+                input?.focus();
+                return false;
+            }
+        } else if (question.type === 'short_text') {
+            const input = document.querySelector(`input[name="${questionId}"]`);
+            if (!input?.value.trim()) {
+                this.showValidationError('Please enter a short answer before continuing.');
+                input?.focus();
+                return false;
+            }
         }
 
         this.clearValidationError();
@@ -412,17 +537,17 @@ class QuestionnaireEngine {
     }
 
     saveCurrentResponse() {
-        const question = this.questions[this.currentQuestion];
+        const question = this.getCurrentQuestion();
+        if (!question) return;
+
         const questionId = question.id;
-        
+
         if (question.type === 'multiple_choice') {
             const selected = document.querySelector(`input[name="${questionId}"]:checked`);
             if (selected) {
-                // If "Other" is selected, save both the "Other" option and the user's text
                 if (selected.dataset.isOther === 'true') {
                     const otherTextInput = document.getElementById(`${questionId}_other_text`);
                     const otherText = otherTextInput ? otherTextInput.value.trim() : '';
-                    // Save as "Other: [user's text]"
                     this.responses[questionId] = otherText ? `Other: ${otherText}` : 'Other';
                 } else {
                     this.responses[questionId] = selected.value;
@@ -433,8 +558,15 @@ class QuestionnaireEngine {
             if (textarea) {
                 this.responses[questionId] = textarea.value.trim();
             }
+        } else if (question.type === 'email' || question.type === 'short_text') {
+            const input = document.querySelector(`input[name="${questionId}"]`);
+            if (input) {
+                this.responses[questionId] = input.value.trim();
+            }
         }
-        // Rating responses are already saved in selectRating method
+
+        this.pruneHiddenResponses();
+        this.refreshVisibleQuestions();
     }
 
     nextQuestion() {
@@ -504,22 +636,18 @@ class QuestionnaireEngine {
         const responseData = {
             id: this.generateResponseId(),
             timestamp: new Date().toISOString(),
+            questionnaire_id: this.questionnaireId,
+            ref: this.refParam,
             responses: this.responses,
             completion_time: Date.now() - this.startTime,
             user_agent: navigator.userAgent,
             anonymous: this.settings.anonymous
         };
 
-        // PRIMARY STORAGE: Save to browser localStorage
-        // This is the main storage method - works offline and is privacy-first
-        // Data is stored in the user's browser and never leaves their device
         const existingResponses = JSON.parse(localStorage.getItem('questionnaire_responses') || '[]');
         existingResponses.push(responseData);
         localStorage.setItem('questionnaire_responses', JSON.stringify(existingResponses));
 
-        // OPTIONAL: Try to send to server (Netlify Function) for centralized storage
-        // This will fail on GitHub Pages (which is fine - localStorage is primary)
-        // If you need centralized storage, see DATA_STORAGE_GUIDE.md for alternatives
         try {
             const response = await fetch('/.netlify/functions/submit-response', {
                 method: 'POST',
@@ -528,7 +656,7 @@ class QuestionnaireEngine {
                 },
                 body: JSON.stringify(responseData)
             });
-            
+
             if (response.ok) {
                 console.log('Response saved to server successfully');
             } else {
@@ -546,12 +674,14 @@ class QuestionnaireEngine {
     showCompletion() {
         const form = document.getElementById('questionnaireForm');
         const buttonGroup = document.querySelector('.button-group');
+        const reward = this.settings.completion_reward ||
+            'Your responses have been recorded and will help us understand common challenges better.';
 
         this.clearValidationError();
         form.innerHTML = `
             <div class="completion-message">
                 <h2>Thank you!</h2>
-                <p>Your responses have been recorded and will help us understand common challenges better.</p>
+                <p>${this.escapeHtml(reward)}</p>
                 <p>We appreciate you taking the time to share your insights.</p>
             </div>
         `;
@@ -564,19 +694,14 @@ class QuestionnaireEngine {
         if (stepLabel) stepLabel.textContent = 'Complete';
         if (percentLabel) percentLabel.textContent = '100%';
         notifyHeightIfEmbedded();
-        
-        // NOTE: "View Analytics Dashboard" link is intentionally NOT shown here
-        // The dashboard is admin-only and should be accessed directly at:
-        // https://mizza411.github.io/Inc/problem_identification_tool/web/dashboard.html
-        // Regular users should not see analytics - it's for the survey creator only
     }
 
     showError(message) {
         const form = document.getElementById('questionnaireForm');
         form.innerHTML = `
             <div class="completion-message">
-                <h2 style="color: #dc3545;">❌ Error</h2>
-                <p>${message}</p>
+                <h2 style="color: #dc3545;">Error</h2>
+                <p>${this.escapeHtml(message)}</p>
                 <button class="btn btn-primary" onclick="location.reload()">Try Again</button>
             </div>
         `;
@@ -587,7 +712,6 @@ function notifyHeightIfEmbedded() {
     if (typeof notifyHeight === 'function') notifyHeight();
 }
 
-// Initialize the questionnaire when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     new QuestionnaireEngine();
 });

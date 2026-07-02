@@ -44,6 +44,25 @@
 
     responses.forEach(r => {
       const res = r.responses || {};
+      const isIllPayTo = r.questionnaire_id === 'ill_pay_to_v1' || res.q2_problem;
+
+      if (isIllPayTo) {
+        const txt = (res.q2_problem || '').trim();
+        if (txt.length > 5) {
+          const urgency = res.q8_urgency || '';
+          let sev = 5;
+          if (/extremely urgent/i.test(urgency)) sev = 10;
+          else if (/very urgent/i.test(urgency)) sev = 8;
+          else if (/moderately urgent/i.test(urgency)) sev = 6;
+          else if (/slightly urgent/i.test(urgency)) sev = 4;
+          else if (/not urgent/i.test(urgency)) sev = 2;
+          state.problems.push({ category: 'business', severity: sev, text: txt });
+          state.categories.business = (state.categories.business || 0) + 1;
+          state.severities[sev] = (state.severities[sev] || 0) + 1;
+        }
+        return;
+      }
+
       const cat = categorize(res.q1, res.q3);
       const sev = severityFromRating(res.q2);
 

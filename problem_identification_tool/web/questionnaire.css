@@ -275,6 +275,18 @@ body {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
+.text-input.short-input {
+    min-height: auto;
+    resize: none;
+}
+
+.question-help {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin: -4px 0 16px;
+    line-height: 1.45;
+}
+
 .other-text-input {
     width: 100%;
     padding: 12px 14px;
