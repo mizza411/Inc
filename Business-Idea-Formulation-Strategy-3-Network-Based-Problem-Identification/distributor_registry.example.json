@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "survey_base_url": "https://mizza411.github.io/Inc/problem_identification_tool/web/index.html",
+  "survey_id": "ill_pay_to_v1",
+  "generated_at": "2026-07-03T00:00:00+00:00",
+  "distributors": [
+    {
+      "id": "example_contact",
+      "name": "Example Contact",
+      "channel": "WhatsApp",
+      "industry": "Professional network",
+      "payout_terms": "500 NGN per qualified response (max 10)",
+      "notes": "Replace with real distributor — copy structure via: python distributor_links.py add ...",
+      "link": "https://mizza411.github.io/Inc/problem_identification_tool/web/index.html?survey=ill_pay_to_v1&ref=example_contact&utm_source=example_contact&utm_medium=strategy3&utm_campaign=ill_pay_to",
+      "responses_tracked": 0,
+      "status": "example",
+      "added_at": "2026-07-03T00:00:00+00:00",
+      "updated_at": "2026-07-03T00:00:00+00:00"
+    }
+  ]
+}

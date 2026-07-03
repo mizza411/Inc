@@ -1,5 +1,20 @@
 # Technical Intuition Log
 
+## 2026-07-03 — Strategy 3 Phase B1: paid distributor links (no collector changes)
+
+**What we did**
+- Added `distributor_links.py` in Strategy 3 folder — unique `ref`/UTM URLs for `ill_pay_to_v1`, local registry, outreach message generation.
+- Added `distributor_brief.md`, `distributor_message_templates.txt`, example registry, and `test_distributor_links.py`.
+- Left `network_problem_collector.py`, `sharing_utilities.py`, and live survey untouched (B2/B3 deferred).
+
+**Why it matters**
+Paid distribution can start immediately with tracked links and copy-paste outreach, without risking the live survey or the existing Strategy 3 CLI flow.
+
+**Intuition analogy**
+Like giving each promoter a unique discount code before rebuilding the whole checkout — attribution works on day one; deeper integration comes later.
+
+---
+
 ## 2026-07-02 — “I'll pay to..” survey (Phase A) in Problem Identification Tool
 
 **What we did**

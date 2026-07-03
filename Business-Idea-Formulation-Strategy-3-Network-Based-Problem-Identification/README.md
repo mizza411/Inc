@@ -43,6 +43,19 @@ This strategy helps you generate business ideas by leveraging your existing netw
 - Check for feasibility and market size
 - Identify top 3-5 ideas for further validation
 
+## Paid distributor survey sharing (Phase B1)
+
+Pay trusted contacts to share the **I'll pay to..** survey with their network. Each person gets a unique tracked link.
+
+```bash
+cd Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification
+python distributor_links.py add --name "Contact Name" --channel WhatsApp --payout "500 NGN per qualified response"
+python distributor_links.py list
+python distributor_links.py outreach
+```
+
+See `distributor_brief.md` for quality bar and qualified-response rules. B2/B3 will integrate this into `network_problem_collector.py` and `sharing_utilities.py`.
+
 ## Script-Based Approach
 
 ### Using steps.py

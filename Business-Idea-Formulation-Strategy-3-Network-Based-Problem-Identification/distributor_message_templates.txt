@@ -1,0 +1,63 @@
+================================================================================
+WHATSAPP / INFORMAL
+================================================================================
+
+Hey {distributor_name}! 👋
+
+I'm running a short survey to find problems people would *pay* to solve — building real products from the answers.
+
+Would you share this with people in your network who have genuine business/work frustrations? Takes 2–3 minutes.
+
+Your personal link (use only this one so I can track responses fairly):
+{link}
+
+If someone completes it properly, I'm offering: {payout_terms}
+
+Who to share with:
+- People with real problems (not random groups)
+- Founders, operators, freelancers, professionals
+- Anyone who'd honestly say what they'd pay to fix
+
+What counts as a *qualified* response:
+- Valid email
+- Clear problem description (not one word)
+- Answers all required questions seriously
+
+Thanks — this helps a lot.
+— {your_name}
+
+
+================================================================================
+LINKEDIN / EMAIL (FORMAL)
+================================================================================
+
+Hi {distributor_name},
+
+I'm researching problems people would pay to have solved, as input for new digital products. I'm asking trusted contacts with strong networks to share a short survey (2–3 minutes).
+
+Your unique tracking link:
+{link}
+
+Compensation: {payout_terms}
+
+Please share only with people who can describe a real problem they'd pay to solve — founders, operators, and professionals in your circle work best.
+
+A qualified response includes a valid email, a clear problem statement, and thoughtful answers to all required fields.
+
+Thank you for helping distribute this.
+Best regards,
+{your_name}
+
+
+================================================================================
+REMINDER (FOLLOW-UP AFTER 3–5 DAYS)
+================================================================================
+
+Hi {distributor_name} — quick nudge on the survey link below. Even 3–5 solid responses would be a big help.
+
+{link}
+
+Same terms: {payout_terms}
+
+Thanks again!
+{your_name}
