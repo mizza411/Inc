@@ -1,0 +1,23 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+.env/
+
+# Local data and exports
+/data/*.json
+/data/*.csv
+/problem_identification_export_*.json
+/problem_identification_export_*.csv
+/generated_content/
+/qr_codes/
+/imports/google_forms_ill_pay_to.json
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

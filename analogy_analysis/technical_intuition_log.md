@@ -1,5 +1,20 @@
 # Technical Intuition Log
 
+## 2026-07-03 — Phase C1: Google Forms CSV import script
+
+**What we did**
+- Added `scripts/import_google_forms_csv.py` to map Google Forms CSV columns to `ill_pay_to_v1` response JSON (`source: google_forms_import`).
+- Sample fixture CSV + `test_import_google_forms_csv.py`; real output gitignored at `imports/google_forms_ill_pay_to.json`.
+- Dashboard untouched (C2 will merge imported + live responses).
+
+**Why it matters**
+The ~12 legacy Google Form answers can be preserved in the same schema as the live Mizza411 tool before the form is closed.
+
+**Intuition analogy**
+Like converting old paper survey cards into the same database rows the new app already uses — format translation first, UI hookup second.
+
+---
+
 ## 2026-07-03 — Strategy 3 Phase B3: sharing_utilities ref/UTM wiring
 
 **What we did**
