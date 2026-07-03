@@ -1,5 +1,20 @@
 # Technical Intuition Log
 
+## 2026-07-03 — Strategy 3 Phase B2: optional distributor mode in collector
+
+**What we did**
+- Extended `network_problem_collector.py` with `--distributor` flag; classic `python network_problem_collector.py` unchanged.
+- Integrated `DistributorLinkManager` for register → outreach → optional export sync → problem capture.
+- Added `count_responses_by_ref`, export loader, and `test_network_problem_collector.py` (6 tests).
+
+**Why it matters**
+One CLI entry point now covers both classic network outreach and paid survey distribution without breaking the original workflow.
+
+**Intuition analogy**
+Like adding a "promoter mode" toggle to an existing CRM — same tool, different pipeline, default behavior untouched.
+
+---
+
 ## 2026-07-03 — Strategy 3 Phase B1: paid distributor links (no collector changes)
 
 **What we did**

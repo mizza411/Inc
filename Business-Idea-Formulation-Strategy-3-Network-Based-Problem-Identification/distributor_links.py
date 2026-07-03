@@ -180,6 +180,38 @@ class DistributorLinkManager:
         out_path.write_text("\n".join(parts), encoding="utf-8")
         return out_path
 
+    def update_response_counts(self, counts: dict[str, int]) -> None:
+        """Merge response counts into the registry (e.g. from exported survey JSON)."""
+        if not counts:
+            return
+        registry = self.load_registry()
+        for dist in registry.get("distributors", []):
+            if dist["id"] in counts:
+                dist["responses_tracked"] = counts[dist["id"]]
+                dist["updated_at"] = datetime.now(timezone.utc).isoformat()
+        self.save_registry(registry)
+
+
+def count_responses_by_ref(responses: list[dict[str, Any]]) -> dict[str, int]:
+    """Count survey submissions grouped by ref / utm_source."""
+    counts: dict[str, int] = {}
+    for item in responses:
+        ref = item.get("ref") or item.get("utm_source")
+        if not ref:
+            continue
+        counts[ref] = counts.get(ref, 0) + 1
+    return counts
+
+
+def load_survey_responses_export(path: Path) -> list[dict[str, Any]]:
+    """Load questionnaire responses from a JSON export (array or {responses: [...]})."""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict) and isinstance(data.get("responses"), list):
+        return data["responses"]
+    raise ValueError(f"Unsupported export format: {path}")
+
 
 def cmd_add(args: argparse.Namespace) -> int:
     manager = DistributorLinkManager()

@@ -61,5 +61,5 @@ Registry file: `distributor_registry.json` (local — not committed; see `distri
 | Phase | Status | Scope |
 |-------|--------|--------|
 | **B1** | Done | Link generator, templates, brief (this doc) |
-| **B2** | Pending | Integrate into `network_problem_collector.py` |
+| **B2** | Done | Optional `--distributor` mode in `network_problem_collector.py` |
 | **B3** | Pending | Wire `sharing_utilities.py` ref/UTM with Strategy 3 |

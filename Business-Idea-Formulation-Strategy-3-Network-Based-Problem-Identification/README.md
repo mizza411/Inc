@@ -54,7 +54,19 @@ python distributor_links.py list
 python distributor_links.py outreach
 ```
 
-See `distributor_brief.md` for quality bar and qualified-response rules. B2/B3 will integrate this into `network_problem_collector.py` and `sharing_utilities.py`.
+See `distributor_brief.md` for quality bar and qualified-response rules.
+
+**Classic workflow (unchanged):**
+```bash
+python network_problem_collector.py
+```
+
+**Paid distributor workflow (Phase B2):**
+```bash
+python network_problem_collector.py --distributor
+```
+
+B3 will wire `sharing_utilities.py` ref/UTM into this flow.
 
 ## Script-Based Approach
 
