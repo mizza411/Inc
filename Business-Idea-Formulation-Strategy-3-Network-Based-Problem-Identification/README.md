@@ -66,7 +66,7 @@ python network_problem_collector.py
 python network_problem_collector.py --distributor
 ```
 
-B3 will wire `sharing_utilities.py` ref/UTM into this flow.
+B3 wired: `sharing_utilities.py` supports `--distributor-ref` and `--strategy3-kit`; Strategy 3 CLI: `python distributor_links.py sharing-kit`.
 
 ## Script-Based Approach
 

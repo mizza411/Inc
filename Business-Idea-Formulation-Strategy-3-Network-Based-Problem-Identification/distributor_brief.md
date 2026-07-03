@@ -52,6 +52,16 @@ python distributor_links.py list
 
 # Generate outreach messages (fills templates)
 python distributor_links.py outreach
+
+# Generate per-distributor social sharing kit (B3)
+python distributor_links.py sharing-kit
+```
+
+From `problem_identification_tool`:
+
+```powershell
+python src/sharing_utilities.py --distributor-ref jane_doe
+python src/sharing_utilities.py --strategy3-kit "..\Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification\distributor_registry.json"
 ```
 
 Registry file: `distributor_registry.json` (local — not committed; see `distributor_registry.example.json`).
@@ -62,4 +72,4 @@ Registry file: `distributor_registry.json` (local — not committed; see `distri
 |-------|--------|--------|
 | **B1** | Done | Link generator, templates, brief (this doc) |
 | **B2** | Done | Optional `--distributor` mode in `network_problem_collector.py` |
-| **B3** | Pending | Wire `sharing_utilities.py` ref/UTM with Strategy 3 |
+| **B3** | Done | Wire `sharing_utilities.py` ref/UTM with Strategy 3 |

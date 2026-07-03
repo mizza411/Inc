@@ -1,5 +1,20 @@
 # Technical Intuition Log
 
+## 2026-07-03 — Strategy 3 Phase B3: sharing_utilities ref/UTM wiring
+
+**What we did**
+- Extended `sharing_utilities.py` with `build_tracked_survey_url`, `create_distributor_url`, and `generate_strategy3_distributor_kit`.
+- Added CLI flags `--distributor-ref` and `--strategy3-kit`; Strategy 3 `distributor_links.py sharing-kit` subcommand.
+- `network_problem_collector.py --distributor` optionally saves a per-distributor social sharing kit.
+
+**Why it matters**
+Distributors get WhatsApp/LinkedIn-ready links from one registry; survey ref tracking stays consistent across tools.
+
+**Intuition analogy**
+Like connecting your affiliate dashboard to the same promo codes the checkout already reads — one attribution scheme, many share surfaces.
+
+---
+
 ## 2026-07-03 — Strategy 3 Phase B2: optional distributor mode in collector
 
 **What we did**

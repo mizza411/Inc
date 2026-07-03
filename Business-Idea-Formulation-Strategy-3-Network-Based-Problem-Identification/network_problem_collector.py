@@ -445,6 +445,22 @@ class NetworkProblemIdentifier:
         print("3. Review the generated business ideas")
         print("4. Select top 3-5 ideas for further validation")
 
+    def try_generate_sharing_kit(self) -> None:
+        """Optional: build per-distributor social sharing kit via sharing_utilities (B3)."""
+        try:
+            from distributor_links import _sharing_utilities_module
+
+            registry_path = self.link_manager.registry_path
+            if not registry_path.exists():
+                return
+            utilities = _sharing_utilities_module()
+            kit = utilities.generate_strategy3_distributor_kit(str(registry_path))
+            out_dir = self.strategy_dir / "generated_content"
+            filepath = utilities.save_sharing_kit(kit, output_dir=str(out_dir))
+            print(f"\n✓ Sharing kit saved to '{Path(filepath).name}' (WhatsApp/LinkedIn links per distributor)")
+        except Exception as exc:
+            print(f"\n(Optional sharing kit skipped: {exc})")
+
     def run_distributor(self) -> None:
         """Paid distributor workflow using ill_pay_to_v1 survey links."""
         self.workflow = "distributor"
@@ -461,6 +477,7 @@ class NetworkProblemIdentifier:
             return
 
         self.generate_distributor_outreach()
+        self.try_generate_sharing_kit()
         if not self.confirm_distributors():
             return
 

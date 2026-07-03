@@ -1,6 +1,7 @@
 # Local distributor registry and generated outreach (may contain names/payout terms)
 distributor_registry.json
 distributor_outreach_*.txt
+generated_content/
 network_problems_*.json
 message_templates.txt
 chatgpt_prompt.txt

@@ -1,5 +1,5 @@
 {
-  "questionnaire_url": "https://your-site.netlify.app/",
+  "questionnaire_url": "https://mizza411.github.io/Inc/problem_identification_tool/web/index.html",
   "email": {
     "smtp_server": "smtp.gmail.com",
     "smtp_port": 587,
@@ -16,8 +16,8 @@
     "include_utm": true,
     "default_utm_source": "email",
     "default_utm_medium": "newsletter",
-    "default_utm_campaign": "problem_research"
+    "default_utm_campaign": "problem_research",
+    "strategy3_registry_path": "",
+    "default_survey_id": "ill_pay_to_v1"
   }
 }
-
-

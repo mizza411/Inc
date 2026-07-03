@@ -213,6 +213,39 @@ def load_survey_responses_export(path: Path) -> list[dict[str, Any]]:
     raise ValueError(f"Unsupported export format: {path}")
 
 
+def _sharing_utilities_module(config_file: str | None = None):
+    """Import sharing_utilities from problem_identification_tool (optional dependency)."""
+    tool_src = Path(__file__).resolve().parents[1] / "problem_identification_tool" / "src"
+    if str(tool_src) not in sys.path:
+        sys.path.insert(0, str(tool_src))
+    from sharing_utilities import SharingUtilities  # noqa: WPS433
+
+    if config_file:
+        return SharingUtilities(config_file=config_file)
+    return SharingUtilities()
+
+
+def cmd_sharing_kit(args: argparse.Namespace) -> int:
+    manager = DistributorLinkManager()
+    registry_path = args.registry or str(manager.registry_path)
+    if not Path(registry_path).exists():
+        print(f"Registry not found: {registry_path}")
+        print('Add distributors first: python distributor_links.py add --name "Contact Name"')
+        return 1
+
+    try:
+        utilities = _sharing_utilities_module(config_file=args.config)
+    except Exception as exc:
+        print(f"Could not load sharing utilities: {exc}")
+        return 1
+
+    kit = utilities.generate_strategy3_distributor_kit(registry_path)
+    out_dir = args.output_dir or str(manager.strategy_dir / "generated_content")
+    filepath = utilities.save_sharing_kit(kit, output_dir=out_dir)
+    print(f"Strategy 3 sharing kit saved to: {filepath}")
+    return 0
+
+
 def cmd_add(args: argparse.Namespace) -> int:
     manager = DistributorLinkManager()
     record = manager.add_distributor(
@@ -288,6 +321,21 @@ def build_parser() -> argparse.ArgumentParser:
         help="Comma-separated distributor ids (default: all in registry)",
     )
     out_p.set_defaults(func=cmd_outreach)
+
+    kit_p = sub.add_parser("sharing-kit", help="Generate social sharing kit from registry (B3)")
+    kit_p.add_argument(
+        "--registry",
+        help="Path to distributor_registry.json (default: local registry in this folder)",
+    )
+    kit_p.add_argument(
+        "--config",
+        help="Optional sharing_config.json path under problem_identification_tool",
+    )
+    kit_p.add_argument(
+        "--output-dir",
+        help="Output folder for strategy3_distributor_kit JSON (default: generated_content/)",
+    )
+    kit_p.set_defaults(func=cmd_sharing_kit)
 
     return parser
 
