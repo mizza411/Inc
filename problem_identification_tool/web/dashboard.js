@@ -1,22 +1,68 @@
 // Dashboard logic: load responses, aggregate, and render charts
 (function(){
   const $ = (id) => document.getElementById(id);
-  const state = { responses: [], problems: [], categories: {}, severities: {} };
+  const mergeApi = window.ResponseMerge || {};
+  const extractResponsesFromPayload = mergeApi.extractResponsesFromPayload || function(data) {
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.responses)) return data.responses;
+    return [];
+  };
+  const mergeResponses = mergeApi.mergeResponses || function(primary, secondary) {
+    return (primary || []).concat(secondary || []);
+  };
 
-  function loadFromLocalStorage(){
+  const IMPORTED_JSON_URL = './data/imports/google_forms_ill_pay_to.json';
+  const state = {
+    responses: [],
+    problems: [],
+    categories: {},
+    severities: {},
+    importedCount: 0,
+    localCount: 0,
+  };
+
+  function setStatusMessage(message) {
+    const el = $('loadStatus');
+    if (el) el.textContent = message;
+  }
+
+  async function fetchImportedResponses() {
+    try {
+      const res = await fetch(IMPORTED_JSON_URL, { cache: 'no-store' });
+      if (!res.ok) return [];
+      const data = await res.json();
+      return extractResponsesFromPayload(data);
+    } catch (e) {
+      console.warn('Imported responses not available:', e);
+      return [];
+    }
+  }
+
+  async function loadMergedFromBrowser() {
     try {
       const raw = localStorage.getItem('questionnaire_responses') || '[]';
-      const arr = JSON.parse(raw);
-      state.responses = arr;
-      deriveProblemsFromResponses(arr);
+      const local = JSON.parse(raw);
+      const imported = await fetchImportedResponses();
+      state.localCount = local.length;
+      state.importedCount = imported.length;
+      state.responses = mergeResponses(local, imported);
+      deriveProblemsFromResponses(state.responses);
       render();
-    } catch(e){
-      alert('Failed to load from localStorage');
+
+      if (imported.length) {
+        setStatusMessage(
+          `Loaded ${state.responses.length} total (${local.length} browser, ${imported.length} imported).`
+        );
+      } else {
+        setStatusMessage(`Loaded ${state.responses.length} from this browser.`);
+      }
+    } catch (e) {
+      alert('Failed to load responses');
       console.error(e);
     }
   }
 
-  function deriveProblemsFromResponses(responses){
+  function deriveProblemsFromResponses(responses) {
     state.problems = [];
     state.categories = {};
     state.severities = {};
@@ -66,7 +112,6 @@
       const cat = categorize(res.q1, res.q3);
       const sev = severityFromRating(res.q2);
 
-      // build problems from free text fields
       ['q3','q5'].forEach(q => {
         const txt = (res[q]||'').trim();
         if (txt.length > 5){
@@ -79,31 +124,43 @@
     });
   }
 
-  function loadFromFile(file){
+  function applyPayloadToState(data) {
+    if (Array.isArray(data)) {
+      state.responses = data;
+      deriveProblemsFromResponses(state.responses);
+      return;
+    }
+
+    const imported = extractResponsesFromPayload(data);
+    if (imported.length) {
+      state.responses = imported;
+      deriveProblemsFromResponses(state.responses);
+      return;
+    }
+
+    if (data && data.problems) {
+      state.problems = data.problems || [];
+      state.categories = {};
+      state.severities = {};
+      state.problems.forEach(p => {
+        state.categories[p.category] = (state.categories[p.category]||0)+1;
+        const sev = parseInt(p.severity,10) || 5;
+        state.severities[sev] = (state.severities[sev]||0)+1;
+      });
+      return;
+    }
+
+    throw new Error('Unrecognized JSON structure');
+  }
+
+  function loadFromFile(file) {
     const reader = new FileReader();
     reader.onload = () => {
-      try{
-        const data = JSON.parse(reader.result);
-        if (Array.isArray(data)){
-          // assume array of responses
-          state.responses = data;
-          deriveProblemsFromResponses(state.responses);
-        } else if (data && data.problems){
-          // export format from engine
-          state.problems = data.problems || [];
-          // rebuild aggregates
-          state.categories = {};
-          state.severities = {};
-          state.problems.forEach(p => {
-            state.categories[p.category] = (state.categories[p.category]||0)+1;
-            const sev = parseInt(p.severity,10) || 5;
-            state.severities[sev] = (state.severities[sev]||0)+1;
-          });
-        } else {
-          throw new Error('Unrecognized JSON structure');
-        }
+      try {
+        applyPayloadToState(JSON.parse(reader.result));
+        setStatusMessage(`Loaded ${state.responses.length} response(s) from file.`);
         render();
-      } catch(e){
+      } catch (e) {
         alert('Invalid JSON file');
         console.error(e);
       }
@@ -112,14 +169,12 @@
   }
 
   let catChart, sevChart;
-  function render(){
-    // metrics
+  function render() {
     $('metricTotal').textContent = String(state.responses.length || 0);
     $('metricProblems').textContent = String(state.problems.length || 0);
     const topCats = Object.entries(state.categories).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k,v])=>`${k} (${v})`);
     $('metricCategories').textContent = topCats.length ? topCats.join(', ') : '—';
 
-    // charts
     const catLabels = Object.keys(state.categories);
     const catValues = Object.values(state.categories);
     const sevLabels = Array.from({length:10}, (_,i)=>String(i+1));
@@ -163,18 +218,20 @@
     });
   }
 
-  function bind(){
-    $('loadLocal').addEventListener('click', loadFromLocalStorage);
+  function bind() {
+    $('loadLocal').addEventListener('click', loadMergedFromBrowser);
     $('loadServer').addEventListener('click', async ()=>{
       try {
         const res = await fetch('/.netlify/functions/get-analytics');
         if (!res.ok) throw new Error('Server analytics not available');
         const data = await res.json();
-        // Convert server analytics into state
         state.categories = data.analytics?.categories || {};
         state.severities = data.analytics?.severities || {};
-        state.responses = []; // not listing raw responses in this minimal view
-        state.problems = [];  // charts are aggregate-only here
+        state.responses = [];
+        state.problems = [];
+        state.importedCount = 0;
+        state.localCount = 0;
+        setStatusMessage('Loaded aggregate analytics from server.');
         render();
       } catch (e) {
         alert('Could not load from server. Ensure functions are deployed.');
@@ -186,8 +243,14 @@
     });
     $('clearLocal').addEventListener('click', ()=>{
       localStorage.removeItem('questionnaire_responses');
-      state.responses = []; state.problems = []; state.categories = {}; state.severities = {};
+      state.responses = [];
+      state.problems = [];
+      state.categories = {};
+      state.severities = {};
+      state.importedCount = 0;
+      state.localCount = 0;
       render();
+      setStatusMessage('Local responses cleared. Imported data still loads on next merge reload.');
       alert('Local responses cleared');
     });
   }

@@ -45,7 +45,7 @@
         <input id="fileInput" type="file" accept="application/json">
         <button class="secondary" id="clearLocal">Clear local responses</button>
       </div>
-      <div class="muted" style="margin-top:8px;">You can load responses saved by the survey (browser localStorage) or upload a JSON export file from the Python engine.</div>
+      <div class="muted" id="loadStatus" style="margin-top:8px;">Load from this browser merges localStorage with imported Google Forms data (if present at <code>data/imports/google_forms_ill_pay_to.json</code>). You can also upload a JSON export from the Python engine.</div>
     </div>
 
     <div class="grid">
@@ -75,6 +75,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="lib/response_merge.js"></script>
   <script src="dashboard.js"></script>
 </body>
 </html>

@@ -143,10 +143,16 @@ def import_csv_file(input_path: Path) -> dict[str, Any]:
 def main(argv: list[str] | None = None) -> int:
     tool_root = Path(__file__).resolve().parents[1]
     default_out = tool_root / "imports" / "google_forms_ill_pay_to.json"
+    dashboard_out = tool_root / "web" / "data" / "imports" / "google_forms_ill_pay_to.json"
 
     parser = argparse.ArgumentParser(description="Import Google Forms CSV to ill_pay_to_v1 JSON")
     parser.add_argument("--input", "-i", required=True, help="Path to Google Forms CSV export")
     parser.add_argument("--output", "-o", default=str(default_out), help="Output JSON path")
+    parser.add_argument(
+        "--sync-dashboard",
+        action="store_true",
+        help="Also write JSON to web/data/imports/ for dashboard fetch on GitHub Pages",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Validate and print summary only")
     args = parser.parse_args(argv)
 
@@ -171,6 +177,13 @@ def main(argv: list[str] | None = None) -> int:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote: {output_path}")
+
+    if args.sync_dashboard:
+        dashboard_path = dashboard_out
+        dashboard_path.parent.mkdir(parents=True, exist_ok=True)
+        dashboard_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"Synced dashboard import: {dashboard_path}")
+
     return 0
 
 

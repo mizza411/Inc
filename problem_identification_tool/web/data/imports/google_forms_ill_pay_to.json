@@ -1,0 +1,60 @@
+{
+  "source": "google_forms_import",
+  "questionnaire_id": "ill_pay_to_v1",
+  "imported_at": "2026-07-04T14:23:13.090517+00:00",
+  "column_map": {
+    "q1_email": "Email",
+    "q2_problem": "What problem(s) would you pay to have solved?",
+    "q3_tried_solutions": "Have you tried any existing solutions?",
+    "q4_solutions_lacking": "If yes what were the existing solutions lacking?",
+    "q5_payment_model": "What payment model do you prefer?",
+    "q6_one_time_fee": "How much one-time fee are you willing to pay for the solution?",
+    "q7_subscription_fee": "How much subscription fee are you willing to pay for the solution?",
+    "q8_urgency": "How urgent is this problem for you?"
+  },
+  "response_count": 2,
+  "responses": [
+    {
+      "id": "gf_import_1_21820283",
+      "timestamp": "2026-07-01T10:15:00+00:00",
+      "questionnaire_id": "ill_pay_to_v1",
+      "ref": null,
+      "source": "google_forms_import",
+      "imported_at": "2026-07-04T14:23:13.090517+00:00",
+      "responses": {
+        "q1_email": "ada@example.com",
+        "q2_problem": "Finding reliable suppliers for my gadget shop",
+        "q3_tried_solutions": "Yes",
+        "q4_solutions_lacking": "Prices change too often and stock is unreliable",
+        "q5_payment_model": "One-time fee",
+        "q6_one_time_fee": "15000 NGN",
+        "q7_subscription_fee": "",
+        "q8_urgency": "Moderately urgent - I'd like to solve this within the next few months"
+      },
+      "completion_time": 0,
+      "user_agent": "google_forms_import",
+      "anonymous": false
+    },
+    {
+      "id": "gf_import_2_91309016",
+      "timestamp": "2026-07-02T14:30:00+00:00",
+      "questionnaire_id": "ill_pay_to_v1",
+      "ref": null,
+      "source": "google_forms_import",
+      "imported_at": "2026-07-04T14:23:13.090517+00:00",
+      "responses": {
+        "q1_email": "bob@example.com",
+        "q2_problem": "Tracking wedding vendor payments without spreadsheets",
+        "q3_tried_solutions": "No",
+        "q4_solutions_lacking": "",
+        "q5_payment_model": "Subscription",
+        "q6_one_time_fee": "",
+        "q7_subscription_fee": "3000 NGN/month",
+        "q8_urgency": "Very urgent - I need a solution within the next few weeks"
+      },
+      "completion_time": 0,
+      "user_agent": "google_forms_import",
+      "anonymous": false
+    }
+  ]
+}
