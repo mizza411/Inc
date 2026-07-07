@@ -61,11 +61,16 @@
       "label": "Formulated ideas",
       "items": [
         {
-          "label": "Run all strategies",
+          "id": "agent_formulation_run",
+          "label": "Agent formulation run",
+          "action": "agent_run",
+          "pinned": true
+        },
+        {
+          "label": "Run all strategies (CLI menu)",
           "action": "command",
           "command": "python run_all_strategies.py",
-          "cwd": ".",
-          "pinned": true
+          "cwd": "."
         },
         {
           "id": "bookmark_review",
@@ -75,9 +80,19 @@
           "cwd": "."
         },
         {
-          "label": "Latest business ideas (May 2026)",
+          "label": "Agent run outputs folder",
+          "action": "folder",
+          "path": "agent-business-idea-runs/outputs"
+        },
+        {
+          "label": "Latest business ideas (Jul 2026)",
           "action": "file",
-          "path": "business_ideas_20260508.md"
+          "path": "agent-business-idea-runs/outputs/business_ideas_20260706.md"
+        },
+        {
+          "label": "Business ideas (May 2026)",
+          "action": "file",
+          "path": "agent-business-idea-runs/outputs/business_ideas_20260508.md"
         },
         {
           "label": "Past business ideas",

@@ -4,7 +4,39 @@
 ## 🎯 Current Priority Projects
 
 ### 1. Problem Identification Tool (70% Complete - LIVE)
-**Status:** Deployed and operational at https://vermillion-figolla-b9efb8.netlify.app/
+**Status:** Deployed at https://mizza411.github.io/Inc/problem_identification_tool/web/index.html (GitHub Pages); Netlify mirror optional
+
+#### High Priority — Strategy 3 + “I'll pay to..” migration (NEW — Jul 2026)
+**Scope:** Retire Google Form “I'll pay to..”; consolidate on Mizza411 tool; integrate paid social-capital distribution into Strategy 3.
+
+**Decisions (locked):**
+- Email **required** on `ill_pay_to_v1` (with privacy note)
+- **Add** questionnaire `ill_pay_to_v1`; keep `general_problems_v1`
+- **Minimal branching** in `questionnaire.js` (2 rules: existing-solutions follow-up; one-time vs subscription price)
+- **One-time import** of ~12 Google Form responses before closing form
+- Per-distributor **ref/UTM links** for paid sharers
+
+**Layout:** `problem_identification_tool/` (survey + dashboard) + `Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification/` (outreach, distributor tracking)
+
+- [x] **Phase A — Questionnaire** (target: Jul 2026)
+  - [x] Add `ill_pay_to_v1` to `web/data/questionnaires.json` (title “I'll pay to..”, WTP + urgency questions)
+  - [x] Add `email` question type + validation in `questionnaire.js`
+  - [x] Implement minimal conditional branching (2 rules)
+  - [x] Set `ill_pay_to_v1` as active questionnaire (or `?survey=ill_pay_to_v1` param)
+- [ ] **Phase B — Strategy 3 integration** (split into sub-phases — Jul 2026)
+  - [x] **B1 — Distributor links + templates** (standalone; no changes to live survey or collector)
+    - [x] `distributor_links.py` — unique ref/UTM link generator + local registry
+    - [x] `distributor_message_templates.txt` + `distributor_brief.md`
+    - [x] `test_distributor_links.py` smoke tests
+  - [x] **B2 — Collector integration** — optional `--distributor` mode in `network_problem_collector.py`
+  - [x] **B3 — Sharing utilities** — wire `sharing_utilities.py` ref/UTM to Strategy 3 workflow
+- [ ] **Phase C — Data migration** (split — Jul 2026)
+  - [x] **C1 — Import script** — `scripts/import_google_forms_csv.py` + tests + sample CSV fixture
+  - [ ] **C2 — Dashboard merge** — dashboard reads `imports/google_forms_ill_pay_to.json` + localStorage
+  - [ ] **C3 — Retire Google Form** — run import on real export, verify counts, close form
+- [ ] **Phase D — Deploy & retire Google Form**
+  - [ ] Deploy to GitHub Pages; smoke-test live URL
+  - [ ] Close/archive Google Form after import verified
 
 #### High Priority - Next Steps (This Week)
 - [x] **UX Improvements** (Phase 1 — May 2026: `web/questionnaire.css`, step label + dots, transitions, inline validation, keyboard Enter)
@@ -130,7 +162,7 @@
 ---
 
 ### 4. Inc Tray Icon + Super Main Launcher
-**Status:** Phase 4 complete + Track C (bookmark review menu) — **live on PC** (2026-06-29)  
+**Status:** Phase 5 v1 complete (agent formulation front door) — **manual §G once** (`inc_launcher/MANUAL_TEST.md`) (2026-06-30)  
 **Goal:** Windows **tray icon** (notification area, near the clock) + optional super main hub; all `C:\dev\Inc` entry points organized under **4 pillars** (extensible to 5+ later).  
 **Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`  
 **Manual tests:** `inc_launcher/MANUAL_TEST.md` (most checks automated; optional §D reboot only)
@@ -147,7 +179,53 @@
 | Boot | External-repo `auto_launcher.py` starts tray; Inc **Start at Windows login [OFF]** (intentional) |
 | Live nudge proof | `inc_launcher/schedule_fired.json` — fired 2026-06-29: 09:00 task.md, 09:15 Hub, 10:00 Problem ID live |
 
-**No major pending dev** for this thread. Optional follow-ups below.
+**Active dev:** **Phase 5 — Agent formulation front door** (approved 2026-06-30). Earlier phases optional follow-ups below.
+
+#### Phase 5 — Inc Hub agent formulation front door (Track D)
+**Status:** Approved — not started (2026-06-30)  
+**Goal:** Inc Hub becomes the **front door** for the repeatable **Cursor agent** formulation run (strategies **5, 6, 7, 9, 11, 12, 13, 14, 15**; skip 3, 4, retired 8/10; read-only on existing strategy scripts; write `business_ideas_YYYYMMDD.md` under **`agent-business-idea-runs/outputs/`**). **Not** the `run_all_strategies.py` interactive CLI menu.
+
+**Layout (2026-07-06, updated 2026-07-07):** `agent-business-idea-runs/` at repo root — `inputs/` (fetch JSON), `outputs/` (`.md` + `.docx`), `agent_strategy_run.py` (canonical fetch runner; Strategy 15 skipped by default). See `agent-business-idea-runs/README.md`.  
+**User pain today:** Remember run → open Cursor on `C:\dev\Inc` → hunt/copy long prompt → paste in chat → send.  
+**Target flow:** **Inc Launcher tray running** → open/focus Inc Hub → **Option B modal** → on Start: open Cursor → clipboard + auto-paste into chat (`cursor_copy_helper`) → user presses Enter. No detached OS toasts; all reminder UI lives on Hub.
+
+**Reminder UI (user 2026-06-30 — Option B only):**
+- **UI:** Mini Hub modal (Option B) — the only reminder surface for this workflow
+- **Gate:** Inc Launcher **tray process must be running** (notification-area icon). If tray is not running → no modal, no nudge
+- **Host:** Modal is a **child of Inc Hub** (Toplevel on Hub window). Never a freestanding Windows toast outside Hub
+- **Triggers (v1):** Hub card click **“Agent formulation run”** → show modal. **Auto-open (optional later, Phase 5.5):** schedule fires only when tray is running → **open/focus Hub window first** → same Option B modal (not a separate lighter UI)
+- **Modal copy:**
+  - Title: “Ready for formulation agent run?”
+  - Bullets: Opens Cursor at `C:\dev\Inc` · Pastes prompt into chat (~8s) · Skips 3, 4, 8, 10 per policy
+  - Buttons: `[ Start ]` · `[ Not now ]`
+- **Explicitly out:** Option A (detached bottom-right toast without Hub) — not needed; one UI pattern is enough
+
+**Scope (v1):**
+- Single source of truth: `prompts/agent_formulation_run.txt` (full agent prompt; editable without code changes)
+- New launcher action (e.g. `agent_run` or `cursor_prompt`) orchestrating: load prompt → `copy_to_clipboard` → `cursor` open `C:\dev\Inc` → `paste_after_delay` (pyautogui; user focuses chat)
+- Hub **Formulated ideas** pillar: **pinned** card **“Agent formulation run”** (primary); demote/rename existing **“Run all strategies”** → **“Run all strategies (CLI menu)”** so it is not confused with agent workflow
+- Fix Hub content header clip: `_header` / `_subtitle` both on `row=0` in `hub_window.py` (overlap bug)
+- Log last run timestamp optional: `inc_launcher/agent_run_log.json` (for “last run was …” in UI later)
+
+**Out of scope (v1):**
+- Fully unattended agent send (no Cursor API/deeplink in repo)
+- Replacing agent execution with subprocess strategy runs
+- Detached OS toasts (Option A) or any reminder UI when Inc Launcher tray is not running
+- Scheduled formulation nudge (Phase 5.5) until user approves a slot — when built, must use Hub + Option B modal, not bypass Hub
+
+**Phases:**
+- [x] **5.0 — Hub UI fix:** Separate header (`row=0`) and subtitle (`row=1`); adjust canvas `row`; smoke/visual check
+- [x] **5.1 — Prompt artifact:** Add `prompts/agent_formulation_run.txt` with canonical agent prompt (user’s current wording); `prompts/README.md` one-liner
+- [x] **5.2 — Action orchestration:** `inc_launcher/actions.py` — new action; reuse `cursor_copy_helper.copy_to_clipboard` + `paste_after_delay`; thread/timer so paste runs after Cursor opens
+- [x] **5.3 — Config + Hub card:** `launcher_config.json` — new pinned item under **formulated**; rename CLI item; tray submenu mirror optional
+- [x] **5.4 — Reminder UI (Option B, Hub-hosted):** Mini Toplevel on Hub on card click; `[ Start ]` runs `agent_run`; `[ Not now ]` dismisses; tray-running gate enforced
+- [ ] **5.5 — Schedule (optional, not v1):** Weekday slot (user approves first) → tray running → open/focus Hub → **same Option B modal**; no detached toast
+- [x] **5.6 — Tests + docs:** `test_agent_run.py` (mock clipboard/cursor/paste); `inc_launcher/README.md`, `MANUAL_TEST.md` §G (focus-chat + Enter)
+
+**v1 definition of done:** Inc Launcher tray running → click **Agent formulation run** → Hub shows **Option B modal** → **Start** → Cursor opens on repo → prompt on clipboard → auto-paste after delay if pyautogui present → user sends chat → agent run proceeds per prompt file. CLI menu card clearly labeled. Header no longer clipped. `pytest inc_launcher/tests -q` green.
+
+**Dependencies:** `cursor_copy_helper.py` (repo root); `pyautogui` optional for auto-paste  
+**Layout:** `prompts/` at repo root (new); changes in `inc_launcher/` only
 
 #### Pending (optional — not blocking)
 
@@ -164,7 +242,7 @@
 |--------|---------|------------------------|
 | **My Established business ideas** | Businesses you are running or committed to | `Started-Businesses/`, `Strategy-1-Business-Variation/`, live ops (e.g. YouTube publish workflow when channel is active) |
 | **My leads** | Contacts, outreach, campaigns | `abuja_lead_generator/` (DB, scraper, email/WhatsApp, reports) |
-| **Formulated ideas** | Idea pipeline outputs & strategy runs | `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `business_ideas_*.md`, `past_business_ideas.md`, `business_research/` |
+| **Formulated ideas** | Idea pipeline outputs & strategy runs | `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md`, `business_research/` |
 | **Problem identification** | Discovering & capturing problems (inputs to formulation) | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/`, problem-collection strategies (3, 4, 5, 10, 11, 12, etc.) |
 
 **Flow:** Problem identification → Formulated ideas → Established businesses; **My leads** supports outreach alongside that pipeline.
@@ -270,7 +348,7 @@ Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `p
 | Category | Example Inc destinations |
 |----------|---------------------------|
 | **Business started** | `Started-Businesses/`, live ops folders |
-| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `business_ideas_*.md`, `past_business_ideas.md` |
+| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md` |
 | **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
 | **My leads** | `abuja_lead_generator/` |
 | **Automation / content** | `Strategy-2-Problem-Solving/Content-Automation/` |
@@ -448,7 +526,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 **Status:** P1 Paystack complete — **Phase 0b not started**; manual UI deferred to v1 sign-off  
 **Goal:** WhatsApp-first **post-wedding comms** for couples — AI-drafted guest thank-yous (gift/spray-aware), vendor wrap-up, checklist — **one-time B2C fee**; no MC/planner SaaS.  
 **Folder:** `Strategy-2-Problem-Solving/post-wedding-comms-pack/` — run: `python -m streamlit run app.py` from that folder  
-**Spec:** [post-wedding-comms-pack.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack.md) · [README](../Strategy-2-Problem-Solving/post-wedding-comms-pack/README.md) · [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md)  
+**Spec:** [post-wedding-comms-pack.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack.md) · [README](../Strategy-2-Problem-Solving/post-wedding-comms-pack/README.md) · [LAUNCH_PLAN.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/LAUNCH_PLAN.md) · [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md)  
 **Related (defer):** [wedding-games-icebreakers-app.md](../Strategy-2-Problem-Solving/wedding-games-icebreakers-app.md) — guest link feeds comms import in Phase 3 (P2)
 
 > **Phased plan:** Already defined in spec + folder README (P0/P1/P2). This section mirrors that in `task.md` for execution tracking — **not a duplicate doc**; tick here as you ship.
@@ -480,6 +558,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 
 #### Phase 0b — Validation (before P1 **launch**; target: **3 Wizard-of-Oz couples**)
 - [x] Landing / pitch copy draft — [`PHASE_0b_PITCH.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/PHASE_0b_PITCH.md)
+- [x] Launch playbook (marketing, timeline, credibility) — [`LAUNCH_PLAN.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/LAUNCH_PLAN.md)
 - [ ] Publish landing (Carrd / Notion / Google Site) from pitch doc
 - [ ] Wizard-of-Oz (optional): CSV → you generate → deliver; **₦15k** done-for-you OR test **₦10k** self-serve Paystack
 - [ ] **Go/no-go:** ≥2 couples WTP **₦10,000 flat** self-serve; kill if “in-person only” + zero WTP
@@ -562,7 +641,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 | Pillar | Inc destinations |
 |--------|------------------|
 | **Established** | `Started-Businesses/`, live ops folders |
-| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `business_ideas_*.md`, `past_business_ideas.md` |
+| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md` |
 | **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
 | **My leads** | `abuja_lead_generator/` |
 | **Automation / content** | `Strategy-2-Problem-Solving/Content-Automation/` |

@@ -1,0 +1,346 @@
+{
+  "generated_at": "2026-07-07T11:57:11.602641",
+  "strategies_skipped": [
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "Nigeria, Holy See pledge deepened ties on golden jubilee",
+          "summary": "Nigeria has reaffirmed its commitment to deepening diplomatic relations with the Holy See, pledging greater collaboration in peacebuilding, humanitarian action,\nread more Nigeria, Holy See pledge deepened ties on golden jubilee",
+          "link": "https://businessday.ng/news/article/nigeria-holy-see-pledge-deepened-ties-on-golden-jubilee/",
+          "published": "Tue, 07 Jul 2026 10:17:40 +0000"
+        },
+        {
+          "title": "Police deny political bias, say Peter Obi video was doctored",
+          "summary": "The Federal Capital Territory (FCT) Police Command has dismissed as false and misleading a viral video circulating on social media\nread more Police deny political bias, say Peter Obi video was doctored",
+          "link": "https://businessday.ng/news/article/police-deny-political-bias-say-peter-obi-video-was-doctored/",
+          "published": "Tue, 07 Jul 2026 09:58:08 +0000"
+        },
+        {
+          "title": "What Nigeria’s three inheritance frameworks mean for modern estate planning",
+          "summary": "Standfirst: The first generation of post-liberalisation private wealth is reaching the age of succession, and it is doing so within\nread more What Nigeria&#8217;s three inheritance frameworks mean for modern estate planning",
+          "link": "https://businessday.ng/opinion/article/what-nigerias-three-inheritance-frameworks-mean-for-modern-estate-planning/",
+          "published": "Tue, 07 Jul 2026 09:47:07 +0000"
+        },
+        {
+          "title": "PFIPC Probe: Police mum as reported arrest of Adeyemi’s father raises constitutional questions",
+          "summary": "The Nigeria Police Force has remained silent over the reported arrest of the father of Adeniyi Adeyemi, the embattled promoter\nread more PFIPC Probe: Police mum as reported arrest of Adeyemi&#8217;s father raises constitutional questions",
+          "link": "https://businessday.ng/news/article/pfipc-probe-police-mum-as-reported-arrest-of-adeyemis-father-raises-constitutional-questions/",
+          "published": "Tue, 07 Jul 2026 09:37:55 +0000"
+        },
+        {
+          "title": "AMCON CEO honoured with African Business Leadership award",
+          "summary": "Gbenga Alade, the managing director and chief executive officer of the Asset Management Corporation of Nigeria (AMCON), has received the\nread more AMCON CEO honoured with African Business Leadership award",
+          "link": "https://businessday.ng/news/article/amcon-ceo-honoured-with-african-business-leadership-award/",
+          "published": "Tue, 07 Jul 2026 09:35:27 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "US Consulate, FBI seek stronger EFCC ties on sextortion",
+          "summary": "The US Consulate and FBI are strengthening ties with EFCC to combat sextortion and transnational financial crimes. Learn about their collaborative efforts.\n\nRead More: https://punchng.com/us-consulate-fbi-seek-stronger-efcc-ties-on-sextortion/",
+          "link": "https://punchng.com/us-consulate-fbi-seek-stronger-efcc-ties-on-sextortion/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:50:53 +0000"
+        },
+        {
+          "title": "Police detain officers over assault of civilian in Ebonyi",
+          "summary": "Ebonyi State Police Command detains officers involved in civilian assault, launching a thorough investigation into the alleged police brutality incident.\n\nRead More: https://punchng.com/police-detain-officers-over-assault-of-civilian-in-ebonyi/",
+          "link": "https://punchng.com/police-detain-officers-over-assault-of-civilian-in-ebonyi/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:45:13 +0000"
+        },
+        {
+          "title": "FG mourns medical graduate killed in Ukraine attack",
+          "summary": "The Federal Government expresses deep sorrow over the death of a Nigerian medical graduate, Nnani Adaobi Marian, killed in a Russian attack in Ukraine.\n\nRead More: https://punchng.com/fg-mourns-medical-graduate-killed-in-ukraine-attack/",
+          "link": "https://punchng.com/fg-mourns-medical-graduate-killed-in-ukraine-attack/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:45:00 +0000"
+        },
+        {
+          "title": "PFIPC scandal: Ex-SGF Babachir Lawal suspects ‘big racket’ behind ‘fake’ agency’s budget code",
+          "summary": "Former SGF Babachir Lawal calls for a judicial inquiry into the PFIPC scandal, suspecting a &#8216;big racket&#8217; behind the alleged fake agency&#8217;s budget code and N\n\nRead More: https://punchng.com/pfipc-scandal-ex-sgf-babachir-lawal-suspects-big-racket-behind-fake-agencys-budget-code/",
+          "link": "https://punchng.com/pfipc-scandal-ex-sgf-babachir-lawal-suspects-big-racket-behind-fake-agencys-budget-code/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:41:10 +0000"
+        },
+        {
+          "title": "Paraguayan senator demands apology from Mbappé, threatens legal action",
+          "summary": "Paraguayan Senator Celeste Amarilla demands an apology from Kylian Mbappé, threatening legal action over alleged &#8220;gender-based violence&#8221; after their World\n\nRead More: https://punchng.com/paraguayan-senator-demands-apology-from-mbappe-threatens-legal-action/",
+          "link": "https://punchng.com/paraguayan-senator-demands-apology-from-mbappe-threatens-legal-action/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:20:10 +0000"
+        },
+        {
+          "title": "I waited 18 years before welcoming twins – Nollywood star Ricardo Agbor",
+          "summary": "Nollywood actor Ricardo Agbor shares his emotional 18-year journey to fatherhood, revealing how he and his wife finally welcomed twins after a long wait.\n\nRead More: https://punchng.com/i-waited-18-years-before-welcoming-twins-nollywood-star-ricardo-agbor/",
+          "link": "https://punchng.com/i-waited-18-years-before-welcoming-twins-nollywood-star-ricardo-agbor/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:10:50 +0000"
+        },
+        {
+          "title": "PHOTOS: Fuji star Taye Currency gushes over son called to Nigerian bar",
+          "summary": "Fuji star Taye Currency celebrates his son, Samsudeen Adebisi, on being called to the Nigerian Bar. Discover the proud father&#8217;s message and family achievem\n\nRead More: https://punchng.com/photos-fuji-star-taye-currency-gushes-over-son-called-to-nigerian-bar/",
+          "link": "https://punchng.com/photos-fuji-star-taye-currency-gushes-over-son-called-to-nigerian-bar/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 11:05:59 +0000"
+        },
+        {
+          "title": "2026 World Cup: FIFA, France rally behind Mbappé after Paraguayan senator’s racist slur",
+          "summary": "FIFA and French President Macron condemn Paraguayan Senator Celeste Amarilla&#8217;s racist remarks against Kylian Mbappé after the 2026 World Cup.\n\nRead More: https://punchng.com/2026-world-cup-fifa-france-rally-behind-mbappe-after-paraguayan-senators-racist-slur/",
+          "link": "https://punchng.com/2026-world-cup-fifa-france-rally-behind-mbappe-after-paraguayan-senators-racist-slur/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 10:59:05 +0000"
+        },
+        {
+          "title": "FULL LIST: Players who scored most World Cup penalties",
+          "summary": "Discover the full list of players who have scored the most World Cup penalties in history, excluding shootouts. Find out who tops the all-time rankings!\n\nRead More: https://punchng.com/full-list-players-who-scored-most-world-cup-penalties/",
+          "link": "https://punchng.com/full-list-players-who-scored-most-world-cup-penalties/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 10:56:59 +0000"
+        },
+        {
+          "title": "Oyo APC gov candidate congratulates Ajimobi’s widow on Austria’s diplomatic milestone",
+          "summary": "Oyo APC governorship candidate congratulates Florence Ajimobi on her diplomatic milestone in Austria, praising her commitment to service and leadership.\n\nRead More: https://punchng.com/oyo-apc-gov-candidate-congratulates-ajimobis-widow-on-austrias-diplomatic-milestone/",
+          "link": "https://punchng.com/oyo-apc-gov-candidate-congratulates-ajimobis-widow-on-austrias-diplomatic-milestone/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 07 Jul 2026 10:38:33 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Demand for state police due to federal police failure — Ex-IGP Okiro",
+          "summary": "\"If the police had been well-equipped, nobody would be talking about state police. People are talking about state police because the federal police have failed. If they had succeeded, nobody would talk about it.\"\nThe post Demand for state police due to federal police failure — Ex-IGP Okiro appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/demand-for-state-police-due-to-federal-police-failure-ex-igp-okiro/",
+          "published": "Tue, 07 Jul 2026 10:55:28 +0000"
+        },
+        {
+          "title": "‎All three co-hosts eliminated from 2026 World Cup",
+          "summary": "The three countries hosting the 2026 FIFA World Cup have all been eliminated before the quarter-final stage, bringing an early end to the tournament hopes of the United States, Mexico and Canada. The United States became the final co-host to exit the competition after suffering a heavy 4-1 defeat to Belgium on Tuesday. Canada were [&#8230;]\nThe post ‎All three co-hosts eliminated from 2026 World C",
+          "link": "https://www.vanguardngr.com/2026/07/all-three-co-hosts-eliminated-from-2026-world-cup/",
+          "published": "Tue, 07 Jul 2026 10:52:19 +0000"
+        },
+        {
+          "title": "‘Disappointed’ Pochettino says Balogun row no excuse for US World Cup exit",
+          "summary": "US coach Mauricio Pochettino said he was disappointed and frustrated by the backlash over Folarin Balogun's ban but insisted it was no excuse for his side's World Cup exit at the hands of Belgium on Monday.\nThe post &#8216;Disappointed&#8217; Pochettino says Balogun row no excuse for US World Cup exit appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/disappointed-pochettino-says-balogun-row-no-excuse-for-us-world-cup-exit/",
+          "published": "Tue, 07 Jul 2026 10:35:00 +0000"
+        },
+        {
+          "title": "Beyond the Degree: How A-Global is Engineering the Solution to Nigeria’s Education Crisis",
+          "summary": "In a nation where the ink on a university degree often dries before the graduate can find a job, the Nigerian education system is facing a silent emergency. It is a crisis of relevance, access, and future-readiness. But rising from over a decade of intensive research and rigorous academic inquiry, a new institution has emerged [&#8230;]\nThe post Beyond the Degree: How A-Global is Engineering the S",
+          "link": "https://www.vanguardngr.com/2026/07/beyond-the-degree-how-a-global-is-engineering-the-solution-to-nigerias-education-crisis/",
+          "published": "Tue, 07 Jul 2026 10:19:35 +0000"
+        },
+        {
+          "title": "Edo Govt warns cultists against 7/7 celebrations, urges businesses to install CCTV",
+          "summary": "By Ozioruva Aliu BENIN CITY – The Edo State Government has warned individuals involved in cult-related activities against staging any celebrations or gatherings associated with July 7, while urging business owners to install Closed-Circuit Television (CCTV) cameras as part of efforts to strengthen security across the state. The warning was issued on Monday by the [&#8230;]\nThe post Edo Govt warns ",
+          "link": "https://www.vanguardngr.com/2026/07/edo-govt-warns-cultists-against-7-7-celebrations-urges-businesses-to-install-cctv/",
+          "published": "Tue, 07 Jul 2026 10:09:58 +0000"
+        },
+        {
+          "title": "Police confirm 30 alleged politically motivated killings in Osun",
+          "summary": "‘From the complaints received, we cannot rule out the involvement of some politicians in the killings,’ he said.\nThe post Police confirm 30 alleged politically motivated killings in Osun appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/police-confirm-30-alleged-politically-motivated-killings-in-osun/",
+          "published": "Tue, 07 Jul 2026 10:06:55 +0000"
+        },
+        {
+          "title": "Paris FC confirm Rosenior as new coach",
+          "summary": "\"Aged 41, Liam Rosenior already has a wealth of experience at the highest level,\" said Paris FC. \"He has quickly established himself as one of the most promising coaches of his generation.\"\nThe post Paris FC confirm Rosenior as new coach appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/paris-fc-confirm-rosenior-as-new-coach/",
+          "published": "Tue, 07 Jul 2026 09:41:29 +0000"
+        },
+        {
+          "title": "Universities must become engines of industrial growth, not just centres of learning — VP Shettima",
+          "summary": ". As UNDP launches Manu-tech Unipod at MOUAU . UniPod &#8216;ll unlock Abia&#8217;s industrial potential &#8211; Otti . TETFund, UN hail innovation ecosystem By Steve Oko UMUAHIA — Vice President Senator Kashim Shettima has declared that Nigeria&#8217;s universities must evolve from producing graduates to becoming engines of innovation, industrialisation and enterprise if the country is [&#8230;]\n",
+          "link": "https://www.vanguardngr.com/2026/07/universities-must-become-engines-of-industrial-growth-not-just-centres-of-learning-vp-shettima/",
+          "published": "Tue, 07 Jul 2026 09:39:22 +0000"
+        },
+        {
+          "title": "Ebonyi police arrest officers over alleged assault, brutalisation of man, launch investigation",
+          "summary": "By Jeff Agbodo, Abakaliki The Ebonyi State Police Command has arrested officers allegedly involved in the assault and brutalisation of a civilian, leaving the victim with serious injuries in Ohaukwu Local Government Area of the state. The Command&#8217;s Public Relations Officer, SP Joshua Ukandu, disclosed this in a statement, saying the police had commenced an [&#8230;]\nThe post Ebonyi police ar",
+          "link": "https://www.vanguardngr.com/2026/07/ebonyi-police-arrest-officers-over-alleged-assault-brutalisation-of-man-launch-investigation/",
+          "published": "Tue, 07 Jul 2026 09:32:48 +0000"
+        },
+        {
+          "title": "Customs to adopt 2026-2035 strategic framework",
+          "summary": "… Launches mentor-mentee plan for senior officersBy Nkiruka Nnorom The Nigeria Customs Service, NCS, has pledged to build its next decade of operations around strategic foresight with all proposals from its pioneer senior officer graduates to be embedded in a new 2026–2035 policy framework. The Comptroller-General of Customs,Bashir Adewale Adeniyi, stated this at the graduation [&#8230;]\nThe post ",
+          "link": "https://www.vanguardngr.com/2026/07/customs-to-adopt-2026-2035-strategic-framework/",
+          "published": "Tue, 07 Jul 2026 09:29:43 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "“Sex has a lot to do with a woman’s life; I’m getting more than enough” – Iyabo Ojo",
+          "summary": "She also opened up about her relationship with talent manager Paul “Paul O” Okoye.\nThe post “Sex has a lot to do with a woman’s life; I’m getting more than enough” &#8211; Iyabo Ojo appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/entertainment/naija-fashion/893535-sex-has-a-lot-to-do-with-a-womans-life-im-getting-more-than-enough-iyabo-ojo.html",
+          "published": "Tue, 07 Jul 2026 10:39:02 +0000"
+        },
+        {
+          "title": "“Start frying akara instead of begging for N2,000” — Eucharia Anunobi joins ‘Iya Alakara’ debate",
+          "summary": "The evangelist echoed the First Lady’s entrepreneurship message, urging Nigerians to start small.\nThe post “Start frying akara instead of begging for N2,000” — Eucharia Anunobi joins ‘Iya Alakara’ debate appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/entertainment/naija-fashion/893526-start-frying-akara-instead-of-begging-for-n2000-eucharia-anunobi-joins-iya-alakara-debate.html",
+          "published": "Tue, 07 Jul 2026 10:23:50 +0000"
+        },
+        {
+          "title": "Niger govt imposes curfew over communal clashes",
+          "summary": "The Niger State Government has imposed a curfew on some communities in Rafi Local Government Area following renewed communal clashes\nThe post Niger govt imposes curfew over communal clashes appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/north-central/893524-niger-govt-imposes-curfew-over-communal-clashes.html",
+          "published": "Tue, 07 Jul 2026 10:01:28 +0000"
+        },
+        {
+          "title": "Police arrest woman filmed assaulting 12-year-old with knife",
+          "summary": "The police said the woman will be charged with attempted murder.\nThe post Police arrest woman filmed assaulting 12-year-old with knife appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/893511-police-arrest-woman-filmed-assaulting-12-year-old-with-knife.html",
+          "published": "Tue, 07 Jul 2026 08:06:22 +0000"
+        },
+        {
+          "title": "Troops rescue abductees as search for missing students continues",
+          "summary": "Troops of Operation HADIN KAI have rescued six abductees, including two infants, during ongoing operations linked to the search for students abducted from Government Day Secondary School, Lassa.\nThe post Troops rescue abductees as search for missing students continues appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/nnorth-east/893509-troops-rescue-abductees-as-search-for-missing-students-continues.html",
+          "published": "Tue, 07 Jul 2026 07:50:36 +0000"
+        },
+        {
+          "title": "EFCC secures conviction of 10 for Naira abuse",
+          "summary": "Ten people have been convicted in Delta and Edo after pleading guilty to spraying and mutilating the naira at social events.\nThe post EFCC secures conviction of 10 for Naira abuse appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/893506-efcc-secures-conviction-of-10-for-naira-abuse.html",
+          "published": "Tue, 07 Jul 2026 07:29:48 +0000"
+        },
+        {
+          "title": "UN scales up Venezuela earthquake relief as damage reaches $37bn",
+          "summary": "Two earthquakes, measuring 7.2 and 7.5 in magnitude, struck north-central Venezuela on 24 June, only 39 seconds apart, causing widespread devastation.\nThe post UN scales up Venezuela earthquake relief as damage reaches $37bn appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/893504-un-scales-up-venezuela-earthquake-relief-as-damage-reaches-37bn.html",
+          "published": "Tue, 07 Jul 2026 07:18:29 +0000"
+        },
+        {
+          "title": "‘It was my last World Cup’ – Ronaldo confirms farewell after Portugal’s heartbreaking exit",
+          "summary": "The legendary forward made the announcement shortly after Portugal's elimination, saying he leaves the tournament with no regrets after giving everything for his country\nThe post ‘It was my last World Cup’ &#8211; Ronaldo confirms farewell after Portugal’s heartbreaking exit appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/893500-it-was-my-last-world-cup-ronaldo-confirms-farewell-after-portugals-heartbreaking-exit.html",
+          "published": "Tue, 07 Jul 2026 06:50:45 +0000"
+        },
+        {
+          "title": "‘We didn’t fail’ – Roberto Martínez resigns as Portugal Coach after World Cup exit",
+          "summary": "Martínez, who took charge of Portugal in 2023 after leaving Belgium, was already due to see his contract expire at the end of the World Cup\nThe post ‘We didn’t fail’ &#8211; Roberto Martínez resigns as Portugal Coach after World Cup exit appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/893497-we-didnt-fail-roberto-martinez-resigns-as-portugal-coach-after-world-cup-exit.html",
+          "published": "Tue, 07 Jul 2026 06:44:40 +0000"
+        },
+        {
+          "title": "World Cup: Belgium crush USA 4-1 as Balogun fails to make impact",
+          "summary": "Balogun returned to the United States starting line-up after FIFA controversially suspended his automatic one-match ban, but the striker endured a frustrating evening as Belgium swept aside the tournament co-hosts...\nThe post World Cup: Belgium crush USA 4-1 as Balogun fails to make impact appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/893493-world-cup-belgium-crush-usa-4-1-as-balogun-fails-to-make-impact.html",
+          "published": "Tue, 07 Jul 2026 06:35:40 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Mobile Money, Fintech Gaps and a $3.2 Billion Opportunity Inside Africa’s Displacement Zones",
+          "summary": "Africa's displacement zones may be the continent's least contested fintech...",
+          "link": "https://techpoint.africa/brandpress/mobile-money-fintech-gaps-and-a-3-2-billion-opportunity-inside-africas-displacement-zones/",
+          "published": "Tue, 07 Jul 2026 09:52:43 +0000"
+        },
+        {
+          "title": "6 Reasons OPay’s New Security Features Give Nigerians Greater Peace of Mind",
+          "summary": "As digital payments become part of everyday life, keeping money...",
+          "link": "https://techpoint.africa/brandpress/6-reasons-opays-new-security-features-give-nigerians-greater-peace-of-mind/",
+          "published": "Tue, 07 Jul 2026 09:21:19 +0000"
+        },
+        {
+          "title": "Nigerian Merchants Can Now Get Customers Online for ₦500/Month — Shopsonline Launches to Solve the Biggest Gap in Digital Commerce",
+          "summary": "Most platforms give you a store. Shopsonline gives you the...",
+          "link": "https://techpoint.africa/brandpress/nigerian-merchants-can-now-get-customers-online-for-500-month/",
+          "published": "Tue, 07 Jul 2026 08:28:56 +0000"
+        },
+        {
+          "title": "Nigeria opens probe into Meta, X, and AI firms",
+          "summary": "On Techpoint Digest, we discuss Nigeria opening a probe into Meta, X, and AI firms, Zeepay's response to $11.6 million refund reports, Kenya's creation of new licences for Uber, Bolt, and Glovo, and Angola's decision to take Unitel public following a state takeover.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1382/",
+          "published": "Tue, 07 Jul 2026 07:00:00 +0000"
+        },
+        {
+          "title": "How Andrea Aid is building a crowdfunding platform for healthcare in Southern Nigeria",
+          "summary": "Andrea Aid, a Port Harcourt-based startup is building a medical crowdfunding platform that helps patients raise money for treatment by connecting them with donors.",
+          "link": "https://techpoint.africa/feature/andrea-aid-medical-crowdfunding-platform/",
+          "published": "Tue, 07 Jul 2026 03:00:00 +0000"
+        },
+        {
+          "title": "7% and Not Much More: Inside PairRide’s Bet on the Lowest Commission in Nigerian E-Hailing",
+          "summary": "PairRide launches in Nigeria with 7% driver commission vs 20%+....",
+          "link": "https://techpoint.africa/brandpress/7-and-not-much-more-inside-pairrides-bet-on-the-lowest-commission-in-nigerian-e-hailing/",
+          "published": "Mon, 06 Jul 2026 14:00:00 +0000"
+        },
+        {
+          "title": "Signal Alliance Technology Holding Celebrates 30 Years of Innovation, Unveils SATH Cloud and SATH Technology Consulting",
+          "summary": "Signal Alliance Technology Holding (SATH), one of Nigeria's foremost technology...",
+          "link": "https://techpoint.africa/brandpress/signal-alliance-technology-holding-celebrates-30-years-of-innovation/",
+          "published": "Mon, 06 Jul 2026 09:08:45 +0000"
+        },
+        {
+          "title": "Busha and Women in DeFi Partner to Empower the Next Generation of Women Building Africa’s Digital Future",
+          "summary": "Busha, a pan-African financial services company, and Women in DeFi...",
+          "link": "https://techpoint.africa/brandpress/busha-and-women-in-defi-partner-to-empower-the-next-generation-of-women/",
+          "published": "Mon, 06 Jul 2026 08:41:31 +0000"
+        },
+        {
+          "title": "SnappyPay Founder Olaide Alim Completes Full-Stack Software Engineering Training",
+          "summary": "Olaide Alim, founder of SnappyPay and SnappyExchange, has completed his...",
+          "link": "https://techpoint.africa/brandpress/snappypay-founder-olaide-alim-completes-full-stack-software-engineering-training/",
+          "published": "Mon, 06 Jul 2026 07:45:00 +0000"
+        },
+        {
+          "title": "Nigerian startup FoodCourt suspends operations amid mounting debts",
+          "summary": "On Techpoint Digest, we discuss the suspension of operations by Nigerian startup FoodCourt, the SEC adding two new crypto companies to ARIP, the possibility of Kenyan ISPs charging by data usage, and the success of Pick n Pay's digital grocery push.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1381/",
+          "published": "Mon, 06 Jul 2026 07:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related topicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy consumption that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data is based on primary energy calculated by the 'substitution method' which attempts to correct for the inefficiencies in fossil fuel production. It does this by converting non-fossil fuel sources to their 'input equivalents': the amount of primary energy that would be required to produce the same amount of energy if it came from fossil fuels.Approximately one-seventh of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – "
+    }
+  ],
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-06-30T14:50:04.374344",
+  "strategies_skipped": [
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "articles": []
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "articles": [
+        {
+          "title": "INEC candidates’ nominations portal: Only the recognised National Chairmen, National Secretaries can secure access codes",
+          "summary": "The Independent National Electoral Commission (INEC) Candidate Nomination Portal (ICNP) for the 2027 general elections is officially open. This automated\nread more INEC candidates&#8217; nominations portal: Only the recognised National Chairmen, National Secretaries can secure access codes",
+          "link": "https://businessday.ng/politics/article/inec-candidates-nominations-portal-only-the-recognised-national-chairmen-national-secretaries-can-secure-access-codes/",
+          "published": "Tue, 30 Jun 2026 13:25:05 +0000"
+        },
+        {
+          "title": "269 more Nigerians evacuated from South Africa as FG steps up repatriation efforts",
+          "summary": "The Federal Government has evacuated another 269 Nigerians from South Africa, bringing the total number of citizens repatriated within the\nread more 269 more Nigerians evacuated from South Africa as FG steps up repatriation efforts",
+          "link": "https://businessday.ng/news/article/269-more-nigerians-evacuated-from-south-africa-as-fg-steps-up-repatriation-efforts/",
+          "published": "Tue, 30 Jun 2026 13:14:49 +0000"
+        },
+        {
+          "title": "Zenith Bank: Interim dividend in focus as Board meets July 29",
+          "summary": "Shareholders and market observers are turning their attention to Zenith Bank Plc as the financial powerhouse gears up for its\nread more Zenith Bank: Interim dividend in focus as Board meets July 29",
+          "link": "https://businessday.ng/markets/article/zenith-bank-interim-dividend-in-focus-as-board-meets-july-29/",
+          "published": "Tue, 30 Jun 2026 13:08:25 +0000"
+        },
+        {
+          "title": "Nigeria’s security spending trap leaves violence undefeated",
+          "summary": "For years, Nigeria’s response to insecurity has followed a familiar pattern: increase spending, deploy more forces, launch operations and hope\nread more Nigeria’s security spending trap leaves violence undefeated",
+          "link": "https://businessday.ng/pro/article/nigerias-security-spending-trap-leaves-violence-undefeated/",
+          "published": "Tue, 30 Jun 2026 13:07:49 +0000"
+        },
+        {
+          "title": "From 200 marathons to 2,000 miles: Mina Guli’s mission to restore our water",
+          "summary": "In March 2022, when Mina Guli announced her goal to complete 200 marathons in a single year, my immediate reaction\nread more From 200 marathons to 2,000 miles: Mina Guli’s mission to restore our water",
+          "link": "https://businessday.ng/opinion/article/from-200-marathons-to-2000-miles-mina-gulis-mission-to-restore-our-water/",
+          "published": "Tue, 30 Jun 2026 13:02:55 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "articles": [
+        {
+          "title": "VIDEO: Thousands march in South Africa anti-immigration protests",
+          "summary": "Thousands march in South Africa anti-immigration protests, raising concerns among foreign nationals. Learn about the latest developments and government res\n\nRead More: https://punchng.com/video-thousands-march-in-south-africa-anti-immigration-protests/",
+          "link": "https://punchng.com/video-thousands-march-in-south-africa-anti-immigration-protests/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 14:43:01 +0000"
+        },
+        {
+          "title": "UNILAG rescues students stranded in China after social media outcry",
+          "summary": "UNILAG has confirmed the rescue of its students stranded in China after a social media outcry. The university intervened to bring them home.\n\nRead More: https://punchng.com/unilag-rescues-students-stranded-in-china-after-social-media-outcry/",
+          "link": "https://punchng.com/unilag-rescues-students-stranded-in-china-after-social-media-outcry/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 14:41:51 +0000"
+        },
+        {
+          "title": "FEC approves N286bn maritime projects",
+          "summary": "The Federal Executive Council has approved N286bn for maritime projects, including pollution control vessels and dredging, to modernise Nigeria&#8217;s ports and\n\nRead More: https://punchng.com/fec-approves-n286bn-maritime-projects/",
+          "link": "https://punchng.com/fec-approves-n286bn-maritime-projects/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 14:30:43 +0000"
+        },
+        {
+          "title": "TETFund challenges scientists to fast-track Nigeria’s first Lassa fever vaccine",
+          "summary": "TETFund urges Nigerian scientists to accelerate the development of the country&#8217;s first Lassa fever vaccine, addressing the urgent public health burden. Dis\n\nRead More: https://punchng.com/tetfund-challenges-scientists-to-fast-track-nigerias-first-lassa-fever-vaccine/",
+          "link": "https://punchng.com/tetfund-challenges-scientists-to-fast-track-nigerias-first-lassa-fever-vaccine/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 14:20:16 +0000"
+        },
+        {
+          "title": "PDP faction faults arrest of Akwa Ibom spokesperson, offers legal support",
+          "summary": "A PDP faction condemns the arrest of its Akwa Ibom spokesperson, Ewa Okpo, calling it an intimidation tactic and offering full legal support.\n\nRead More: https://punchng.com/pdp-faction-faults-arrest-of-akwa-ibom-spokesperson-offers-legal-support/",
+          "link": "https://punchng.com/pdp-faction-faults-arrest-of-akwa-ibom-spokesperson-offers-legal-support/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 14:19:50 +0000"
+        },
+        {
+          "title": "Real Madrid’s Mendy to stand trial after dog attacked teenager",
+          "summary": "Real Madrid&#8217;s Ferland Mendy faces trial after his dog allegedly attacked a teenager and two other dogs. Learn more about the Mendy dog attack case.\n\nRead More: https://punchng.com/real-madrids-mendy-to-stand-trial-after-dog-attacked-teenager/",
+          "link": "https://punchng.com/real-madrids-mendy-to-stand-trial-after-dog-attacked-teenager/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 14:06:02 +0000"
+        },
+        {
+          "title": "Residents escape as fire guts building, laundry shop in Kwara",
+          "summary": "Residents in Ilorin, Kwara State, narrowly escaped a building fire that destroyed a laundry shop. Learn about the suspected cause and fire safety tips.\n\nRead More: https://punchng.com/residents-escape-as-fire-guts-building-laundry-shop-in-kwara/",
+          "link": "https://punchng.com/residents-escape-as-fire-guts-building-laundry-shop-in-kwara/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 13:52:51 +0000"
+        },
+        {
+          "title": "CVR: INEC registers 1.57 million Nigerians in seven weeks",
+          "summary": "INEC reports 1.57 million Nigerians completed voter registration in seven weeks. Learn about the demographics and state-by-state breakdown of the continuou\n\nRead More: https://punchng.com/cvr-inec-registers-1-57-million-nigerians-in-seven-weeks/",
+          "link": "https://punchng.com/cvr-inec-registers-1-57-million-nigerians-in-seven-weeks/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 13:50:31 +0000"
+        },
+        {
+          "title": "Soldiers rescue six kidnap victims in Katsina",
+          "summary": "Nigerian Army troops successfully rescued six kidnap victims, including four women and two boys, in Katsina State during a routine patrol.\n\nRead More: https://punchng.com/soldiers-rescue-six-kidnap-victims-in-katsina/",
+          "link": "https://punchng.com/soldiers-rescue-six-kidnap-victims-in-katsina/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 13:39:10 +0000"
+        },
+        {
+          "title": "PDP faults Gombe LG poll, alleges lack of transparency",
+          "summary": "The PDP in Gombe State has criticised the recently concluded local government elections, alleging a lack of transparency and democratic standards.\n\nRead More: https://punchng.com/pdp-faults-gombe-lg-poll-alleges-lack-of-transparency/",
+          "link": "https://punchng.com/pdp-faults-gombe-lg-poll-alleges-lack-of-transparency/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 30 Jun 2026 13:28:34 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "articles": [
+        {
+          "title": "NRC grants Lagos permanent licence to operate red line rail",
+          "summary": "By Olasunkanmi Akoni LAGOS — The Nigerian Railway Corporation (NRC) has formally granted the Lagos State Government a permanent operating licence for the Lagos Rail Mass Transit (LRMT) Red Line, ending its 128-year monopoly as the sole developer and operator of railway services in Nigeria. Speaking during the signing of a Memorandum of Understanding (MoU) [&#8230;]\nThe post NRC grants Lagos perman",
+          "link": "https://www.vanguardngr.com/2026/06/nrc-grants-lagos-permanent-licence-to-operate-red-line-rail/",
+          "published": "Tue, 30 Jun 2026 13:49:09 +0000"
+        },
+        {
+          "title": "Floods displace Lagos residents, shut businesses, disrupt traffic",
+          "summary": "…ADC faults government, demands urgent action …Lagos will continue to build flood-resilient infrastructure — Commissioner ….Encroached drainage, indiscriminate waste disposal worsen flooding, says Wahab By Olasunkanmi Akoni LAGOS — Torrential rainfall that lasted for more than 12 hours on Tuesday left several parts of Lagos flooded, displacing residents, shutting down businesses and crippling vehi",
+          "link": "https://www.vanguardngr.com/2026/06/floods-displace-lagos-residents-shut-businesses-disrupt-traffic/",
+          "published": "Tue, 30 Jun 2026 13:44:36 +0000"
+        },
+        {
+          "title": "Wabara, Ben Obi mobilise diaspora support for free, fair 2027 polls in US",
+          "summary": "By Steve Oko Former Senate President and Chairman of the Board of Trustees (BoT) of the Peoples Democratic Party (PDP), Senator Adolphus Wabara, and former Action Congress (AC) vice-presidential candidate, Senator Ben Obi, have begun high-level consultations with Nigerians in the United States as part of efforts to mobilise support for free, fair and credible [&#8230;]\nThe post Wabara, Ben Obi mob",
+          "link": "https://www.vanguardngr.com/2026/06/wabara-ben-obi-mobilise-diaspora-support-for-free-fair-2027-polls-in-us/",
+          "published": "Tue, 30 Jun 2026 13:39:09 +0000"
+        },
+        {
+          "title": "Ballon d’Or: Organisers reveal criteria to win 2026 award",
+          "summary": "France Football has settled the long-running debate over how closely winning the World Cup is tied to claiming the Ballon d'Or, football's most coveted individual prize.\nThe post Ballon d&#8217;Or: Organisers reveal criteria to win 2026 award appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/06/ballon-dor-organisers-reveal-criteria-to-win-2026-award/",
+          "published": "Tue, 30 Jun 2026 13:34:47 +0000"
+        },
+        {
+          "title": "Death toll from Ghana’s flood climbs to 12",
+          "summary": "The death toll from flooding that paralysed Ghana's capital has risen to at least 12, emergency services said on Tuesday, after the government apologised for its handling of the disaster.\nThe post Death toll from Ghana&#8217;s flood climbs to 12 appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/06/death-toll-from-ghanas-flood-climbs-to-12/",
+          "published": "Tue, 30 Jun 2026 13:34:44 +0000"
+        },
+        {
+          "title": "C/River govt marks PDP deputy gov candidate house, others for demolition",
+          "summary": "The Cross River State Government has marked the residence of the Peoples Democratic Party, PDP, deputy governorship candidate for 2027, Mr Alphonsus Eba, along with others for demolition, triggering a defiant response from the politician who has vowed that nothing, not even death will stop his political ambition.\nThe post C/River govt marks PDP deputy gov candidate house, others for demolition app",
+          "link": "https://www.vanguardngr.com/2026/06/c-river-govt-marks-pdp-deputy-gov-candidate-house-others-for-demolition/",
+          "published": "Tue, 30 Jun 2026 13:29:31 +0000"
+        },
+        {
+          "title": "Obi demands transparency, wants INEC to publish candidates’ credentials",
+          "summary": "The presidential candidate of the Nigeria Democratic Congress, NDC, Peter Obi, has called on the Independent National Electoral Commission (INEC) to publish the academic certificates and credentials submitted by all candidates seeking elective offices, saying such a move would strengthen transparency and public confidence in Nigeria&#8217;s electoral process. Obi made the call in a post [&#8230;]\n",
+          "link": "https://www.vanguardngr.com/2026/06/obi-demands-transparency-wants-inec-to-publish-candidates-credentials/",
+          "published": "Tue, 30 Jun 2026 13:20:17 +0000"
+        },
+        {
+          "title": "CVR phase 3: INEC registers 1.5m Nigerians in 7 weeks",
+          "summary": "The Independent National Electoral Commission (INEC) says no fewer than 1,565,873 Nigerians have successfully completed their voter registration as of June 26.\nThe post CVR phase 3: INEC registers 1.5m Nigerians in 7 weeks appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/06/cvr-phase-3-inec-registers-1-5m-nigerians-in-7-weeks/",
+          "published": "Tue, 30 Jun 2026 13:16:01 +0000"
+        },
+        {
+          "title": "FG to engage South Africa over compensation for returning Nigerians",
+          "summary": "The Federal Government has said it will engage the South African government to seek compensation for Nigerians who were forced to abandon businesses and other valuable properties as they return home following renewed anti immigrant tensions in the country.\nThe post FG to engage South Africa over compensation for returning Nigerians appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/06/fg-to-engage-south-africa-over-compensation-for-returning-nigerians/",
+          "published": "Tue, 30 Jun 2026 13:00:25 +0000"
+        },
+        {
+          "title": "Gunmen storm Plateau mining site, kill three, injure two",
+          "summary": "Sources said the incident occurred around 11:50 a.m. on Tuesday, causing panic as miners and residents fled for safety.\nThe post Gunmen storm Plateau mining site, kill three, injure two appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/06/gunmen-storm-plateau-mining-site-kill-three-injure-two/",
+          "published": "Tue, 30 Jun 2026 13:00:17 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "articles": [
+        {
+          "title": "Group, INEC take voter registration to Benue IDPs amid disenfranchisement fears",
+          "summary": "TAF Africa's senior monitoring and evaluation officer, Terfa Tyokase, says displacement should not deprive citizens of their constitutional right to vote.\nThe post Group, INEC take voter registration to Benue IDPs amid disenfranchisement fears appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/891842-group-inec-take-voter-registration-to-benue-idps-amid-disenfranchisement-fears.html",
+          "published": "Tue, 30 Jun 2026 13:48:42 +0000"
+        },
+        {
+          "title": "Does Tshisekedi’s third-term bid benefit DRCongo?",
+          "summary": "A loss of democratic credibility would undercut diplomatic gains and strengthen M23’s demands for autonomy in eastern DRC.\nThe post Does Tshisekedi’s third-term bid benefit DRCongo? appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/891846-does-tshisekedis-third-term-bid-benefit-drcongo.html",
+          "published": "Tue, 30 Jun 2026 13:28:20 +0000"
+        },
+        {
+          "title": "Terrorists kidnap six women, two babies near scene of Borno school attack",
+          "summary": "Gunmen abducted six married women and two babies from farms in Askira/Uba Local Government Area of Borno State less than 24 hours before the attack on students sitting the ongoing NECO examinations in neighbouring Lassa.\nThe post Terrorists kidnap six women, two babies near scene of Borno school attack appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/891810-terrorists-kidnap-six-women-two-babies-near-scene-of-borno-school-attack.html",
+          "published": "Tue, 30 Jun 2026 13:11:33 +0000"
+        },
+        {
+          "title": "Court grants Sowore N200 million bail in alleged cybercrime trial",
+          "summary": "The court ordered that one of the sureties must be a traditional ruler from Mr Sowore's community, while the second must own landed property in Abuja.\nThe post Court grants Sowore N200 million bail in alleged cybercrime trial appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/891822-court-grants-sowore-n200-million-bail-in-alleged-cybercrime-trial.html",
+          "published": "Tue, 30 Jun 2026 13:03:46 +0000"
+        },
+        {
+          "title": "Nigerian govt to launch platform to automate school census, make education data public",
+          "summary": "More than 32 million students are enrolled on the DNEMIS portal, according to the National Project Coordinator of the Special Programmes Operations and Implementation Unit in the Office of the Minister of Education, Adebayo Onigbanjo.\nThe post Nigerian govt to launch platform to automate school census, make education data public appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/891829-nigerian-govt-to-launch-platform-to-automate-school-census-make-education-data-public.html",
+          "published": "Tue, 30 Jun 2026 12:24:32 +0000"
+        },
+        {
+          "title": "NHRC’s Tony Ojukwu elected vice-president of African Rights Network",
+          "summary": "Mr Ojukwu was elected on 26 June during the Fourth Annual Conference of ANPMN held in Kigali, Rwanda.\nThe post NHRC&#8217;s Tony Ojukwu elected vice-president of African Rights Network appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/891827-nhrcs-tony-ojukwu-elected-vice-president-of-african-rights-network.html",
+          "published": "Tue, 30 Jun 2026 12:16:18 +0000"
+        },
+        {
+          "title": "Nigeria’s violence far worse than Boko Haram narrative — Researcher",
+          "summary": "Drawing on a six-year study covering attacks between 2020 and 2025, Mr Vierhout, who spoke in Jos during a peace summit on Monday, said the dominant focus on jihadist groups such as Boko Haram obscures a far deadlier reality on the ground.\nThe post Nigeria’s violence far worse than Boko Haram narrative — Researcher appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/891820-nigerias-violence-far-worse-than-boko-haram-narrative-researcher.html",
+          "published": "Tue, 30 Jun 2026 12:11:26 +0000"
+        },
+        {
+          "title": "Oyo kidnap suspects trade blame after arrest over abduction of two children in Oyo",
+          "summary": "Police said the four suspects are assisting investigators with information aimed at tracking other members of the criminal network.\nThe post Oyo kidnap suspects trade blame after arrest over abduction of two children in Oyo appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/891817-oyo-kidnap-suspects-trade-blame-after-arrest-over-abduction-of-two-children-in-oyo.html",
+          "published": "Tue, 30 Jun 2026 11:40:38 +0000"
+        },
+        {
+          "title": "Galloping costs spur 49.2% drop in Universal Insurance’s annual profit",
+          "summary": "Insurance service expenses were the major pressure point as they not only more than doubled to N8.3 billion, but also crowded out insurance revenue, which had risen by 47 per cent.\nThe post Galloping costs spur 49.2% drop in Universal Insurance&#8217;s annual profit appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/891813-galloping-costs-spur-49-2-drop-in-universal-insurances-annual-profit.html",
+          "published": "Tue, 30 Jun 2026 11:31:05 +0000"
+        },
+        {
+          "title": "Political parties, the courts and the path to 2027, By Reuben Abati",
+          "summary": "As Nigeria moves closer to the 2027 general elections, it is important to remind all the actors involved in this process to act in a responsible manner and not engage in any untidy or sharp practice that may raise doubts or anxiety about the integrity of the elections. An impression that our democracy is under [&#8230;]\nThe post Political parties, the courts and the path to 2027, By Reuben Abati a",
+          "link": "https://www.premiumtimesng.com/opinion/891805-political-parties-the-courts-and-the-path-to-2027-by-reuben-abati.html",
+          "published": "Tue, 30 Jun 2026 11:23:48 +0000"
+        }
+      ]
+    }
+  ],
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related topicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "mobile-money",
+      "url": "https://ourworldindata.org/financial-inclusion",
+      "error": "404 Client Error: Not Found for url: https://ourworldindata.org/financial-inclusion"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy consumption that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data is based on primary energy calculated by the 'substitution method' which attempts to correct for the inefficiencies in fossil fuel production. It does this by converting non-fossil fuel sources to their 'input equivalents': the amount of primary energy that would be required to produce the same amount of energy if it came from fossil fuels.Approximately one-seventh of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – "
+    }
+  ],
+  "strategy_15_run": {
+    "status": "failed",
+    "returncode": 1,
+    "stdout_tail": "============================================================\nStrategy 15: Nigeria National / Open Data (Data-First)\n============================================================\n\nFiles:\n  [ok] business-idea-formulation-strategy-15-nigeria-national-open-data.md\n  [ok] chatgpt_prompt_1a.txt\n  [ok] chatgpt_prompt_1b.txt\n  [ok] chatgpt_prompt_1c.txt\n\n------------------------------------------------------------\nINTERACTIVE RUN — INSTRUCTIONS (read this once per run)\n------------------------------------------------------------\n",
+    "stderr_tail": "ojects\\Inc\\Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data\\nigeria_national_open_data.py\", line 992, in <module>\n    main()\n  File \"C:\\Users\\'Sanmi\\Downloads\\coding projects\\Inc\\Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data\\nigeria_national_open_data.py\", line 895, in main\n    print_interactive_run_overview(max_chars=int(args.max_chars))\n  File \"C:\\Users\\'Sanmi\\Downloads\\coding projects\\Inc\\Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data\\nigeria_national_open_data.py\", line 140, in print_interactive_run_overview\n    print(\"You are in the default wizard (like Strategy 5: menu \\u2192 collect \\u2192 outputs).\")\n  File \"C:\\Program Files\\Python311\\Lib\\encodings\\cp1252.py\", line 19, in encode\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeEncodeError: 'charmap' codec can't encode character '\\u2192' in position 53: character maps to <undefined>\n"
+  }
+}

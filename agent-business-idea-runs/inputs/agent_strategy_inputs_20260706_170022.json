@@ -1,0 +1,346 @@
+{
+  "generated_at": "2026-07-06T17:00:22.364232",
+  "strategies_skipped": [
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "Jonathan dismisses N500bn 2027 bribery claim, warns against election disinformation",
+          "summary": "Goodluck Jonathan, former president, has denied allegations that he was offered N500 billion to contest the 2027 presidential election against\nread more Jonathan dismisses N500bn 2027 bribery claim, warns against election disinformation",
+          "link": "https://businessday.ng/news/article/jonathan-dismisses-n500bn-2027-bribery-claim-warns-against-election-disinformation/",
+          "published": "Mon, 06 Jul 2026 14:59:33 +0000"
+        },
+        {
+          "title": "Sanwo-Olu bets on digital cooperatives to unlock MSME financing, scales up N10bn LASMECO scheme",
+          "summary": "Lagos State Governor Babajide Sanwo-Olu has unveiled an ambitious digital transformation agenda for cooperative societies, positioning technology-enabled cooperatives as a\nread more Sanwo-Olu bets on digital cooperatives to unlock MSME financing, scales up N10bn LASMECO scheme",
+          "link": "https://businessday.ng/news/article/sanwo-olu-bets-on-digital-cooperatives-to-unlock-msme-financing-scales-up-n10bn-lasmeco-scheme/",
+          "published": "Mon, 06 Jul 2026 14:57:40 +0000"
+        },
+        {
+          "title": "Persistent rain pushes Nigerian solar users back to generators",
+          "summary": "Every rainy season, Chuka Matthew begins rationing electricity in his Lagos home, not because his solar panels have failed, but\nread more Persistent rain pushes Nigerian solar users back to generators",
+          "link": "https://businessday.ng/energy/power/article/persistent-rain-pushes-nigerian-solar-users-back-to-generators/",
+          "published": "Mon, 06 Jul 2026 14:53:59 +0000"
+        },
+        {
+          "title": "Automotive firms partner to expand lubricant access in Nigeria",
+          "summary": "Motul, the globally recognised leader in high-performance lubricants, has partnered with Winpart by CFAO, the aftermarket division of CFAO Mobility\nread more Automotive firms partner to expand lubricant access in Nigeria",
+          "link": "https://businessday.ng/transport/article/automotive-firms-partner-to-expand-lubricant-access-in-nigeria/",
+          "published": "Mon, 06 Jul 2026 14:52:15 +0000"
+        },
+        {
+          "title": "Explainer: What Nigeria’s Green Tax means for car buyers, dealers",
+          "summary": "For buyers currently seeking to purchase a car in Nigeria, whether brand new, tokunbo, or even an electric vehicle, the\nread more Explainer: What Nigeria&#8217;s Green Tax means for car buyers, dealers",
+          "link": "https://businessday.ng/transport/article/explainer-what-nigerias-green-tax-means-for-car-buyers-dealers/",
+          "published": "Mon, 06 Jul 2026 14:52:05 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Customs exceeded 2025 revenue target despite waivers – CG",
+          "summary": "The Nigeria Customs Service on Monday said it surpassed its 2025 revenue target by 10.24 per cent, generating ₦7.28tn between January and December, despite a series of government-approved tax waivers and fiscal incentives aimed at stimulating economic growth. The Comptroller-General of Customs, Adewale Adeniyi, disclosed this while defending the agency&#8217;s 2025 budget performance and presentin",
+          "link": "https://punchng.com/customs-exceeded-2025-revenue-target-despite-waivers-cg/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 16:38:41 +0000"
+        },
+        {
+          "title": "Sam Larry alive, responding to treatment after fatal auto crash, says associate",
+          "summary": "Akin Abolade, aka Mr Lilgaga, an associate of popular socialite Samson Eletu, popularly known as Sam Larry, has debunked the rumour that the socialite, who was recently involved in an auto crash, is dead. Abolade made this disclosure while speaking with PUNCH Online via Instagram on Monday. According to him, Sam Larry was involved in\n\nRead More: https://punchng.com/sam-larry-alive-responding-to-tr",
+          "link": "https://punchng.com/sam-larry-alive-responding-to-treatment-after-fatal-auto-crash-says-associate/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 16:33:23 +0000"
+        },
+        {
+          "title": "Microsoft cuts 4,800 jobs in Xbox overhaul",
+          "summary": "Microsoft announces 4,800 job cuts, including a major overhaul of its Xbox gaming division, as the tech giant focuses on AI investments.\n\nRead More: https://punchng.com/microsoft-cuts-4800-jobs-in-xbox-overhaul/",
+          "link": "https://punchng.com/microsoft-cuts-4800-jobs-in-xbox-overhaul/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 16:13:34 +0000"
+        },
+        {
+          "title": "VIDEO: Man calls for state of emergency on child abuse after Abia incident",
+          "summary": "Following a horrific incident in Abia, Charles Ogbu urges the Nigerian government to declare a state of emergency on child abuse and violence against child\n\nRead More: https://punchng.com/video-man-calls-for-state-of-emergency-on-child-abuse-after-abia-incident/",
+          "link": "https://punchng.com/video-man-calls-for-state-of-emergency-on-child-abuse-after-abia-incident/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 16:13:33 +0000"
+        },
+        {
+          "title": "Iyabo Ojo defends ex-husband’s prominent role at daughter’s wedding",
+          "summary": "Iyabo Ojo explains why her ex-husband played a prominent role at Priscilla Ojo&#8217;s wedding, emphasizing breaking generational patterns and prioritizing her d\n\nRead More: https://punchng.com/why-i-welcomed-my-ex-husband-at-our-daughters-wedding-iyabo-ojo/",
+          "link": "https://punchng.com/why-i-welcomed-my-ex-husband-at-our-daughters-wedding-iyabo-ojo/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 16:02:05 +0000"
+        },
+        {
+          "title": "APM says Nigeria deserves better, vows to restore economy, security",
+          "summary": "The Allied People&#8217;s Movement (APM) pledges to restore Nigeria&#8217;s economy and strengthen security, offering a new direction for citizens ahead of the 2027 el\n\nRead More: https://punchng.com/apm-says-nigeria-deserves-better-vows-to-restore-economy-security/",
+          "link": "https://punchng.com/apm-says-nigeria-deserves-better-vows-to-restore-economy-security/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 16:00:40 +0000"
+        },
+        {
+          "title": "15 die in Kwara auto crash",
+          "summary": "Tragedy strikes Kwara as 15 persons die in a fatal auto crash on the Ilorin-Jebba Expressway. Driver fatigue cited as cause. Read more on the Kwara auto cr\n\nRead More: https://punchng.com/15-die-in-kwara-auto-crash/",
+          "link": "https://punchng.com/15-die-in-kwara-auto-crash/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 15:30:14 +0000"
+        },
+        {
+          "title": "FCT teachers disrupt promotion test for 13,000 workers",
+          "summary": "FCT teachers protest the inclusion of vacancy as a criterion for promotion, disrupting examinations for 13,000 workers. The union demands merit-based promo\n\nRead More: https://punchng.com/fct-teachers-disrupt-promotion-test-for-13000-workers/",
+          "link": "https://punchng.com/fct-teachers-disrupt-promotion-test-for-13000-workers/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 15:27:50 +0000"
+        },
+        {
+          "title": "PRP presidential aspirant urges FG to protect Nigerians, condemns xenophobic attacks",
+          "summary": "PRP presidential aspirant condemns escalating xenophobic attacks on Nigerians abroad, urging the Federal Government to strengthen diplomatic efforts for ci\n\nRead More: https://punchng.com/prp-presidential-aspirant-urges-fg-to-protect-nigerians-condemns-xenophobic-attacks/",
+          "link": "https://punchng.com/prp-presidential-aspirant-urges-fg-to-protect-nigerians-condemns-xenophobic-attacks/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 15:22:27 +0000"
+        },
+        {
+          "title": "Ogun lawyers begin three-day court boycott over N100,000 fee, others",
+          "summary": "Ogun State lawyers begin a three-day court boycott protesting the N100,000 virtual hearing fee, increased oath fees, and affidavit restrictions.\n\nRead More: https://punchng.com/ogun-lawyers-begin-three-day-court-boycott-over-n100000-fee-others/",
+          "link": "https://punchng.com/ogun-lawyers-begin-three-day-court-boycott-over-n100000-fee-others/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 06 Jul 2026 15:20:32 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "PFIPC: Police arrest Adeyemi’s father amid ongoing forgery probe",
+          "summary": "By Adeola Badru OGBOMOSO — The father of Prince Adeyemi Adeniyi, who is facing criminal charges over alleged forgery and impersonation, was reportedly arrested by police operatives on Monday in Ogbomoso, Oyo State. Residents told journalists that the arrest took place at the family&#8217;s residence, where officers reportedly arrived in several vehicles before taking Adeniyi&#8217;s [&#8230;]\nThe ",
+          "link": "https://www.vanguardngr.com/2026/07/pfipc-police-arrest-adeyemis-father-amid-ongoing-forgery-probe/",
+          "published": "Mon, 06 Jul 2026 15:58:11 +0000"
+        },
+        {
+          "title": "Tony Elumelu to step down as UBA chairman, Nnorom named successor",
+          "summary": "LAGOS — United Bank for Africa (UBA) Plc has announced that its Chairman, Tony Elumelu, will retire on August 21, 2026, after completing the maximum 12-year tenure for non-executive directors as stipulated by the Central Bank of Nigeria (CBN). The bank disclosed the development in a statement on Monday, stating that its Board of Directors [&#8230;]\nThe post Tony Elumelu to step down as UBA chairma",
+          "link": "https://www.vanguardngr.com/2026/07/tony-elumelu-to-step-down-as-uba-chairman-nnorom-named-successor/",
+          "published": "Mon, 06 Jul 2026 15:51:47 +0000"
+        },
+        {
+          "title": "Senate hails Nigerian Army at 163, calls for stronger civil-military relations",
+          "summary": "By Henry Umoru ABUJA — The Senate has congratulated the Chief of Army Staff, Lieutenant General Waidi Shaibu, officers, soldiers and veterans of the Nigerian Army on the occasion of the 2026 Nigerian Army Day Celebration, describing the anniversary as a significant milestone in the country&#8217;s military history. The upper chamber also urged officers and [&#8230;]\nThe post Senate hails Nigerian ",
+          "link": "https://www.vanguardngr.com/2026/07/senate-hails-nigerian-army-at-163-calls-for-stronger-civil-military-relations/",
+          "published": "Mon, 06 Jul 2026 15:49:28 +0000"
+        },
+        {
+          "title": "Outrage as suspected vandal targets Southern Ijaw’s historic bridge",
+          "summary": "By Samuel Oyadongha YENAGOA — Traditional rulers and youth leaders in Southern Ijaw Local Government Area of Bayelsa State have inspected the newly completed Angiama-Oporoma Bridge following reports of alleged vandalism, pledging to safeguard the landmark infrastructure. The inspection team included the Ibenanaowei of Bomo Clan, HRM King Joshua Igbugburu; the Paramount Ruler of Eniwari [&#8230;]\nT",
+          "link": "https://www.vanguardngr.com/2026/07/outrage-as-suspected-vandal-targets-southern-ijaws-historic-bridge/",
+          "published": "Mon, 06 Jul 2026 15:45:48 +0000"
+        },
+        {
+          "title": "Benue APC crisis: Tinubu meets Alia, Suswam in Aso Villa",
+          "summary": "By Johnbosco Agbakwuru ABUJA — President Bola Tinubu is currently meeting behind closed doors with Benue State Governor Rev. Fr. Hyacinth Alia and former governor Senator Gabriel Suswam at the Presidential Villa, Abuja, amid a crisis over the Benue Central All Progressives Congress (APC) senatorial ticket. Former governor Suswam, who recently left the Peoples Democratic [&#8230;]\nThe post Benue AP",
+          "link": "https://www.vanguardngr.com/2026/07/benue-apc-crisis-tinubu-meets-alia-suswam-in-aso-villa/",
+          "published": "Mon, 06 Jul 2026 15:42:15 +0000"
+        },
+        {
+          "title": "World Cup 2026: Adidas unveils official match ball for semifinals, final",
+          "summary": "With less than two weeks remaining until the conclusion of the 2026 FIFA World Cup, adidas has unveiled the official match ball that will be used for the tournament's final four matches.\nThe post World Cup 2026: Adidas unveils official match ball for semifinals, final appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/world-cup-2026-adidas-unveils-official-match-ball-for-semifinals-final/",
+          "published": "Mon, 06 Jul 2026 15:40:32 +0000"
+        },
+        {
+          "title": "France appeal to FIFA to cancel Olise’s yellow card after Balogun case",
+          "summary": "The French Football Federation (FFF) has appealed to FIFA to overturn the yellow card shown to Michael Olise during France's 1-0 victory over Paraguay in the Round of 16 of the 2026 FIFA World Cup.\nThe post France appeal to FIFA to cancel Olise&#8217;s yellow card after Balogun case appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/france-appeal-to-fifa-to-cancel-olises-yellow-card-after-balogun-case/",
+          "published": "Mon, 06 Jul 2026 15:35:12 +0000"
+        },
+        {
+          "title": "Customs exceeds 2025 revenue target, seeks approval for N11.27tn 2026 budget",
+          "summary": "By Gift ChapiOdekina, Abuja ABUJA — The Nigeria Customs Service (NCS) says it generated ₦7.277 trillion in revenue in 2025, exceeding its target of ₦6.584 trillion by 10.24 per cent, as it presented a proposed ₦11.274 trillion revenue target and expenditure estimates for the 2026 fiscal year to the House of Representatives Committee on Customs [&#8230;]\nThe post Customs exceeds 2025 revenue target",
+          "link": "https://www.vanguardngr.com/2026/07/customs-exceeds-2025-revenue-target-seeks-approval-for-n11-27tn-2026-budget/",
+          "published": "Mon, 06 Jul 2026 15:32:38 +0000"
+        },
+        {
+          "title": "Brazil keep faith with Ancelotti despite shocking World Cup exit",
+          "summary": "The five-time world champions suffered a shock 2-1 defeat to Norway on Sunday, crashing out of the tournament in their earliest World Cup elimination since 1966.\nThe post Brazil keep faith with Ancelotti despite shocking World Cup exit appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/brazil-keep-faith-with-ancelotti-despite-shocking-world-cup-exit/",
+          "published": "Mon, 06 Jul 2026 15:31:29 +0000"
+        },
+        {
+          "title": "Reps introduce 2,747 bills, pass 363 in three years",
+          "summary": "By Gift ChapiOdekina, Abuja ABUJA — The House of Representatives says it introduced 2,747 bills and passed 363 during the first three years of the 10th National Assembly, describing the record as evidence of its commitment to legislative reforms and governance. Chairman of the House Committee on Rules and Business, Hon. Francis Waive, disclosed the [&#8230;]\nThe post Reps introduce 2,747 bills, pa",
+          "link": "https://www.vanguardngr.com/2026/07/reps-introduce-2747-bills-pass-363-in-three-years/",
+          "published": "Mon, 06 Jul 2026 15:25:40 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "UBA announces Tony Elumelu’s retirement, appoints Emmanuel Nnorom as chairman",
+          "summary": "UBA said Mr Elumelu's retirement is in line with the Central Bank of Nigeria's (CBN) corporate governance guidelines, which set a maximum tenure of 12 years for non-executive directors of banks.\nThe post UBA announces Tony Elumelu’s retirement, appoints Emmanuel Nnorom as chairman appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/business/business-news/893317-uba-announces-tony-elumelus-retirement-appoints-emmanuel-nnorom-as-chairman.html",
+          "published": "Mon, 06 Jul 2026 15:54:12 +0000"
+        },
+        {
+          "title": "Edo govt reunites US deportee with family after rescue",
+          "summary": "Peter Guobadia was rescued after being found wandering along Airport Road in Benin City in a visibly distressed condition and was subsequently taken into protective custody for treatment.\nThe post Edo govt reunites US deportee with family after rescue appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/893314-edo-govt-reunites-us-deportee-with-family-after-rescue.html",
+          "published": "Mon, 06 Jul 2026 14:55:42 +0000"
+        },
+        {
+          "title": "Adeyanju defends Sowore calling Tinubu ‘criminal’ as defence opens case in cyberbullying trial",
+          "summary": "Mr Adeyanju appeared in court as Mr Sowore's first defence witness in a cyberbullying trial focusing on Mr Sowore's social media posts from last year that called President Tinubu a criminal.\nThe post Adeyanju defends Sowore calling Tinubu &#8216;criminal&#8217; as defence opens case in cyberbullying trial appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/893312-adeyanju-defends-sowore-calling-tinubu-criminal-as-defence-opens-case-in-cyberbullying-trial.html",
+          "published": "Mon, 06 Jul 2026 14:42:46 +0000"
+        },
+        {
+          "title": "University gives dismissed lecturers one-month window to appeal",
+          "summary": "Last month, the university council approved the sack of two professors – Chike Osegbue and C. C. Nwabachili – and Ifeoma Kakulu, I. H. Iheukwumere and Emeka Nwabunnia, all of the Department of Microbiology, for various reasons.\nThe post University gives dismissed lecturers one-month window to appeal appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/893309-university-gives-dismissed-lecturers-one-month-window-to-appeal.html",
+          "published": "Mon, 06 Jul 2026 14:32:19 +0000"
+        },
+        {
+          "title": "PFIPC has no CBN account, received no funds – OAGF",
+          "summary": "The OAGF spokesperson explained that the process of opening a CBN account for the PFIPC was never completed because the required documentation to activate the account was not submitted.\nThe post PFIPC has no CBN account, received no funds &#8211; OAGF appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/business/business-news/893306-pfipc-has-no-cbn-account-received-no-funds-oagf.html",
+          "published": "Mon, 06 Jul 2026 14:17:19 +0000"
+        },
+        {
+          "title": "How Nigeria’s security partnership with US contributes to global security",
+          "summary": "From cocaine corridors to counterterrorism defections, a quieter shift is redefining Nigeria’s role in global security.\nThe post How Nigeria’s security partnership with US contributes to global security appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/features-and-interviews/893302-how-nigerias-security-partnership-with-us-contributes-to-global-security.html",
+          "published": "Mon, 06 Jul 2026 13:58:20 +0000"
+        },
+        {
+          "title": "Price of yams soars in Enugu markets",
+          "summary": "A buyer, Patricia Ugonna, said she had to buy fewer yams because of the continuous rise in prices.\nThe post Price of yams soars in Enugu markets appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/893300-price-of-yams-soars-in-enugu-markets.html",
+          "published": "Mon, 06 Jul 2026 13:53:00 +0000"
+        },
+        {
+          "title": "Zedvance appoints Deji Olanrewaju as Chairman of Board",
+          "summary": "This milestone underscores Zedvance Finance's commitment to building a robust governance structure capable of supporting its next phase of growth\nThe post Zedvance appoints Deji Olanrewaju as Chairman of Board appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/893296-zedvance-appoints-deji-olanrewaju-as-chairman-of-board.html",
+          "published": "Mon, 06 Jul 2026 13:46:52 +0000"
+        },
+        {
+          "title": "Dutse residents seek support after rainstorm damages homes",
+          "summary": "Some affected residents described the rainstorms as one of the most destructive in recent times\nThe post Dutse residents seek support after rainstorm damages homes appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/893294-dutse-residents-seek-support-after-rainstorm-damages-homes.html",
+          "published": "Mon, 06 Jul 2026 13:32:59 +0000"
+        },
+        {
+          "title": "Kuru attacks: DG received anonymous calls claiming NIPSS site",
+          "summary": "In an exclusive interview with PREMIUM TIMES, Mr Omotayo said he received repeated phone calls from individuals who threatened to reclaim what they described as ancestral land\nThe post Kuru attacks: DG received anonymous calls claiming NIPSS site appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/893292-kuru-attacks-dg-received-anonymous-calls-claiming-nipss-site.html",
+          "published": "Mon, 06 Jul 2026 13:24:18 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "7% and Not Much More: Inside PairRide’s Bet on the Lowest Commission in Nigerian E-Hailing",
+          "summary": "PairRide launches in Nigeria with 7% driver commission vs 20%+....",
+          "link": "https://techpoint.africa/brandpress/7-and-not-much-more-inside-pairrides-bet-on-the-lowest-commission-in-nigerian-e-hailing/",
+          "published": "Mon, 06 Jul 2026 14:00:00 +0000"
+        },
+        {
+          "title": "Signal Alliance Technology Holding Celebrates 30 Years of Innovation, Unveils SATH Cloud and SATH Technology Consulting",
+          "summary": "Signal Alliance Technology Holding (SATH), one of Nigeria's foremost technology...",
+          "link": "https://techpoint.africa/brandpress/signal-alliance-technology-holding-celebrates-30-years-of-innovation/",
+          "published": "Mon, 06 Jul 2026 09:08:45 +0000"
+        },
+        {
+          "title": "Busha and Women in DeFi Partner to Empower the Next Generation of Women Building Africa’s Digital Future",
+          "summary": "Busha, a pan-African financial services company, and Women in DeFi...",
+          "link": "https://techpoint.africa/brandpress/busha-and-women-in-defi-partner-to-empower-the-next-generation-of-women/",
+          "published": "Mon, 06 Jul 2026 08:41:31 +0000"
+        },
+        {
+          "title": "SnappyPay Founder Olaide Alim Completes Full-Stack Software Engineering Training",
+          "summary": "Olaide Alim, founder of SnappyPay and SnappyExchange, has completed his...",
+          "link": "https://techpoint.africa/brandpress/snappypay-founder-olaide-alim-completes-full-stack-software-engineering-training/",
+          "published": "Mon, 06 Jul 2026 07:45:00 +0000"
+        },
+        {
+          "title": "Nigerian startup FoodCourt suspends operations amid mounting debts",
+          "summary": "On Techpoint Digest, we discuss the suspension of operations by Nigerian startup FoodCourt, the SEC adding two new crypto companies to ARIP, the possibility of Kenyan ISPs charging by data usage, and the success of Pick n Pay's digital grocery push.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1381/",
+          "published": "Mon, 06 Jul 2026 07:00:00 +0000"
+        },
+        {
+          "title": "Nigeria’s SEC just cleared 2 more crypto firms for its regulatory incubation programme. Here’s all you need to know",
+          "summary": "The SEC has admitted two more crypto firms into its Accelerated Regulatory Incubation Programme (ARIP), here's a simple breakdown of what ARIP is, how it works, and why it matters for businesses and crypto users alike.",
+          "link": "https://techpoint.africa/insight/sec-clears-vasps-for-arip/",
+          "published": "Mon, 06 Jul 2026 03:00:00 +0000"
+        },
+        {
+          "title": "QORAY Mobility & Energies Formally Introduces Its Founding Executive Team",
+          "summary": "Qoray Mobility &#38; Energies Ltd (QORAY), a clean energy and...",
+          "link": "https://techpoint.africa/brandpress/qoray-mobility-energies-formally-introduces-its-founding-executive-team/",
+          "published": "Sat, 04 Jul 2026 12:19:05 +0000"
+        },
+        {
+          "title": "Mastercard SME Confidence Index: 81% of Nigerian SMEs are confident about the year ahead as growth ambitions build",
+          "summary": "Nigeria's small and medium enterprises (SMEs) are looking ahead with...",
+          "link": "https://techpoint.africa/brandpress/mastercard-sme-confidence-index/",
+          "published": "Fri, 03 Jul 2026 14:54:28 +0000"
+        },
+        {
+          "title": "Nigeria wants to build smartphones, not just import them",
+          "summary": "On Techpoint Digest, we discuss Nigeria's plan to manufacture smartphones at home, a new court ruling that makes layoffs more difficult in Kenya, a  Kenyan court striking down website blocking law, and a legal test for WhatsApp delivery receipts in Kenya.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1380/",
+          "published": "Fri, 03 Jul 2026 07:00:00 +0000"
+        },
+        {
+          "title": "M-Pesa enters stablecoin pilot with Visa and Onafriq in DRC",
+          "summary": "On Techpoint Digest, we talk about Visa and M-Pesa testing stablecoin payments in the DRC, the CBN revoking licences for NowNow, Sycamore, and OurPass banks, and Zain expanding into Syria following MTN's exit.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1379/",
+          "published": "Thu, 02 Jul 2026 07:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related topicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy consumption that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data is based on primary energy calculated by the 'substitution method' which attempts to correct for the inefficiencies in fossil fuel production. It does this by converting non-fossil fuel sources to their 'input equivalents': the amount of primary energy that would be required to produce the same amount of energy if it came from fossil fuels.Approximately one-seventh of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – "
+    }
+  ],
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}

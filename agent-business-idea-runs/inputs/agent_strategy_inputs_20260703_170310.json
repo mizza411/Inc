@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-07-03T17:03:10.685301",
+  "strategies_skipped": [
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "articles": []
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "articles": [
+        {
+          "title": "CPC at 105: Chinese Envoy pledges deeper Nigeria ties",
+          "summary": "Yu Dunhai, Chinese Ambassador to Nigeria, has attributed China&#8217;s transformation into the world&#8217;s second-largest economy to the leadership of the\nread more CPC at 105: Chinese Envoy pledges deeper Nigeria ties",
+          "link": "https://businessday.ng/news/article/cpc-at-105-chinese-envoy-pledges-deeper-nigeria-ties/",
+          "published": "Fri, 03 Jul 2026 15:07:34 +0000"
+        },
+        {
+          "title": "Experts call for stronger partnerships to strengthen food safety in Africa",
+          "summary": "Experts have called for stronger collaboration between governments, regulators, researchers and the private sector to strengthen food safety systems across\nread more Experts call for stronger partnerships to strengthen food safety in Africa",
+          "link": "https://businessday.ng/brands-advertising/article/experts-call-for-stronger-partnerships-to-strengthen-food-safety-in-africa/",
+          "published": "Fri, 03 Jul 2026 15:04:25 +0000"
+        },
+        {
+          "title": "Africa seeks to scale digital health solutions at ADHS 2026",
+          "summary": "Africa&#8217;s healthcare sector is facing a familiar challenge: while digital innovations continue to emerge across the continent, few have successfully\nread more Africa seeks to scale digital health solutions at ADHS 2026",
+          "link": "https://businessday.ng/health/article/africa-seeks-to-scale-digital-health-solutions-at-adhs-2026/",
+          "published": "Fri, 03 Jul 2026 15:03:57 +0000"
+        },
+        {
+          "title": "The day they came for Sir Keir",
+          "summary": "The rituals of British democratic practice are watched with faint bemusement by outsiders who often do not understand what is\nread more The day they came for Sir Keir",
+          "link": "https://businessday.ng/columnist/article/the-day-they-came-for-sir-keir/",
+          "published": "Fri, 03 Jul 2026 14:58:27 +0000"
+        },
+        {
+          "title": "FG evacuates 593 Nigerians from South Africa, three more flights to bring home 700 others",
+          "summary": "&#8230;as 271 returnees arrive Lagos today The Federal Government has evacuated 593 Nigerians from South Africa following the recent wave\nread more FG evacuates 593 Nigerians from South Africa, three more flights to bring home 700 others",
+          "link": "https://businessday.ng/news/article/fg-evacuates-593-nigerians-from-south-africa-three-more-flights-to-bring-home-700-others/",
+          "published": "Fri, 03 Jul 2026 14:58:23 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "articles": [
+        {
+          "title": "Neymar unhappy with World Cup role but ‘respectful’, says Ancelotti",
+          "summary": "Brazil coach Ancelotti reveals Neymar is unhappy with his limited World Cup role but remains professional. Get the latest on Neymar&#8217;s fitness and Brazil&#8217;s\n\nRead More: https://punchng.com/neymar-unhappy-with-world-cup-role-but-respectful-says-ancelotti/",
+          "link": "https://punchng.com/neymar-unhappy-with-world-cup-role-but-respectful-says-ancelotti/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 16:43:17 +0000"
+        },
+        {
+          "title": "A’ Court overturns Oyo court judgment permitting Hijab at UI International school",
+          "summary": "The Court of Appeal in Ibadan has overturned a judgment allowing hijab at UI International School, stating the Supreme Court&#8217;s ruling applies only to publi\n\nRead More: https://punchng.com/a-court-overturns-oyo-court-judgment-permitting-hijab-at-ui-international-school/",
+          "link": "https://punchng.com/a-court-overturns-oyo-court-judgment-permitting-hijab-at-ui-international-school/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 16:14:52 +0000"
+        },
+        {
+          "title": "AU convenes emergency meeting on Somalia mission following US funding cut",
+          "summary": "The African Union holds an emergency meeting on its Somalia mission after the US announced it would cut critical funding due to lack of progress against Al\n\nRead More: https://punchng.com/au-convenes-emergency-meeting-on-somalia-mission-following-us-funding-cut/",
+          "link": "https://punchng.com/au-convenes-emergency-meeting-on-somalia-mission-following-us-funding-cut/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 16:09:36 +0000"
+        },
+        {
+          "title": "PFIPC scandal exposes depth of institutional decay, ADC slams presidency",
+          "summary": "The ADC demands an independent judicial inquiry into the PFIPC scandal, accusing the Tinubu government of institutional decay and a cover-up. Get the full\n\nRead More: https://punchng.com/pfipc-scandal-exposes-depth-of-institutional-decay-adc-slams-presidency/",
+          "link": "https://punchng.com/pfipc-scandal-exposes-depth-of-institutional-decay-adc-slams-presidency/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:58:13 +0000"
+        },
+        {
+          "title": "VIDEO: I was in the wrong party called PDP — Akpabio",
+          "summary": "Senate President Godswill Akpabio states he was in the &#8220;wrong party&#8221; (PDP) before joining the APC, finding his political home with progressives.\n\nRead More: https://punchng.com/video-i-was-in-the-wrong-party-called-pdp-akpabio/",
+          "link": "https://punchng.com/video-i-was-in-the-wrong-party-called-pdp-akpabio/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:53:28 +0000"
+        },
+        {
+          "title": "50 European lawmakers urge FIFA to probe Infantino over Trump peace prize",
+          "summary": "Fifty European lawmakers are urging FIFA&#8217;s ethics committee to investigate President Gianni Infantino for awarding a &#8216;peace prize&#8217; to Donald Trump.\n\nRead More: https://punchng.com/50-european-lawmakers-urge-fifa-to-probe-infantino-over-trump-peace-prize/",
+          "link": "https://punchng.com/50-european-lawmakers-urge-fifa-to-probe-infantino-over-trump-peace-prize/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:46:54 +0000"
+        },
+        {
+          "title": "Nursing council urges quality service, inducts 92 ABUAD graduates",
+          "summary": "The Nursing and Midwifery Council of Nigeria inducts 92 ABUAD graduates, charging them to provide quality service and uphold ethical standards in their nur\n\nRead More: https://punchng.com/nursing-council-urges-quality-service-inducts-92-abuad-graduates/",
+          "link": "https://punchng.com/nursing-council-urges-quality-service-inducts-92-abuad-graduates/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:34:22 +0000"
+        },
+        {
+          "title": "Bayern sign Germany defender Brown on six-year deal",
+          "summary": "Bayern Munich announces the signing of Germany defender Nathaniel Brown from Eintracht Frankfurt on a six-year deal. Learn more about Bayern&#8217;s new star!\n\nRead More: https://punchng.com/bayern-sign-germany-defender-brown-on-six-year-deal/",
+          "link": "https://punchng.com/bayern-sign-germany-defender-brown-on-six-year-deal/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:19:11 +0000"
+        },
+        {
+          "title": "Florence Ajimobi arrives Vienna, assumes duty as Nigeria’s ambassador to Austria",
+          "summary": "Florence Ajimobi has arrived in Vienna to formally assume duty as Nigeria&#8217;s Ambassador to Austria. Learn more about her new role and reception.\n\nRead More: https://punchng.com/florence-ajimobi-arrives-vienna-assumes-duty-as-nigerias-ambassador-to-austria/",
+          "link": "https://punchng.com/florence-ajimobi-arrives-vienna-assumes-duty-as-nigerias-ambassador-to-austria/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:16:29 +0000"
+        },
+        {
+          "title": "Kaduna pays N2bn compensation as Sani flags off N34bn erosion control project",
+          "summary": "Kaduna State flags off a N34bn flood and gully erosion control project, with Governor Sani announcing N2bn compensation for affected residents.\n\nRead More: https://punchng.com/kaduna-pays-n2bn-compensation-as-sani-flags-off-n34bn-erosion-control-project/",
+          "link": "https://punchng.com/kaduna-pays-n2bn-compensation-as-sani-flags-off-n34bn-erosion-control-project/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Fri, 03 Jul 2026 15:16:01 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "articles": [
+        {
+          "title": "Xenophobia: Uganda repatriates first group of nationals from South Africa",
+          "summary": "The evacuees landed at Entebbe International Airport on a chartered flight from O.R. Tambo International Airport in Johannesburg.\nThe post Xenophobia: Uganda repatriates first group of nationals from South Africa appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/xenophobia-uganda-repatriates-first-group-of-nationals-from-south-africa/",
+          "published": "Fri, 03 Jul 2026 16:01:31 +0000"
+        },
+        {
+          "title": "Education crisis demands leadership, investment, not policy changes – Obi",
+          "summary": "The presidential candidate of the Nigeria Democratic Congress, NDC, Peter Obi, has said Nigeria&#8217;s education crisis cannot be resolved through policy changes alone, urging the Federal Government to prioritise sustained investment, effective leadership and improved learning infrastructure to reverse the sector&#8217;s decline. Obi&#8217;s remarks followed the Federal Government&#8217;s recent ",
+          "link": "https://www.vanguardngr.com/2026/07/education-crisis-demands-leadership-investment-not-policy-changes-obi/",
+          "published": "Fri, 03 Jul 2026 15:48:58 +0000"
+        },
+        {
+          "title": "Fire contained at Apapa Oil terminal, no casualties recorded",
+          "summary": "A fire outbreak at the Bono Energy Terminal within the Ibru Jetty Complex along the Apapa–Oworonshoki Expressway, near Coconut Bus Stop in Olodi Apapa, Lagos, was successfully contained on Friday by the Lagos State Fire and Rescue Service.\nThe post Fire contained at Apapa Oil terminal, no casualties recorded appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/fire-contained-at-apapa-oil-terminal-no-casualties-recorded/",
+          "published": "Fri, 03 Jul 2026 15:41:46 +0000"
+        },
+        {
+          "title": "The Nigerian SME Growth Playbook: How Digital Tools Are Turning Ambition into Reality",
+          "summary": "By Dr Folasade Femi-Lawal, country manager, West Africa, Mastercard Across Africa, micro, small and medium-sized enterprises (MSMEs) are proving remarkably resilient and ambitious, growing and adapting even in a demanding economic climate. Nowhere is that energy more visible than in Nigeria. Home to nearly 40 million MSMEs, according to SMEDAN, these businesses are the backbone [&#8230;]\nThe post ",
+          "link": "https://www.vanguardngr.com/2026/07/the-nigerian-sme-growth-playbook-how-digital-tools-are-turning-ambition-into-reality/",
+          "published": "Fri, 03 Jul 2026 15:41:04 +0000"
+        },
+        {
+          "title": "Neymar unhappy with World Cup role but ‘respectful’ – Ancelotti",
+          "summary": "Neymar, 34, is again likely to be on the bench for Sunday's last-16 match against Norway at MetLife Stadium.\nThe post Neymar unhappy with World Cup role but &#8216;respectful&#8217; &#8211; Ancelotti appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/neymar-unhappy-with-world-cup-role-but-respectful-ancelotti/",
+          "published": "Fri, 03 Jul 2026 15:36:07 +0000"
+        },
+        {
+          "title": "Media shouldn’t be a megaphone for terrorists – Tinubu",
+          "summary": "\"At the time when our nation is tackling security threats, neutralising thousands of criminal elements, and rescuing hostages, the media should not become an amplifier for those who wish to harm us.\nThe post Media shouldn&#8217;t be a megaphone for terrorists – Tinubu appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/media-shouldnt-be-a-megaphone-for-terrorists-tinubu/",
+          "published": "Fri, 03 Jul 2026 15:28:25 +0000"
+        },
+        {
+          "title": "ADC: Matawalle says High Court judgment vindicates Tinubu",
+          "summary": "According to Matawalle, Tinubu’s refusal to interfere with the judgement shows his commitment to democracy and judicial independence.\nThe post ADC: Matawalle says High Court judgment vindicates Tinubu appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/adc-matawalle-says-high-court-judgment-vindicates-tinubu/",
+          "published": "Fri, 03 Jul 2026 15:25:02 +0000"
+        },
+        {
+          "title": "Full list of Nigerian celebrities who have joined US army",
+          "summary": "A growing number of Nigerian celebrities have traded the spotlight for military service in the United States, with actors, actresses and beauty queens publicly announcing their enlistment in recent years.\nThe post Full list of Nigerian celebrities who have joined US army appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/full-list-of-nigerian-celebrities-who-have-joined-us-army/",
+          "published": "Fri, 03 Jul 2026 15:23:24 +0000"
+        },
+        {
+          "title": "African Union calls emergency meeting as US ends Somalia army funds",
+          "summary": "Somalia has been battling the Al-Shabaab insurgency for around two decades but the Islamist group still controls vast swathes of the country.\nThe post African Union calls emergency meeting as US ends Somalia army funds appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/african-union-calls-emergency-meeting-as-us-ends-somalia-army-funds/",
+          "published": "Fri, 03 Jul 2026 15:17:18 +0000"
+        },
+        {
+          "title": "We’re providing access to homes, jobs, better future in FCT – Tinubu",
+          "summary": "President Bola Tinubu says his administration is making significant investments in infrastructure and housing access across the Federal Capital Territory (FCT) to deliver on the promises of the Renewed Hope Agenda.\nThe post We’re providing access to homes, jobs, better future in FCT &#8211; Tinubu appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/were-providing-access-to-homes-jobs-better-future-in-fct-tinubu/",
+          "published": "Fri, 03 Jul 2026 14:58:40 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "articles": [
+        {
+          "title": "Obi to Nigerians: Don’t lose faith in electoral process",
+          "summary": "“I urge all Nigerians who are of voting age and have not registered to go out and register to vote in the coming election,” Mr Obi said while visiting some Continuous Voter Registration Centres in Anambra.\nThe post Obi to Nigerians: Don’t lose faith in electoral process appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/892718-obi-to-nigerians-dont-lose-faith-in-electoral-process.html",
+          "published": "Fri, 03 Jul 2026 15:58:59 +0000"
+        },
+        {
+          "title": "Kano Pillars appoint Ogunmodede as Technical Adviser",
+          "summary": "The club said the appointment is part of ongoing restructuring aimed at strengthening the technical bench and improving team performance in both domestic and continental competitions.\nThe post Kano Pillars appoint Ogunmodede as Technical Adviser appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/892716-kano-pillars-appoint-ogunmodede-as-technical-adviserkano-pillars-appoint-ogunmodede-as-technical-adviser.html",
+          "published": "Fri, 03 Jul 2026 15:51:49 +0000"
+        },
+        {
+          "title": "Nigeria moves closer to eliminating trachoma as only 11 LGAs remain- official",
+          "summary": "He said the achievement represents about 87 per cent progress in eliminating trachoma in affected areas.\nThe post Nigeria moves closer to eliminating trachoma as only 11 LGAs remain- official appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/health/health-news/892713-nigeria-moves-closer-to-eliminating-trachoma-as-only-11-lgas-remain-official.html",
+          "published": "Fri, 03 Jul 2026 15:39:37 +0000"
+        },
+        {
+          "title": "Double your potential with the Betjara 200% Casino Welcome Bonus",
+          "summary": "Follow this guide to explore how the Betjara 200% Casino Welcome Bonus works, its benefits, eligibility requirements, and tips for making the most of the promotion\nThe post Double your potential with the Betjara 200% Casino Welcome Bonus appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/892707-double-your-potential-with-the-betjara-200-casino-welcome-bonus.html",
+          "published": "Fri, 03 Jul 2026 15:07:16 +0000"
+        },
+        {
+          "title": "Nigerian gov’t launches e-cooking initiative to accelerate clean energy transition",
+          "summary": "The federal government has inaugurated a national initiative to integrate electric cooking into Nigeria’s Clean Cooking Policy, aiming to attract investment, expand access to clean energy and reduce dependence on firewood and other polluting cooking fuels.\nThe post Nigerian gov’t launches e-cooking initiative to accelerate clean energy transition appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/business/business-news/892702-nigerian-govt-launches-e-cooking-initiative-to-accelerate-clean-energy-transition.html",
+          "published": "Fri, 03 Jul 2026 14:58:15 +0000"
+        },
+        {
+          "title": "Insecurity: Enugu residents raise concerns about escalating number of destitute, homeless children.",
+          "summary": "Residents expressed growing concern over the increasing number of homeless children at motor parks during a town hall meeting with security stakeholders in Enugu.\nThe post Insecurity: Enugu residents raise concerns about escalating number of destitute, homeless children. appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/892699-insecurity-enugu-residents-raise-concerns-about-escalating-number-of-destitute-homeless-children.html",
+          "published": "Fri, 03 Jul 2026 14:40:48 +0000"
+        },
+        {
+          "title": "PZ Cussons releases full year results, records N260.46bn revenue",
+          "summary": "A breakdown analysis of the unaudited financial results released revealed that the company achieved significant profitability for the year ended 31 May 2026, rising from N10.07 billion in the corresponding period in 2025 to N49.10 billion, representing a 388% increase.\nThe post PZ Cussons releases full year results, records N260.46bn revenue appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/892690-pz-cussons-releases-full-year-results-records-n260-46bn-revenue.html",
+          "published": "Fri, 03 Jul 2026 14:23:25 +0000"
+        },
+        {
+          "title": "Abia, Anambra commit to peaceful resolution of boundary disputes",
+          "summary": "Officials from both states, representatives of the National Boundary Commission (NBC), traditional rulers, and other stakeholders held a joint meeting in Awka on Thursday to chart a path forward for resolving ongoing boundary issues.\nThe post Abia, Anambra commit to peaceful resolution of boundary disputes appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/892689-abia-anambra-commit-to-peaceful-resolution-of-boundary-disputes.html",
+          "published": "Fri, 03 Jul 2026 14:00:14 +0000"
+        },
+        {
+          "title": "Motorist says police freed him after he mentioned VDM’s name",
+          "summary": "A Facebook user reported that the police in Benin City stopped him over his vehicle's tinted permit but released him immediately after he invoked the name of social media activist Martins Vincent Otse, popularly known as VeryDarkMan (VDM), raising questions regarding police enforcement practices.\nThe post Motorist says police freed him after he mentioned VDM’s name appeared first on Premium Times ",
+          "link": "https://www.premiumtimesng.com/news/more-news/892676-motorist-says-police-freed-him-after-he-mentioned-vdms-name.html",
+          "published": "Fri, 03 Jul 2026 13:49:46 +0000"
+        },
+        {
+          "title": "Fire breaks out at fuel terminal in Lagos",
+          "summary": "The incident occurred at the fuel terminal located along the Apapa-Oworonshoki Expressway, although authorities had yet to determine the cause of the fire as of the time of filing this report.\nThe post Fire breaks out at fuel terminal in Lagos appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/892681-breaking-fire-breaks-out-at-fuel-terminal-in-lagos.html",
+          "published": "Fri, 03 Jul 2026 13:39:49 +0000"
+        }
+      ]
+    }
+  ],
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related topicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "mobile-money",
+      "url": "https://ourworldindata.org/financial-inclusion",
+      "error": "404 Client Error: Not Found for url: https://ourworldindata.org/financial-inclusion"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy consumption that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data is based on primary energy calculated by the 'substitution method' which attempts to correct for the inefficiencies in fossil fuel production. It does this by converting non-fossil fuel sources to their 'input equivalents': the amount of primary energy that would be required to produce the same amount of energy if it came from fossil fuels.Approximately one-seventh of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – "
+    }
+  ],
+  "strategy_15_run": {
+    "status": "failed",
+    "returncode": 1,
+    "stdout_tail": "============================================================\nStrategy 15: Nigeria National / Open Data (Data-First)\n============================================================\n\nFiles:\n  [ok] business-idea-formulation-strategy-15-nigeria-national-open-data.md\n  [ok] chatgpt_prompt_1a.txt\n  [ok] chatgpt_prompt_1b.txt\n  [ok] chatgpt_prompt_1c.txt\n\n------------------------------------------------------------\nINTERACTIVE RUN — INSTRUCTIONS (read this once per run)\n------------------------------------------------------------\n",
+    "stderr_tail": "ojects\\Inc\\Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data\\nigeria_national_open_data.py\", line 991, in <module>\n    main()\n  File \"C:\\Users\\'Sanmi\\Downloads\\coding projects\\Inc\\Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data\\nigeria_national_open_data.py\", line 894, in main\n    print_interactive_run_overview(max_chars=int(args.max_chars))\n  File \"C:\\Users\\'Sanmi\\Downloads\\coding projects\\Inc\\Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data\\nigeria_national_open_data.py\", line 139, in print_interactive_run_overview\n    print(\"You are in the default wizard (like Strategy 5: menu \\u2192 collect \\u2192 outputs).\")\n  File \"C:\\Program Files\\Python311\\Lib\\encodings\\cp1252.py\", line 19, in encode\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeEncodeError: 'charmap' codec can't encode character '\\u2192' in position 53: character maps to <undefined>\n"
+  }
+}
