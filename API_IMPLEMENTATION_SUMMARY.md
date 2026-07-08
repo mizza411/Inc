@@ -7,9 +7,11 @@
    - Scrapes: Vanguard, Punch, Guardian, ThisDay, Premium Times, etc.
    - Method: Web scraping with BeautifulSoup
 
-2. **Strategy 6: Startup Niche Combination** ✅ NEW
-   - Scrapes: Crunchbase.com/hub/nigeria-startups
-   - Method: Web scraping to extract startup listings
+2. **Strategy 6: Startup Niche Combination** ✅
+   - **Primary:** StartupList Africa (`https://www.startuplist.africa/startups`)
+   - **Agent fetch:** `agent_strategy_run.py` → `strategy_6_startup_directory`
+   - **Optional legacy:** Crunchbase Nigeria hub (manual / scrape fallback in script)
+   - Method: Web scraping + manual paste
 
 3. **Strategy 9: Financial News Problem Extraction** ✅
    - Scrapes: Nairametrics, FinancialNigeria, BusinessDay
@@ -19,11 +21,11 @@
    - Scrapes: AnnualReports.com
    - Method: Web scraping to extract annual report content
 
-5. **Strategy 14: Global Data Trend Adaptation** ✅ NEW
+5. **Strategy 14: Global Data Trend Adaptation** ✅
    - Scrapes: OurWorldInData.org pages
    - Method: Web scraping to extract data and insights
 
-## ✅ Free APIs - Now Implemented
+## ✅ Free APIs / RSS - Now Implemented
 
 ### NewsAPI Integration:
 - **Strategy 5: News-Based Problem Extraction** ✅
@@ -31,7 +33,7 @@
   - Free tier: 100 requests/day
   - Falls back to RSS → Web scraping → Manual
 
-- **Strategy 9: Financial News Problem Extraction** ✅ NEW
+- **Strategy 9: Financial News Problem Extraction** ✅
   - Uses NewsAPI for Nigerian business news
   - Free tier: 100 requests/day
   - Falls back to RSS → Web scraping → Manual
@@ -41,9 +43,14 @@
   - RSS feeds for: Vanguard, Punch, Guardian, Premium Times, ThisDay, Nairametrics, BusinessDay
   - Free, unlimited requests
 
-- **Strategy 9: Financial News Problem Extraction** ✅ NEW
+- **Strategy 9: Financial News Problem Extraction** ✅
   - RSS feeds for: Nairametrics, FinancialNigeria, BusinessDay
   - Free, unlimited requests
+
+- **Strategy 7: Trending Startup Adaptation** ✅ (Tier 1 — 2026-07)
+  - Product Hunt RSS: `https://www.producthunt.com/feed`
+  - Agent fetch: `agent_strategy_run.py` → `strategy_7_trending`
+  - Optional legacy: Crunchbase Trending Profiles screenshot
 
 ## API Fetching Priority (Fallback Chain)
 
@@ -53,11 +60,25 @@
 3. **Web Scraping** (BeautifulSoup) ← If APIs fail
 4. **Manual Input** ← Always available
 
-### Strategy 6, 13, 14:
+### Strategy 6:
+1. **StartupList Africa** (agent snippet / interactive scrape or paste) ← Prefer
+2. **Techpoint RSS** (agent synthesis secondary)
+3. **Crunchbase** (optional legacy manual / scrape) ← Fallback only
+4. **Manual Input** ← Always available
+
+### Strategy 7:
+1. **Product Hunt RSS** (agent / interactive script) ← Prefer
+2. **Techpoint Digest** (agent RSS secondary)
+3. **Crunchbase Trending Profiles** (optional legacy screenshot) ← Fallback only
+4. **Manual text paste** ← Always available
+
+### Strategy 13, 14:
 1. **Web Scraping** (BeautifulSoup) ← Try first
 2. **Manual Input** ← Always available
 
 > **Retired:** Strategy **8** (TrendHunter scraping) — removed from the master runner; use Strategy **14** instead.
+
+> **Crunchbase:** Not required for Strategies **6** or **7**.
 
 ## Setup Instructions
 
@@ -85,7 +106,7 @@ export SIMILARWEB_API_KEY="your_key_here"
 
 | Method | Cost | Rate Limits | Strategies Using |
 |--------|------|-------------|------------------|
-| **RSS Feeds** | Free | Unlimited | 5, 9 |
+| **RSS Feeds** | Free | Unlimited | 5, 7, 9 |
 | **NewsAPI** | Free tier | 100/day | 5, 9 |
 | **BeautifulSoup** | Free | None* | 5, 6, 9, 13, 14 |
 | **SimilarWeb API** | Paid | Varies | 13 |
@@ -111,8 +132,6 @@ These are better as manual processes:
 ## Next Steps (Optional Enhancements)
 
 - Add Google Trends API (pytrends) to Strategy 12
-- Add Crunchbase API (if you have paid access) to Strategies 6 & 7
+- Optional paid StartupList Pro / Crunchbase API only if free fetches prove insufficient (Tier 3)
 - Add more RSS feeds as discovered
 - Add caching to reduce API calls
-
-

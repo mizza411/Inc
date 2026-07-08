@@ -1,32 +1,33 @@
 # Business Idea Formulation Strategy 7: Trending Startup Adaptation
 
 ## Overview
-This strategy helps you generate business ideas by adapting *trending startup profiles* from Crunchbase for implementation in Nigeria, while **differentiating** the ideas by combining them with other niches or concepts.
+This strategy helps you generate business ideas by adapting *trending products/startups* for implementation in Nigeria, while **differentiating** the ideas by combining them with other niches or concepts.
+
+**Primary source (2026-07):** [Product Hunt](https://www.producthunt.com/) RSS (`https://www.producthunt.com/feed`) — no screenshot required.  
+**Secondary:** Techpoint Digest / YC company list (text).  
+**Optional legacy:** Crunchbase “Trending Profiles” screenshot + ChatGPT Vision.
+
+Agent runs also use `agent_strategy_run.py` → `strategy_7_trending` in fetch JSON.
 
 ## Manual Approach
 
-### Step 1: Access Trending Profiles on Crunchbase
+### Step 1: Capture trending products (primary — Product Hunt)
+- Open [Product Hunt](https://www.producthunt.com/) or use the feed: `https://www.producthunt.com/feed`
+- Note 8–15 recent launches (name + one-line description)
+- Optionally open Techpoint Africa for Nigeria-relevant launches
+
+### Step 2 (optional legacy): Crunchbase Trending Profiles
 - Go to `https://www.crunchbase.com/`
 - Use **Ctrl + F** and search for **"Trending Profiles"**
-- Scroll to the **Trending Profiles** section
-- Take a clear **screenshot** of the section (showing multiple startups)
+- Take a clear **screenshot** of the section (only if you choose the legacy path)
 
-### Step 2: Prepare the Screenshot for ChatGPT
-- Ensure the screenshot clearly shows:
-  - Startup names
-  - Short descriptions / tags / industries (as visible)
-- If needed, crop the screenshot to focus on the relevant content
-
-### Step 3: Open ChatGPT (Vision Enabled)
-- Use a ChatGPT model that supports **images (Vision)**
-- Start a new chat
+### Step 3: Open ChatGPT
+- Text path (recommended): paste Prompt 1a with your product list — Vision not required
+- Legacy screenshot path: use a Vision-enabled model and upload the image
 
 ### Step 4: Use Prompt 1a
-- Upload the **Trending Profiles screenshot**
-- Use this prompt (or your variant):
-
 > **Prompt 1a:**  
-> “Give me ideas based on this to implement in Nigeria. Your ideas should be differentiated from the ideas present in the image by combining with a different niche or concept (these different niches do not compulsorily have to be present in the image) in order to generate new startup ideas).”
+> “Give me ideas based on this to implement in Nigeria. Your ideas should be differentiated from the ideas present in the source by combining with a different niche or concept (these different niches do not compulsorily have to be present in the source) in order to generate new startup ideas).”
 
 ### Step 5: Review Generated Ideas
 - Read through the ideas ChatGPT returns
@@ -49,46 +50,42 @@ This strategy helps you generate business ideas by adapting *trending startup pr
 
 ## Script-Based Approach
 
-### Using `steps.py`
-
-Run the Python script to guide and partially automate this process:
+### Using `trending_startup_adapter.py`
 
 ```bash
-python steps.py
+cd Business-Idea-Formulation-Strategy-7-Trending-Startup-Adaptation
+python trending_startup_adapter.py
 ```
 
 The script will:
-1. **Automated**: Remind you of the exact steps to capture **Trending Profiles** on Crunchbase.  
-2. **User Input**: Ask you to confirm when the screenshot has been captured.  
-3. **Automated**: Generate a **ready-to-copy Prompt 1a** for ChatGPT Vision.  
-4. **User Input**: Let you paste/enter the **viable ideas** returned from Prompt 1a.  
-5. **Automated**: Generate **Prompt 1b blocks** for each selected idea (saved in a text file).  
-6. **Automated**: Save a JSON log of all ideas and prompts for future reference.
-
-You still manually:
-- Capture the screenshot in Crunchbase,
-- Upload it to ChatGPT,
-- Paste generated ideas back into the script when asked.
+1. Ask you to choose: **(1) Product Hunt / text** (default) or **(2) Crunchbase screenshot** (legacy)
+2. Fetch Product Hunt RSS when available, or guide Crunchbase capture
+3. Generate **Prompt 1a** (text or Vision wording)
+4. Let you enter viable ideas and generate **Prompt 1b** blocks + JSON log
 
 ## Expected Output
 
 After completing this strategy, you should have:
-- A list of **trending global startup concepts** from Crunchbase.
+- A list of **trending global product concepts** (Product Hunt or legacy Crunchbase).
 - A set of **localized, differentiated ideas** tailored for Nigeria.
 - Detailed **Prompt 1b tables** for your top ideas (problems, solutions, costs, monetization, risks, etc.).
 - A shortlist of **2–5 high-potential startups** for deeper research and validation.
 
 ## Tips for Success
 
-- **Aim for differentiation**: Don’t just copy trending startups—add a new niche or twist.  
+- **Aim for differentiation**: Don’t just copy trending products—add a new niche or twist.  
 - **Think “Nigeria-first”**: Always ask, “How does this work in the Nigerian context?”  
 - **Focus on execution feasibility**: Some ideas may be great globally but too complex locally.  
-- **Reuse this monthly**: Trending Profiles change; re-run the process to keep your pipeline fresh.  
+- **Reuse this monthly**: Trending lists change; re-run the process to keep your pipeline fresh.  
 - **Track everything**: Keep a central file or sheet of all ideas and their status (researching, validating, parked, etc.).
+
+## Resources
+
+- [Product Hunt](https://www.producthunt.com/) ← **primary**
+- [Product Hunt RSS](https://www.producthunt.com/feed)
+- [Techpoint Africa](https://techpoint.africa/) ← secondary
+- [Crunchbase](https://www.crunchbase.com/) ← optional legacy Trending Profiles
 
 ---
 
 **Remember to use voice typing via AnyDesk for more efficient communication - it's more efficient than Google Docs' voice typing tool and eliminates the need for copying and pasting into IDE text fields.**
-
-
-

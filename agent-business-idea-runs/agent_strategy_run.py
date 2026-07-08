@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch RSS/OWID inputs for agent formulation runs (strategies 5, 9, 14; optional 15)."""
+"""Fetch RSS/OWID/S6/S7 inputs for agent formulation runs (strategies 5, 6, 7, 9, 14; optional 15)."""
 from __future__ import annotations
 
 import argparse
@@ -29,6 +29,9 @@ OWID_TOPICS = [
     ("internet-users", "https://ourworldindata.org/internet"),
     ("renewable-energy", "https://ourworldindata.org/renewable-energy"),
 ]
+
+STARTUPLIST_STARTUPS_URL = "https://www.startuplist.africa/startups"
+PRODUCT_HUNT_FEED = "https://www.producthunt.com/feed"
 
 
 def strip_html(text: str) -> str:
@@ -95,6 +98,80 @@ def fetch_owid_snippets():
     return out
 
 
+def fetch_strategy6_startup_directory():
+    """Strategy 6: StartupList Africa snippet (Nigeria-focused startup directory)."""
+    try:
+        import requests
+        from bs4 import BeautifulSoup
+    except ImportError:
+        return {"status": "skipped", "error": "requests/beautifulsoup4 not installed"}
+
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; IncStrategyBot/1.0)"}
+    try:
+        response = requests.get(STARTUPLIST_STARTUPS_URL, headers=headers, timeout=25)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        for tag in soup(["script", "style", "nav", "footer", "header"]):
+            tag.decompose()
+        text = " ".join(soup.get_text().split())
+        nigeria_hits = []
+        for token in text.split():
+            if token.lower() in ("nigeria", "nigerian", "lagos", "abuja"):
+                nigeria_hits.append(token)
+        return {
+            "source": "startuplist_africa",
+            "url": STARTUPLIST_STARTUPS_URL,
+            "status": response.status_code,
+            "snippet": text[:3500],
+            "nigeria_keyword_count": len(nigeria_hits),
+            "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback.",
+        }
+    except Exception as ex:
+        return {
+            "source": "startuplist_africa",
+            "url": STARTUPLIST_STARTUPS_URL,
+            "status": "error",
+            "error": str(ex),
+        }
+
+
+def fetch_strategy7_trending():
+    """Strategy 7: Product Hunt RSS (global trending products; adapt for Nigeria)."""
+    try:
+        import feedparser
+    except ImportError:
+        return {"status": "skipped", "error": "feedparser not installed"}
+
+    try:
+        feed = feedparser.parse(PRODUCT_HUNT_FEED)
+        products = []
+        for entry in feed.entries[:15]:
+            products.append(
+                {
+                    "title": entry.get("title", ""),
+                    "summary": strip_html(
+                        entry.get("summary", "") or entry.get("description", "")
+                    )[:300],
+                    "link": entry.get("link", ""),
+                    "published": entry.get("published", ""),
+                }
+            )
+        return {
+            "source": "product_hunt",
+            "feed": PRODUCT_HUNT_FEED,
+            "count": len(products),
+            "products": products,
+            "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy.",
+        }
+    except Exception as ex:
+        return {
+            "source": "product_hunt",
+            "feed": PRODUCT_HUNT_FEED,
+            "status": "error",
+            "error": str(ex),
+        }
+
+
 def run_strategy15(timeout_sec: int = 120) -> dict:
     s15 = REPO_ROOT / "Business-Idea-Formulation-Strategy-15-Nigeria-National-Open-Data"
     script = s15 / "nigeria_national_open_data.py"
@@ -144,7 +221,7 @@ def run_strategy15(timeout_sec: int = 120) -> dict:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Fetch agent formulation inputs (RSS, OWID; optional Strategy 15)."
+        description="Fetch agent formulation inputs (RSS, OWID, S6/S7; optional Strategy 15)."
     )
     parser.add_argument(
         "--fetch-only",
@@ -174,6 +251,8 @@ def main(argv: list[str] | None = None) -> int:
         "generated_at": datetime.now().isoformat(),
         "strategies_skipped": [3, 4, 8, 10],
         "strategy_5_9_rss": fetch_rss(),
+        "strategy_6_startup_directory": fetch_strategy6_startup_directory(),
+        "strategy_7_trending": fetch_strategy7_trending(),
         "strategy_14_owid": fetch_owid_snippets(),
     }
 
@@ -191,6 +270,12 @@ def main(argv: list[str] | None = None) -> int:
             print(f"\n=== {block['source']} ({block.get('count', len(block['articles']))} headlines) ===")
             for article in block["articles"][:5]:
                 print(f"  - {article['title'][:100]}")
+
+    s7 = payload.get("strategy_7_trending", {})
+    if s7.get("products"):
+        print(f"\n=== product_hunt ({s7.get('count', 0)} products) ===")
+        for product in s7["products"][:5]:
+            print(f"  - {product['title'][:100]}")
 
     return 0
 

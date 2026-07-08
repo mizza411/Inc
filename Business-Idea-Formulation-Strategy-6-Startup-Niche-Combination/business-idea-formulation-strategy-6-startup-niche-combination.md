@@ -1,21 +1,25 @@
 # Strategy 6: Startup Niche Combination
 
 ## 🎯 Core Strategy
-Generate new startup ideas by combining existing Nigerian startup niches with other niches to create innovative business concepts.
+Generate new startup ideas by combining existing Nigerian/African startup niches with other niches to create innovative business concepts.
 
 ## Process
 
-### Prompt 1a: Crunchbase Technique
-First, assess [Nigerian startups](https://www.crunchbase.com/hub/nigeria-startups) in the content below, then combine the startup niche with other niches (these other niches do not compulsorily have to be present in the image) in order to generate new startup ideas.
+### Prompt 1a: Startup directory technique (primary — StartupList Africa)
+First, assess [Nigerian/African startups](https://www.startuplist.africa/startups) in the content below (filter Nigeria + sector), then combine the startup niche with other niches (these other niches do not compulsorily have to be present in the content) in order to generate new startup ideas.
 
 **[Paste content here]**
+
+Optional legacy: same Prompt 1a using pasted content from [Crunchbase — Nigerian Startups Hub](https://www.crunchbase.com/hub/nigeria-startups) if StartupList is unavailable.
 
 ### Prompt 1b (If the ideas look viable - then use this prompt)
 **Tabulate output for "[paste viable idea Prompt 1a]"** with the following columns:
 
 ## Resources
 
-- [Crunchbase - Nigerian Startups Hub](https://www.crunchbase.com/hub/nigeria-startups)
+- [StartupList Africa — Startups](https://www.startuplist.africa/startups) ← **primary**
+- [Techpoint Africa](https://techpoint.africa/) ← secondary
+- [Crunchbase - Nigerian Startups Hub](https://www.crunchbase.com/hub/nigeria-startups) ← optional legacy
 
 ## Output Format
 
@@ -28,4 +32,3 @@ This method leverages proven startup models and combines them creatively, reduci
 ---
 
 **Remember to use voice typing via AnyDesk for more efficient communication - it's more efficient than Google Docs' voice typing tool and eliminates the need for copying and pasting into IDE text fields.**
-

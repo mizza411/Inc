@@ -75,7 +75,7 @@ class HighValueProblemFilter:
 
         print(
             "\nEnter problems you want to evaluate (from news, Strategy 14\n"
-            "global data, Crunchbase, personal problems, questionnaires, etc.).\n"
+            "global data, StartupList/Product Hunt, Crunchbase (optional), personal problems, questionnaires, etc.).\n"
             "For each problem, you can also specify a source/tag. Press Enter on\n"
             "an empty description when you're done.\n"
         )

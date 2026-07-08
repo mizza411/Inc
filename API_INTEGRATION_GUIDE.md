@@ -15,20 +15,25 @@
    - Scrapes: AnnualReports.com
    - Status: BeautifulSoup implemented
 
-### 🔄 Can Be Added:
-4. **Strategy 6: Startup Niche Combination**
-   - Can scrape: Crunchbase.com/hub/nigeria-startups
-   - Benefit: Auto-extract startup list and niches
+4. **Strategy 6: Startup Niche Combination** ✅ (Tier 1 — 2026-07)
+   - **Primary:** [StartupList Africa](https://www.startuplist.africa/startups) (snippet via `agent_strategy_run.py` + interactive script)
+   - **Secondary:** Techpoint RSS (already in agent fetch)
+   - **Optional legacy:** Crunchbase Nigeria hub (manual paste / scrape fallback only)
+   - Benefit: Nigeria/Africa niche lists without Crunchbase login wall
 
-5. **Strategy 7: Trending Startup Adaptation**
-   - Can scrape: Crunchbase "Trending Profiles" section
-   - Benefit: Auto-extract trending startup data
+5. **Strategy 7: Trending Startup Adaptation** ✅ (Tier 1 — 2026-07)
+   - **Primary:** Product Hunt RSS (`https://www.producthunt.com/feed`) via `agent_strategy_run.py` + interactive script
+   - **Secondary:** Techpoint Digest / YC company list (agent synthesis)
+   - **Optional legacy:** Crunchbase “Trending Profiles” screenshot + Vision
+   - Benefit: Automable trending signals without screenshot dependence
 
-6. **Strategy 14: Global Data Trend Adaptation**
-   - Can scrape: OurWorldInData.org pages
+6. **Strategy 14: Global Data Trend Adaptation** ✅
+   - Scrapes: OurWorldInData.org pages (also via `agent_strategy_run.py`)
    - Benefit: Auto-extract data visualizations and insights
 
 > **Retired:** Strategy **8** (TrendHunter) was removed from the master runner — no licensed automation path. Use **Strategy 14** for global trend adaptation instead.
+
+> **Crunchbase:** Not required for Strategies **6** or **7**. Keep only as optional manual secondary for global investor graphs.
 
 ## Free APIs We Can Use
 
@@ -61,12 +66,15 @@ params = {
 **Best for:**
 - Strategy 5: News-Based Problem Extraction
 - Strategy 9: Financial News Problem Extraction
+- Strategy 7: Trending Startup Adaptation (Product Hunt feed)
 
 **Available RSS Feeds:**
 - Nairametrics RSS: `https://nairametrics.com/feed/`
 - BusinessDay RSS: `https://businessday.ng/feed/`
 - Premium Times RSS: `https://www.premiumtimesng.com/feed/`
 - Vanguard RSS: `https://www.vanguardngr.com/feed/`
+- Techpoint RSS: `https://techpoint.africa/feed/`
+- Product Hunt RSS: `https://www.producthunt.com/feed` (Strategy 7)
 
 ### OurWorldInData API (Free, Public Data)
 **Best for:**
@@ -102,12 +110,12 @@ pytrends.build_payload(['keyword'], geo='NG', timeframe='today 3-m')
 
 ### High Priority (Easy Wins):
 1. ✅ Strategy 5: NewsAPI + RSS feeds
-2. ✅ Strategy 9: NewsAPI + RSS feeds  
-3. 🔄 Strategy 6: Crunchbase scraping
-4. 🔄 Strategy 14: OurWorldInData scraping
+2. ✅ Strategy 9: NewsAPI + RSS feeds
+3. ✅ Strategy 6: StartupList Africa (agent fetch + script); Crunchbase optional legacy
+4. ✅ Strategy 14: OurWorldInData scraping / agent OWID snippets
 
 ### Medium Priority:
-5. 🔄 Strategy 7: Crunchbase trending scraping
+5. ✅ Strategy 7: Product Hunt RSS (agent fetch + script); Crunchbase screenshot optional legacy
 6. 🔄 Strategy 12: Google Trends integration
 
 ### Low Priority (Already Manual):
@@ -118,10 +126,10 @@ pytrends.build_payload(['keyword'], geo='NG', timeframe='today 3-m')
 ```python
 # Free APIs to use:
 1. NewsAPI - News headlines (100/day free)
-2. RSS Feeds - News articles (unlimited, free)
+2. RSS Feeds - News + Product Hunt (unlimited, free)
 3. Google Trends (pytrends) - Trending topics (free)
 4. OurWorldInData - Public data exports (free)
-5. BeautifulSoup - Web scraping (free, no limits)
+5. BeautifulSoup - Web scraping (StartupList, OWID, news) (free; respect robots.txt)
 ```
 
 ## Cost Comparison
@@ -130,15 +138,14 @@ pytrends.build_payload(['keyword'], geo='NG', timeframe='today 3-m')
 |--------|------|-------------|----------|
 | BeautifulSoup | Free | None (respect robots.txt) | All scrapable sites |
 | NewsAPI | Free tier: 100/day | 100 requests/day | News headlines |
-| RSS Feeds | Free | Unlimited | News articles |
+| RSS Feeds | Free | Unlimited | News + Product Hunt |
 | Google Trends | Free | ~5 requests/min | Trending topics |
 | OurWorldInData | Free | Unlimited | Global data |
 
 ## Next Steps
 
-1. Add NewsAPI to Strategies 5 & 9
-2. Add RSS feed parsing to Strategies 5 & 9
-3. Add BeautifulSoup to Strategies 6, 7, 8, 14
-4. Add Google Trends to Strategy 12 (optional)
-
-
+1. ✅ NewsAPI + RSS for Strategies 5 & 9
+2. ✅ Strategy 6 StartupList + Strategy 7 Product Hunt (agent `agent_strategy_run.py`)
+3. ✅ OWID via agent runner / Strategy 14 scrape
+4. Optional: Google Trends for Strategy 12
+5. Optional Tier 3: remove Crunchbase code paths after ≥2 successful agent runs on new sources

@@ -623,8 +623,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 | SaaS 1st — Network | Strategy **3** — `Business-Idea-Formulation-Strategy-3-*` |
 | SaaS 2nd — Questionnaire | Strategy **4** |
 | SaaS 3rd — Nigerian news | Strategy **5** |
-| SaaS 4th — Crunchbase niche | Strategy **6** |
-| SaaS 5th — Crunchbase trending | Strategy **7** |
+| SaaS 4th — Startup niches (was Crunchbase; now **StartupList Africa** primary, Crunchbase optional legacy) | Strategy **6** |
+| SaaS 5th — Trending adaptation (was Crunchbase Trending Profiles; now **Product Hunt / Techpoint** primary, Crunchbase screenshot optional legacy) | Strategy **7** |
 | SaaS 6th — TrendHunter | Strategy **8** (retired) → use Strategy **14** |
 | SaaS 7th — Nairametrics et al | Strategy **9** |
 | SaaS 8th — ChatGPT Vision | Strategy **10** (retired) → use Strategies **3**, **4**, or **5** |
@@ -924,3 +924,71 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] **Phase 1 — Master runner:** Remove Strategy 10 from `STRATEGY_SCRIPTS` / `STRATEGY_META` in `run_all_strategies.py`; add to `RETIRED_STRATEGIES` with clear menu messaging; update `run_all_strategies_README.md`.
 - [x] **Phase 2 — Cross-references:** Remove Strategy 10 from API docs; update Drive mapping in this task file.
 - [x] **Phase 3 — Strategy 10 folder:** Archive legacy script to `_archive/visual_content_analyzer_legacy.py`; stub `visual_content_analyzer.py`; add `DEPRECATED.md`; deprecate playbook markdown.
+
+---
+
+### 8. Deprecate Crunchbase as primary source — Strategies 6 & 7 (phased)
+**Status:** Tier 1 **implemented** (2026-07-07); Tier 2 **implemented** (2026-07-08) — Tier 3 optional later  
+**Goal:** Replace **Crunchbase** as the required data source for **Strategy 6** (niche combination) and **Strategy 7** (trending startup adaptation) with **Africa-first + automatable** alternatives — **without** retiring Strategies 6/7, breaking agent formulation runs, or changing strategy numbers/folder names.
+
+**Context (why now):**
+- Agent runs (`prompts/agent_formulation_run.txt`, `agent_strategy_run.py`) already succeed with **agent synthesis** when Crunchbase blocks (login wall; scrape fails).
+- Tier 1–2 aligned scripts, agent fetch, and docs with StartupList / Product Hunt; Crunchbase optional legacy only.
+- Nigeria-relevant sources: **StartupList Africa** (S6), **Product Hunt / YC / Techpoint RSS** (S7); Crunchbase optional as **manual secondary** for global investor graphs only.
+
+**Non-negotiable safety (do not break anything):**
+- **No implementation until this task is explicitly approved** for the target phase.
+- **Keep Strategies 6 & 7** in agent run scope (`5, 6, 7, 9, 11–15`); do **not** add to `RETIRED_STRATEGIES`.
+- **Backward compatibility:** existing `startup_niche_combiner.py` / `trending_startup_adapter.py` must remain runnable (manual Crunchbase paste path) until replacement fetch is proven; prefer **additive** changes over deletes in Phase 1.
+- **Agent runs must keep producing** `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md` + `.docx` with S6/S7 trace lines even if new fetch fails (fallback: agent synthesis + RSS already in `agent_strategy_inputs_*.json`).
+- **Do not rename** strategy folders (`Business-Idea-Formulation-Strategy-6-*`, `-7-*`).
+- **Do not modify** `inc_launcher/`, `run_all_strategies.py` behavior menus, or Strategy 15 in this workstream unless a phase explicitly says so.
+- **One phase at a time**; run `pytest` / smoke import checks after each phase; no big-bang refactor.
+
+#### Proposed source mapping (approval target)
+
+| Strategy | Today (Crunchbase) | Proposed primary | Proposed secondary |
+|----------|-------------------|------------------|-------------------|
+| **6** — Niche combination | Nigeria startups hub paste/scrape | [StartupList Africa](https://www.startuplist.africa/startups) — filter Nigeria + sector | Techpoint RSS (already in `agent_strategy_run.py`) |
+| **7** — Trending adaptation | Trending Profiles screenshot + Vision | Product Hunt daily / YC company list + Techpoint Digest | Manual Crunchbase screenshot (optional) |
+
+#### Tier 1 — Must change (behavior / main agent run) — **approve before coding**
+
+- [x] **8.T1.1 — Agent prompt:** Update `prompts/agent_formulation_run.txt` — S6/S7 name new sources; Crunchbase **not** required; agent may use `agent_strategy_inputs_*.json` + synthesis fallback.
+- [x] **8.T1.2 — Agent fetch runner:** Extend `agent-business-idea-runs/agent_strategy_run.py` with **optional** fetches (StartupList public page snippet; Product Hunt RSS) — **default behavior unchanged** if fetch fails (log + continue).
+- [x] **8.T1.3 — Strategy 6 script (additive):** `startup_niche_combiner.py` — add `collect_startup_directory_content()` for StartupList/manual paste; keep existing Crunchbase path as fallback; `collect_crunchbase_content()` unchanged.
+- [x] **8.T1.4 — Strategy 7 script (additive):** `trending_startup_adapter.py` — add text/URL-based trend input (Product Hunt RSS / paste); keep Crunchbase screenshot path as fallback (menu choice 2).
+
+**Tier 1 definition of done:** Agent run + optional `agent_strategy_run.py` produce S6/S7 inputs without Crunchbase; interactive S6/S7 scripts still work via old or new path; zero regressions in Strategies 5, 9, 11–15.
+
+#### Tier 2 — Should change (orchestration & docs truth) — **approve after Tier 1 green**
+
+- [x] **8.T2.1 — Master runner meta:** `run_all_strategies.py` — update `STRATEGY_META` descriptions for 6 & 7 (remove “Crunchbase” as primary; name new sources). *(descriptions only — no menu/script wiring changes)*
+- [x] **8.T2.2 — API docs:** `API_INTEGRATION_GUIDE.md`, `API_IMPLEMENTATION_SUMMARY.md` — replace Crunchbase scrape priority with StartupList / Product Hunt / existing RSS; note Crunchbase optional/manual.
+- [x] **8.T2.3 — Strategy playbooks:** S6/S7 `README.md` + `business-idea-formulation-strategy-*.md` — new Step 1 URLs and Prompt 1a wording.
+- [x] **8.T2.4 — Drive mapping (this file):** Update table at §8 Google Drive — SaaS 4th/5th rows to reference new sources (mirror TrendHunter → Strategy 14 pattern).
+- [x] **8.T2.5 — Ritual links:** `Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction/links.md` — note Tue/Thu Crunchbase Google Docs superseded or paired with StartupList/Product Hunt checks.
+
+**Tier 2 definition of done:** No committed doc still claims Crunchbase is **required** for S6/S7; mapping table and API guide aligned with Tier 1 behavior.
+
+#### Tier 3 — Optional / later (out of Tier 1–2 scope)
+
+- [ ] Google Drive `Google Drive Business Files/` mirror renames (user-export archive only).
+- [ ] Remove Crunchbase code paths entirely from S6/S7 (only after ≥2 successful agent runs on new sources).
+- [ ] Paid StartupList Pro API / Crunchbase API if automation needs exceed free tiers.
+- [ ] `inc_launcher` Hub card copy mentioning formulation data sources.
+
+#### Out of scope
+
+- Retiring Strategy **6** or **7** as strategies.
+- Paid Crunchbase subscription unless user explicitly approves.
+- Scraping behind login walls without user-provided credentials.
+- Changes to Strategies 3, 4, 5, 8, 9, 10, 11–15 behavior.
+
+#### v1 approval checkpoint (user)
+
+- [x] User approves **proposed source mapping** table above.
+- [x] User approves **Tier 1** scope (8.T1.1–8.T1.4).
+- [x] User approves **Tier 2** scope (8.T2.1–8.T2.5) — implemented 2026-07-08.
+
+**Related:** Task §8 Google Drive mapping (SaaS 4th/5th = Strategies 6/7); agent formulation Phase 5 (`agent-business-idea-runs/`); chat analysis 2026-07-07 (MerchantLift + StartupList alternative).

@@ -1,23 +1,29 @@
 # Business Idea Formulation Strategy 6: Startup Niche Combination
 
 ## Overview
-This strategy helps you generate new startup ideas by combining existing Nigerian startup niches with other niches to create innovative business concepts.
+This strategy helps you generate new startup ideas by combining existing Nigerian/African startup niches with other niches to create innovative business concepts.
+
+**Primary source (2026-07):** [StartupList Africa](https://www.startuplist.africa/startups) — filter Nigeria + sector.  
+**Secondary:** Techpoint Africa RSS / headlines.  
+**Optional legacy:** [Crunchbase Nigeria hub](https://www.crunchbase.com/hub/nigeria-startups) (manual only; not required).
+
+Agent runs also use `agent_strategy_run.py` → `strategy_6_startup_directory` in fetch JSON.
 
 ## Manual Approach
 
-### Step 1: Access Crunchbase Nigerian Startups
-- Go to [Crunchbase - Nigerian Startups Hub](https://www.crunchbase.com/hub/nigeria-startups)
-- Browse through the list of Nigerian startups
-- Note down different startup niches you find
+### Step 1: Access StartupList Africa (primary)
+- Go to [StartupList Africa — Startups](https://www.startuplist.africa/startups)
+- Filter by **Nigeria** and relevant industries (e.g. FinTech, E-commerce, SaaS)
+- Note startup names, sectors, and funding context where visible
 
 ### Step 2: Collect Startup Information
-- Select 10-20 interesting Nigerian startups
+- Select 10-20 interesting Nigerian/African startups
 - Document their:
   - Industry/Niche
   - Business model
   - Target market
   - Key features
-- Use Ctrl + A to copy content from the page
+- Paste names/notes into ChatGPT or the Strategy 6 script
 
 ### Step 3: Identify Niches
 - List all the niches you've identified (e.g., FinTech, EdTech, HealthTech, AgriTech, etc.)
@@ -31,8 +37,8 @@ This strategy helps you generate new startup ideas by combining existing Nigeria
 - Create 5-10 combination ideas
 
 ### Step 5: Use Prompt 1a
-- Paste the Crunchbase content into ChatGPT
-- Use Prompt 1a: "First, assess Nigerian startups in the content below, then combine the startup niche with other niches (these other niches do not compulsorily have to be present in the image) in order to generate new startup ideas [paste content here]"
+- Paste the StartupList (or pasted directory) content into ChatGPT
+- Use Prompt 1a: "First, assess Nigerian startups in the content below, then combine the startup niche with other niches (these other niches do not compulsorily have to be present in the content) in order to generate new startup ideas [paste content here]"
 
 ### Step 6: Evaluate Ideas
 - Review the generated combination ideas
@@ -51,33 +57,29 @@ This strategy helps you generate new startup ideas by combining existing Nigeria
 
 ## Script-Based Approach
 
-### Using steps.py
-
-Run the Python script to automate parts of this process:
+### Using `startup_niche_combiner.py`
 
 ```bash
-python steps.py
+cd Business-Idea-Formulation-Strategy-6-Startup-Niche-Combination
+python startup_niche_combiner.py
 ```
 
 The script will:
-1. **Automated**: Provide list of Nigerian startup niches from Crunchbase
-2. **User Input**: Select startups to analyze
-3. **User Input**: Paste Crunchbase content
-4. **Automated**: Extract and categorize niches
-5. **User Input**: Select niches to combine
-6. **Automated**: Generate combination ideas
-7. **Automated**: Format content for ChatGPT Prompt 1a
-8. **User Input**: Select viable ideas for Prompt 1b
-9. **Automated**: Generate Prompt 1b for selected ideas
+1. **Primary:** Offer StartupList Africa fetch or paste (`collect_startup_directory_content`)
+2. **Optional:** Crunchbase legacy fallback if you decline StartupList
+3. **User Input:** Select niches to combine
+4. **Automated:** Generate combination ideas + ChatGPT Prompt 1a/1b files
 
 ## Resources
 
-- [Crunchbase - Nigerian Startups Hub](https://www.crunchbase.com/hub/nigeria-startups)
+- [StartupList Africa — Startups](https://www.startuplist.africa/startups) ← **primary**
+- [Techpoint Africa](https://techpoint.africa/) ← secondary news signal
+- [Crunchbase - Nigerian Startups Hub](https://www.crunchbase.com/hub/nigeria-startups) ← optional legacy
 
 ## Expected Output
 
 After completing this strategy, you should have:
-- List of Nigerian startup niches
+- List of Nigerian/African startup niches
 - 10-20 combination ideas
 - Detailed analysis of 3-5 viable combination ideas
 - Top 2-3 prioritized ideas ready for validation
@@ -101,5 +103,3 @@ After completing this strategy, you should have:
 ---
 
 **Remember to use voice typing via AnyDesk for more efficient communication - it's more efficient than Google Docs' voice typing tool and eliminates the need for copying and pasting into IDE text fields.**
-
-

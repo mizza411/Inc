@@ -58,11 +58,11 @@ STRATEGY_META: Dict[int, Dict[str, str]] = {
     },
     6: {
         "name": "Startup Niche Combination",
-        "desc": "Combines Nigerian startup niches from Crunchbase with other niches to generate ideas.",
+        "desc": "Combines Nigerian/African startup niches (StartupList Africa primary; Crunchbase optional legacy) with other niches to generate ideas.",
     },
     7: {
         "name": "Trending Startup Adaptation",
-        "desc": "Uses Crunchbase 'Trending Profiles' + ChatGPT Vision to adapt trending startups for Nigeria.",
+        "desc": "Adapts trending products (Product Hunt / Techpoint primary; Crunchbase Trending Profiles optional legacy) for Nigeria with niche differentiation.",
     },
     9: {
         "name": "Financial News Problem Extraction",

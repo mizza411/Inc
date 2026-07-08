@@ -1,0 +1,450 @@
+{
+  "generated_at": "2026-07-08T14:48:45.043772",
+  "strategies_skipped": [
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "Market Crash: Why FIFA 2026 World Cup ticket prices plunged by over 50%",
+          "summary": "Ticket prices for the FIFA 2026 World Cup quarter-finals have dropped by more than 50 per cent on the resale\nread more Market Crash: Why FIFA 2026 World Cup ticket prices plunged by over 50%",
+          "link": "https://businessday.ng/sports/article/market-crash-why-fifa-2026-world-cup-ticket-prices-plunged-by-over-50/",
+          "published": "Wed, 08 Jul 2026 13:34:58 +0000"
+        },
+        {
+          "title": "Tension in Ogoni area as detonation of expired bombs begins amidst objections from frightened community",
+          "summary": "Detonation of dynamites in a part of Ogoni in Rivers State began today, Wednesday, July 8, 2026, with tension in\nread more Tension in Ogoni area as detonation of expired bombs begins amidst objections from frightened community",
+          "link": "https://businessday.ng/news/article/tension-in-ogoni-area-as-detonation-of-expired-bombs-begins-amidst-objections-from-frightened-community/",
+          "published": "Wed, 08 Jul 2026 13:34:34 +0000"
+        },
+        {
+          "title": "Fake agency: Senate rejects motion to probe N1.3bn PFIPC budget allocation",
+          "summary": "The Senate on Wednesday turned down a motion seeking a legislative investigation into the controversial N1.3 billion budgetary allocation to\nread more Fake agency: Senate rejects motion to probe N1.3bn PFIPC budget allocation",
+          "link": "https://businessday.ng/news/article/fake-agency-senate-rejects-motion-to-probe-n1-3bn-pfipc-budget-allocation/",
+          "published": "Wed, 08 Jul 2026 13:22:57 +0000"
+        },
+        {
+          "title": "Why Nigeria’s payment rails now decide which digital businesses survive",
+          "summary": "Moniepoint processed ₦412 trillion in transactions in a single year, a figure that says less about one company than about\nread more Why Nigeria&#8217;s payment rails now decide which digital businesses survive",
+          "link": "https://businessday.ng/sponsored/article/why-nigerias-payment-rails-now-decide-which-digital-businesses-survive/",
+          "published": "Wed, 08 Jul 2026 13:14:35 +0000"
+        },
+        {
+          "title": "A new blueprint: How strategic collaboration is rewriting the narrative on youth drug abuse",
+          "summary": "Leadership, in its truest essence, is not about the titles we hold or the executive seats we occupy; it is\nread more A new blueprint: How strategic collaboration is rewriting the narrative on youth drug abuse",
+          "link": "https://businessday.ng/opinion/article/a-new-blueprint-how-strategic-collaboration-is-rewriting-the-narrative-on-youth-drug-abuse/",
+          "published": "Wed, 08 Jul 2026 13:08:12 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Woman gives birth while asleep, finds newborn under blanket",
+          "summary": "A Canadian mother shares her traumatic experience of giving birth while asleep and finding her newborn son under the blanket, sparking online discussion.\n\nRead More: https://punchng.com/woman-gives-birth-while-asleep-finds-newborn-under-blanket/",
+          "link": "https://punchng.com/woman-gives-birth-while-asleep-finds-newborn-under-blanket/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 14:41:29 +0000"
+        },
+        {
+          "title": "IMF lowers 2026 world growth forecast as Middle East risks linger",
+          "summary": "The IMF has cut its 2026 world growth forecast to 3.0% due to lingering Middle East risks, despite an AI boom. Global inflation is also set to accelerate.\n\nRead More: https://punchng.com/imf-lowers-2026-world-growth-forecast-as-middle-east-risks-linger/",
+          "link": "https://punchng.com/imf-lowers-2026-world-growth-forecast-as-middle-east-risks-linger/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 14:37:07 +0000"
+        },
+        {
+          "title": "Dangote refinery begins free petrol delivery to Abuja, five states",
+          "summary": "Dangote Refinery begins free petrol delivery to Abuja, Lagos, and five other states for bulk purchases, maintaining its N1,075/litre ex-depot price.\n\nRead More: https://punchng.com/dangote-refinery-begins-free-petrol-delivery-to-abuja-five-states/",
+          "link": "https://punchng.com/dangote-refinery-begins-free-petrol-delivery-to-abuja-five-states/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 14:33:13 +0000"
+        },
+        {
+          "title": "PFIPC scandal: ADC rejects ICPC probe, demands judicial panel",
+          "summary": "The ADC rejects the ICPC probe into the PFIPC scandal, demanding an independent judicial panel for a credible investigation into the alleged budget inserti\n\nRead More: https://punchng.com/pfipc-scandal-adc-rejects-icpc-probe-demands-judicial-panel/",
+          "link": "https://punchng.com/pfipc-scandal-adc-rejects-icpc-probe-demands-judicial-panel/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:56:04 +0000"
+        },
+        {
+          "title": "Your work patriotism in action for Nigeria, Tinubu tells CSOs",
+          "summary": "President Tinubu calls on Civil Society Organisations to deepen collaboration with government, highlighting their role as &#8220;co-architects of national develo\n\nRead More: https://punchng.com/your-work-patriotism-in-action-for-nigeria-tinubu-tells-csos/",
+          "link": "https://punchng.com/your-work-patriotism-in-action-for-nigeria-tinubu-tells-csos/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:52:16 +0000"
+        },
+        {
+          "title": "PFIPC scandal: Atiku rejects ICPC probe, seeks independent panel",
+          "summary": "Former Vice President and presidential candidate of the African Democratic Congress, Atiku Abubakar, on Wednesday, rejected President Bola Tinubu&#8217;s directive to the Independent Corrupt Practices and Other Related Offences Commission to investigate the alleged Presidential Foreign Intervention Promotion Council, insisting that only an independent commission of inquiry can restore public confi",
+          "link": "https://punchng.com/pfipc-scandal-atiku-rejects-icpc-probe-seeks-independent-panel/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:50:45 +0000"
+        },
+        {
+          "title": "Delta gov donates operational vehicles to Nigerian Correctional Service",
+          "summary": "Delta State Governor, Sheriff Oborevwori, donates five operational vehicles to the Nigerian Correctional Service to boost security and operations in Delta.\n\nRead More: https://punchng.com/delta-gov-donates-operational-vehicles-to-nigerian-correctional-service/",
+          "link": "https://punchng.com/delta-gov-donates-operational-vehicles-to-nigerian-correctional-service/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:50:00 +0000"
+        },
+        {
+          "title": "PFIPC scandal: Senate rejects calls for fresh probe into N1.3bn budget allocation",
+          "summary": "The Senate has declined a fresh probe into the N1.3bn PFIPC scandal, opting to await the outcome of the ongoing ICPC investigation ordered by President Tin\n\nRead More: https://punchng.com/pfipc-scandal-senate-rejects-calls-for-fresh-probe-into-n1-3bn-budget-allocation/",
+          "link": "https://punchng.com/pfipc-scandal-senate-rejects-calls-for-fresh-probe-into-n1-3bn-budget-allocation/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:30:53 +0000"
+        },
+        {
+          "title": "Police arrest father, son with four firearms in Bayelsa",
+          "summary": "Bayelsa State Police have arrested a 68-year-old man and his son in possession of four single-barrel guns. Investigations are ongoing into the Bayelsa gun\n\nRead More: https://punchng.com/police-arrest-father-son-with-four-firearms-in-bayelsa/",
+          "link": "https://punchng.com/police-arrest-father-son-with-four-firearms-in-bayelsa/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:26:10 +0000"
+        },
+        {
+          "title": "World Cup: 17 players risk ban over yellow cards",
+          "summary": "Seventeen players are just one yellow card away from a World Cup suspension, potentially missing the semi-finals. Find out which stars are at risk.\n\nRead More: https://punchng.com/world-cup-17-players-risk-ban-over-yellow-cards/",
+          "link": "https://punchng.com/world-cup-17-players-risk-ban-over-yellow-cards/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Wed, 08 Jul 2026 13:19:32 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Photos: Most memorable moments of the 2026 FIFA World Cup so far",
+          "summary": "The 2026 FIFA World Cup has lived up to every expectation, delivering unforgettable drama, stunning upsets, emotional farewells and moments that will be talked about for years to come.\nThe post Photos: Most memorable moments of the 2026 FIFA World Cup so far appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/photos-most-memorable-moments-of-the-2026-fifa-world-cup-so-far/",
+          "published": "Wed, 08 Jul 2026 13:48:24 +0000"
+        },
+        {
+          "title": "Uche Ogbodo raises suspicion of trouble in marriage with cryptic message",
+          "summary": "Nollywood actress Uche Ogbodo has raised fresh suspicion of trouble in her marriage after sharing an emotional message suggesting she has grown weary of the union. \nThe post Uche Ogbodo raises suspicion of trouble in marriage with cryptic message appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/uche-ogbodo-raises-suspicion-of-trouble-in-marriage-with-cryptic-message/",
+          "published": "Wed, 08 Jul 2026 13:39:05 +0000"
+        },
+        {
+          "title": "Trump on Iran: ‘We’re gonna hit ’em hard tonight’",
+          "summary": "President Donald Trump warned Wednesday that US forces would strike Iran \"hard\" in the coming night, after earlier declaring Washington's ceasefire with Iran over at a NATO summit in Ankara.\nThe post Trump on Iran: &#8216;We&#8217;re gonna hit &#8217;em hard tonight&#8217; appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/trump-on-iran-were-gonna-hit-em-hard-tonight/",
+          "published": "Wed, 08 Jul 2026 13:38:05 +0000"
+        },
+        {
+          "title": "Hijab-wearing: Appeal court orders UI, ISI to maintain status quo",
+          "summary": "The Court of Appeal in Ibadan has ordered parties in the appeal over the use of hijab by female Muslim students of the University of Ibadan (UI) International School Ibadan (ISI) to maintain the status quo.\nThe post Hijab-wearing: Appeal court orders UI, ISI to maintain status quo appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/hijab-wearing-appeal-court-orders-ui-isi-to-maintain-status-quo/",
+          "published": "Wed, 08 Jul 2026 13:22:58 +0000"
+        },
+        {
+          "title": "PFIPC: Govt drowning in scandals can’t investigate itself — ADC",
+          "summary": "The ADC said its objection went beyond the choice of the ICPC. While recalling that it had earlier called for an independent inquiry and identified the institutions it believed should be investigated, the party argued that President Tinubu's decision to order a probe amounted to an acknowledgement that the allegations could no longer be dismissed, despite what it described as the presidency's init",
+          "link": "https://www.vanguardngr.com/2026/07/pfipc-govt-drowning-in-scandals-cant-investigate-itself-adc/",
+          "published": "Wed, 08 Jul 2026 13:10:24 +0000"
+        },
+        {
+          "title": "AIRPORT TOUTING: FAAN to revoke licences of culpable firms",
+          "summary": "By Dickson Omobola Federal Airports Authority of Nigeria, FAAN, has threatened to revoke the operating licences of businesses linked to airport touting, saying investigations revealed that many of those engaged in illicit activities and touting at airports are not strangers but staff of agencies and concessionaires operating within the airport. Managing Director of FAAN, Mrs [&#8230;]\nThe post AIR",
+          "link": "https://www.vanguardngr.com/2026/07/airport-touting-faan-to-revoke-licences-of-culpable-firms/",
+          "published": "Wed, 08 Jul 2026 13:05:30 +0000"
+        },
+        {
+          "title": "Le Pen hits campaign trail morning after announcing run",
+          "summary": "France's far-right supremo Marine Le Pen hit the campaign trail on Wednesday fresh off her announcement she would run for president despite an embezzlement conviction.\nThe post Le Pen hits campaign trail morning after announcing run appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/le-pen-hits-campaign-trail-morning-after-announcing-run/",
+          "published": "Wed, 08 Jul 2026 12:53:05 +0000"
+        },
+        {
+          "title": "Why UK Company Formation Is Becoming a Strategic Move for Nigerian Entrepreneurs",
+          "summary": "Nigerian entrepreneurship has never been more ambitious. Across sectors including financial technology, software development, professional services, manufacturing and e-commerce, Nigerian businesses are increasingly looking beyond domestic markets and building organisations designed to compete internationally. Technology has made that ambition more achievable than ever before. Cloud computing, art",
+          "link": "https://www.vanguardngr.com/2026/07/why-uk-company-formation-is-becoming-a-strategic-move-for-nigerian-entrepreneurs/",
+          "published": "Wed, 08 Jul 2026 12:49:56 +0000"
+        },
+        {
+          "title": "Swiss party into the night after reaching World Cup quarter-finals",
+          "summary": "Swiss President Guy Parmelin on Wednesday hailed Switzerland's \"historic\" achievement in reaching the football World Cup quarter-finals for the first time since 1954.\nThe post Swiss party into the night after reaching World Cup quarter-finals appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/swiss-party-into-the-night-after-reaching-world-cup-quarter-finals/",
+          "published": "Wed, 08 Jul 2026 12:43:42 +0000"
+        },
+        {
+          "title": "FG vows commitment to dismantling drug cartels, promoting Nigerians’ wellbeing – SGF Akume",
+          "summary": "Justifying the government’s stance on the drug scourge, the SGF, who was represented  by the Permanent Secretary, General Services (OSGF), Dr. Adamu Ibrahim Kana, stated that no nation will fold its hands while its youths are under the threat of substance abuse.\nThe post FG vows commitment to dismantling drug cartels, promoting Nigerians’ wellbeing – SGF Akume appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/fg-vows-commitment-to-dismantling-drug-cartels-promoting-nigerians-wellbeing-sgf-akume/",
+          "published": "Wed, 08 Jul 2026 12:40:52 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "‘Why ADC, Kano, is denying governorship ticket to primary winner’",
+          "summary": "The Kano State ADC leadership, under Musa Ungogo, had previously declared Mr Khalil the winner of the governorship primary after he defeated Ibrahim Ali-Amin.\nThe post &#8216;Why ADC, Kano, is denying governorship ticket to primary winner&#8217; appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/893779-why-adc-kano-is-denying-governorship-ticket-to-primary-winner.html",
+          "published": "Wed, 08 Jul 2026 13:48:57 +0000"
+        },
+        {
+          "title": "NCAA warns National Assembly proposed funding cuts could threaten aviation safety",
+          "summary": "“The NCAA needs more funding, not less. If you weaken the regulator financially, you weaken safety oversight. Aviation regulators all over the world are adequately funded because they are responsible for protecting lives,” says Michael Achimugu, Director of Public Affairs and Consumer Protection, NCAA\nThe post NCAA warns National Assembly proposed funding cuts could threaten aviation safety appear",
+          "link": "https://www.premiumtimesng.com/business/business-news/893729-ncaa-warns-national-assembly-proposed-funding-cuts-could-threaten-aviation-safety.html",
+          "published": "Wed, 08 Jul 2026 13:41:22 +0000"
+        },
+        {
+          "title": "Uganda Law Society abolishes use of My Lord, My Lady, bans bowing to judges",
+          "summary": "This is his latest attempt to change what he calls the colonial structure of Uganda's justice system.\nThe post Uganda Law Society abolishes use of My Lord, My Lady, bans bowing to judges appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/foreign/893778-uganda-law-society-abolishes-use-of-my-lord-my-lady-bans-bowing-to-judges.html",
+          "published": "Wed, 08 Jul 2026 13:30:16 +0000"
+        },
+        {
+          "title": "Senate rejects motion to probe ₦1.3 billion vote for so-called PFIPC in 2026 budget",
+          "summary": "The lawmakers said that since the presidency has taken up the matter by directing the ICPC to investigate the matter, it will await the commission's report and deal with it appropriately.\nThe post Senate rejects motion to probe ₦1.3 billion vote for so-called PFIPC in 2026 budget appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/893776-senate-rejects-motion-to-probe-%e2%82%a61-3-billion-vote-for-so-called-pfipc-in-2026-budget.html",
+          "published": "Wed, 08 Jul 2026 13:23:25 +0000"
+        },
+        {
+          "title": "House of Reps probes ₦1.3 billion vote to phantom PFIPC",
+          "summary": "The lawmakers also resolved to invite the Minister of Budget and Economic Planning and the Director-General of the Budget Office of the Federation to explain the verification procedures applied before new entities are admitted into the federal budget.\nThe post House of Reps probes ₦1.3 billion vote to phantom PFIPC appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/893772-house-of-reps-probes-%e2%82%a61-3-billion-vote-to-phantom-pfipc.html",
+          "published": "Wed, 08 Jul 2026 13:08:39 +0000"
+        },
+        {
+          "title": "2026 FIFA World Cup: How goalkeepers have become defining heroes",
+          "summary": "From world-renowned stars proving why they remain among the game's elite to relatively unknown names becoming overnight sensations, goalkeepers have repeatedly stood between triumph and heartbreak, often deciding matches with a single save\nThe post 2026 FIFA World Cup: How goalkeepers have become defining heroes appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/893764-2026-fifa-world-cup-how-goalkeepers-have-become-defining-heroes.html",
+          "published": "Wed, 08 Jul 2026 12:40:40 +0000"
+        },
+        {
+          "title": "House of Reps swears in new member from Kano after by-election victory",
+          "summary": "Shuaibu Rabiu won a recent by-election on the platform of the APC to represent the Dawakin Kudu/Warawa Federal Constituency of Kano State.\nThe post House of Reps swears in new member from Kano after by-election victory appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/893760-house-of-reps-swears-in-new-member-from-kano-after-by-election-victory.html",
+          "published": "Wed, 08 Jul 2026 12:06:09 +0000"
+        },
+        {
+          "title": "The fever in Geneva: The world’s biggest AI battle isn’t happening in Silicon Valley, By Chaste Inegbedion",
+          "summary": "The real breakthrough this week may not be another frontier model&#8230; It may be something even more valuable: A shared commitment that artificial intelligence should become not only humanity&#8217;s greatest invention — but one of its greatest acts of international cooperation. Nearly every government on Earth has arrived in Geneva to answer one question that [&#8230;]\nThe post The fever in Gen",
+          "link": "https://www.premiumtimesng.com/opinion/893753-the-fever-in-geneva-the-worlds-biggest-ai-battle-isnt-happening-in-silicon-valley-by-chaste-inegbedion.html",
+          "published": "Wed, 08 Jul 2026 11:45:38 +0000"
+        },
+        {
+          "title": "Police arrest murder suspect in Oyo-Osun communal clash two years after victim went missing",
+          "summary": "Police said investigations are ongoing to apprehend the three remaining suspects allegedly involved in the killing and determine the full circumstances surrounding the incident.\nThe post Police arrest murder suspect in Oyo-Osun communal clash two years after victim went missing appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/893757-police-arrest-murder-suspect-in-oyo-osun-communal-clash-two-years-after-victim-went-missing.html",
+          "published": "Wed, 08 Jul 2026 11:42:46 +0000"
+        },
+        {
+          "title": "Gunmen kidnap federal university students – Police",
+          "summary": "The Police Public Relations Officer (PPRO) in the state, Ramhan Nansel, confirmed the development in a statement on Wednesday in Lafia\nThe post Gunmen kidnap federal university students &#8211; Police appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/north-central/893751-gunmen-kidnap-federal-university-students-police.html",
+          "published": "Wed, 08 Jul 2026 11:12:54 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Layoffs abroad, opportunities back at home? What African tech talent should do next",
+          "summary": "In light of recent, incessant layoffs, it's important to ask what these new trends mean for African talent in the diaspora and for those building skills locally to serve a market that appears saturated.",
+          "link": "https://techpoint.africa/insight/layoffs-and-african-tech-talent/",
+          "published": "Wed, 08 Jul 2026 09:33:37 +0000"
+        },
+        {
+          "title": "From AbokiFX to HyperFX: Instant FX Settlement, Built on Stablecoin Rails",
+          "summary": "Polytope Labs today launched HyperFX, a fully onchain FX engine...",
+          "link": "https://techpoint.africa/brandpress/from-abokifx-to-hyperfx-instant-fx-settlement-built-on-stablecoin-rails/",
+          "published": "Wed, 08 Jul 2026 08:54:14 +0000"
+        },
+        {
+          "title": "Starlink freezes new sign-ups in seven Kenyan counties",
+          "summary": "On Techpoint Digest, we discuss how Starlink has frozen new sign-ups in seven Kenyan counties, how Andrea Aid wants to improve medical crowdfunding, and how South Africans claim Facebook is restricting accounts without warning.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1383/",
+          "published": "Wed, 08 Jul 2026 07:00:00 +0000"
+        },
+        {
+          "title": "ForgeLayer shifts to pay-as-you-go model for its crypto payment infrastructure",
+          "summary": "ForgeLayer is replacing upfront subscription fees with a pay-as-you-go pricing model after customers expressed concerns about committing to fixed monthly costs before seeing results.",
+          "link": "https://techpoint.africa/insight/forgelayer-pay-as-you-go-model/",
+          "published": "Wed, 08 Jul 2026 03:00:00 +0000"
+        },
+        {
+          "title": "Mobile Money, Fintech Gaps and a $3.2 Billion Opportunity Inside Africa’s Displacement Zones",
+          "summary": "Africa's displacement zones may be the continent's least contested fintech...",
+          "link": "https://techpoint.africa/brandpress/mobile-money-fintech-gaps-and-a-3-2-billion-opportunity-inside-africas-displacement-zones/",
+          "published": "Tue, 07 Jul 2026 09:52:43 +0000"
+        },
+        {
+          "title": "6 Reasons OPay’s New Security Features Give Nigerians Greater Peace of Mind",
+          "summary": "As digital payments become part of everyday life, keeping money...",
+          "link": "https://techpoint.africa/brandpress/6-reasons-opays-new-security-features-give-nigerians-greater-peace-of-mind/",
+          "published": "Tue, 07 Jul 2026 09:21:19 +0000"
+        },
+        {
+          "title": "Nigerian Merchants Can Now Get Customers Online for ₦500/Month — Shopsonline Launches to Solve the Biggest Gap in Digital Commerce",
+          "summary": "Most platforms give you a store. Shopsonline gives you the...",
+          "link": "https://techpoint.africa/brandpress/nigerian-merchants-can-now-get-customers-online-for-500-month/",
+          "published": "Tue, 07 Jul 2026 08:28:56 +0000"
+        },
+        {
+          "title": "Nigeria opens probe into Meta, X, and AI firms",
+          "summary": "On Techpoint Digest, we discuss Nigeria opening a probe into Meta, X, and AI firms, Zeepay's response to $11.6 million refund reports, Kenya's creation of new licences for Uber, Bolt, and Glovo, and Angola's decision to take Unitel public following a state takeover.",
+          "link": "https://techpoint.africa/insight/techpoint-digest-1382/",
+          "published": "Tue, 07 Jul 2026 07:00:00 +0000"
+        },
+        {
+          "title": "How Andrea Aid is building a crowdfunding platform for healthcare in Southern Nigeria",
+          "summary": "Andrea Aid, a Port Harcourt-based startup is building a medical crowdfunding platform that helps patients raise money for treatment by connecting them with donors.",
+          "link": "https://techpoint.africa/feature/andrea-aid-medical-crowdfunding-platform/",
+          "published": "Tue, 07 Jul 2026 03:00:00 +0000"
+        },
+        {
+          "title": "7% and Not Much More: Inside PairRide’s Bet on the Lowest Commission in Nigerian E-Hailing",
+          "summary": "PairRide launches in Nigeria with 7% driver commission vs 20%+....",
+          "link": "https://techpoint.africa/brandpress/7-and-not-much-more-inside-pairrides-bet-on-the-lowest-commission-in-nigerian-e-hailing/",
+          "published": "Mon, 06 Jul 2026 14:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": 200,
+    "snippet": "Startups in Africa | StartupList AfricaLive MarketSkip to contentLive MarketStartups in AfricaThe complete index of African technology companies.$18.5B total funding raised.3,117 Companies🦄 3 UnicornsEcosystem BriefLive DataStartup market signals in one viewTrack the latest movement across Financial Services and adjacent sectors, then drill into profiles and deal activity with current ecosystem context.Explore StartupsOpen Market Pulse Total Funding$18.5B Startups Tracked3,117 New This Week—Startup SnapshotFull Report Total Funding$18.5B5%vs last QStartups Tracked3,117Added this week: —Unicorns: 3Funding Activity1245%vs last QTop SectorsFinancial Services—Consumer Goods—Energy—FiltersIndustry11Financial Services6Consumer Goods3Energy3Banking1FinTech1Show 6 moreStage15Debt Financing3Series D2Series E2Venture2Corporate1Show 10 moreLocation7🇳🇬Nigeria6🇿🇦South Africa6🇰🇪Kenya3🇪🇬Egypt2🇷🇼Rwanda1Show 2 morePro FeatureUnlock All FiltersDeal Size & RevenueInvestor TypeAll IndustriesAll CountriesUpgrade to ProFiltersSort by:momentumCompanySectorStageValuationRaisedEmployeesMomentumAspen PharmacareDurban, South AfricaMedical DevicePost-IPO Debt$***,***Pro$***,***Pro5001ZiplineKigali, RwandaLogisticsSeries H$***,***Pro$***,***Pro201TabbyCairo, EgyptFinancial ServicesSeries E$***,***Pro$***,***Pro51Sun KingNairobi, KenyaEnergyVenture$***,***Pro$***,***Pro1001ZepzMogadishu, SomaliaFinancial ServicesSeries F$***,***Pro$***,***Pro1001MNT-HalanGiza, EgyptFinancial ServicesDebt Financing$***,***Pro$***,***Pro10001d.lightNairobi, KenyaEnergyFunding Round$***,***Pro$***,***Pro201JumiaLagos, NigeriaConsumer GoodsCorporate$***,***Pro$***,***Pro1001Steinhoff InternationalGauteng, South AfricaConsumer GoodsPost-IPO Equity$***,***Pro$***,***Pro10001Sign in to view moreJoin the largest community of African tech investors and founders.Create Free AccountAlready have an account? Log inShowing 1-20 of 3,117 startupsPrev123…156NextPage 2 onward stays locked until the account tier supports deeper access.How to use this startup directoryUse this page when you need a clean view of startup activity by country, sector, and stage, then move into profile-level research once you have a tight set of targets.01Filter by industry, stage, and geography to reduce noise.02Use market aggregates for quick directional context.03Pair shortlisted startups with the investor directory for outreach planning.Frequently asked questionsHow do I narrow results quickly?Start with industry and country, then add stage and keyword filters to get from broad discovery to a focused shortlist in a few clicks.Can this page support investment or partnership scouting?Yes. Teams use this directory to spot relevant companies first, then open profile-level details for funding context and deeper evaluation.What is the best next step after building a shortlist?Open company profiles for deeper diligence, then cross-reference with investor and sector pages to validate market fit and momentum.",
+    "nigeria_keyword_count": 0,
+    "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback."
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "Notion Agents iOS app",
+        "summary": "Chat with Notion Agents anytime\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/notion-agents-ios-app",
+        "published": "2026-07-07T16:45:03-07:00"
+      },
+      {
+        "title": "New small business tools by IFTTT",
+        "summary": "Run your business with HubSpot, Figma, and more\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/ifttt",
+        "published": "2026-06-24T13:01:08-07:00"
+      },
+      {
+        "title": "Universal-3.5 Pro",
+        "summary": "Native code switching, better diarization, more languages.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/assemblyai",
+        "published": "2026-07-01T13:38:45-07:00"
+      },
+      {
+        "title": "Knowledge Atlas by Fini",
+        "summary": "The self-learning knowledge base that improves itself\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/fini-2",
+        "published": "2026-07-07T06:22:43-07:00"
+      },
+      {
+        "title": "Jamboree",
+        "summary": "Multiplayer synthesizer\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/jamboree",
+        "published": "2026-07-06T06:48:35-07:00"
+      },
+      {
+        "title": "On-Device Field Extraction by Verify",
+        "summary": "Secure on-device extraction even if you're offline\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/veryfi",
+        "published": "2026-07-07T15:16:44-07:00"
+      },
+      {
+        "title": "Eodly",
+        "summary": "Know what your team actually shipped today\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/eodly",
+        "published": "2026-07-02T23:39:56-07:00"
+      },
+      {
+        "title": "NanoKVM-Go",
+        "summary": "Give your AI agent physical control over any screen\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/nanokvm-go",
+        "published": "2026-07-07T22:24:11-07:00"
+      },
+      {
+        "title": "Orus",
+        "summary": "Claude for investing in perpetuals\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/farao",
+        "published": "2026-07-03T07:54:26-07:00"
+      },
+      {
+        "title": "agents-cli",
+        "summary": "The CLI your coding agent uses to ship agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/agents-cli",
+        "published": "2026-07-07T08:49:18-07:00"
+      },
+      {
+        "title": "LemonLime",
+        "summary": "Automates your existing workflows with a single prompt.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/lemonlime",
+        "published": "2026-07-07T18:20:45-07:00"
+      },
+      {
+        "title": "PopTask for Apple",
+        "summary": "Turn to-dos into scheduled tasks\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/poptask",
+        "published": "2026-07-01T14:50:53-07:00"
+      },
+      {
+        "title": "ExploreYC",
+        "summary": "Open-source API for Y Combinator & a16z company data\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/yc-company-explorer",
+        "published": "2026-07-07T01:04:56-07:00"
+      },
+      {
+        "title": "IvyForms",
+        "summary": "A WordPress form builder for real workflows\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/ivyforms",
+        "published": "2026-06-30T10:43:08-07:00"
+      },
+      {
+        "title": "Willow Frontier Pro",
+        "summary": "The fastest, most accurate dictation model in the world\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/willow-voice",
+        "published": "2026-07-07T18:32:13-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "error": "HTTPSConnectionPool(host='ourworldindata.org', port=443): Max retries exceeded with url: /internet (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000001B72B7824D0>: Failed to resolve 'ourworldindata.org' ([Errno 11002] getaddrinfo failed)\"))"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "error": "HTTPSConnectionPool(host='ourworldindata.org', port=443): Max retries exceeded with url: /renewable-energy (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x000001B72C552510>: Failed to resolve 'ourworldindata.org' ([Errno 11002] getaddrinfo failed)\"))"
+    }
+  ],
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}

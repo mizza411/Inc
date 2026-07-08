@@ -9,7 +9,7 @@ Per-strategy scripts stay in `Business-Idea-Formulation-Strategy-*/`. This folde
 ```
 agent-business-idea-runs/
 ├── README.md                 ← this file
-├── agent_strategy_run.py     ← RSS + OWID fetch (Strategy 15 skipped by default)
+├── agent_strategy_run.py     ← RSS + OWID + S6/S7 fetch (Strategy 15 skipped by default)
 ├── inputs/
 │   └── agent_strategy_inputs_YYYYMMDD_HHMMSS.json
 └── outputs/
@@ -35,6 +35,8 @@ Explicit fetch-only (same as default—skips Strategy 15):
 ```powershell
 python agent-business-idea-runs/agent_strategy_run.py --fetch-only
 ```
+
+Fetch JSON includes `strategy_6_startup_directory` (StartupList Africa) and `strategy_7_trending` (Product Hunt RSS) when available; failures are logged and do not block the run. Crunchbase is optional legacy for interactive S6/S7 scripts only.
 
 ## Agent output path
 

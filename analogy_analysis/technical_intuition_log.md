@@ -1,5 +1,63 @@
 # Technical Intuition Log
 
+## 2026-07-08 — Crunchbase deprecation Tier 2 (docs truth)
+
+**What we did**
+- Updated `STRATEGY_META` for S6/S7 in `run_all_strategies.py` (descriptions only).
+- Rewrote API guides, S6/S7 READMEs/playbooks, Drive mapping, and `links.md` ritual so Crunchbase is optional legacy.
+
+**Why it matters**
+Docs and menus now match Tier 1 runtime (StartupList / Product Hunt); no strategy retire or folder renames.
+
+**Intuition analogy**
+Like reprinting the store directory after you moved the dairy aisle—same store layout, corrected signs so shoppers stop walking to the empty shelf.
+
+---
+
+## 2026-07-07 — Crunchbase deprecation Tier 1 (S6/S7 source swap)
+
+**What we did**
+- Extended `agent_strategy_run.py` with `strategy_6_startup_directory` (StartupList) and `strategy_7_trending` (Product Hunt RSS); failures log only.
+- Updated `prompts/agent_formulation_run.txt` so agent runs prefer new sources; Crunchbase optional legacy.
+- Additive S6/S7 scripts: StartupList/Product Hunt primary; Crunchbase paths kept as fallback menus.
+
+**Why it matters**
+Agent formulation runs no longer depend on Crunchbase login/screenshots for Strategies 6 and 7; existing interactive flows still work if users choose legacy.
+
+**Intuition analogy**
+Like switching your recipe app’s default grocery list from a paywalled store to a local market feed, while keeping the old store on the map as a backup aisle.
+
+---
+
+## 2026-07-04 — Pandoc docx table borders
+
+**What we did**
+- Added `business_bookmark_sorter/pandoc_reference.docx` (Pandoc default + Table style grid borders).
+- Wired `--reference-doc` in `_convert_with_pandoc`; post-step `_inject_inline_table_borders` writes explicit `tblBorders` into `word/document.xml`.
+- Regenerated `business_ideas_20260704.docx` with bordered tables.
+
+**Why it matters**
+Business-idea Word exports now show full table grids instead of header-only lines from bare Pandoc defaults.
+
+**Intuition analogy**
+Like giving Word a printed form template with boxes drawn in, not just column labels floating on the page.
+
+---
+
+## 2026-07-04 — docx_export: non-blocking Word open
+
+**What we did**
+- Hardened `business_bookmark_sorter/docx_export.py`: `GetObject` instead of `Dispatch` (skip COM when Word isn’t running), 10s COM close timeout, detached `cmd /c start` for open.
+- Smoke-tested convert + `regenerate_and_open_docx` on a temp copy (~0.4s end-to-end).
+
+**Why it matters**
+Agent formulation runs no longer hang on Word COM startup during docx auto-open; Pandoc convert still runs first unchanged.
+
+**Intuition analogy**
+Like knocking on a door only if the lights are on — don’t boot the whole house just to check whether one file is already open.
+
+---
+
 ## 2026-07-03 — Phase C1: Google Forms CSV import script
 
 **What we did**

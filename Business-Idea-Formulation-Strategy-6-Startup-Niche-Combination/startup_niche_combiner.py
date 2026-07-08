@@ -76,6 +76,9 @@ def open_file_automatically(file_path: str) -> None:
         print(f"Please open manually: {file_path}")
 
 class StartupNicheCombiner:
+    STARTUPLIST_URL = "https://www.startuplist.africa/startups"
+    CRUNCHBASE_NG_URL = "https://www.crunchbase.com/hub/nigeria-startups"
+
     def __init__(self):
         self.common_niches = [
             "FinTech", "EdTech", "HealthTech", "AgriTech", "PropTech",
@@ -123,6 +126,125 @@ class StartupNicheCombiner:
         except Exception as e:
             print(f"  ⚠ Scraping failed: {str(e)}")
         
+        return None
+
+    def fetch_startuplist_via_scraping(self) -> Optional[str]:
+        """Attempt to scrape StartupList Africa startups directory."""
+        if not HAS_SCRAPING:
+            return None
+
+        try:
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            }
+            response = requests.get(self.STARTUPLIST_URL, headers=headers, timeout=20)
+            response.raise_for_status()
+
+            soup = BeautifulSoup(response.content, "html.parser")
+            for element in soup(["script", "style", "nav", "footer", "header", "aside"]):
+                element.decompose()
+
+            text = " ".join(soup.get_text().split())
+            if text:
+                return text[:8000]
+        except Exception as e:
+            print(f"  ⚠ StartupList scrape failed: {str(e)}")
+
+        return None
+
+    def _store_directory_content(self, content: str, source: str) -> str:
+        if len(content) > 8000:
+            content = content[:8000] + "\n\n[Content truncated for optimal ChatGPT processing]"
+        self.crunchbase_content = content
+        self.content_source = source
+        print(f"\n✓ Collected startup directory content ({len(content)} chars, source={source})")
+        return content
+
+    def _collect_crunchbase_fallback(self) -> Optional[str]:
+        """Legacy Crunchbase path when StartupList is unavailable."""
+        print("\n--- Fallback: Crunchbase (legacy) ---")
+        content = None
+        if HAS_SCRAPING:
+            choice = input("\nFetch Crunchbase content automatically via scraping? (y/n, default=n): ").strip().lower()
+            if choice in ("y", "yes"):
+                print("  Attempting to scrape Crunchbase...")
+                content = self.fetch_crunchbase_via_scraping()
+                if content:
+                    print(f"  ✓ Scraped {len(content)} characters")
+                    return self._store_directory_content(content, "crunchbase_scrape")
+
+        print("\nManual Crunchbase collection:")
+        print(f"1. Go to: {self.CRUNCHBASE_NG_URL}")
+        print("2. Browse through Nigerian startups")
+        print("3. Use Ctrl + A to select all content from the page")
+        print("4. Copy and paste here")
+        print("\nPress Enter twice when done.\n")
+        open_in_chrome(self.CRUNCHBASE_NG_URL)
+
+        lines = []
+        print("Paste Crunchbase content (or Enter twice to skip):")
+        while True:
+            line = input()
+            if not line and not lines:
+                break
+            if not line and lines:
+                break
+            lines.append(line)
+
+        if lines:
+            return self._store_directory_content("\n".join(lines), "crunchbase_manual")
+        return None
+
+    def collect_startup_directory_content(self):
+        """Step 1: Collect startup directory content (StartupList primary; Crunchbase fallback)."""
+        print("\n" + "=" * 60)
+        print("STEP 1: Collect Startup Directory Content")
+        print("=" * 60)
+        print("\nPrimary source: StartupList Africa (Nigeria/Africa startups)")
+        print(f"  {self.STARTUPLIST_URL}")
+        print("Legacy fallback: Crunchbase Nigeria hub (optional)\n")
+
+        content = None
+        if HAS_SCRAPING:
+            choice = input(
+                "\nFetch StartupList Africa content automatically? (y/n, default=y): "
+            ).strip().lower()
+            if choice in ("", "y", "yes"):
+                print("  Attempting to scrape StartupList Africa...")
+                content = self.fetch_startuplist_via_scraping()
+                if content:
+                    print(f"  ✓ Scraped {len(content)} characters")
+
+        if not content:
+            print("\nManual StartupList collection:")
+            print(f"1. Go to: {self.STARTUPLIST_URL}")
+            print("2. Filter by Nigeria and relevant sectors")
+            print("3. Copy startup names, sectors, and notes")
+            print("4. Paste below (Enter twice when done)\n")
+            open_in_chrome(self.STARTUPLIST_URL)
+
+            lines = []
+            print("Paste StartupList content:")
+            while True:
+                line = input()
+                if not line and not lines:
+                    break
+                if not line and lines:
+                    break
+                lines.append(line)
+
+            if lines:
+                content = "\n".join(lines)
+
+        if content:
+            return self._store_directory_content(content, "startuplist_africa")
+
+        print("\nNo StartupList content collected.")
+        fallback = input("Try Crunchbase legacy fallback? (y/n, default=n): ").strip().lower()
+        if fallback in ("y", "yes"):
+            return self._collect_crunchbase_fallback()
+
+        print("No content collected.")
         return None
     
     def collect_crunchbase_content(self):
@@ -182,7 +304,7 @@ class StartupNicheCombiner:
         print("STEP 2: Identify Niches")
         print("="*60)
         
-        if not hasattr(self, 'crunchbase_content'):
+        if not hasattr(self, "crunchbase_content"):
             print("No content collected yet.")
             return
         
@@ -190,7 +312,10 @@ class StartupNicheCombiner:
         for i, niche in enumerate(self.common_niches, 1):
             print(f"{i}. {niche}")
         
-        print("\nEnter additional niches found in the Crunchbase content (one per line, Enter twice when done):")
+        print(
+            "\nEnter additional niches found in the startup directory content "
+            "(one per line, Enter twice when done):"
+        )
         additional_niches = []
         while True:
             niche = input("Niche: ").strip()
@@ -276,11 +401,17 @@ class StartupNicheCombiner:
         print("STEP 4: Generate ChatGPT Prompt 1a")
         print("="*60)
         
-        if not hasattr(self, 'crunchbase_content'):
-            print("No Crunchbase content collected yet.")
+        if not hasattr(self, "crunchbase_content"):
+            print("No startup directory content collected yet.")
             return
         
-        prompt = "First, assess Nigerian startups in the content below, then combine the startup niche with other niches (these other niches do not compulsorily have to be present in the image) in order to generate new startup ideas.\n\n"
+        source = getattr(self, "content_source", "startup_directory")
+        prompt = (
+            "First, assess Nigerian startups in the content below (from "
+            f"{source}), then combine the startup niche with other niches "
+            "(these other niches do not compulsorily have to be present in the "
+            "content) in order to generate new startup ideas.\n\n"
+        )
         prompt += f"{self.crunchbase_content}\n\n"
         prompt += "Please generate new startup ideas by combining different niches."
         
@@ -341,8 +472,9 @@ class StartupNicheCombiner:
             'timestamp': datetime.now().isoformat()
         }
         
-        if hasattr(self, 'crunchbase_content'):
-            data['content_length'] = len(self.crunchbase_content)
+        if hasattr(self, "crunchbase_content"):
+            data["content_length"] = len(self.crunchbase_content)
+            data["content_source"] = getattr(self, "content_source", "unknown")
         
         with open(self.output_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
@@ -357,8 +489,8 @@ class StartupNicheCombiner:
         print("Startup Niche Combination")
         print("="*60)
         
-        # Step 1: Collect Crunchbase content
-        self.collect_crunchbase_content()
+        # Step 1: Collect startup directory content (StartupList primary)
+        self.collect_startup_directory_content()
         
         # Step 2: Identify niches
         self.identify_niches()
