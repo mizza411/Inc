@@ -24,13 +24,15 @@ def build_material_block(businesses: List[Dict[str, Any]]) -> str:
         lines.append(f"## Target successful business: {b['name']}")
         if b.get("category"):
             lines.append(f"Category: {b['category']}")
+        if b.get("success_url"):
+            lines.append(f"Success evidence URL: {b['success_url']}")
         lines.append("Complaints (highest score first):")
         for i, c in enumerate(b.get("complaints") or [], 1):
             lines.append(
                 f"  {i}. [{c.get('category')}] {c.get('text')} "
                 f"(freq={c.get('frequency')}, impact={c.get('impact')}, "
                 f"solvability={c.get('solvability')}, score={c.get('score')}, "
-                f"source={c.get('source')})"
+                f"source={c.get('source')}, source_url={c.get('source_url')})"
             )
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
@@ -62,7 +64,8 @@ def build_prompt_1b_scaffold(businesses: List[Dict[str, Any]]) -> str:
             rows.append(
                 f"- Target: {b['name']} | Complaint: {c.get('text')} | "
                 f"Category: {c.get('category')} | Frequency: {c.get('frequency')} | "
-                f"Impact: {c.get('impact')} | Solvability: {c.get('solvability')}"
+                f"Impact: {c.get('impact')} | Solvability: {c.get('solvability')} | "
+                f"source_url: {c.get('source_url')}"
             )
     rows.append("")
     return "\n".join(rows)

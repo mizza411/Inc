@@ -1,21 +1,25 @@
 {
   "strategy": 1,
+  "note": "Fixture for non-interactive smoke — URLs are real public pages (citation shape). Live runs should refresh evidence online.",
   "businesses": [
     {
       "name": "Jumia Food",
       "category": "Food delivery",
+      "success_url": "https://food.jumia.com.ng/",
       "complaints": [
         {
-          "text": "Food arrives cold and late",
-          "source": "fixture",
+          "text": "Customers report cold or delayed food deliveries on Jumia Food",
+          "source": "Google Play reviews (Jumia Food)",
+          "source_url": "https://play.google.com/store/apps/details?id=com.jumia.food&hl=en",
           "category": "performance",
           "frequency": "Daily",
           "impact": "High",
           "solvability": "High"
         },
         {
-          "text": "High delivery fees",
-          "source": "fixture",
+          "text": "High delivery fees relative to order value are a recurring complaint",
+          "source": "Google Play reviews (Jumia Food)",
+          "source_url": "https://play.google.com/store/apps/details?id=com.jumia.food&hl=en",
           "category": "cost",
           "frequency": "Weekly",
           "impact": "Medium",
@@ -24,11 +28,14 @@
       ]
     },
     {
-      "name": "GTBank app",
+      "name": "Bolt",
+      "category": "Ride-sharing",
+      "success_url": "https://bolt.eu/en-ng/",
       "complaints": [
         {
-          "text": "App crashes during transfers",
-          "source": "fixture",
+          "text": "Driver cancellations and unreliable ETAs frustrate riders",
+          "source": "Google Play reviews (Bolt)",
+          "source_url": "https://play.google.com/store/apps/details?id=ee.mtakso.client&hl=en",
           "category": "performance",
           "frequency": "Weekly",
           "impact": "High",

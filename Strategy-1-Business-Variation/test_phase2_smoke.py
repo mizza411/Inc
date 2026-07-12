@@ -65,12 +65,29 @@ def main() -> int:
             sys.executable,
             str(COLLECTOR),
             "--non-interactive",
-            "--seed-ids",
-            "jumia_food,bolt",
+            "--inputs",
+            str(FIXTURE),
         ]
     )
     if r3.returncode != 0:
-        errors.append(f"--seed-ids run failed: {r3.stderr or r3.stdout}")
+        errors.append(f"second --inputs run failed: {r3.stderr or r3.stdout}")
+    else:
+        # Confirm source_url persisted
+        after2 = set(ROOT.glob("business_variation_*.json"))
+        new2 = after2 - before
+        if new2:
+            latest2 = max(new2, key=lambda p: p.stat().st_mtime)
+            data2 = json.loads(latest2.read_text(encoding="utf-8"))
+            c0 = ((data2.get("businesses") or [{}])[0].get("complaints") or [{}])[0]
+            if not str(c0.get("source_url") or "").startswith("http"):
+                errors.append("expected complaint source_url http(s) in output JSON")
+
+    # Retired flags must error clearly
+    r_seed = run(
+        [sys.executable, str(COLLECTOR), "--non-interactive", "--seed-ids", "jumia_food"]
+    )
+    if r_seed.returncode == 0:
+        errors.append("--seed-ids should fail after Phase B retirement")
 
     # Confirm Strategy 1 IS registered in master runner (Phase 3)
     r4 = subprocess.run(

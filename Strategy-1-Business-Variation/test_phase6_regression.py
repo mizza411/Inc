@@ -8,6 +8,7 @@ Does not launch the interactive Hub or run_all_strategies menu.
 
 from __future__ import annotations
 
+import json
 import py_compile
 import subprocess
 import sys
@@ -42,8 +43,14 @@ def main() -> int:
     prompt = (REPO / "prompts" / "agent_formulation_run.txt").read_text(encoding="utf-8")
     if "include strategies 1," not in prompt and "strategies 1, 5" not in prompt:
         errors.append("agent prompt missing Strategy 1 include")
-    if "strategy_1_seeds" not in prompt:
-        errors.append("agent prompt missing strategy_1_seeds")
+    if "Successful Business + Recurring Complaint" not in prompt:
+        errors.append("agent prompt missing Strategy 1 formula")
+    if "strategy_1_discovery" not in prompt:
+        errors.append("agent prompt missing strategy_1_discovery")
+    if "seed_businesses.json" not in prompt:
+        errors.append("agent prompt must mention seed_businesses.json forbid rule")
+    if "URL" not in prompt and "url" not in prompt:
+        errors.append("agent prompt missing S1 URL citation rule")
 
     r_reg = run(
         [
@@ -87,6 +94,7 @@ def main() -> int:
         "test_phase2_smoke.py",
         "test_phase3_runner_smoke.py",
         "test_phase4_agent_smoke.py",
+        "test_phase11_signoff.py",
     ):
         r = run([sys.executable, str(ROOT / smoke)], cwd=ROOT)
         if r.returncode != 0:
@@ -110,7 +118,7 @@ def main() -> int:
         else:
             text = latest.read_text(encoding="utf-8")
             for needle in (
-                "strategy_1_seeds",
+                "strategy_1_discovery",
                 "strategy_5_9_rss",
                 "strategy_6_startup_directory",
                 "strategy_7_trending",
@@ -119,6 +127,11 @@ def main() -> int:
             ):
                 if needle not in text:
                     errors.append(f"fetch JSON missing {needle}")
+            if "strategy_1_seeds" in text and '"strategy_1_seeds"' in text:
+                # Allow mention inside forbidden notes, but not as a top-level key dump of seed data
+                data = json.loads(text)
+                if "strategy_1_seeds" in data:
+                    errors.append("fetch JSON still has top-level strategy_1_seeds")
 
     # Launcher config regression (narrow)
     r_pytest = run(

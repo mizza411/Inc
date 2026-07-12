@@ -101,7 +101,7 @@ pytrends.build_payload(['keyword'], geo='NG', timeframe='today 3-m')
 ## Strategies That DON'T Need APIs
 
 ### Manual Input Only:
-- **Strategy 1**: Business Variation (seed JSON + complaint paste / `--non-interactive`; no paid complaint APIs in v1)
+- **Strategy 1**: Business Variation (URL-cited online intake + agent `strategy_1_discovery`; `seed_businesses.json` archived; no paid complaint APIs)
 - **Strategy 3**: Network-Based (personal contacts)
 - **Strategy 4**: Business Owner Problem Collection (questionnaires)
 - **Strategy 11**: Personal Problem Conversion (personal list)

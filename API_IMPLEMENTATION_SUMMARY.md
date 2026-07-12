@@ -116,7 +116,7 @@ export SIMILARWEB_API_KEY="your_key_here"
 ## Strategies That DON'T Use APIs
 
 These are better as manual processes (or local seeds / paste):
-- **Strategy 1**: Business Variation (local `seed_businesses.json` + complaint intake; agent fetch embeds seeds)
+- **Strategy 1**: Business Variation (URL-cited online intake; `seed_businesses.json` archived; agent must cite web sources)
 - **Strategy 3**: Network-Based (personal contacts)
 - **Strategy 4**: Business Owner Problem Collection (questionnaires)
 - **Strategy 11**: Personal Problem Conversion (personal list)

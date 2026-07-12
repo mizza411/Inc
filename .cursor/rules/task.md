@@ -838,8 +838,16 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **One-liner:** Turn `Strategy-1-Business-Variation/` playbook into a runnable formulation strategy (script + `run_all_strategies.py` + agent infra), keep gadget ops separate, additive/modular so nothing else breaks.  
 **Full phased backlog:** see **§9** under Notes / formulation tasks below (`### 9. Strategy 1 — Business Variation…`).  
 **Manual tests (you):** **None** — see `Strategy-1-Business-Variation/MANUAL_TEST.md` (all former Hub/menu/playbook checks automated).  
-**Next (optional, not blocking v1):** Phase 5.4 research URL helper (`--open-links`); Strategy 2 verbal→technical (separate task only if requested).  
-**Conversation handoff:** Safe to delete this chat — progress lives in `task.md` §9/§10 + Strategy 1 folder + git history.
+**Follow-on:** **§11 CLOSED** (2026-07-12) — always-online S1; `seed_businesses.json` archived.  
+**Also optional (not blocking):** Phase 5.4 research URL helper (`--open-links`); Strategy 2 verbal→technical (separate task only if requested).  
+**Conversation handoff:** Progress lives in `task.md` §9/§10/§11 + Strategy 1 folder + git history.
+
+### 11. Strategy 1 — Always-online discovery; retire `seed_businesses.json` (NEW — Jul 2026)
+**Status:** **CLOSED / complete** (2026-07-12) — Phases **A–D** shipped  
+**One-liner:** Strategy 1 must **always discover successful businesses/startups online** and **always discover gaps/complaints online** (with citeable sources in outputs) — for **both** agent formulation runs and normal CLI/Hub Strategy 1 use. **Do not** use `seed_businesses.json` as the source of businesses or complaints.  
+**Full phased backlog:** see **§11** under Notes / formulation tasks below.  
+**User intent (locked):** Seed file is unnecessary; offline canned `example_complaints` must not appear as problem statements in Docx/md or CLI results.  
+**Sign-off:** `test_phase11_signoff.py` + `test_phase6_regression.py` (automated; no manual Hub pass).
 
 
 ---
@@ -1248,15 +1256,16 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 | Item | Status | Notes |
 |------|--------|-------|
-| **5.4** research URL helper (`--open-links`) | Deferred | Opt-in only; not required for v1 |
+| **§11** Always-online S1 / retire seeds | **CLOSED** | Phases A–D 2026-07-12 |
+| **5.4** research URL helper (`--open-links`) | Deferred | Opt-in only; may merge later if needed |
 | Strategy **2** verbal → technical | Out of scope | Open a **new** task entry if/when requested |
 | Gadget-business automation improvements | Separate | Do not fold into S1 formulation task |
 
-#### Conversation close-out (2026-07-12)
+#### Conversation close-out (2026-07-12) — v1 only
 
-- Authoritative tracker: **this file** (`.cursor/rules/task.md` §9 + Current Priority §10) — **no separate task file needed**.
+- Authoritative tracker: **this file** (`.cursor/rules/task.md` §9 + Current Priority §10/§11) — **no separate task file needed**.
 - Product docs/tests: `Strategy-1-Business-Variation/` (`README.md`, `MANUAL_TEST.md`, smokes).
-- **You may delete the chat** that delivered this work: nothing pending that only exists in conversation memory.
+- **v1 chat** may be deleted; **§11** (always-online) remains open here.
 
 #### Explicitly out of scope (v1)
 - Strategy **2** verbal→technical conversion.
@@ -1266,7 +1275,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - Changing retired Strategies 8/10 policy.
 - Google Drive Macrodroid card renames.
 
-#### Tier / phase approval checkpoints (user)
+#### Tier / phase approval checkpoints (user) — v1
 - [x] Approve **Phase 0** locks (names + Run ALL policy for including `1`) — done 2026-07-11 via “Implement only Phase 0”.
 - [x] Approve **Phase 1** (folder scaffold) — done 2026-07-11 via menu “1 - recommend and approve”.
 - [x] Approve **Phase 2** (CLI intake + non-interactive) — done 2026-07-11 via menu “1”.
@@ -1276,6 +1285,56 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] Approve **Phase 6** (regression & v1 sign-off) — done 2026-07-12 via menu “1 - pls do not break anything”.
 - [x] Automate former MANUAL A–D — done 2026-07-12 (`fe3780a`); `MANUAL_TEST.md` = no user steps.
 
-**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12 — **task closed for this convo.**
+**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12 — **v1 closed.** Follow-on = **§11**.
 
 **Related:** Chat 2026-07-11 (S1 verbal→technical recommendations); Strategy 15 wiring pattern (task §5); Crunchbase/S6–S7 additive safety pattern (task §8); `prompts/agent_formulation_run.txt`; `inc_launcher` Established vs Formulated pillars.
+
+---
+
+### 11. Strategy 1 — Always-online discovery; retire `seed_businesses.json` (NEW — Jul 2026)
+**Status:** **CLOSED / complete** (2026-07-12) — Phases **A–D** shipped  
+**Parent:** §9/§10 Strategy 1 v1 (closed). This task **changed** the v1 seed-first intake model.
+
+**Goal:** For Strategy 1, **always go online** to find (a) successful businesses/startups and (b) recurring gaps/complaints with **real citeable sources** in outputs — for **agent formulation runs** and **regular CLI/Hub Strategy 1 use**. Retire `seed_businesses.json` as a live input (no canned `example_complaints` as problem statements).
+
+**User locks (2026-07-12):**
+- Do **not** prefer / require `seed_businesses.json` for agent or CLI formulation.
+- S1 formula unchanged: *Successful Business + Recurring Complaint = Profitable Variation* (still **not** S6 niche-combo or S7 trending-adapt alone).
+- Every S1-traced idea in `business_ideas_YYYYMMDD.md` / `.docx` must show **online source(s)** for the complaint (and preferably for why the business is “successful”).
+- Same online standard for normal Strategy 1 collector runs — not agent-only.
+
+**Layout:** Stay in `Strategy-1-Business-Variation/` + `prompts/agent_formulation_run.txt` + `agent-business-idea-runs/` as needed. No gadget-ops changes.
+
+#### Proposed phases (approve before coding)
+
+| Phase | Scope | Done when |
+|-------|--------|-----------|
+| **A — Spec & prompt** | Update `prompts/agent_formulation_run.txt`: S1 must web-discover businesses + gaps; cite URL/title/date/quote; **forbid** seed-file complaints as sole problem evidence; update agent README S1 section | Prompt + docs match user locks; still no collector rewrite required if deferred to B |
+| **B — Collector / CLI** | Replace seed-driven intake in `business_variation_collector.py` / `seeds.py` / `complaint_intake.py` with online discovery path (or explicit paste-of-URLs); retire or archive `seed_businesses.json`; Hub/Run ALL must not depend on seeds | CLI + non-interactive path works without seeds; Run ALL does not hang |
+| **C — Agent fetch** | Change `agent_strategy_run.py`: stop shipping `strategy_1_seeds` from local JSON as primary; optional live fetch keys (or document agent-native web research); soft-fail must not abort whole agent run | Fetch JSON + execution summary reflect online/cited S1 |
+| **D — Tests & sign-off** | Update Phase 4/6 smokes that assert `strategy_1_seeds` / seed `example_complaints`; automate-first; `MANUAL_TEST.md` only if truly non-automatable | Regression green; Docx sample shows cited complaints |
+
+#### Safety
+- One phase at a time; no big-bang unless user says so.
+- Do not break other strategies, agent RSS/OWID/S6/S7/S14/S15 paths, or gadget automation.
+- Non-interactive/CI: use **fixture URLs / recorded HTML** if live web is flaky — **not** a return of canned business+complaint seed lists as the product path.
+- Paid scrapers (Brand24 etc.) still optional / out of scope unless later approved.
+
+#### Checkpoints (user)
+- [x] **Approve task entry** — 2026-07-12 (menu “1”).
+- [x] Approve **Phase A** (prompt/docs only) — done 2026-07-12 via “1 - recommend and proceed”.
+- [x] Approve **Phase B** (CLI/collector retire seeds) — done 2026-07-12 via “1 - recommend and proceed”.
+- [x] Approve **Phase C** (agent fetch) — done 2026-07-12 via “1 - recommend and proceed”.
+- [x] Approve **Phase D** (tests/sign-off) — done 2026-07-12 via “1 - recommend and proceed”.
+
+**Phase A shipped (2026-07-12):** Prompt + agent README require always-online S1 + citeable URLs.
+
+**Phase B shipped (2026-07-12):** Seeds archived; CLI URL-cited intake; `--seed-ids` rejected.
+
+**Phase C shipped (2026-07-12):** Removed top-level `strategy_1_seeds`. Added `strategy_1_discovery`.
+
+**Phase D shipped (2026-07-12):** `test_phase11_signoff.py` (no live seeds; URL-cited collector; discovery unit; Docx citation sample via `convert_md_to_docx` without opening Word); wired into `test_phase6_regression.py`; `MANUAL_TEST.md` + API guide updated. **§11 closed.**
+
+**Suggested next:** Re-run agent formulation when desired so Docx S1 rows use live cited sources; stage/commit §11 work.
+
+**Related:** Chat 2026-07-12 (S1 Docx showed seed/AI gaps, not online sources); §9 Phase 1.2 seeds (superseded for live runs); `prompts/agent_formulation_run.txt`.

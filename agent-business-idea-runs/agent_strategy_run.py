@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch RSS/OWID/S1/S6/S7 inputs for agent formulation runs (strategies 1, 5, 6, 7, 9, 14; optional 15)."""
+"""Fetch RSS/OWID/S1 discovery/S6/S7 inputs for agent formulation runs (strategies 1, 5, 6, 7, 9, 14; optional 15)."""
 from __future__ import annotations
 
 import argparse
@@ -10,6 +10,7 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Optional
 
 RUN_DIR = Path(__file__).resolve().parent
 REPO_ROOT = RUN_DIR.parent
@@ -17,7 +18,6 @@ INPUTS_DIR = RUN_DIR / "inputs"
 INPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
 STRATEGY_1_DIR = REPO_ROOT / "Strategy-1-Business-Variation"
-STRATEGY_1_SEEDS = STRATEGY_1_DIR / "seed_businesses.json"
 STRATEGY_1_SCRIPT = STRATEGY_1_DIR / "business_variation_collector.py"
 
 RSS = {
@@ -43,68 +43,122 @@ def strip_html(text: str) -> str:
     return re.sub(r"<[^>]+>", "", text or "").strip()
 
 
-def fetch_strategy1_seeds() -> dict:
+def build_strategy1_discovery(
+    *,
+    rss: Optional[list] = None,
+    startup_directory: Optional[dict] = None,
+    trending: Optional[dict] = None,
+) -> dict:
     """
-    Strategy 1: load local seed_businesses.json (no network).
-    Soft-fail: never raises; agent can still synthesize if status != ok.
+    Strategy 1 fetch block (§11 Phase C): no seed_businesses.json.
+
+    Primary path = agent-native web research with citeable URLs.
+    Optional discovery_leads are soft hints from RSS / Product Hunt / StartupList
+    already fetched in this run — never treat as proven complaints.
+    Soft-fail: never raises; empty leads still return usable guidance.
     """
-    if not STRATEGY_1_SEEDS.exists():
-        return {
-            "status": "missing",
-            "path": str(STRATEGY_1_SEEDS),
-            "error": "seed_businesses.json not found",
-            "note": "Synthesize complaint→variation from Nigeria market leaders; mark status synthesized.",
-        }
+    leads: list[dict] = []
     try:
-        data = json.loads(STRATEGY_1_SEEDS.read_text(encoding="utf-8"))
-        businesses = data.get("businesses") if isinstance(data, dict) else None
-        if not isinstance(businesses, list):
-            return {
-                "status": "error",
-                "path": str(STRATEGY_1_SEEDS),
-                "error": "invalid seeds file (missing businesses list)",
-            }
-        slim = []
-        for b in businesses[:12]:
-            if not isinstance(b, dict):
+        for block in rss or []:
+            if not isinstance(block, dict) or block.get("error"):
                 continue
-            slim.append(
+            source = block.get("source") or "rss"
+            for article in (block.get("articles") or [])[:5]:
+                if not isinstance(article, dict):
+                    continue
+                title = (article.get("title") or "").strip()
+                link = (article.get("link") or "").strip()
+                if not title or not link:
+                    continue
+                leads.append(
+                    {
+                        "kind": "news_headline",
+                        "source": source,
+                        "title": title[:200],
+                        "url": link,
+                        "published": article.get("published") or "",
+                        "use": "optional_lead_only",
+                    }
+                )
+        if isinstance(trending, dict):
+            for product in (trending.get("products") or [])[:8]:
+                if not isinstance(product, dict):
+                    continue
+                title = (product.get("title") or product.get("name") or "").strip()
+                link = (product.get("link") or "").strip()
+                if not title:
+                    continue
+                leads.append(
+                    {
+                        "kind": "trending_product",
+                        "source": trending.get("source") or "product_hunt",
+                        "title": title[:200],
+                        "url": link,
+                        "published": product.get("published") or "",
+                        "use": "optional_lead_only",
+                    }
+                )
+        if isinstance(startup_directory, dict) and startup_directory.get("url"):
+            leads.append(
                 {
-                    "id": b.get("id"),
-                    "name": b.get("name"),
-                    "category": b.get("category"),
-                    "example_complaints": (b.get("example_complaints") or [])[:6],
+                    "kind": "startup_directory",
+                    "source": startup_directory.get("source") or "startuplist_africa",
+                    "title": "StartupList Africa startups index (filter Nigeria + sector)",
+                    "url": startup_directory.get("url"),
+                    "published": "",
+                    "use": "optional_lead_only",
                 }
             )
-        return {
-            "status": "ok",
-            "source": "seed_businesses.json",
-            "path": str(STRATEGY_1_SEEDS),
-            "formula": "Successful Business + Recurring Complaint = Profitable Variation",
-            "business_count": len(slim),
-            "businesses": slim,
-            "note": (
-                "Not Strategy 6 (niche combo) or Strategy 7 (trending adapt). "
-                "Optional subprocess: business_variation_collector.py "
-                "--non-interactive --seed-ids jumia_food,bolt"
-            ),
-        }
     except Exception as ex:
         return {
             "status": "error",
-            "path": str(STRATEGY_1_SEEDS),
+            "primary": "agent_native_web_research",
             "error": str(ex),
-            "note": "Continue agent run; synthesize Strategy 1 ideas and mark status synthesized.",
+            "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+            "discovery_leads": [],
+            "note": "Continue agent run; web-discover S1 businesses + complaints with URLs.",
         }
+
+    # Cap leads; prefer diversity already roughly ordered news → PH → directory
+    slim = leads[:20]
+    status = "ok" if slim else "agent_web_research_only"
+    return {
+        "status": status,
+        "primary": "agent_native_web_research",
+        "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+        "requirements": [
+            "Cite success_url (or equivalent) for the successful business",
+            "Cite complaint source_url (http/https) with title/quote/date when available",
+            "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone",
+        ],
+        "forbidden": [
+            "seed_businesses.json / archived example_complaints",
+            "strategy_1_seeds (removed)",
+            "AI-invented gaps without URLs",
+        ],
+        "discovery_leads_count": len(slim),
+        "discovery_leads": slim,
+        "note": (
+            "discovery_leads are optional starting points from this fetch only. "
+            "Agent must verify online and cite real complaint/success URLs. "
+            "CLI: business_variation_collector.py --non-interactive --inputs "
+            "fixtures/sample_inputs.json"
+        ),
+    }
 
 
 def run_strategy1_noninteractive(
-    seed_ids: str = "jumia_food,bolt",
+    inputs_path: Optional[str] = None,
     timeout_sec: int = 60,
 ) -> dict:
-    """Optional: run Strategy 1 collector non-interactively (default off in fetch)."""
+    """Optional: run Strategy 1 collector non-interactively via URL-cited --inputs."""
     if not STRATEGY_1_SCRIPT.exists():
         return {"status": "script_missing", "path": str(STRATEGY_1_SCRIPT)}
+
+    fixture = STRATEGY_1_DIR / "fixtures" / "sample_inputs.json"
+    inputs = Path(inputs_path) if inputs_path else fixture
+    if not inputs.is_file():
+        return {"status": "no_inputs_file", "path": str(inputs)}
 
     env = os.environ.copy()
     env["PYTHONIOENCODING"] = "utf-8"
@@ -114,8 +168,8 @@ def run_strategy1_noninteractive(
                 sys.executable,
                 str(STRATEGY_1_SCRIPT),
                 "--non-interactive",
-                "--seed-ids",
-                seed_ids,
+                "--inputs",
+                str(inputs),
             ],
             cwd=str(STRATEGY_1_DIR),
             capture_output=True,
@@ -125,7 +179,7 @@ def run_strategy1_noninteractive(
         )
         return {
             "status": "ok" if proc.returncode == 0 else "failed",
-            "seed_ids": seed_ids,
+            "inputs": str(inputs),
             "returncode": proc.returncode,
             "stdout_tail": (proc.stdout or "")[-1500:],
             "stderr_tail": (proc.stderr or "")[-800:],
@@ -329,7 +383,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--fetch-only",
         action="store_true",
-        help="RSS + OWID + S1 seeds + S6/S7; skip Strategy 15 subprocess (recommended).",
+        help="RSS + OWID + S1 status + S6/S7; skip Strategy 15 subprocess (recommended).",
     )
     parser.add_argument(
         "--with-strategy15",
@@ -346,13 +400,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--with-strategy1-run",
         action="store_true",
-        help="Also run Strategy 1 collector --non-interactive --seed-ids (optional).",
+        help="Also run Strategy 1 collector --non-interactive --inputs (optional).",
     )
     parser.add_argument(
-        "--strategy1-seed-ids",
-        default="jumia_food,bolt",
-        metavar="IDS",
-        help="Seed ids for --with-strategy1-run (default: jumia_food,bolt).",
+        "--strategy1-inputs",
+        default=None,
+        metavar="PATH",
+        help="URL-cited inputs JSON for --with-strategy1-run (default: Strategy 1 fixtures/sample_inputs.json).",
     )
     parser.add_argument(
         "--strategy1-timeout",
@@ -368,19 +422,28 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     out_path = INPUTS_DIR / f"agent_strategy_inputs_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
+    rss = fetch_rss()
+    startup_directory = fetch_strategy6_startup_directory()
+    trending = fetch_strategy7_trending()
+    owid = fetch_owid_snippets()
+
     payload: dict = {
         "generated_at": datetime.now().isoformat(),
         "strategies_skipped": [2, 3, 4, 8, 10],
-        "strategy_1_seeds": fetch_strategy1_seeds(),
-        "strategy_5_9_rss": fetch_rss(),
-        "strategy_6_startup_directory": fetch_strategy6_startup_directory(),
-        "strategy_7_trending": fetch_strategy7_trending(),
-        "strategy_14_owid": fetch_owid_snippets(),
+        "strategy_5_9_rss": rss,
+        "strategy_6_startup_directory": startup_directory,
+        "strategy_7_trending": trending,
+        "strategy_14_owid": owid,
+        "strategy_1_discovery": build_strategy1_discovery(
+            rss=rss,
+            startup_directory=startup_directory,
+            trending=trending,
+        ),
     }
 
     if args.with_strategy1_run:
         payload["strategy_1_run"] = run_strategy1_noninteractive(
-            seed_ids=args.strategy1_seed_ids,
+            inputs_path=args.strategy1_inputs,
             timeout_sec=args.strategy1_timeout,
         )
     else:
@@ -398,10 +461,11 @@ def main(argv: list[str] | None = None) -> int:
     out_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote {out_path}")
 
-    s1 = payload.get("strategy_1_seeds") or {}
+    s1 = payload.get("strategy_1_discovery") or {}
     print(
-        f"\n=== strategy_1_seeds ({s1.get('status')}) "
-        f"businesses={s1.get('business_count', 0)} ==="
+        f"\n=== strategy_1_discovery ({s1.get('status')}) "
+        f"leads={s1.get('discovery_leads_count', 0)} "
+        f"primary={s1.get('primary')} ==="
     )
 
     for block in payload["strategy_5_9_rss"]:

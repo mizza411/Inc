@@ -2,9 +2,8 @@
 """
 Business Idea Formulation Strategy 1: Business Variation & Complaint Fixing
 
-Phase 2: seed load, complaint intake, Prompt 1a/1b payloads, JSON persist,
-         --non-interactive / --inputs / --seeds.
-Not wired into run_all_strategies.py until Phase 3.
+URL-cited online discovery intake (task §11 Phase B).
+seed_businesses.json retired — use --inputs or interactive URL paste.
 """
 
 from __future__ import annotations
@@ -16,24 +15,19 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from complaint_intake import (
-    complaints_from_seed_examples,
-    interactive_collect_complaints,
-    interactive_pick_businesses,
-    parse_inputs_payload,
-)
-from seeds import DEFAULT_SEEDS_PATH, find_seed_by_id, find_seed_by_name, load_seeds
+from complaint_intake import interactive_collect_businesses, parse_inputs_payload
 from variation_prompts import build_prompt_1a_payload, build_prompt_1b_scaffold
 
 STRATEGY_DIR = Path(__file__).resolve().parent
+DEFAULT_INPUTS_FIXTURE = STRATEGY_DIR / "fixtures" / "sample_inputs.json"
 
 REQUIRED_FILES = {
     "playbook": STRATEGY_DIR / "strategy-1-business-variation.md",
     "prompt_1a": STRATEGY_DIR / "chatgpt_prompt_1a.txt",
     "prompt_1b": STRATEGY_DIR / "chatgpt_prompt_1b.txt",
     "prompt_1c": STRATEGY_DIR / "chatgpt_prompt_1c.txt",
-    "seeds": STRATEGY_DIR / "seed_businesses.json",
     "readme": STRATEGY_DIR / "README.md",
+    "fixture_inputs": DEFAULT_INPUTS_FIXTURE,
 }
 
 
@@ -46,6 +40,7 @@ def print_intro() -> None:
     print("  Successful Business + Recurring Complaint = Profitable Variation")
     print()
     print("Not Strategy 6 (niche combination) or Strategy 7 (trending adaptation).")
+    print("Intake: online / URL-cited only (seed_businesses.json retired).")
     print()
 
 
@@ -71,68 +66,15 @@ def resolve_path(path_str: str) -> Path:
     return p
 
 
-def businesses_from_seed_ids(
-    seeds: List[Dict[str, Any]], ids: List[str]
-) -> List[Dict[str, Any]]:
-    """Non-interactive helper: seed id -> business with example complaints loaded."""
-    out: List[Dict[str, Any]] = []
-    for raw_id in ids:
-        bid = raw_id.strip()
-        if not bid:
-            continue
-        seed = find_seed_by_id(seeds, bid) or find_seed_by_name(seeds, bid)
-        if not seed:
-            raise ValueError(f"Unknown seed id/name: {bid}")
-        entry = {
-            "id": seed.get("id"),
-            "name": seed["name"],
-            "category": seed.get("category") or "",
-            "complaints": complaints_from_seed_examples(seed),
-        }
-        if not entry["complaints"]:
-            raise ValueError(f"Seed '{bid}' has no example_complaints")
-        out.append(entry)
-    if not out:
-        raise ValueError("No seed ids resolved")
-    return out
+def run_interactive() -> List[Dict[str, Any]]:
+    return interactive_collect_businesses()
 
 
-def run_interactive(seeds_path: Path) -> List[Dict[str, Any]]:
-    seeds = load_seeds(seeds_path)
-    picked = interactive_pick_businesses(seeds)
-    results: List[Dict[str, Any]] = []
-    for biz in picked:
-        complaints = interactive_collect_complaints(biz)
-        results.append(
-            {
-                "id": biz.get("id"),
-                "name": biz["name"],
-                "category": biz.get("category") or "",
-                "complaints": complaints,
-            }
-        )
-    return results
-
-
-def run_non_interactive(
-    *,
-    inputs_path: Optional[Path],
-    seed_ids: Optional[List[str]],
-    seeds_path: Path,
-) -> List[Dict[str, Any]]:
-    if inputs_path:
-        if not inputs_path.exists():
-            raise FileNotFoundError(f"Inputs file not found: {inputs_path}")
-        data = json.loads(inputs_path.read_text(encoding="utf-8"))
-        return parse_inputs_payload(data)
-
-    if seed_ids:
-        seeds = load_seeds(seeds_path)
-        return businesses_from_seed_ids(seeds, seed_ids)
-
-    raise ValueError(
-        "Non-interactive mode requires --inputs <json> and/or --seed-ids a,b,c"
-    )
+def run_non_interactive(*, inputs_path: Path) -> List[Dict[str, Any]]:
+    if not inputs_path.exists():
+        raise FileNotFoundError(f"Inputs file not found: {inputs_path}")
+    data = json.loads(inputs_path.read_text(encoding="utf-8"))
+    return parse_inputs_payload(data)
 
 
 def persist_run(
@@ -150,6 +92,7 @@ def persist_run(
         "mode": mode,
         "generated_at": datetime.now().isoformat(),
         "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+        "intake": "url_cited_online",
         "businesses": businesses,
     }
     json_path.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -160,33 +103,32 @@ def persist_run(
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        description="Strategy 1: Business Variation (complaint -> variation ideas)"
+        description="Strategy 1: Business Variation (URL-cited complaint -> variation)"
     )
     p.add_argument(
         "--non-interactive",
         action="store_true",
-        help="No input() prompts; use --inputs and/or --seed-ids",
+        help="No input() prompts; requires --inputs JSON with success_url + source_url",
     )
     p.add_argument(
         "--inputs",
         metavar="PATH",
-        help="JSON file with businesses[].name + businesses[].complaints[]",
-    )
-    p.add_argument(
-        "--seeds",
-        metavar="PATH",
-        default=str(DEFAULT_SEEDS_PATH),
-        help=f"Path to seed_businesses.json (default: {DEFAULT_SEEDS_PATH.name})",
+        help="JSON: businesses[].success_url + complaints[].source_url (http/https)",
     )
     p.add_argument(
         "--seed-ids",
         metavar="IDS",
-        help="Comma-separated seed ids/names; loads example_complaints (non-interactive)",
+        help=argparse.SUPPRESS,  # retired; show clear error if used
+    )
+    p.add_argument(
+        "--seeds",
+        metavar="PATH",
+        help=argparse.SUPPRESS,
     )
     p.add_argument(
         "--check-only",
         action="store_true",
-        help="Only verify required files exist; exit 0/1 (Phase 1 smoke)",
+        help="Only verify required files exist; exit 0/1",
     )
     return p
 
@@ -203,38 +145,28 @@ def main(argv: Optional[List[str]] = None) -> int:
         print("Check-only OK.")
         return 0
 
-    seeds_path = resolve_path(args.seeds)
+    if args.seed_ids or args.seeds:
+        print(
+            "\nError: --seed-ids / --seeds are retired (task §11 Phase B).\n"
+            "Use: --non-interactive --inputs Strategy-1-Business-Variation/fixtures/sample_inputs.json\n"
+            "Or run interactively and paste http(s) URLs for businesses and complaints."
+        )
+        return 1
+
     try:
         if args.non_interactive:
-            print("NON-INTERACTIVE MODE")
-            seed_ids = (
-                [x.strip() for x in args.seed_ids.split(",") if x.strip()]
-                if args.seed_ids
-                else None
-            )
-            inputs_path = resolve_path(args.inputs) if args.inputs else None
-            # Prefer explicit inputs; if both, merge inputs first then append seed-ids
-            businesses: List[Dict[str, Any]] = []
-            if inputs_path:
-                businesses.extend(
-                    run_non_interactive(
-                        inputs_path=inputs_path, seed_ids=None, seeds_path=seeds_path
-                    )
-                )
-            if seed_ids:
-                businesses.extend(
-                    run_non_interactive(
-                        inputs_path=None, seed_ids=seed_ids, seeds_path=seeds_path
-                    )
-                )
-            if not businesses:
+            print("NON-INTERACTIVE MODE (URL-cited inputs)")
+            if not args.inputs:
                 raise ValueError(
-                    "Provide --inputs and/or --seed-ids with --non-interactive"
+                    "Non-interactive mode requires --inputs <json> "
+                    "(each business needs success_url; each complaint needs source_url)"
                 )
+            inputs_path = resolve_path(args.inputs)
+            businesses = run_non_interactive(inputs_path=inputs_path)
             mode = "non-interactive"
         else:
-            print("INTERACTIVE MODE (use --non-interactive for agent/smoke runs)")
-            businesses = run_interactive(seeds_path)
+            print("INTERACTIVE MODE (paste online URLs; use --non-interactive for smokes)")
+            businesses = run_interactive()
             mode = "interactive"
     except (ValueError, FileNotFoundError, json.JSONDecodeError) as exc:
         print(f"\nError: {exc}")

@@ -1,5 +1,80 @@
 ﻿# Technical Intuition Log
 
+## 2026-07-12 — Strategy 1 §11 Phase D (sign-off)
+
+**What we did**
+- Added `test_phase11_signoff.py`: no live seeds, URL-cited collector output, `strategy_1_discovery` unit, Docx citation sample via `convert_md_to_docx` (no Word open).
+- Wired into `test_phase6_regression.py`; updated `MANUAL_TEST.md` + API guide; marked §11 A–D **CLOSED**.
+
+**Why it matters**
+Always-online Strategy 1 is now gated by automated checks, so seed-style regressions get caught before the next agent Docx run.
+
+**Intuition analogy**
+Like a final pre-flight checklist that confirms both the map (discovery) and the stamped tickets (URLs in the printed brief) before takeoff.
+
+---
+
+## 2026-07-12 — Strategy 1 §11 Phase C (strategy_1_discovery fetch)
+
+
+**What we did**
+- Removed top-level `strategy_1_seeds` from `agent_strategy_run.py` fetch JSON.
+- Added `strategy_1_discovery` (`primary=agent_native_web_research` + optional `discovery_leads` from RSS/PH/StartupList); updated prompt, README, Phase 4/6 asserts.
+
+**Why it matters**
+Agent runs no longer receive a fake “seed businesses” blob—the fetch file points at web research (with optional headline leads) so S1 stays evidence-based.
+
+**Intuition analogy**
+Like replacing a printed customer list in the courier bag with a map pin pack: pins suggest where to look, but you still have to visit and photograph the real address.
+
+---
+
+## 2026-07-12 — Strategy 1 §11 Phase B (retire seeds; URL intake)
+
+
+**What we did**
+- Archived `seed_businesses.json` to `_archive/`; collector now requires `success_url` + complaint `source_url`; `--seed-ids` rejected.
+- Updated fixture, smokes, and `agent_strategy_run` (`strategy_1_seeds` status **retired**; `--with-strategy1-run` uses `--inputs`).
+
+**Why it matters**
+Regular Strategy 1 use (CLI/Hub/smokes) can no longer invent complaints from a local tip sheet—every captured complaint must carry a real URL shape, matching the agent prompt rules from Phase A.
+
+**Intuition analogy**
+Like closing the paper phone book at the front desk: staff must look up the live listing and write down the source link before filing a complaint ticket.
+
+---
+
+## 2026-07-12 — Strategy 1 §11 Phase A (always-online prompt)
+
+
+**What we did**
+- Rewrote `prompts/agent_formulation_run.txt` so S1 must web-discover businesses + complaints with citeable URLs; forbids `seed_businesses.json` / `strategy_1_seeds` / canned gaps as problem evidence.
+- Updated `agent-business-idea-runs/README.md` (+ Strategy 1 README agent note); aligned Phase 4/6 prompt asserts; marked Phase A done in `task.md`.
+
+**Why it matters**
+Next agent Docx runs cannot pass off seed-file or invented complaints as Strategy 1 problems—citations are required before CLI/fetch seed retirement (Phases B/C).
+
+**Intuition analogy**
+Like telling reporters they may still have the old tip sheet in the drawer, but every published story must quote a real source with a link—not the tip sheet itself.
+
+---
+
+## 2026-07-12 — Agent multi-strategy formulation run (S1 + S5–7, 9, 11–15)
+
+
+**What we did**
+- Ran `agent-business-idea-runs/agent_strategy_run.py` for RSS/OWID/S1 seeds/S6 StartupList/S7 Product Hunt (no Strategy 15 subprocess).
+- Executed Strategy 1 collector `--non-interactive` (jumia_food, bolt, whatsapp_business); synthesized other strategies after interactive script blockers.
+- Wrote one output: `agent-business-idea-runs/outputs/business_ideas_20260712.md` (+ one-shot Docx convert/open); deduped vs Jul 6/10 and past lists; included GUEMF + Best ideas.
+
+**Why it matters**
+A repeatable agent path can produce a dated, scored Nigeria idea shortlist without the interactive CLI menu—and Strategy 1 now contributes complaint→variation ideas instead of only news/niche adaptations.
+
+**Intuition analogy**
+Like a newsroom that auto-pulls wire feeds into a shared inbox, then an editor writes the front page once: fetch scripts gather raw copy; the agent synthesizes the ranked package; Word export is the single “print run,” not a reprint loop.
+
+---
+
 ## 2026-07-12 — Strategy 1 Phase 6 regression / v1 automated gate
 
 **What we did**
@@ -278,6 +353,7 @@ The strategy scripts are designed for human-in-the-loop CLI sessions; an agent c
 
 **Intuition analogy**
 Like running a Bloomberg terminal scrape plus a focus group in one pass: each â€œstrategyâ€ is a different lens on the same market, and the agent is the analyst who runs all lenses before the investment committee picks three names.
+
 
 
 
