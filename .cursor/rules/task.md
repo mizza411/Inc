@@ -242,7 +242,7 @@
 |--------|---------|------------------------|
 | **My Established business ideas** | Businesses you are running or committed to | `Started-Businesses/`, Strategy 1 **gadget ops** (`Strategy-1-Business-Variation/gadget-business/…`), live ops (e.g. YouTube when active). Folder shortcut to Strategy 1 playbook OK here for ops adjacency. |
 | **My leads** | Contacts, outreach, campaigns | `abuja_lead_generator/` (DB, scraper, email/WhatsApp, reports) |
-| **Formulated ideas** | Idea pipeline outputs & strategy runs | **Strategy 1 formulation CLI** (`business_variation_collector.py` / Hub “Run Strategy 1”), `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/`, `past_business_ideas.md`, `business_research/`; curated shortlist (when approved): **`Prospect-Businesses/`** |
+| **Formulated ideas** | Idea pipeline outputs & strategy runs | **Strategy 1 formulation CLI** (`business_variation_collector.py` / Hub “Run Strategy 1”), `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/`, `past_business_ideas.md`, `business_research/`; curated shortlist: **`Prospect-Businesses/`** (Hub card + sorter route shipped) |
 | **Problem identification** | Discovering & capturing problems (inputs to formulation) | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/`, problem-collection strategies (3, 4, 5, 10, 11, 12, etc.) |
 
 **Strategy 1 split:** Formulation (complaint→variation script + agent/runner) lives under **Formulated ideas**; gadget automation stays under **Established**. Do not treat the Hub folder card as a substitute for “Run Strategy 1”.
@@ -250,7 +250,7 @@
 **Flow:** Problem identification → Formulated ideas → **Prospect businesses** (curated shortlist) → Established businesses; **My leads** supports outreach alongside that pipeline.
 
 #### Prospect-Businesses folder
-**Status:** Phase **0–2 + 3.1 + 3.2 complete** (2026-07-12) — Hub card + bookmark-sorter route shipped; Phase 3 done  
+**Status:** **CLOSED / v1 complete** (2026-07-12) — Phases **0–4** done (incl. Hub **3.1** + sorter **3.2**)  
 **Goal:** Dedicated home for businesses **not started** but with **strong prospects** — separate from `Started-Businesses/` (e.g. software) and from raw formulation dumps (`agent-business-idea-runs/outputs/`).
 
 **Layout:** Folder `Prospect-Businesses/` at repo root (`C:\dev\Inc\Prospect-Businesses/`) — **created**.  
@@ -258,6 +258,23 @@
 **Hub:** Formulated ideas → **Prospect Businesses folder** (`id: prospect_businesses_folder` in `inc_launcher/launcher_config.json`).  
 **Bookmark sorter:** destination id `prospects` → `Prospect-Businesses/` (`business_bookmark_sorter/config/routes.json`).
 
+**Shipped on remote (`origin/main`):**
+| Commit | What |
+|--------|------|
+| `d0f6e10` | `Prospect-Businesses/` folder + README/TEMPLATE + 3 seeded prospects |
+| `4a95968` | Hub Formulated card + `test_formulated_has_prospect_businesses_folder` |
+| `d3db322` | Sorter `prospects` route + `test_prospect_route.py` |
+
+**Manual tests (you):** **None required** for feature sign-off — see `inc_launcher/MANUAL_TEST.md` §H (automated; optional Hub glance only). Sorter covered by `business_bookmark_sorter/tests/test_prospect_route.py`.
+
+**Pending (optional — not blocking close; not chat-only memory):**
+- [ ] Business validation: discovery calls for **ExamFee Planner** + **AgentDispute AI** (dates in each prospect `.md`) — product research, not a code gate
+- [ ] Optional: re-run agent formulation so next `business_ideas_YYYYMMDD` includes post-§11 live-cited Strategy 1 rows (separate from Prospect close)
+- [ ] Graduation of any prospect → `Started-Businesses/` **only when you explicitly approve** (rule locked)
+
+**Same-day related artifact (formulation run, not Prospect phases):** `agent-business-idea-runs/outputs/business_ideas_20260712.md` (+ `.docx`) — may still be untracked locally; commit separately if you want it on remote.
+
+**Conversation handoff:** **Safe to delete this chat.** Tracker = this section + Current Priority **§12**; code/docs = `Prospect-Businesses/`, Hub config, sorter routes; git = commits above. Nothing unique remains only in conversation memory.
 | Signal | Why |
 |--------|-----|
 | Twin of `Started-Businesses/` | Clear “not started yet” vs “running/committed” |
@@ -337,9 +354,9 @@
 - Changing agent formulation prompt, strategy scripts, or `run_all_strategies.py`
 - Making Prospects a 5th Hub pillar (keep under Formulated shortlist unless user later opens a pillar task)
 
-**v1 definition of done:** `Prospect-Businesses/` exists with README + template; ≤10 user-named prospect files; graduation rule documented; no automatic writes to `Started-Businesses/`; no regressions in launcher/sorter/strategy pipelines from Phase 3 (if Phase 3 was skipped, still done after Phase 2).
+**v1 definition of done:** `Prospect-Businesses/` exists with README + template; ≤10 user-named prospect files; graduation rule documented; no automatic writes to `Started-Businesses/`; Hub + sorter wired additively; pytest green for 3.1/3.2. **Met 2026-07-12.**
 
-**Related:** Inc Hub four pillars (this §); Business Bookmark Sorting destinations; agent formulation outputs under `agent-business-idea-runs/outputs/`.
+**Related:** Inc Hub four pillars (this §); Business Bookmark Sorting destinations; agent formulation outputs under `agent-business-idea-runs/outputs/`; Current Priority **§12**.
 
 #### Layout (proposed — approve before creating files)
 **Recommendation:** New folder `inc_launcher/` at repo root (`C:\dev\Inc\inc_launcher\`).
@@ -442,7 +459,7 @@ Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `p
 | Category | Example Inc destinations |
 |----------|---------------------------|
 | **Business started** | `Started-Businesses/`, live ops folders (**user-approved graduation only** from prospects) |
-| **Prospect businesses** | `Prospect-Businesses/` (**proposed 2026-07-12** — curated shortlist; not started yet) |
+| **Prospect businesses** | `Prospect-Businesses/` (**shipped 2026-07-12** — curated shortlist; Hub + sorter) |
 | **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md` |
 | **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
 | **My leads** | `abuja_lead_generator/` |
@@ -736,7 +753,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 | Pillar | Inc destinations |
 |--------|------------------|
 | **Established** | `Started-Businesses/`, live ops folders (**user-approved graduation only** from prospects) |
-| **Prospect businesses** | `Prospect-Businesses/` (**proposed 2026-07-12** — curated shortlist) |
+| **Prospect businesses** | `Prospect-Businesses/` (**shipped 2026-07-12** — curated shortlist) |
 | **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md` |
 | **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
 | **My leads** | `abuja_lead_generator/` |
@@ -855,6 +872,15 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **Manual tests (you):** **None** — see `Strategy-1-Business-Variation/MANUAL_TEST.md`.  
 **Pending (optional, not blocking close):** Next agent formulation run so `business_ideas_YYYYMMDD` S1 rows cite live URLs (earlier same-day run predated §11).  
 **Conversation handoff:** **Safe to delete this chat** — nothing unique remains only in conversation memory.
+
+### 12. Prospect-Businesses shortlist (NEW — Jul 2026)
+**Status:** **CLOSED / v1 complete** (2026-07-12) — Phases **0–4** shipped on `origin/main`  
+**One-liner:** Curated folder for strong **not-started** prospects (twin of `Started-Businesses/`), with Hub Formulated card + bookmark-sorter destination; **you** alone approve any graduation to Started.  
+**Full phased backlog:** nested under **§4 Inc Tray** → **Prospect-Businesses folder** (same file).  
+**Manual tests (you):** **None required** — `inc_launcher/MANUAL_TEST.md` §H (automated); sorter `test_prospect_route.py`.  
+**Shipped:** `d0f6e10` (folder + seeds) · `4a95968` (Hub 3.1) · `d3db322` (sorter 3.2).  
+**Pending (optional, not blocking):** discovery calls on ExamFee / AgentDispute (in prospect `.md` files); graduate only on your explicit OK.  
+**Conversation handoff:** **Safe to delete this chat.** Progress lives in `task.md` §4 Prospect section + this §12 + git — nothing unique remains only in conversation memory.
 
 
 ---
@@ -1350,3 +1376,13 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - **Pending (optional only):** Re-run Hub/agent formulation so the next `business_ideas_YYYYMMDD.md/.docx` S1 ideas cite live URLs (same-day earlier run used pre-§11 seeds). Not required to close §11; not a MANUAL_TEST item.
 
 **Related:** Chat 2026-07-12 (S1 Docx showed seed/AI gaps → always-online); §9 Phase 1.2 seeds (superseded); `prompts/agent_formulation_run.txt`; `agent-business-idea-runs/`.
+
+---
+
+### 12. Prospect-Businesses shortlist — conversation close-out (2026-07-12)
+
+- **CLOSED / v1 complete** — Phases 0–4 (Hub 3.1 + sorter 3.2).
+- **Authoritative tracker:** Current Priority **§12** + §4 nested **Prospect-Businesses folder**.
+- **Git:** `d0f6e10`, `4a95968`, `d3db322` on `origin/main`.
+- **Manual tests (you):** **None required** (`inc_launcher/MANUAL_TEST.md` §H).
+- **Safe to delete the chat that delivered Prospect-Businesses + this formulation run handoff.** Optional pending items (discovery calls; commit `business_ideas_20260712.*` if desired; S1 live-cite re-run) are written in §12 / prospect `.md` files — not chat-only.
