@@ -250,12 +250,13 @@
 **Flow:** Problem identification → Formulated ideas → **Prospect businesses** (curated shortlist) → Established businesses; **My leads** supports outreach alongside that pipeline.
 
 #### Prospect-Businesses folder
-**Status:** Phase **0–2 + 3.1 complete** (2026-07-12) — Hub/tray Formulated card added; **3.2 bookmark-sorter route** still optional / not started  
+**Status:** Phase **0–2 + 3.1 + 3.2 complete** (2026-07-12) — Hub card + bookmark-sorter route shipped; Phase 3 done  
 **Goal:** Dedicated home for businesses **not started** but with **strong prospects** — separate from `Started-Businesses/` (e.g. software) and from raw formulation dumps (`agent-business-idea-runs/outputs/`).
 
 **Layout:** Folder `Prospect-Businesses/` at repo root (`C:\dev\Inc\Prospect-Businesses/`) — **created**.  
 **Active prospects (3):** `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md` (from `business_ideas_20260712.md`).  
-**Hub:** Formulated ideas → **Prospect Businesses folder** (`id: prospect_businesses_folder` in `inc_launcher/launcher_config.json`).
+**Hub:** Formulated ideas → **Prospect Businesses folder** (`id: prospect_businesses_folder` in `inc_launcher/launcher_config.json`).  
+**Bookmark sorter:** destination id `prospects` → `Prospect-Businesses/` (`business_bookmark_sorter/config/routes.json`).
 
 | Signal | Why |
 |--------|-----|
@@ -309,11 +310,11 @@
 - [x] **2.3** Optional research pointers — none (no matching `business_research/` moves; left blank)
 - [x] **2.4** Smoke: count **3** ≤ cap; each file has graduation disclaimer; `Started-Businesses/` unchanged
 
-**Phase 3 — Optional surfaces (additive; separate approval)** — *split: Hub vs sorter (different modules)*
+**Phase 3 — Optional surfaces (additive; separate approval)** — *split: Hub vs sorter (different modules)* ✅
 - [x] **3.1** Hub/tray: Formulated-ideas card open `Prospect-Businesses/` (config append only) — done 2026-07-12; `test_formulated_has_prospect_businesses_folder`
-- [ ] **3.2** Bookmark sorter: optional route destination `Prospect-Businesses/` (append to `routes.json` only) — **not started** (separate sub-phase)
+- [x] **3.2** Bookmark sorter: route destination `prospects` → `Prospect-Businesses/` (append to `routes.json` only) — done 2026-07-12; `test_prospect_route.py`
 - [x] **3.3a** Smoke (Hub side of 3.1): existing Formulated/Established anchors still resolve via pytest — done with 3.1
-- [ ] **3.3b** Smoke (sorter side): after 3.2, existing sorter destinations still resolve
+- [x] **3.3b** Smoke (sorter side): prior destinations + started suggest still resolve — done with 3.2
 
 **Phase 4 — Graduation protocol (docs only unless user asks for tooling)**
 - [x] **4.1** Documented in `Prospect-Businesses/README.md`: graduation checklist (user says “graduate X” → only then create/update under `Started-Businesses/`)
@@ -324,7 +325,8 @@
 
 - [x] Phase 1: create folder + README + template
 - [x] Phase 2: seed only user-named prospects (3 files)
-- [x] Phase 3.1: Hub/tray Formulated card (additive) — **3.2 sorter still open**
+- [x] Phase 3.1: Hub/tray Formulated card (additive)
+- [x] Phase 3.2: bookmark sorter `prospects` route (additive)
 - [x] Phase 4: graduation protocol documented; user remains sole approver
 
 ##### Out of scope (v1)

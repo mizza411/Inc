@@ -8,6 +8,7 @@
   },
   "export_section_order": [
     "started",
+    "prospects",
     "formulated",
     "formulation_strategy",
     "problem_identification",
@@ -23,6 +24,10 @@
     "started": {
       "label": "Business started",
       "folder": "Started-Businesses"
+    },
+    "prospects": {
+      "label": "Prospect businesses",
+      "folder": "Prospect-Businesses"
     },
     "formulated": {
       "label": "Formulated ideas",
@@ -65,6 +70,7 @@
     { "destination": "problem_identification", "keywords": ["problem", "questionnaire", "problem_finder"] },
     { "destination": "automation", "keywords": ["youtube", "content-automation", "netlify"] },
     { "destination": "formulation_strategy", "keywords": ["formulation", "strategy-", "news_problems", "business-idea"] },
+    { "destination": "prospects", "keywords": ["prospect-business", "prospect_businesses", "examfee-planner", "agentdispute", "scimlite"] },
     { "destination": "formulated", "keywords": ["business_ideas", "past_business", "business_research", "crunchbase"] },
     { "destination": "started", "keywords": ["started-business", "software-development", "gadget-business"] }
   ]
