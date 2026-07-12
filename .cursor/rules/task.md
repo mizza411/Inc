@@ -834,10 +834,12 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 ---
 
 ### 10. Strategy 1 — Business Variation (verbal → technical) (NEW — Jul 2026)
-**Status:** Phase **6 complete** (2026-07-12) — v1 regression green; single manual pass via `MANUAL_TEST.md` when you choose  
+**Status:** **CLOSED / v1 complete** (2026-07-12) — Phases 0–6 done; commits `b95aa77` + `fe3780a` on `origin/main`  
 **One-liner:** Turn `Strategy-1-Business-Variation/` playbook into a runnable formulation strategy (script + `run_all_strategies.py` + agent infra), keep gadget ops separate, additive/modular so nothing else breaks.  
 **Full phased backlog:** see **§9** under Notes / formulation tasks below (`### 9. Strategy 1 — Business Variation…`).  
-**Next:** Optional — run `MANUAL_TEST.md` once, then stage/commit/push.
+**Manual tests (you):** **None** — see `Strategy-1-Business-Variation/MANUAL_TEST.md` (all former Hub/menu/playbook checks automated).  
+**Next (optional, not blocking v1):** Phase 5.4 research URL helper (`--open-links`); Strategy 2 verbal→technical (separate task only if requested).  
+**Conversation handoff:** Safe to delete this chat — progress lives in `task.md` §9/§10 + Strategy 1 folder + git history.
 
 
 ---
@@ -1097,7 +1099,8 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 ---
 
 ### 9. Strategy 1 — Business Variation (verbal → technical / runnable) (NEW — Jul 2026)
-**Status:** Phase **6 complete** (2026-07-12) — `test_phase6_regression.py` PASS; v1 automated gate green  
+**Status:** **CLOSED / v1 complete** (2026-07-12) — Phases **0–6** shipped; automated sign-off green; **no user manual tests pending**  
+**Shipped on `main`:** `b95aa77` (runnable S1 end-to-end), `fe3780a` (automate Hub/menu/playbook sign-off)  
 **Goal:** Convert Strategy 1 from a **verbal markdown playbook** into a **functional technical formulation strategy**: CLI script from `strategy-1-business-variation.md` steps, wired into `run_all_strategies.py`, agent formulation infrastructure, and related repo surfaces — **without breaking** existing strategies, agent runs, launcher, or gadget ops.
 
 **User-requested outcomes (must land across phases):**
@@ -1239,7 +1242,21 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] **6.3** Spot-check: prior strategies still in `STRATEGY_SCRIPTS`; agent fetch still writes `agent_strategy_inputs_*.json` with S1 + prior keys; launcher `test_config` green.
 - [x] **6.4** Former Hub/menu/playbook manual steps moved to **`test_signoff_automated.py`** (wired into `test_phase6_regression.py`). `MANUAL_TEST.md` now records **no remaining manual steps** for v1.
 
-**v1 definition of done:** ✅ Strategy 1 is a technical strategy end-to-end (script + runner + agent path + docs); gadget ops untouched; automated regression PASS 2026-07-12. Manual Hub/menu pass optional via `MANUAL_TEST.md`.
+**v1 definition of done:** ✅ Strategy 1 is a technical strategy end-to-end (script + runner + agent path + docs); gadget ops untouched; automated regression + sign-off PASS 2026-07-12 (`test_phase6_regression.py`, `test_signoff_automated.py`). **No human MANUAL_TEST steps for v1.**
+
+#### Pending after v1 (optional — new work needs approval; not blockers)
+
+| Item | Status | Notes |
+|------|--------|-------|
+| **5.4** research URL helper (`--open-links`) | Deferred | Opt-in only; not required for v1 |
+| Strategy **2** verbal → technical | Out of scope | Open a **new** task entry if/when requested |
+| Gadget-business automation improvements | Separate | Do not fold into S1 formulation task |
+
+#### Conversation close-out (2026-07-12)
+
+- Authoritative tracker: **this file** (`.cursor/rules/task.md` §9 + Current Priority §10) — **no separate task file needed**.
+- Product docs/tests: `Strategy-1-Business-Variation/` (`README.md`, `MANUAL_TEST.md`, smokes).
+- **You may delete the chat** that delivered this work: nothing pending that only exists in conversation memory.
 
 #### Explicitly out of scope (v1)
 - Strategy **2** verbal→technical conversion.
@@ -1257,7 +1274,8 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] Approve **Phase 4** (agent prompt + fetch) — done 2026-07-12 via menu “1”.
 - [x] Approve **Phase 5** (launcher/docs) — done 2026-07-12 via menu “1”.
 - [x] Approve **Phase 6** (regression & v1 sign-off) — done 2026-07-12 via menu “1 - pls do not break anything”.
+- [x] Automate former MANUAL A–D — done 2026-07-12 (`fe3780a`); `MANUAL_TEST.md` = no user steps.
 
-**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12.
+**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12 — **task closed for this convo.**
 
 **Related:** Chat 2026-07-11 (S1 verbal→technical recommendations); Strategy 15 wiring pattern (task §5); Crunchbase/S6–S7 additive safety pattern (task §8); `prompts/agent_formulation_run.txt`; `inc_launcher` Established vs Formulated pillars.

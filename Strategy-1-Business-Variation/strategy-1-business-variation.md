@@ -1,6 +1,6 @@
 # 🎯 Strategy 1: Business Variation & Complaint Fixing
 
-> **Technical status (2026-07-12):** Phase **6 / v1 automated complete** — entrypoint `business_variation_collector.py`; `test_phase6_regression.py` + `test_signoff_automated.py` PASS. No manual Hub pass required for v1. See `README.md`.
+> **Technical status (2026-07-12):** **v1 CLOSED** — entrypoint `business_variation_collector.py`; Phases 0–6 done; `test_phase6_regression.py` + `test_signoff_automated.py` PASS. **No manual Hub pass required.** See `README.md` / `MANUAL_TEST.md`. Tracker: `.cursor/rules/task.md` §9/§10.
 
 ## **Current Attempt: 1st**
 
