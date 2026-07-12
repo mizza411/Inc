@@ -57,6 +57,23 @@ def test_formulated_has_agent_formulation_run():
     assert s1.get("cwd") == "Strategy-1-Business-Variation"
 
 
+def test_formulated_has_prospect_businesses_folder():
+    """Phase 3.1 — additive Formulated card; path must resolve; no pillar renumber."""
+    config = load_config()
+    formulated = next(p for p in list_pillars(config) if p["id"] == "formulated")
+    by_id = {item.get("id"): item for item in formulated.get("items", []) if item.get("id")}
+    assert "prospect_businesses_folder" in by_id
+    card = by_id["prospect_businesses_folder"]
+    assert card["action"] == "folder"
+    assert card["path"] == "Prospect-Businesses"
+    assert resolve_path(card["path"]).is_dir()
+    # Existing Formulated anchors still present after append
+    assert "agent_formulation_run" in by_id
+    assert "bookmark_review" in by_id
+    established = next(p for p in list_pillars(config) if p["id"] == "established")
+    assert any("Started Businesses folder" in i["label"] for i in established["items"])
+
+
 def test_strategy1_hub_and_established_paths_resolve():
     """Former MANUAL_TEST A/B — config targets exist on disk."""
     config = load_config()

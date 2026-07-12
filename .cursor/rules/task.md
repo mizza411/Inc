@@ -250,11 +250,12 @@
 **Flow:** Problem identification → Formulated ideas → **Prospect businesses** (curated shortlist) → Established businesses; **My leads** supports outreach alongside that pipeline.
 
 #### Prospect-Businesses folder
-**Status:** Phase **0–2 complete** (2026-07-12) — Layout + scaffold + 3 user-named seeds; **Phase 3 optional (Hub/sorter)** awaits separate approval  
+**Status:** Phase **0–2 + 3.1 complete** (2026-07-12) — Hub/tray Formulated card added; **3.2 bookmark-sorter route** still optional / not started  
 **Goal:** Dedicated home for businesses **not started** but with **strong prospects** — separate from `Started-Businesses/` (e.g. software) and from raw formulation dumps (`agent-business-idea-runs/outputs/`).
 
 **Layout:** Folder `Prospect-Businesses/` at repo root (`C:\dev\Inc\Prospect-Businesses/`) — **created**.  
-**Active prospects (3):** `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md` (from `business_ideas_20260712.md`).
+**Active prospects (3):** `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md` (from `business_ideas_20260712.md`).  
+**Hub:** Formulated ideas → **Prospect Businesses folder** (`id: prospect_businesses_folder` in `inc_launcher/launcher_config.json`).
 
 | Signal | Why |
 |--------|-----|
@@ -308,10 +309,11 @@
 - [x] **2.3** Optional research pointers — none (no matching `business_research/` moves; left blank)
 - [x] **2.4** Smoke: count **3** ≤ cap; each file has graduation disclaimer; `Started-Businesses/` unchanged
 
-**Phase 3 — Optional surfaces (additive; separate approval)**
-- [ ] **3.1** Hub/tray: optional Formulated-ideas card/path open `Prospect-Businesses/` (config append only)
-- [ ] **3.2** Bookmark sorter: optional route destination `Prospect-Businesses/` (append to `routes.json` only)
-- [ ] **3.3** Smoke: existing Hub cards and sorter destinations still resolve; no regression on Established / Formulated cards
+**Phase 3 — Optional surfaces (additive; separate approval)** — *split: Hub vs sorter (different modules)*
+- [x] **3.1** Hub/tray: Formulated-ideas card open `Prospect-Businesses/` (config append only) — done 2026-07-12; `test_formulated_has_prospect_businesses_folder`
+- [ ] **3.2** Bookmark sorter: optional route destination `Prospect-Businesses/` (append to `routes.json` only) — **not started** (separate sub-phase)
+- [x] **3.3a** Smoke (Hub side of 3.1): existing Formulated/Established anchors still resolve via pytest — done with 3.1
+- [ ] **3.3b** Smoke (sorter side): after 3.2, existing sorter destinations still resolve
 
 **Phase 4 — Graduation protocol (docs only unless user asks for tooling)**
 - [x] **4.1** Documented in `Prospect-Businesses/README.md`: graduation checklist (user says “graduate X” → only then create/update under `Started-Businesses/`)
@@ -322,7 +324,7 @@
 
 - [x] Phase 1: create folder + README + template
 - [x] Phase 2: seed only user-named prospects (3 files)
-- [ ] Phase 3: optional Hub/sorter wiring (additive)
+- [x] Phase 3.1: Hub/tray Formulated card (additive) — **3.2 sorter still open**
 - [x] Phase 4: graduation protocol documented; user remains sole approver
 
 ##### Out of scope (v1)
@@ -837,17 +839,20 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **Status:** **CLOSED / v1 complete** (2026-07-12) — Phases 0–6 done; commits `b95aa77` + `fe3780a` on `origin/main`  
 **One-liner:** Turn `Strategy-1-Business-Variation/` playbook into a runnable formulation strategy (script + `run_all_strategies.py` + agent infra), keep gadget ops separate, additive/modular so nothing else breaks.  
 **Full phased backlog:** see **§9** under Notes / formulation tasks below (`### 9. Strategy 1 — Business Variation…`).  
-**Manual tests (you):** **None** — see `Strategy-1-Business-Variation/MANUAL_TEST.md` (all former Hub/menu/playbook checks automated).  
-**Follow-on:** **§11 CLOSED** (2026-07-12) — always-online S1; `seed_businesses.json` archived.  
-**Also optional (not blocking):** Phase 5.4 research URL helper (`--open-links`); Strategy 2 verbal→technical (separate task only if requested).  
-**Conversation handoff:** Progress lives in `task.md` §9/§10/§11 + Strategy 1 folder + git history.
+**Manual tests (you):** **None** — see `Strategy-1-Business-Variation/MANUAL_TEST.md`.  
+**Follow-on:** **§11 CLOSED** (2026-07-12) — always-online S1; commit/push `e383983` on `origin/main`.  
+**Also optional (not blocking):** Phase 5.4 research URL helper (`--open-links`); Strategy 2 verbal→technical (separate task only if requested); re-run agent formulation so next Docx uses live-cited S1 (not a manual-test gate).  
+**Conversation handoff:** **Safe to delete this chat.** Progress lives in `task.md` §9/§10/§11 + Strategy 1 folder + git (`e383983`).
 
 ### 11. Strategy 1 — Always-online discovery; retire `seed_businesses.json` (NEW — Jul 2026)
-**Status:** **CLOSED / complete** (2026-07-12) — Phases **A–D** shipped  
+**Status:** **CLOSED / complete** (2026-07-12) — Phases **A–D** shipped; on `origin/main` as **`e383983`**  
 **One-liner:** Strategy 1 must **always discover successful businesses/startups online** and **always discover gaps/complaints online** (with citeable sources in outputs) — for **both** agent formulation runs and normal CLI/Hub Strategy 1 use. **Do not** use `seed_businesses.json` as the source of businesses or complaints.  
 **Full phased backlog:** see **§11** under Notes / formulation tasks below.  
 **User intent (locked):** Seed file is unnecessary; offline canned `example_complaints` must not appear as problem statements in Docx/md or CLI results.  
-**Sign-off:** `test_phase11_signoff.py` + `test_phase6_regression.py` (automated; no manual Hub pass).
+**Sign-off:** `test_phase11_signoff.py` + `test_phase6_regression.py` (automated; **no manual Hub/browser pass**).  
+**Manual tests (you):** **None** — see `Strategy-1-Business-Variation/MANUAL_TEST.md`.  
+**Pending (optional, not blocking close):** Next agent formulation run so `business_ideas_YYYYMMDD` S1 rows cite live URLs (earlier same-day run predated §11).  
+**Conversation handoff:** **Safe to delete this chat** — nothing unique remains only in conversation memory.
 
 
 ---
@@ -1261,11 +1266,12 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 | Strategy **2** verbal → technical | Out of scope | Open a **new** task entry if/when requested |
 | Gadget-business automation improvements | Separate | Do not fold into S1 formulation task |
 
-#### Conversation close-out (2026-07-12) — v1 only
+#### Conversation close-out (2026-07-12) — v1 + §11
 
 - Authoritative tracker: **this file** (`.cursor/rules/task.md` §9 + Current Priority §10/§11) — **no separate task file needed**.
-- Product docs/tests: `Strategy-1-Business-Variation/` (`README.md`, `MANUAL_TEST.md`, smokes).
-- **v1 chat** may be deleted; **§11** (always-online) remains open here.
+- Product docs/tests: `Strategy-1-Business-Variation/` (`README.md`, `MANUAL_TEST.md`, smokes including `test_phase11_signoff.py`).
+- **§11 shipped on `origin/main`:** `e383983` (retire seeds; URL-cited intake; `strategy_1_discovery`).
+- **You may delete chats** that delivered Strategy 1 v1 and §11 always-online work: nothing pending that only exists in conversation memory. Optional next formulation run is not a delete-blocker.
 
 #### Explicitly out of scope (v1)
 - Strategy **2** verbal→technical conversion.
@@ -1285,7 +1291,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] Approve **Phase 6** (regression & v1 sign-off) — done 2026-07-12 via menu “1 - pls do not break anything”.
 - [x] Automate former MANUAL A–D — done 2026-07-12 (`fe3780a`); `MANUAL_TEST.md` = no user steps.
 
-**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12 — **v1 closed.** Follow-on = **§11**.
+**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12 — **v1 closed.** §11 A–D ✅ 2026-07-12 — **always-online closed** (`e383983`).
 
 **Related:** Chat 2026-07-11 (S1 verbal→technical recommendations); Strategy 15 wiring pattern (task §5); Crunchbase/S6–S7 additive safety pattern (task §8); `prompts/agent_formulation_run.txt`; `inc_launcher` Established vs Formulated pillars.
 
@@ -1335,6 +1341,10 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 **Phase D shipped (2026-07-12):** `test_phase11_signoff.py` (no live seeds; URL-cited collector; discovery unit; Docx citation sample via `convert_md_to_docx` without opening Word); wired into `test_phase6_regression.py`; `MANUAL_TEST.md` + API guide updated. **§11 closed.**
 
-**Suggested next:** Re-run agent formulation when desired so Docx S1 rows use live cited sources; stage/commit §11 work.
+**Shipped on remote:** `e383983` on `origin/main` (2026-07-12).
 
-**Related:** Chat 2026-07-12 (S1 Docx showed seed/AI gaps, not online sources); §9 Phase 1.2 seeds (superseded for live runs); `prompts/agent_formulation_run.txt`.
+#### Conversation close-out (2026-07-12) — §11
+- **Safe to delete this chat.** Tracker = this file §11 + Current Priority §11; tests = `Strategy-1-Business-Variation/MANUAL_TEST.md` (no user steps).
+- **Pending (optional only):** Re-run Hub/agent formulation so the next `business_ideas_YYYYMMDD.md/.docx` S1 ideas cite live URLs (same-day earlier run used pre-§11 seeds). Not required to close §11; not a MANUAL_TEST item.
+
+**Related:** Chat 2026-07-12 (S1 Docx showed seed/AI gaps → always-online); §9 Phase 1.2 seeds (superseded); `prompts/agent_formulation_run.txt`; `agent-business-idea-runs/`.

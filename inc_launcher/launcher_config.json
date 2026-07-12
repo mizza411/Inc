@@ -92,6 +92,12 @@
           "path": "agent-business-idea-runs/outputs"
         },
         {
+          "id": "prospect_businesses_folder",
+          "label": "Prospect Businesses folder",
+          "action": "folder",
+          "path": "Prospect-Businesses"
+        },
+        {
           "label": "Latest business ideas (Jul 2026)",
           "action": "file",
           "path": "agent-business-idea-runs/outputs/business_ideas_20260706.md"
