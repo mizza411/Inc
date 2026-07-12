@@ -240,10 +240,12 @@
 
 | Pillar | Purpose | Initial `Inc` mapping |
 |--------|---------|------------------------|
-| **My Established business ideas** | Businesses you are running or committed to | `Started-Businesses/`, `Strategy-1-Business-Variation/`, live ops (e.g. YouTube publish workflow when channel is active) |
+| **My Established business ideas** | Businesses you are running or committed to | `Started-Businesses/`, Strategy 1 **gadget ops** (`Strategy-1-Business-Variation/gadget-business/…`), live ops (e.g. YouTube when active). Folder shortcut to Strategy 1 playbook OK here for ops adjacency. |
 | **My leads** | Contacts, outreach, campaigns | `abuja_lead_generator/` (DB, scraper, email/WhatsApp, reports) |
-| **Formulated ideas** | Idea pipeline outputs & strategy runs | `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md`, `business_research/` |
+| **Formulated ideas** | Idea pipeline outputs & strategy runs | **Strategy 1 formulation CLI** (`business_variation_collector.py` / Hub “Run Strategy 1”), `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/`, `past_business_ideas.md`, `business_research/` |
 | **Problem identification** | Discovering & capturing problems (inputs to formulation) | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/`, problem-collection strategies (3, 4, 5, 10, 11, 12, etc.) |
+
+**Strategy 1 split:** Formulation (complaint→variation script + agent/runner) lives under **Formulated ideas**; gadget automation stays under **Established**. Do not treat the Hub folder card as a substitute for “Run Strategy 1”.
 
 **Flow:** Problem identification → Formulated ideas → Established businesses; **My leads** supports outreach alongside that pipeline.
 
@@ -741,6 +743,15 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 ---
 
+### 10. Strategy 1 — Business Variation (verbal → technical) (NEW — Jul 2026)
+**Status:** Phase **6 complete** (2026-07-12) — v1 regression green; single manual pass via `MANUAL_TEST.md` when you choose  
+**One-liner:** Turn `Strategy-1-Business-Variation/` playbook into a runnable formulation strategy (script + `run_all_strategies.py` + agent infra), keep gadget ops separate, additive/modular so nothing else breaks.  
+**Full phased backlog:** see **§9** under Notes / formulation tasks below (`### 9. Strategy 1 — Business Variation…`).  
+**Next:** Optional — run `MANUAL_TEST.md` once, then stage/commit/push.
+
+
+---
+
 ## 📋 General Maintenance Tasks
 
 - [ ] Set up Git version control for Problem Identification Tool
@@ -992,3 +1003,171 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] User approves **Tier 2** scope (8.T2.1–8.T2.5) — implemented 2026-07-08.
 
 **Related:** Task §8 Google Drive mapping (SaaS 4th/5th = Strategies 6/7); agent formulation Phase 5 (`agent-business-idea-runs/`); chat analysis 2026-07-07 (MerchantLift + StartupList alternative).
+
+---
+
+### 9. Strategy 1 — Business Variation (verbal → technical / runnable) (NEW — Jul 2026)
+**Status:** Phase **6 complete** (2026-07-12) — `test_phase6_regression.py` PASS; v1 automated gate green  
+**Goal:** Convert Strategy 1 from a **verbal markdown playbook** into a **functional technical formulation strategy**: CLI script from `strategy-1-business-variation.md` steps, wired into `run_all_strategies.py`, agent formulation infrastructure, and related repo surfaces — **without breaking** existing strategies, agent runs, launcher, or gadget ops.
+
+**User-requested outcomes (must land across phases):**
+- Script that operationalizes playbook steps: successful business → complaints → categorize/score → variation ideas → Prompt 1a/1b (optional 1c).
+- Strategy 1 becomes **executable** in `run_all_strategies.py` (no longer “verbal instructions only”).
+- Strategy 1 included in **agent run** infrastructure (`prompts/agent_formulation_run.txt`, `agent-business-idea-runs/`, fetch/synthesis path).
+- Other relevant infra/docs updated so nothing still treats S1 as non-runnable.
+
+**Recommendations captured (must land or be explicitly deferred in a phase):**
+- Keep folder `Strategy-1-Business-Variation/` (no forced rename to `Business-Idea-Formulation-Strategy-1-*` in v1).
+- **Do not** put formulation logic inside `gadget-business/gadget-business-automation/` (ops stays separate).
+- Hybrid v1 intake: editable Nigeria seed businesses + paste/file complaints — **no** paid Brand24 / fragile social scrape required for v1.
+- Explicit Prompt 1a differentiation vs **S6** (niche combine) and **S7** (trending adapt): S1 = *Successful Business + Recurring Complaint = Profitable Variation*.
+- Non-interactive / agent-safe flags early (avoid `input()` hangs that already block S5–7 / 11–14 in agent probes).
+- Dual launcher story: keep Established folder cards for ops; add Formulated “Run Strategy 1” (or rely on CLI menu) without removing existing cards.
+- Automate-first smokes after each phase; leave S2 verbal unless a separate task is opened.
+- Portfolio habit: later review other verbal/hybrid gaps (S2, interactive blockers) — out of this task’s code scope.
+
+**Playbook source of truth:** `Strategy-1-Business-Variation/strategy-1-business-variation.md`  
+**Layout (locked for v1):** Stay in `Strategy-1-Business-Variation/`.
+
+#### Phase 0 locks (2026-07-11) — authoritative for Phases 1–3
+
+| Lock | Decision |
+|------|----------|
+| **Folder** | `Strategy-1-Business-Variation/` (no rename in v1) |
+| **Entrypoint** | `business_variation_collector.py` |
+| **Prompts** | `chatgpt_prompt_1a.txt`, `chatgpt_prompt_1b.txt`; optional `chatgpt_prompt_1c.txt` in Phase 1+ |
+| **Seeds file** | `seed_businesses.json` (editable; Nigeria-first defaults from playbook) |
+| **README** | `README.md` in same folder (Phase 1) |
+| **Optional modules** | Only if main file approaches ~500 lines: `complaint_intake.py`, `variation_prompts.py` (additive) |
+| **Output pattern** | `business_variation_YYYYMMDD_HHMMSS.json` (+ optional Prompt 1a payload `.txt`) under Strategy 1 folder |
+| **STRATEGY_META[1] (Phase 3 preset)** | name: `Business Variation & Complaint Fixing`; desc: `Turns successful businesses + recurring complaints into differentiated variation ideas (Prompt 1a/1b).` |
+| **Run ALL policy (Phase 3)** | Once S1 is registered, **Run ALL includes Strategy 1** → active set `1, 3–7, 9, 11–15` (same as `sorted(STRATEGY_SCRIPTS.keys())`). Strategy **2** stays verbal and excluded. **Gate:** Phase 2 must ship `--non-interactive` / `--inputs` before Phase 3 so “Run ALL” cannot hang forever on S1 `input()`. |
+| **Menu verbal note (Phase 3)** | Replace “Strategies 1 and 2 are verbal…” with **Strategy 2 only** verbal. |
+| **Prompt 1b layout** | **One table.** **Lead columns (S1-specific, before S5-aligned wide columns):** (1) Target successful business, (2) Complaint theme / recurring complaint, (3) Complaint category (UX / performance / cost / support / other), (4) Frequency, (5) Impact, (6) Solvability. Then **Proposed domain (not verified)** + the same wide analysis columns as Strategy 5 `chatgpt_prompt_1b.txt`. |
+| **Prompt 1a formula** | Must state S1 formula and **not** S6 niche-mash or S7 trending-adapt framing. |
+
+#### Non-negotiable safety (do not break anything anywhere)
+
+- **No implementation until the user explicitly approves the target phase** (or says implement now / skip gate for a named phase).
+- **One phase at a time.** Do not big-bang-edit runner + agent prompt + launcher + script in one unreviewed commit.
+- **Additive first:** New files in Strategy 1 folder before touching shared infra. Shared infra changes only in the phase that names them.
+- **Do not modify** gadget-business automation behavior, supplier APIs, or pitch-deck generators under this task.
+- **Do not retire or renumber** Strategies 3–7, 9, 11–15; **do not** change `RETIRED_STRATEGIES` (8, 10) semantics.
+- **Do not break** agent formulation runs: until Phase 4 ships, agent prompt may still omit S1; after Phase 4, S1 must degrade gracefully (seed/paste/synthesis fallback) so `business_ideas_YYYYMMDD.md` + `.docx` still produce if S1 fetch is empty.
+- **Backward compatibility:** Existing “verbal” playbook markdown remains readable; update it to say “technical + playbook” rather than deleting steps.
+- **Runner menu:** When registering Strategy 1, update **all** hardcoded “3–15 / verbal 1–2” copy in `run_all_strategies.py` and `run_all_strategies_README.md` together in that phase — avoid half-wired menus.
+- **Do not modify Strategy 15** behavior/scripts unless a later phase explicitly requires a shared helper extract (prefer copy pattern, not shared rewrite).
+- **Tests:** After each infra phase, run automate-first checks (import/`py_compile`, registration assert, non-interactive fixture if available). No “please click through Hub” as the default gate mid-build.
+- Keep new modules **under ~500 lines**; split rather than fuse into gadget CLI or `run_all_strategies.py`.
+
+#### Differentiation (document in prompts + README)
+
+| Strategy | Job |
+|----------|-----|
+| **1** — Business Variation | Proven successful business + recurring complaints → differentiated variation |
+| **6** — Niche combination | Combine startup niches / directory sectors → new ideas |
+| **7** — Trending adaptation | Adapt trending products for Nigeria with niche twist |
+
+#### Phase 0 — Discovery & lock (read-only / task-file only; no product code) ✅
+- [x] **0.1** Confirm entrypoint name and Prompt 1b column alignment.
+  - **Locked entrypoint:** `business_variation_collector.py` (mirrors collector/adapter naming; not gadget CLI).
+  - **Locked Prompt 1b:** S1 lead columns (target business, complaint theme, category, frequency, impact, solvability) + `Proposed domain (not verified)` + Strategy 5 wide columns (S14 playbook table lacks domain column — **follow S5** for domain rule).
+- [x] **0.2** Inventory touchpoints to update in later phases (do **not** edit these in Phase 0):
+
+| Touchpoint | Why later | Phase |
+|------------|-----------|-------|
+| `run_all_strategies.py` | `STRATEGY_SCRIPTS`/`META`, verbal notes (~L247–319), Run ALL via `sorted(STRATEGY_SCRIPTS.keys())` | 3 |
+| `run_all_strategies_README.md` | Strategy table + overview still says 3–14/3–15 style | 3 |
+| `prompts/agent_formulation_run.txt` | Include list is `5, 6, 7, 9, 11, 12, 13, 14, 15` — add **1** | 4 |
+| `agent-business-idea-runs/agent_strategy_run.py` | `strategies_skipped` today `[3,4,8,10]`; add optional `strategy_1_*` fetch block | 4 |
+| `agent-business-idea-runs/README.md` | Document S1 keys / fallback | 4 |
+| `inc_launcher/launcher_config.json` | Established already has S1 folder + gadget cards; Formulated may get additive Run S1 | 5 |
+| `inc_launcher/README.md` | Agent run copy lists strategies 5…15 — refresh when S1 in agent set | 4–5 |
+| Pillar table in this `task.md` (§ Inc Launcher) | S1 under Established today; clarify formulation vs gadget | 5 |
+| `API_INTEGRATION_GUIDE.md` / `API_IMPLEMENTATION_SUMMARY.md` | Enumerate some strategies; **no S1 today** — add only if listing completeness requires it | 5 |
+| `Strategy-1-Business-Variation/strategy-1-business-variation.md` | Header note: technical strategy (keep steps) | 1 |
+
+- [x] **0.3** Snapshot **do not touch** (unless a later phase explicitly names a minimal cross-ref):
+
+| Do not touch | Reason |
+|--------------|--------|
+| `Strategy-1-Business-Variation/gadget-business/gadget-business-automation/**` | Ops product; not formulation |
+| `Business-Idea-Formulation-Strategy-{3–7,9,11–15}/**` scripts/behavior | No drive-by refactors; copy patterns only |
+| `RETIRED_STRATEGIES` / Strategy 8 & 10 archive paths | Keep retirement semantics |
+| `agent-business-idea-runs/outputs/business_ideas_*.md` / `.docx` (historical) | Append-only new dated runs |
+| `agent-business-idea-runs/inputs/agent_strategy_inputs_*.json` (historical) | Do not rewrite old fetches |
+| `problem_identification_tool/**`, `inc_launcher` behavior beyond additive config in Phase 5 | Out of S1 formulation core |
+| Strategy **2** folder / verbal status | Separate task if ever automated |
+
+**Phase 0 definition of done:** ✅ Names + touchpoint list + Run ALL policy locked in this task entry; **zero** new formulation `.py` (Phase 1 still required for scaffold).
+
+#### Phase 1 — Scaffold in Strategy 1 folder only (no runner / no agent / no launcher) ✅
+- [x] **1.1 — Prompts:** Add `chatgpt_prompt_1a.txt` / `chatgpt_prompt_1b.txt` (optional `1c`) encoding complaint→variation formula; explicit “not S6/S7” guidance; **use Phase 0 Prompt 1b lock**.
+- [x] **1.2 — Seeds:** Add editable Nigeria-first `seed_businesses.json` (or YAML) from playbook examples (Jumia Food, Bolt, GTBank app, etc.) — user-editable, not hardcoded forever in Python.
+- [x] **1.3 — Stub script:** `business_variation_collector.py` prints paths / playbook formula / exits 0; `README.md` states technical strategy + how to run; optional empty `requirements.txt`.
+- [x] **1.4 — Playbook note:** Update `strategy-1-business-variation.md` header: technical script exists (or “in progress”) without deleting human steps.
+
+**Phase 1 definition of done:** ✅ Folder self-contained; `python business_variation_collector.py` exits 0; **no** changes to `run_all_strategies.py` or agent prompt yet.
+
+#### Phase 2 — Core CLI logic (still Strategy 1 folder only) ✅
+- [x] **2.1 — Business seed load + optional paste:** Choose from seeds and/or enter custom successful businesses.
+- [x] **2.2 — Complaint intake:** Structured fields (source, text, category: UX / performance / cost / support / other); frequency, impact, solvability scores (playbook Steps 2–3).
+- [x] **2.3 — Prompt generation:** Build Prompt 1a payload; optional Prompt 1b table scaffold for chosen variations; reuse `cursor_copy_helper` pattern only if additive and default-safe.
+- [x] **2.4 — Persist:** Write `business_variation_YYYYMMDD_HHMMSS.json` (and optional payload `.txt`) under Strategy 1 folder.
+- [x] **2.5 — Non-interactive mode:** Flags such as `--non-interactive` / `--inputs <path>` / `--seeds` so agents and smokes can run without hanging on `input()`. **Required before Phase 3** (Run ALL gate).
+- [x] **2.6 — Modularize if needed:** Split intake/scoring/prompt builders into sibling modules before the main file exceeds ~500 lines.
+
+**Phase 2 definition of done:** ✅ Interactive + non-interactive paths work locally; fixtures/smoke scriptable; still **not** registered in master runner.
+
+#### Phase 3 — Master runner + runner docs (narrow shared-infra blast radius) ✅
+- [x] **3.1** Add `STRATEGY_SCRIPTS[1]` + `STRATEGY_META[1]` pointing at `Strategy-1-Business-Variation/business_variation_collector.py` (meta per Phase 0 lock).
+- [x] **3.2** Per Phase 0 **Run ALL** lock: include Strategy **1** in active ALL set; verbal note = Strategy **2** only; update docstring, menu, range/examples copy in one pass.
+- [x] **3.3** Update `run_all_strategies_README.md` strategy table + notes.
+- [x] **3.4** Smoke: menu list shows Strategy 1; option “run one” can launch S1; Strategies 3–15 still launch unchanged. *(Automated: `test_phase3_runner_smoke.py` + Phase 2 smoke updated for registration.)*
+
+**Phase 3 definition of done:** ✅ S1 runnable via master runner; S2 still verbal; no regressions on existing strategy numbers.
+
+#### Phase 4 — Agent formulation infrastructure ✅
+- [x] **4.1 — Agent prompt:** Update `prompts/agent_formulation_run.txt` to **include Strategy 1** in the executable set; document skip/fallback rules; keep skips for 3, 4, 8, 10 (and 2 verbal).
+- [x] **4.2 — Agent fetch (additive):** Extend `agent_strategy_run.py` with `strategy_1_seeds` (+ optional `--with-strategy1-run`) — **default continue on empty/fail**; no network scrape required for S1 seeds.
+- [x] **4.3 — Agent README / inputs schema notes:** Document new JSON keys; Strategy 1 synthesis instructions; dedup paths unchanged.
+- [x] **4.4 — Execution summary contract:** Agent outputs must show S1 status (ran / synthesized / skipped / blocked) without failing the whole run — encoded in `agent_formulation_run.txt`.
+
+**Phase 4 definition of done:** ✅ Agent runs can produce S1-traced ideas; fetch failure does not abort RSS/OWID/S6/S7/S14/S15 paths.
+
+#### Phase 5 — Launcher, pillars, cross-docs (opt-in polish; still modular) ✅
+- [x] **5.1 — Inc Launcher:** Keep Established cards (Strategy 1 folder + gadget automation). Added Formulated pillar item `strategy1_run` → `python business_variation_collector.py` (cwd Strategy 1). Relabeled Established folder card for clarity. No removals.
+- [x] **5.2 — Pillar wording in this `task.md`:** Clarified S1 formulation = Formulated ideas; gadget ops = Established.
+- [x] **5.3 — API / integration docs:** Mentioned Strategy 1 under manual/local-seed strategies in `API_INTEGRATION_GUIDE.md` and `API_IMPLEMENTATION_SUMMARY.md`.
+- [ ] **5.4 — Optional research URL helper:** Deferred (not required for v1 discoverability; can ship later as `--open-links` default off).
+
+**Phase 5 definition of done:** ✅ Discoverability updated; launcher tests green (`pytest inc_launcher/tests`).
+
+#### Phase 6 — Regression & v1 sign-off ✅
+- [x] **6.1** Static checks: registration, prompt include list, no “verbal only” for S1 in runner.
+- [x] **6.2** Automated smokes: non-interactive fixture run; `py_compile`; registration + Phase 2–4 smokes via `test_phase6_regression.py`.
+- [x] **6.3** Spot-check: prior strategies still in `STRATEGY_SCRIPTS`; agent fetch still writes `agent_strategy_inputs_*.json` with S1 + prior keys; launcher `test_config` green.
+- [x] **6.4** `MANUAL_TEST.md` added (Hub / interactive menu / playbook only — Why not automated noted). **User runs once** at sign-off when ready.
+
+**v1 definition of done:** ✅ Strategy 1 is a technical strategy end-to-end (script + runner + agent path + docs); gadget ops untouched; automated regression PASS 2026-07-12. Manual Hub/menu pass optional via `MANUAL_TEST.md`.
+
+#### Explicitly out of scope (v1)
+- Strategy **2** verbal→technical conversion.
+- Full Twitter/Reddit/App Store scrapers; paid Brand24/Mention integrations.
+- Rewriting or relocating `gadget-business-automation/`.
+- Renaming strategy folder to `Business-Idea-Formulation-Strategy-1-*` (defer unless approved).
+- Changing retired Strategies 8/10 policy.
+- Google Drive Macrodroid card renames.
+
+#### Tier / phase approval checkpoints (user)
+- [x] Approve **Phase 0** locks (names + Run ALL policy for including `1`) — done 2026-07-11 via “Implement only Phase 0”.
+- [x] Approve **Phase 1** (folder scaffold) — done 2026-07-11 via menu “1 - recommend and approve”.
+- [x] Approve **Phase 2** (CLI intake + non-interactive) — done 2026-07-11 via menu “1”.
+- [x] Approve **Phase 3** (master runner wiring) — done 2026-07-11 via menu “1”.
+- [x] Approve **Phase 4** (agent prompt + fetch) — done 2026-07-12 via menu “1”.
+- [x] Approve **Phase 5** (launcher/docs) — done 2026-07-12 via menu “1”.
+- [x] Approve **Phase 6** (regression & v1 sign-off) — done 2026-07-12 via menu “1 - pls do not break anything”.
+
+**Suggested milestones:** Phase 0–6 ✅ 2026-07-11/12.
+
+**Related:** Chat 2026-07-11 (S1 verbal→technical recommendations); Strategy 15 wiring pattern (task §5); Crunchbase/S6–S7 additive safety pattern (task §8); `prompts/agent_formulation_run.txt`; `inc_launcher` Established vs Formulated pillars.

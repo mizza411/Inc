@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "strategy": 1,
+  "description": "Nigeria-first successful businesses for Strategy 1 complaint→variation runs. Edit freely; Phase 2+ scripts load this file.",
+  "businesses": [
+    {
+      "id": "jumia_food",
+      "name": "Jumia Food",
+      "category": "Food delivery",
+      "example_complaints": [
+        "Food arrives cold",
+        "Delivery takes too long",
+        "Wrong orders",
+        "High delivery fees"
+      ]
+    },
+    {
+      "id": "bolt",
+      "name": "Bolt",
+      "category": "Ride-sharing",
+      "example_complaints": [
+        "Drivers cancel rides",
+        "Surge pricing",
+        "Safety concerns",
+        "Long wait times"
+      ]
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "category": "Ride-sharing",
+      "example_complaints": [
+        "Drivers cancel rides",
+        "Surge pricing",
+        "Safety concerns",
+        "Long wait times"
+      ]
+    },
+    {
+      "id": "jumia",
+      "name": "Jumia",
+      "category": "E-commerce",
+      "example_complaints": [
+        "Fake products",
+        "Slow delivery",
+        "Poor customer service",
+        "Return process is difficult"
+      ]
+    },
+    {
+      "id": "konga",
+      "name": "Konga",
+      "category": "E-commerce",
+      "example_complaints": [
+        "Fake products",
+        "Slow delivery",
+        "Poor customer service",
+        "Return process is difficult"
+      ]
+    },
+    {
+      "id": "gtbank_app",
+      "name": "GTBank app",
+      "category": "Banking",
+      "example_complaints": [
+        "App crashes",
+        "Long queues (branch)",
+        "Hidden charges",
+        "Poor mobile experience"
+      ]
+    },
+    {
+      "id": "access_bank",
+      "name": "Access Bank",
+      "category": "Banking",
+      "example_complaints": [
+        "App crashes",
+        "Long queues",
+        "Hidden charges",
+        "Poor mobile experience"
+      ]
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "category": "Social",
+      "example_complaints": [
+        "Too many ads",
+        "Fake content",
+        "Bots"
+      ]
+    },
+    {
+      "id": "whatsapp_business",
+      "name": "WhatsApp Business",
+      "category": "Business messaging",
+      "example_complaints": [
+        "No proper business features",
+        "Hard to manage many customers",
+        "Weak payment integration for SMEs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+For each Strategy 1 variation that **requires physical ops, hardware, logistics, or on-the-ground fulfillment** (e.g. thermal delivery bags, verified driver checks, same-day warehouse nodes), add a short **Hardware / ops appendix** under that idea only:
+
+- What physical asset or ops layer is required (1–3 bullets).
+- Rough order-of-magnitude setup cost in USD (range OK).
+- Whether an MVP can start **digital-only** first (yes/no + one line why).
+
+Skip 1c entirely for pure software / SaaS variations with no physical layer.

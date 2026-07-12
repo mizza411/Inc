@@ -1,0 +1,2 @@
+# Strategy 1 — optional dependencies (Phase 2+)
+# Phase 1 stub uses Python stdlib only.

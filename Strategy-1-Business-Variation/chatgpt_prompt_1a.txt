@@ -1,0 +1,19 @@
+You are given one or more **successful, existing businesses** (proven demand) plus **recurring customer complaints** about them.
+
+**Strategy 1 formula (required):**
+Successful Business + Recurring Complaint = Profitable Variation
+
+**This is NOT Strategy 6 or 7:**
+- Do **not** invent ideas by only combining unrelated niches (Strategy 6).
+- Do **not** adapt a trending Product Hunt / global startup by niche mashup alone (Strategy 7).
+- Every idea must start from a **named successful business** and a **specific recurring complaint**, then propose a **differentiated variation** that fixes that pain better (or for a clearer segment).
+
+**Task:** Propose **digital or hybrid** business variations for Nigeria (web, mobile, SaaS, marketplace, ops tooling, etc.) grounded in the complaints provided.
+
+**Output format for this step:** A **numbered list of variation hooks** (aim for up to 10; fewer if the material is narrow). For each item:
+- One line: **Target successful business** (name as given).
+- One line: **Complaint** (plain language; keep it specific).
+- One line: **Variation angle** (what you would build) in a single sentence.
+- One line: **Why it is different** from just copying the original (one short sentence).
+
+Do **not** produce the full business-plan table here—that is Prompt 1b. Do **not** expand hardware/logistics detail here—that is Prompt 1c (only if needed).

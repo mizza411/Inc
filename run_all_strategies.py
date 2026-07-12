@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-Master Orchestrator: Run Business Idea Formulation Strategies 3–15 from one place.
+Master Orchestrator: Run Business Idea Formulation Strategies 1 and 3–15 from one place.
 
-Active executable strategies: 3–7, 9, 11–15 (Strategies 8 and 10 retired).
+Active executable strategies: 1, 3–7, 9, 11–15 (Strategy 2 verbal; Strategies 8 and 10 retired).
 
 Phase 1 (implemented):
 - Simple, linear runner (run all strategies in fixed order).
 
 Phase 2 (implemented):
 - Adds a CLI menu.
-- Option to run ALL strategies 3–15.
-- Option to run a SELECTED subset (e.g. 3,5,9,13).
+- Option to run ALL active strategies.
+- Option to run a SELECTED subset (e.g. 1,3,5,9,13).
 
 Phase 3 (now implemented):
 - Option to run ONE strategy (e.g. 5).
@@ -29,6 +29,7 @@ ROOT = Path(__file__).resolve().parent
 
 
 STRATEGY_SCRIPTS: Dict[int, Path] = {
+    1: ROOT / "Strategy-1-Business-Variation" / "business_variation_collector.py",
     3: ROOT / "Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification" / "network_problem_collector.py",
     4: ROOT / "Business-Idea-Formulation-Strategy-4-Business-Owner-Problem-Collection" / "business_owner_problem_collector.py",
     5: ROOT / "Business-Idea-Formulation-Strategy-5-News-Based-Problem-Extraction" / "news_problem_extractor.py",
@@ -44,6 +45,13 @@ STRATEGY_SCRIPTS: Dict[int, Path] = {
 
 
 STRATEGY_META: Dict[int, Dict[str, str]] = {
+    1: {
+        "name": "Business Variation & Complaint Fixing",
+        "desc": (
+            "Turns successful businesses + recurring complaints into differentiated "
+            "variation ideas (Prompt 1a/1b)."
+        ),
+    },
     3: {
         "name": "Network-Based Problem Identification",
         "desc": "Collects problems from your personal/professional network and structures them for analysis.",
@@ -101,6 +109,8 @@ RETIRED_STRATEGIES: Dict[int, str] = {
         "Use Strategies 3–5 (network, questionnaires, news) for problem discovery."
     ),
 }
+
+ACTIVE_RANGE_LABEL = "1, 3–7, 9, 11–15"
 
 
 def _expand_selection_tokens(selection: str) -> List[int]:
@@ -239,18 +249,17 @@ def parse_selection(selection: str) -> List[int]:
 
 
 def main() -> None:
-    """Phase 3: menu-based runner for strategies 3–15 with single strategy option."""
+    """Menu-based runner for active strategies (1, 3–7, 9, 11–15) with single-strategy option."""
     while True:
         print("\n" + "=" * 80)
         print("Business Idea Formulation - Master Runner (Phase 3)")
         print("=" * 80)
-        print("\nNote: Strategies 1 and 2 are verbal instructions only (no scripts to run).")
+        print("\nNote: Strategy 2 is verbal instructions only (no script to run).")
         print(
-            "Executable scripts: 3–7, 9, 11–15 "
+            f"Executable scripts: {ACTIVE_RANGE_LABEL} "
             f"({len(STRATEGY_SCRIPTS)} strategies; Strategies 8 and 10 retired)."
         )
         print("Available strategies:")
-        print("  - Strategy 1: [Verbal instructions only - not a script]")
         print("  - Strategy 2: [Verbal instructions only - not a script]")
         for num in sorted(STRATEGY_SCRIPTS.keys()):
             meta = STRATEGY_META.get(num, {})
@@ -260,16 +269,16 @@ def main() -> None:
             print(f"  - Strategy {num}: [Retired — {RETIRED_STRATEGIES[num]}]")
 
         print("\nMenu:")
-        print("  1) Run ALL active strategies (3–7, 9, 11–15) in order")
-        print("  2) Run SELECTED strategies (e.g. 3,5,7-9)")
-        print("  3) Run ONE strategy (e.g. 5)")
+        print(f"  1) Run ALL active strategies ({ACTIVE_RANGE_LABEL}) in order")
+        print("  2) Run SELECTED strategies (e.g. 1,3,5,7-9)")
+        print("  3) Run ONE strategy (e.g. 1 or 5)")
         print("  4) Exit")
 
         choice = input("\nChoose an option (1/2/3/4, default=1): ").strip()
 
         if choice in ("", "1"):
             confirm = input(
-                "\nRun ALL active strategies (3–7, 9, 11–15) in order? (y/n, default=y): "
+                f"\nRun ALL active strategies ({ACTIVE_RANGE_LABEL}) in order? (y/n, default=y): "
             ).strip().lower()
             if confirm in ("", "y", "yes"):
                 run_sequence(sorted(STRATEGY_SCRIPTS.keys()))
@@ -280,16 +289,16 @@ def main() -> None:
             print(
                 "\nEnter strategy numbers or ranges, separated by commas.\n"
                 "Examples:\n"
-                "  3,5,9\n"
+                "  1,5,9\n"
                 "  3-6\n"
-                "  3,5-7,11,15\n"
+                "  1,3,5-7,11,15\n"
             )
             selection = input("Your selection: ")
             warn_if_retired_requested(selection)
             selected = parse_selection(selection)
             if not selected:
                 print("\nNo valid strategies selected. Nothing to run.")
-                print("Note: Strategies 1 and 2 are not executable scripts (verbal instructions only).")
+                print("Note: Strategy 2 is not an executable script (verbal instructions only).")
                 if RETIRED_STRATEGIES:
                     retired_nums = ", ".join(str(n) for n in sorted(RETIRED_STRATEGIES))
                     print(f"Note: Strategy {retired_nums} is retired from the master runner.")
@@ -304,19 +313,22 @@ def main() -> None:
                     print("Cancelled running selected strategies.")
 
         elif choice == "3":
-            print("\nEnter a single strategy number (3–15):")
+            print(f"\nEnter a single strategy number ({ACTIVE_RANGE_LABEL}; 2 is verbal; 8/10 retired):")
             selection = input("Strategy number: ").strip()
             if not selection.isdigit():
-                print("\nInvalid input. Please enter a number between 3 and 15.")
+                print(f"\nInvalid input. Please enter a number from the active set ({ACTIVE_RANGE_LABEL}).")
             else:
                 num = int(selection)
                 if num in RETIRED_STRATEGIES:
                     print(f"\nStrategy {num} is retired from the master runner.")
                     print(RETIRED_STRATEGIES[num])
                     print(f"Available strategies: {', '.join(str(n) for n in sorted(STRATEGY_SCRIPTS.keys()))}")
+                elif num == 2:
+                    print("\nStrategy 2 is verbal instructions only (no script to run).")
+                    print(f"Available strategies: {', '.join(str(n) for n in sorted(STRATEGY_SCRIPTS.keys()))}")
                 elif num not in STRATEGY_SCRIPTS:
                     print(f"\nStrategy {num} is not available.")
-                    print("Note: Strategies 1 and 2 are not executable scripts (verbal instructions only).")
+                    print("Note: Strategy 2 is not an executable script (verbal instructions only).")
                     print(f"Available strategies: {', '.join(str(n) for n in sorted(STRATEGY_SCRIPTS.keys()))}")
                 else:
                     meta = STRATEGY_META.get(num, {})

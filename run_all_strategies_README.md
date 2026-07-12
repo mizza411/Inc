@@ -1,30 +1,30 @@
 # Business Idea Formulation - Master Runner
 
-A master orchestrator script that runs all Business Idea Formulation Strategies (3-14) from a single entry point, eliminating the need to manually run each strategy script one by one.
+A master orchestrator script that runs Business Idea Formulation Strategies **1, 3–7, 9, 11–15** from a single entry point.
 
 ## Overview
 
-This script provides a unified CLI interface to execute any combination of the 12 business idea formulation strategies. Each strategy remains fully interactive (CLI-based with prompts), but you can now run them sequentially without manually switching between scripts.
+Unified CLI to execute any combination of the active formulation strategies. Each strategy remains interactive (CLI prompts), but you can run them sequentially without switching scripts manually.
+
+**Active set:** `1, 3–7, 9, 11–15` (12 strategies).  
+**Verbal only:** Strategy **2**.  
+**Retired:** Strategies **8** and **10**.
 
 ## Features
 
-- **Menu-Based Interface**: Choose to run all strategies or select specific ones
-- **Flexible Selection**: Use ranges (e.g., `3-6`) or individual numbers (e.g., `3,5,9`)
-- **Error Handling**: If a strategy fails, you can choose to continue or stop
-- **Execution Summary**: See which strategies completed successfully and which failed
-- **Interactive**: All individual strategy scripts remain fully interactive with their own prompts
+- **Menu-Based Interface**: Run all, selected, or one strategy
+- **Flexible Selection**: Ranges (e.g., `3-6`) or individuals (e.g., `1,5,9`)
+- **Error Handling**: Continue or stop after a failure
+- **Execution Summary**: OK / FAILED per strategy
+- **Interactive**: Individual strategy scripts keep their own prompts (Strategy 1 also supports `--non-interactive` when run directly)
 
 ## Requirements
 
 - Python 3.6 or higher
-- All strategy scripts must be present in their respective folders
-- Individual strategy dependencies (see each strategy's `README.md` or `requirements.txt`)
+- Strategy scripts present in their folders
+- Per-strategy dependencies (see each strategy `README.md` / `requirements.txt`)
 
 ## Usage
-
-### Basic Usage
-
-From the project root directory:
 
 ```bash
 python run_all_strategies.py
@@ -32,57 +32,27 @@ python run_all_strategies.py
 
 ### Menu Options
 
-When you run the script, you'll see:
-
 ```
-================================================================================
-Business Idea Formulation - Master Runner (Phase 2)
-================================================================================
-Available strategies:
-  - Strategy 3
-  - Strategy 4
-  - Strategy 5
-  ...
-  - Strategy 14
-
-Menu:
-  1) Run ALL strategies (3–14) in order
-  2) Run SELECTED strategies (e.g. 3,5,7-9)
-  3) Exit
+1) Run ALL active strategies (1, 3–7, 9, 11–15) in order
+2) Run SELECTED strategies (e.g. 1,3,5,7-9)
+3) Run ONE strategy (e.g. 1 or 5)
+4) Exit
 ```
 
-### Option 1: Run All Strategies
+### Option 2 examples
 
-Select option `1` (or press Enter for default) to run all strategies from 3 to 14 in sequence. You'll be asked to confirm before execution begins.
-
-### Option 2: Run Selected Strategies
-
-Select option `2` to run only specific strategies. You can enter:
-
-- **Individual numbers**: `3,5,9`
-- **Ranges**: `3-6` (runs 3, 4, 5, 6)
-- **Combined**: `3,5-7,10,14` (runs 3, 5, 6, 7, 10, 14)
-
-**Examples:**
 ```
-Your selection: 3,5,9
-Selected strategies: 3, 5, 9
-
+Your selection: 1,5,9
 Your selection: 3-6
-Selected strategies: 3, 4, 5, 6
-
-Your selection: 3,5-7,10,14
-Selected strategies: 3, 5, 6, 7, 10, 14
+Your selection: 1,3,5-7,11,15
 ```
-
-### Option 3: Exit
-
-Select option `3` to exit the master runner without executing any strategies.
 
 ## Available Strategies
 
 | Strategy # | Name | Script File |
 |------------|------|-------------|
+| 1 | Business Variation & Complaint Fixing | `Strategy-1-Business-Variation/business_variation_collector.py` |
+| 2 | *(verbal only)* | — |
 | 3 | Network-Based Problem Identification | `network_problem_collector.py` |
 | 4 | Business Owner Problem Collection | `business_owner_problem_collector.py` |
 | 5 | News-Based Problem Extraction | `news_problem_extractor.py` |
@@ -99,119 +69,39 @@ Select option `3` to exit the master runner without executing any strategies.
 
 **Note:** Strategy **8** (TrendHunter) and Strategy **10** (ChatGPT Vision) were removed from the master runner — no licensed in-repo automation path. Use **Strategy 14** for global trends; use **Strategies 3–5** for construction/real-estate problem discovery.
 
+Strategy **1** non-interactive (outside the menu):  
+`python Strategy-1-Business-Variation/business_variation_collector.py --non-interactive --seed-ids jumia_food`
+
 ## How It Works
 
-1. **Script Discovery**: The master runner automatically locates each strategy script in its respective folder
-2. **Subprocess Execution**: Each strategy runs as a subprocess using the same Python interpreter
-3. **Interactive Flow**: Each strategy script maintains its own interactive CLI prompts
-4. **Error Handling**: If a strategy fails or is interrupted (Ctrl+C), you can choose to continue or stop
-5. **Summary Report**: At the end, you'll see a summary showing which strategies completed successfully
-
-## Example Workflow
-
-```
-$ python run_all_strategies.py
-
-================================================================================
-Business Idea Formulation - Master Runner (Phase 2)
-================================================================================
-Available strategies:
-  - Strategy 3
-  - Strategy 4
-  ...
-
-Menu:
-  1) Run ALL strategies (3–14) in order
-  2) Run SELECTED strategies (e.g. 3,5,7-9)
-  3) Exit
-
-Choose an option (1/2/3, default=1): 2
-
-Enter strategy numbers or ranges, separated by commas.
-Examples:
-  3,5,9
-  3-6
-  3,5-7,10,14
-
-Your selection: 3,5,9
-Selected strategies: 3, 5, 9
-Proceed with these strategies? (y/n, default=y): y
-
-================================================================================
-Starting Strategy 3: network_problem_collector.py
-================================================================================
-
-[Strategy 3's interactive prompts appear here...]
-
-✓ Strategy 3 completed successfully.
-
-[Continues with Strategy 5, then Strategy 9...]
-
-================================================================================
-Execution Summary
-================================================================================
-Strategy 3: OK
-Strategy 5: OK
-Strategy 9: OK
-
-All done.
-```
-
-## Handling Interruptions
-
-If you press **Ctrl+C** during a strategy execution:
-
-- The current strategy will be marked as interrupted/failed
-- You'll be asked: "Continue with the next strategy? (y/n, default=y)"
-- If you choose `y`, execution continues with the next strategy
-- If you choose `n`, execution stops and shows the summary
+1. Locates each strategy script from `STRATEGY_SCRIPTS`
+2. Runs it as a subprocess with the same Python interpreter
+3. Each strategy keeps its own interactive (or flagged non-interactive) flow
+4. On failure/Ctrl+C, you can continue or stop
+5. Prints an execution summary
 
 ## Troubleshooting
 
-### Script Not Found Error
+### Script Not Found
 
-If you see:
-```
-⚠ Strategy X: Script not found at [path]
-```
-
-**Solution**: Ensure all strategy folders exist and contain their respective Python scripts. Check that folder names match exactly (case-sensitive).
+Ensure strategy folders and script names match `STRATEGY_SCRIPTS` in `run_all_strategies.py`.
 
 ### Import Errors
 
-If a strategy script fails with import errors:
-
-**Solution**: Install the required dependencies for that specific strategy. Check the strategy's folder for `requirements.txt` or `README.md` for installation instructions.
-
-### Permission Errors
-
-If you encounter permission errors:
-
-**Solution**: Ensure you have read and execute permissions for the script files and directories.
+Install that strategy’s dependencies (`requirements.txt` / README).
 
 ## Notes
 
-- Each strategy script runs in its own subprocess, so environment variables and imports are isolated
-- The master runner uses the same Python interpreter (`sys.executable`) that launched it
-- All strategies remain fully interactive—this script only orchestrates their execution
-- Output files from each strategy are saved in their respective strategy folders
-
-## Future Enhancements (Optional)
-
-Potential future phases could include:
-- **Phase 3**: Save and load preset strategy combinations
-- **Phase 4**: Logging and resumability (resume from last incomplete strategy)
-- **Phase 5**: Non-interactive/batch mode for automated runs
-- **Phase 6**: Dashboard summary of collected ideas across all strategies
+- Subprocess isolation per strategy
+- Strategy 1 outputs land under `Strategy-1-Business-Variation/`
+- Strategy 2 remains playbook-only until a separate task automates it
 
 ## See Also
 
-- Individual strategy `README.md` files in each strategy folder for detailed usage
-- `API_SETUP.md` files in Strategies 5, 9, and 13 for API configuration
-- `requirements.txt` files in relevant strategy folders for dependencies
+- `Strategy-1-Business-Variation/README.md`
+- Individual strategy `README.md` files
+- `API_SETUP.md` in Strategies 5, 9, and 13
 
 ---
 
-**Created**: Phase 2 Implementation  
-**Last Updated**: Current version supports menu-based selection and flexible strategy execution
-
+**Last Updated:** 2026-07-11 — Strategy 1 registered as executable

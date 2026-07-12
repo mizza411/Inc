@@ -1,0 +1,40 @@
+{
+  "strategy": 1,
+  "businesses": [
+    {
+      "name": "Jumia Food",
+      "category": "Food delivery",
+      "complaints": [
+        {
+          "text": "Food arrives cold and late",
+          "source": "fixture",
+          "category": "performance",
+          "frequency": "Daily",
+          "impact": "High",
+          "solvability": "High"
+        },
+        {
+          "text": "High delivery fees",
+          "source": "fixture",
+          "category": "cost",
+          "frequency": "Weekly",
+          "impact": "Medium",
+          "solvability": "Medium"
+        }
+      ]
+    },
+    {
+      "name": "GTBank app",
+      "complaints": [
+        {
+          "text": "App crashes during transfers",
+          "source": "fixture",
+          "category": "performance",
+          "frequency": "Weekly",
+          "impact": "High",
+          "solvability": "Medium"
+        }
+      ]
+    }
+  ]
+}

@@ -55,7 +55,37 @@ Global actions: Open Inc workspace, task.md, Cursor.
 
 Edit `launcher_config.json` — pillars, items, `"pinned": true`, `settings`.
 
-Action types: `folder`, `file`, `url`, `command`, `cursor`.
+Action types: `folder`, `file`, `url`, `command`, `cursor`, `agent_run`.
+
+## Phase 5 — Agent formulation run
+
+**Front door** for the Cursor agent formulation workflow (strategies **1**, 5, 6, 7, 9, 11–15). **Not** the `run_all_strategies.py` CLI menu.
+
+| Step | What happens |
+|------|----------------|
+| Hub or tray → **Agent formulation run** | Opens/focuses **Inc Hub** and shows **Option B** confirmation modal |
+| **Start** | Loads `prompts/agent_formulation_run.txt` → clipboard → opens Cursor on repo → auto-paste (~8s) if `pyautogui` installed |
+| **Not now** | Dismisses modal; nothing runs |
+| You | Focus Cursor chat if needed → **Enter** to send |
+
+**Config** (`launcher_config.json`, Formulated ideas pillar):
+
+```json
+{
+  "id": "agent_formulation_run",
+  "label": "Agent formulation run",
+  "action": "agent_run",
+  "pinned": true
+}
+```
+
+Optional keys on the item: `prompt_path`, `paste_delay_sec` (default 8), `auto_paste` (default true).
+
+**Edit the prompt** in `prompts/agent_formulation_run.txt` — not in Python.
+
+Legacy CLI runner remains as **Run all strategies (CLI menu)**.
+
+Manual sign-off: `MANUAL_TEST.md` §G.
 
 ## Tests
 

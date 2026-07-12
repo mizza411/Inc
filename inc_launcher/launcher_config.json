@@ -17,7 +17,7 @@
           "path": "Started-Businesses"
         },
         {
-          "label": "Strategy 1 \u2014 Business Variation",
+          "label": "Strategy 1 folder (playbook + gadget ops)",
           "action": "folder",
           "path": "Strategy-1-Business-Variation"
         },
@@ -71,6 +71,13 @@
           "action": "command",
           "command": "python run_all_strategies.py",
           "cwd": "."
+        },
+        {
+          "id": "strategy1_run",
+          "label": "Run Strategy 1 \u2014 Business Variation",
+          "action": "command",
+          "command": "python business_variation_collector.py",
+          "cwd": "Strategy-1-Business-Variation"
         },
         {
           "id": "bookmark_review",

@@ -1,0 +1,10 @@
+Tabulate output for each viable Strategy 1 variation from Prompt 1a.
+
+**Columns (one table; lead columns first, then Strategy 5–aligned wide columns):**
+
+Target successful business / Complaint theme / Complaint category (UX|performance|cost|support|other) / Frequency / Impact / Solvability / Proposed domain (not verified) / Problem Identified / Potential Digital Solution / Estimated daily sales / Actualization strategy / Target Audience / Problem it solves / Competition Analysis / Estimated Costs (in dollars) / Funding Sources (provide links to possible investors and VCs) / No-code Tools to build solution / How to test the viability of the idea / Potential Challenges / Solution to those potential challenges / landing page platform / Monetization Strategy / Market Size and Growth Potential / Technical Expertise and Skill Requirements / Partnerships and Collaboration / Timeline / Key Performance Indicators (KPIs) / Team Requirements / Time to Market / Required Skills / Risks and Mitigation / Scalability / Social Impact.
+
+**Rules:**
+- Keep the Strategy 1 formula visible in each row: variation must address the named business’s recurring complaint (not a generic niche mashup).
+- In **Proposed domain (not verified)**: use TBD or illustrative placeholder domains only (e.g. productname.ng); do not present them as existing live websites unless you have verified them.
+- Competition Analysis must mention the original successful business and how the variation differs.
