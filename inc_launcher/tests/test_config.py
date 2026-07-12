@@ -57,12 +57,20 @@ def test_formulated_has_agent_formulation_run():
     assert s1.get("cwd") == "Strategy-1-Business-Variation"
 
 
-def test_established_keeps_strategy1_folder_and_gadget():
+def test_strategy1_hub_and_established_paths_resolve():
+    """Former MANUAL_TEST A/B — config targets exist on disk."""
     config = load_config()
+    formulated = next(p for p in list_pillars(config) if p["id"] == "formulated")
+    s1 = next(i for i in formulated["items"] if i.get("id") == "strategy1_run")
+    assert resolve_path(s1.get("cwd") or ".").is_dir()
+    collector = resolve_path("Strategy-1-Business-Variation/business_variation_collector.py")
+    assert collector.is_file()
+
     established = next(p for p in list_pillars(config) if p["id"] == "established")
-    labels = [item["label"] for item in established.get("items", [])]
-    assert any("Strategy 1 folder" in label for label in labels)
-    assert any("Gadget business automation" in label for label in labels)
+    folder = next(i for i in established["items"] if "Strategy 1 folder" in i["label"])
+    gadget = next(i for i in established["items"] if "Gadget business automation" in i["label"])
+    assert resolve_path(folder["path"]).is_dir()
+    assert resolve_path(gadget["path"]).is_dir()
 
 
 def test_tray_menu_builds():

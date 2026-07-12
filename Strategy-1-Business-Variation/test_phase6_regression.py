@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 
 
-def run(cmd: list[str], *, cwd: Path) -> subprocess.CompletedProcess:
+def run(cmd: list[str], *, cwd: Path, timeout: int = 240) -> subprocess.CompletedProcess:
     return subprocess.run(
         cmd,
         cwd=str(cwd),
@@ -25,7 +25,7 @@ def run(cmd: list[str], *, cwd: Path) -> subprocess.CompletedProcess:
         text=True,
         encoding="utf-8",
         errors="replace",
-        timeout=240,
+        timeout=timeout,
     )
 
 
@@ -134,6 +134,15 @@ def main() -> int:
     )
     if r_pytest.returncode != 0:
         errors.append(f"inc_launcher test_config: {r_pytest.stdout or r_pytest.stderr}")
+
+    # Former MANUAL_TEST A–D (fully automated)
+    r_signoff = run(
+        [sys.executable, str(ROOT / "test_signoff_automated.py")],
+        cwd=ROOT,
+        timeout=180,
+    )
+    if r_signoff.returncode != 0:
+        errors.append(f"signoff automated: {r_signoff.stdout or r_signoff.stderr}")
 
     if errors:
         print("FAIL Phase 6 regression")

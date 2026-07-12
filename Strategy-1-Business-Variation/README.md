@@ -47,6 +47,7 @@ Outputs (gitignored): `business_variation_YYYYMMDD_HHMMSS.json`, Prompt 1a paylo
 python Strategy-1-Business-Variation/test_phase2_smoke.py
 python Strategy-1-Business-Variation/test_phase3_runner_smoke.py
 python Strategy-1-Business-Variation/test_phase4_agent_smoke.py
+python Strategy-1-Business-Variation/test_signoff_automated.py
 python Strategy-1-Business-Variation/test_phase6_regression.py
 ```
 
@@ -56,7 +57,7 @@ python Strategy-1-Business-Variation/test_phase6_regression.py
 
 **Inc Hub:** Formulated ideas → **Run Strategy 1 — Business Variation**. Established keeps **Strategy 1 folder** + **Gadget business automation** (ops only).
 
-**Manual sign-off (once):** `MANUAL_TEST.md` — only Hub/menu/playbook steps not covered by automation.
+**Manual sign-off:** None required for v1 — see `MANUAL_TEST.md` (all former Hub/menu/playbook checks automated).
 
 ## Requirements
 

@@ -242,12 +242,100 @@
 |--------|---------|------------------------|
 | **My Established business ideas** | Businesses you are running or committed to | `Started-Businesses/`, Strategy 1 **gadget ops** (`Strategy-1-Business-Variation/gadget-business/…`), live ops (e.g. YouTube when active). Folder shortcut to Strategy 1 playbook OK here for ops adjacency. |
 | **My leads** | Contacts, outreach, campaigns | `abuja_lead_generator/` (DB, scraper, email/WhatsApp, reports) |
-| **Formulated ideas** | Idea pipeline outputs & strategy runs | **Strategy 1 formulation CLI** (`business_variation_collector.py` / Hub “Run Strategy 1”), `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/`, `past_business_ideas.md`, `business_research/` |
+| **Formulated ideas** | Idea pipeline outputs & strategy runs | **Strategy 1 formulation CLI** (`business_variation_collector.py` / Hub “Run Strategy 1”), `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, `agent-business-idea-runs/`, `past_business_ideas.md`, `business_research/`; curated shortlist (when approved): **`Prospect-Businesses/`** |
 | **Problem identification** | Discovering & capturing problems (inputs to formulation) | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/`, problem-collection strategies (3, 4, 5, 10, 11, 12, etc.) |
 
 **Strategy 1 split:** Formulation (complaint→variation script + agent/runner) lives under **Formulated ideas**; gadget automation stays under **Established**. Do not treat the Hub folder card as a substitute for “Run Strategy 1”.
 
-**Flow:** Problem identification → Formulated ideas → Established businesses; **My leads** supports outreach alongside that pipeline.
+**Flow:** Problem identification → Formulated ideas → **Prospect businesses** (curated shortlist) → Established businesses; **My leads** supports outreach alongside that pipeline.
+
+#### Prospect-Businesses folder
+**Status:** Phase **0–2 complete** (2026-07-12) — Layout + scaffold + 3 user-named seeds; **Phase 3 optional (Hub/sorter)** awaits separate approval  
+**Goal:** Dedicated home for businesses **not started** but with **strong prospects** — separate from `Started-Businesses/` (e.g. software) and from raw formulation dumps (`agent-business-idea-runs/outputs/`).
+
+**Layout:** Folder `Prospect-Businesses/` at repo root (`C:\dev\Inc\Prospect-Businesses/`) — **created**.  
+**Active prospects (3):** `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md` (from `business_ideas_20260712.md`).
+
+| Signal | Why |
+|--------|-----|
+| Twin of `Started-Businesses/` | Clear “not started yet” vs “running/committed” |
+| Shortlist only (~5–10 active) | Not every weekly `business_ideas_*.md` row |
+| One `.md` per prospect | Problem, why now, MVP cost, next validation date, link to source idea run |
+| Own folder only in early phases | Avoids coupling to launcher, sorter, or strategy scripts until optional later phases |
+
+**Graduation rule (locked if Layout approved):** Moving or copying a prospect into `Started-Businesses/` requires **explicit user approval** every time. Agents must **not** auto-graduate, auto-rename as “started,” or treat Hub/bookmark filing as graduation. User is the only approver of “this is now a started business.”
+
+##### Non-negotiable safety (do not break anything anywhere)
+
+- **No implementation until user approves Layout**, then the **named phase** (or says implement now / skip gate for that phase).
+- **One phase at a time.** Do not create folder + wire Hub + change sorter routes + seed prospects in one unreviewed pass.
+- **Additive only in Phases 1–2:** new files under `Prospect-Businesses/` only. No edits to strategy scripts, `run_all_strategies.py`, agent fetch runner behavior, or `Started-Businesses/software-development.md` content.
+- **Do not move/rename/delete** existing `agent-business-idea-runs/outputs/`, `business_research/` plans, or `Started-Businesses/` files under this task.
+- **Do not bulk-import** every idea from formulation runs into prospects.
+- **Do not** add auto-graduation scripts, watchers, or Hub buttons that write into `Started-Businesses/` without a user confirm step (and even then only in a later phase if approved).
+- Keep prospect docs **markdown-only** in v1; no new Python package required for Phases 1–2.
+- Optional Hub/sorter wiring is **Phase 3+ only** and must be config-additive (append routes / launcher items) without changing existing targets’ behavior.
+- Keep any future helper modules **under ~500 lines** and inside `Prospect-Businesses/` (or a thin dedicated helper later) — never fuse into `inc_launcher` core or strategy collectors.
+
+##### Modular boundaries (what may change where)
+
+| Area | Phase touch? | Rule |
+|------|--------------|------|
+| `Prospect-Businesses/` (new) | 1–2 | Own README + prospect `.md` files only |
+| `Started-Businesses/` | **Never without user OK** | Read-only for agents; graduation = user-approved copy/move only |
+| `agent-business-idea-runs/` | None (v1) | Leave outputs as history; prospects **link** to dated idea files |
+| `business_research/` | None (v1) | Leave deep plans in place; optional pointer links from a prospect file |
+| `inc_launcher/launcher_config.json` | Phase 3 optional | Additive card/path only; no pillar renumber; no change to Established targets |
+| `business_bookmark_sorter/config/routes.json` | Phase 3 optional | Additive destination only; do not retarget existing routes |
+| Strategy folders / `run_all_strategies.py` / agent prompt | **Out of scope** | Formulation pipeline unchanged |
+
+##### Phases
+
+**Phase 0 — Layout lock (this section)** ✅ (user 2026-07-12: approve + proceed)
+- [x] User approves folder name `Prospect-Businesses/` at repo root
+- [x] User confirms graduation rule (user-only approver)
+- [x] User confirms shortlist cap (~5–10) and “no bulk import”
+
+**Phase 1 — Folder scaffold only (safe / isolated)** ✅ (2026-07-12)
+- [x] **1.1** Create `Prospect-Businesses/` + `README.md` (purpose, cap, graduation rule, link pattern to `business_ideas_YYYYMMDD.md`)
+- [x] **1.2** Add `TEMPLATE.md` for one-prospect files — empty template only
+- [x] **1.3** Smoke: folder exists; README readable; **zero** changes outside this folder (+ `task.md` status only)
+- [x] **1.4** Do **not** seed real prospects yet (unless user names them in the same approval) — **no seeds this pass**
+
+**Phase 2 — Curated seed (user-picked only)** ✅ (2026-07-12 — menu **1**)
+- [x] **2.1** User named: ExamFee Planner, AgentDispute AI, SCIMLite NG (from `business_ideas_20260712.md`)
+- [x] **2.2** Created `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md` — each `status: prospect` + source-run link
+- [x] **2.3** Optional research pointers — none (no matching `business_research/` moves; left blank)
+- [x] **2.4** Smoke: count **3** ≤ cap; each file has graduation disclaimer; `Started-Businesses/` unchanged
+
+**Phase 3 — Optional surfaces (additive; separate approval)**
+- [ ] **3.1** Hub/tray: optional Formulated-ideas card/path open `Prospect-Businesses/` (config append only)
+- [ ] **3.2** Bookmark sorter: optional route destination `Prospect-Businesses/` (append to `routes.json` only)
+- [ ] **3.3** Smoke: existing Hub cards and sorter destinations still resolve; no regression on Established / Formulated cards
+
+**Phase 4 — Graduation protocol (docs only unless user asks for tooling)**
+- [x] **4.1** Documented in `Prospect-Businesses/README.md`: graduation checklist (user says “graduate X” → only then create/update under `Started-Businesses/`)
+- [x] **4.2** Explicit: agents propose graduation in chat/menu; **never** execute without user number/phrase approval
+- [x] **4.3** Out of Phase 4 unless separately approved: any script that copies files into `Started-Businesses/`
+
+##### Layout checklist (maps to phases)
+
+- [x] Phase 1: create folder + README + template
+- [x] Phase 2: seed only user-named prospects (3 files)
+- [ ] Phase 3: optional Hub/sorter wiring (additive)
+- [x] Phase 4: graduation protocol documented; user remains sole approver
+
+##### Out of scope (v1)
+
+- Auto-promotion / auto-graduation scripts
+- Moving all formulation history or `business_research/` into prospects
+- Replacing or rewriting `Started-Businesses/software-development.md`
+- Changing agent formulation prompt, strategy scripts, or `run_all_strategies.py`
+- Making Prospects a 5th Hub pillar (keep under Formulated shortlist unless user later opens a pillar task)
+
+**v1 definition of done:** `Prospect-Businesses/` exists with README + template; ≤10 user-named prospect files; graduation rule documented; no automatic writes to `Started-Businesses/`; no regressions in launcher/sorter/strategy pipelines from Phase 3 (if Phase 3 was skipped, still done after Phase 2).
+
+**Related:** Inc Hub four pillars (this §); Business Bookmark Sorting destinations; agent formulation outputs under `agent-business-idea-runs/outputs/`.
 
 #### Layout (proposed — approve before creating files)
 **Recommendation:** New folder `inc_launcher/` at repo root (`C:\dev\Inc\inc_launcher\`).
@@ -349,7 +437,8 @@ Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `p
 
 | Category | Example Inc destinations |
 |----------|---------------------------|
-| **Business started** | `Started-Businesses/`, live ops folders |
+| **Business started** | `Started-Businesses/`, live ops folders (**user-approved graduation only** from prospects) |
+| **Prospect businesses** | `Prospect-Businesses/` (**proposed 2026-07-12** — curated shortlist; not started yet) |
 | **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md` |
 | **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
 | **My leads** | `abuja_lead_generator/` |
@@ -642,7 +731,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 
 | Pillar | Inc destinations |
 |--------|------------------|
-| **Established** | `Started-Businesses/`, live ops folders |
+| **Established** | `Started-Businesses/`, live ops folders (**user-approved graduation only** from prospects) |
+| **Prospect businesses** | `Prospect-Businesses/` (**proposed 2026-07-12** — curated shortlist) |
 | **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/outputs/business_ideas_*.md`, `past_business_ideas.md` |
 | **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
 | **My leads** | `abuja_lead_generator/` |
@@ -1147,7 +1237,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [x] **6.1** Static checks: registration, prompt include list, no “verbal only” for S1 in runner.
 - [x] **6.2** Automated smokes: non-interactive fixture run; `py_compile`; registration + Phase 2–4 smokes via `test_phase6_regression.py`.
 - [x] **6.3** Spot-check: prior strategies still in `STRATEGY_SCRIPTS`; agent fetch still writes `agent_strategy_inputs_*.json` with S1 + prior keys; launcher `test_config` green.
-- [x] **6.4** `MANUAL_TEST.md` added (Hub / interactive menu / playbook only — Why not automated noted). **User runs once** at sign-off when ready.
+- [x] **6.4** Former Hub/menu/playbook manual steps moved to **`test_signoff_automated.py`** (wired into `test_phase6_regression.py`). `MANUAL_TEST.md` now records **no remaining manual steps** for v1.
 
 **v1 definition of done:** ✅ Strategy 1 is a technical strategy end-to-end (script + runner + agent path + docs); gadget ops untouched; automated regression PASS 2026-07-12. Manual Hub/menu pass optional via `MANUAL_TEST.md`.
 
