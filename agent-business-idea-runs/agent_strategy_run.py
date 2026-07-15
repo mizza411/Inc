@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch RSS/OWID/S1 discovery/S6/S7 inputs for agent formulation runs (strategies 1, 5, 6, 7, 9, 14; optional 15)."""
+"""Fetch RSS/OWID/S1 discovery/S6/S7 inputs for agent formulation runs (strategies 1, 5, 6, 7, 9, 14; optional 12/15)."""
 from __future__ import annotations
 
 import argparse
@@ -8,6 +8,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -19,6 +20,10 @@ INPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
 STRATEGY_1_DIR = REPO_ROOT / "Strategy-1-Business-Variation"
 STRATEGY_1_SCRIPT = STRATEGY_1_DIR / "business_variation_collector.py"
+STRATEGY_12_DIR = (
+    REPO_ROOT / "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering"
+)
+STRATEGY_12_SCRIPT = STRATEGY_12_DIR / "problem_filter.py"
 
 RSS = {
     "nairametrics": "https://nairametrics.com/feed/",
@@ -184,6 +189,73 @@ def run_strategy1_noninteractive(
             "stdout_tail": (proc.stdout or "")[-1500:],
             "stderr_tail": (proc.stderr or "")[-800:],
         }
+    except subprocess.TimeoutExpired as ex:
+        return {
+            "status": "timeout",
+            "timeout_sec": timeout_sec,
+            "stdout_tail": (ex.stdout or "")[-1500:] if ex.stdout else "",
+            "stderr_tail": (ex.stderr or "")[-800:] if ex.stderr else "",
+        }
+    except Exception as ex:
+        return {"status": "error", "error": str(ex)}
+
+
+def run_strategy12_noninteractive(
+    inputs_path: Optional[str] = None,
+    timeout_sec: int = 60,
+) -> dict:
+    """Optional: run Strategy 12 GUEMF filter non-interactively (pre-scored --inputs)."""
+    if not STRATEGY_12_SCRIPT.exists():
+        return {"status": "script_missing", "path": str(STRATEGY_12_SCRIPT)}
+
+    fixture = STRATEGY_12_DIR / "fixtures" / "sample_inputs.json"
+    inputs = Path(inputs_path) if inputs_path else fixture
+    if not inputs.is_file():
+        return {"status": "no_inputs_file", "path": str(inputs)}
+
+    env = os.environ.copy()
+    env["PYTHONIOENCODING"] = "utf-8"
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            out_summary = Path(tmp) / "strategy12_summary.json"
+            proc = subprocess.run(
+                [
+                    sys.executable,
+                    str(STRATEGY_12_SCRIPT),
+                    "--non-interactive",
+                    "--inputs",
+                    str(inputs),
+                    "--output",
+                    str(out_summary),
+                ],
+                cwd=str(tmp),
+                capture_output=True,
+                text=True,
+                timeout=timeout_sec,
+                env=env,
+            )
+            ranked_preview = []
+            selected = []
+            if out_summary.is_file():
+                try:
+                    summary = json.loads(out_summary.read_text(encoding="utf-8"))
+                    ranked_preview = summary.get("ranked_preview") or []
+                    selected = summary.get("selected_indices") or []
+                except Exception:
+                    pass
+            return {
+                "status": "ok" if proc.returncode == 0 else "failed",
+                "inputs": str(inputs),
+                "returncode": proc.returncode,
+                "selected_indices": selected,
+                "ranked_preview": ranked_preview[:10],
+                "stdout_tail": (proc.stdout or "")[-1500:],
+                "stderr_tail": (proc.stderr or "")[-800:],
+                "note": (
+                    "Mode B scoring aid only — agent still must synthesize Mode A "
+                    "(S12-traced GUEMF discovery ideas) per prompt dual-mode."
+                ),
+            }
     except subprocess.TimeoutExpired as ex:
         return {
             "status": "timeout",
@@ -377,7 +449,8 @@ def run_strategy15(timeout_sec: int = 120) -> dict:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Fetch agent formulation inputs (RSS, OWID, S1 seeds, S6/S7; optional Strategy 1/15 runs)."
+            "Fetch agent formulation inputs (RSS, OWID, S1 discovery, S6/S7; "
+            "optional Strategy 1/12/15 runs)."
         )
     )
     parser.add_argument(
@@ -414,6 +487,30 @@ def build_parser() -> argparse.ArgumentParser:
         default=60,
         metavar="SEC",
         help="Strategy 1 subprocess timeout (default: 60).",
+    )
+    parser.add_argument(
+        "--with-strategy12",
+        action="store_true",
+        help=(
+            "Also run Strategy 12 GUEMF --non-interactive --inputs (optional Mode B aid; "
+            "does not replace agent Mode A synthesis)."
+        ),
+    )
+    parser.add_argument(
+        "--strategy12-inputs",
+        default=None,
+        metavar="PATH",
+        help=(
+            "Pre-scored problems JSON for --with-strategy12 "
+            "(default: Strategy 12 fixtures/sample_inputs.json)."
+        ),
+    )
+    parser.add_argument(
+        "--strategy12-timeout",
+        type=int,
+        default=60,
+        metavar="SEC",
+        help="Strategy 12 subprocess timeout (default: 60).",
     )
     return parser
 
@@ -452,6 +549,17 @@ def main(argv: list[str] | None = None) -> int:
             "reason": "use --with-strategy1-run to enable non-interactive collector",
         }
 
+    if args.with_strategy12:
+        payload["strategy_12_run"] = run_strategy12_noninteractive(
+            inputs_path=args.strategy12_inputs,
+            timeout_sec=args.strategy12_timeout,
+        )
+    else:
+        payload["strategy_12_run"] = {
+            "status": "skipped",
+            "reason": "use --with-strategy12 to enable non-interactive GUEMF filter",
+        }
+
     run_s15 = args.with_strategy15 and not args.fetch_only
     if run_s15:
         payload["strategy_15_run"] = run_strategy15(timeout_sec=args.strategy15_timeout)
@@ -467,6 +575,9 @@ def main(argv: list[str] | None = None) -> int:
         f"leads={s1.get('discovery_leads_count', 0)} "
         f"primary={s1.get('primary')} ==="
     )
+
+    s12 = payload.get("strategy_12_run") or {}
+    print(f"\n=== strategy_12_run ({s12.get('status')}) ===")
 
     for block in payload["strategy_5_9_rss"]:
         if "articles" in block:

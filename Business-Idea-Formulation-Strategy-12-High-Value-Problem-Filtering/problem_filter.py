@@ -3,14 +3,33 @@
 Business Idea Formulation Strategy 12: High-Value Problem Filtering
 Hybrid script to score and rank problems by 5 criteria:
 Growing, Urgent, Expensive to Solve, Mandatory, Frequent.
+
+Interactive (default): python problem_filter.py
+Non-interactive:       python problem_filter.py --non-interactive --inputs fixtures/sample_inputs.json
 """
 
+from __future__ import annotations
+
+import argparse
 import json
 import os
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+from guemf_scoring import (
+    CRITERIA,
+    apply_cli_scores,
+    high_value_indices,
+    problems_list_from_payload,
+    rank_problems,
+    require_complete_cli_scores,
+    yn_to_bit,
+)
+
+STRATEGY_DIR = Path(__file__).resolve().parent
 
 
 def open_file_automatically(file_path: str) -> None:
@@ -30,27 +49,19 @@ def open_file_automatically(file_path: str) -> None:
             subprocess.run(["open", str(file_path_obj.resolve())])
         else:
             subprocess.run(["xdg-open", str(file_path_obj.resolve())])
-        
+
         print(f"✓ Opened file automatically: {file_path}")
     except Exception as e:
         print(f"\n⚠ Could not open file automatically ({e}).")
         print(f"Please open manually: {file_path}")
 
 
-CRITERIA = [
-    "Growing",
-    "Urgent",
-    "Expensive to Solve",
-    "Mandatory",
-    "Frequent",
-]
-
-
 class HighValueProblemFilter:
-    def __init__(self):
-        self.problems = []
-        self.selected_indices = []
-        self.output_file = (
+    def __init__(self, *, auto_open: bool = True, output_file: Optional[str] = None):
+        self.problems: List[Dict[str, Any]] = []
+        self.selected_indices: List[int] = []
+        self.auto_open = auto_open
+        self.output_file = output_file or (
             f"high_value_problem_filtering_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         )
 
@@ -102,7 +113,7 @@ class HighValueProblemFilter:
         return problems
 
     def score_problems(self):
-        """Step 2: Score problems against the 5 criteria."""
+        """Step 2: Score problems against the 5 criteria (interactive Y/N)."""
         print("\n" + "=" * 60)
         print("STEP 2: Score Problems (Yes=1 / No=0)")
         print("=" * 60)
@@ -129,16 +140,12 @@ class HighValueProblemFilter:
             )
             print(label)
 
-            total = 0
             scores = {}
             for crit in CRITERIA:
                 ans = input(f"  {crit}? [Y/N]: ").strip().lower()
-                val = 1 if ans in ("y", "yes") else 0
-                scores[crit] = val
-                total += val
+                scores[crit] = yn_to_bit(ans)
 
-            p["criteria_scores"] = scores
-            p["total_score"] = total
+            apply_cli_scores(p, scores)
 
         print("\n✓ Scoring complete.")
 
@@ -152,19 +159,20 @@ class HighValueProblemFilter:
             print("No problems available.")
             return []
 
-        ranked = sorted(self.problems, key=lambda x: x["total_score"], reverse=True)
+        ranked = rank_problems(self.problems)
 
         print("\nProblems ranked by total score (0–5):\n")
         for idx, p in enumerate(ranked, 1):
-            src = f"[{p['source']}]" if p["source"] else ""
+            src = f"[{p['source']}]" if p.get("source") else ""
+            cs = p.get("criteria_scores") or {}
             print(
                 f"{idx}. {src} {p['description']} "
                 f"(Score: {p['total_score']}/5, "
-                f"Growing:{p['criteria_scores'].get('Growing')}, "
-                f"Urgent:{p['criteria_scores'].get('Urgent')}, "
-                f"Expensive:{p['criteria_scores'].get('Expensive to Solve')}, "
-                f"Mandatory:{p['criteria_scores'].get('Mandatory')}, "
-                f"Frequent:{p['criteria_scores'].get('Frequent')})"
+                f"Growing:{cs.get('Growing')}, "
+                f"Urgent:{cs.get('Urgent')}, "
+                f"Expensive:{cs.get('Expensive to Solve')}, "
+                f"Mandatory:{cs.get('Mandatory')}, "
+                f"Frequent:{cs.get('Frequent')})"
             )
 
         return ranked
@@ -205,7 +213,7 @@ class HighValueProblemFilter:
         print(f"\n✓ Selected {len(chosen)} problems for prompt generation.")
         return chosen
 
-    def generate_prompts_file(self):
+    def generate_prompts_file(self, prompts_path: Optional[Path] = None):
         """Step 5: Generate Prompt 1b-style text for selected problems."""
         print("\n" + "=" * 60)
         print("STEP 5: Generate Prompt Text for ChatGPT")
@@ -215,7 +223,7 @@ class HighValueProblemFilter:
             print("No problems selected; skipping prompt generation.")
             return None
 
-        filename = "chatgpt_strategy12_prompts.txt"
+        filename = str(prompts_path) if prompts_path else "chatgpt_strategy12_prompts.txt"
         with open(filename, "w", encoding="utf-8") as f:
             f.write(
                 "PROMPT TEMPLATES for High-Value Problems\n"
@@ -249,12 +257,13 @@ class HighValueProblemFilter:
                 f.write(prompt + "\n\n")
 
         print(f"\n✓ Prompt templates saved to '{filename}'.")
-        print(
-            "\nUse them like this:\n"
-            "- Open ChatGPT.\n"
-            "- Copy one problem block at a time from the file.\n"
-            "- Paste and run to get the full analysis table.\n"
-        )
+        if self.auto_open:
+            print(
+                "\nUse them like this:\n"
+                "- Open ChatGPT.\n"
+                "- Copy one problem block at a time from the file.\n"
+                "- Paste and run to get the full analysis table.\n"
+            )
 
         return filename
 
@@ -264,17 +273,37 @@ class HighValueProblemFilter:
             "strategy": 12,
             "name": "High-Value Problem Filtering",
             "timestamp": datetime.now().isoformat(),
+            "mode": getattr(self, "_run_mode", "interactive"),
             "problems": self.problems,
             "selected_indices": self.selected_indices,
+            "ranked_preview": [
+                {
+                    "description": p.get("description"),
+                    "source": p.get("source"),
+                    "total_score": p.get("total_score"),
+                    "criteria_scores": p.get("criteria_scores"),
+                }
+                for p in rank_problems(self.problems)
+            ],
         }
 
-        with open(self.output_file, "w", encoding="utf-8") as f:
+        out_path = Path(self.output_file)
+        if not out_path.is_absolute():
+            out_path = Path.cwd() / out_path
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(out_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
 
+        self.output_file = str(out_path)
         print(f"\n✓ Summary saved to '{self.output_file}'.")
-        open_file_automatically(self.output_file)
+        if self.auto_open:
+            open_file_automatically(self.output_file)
+        return self.output_file
 
     def run(self):
+        """Interactive default path (unchanged UX for menu / humans)."""
+        self._run_mode = "interactive"
         self.intro()
         self.collect_problems()
         self.score_problems()
@@ -293,9 +322,156 @@ class HighValueProblemFilter:
             "3. Compare which high-value problems are best to build around.\n"
         )
 
+    def run_noninteractive(
+        self,
+        inputs_path: Path,
+        *,
+        select_min_score: Optional[int] = None,
+        selected_indices: Optional[List[int]] = None,
+        prompts_path: Optional[Path] = None,
+    ) -> str:
+        """Load pre-scored problems from JSON; no input()."""
+        self._run_mode = "non-interactive"
+        print("\n" + "=" * 60)
+        print("NON-INTERACTIVE MODE (--non-interactive)")
+        print("=" * 60)
+        print(f"Reading: {inputs_path}")
+
+        raw_text = inputs_path.read_text(encoding="utf-8")
+        payload = json.loads(raw_text)
+        rows = problems_list_from_payload(payload)
+
+        problems: List[Dict[str, Any]] = []
+        for i, row in enumerate(rows):
+            if not isinstance(row, dict):
+                raise ValueError(f"Problem at index {i} must be an object.")
+            desc = (row.get("description") or "").strip()
+            if not desc:
+                raise ValueError(f"Problem at index {i} missing non-empty 'description'.")
+            scores_raw = row.get("criteria_scores")
+            if not isinstance(scores_raw, dict):
+                raise ValueError(
+                    f"Problem at index {i} missing 'criteria_scores' object "
+                    "(non-interactive will not invent Y/N)."
+                )
+            normalized = require_complete_cli_scores(scores_raw)
+            problem: Dict[str, Any] = {
+                "description": desc,
+                "source": row.get("source"),
+                "criteria_scores": {},
+                "total_score": 0,
+                "timestamp": datetime.now().isoformat(),
+            }
+            apply_cli_scores(problem, normalized)
+            problems.append(problem)
+
+        self.problems = problems
+        print(f"✓ Loaded and scored {len(problems)} problems.")
+
+        self.show_ranked_problems()
+
+        min_score = select_min_score
+        if min_score is None and isinstance(payload, dict):
+            min_score = payload.get("select_min_score")
+        if min_score is None:
+            min_score = 4
+
+        if selected_indices is not None:
+            chosen = [i for i in selected_indices if 0 <= i < len(self.problems)]
+        elif isinstance(payload, dict) and isinstance(payload.get("selected_indices"), list):
+            chosen = [
+                int(i)
+                for i in payload["selected_indices"]
+                if isinstance(i, (int, float)) and 0 <= int(i) < len(self.problems)
+            ]
+        else:
+            chosen = high_value_indices(self.problems, min_score=int(min_score))
+
+        self.selected_indices = chosen
+        print(
+            f"✓ Selected {len(chosen)} problem(s) for prompts "
+            f"(min_score={min_score} or explicit indices)."
+        )
+
+        self.generate_prompts_file(prompts_path=prompts_path)
+        out = self.save_summary()
+
+        print("\n" + "=" * 60)
+        print("Non-interactive process complete!")
+        print("=" * 60)
+        return out
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        description="Strategy 12 — High-Value Problem Filtering (GUEMF)",
+    )
+    p.add_argument(
+        "--non-interactive",
+        action="store_true",
+        help="No input() prompts; requires --inputs JSON with complete criteria_scores",
+    )
+    p.add_argument(
+        "--inputs",
+        type=str,
+        default=None,
+        help="Path to inputs JSON (required with --non-interactive)",
+    )
+    p.add_argument(
+        "--output",
+        type=str,
+        default=None,
+        help="Summary JSON output path (default: timestamped file in cwd)",
+    )
+    p.add_argument(
+        "--open",
+        action="store_true",
+        help="Auto-open summary JSON after save (default on for interactive, off for non-interactive)",
+    )
+    p.add_argument(
+        "--select-min-score",
+        type=int,
+        default=None,
+        help="Non-interactive: auto-select problems with total_score >= N (default 4 or inputs JSON)",
+    )
+    return p
+
+
+def main(argv: Optional[List[str]] = None) -> int:
+    args = build_parser().parse_args(argv)
+
+    if args.non_interactive:
+        if not args.inputs:
+            print(
+                "Non-interactive mode requires --inputs <json>.\n"
+                "Example:\n"
+                "  python problem_filter.py --non-interactive "
+                "--inputs fixtures/sample_inputs.json\n"
+                "Schema: fixtures/INPUTS_SCHEMA.md",
+                file=sys.stderr,
+            )
+            return 2
+        inputs_path = Path(args.inputs)
+        if not inputs_path.is_file():
+            print(f"Inputs file not found: {inputs_path}", file=sys.stderr)
+            return 2
+        auto_open = bool(args.open)
+        runner = HighValueProblemFilter(auto_open=auto_open, output_file=args.output)
+        try:
+            runner.run_noninteractive(
+                inputs_path,
+                select_min_score=args.select_min_score,
+            )
+        except (OSError, ValueError, json.JSONDecodeError) as ex:
+            print(f"Non-interactive run failed: {ex}", file=sys.stderr)
+            return 1
+        return 0
+
+    # Interactive default — same as historic menu / bare script launch
+    runner = HighValueProblemFilter(auto_open=True, output_file=args.output)
+    runner.run()
+    return 0
+
 
 if __name__ == "__main__":
-    runner = HighValueProblemFilter()
-    runner.run()
-
-
+    raise SystemExit(main())

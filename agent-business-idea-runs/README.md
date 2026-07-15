@@ -33,6 +33,7 @@ Fetch JSON always includes (when available):
 | `strategy_5_9_rss` | News RSS |
 | `strategy_6_startup_directory` | StartupList Africa snippet |
 | `strategy_7_trending` | Product Hunt RSS |
+| `strategy_12_run` | Optional GUEMF filter subprocess; **skipped** unless `--with-strategy12` (pre-scored `--inputs`; Mode B aid only) |
 | `strategy_14_owid` | OurWorldInData snippets |
 | `strategy_15_run` | Optional; skipped unless `--with-strategy15` |
 
@@ -52,6 +53,12 @@ Optional Strategy 15 subprocess (may hang on clipboard prompts):
 python agent-business-idea-runs/agent_strategy_run.py --with-strategy15
 ```
 
+Optional Strategy 12 GUEMF non-interactive (Mode B aid; does **not** replace Mode A synthesis):
+
+```powershell
+python agent-business-idea-runs/agent_strategy_run.py --with-strategy12
+```
+
 Explicit fetch-only:
 
 ```powershell
@@ -69,6 +76,22 @@ python agent-business-idea-runs/agent_strategy_run.py --fetch-only
 - **CLI:** `--non-interactive --inputs` with `success_url` + `source_url`
 - If online discovery fails: mark **blocked** / **synthesized** with missing-citation note — continue the run
 - Execution summary status values: `ran` / `synthesized` / `skipped` / `blocked`
+
+## Strategy 12 (GUEMF) — dual-mode required
+
+Contract: `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/README.md` (Mode A + Mode B). Backlog: `task.md` §13.
+
+| Mode | Required in agent runs? | What to produce |
+|------|-------------------------|-----------------|
+| **A — Standalone** | **Yes** | Prompt-1a-style GUEMF problem discovery → Nigeria ideas with **primary / S12** strategy trace (same ranked table) |
+| **B — Overlay** | **Yes** | GUEMF **1–5** per criterion + composite (max 25) on ideas from **other** strategies |
+
+- Incomplete S12 = Mode B table columns only (historical “Applied in ranked table” anti-pattern).
+- Execution summary must note **both** Mode A and Mode B legs.
+- Optional CLI aid (does not replace Mode A synthesis):  
+  `python Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/problem_filter.py --non-interactive --inputs …`  
+  (complete `criteria_scores` required; see strategy `fixtures/INPUTS_SCHEMA.md`). Soft-fail / timeout → agent synthesizes.
+- Optional fetch key: `strategy_12_run` via `agent_strategy_run.py --with-strategy12` (default **skipped**; Mode B aid only).
 
 Prompt: `prompts/agent_formulation_run.txt`
 

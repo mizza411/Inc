@@ -833,7 +833,9 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [ ] Output: `cyber_news_problems_YYYYMMDD.json` + Prompt 1a payload scoped to cyber headlines only
 
 **Phase 3 — Optional GUEMF pass**
-- [ ] Pipe Phase 2 output through Strategy **12** for high-value problem scoring
+- [ ] Pipe Phase 2 output through Strategy **12** for high-value problem scoring — prefer CLI  
+  `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/problem_filter.py --non-interactive --inputs <cyber_problems.json>`  
+  once Phase 2 cyber JSON exists (**§13 Phase 1** shipped that path; do not invent a second GUEMF tool).
 
 **Phase 4 — Launcher (optional)**
 - [ ] Shortcut under **Formulated ideas**: “Run cyber news slice (S5+S9)”
@@ -882,6 +884,15 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **Pending (optional, not blocking):** discovery calls on ExamFee / AgentDispute (in prospect `.md` files); graduate only on your explicit OK.  
 **Conversation handoff:** **Safe to delete this chat.** Progress lives in `task.md` §4 Prospect section + this §12 + git — nothing unique remains only in conversation memory.
 
+### 13. Strategy 12 — GUEMF dual-mode (standalone + overlay) (NEW — Jul 2026)
+**Status:** **CLOSED / v1 complete** (2026-07-15) — Phases **0–4** shipped  
+**One-liner:** Make Strategy 12 a real **standalone** GUEMF pipeline (CLI + `run_all_strategies.py`) **and** require multi-strategy agent runs to do **both** (A) S12-origin GUEMF discovery ideas **and** (B) GUEMF overlay scores on other strategies’ ideas.  
+**Full phased backlog:** see **§13** under Notes / formulation tasks below.  
+**User locks (2026-07-15):** Mode A ideas in same ranked table with primary trace `S12`; agent overlay scale **1–5**; cyber §9 Phase 3 may reuse CLI.  
+**Shipped:** contract + `guemf_scoring.py` + `--non-interactive` + prompt Mode A/B + MANUAL_TEST (no user steps) + regression + optional `--with-strategy12` / `strategy_12_run`.  
+**Manual tests (you):** **None** — `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/MANUAL_TEST.md`.  
+**Pending (optional, not blocking):** next agent formulation run so dated Docx shows S12 Mode A rows + dual-leg execution summary.  
+**Conversation handoff:** **Safe to delete this chat** for §13 delivery — tracker + tests + git hold the work.
 
 ---
 
@@ -1386,3 +1397,128 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - **Git:** `d0f6e10`, `4a95968`, `d3db322` on `origin/main`.
 - **Manual tests (you):** **None required** (`inc_launcher/MANUAL_TEST.md` §H).
 - **Safe to delete the chat that delivered Prospect-Businesses + this formulation run handoff.** Optional pending items (discovery calls; commit `business_ideas_20260712.*` if desired; S1 live-cite re-run) are written in §12 / prospect `.md` files — not chat-only.
+
+---
+
+### 13. Strategy 12 — GUEMF dual-mode (standalone + overlay) (NEW — Jul 2026)
+**Status:** **CLOSED / v1 complete** (2026-07-15) — Phases **0–4** shipped  
+**Parent / Current Priority:** §13  
+**Related:** Google Drive “Business 10th — GUEMF” → Strategy **12**; cyber vertical §9 Phase 3 (optional GUEMF pipe — consumer of this work later).
+
+**Goal:** Strategy 12 must work as:
+
+| Mode | Description | Today |
+|------|-------------|--------|
+| **Standalone** | Discover/filter high-value problems via Growing / Urgent / Expensive / Mandatory / Frequent; produce S12 outputs; runnable alone + via `run_all_strategies.py` | `problem_filter.py` exists but **interactive-only** (`input()`); agent does not treat S12 as a generator |
+| **Overlay (B)** | Score ideas from other strategies with GUEMF in agent ranked tables | **Already works** — keep explicit |
+| **Agent dual** | Multi-strategy agent run must do **Mode A** (S12-origin / Prompt-1a-style GUEMF discovery → S12-traced ideas) **and** **Mode B** (overlay) | Prompt lists `12` + “GUEMF-style scoring where relevant” → agents only do **B** |
+
+**User locks (2026-07-15):**
+- Mode A ideas → **same** ranked table; primary strategy trace includes **S12**.
+- Agent GUEMF scale remains **1–5** per criterion (composite sum max 25) to match recent `business_ideas_YYYYMMDD.md`.
+- CLI can keep historic **0–1 / total 0–5** scoring for interactive parity; document mapping to agent 1–5 when synthesizing (do not silently break interactive Y/N UX).
+- Additive modularization — **do not break anything anywhere** (see Safety).
+
+**Layout (locked unless later approved):**
+- Stay in `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/`
+- Prefer **new small modules** over a monolithic rewrite of `problem_filter.py` (e.g. scoring helpers, JSON I/O, argparse entry)
+- Touch also (later phases): `prompts/agent_formulation_run.txt`, `agent-business-idea-runs/README.md`, optional soft key in `agent_strategy_run.py`
+- **Do not** create a second GUEMF product outside Strategy 12
+
+#### Modularization / anti-break rules (apply every phase)
+
+1. **Interactive default preserved** — bare `python problem_filter.py` (and menu launch) still runs today’s `input()` flow until deliberately replaced behind flags.
+2. **New behavior behind flags** — `--non-interactive`, `--inputs`, optional `--output`; never change Run ALL menu contract without a sub-phase.
+3. **One surface per sub-phase** — e.g. scoring helper ≠ prompt text ≠ agent fetch key in the same PR-sized change unless user okays a bundled ship.
+4. **Soft-fail on agent path** — empty S12 Mode A must not abort RSS/OWID/S1/S6/S7/S14/S15; status `synthesized` / `blocked` / `ran` with notes.
+5. **No drive-by refactors** of Strategies 1, 5–7, 9, 11, 13–15, Hub launcher, or gadget ops.
+6. **Automate-first verification** — pytest/smoke in S12 folder; update `MANUAL_TEST.md` only for leftover non-automatable steps.
+
+#### Phase 0 — Spec lock & inventory (docs only; zero runtime risk) ✅
+
+**Why first:** Freeze dual-mode contract before touching CLI so agent prompt and tests share one vocabulary.
+
+- [x] **0.1 — Contract note in S12 README:** Mode A vs Mode B; CLI 0–1 vs agent 1–5 mapping; Mode A ideas in same ranked table with S12 trace (`README.md` — Dual-mode contract).
+- [x] **0.2 — Inventory:** Entrypoints, runner registration, overlay-only prompt phrases — `PHASE0_INVENTORY_AND_ACCEPTANCE.md`.
+- [x] **0.3 — Acceptance sketch:** Executable checklist for Phases 1–4 — same file §0.3.
+
+**Phase 0 definition of done:** ✅ README/contract + inventory/acceptance docs; **no** behavior change to `problem_filter.py`, `run_all_strategies.py`, `agent_strategy_run.py`, or `prompts/agent_formulation_run.txt` (prompt = Phase 2).
+
+**Phase 0 shipped (2026-07-15):** Dual-mode contract + Phase 0 inventory/acceptance; stale README `steps.py` name corrected to `problem_filter.py`.
+
+#### Phase 1 — CLI standalone (non-interactive; modular) ✅
+
+**Goal:** Strategy 12 can score/rank without `input()` so standalone + menu-launched scripts can complete in CI/agent wrappers.
+
+- [x] **1.1 — Extract scoring module** `guemf_scoring.py`: pure normalize/rank/require-complete; CLI↔agent band helpers; no argparse/file side effects.
+- [x] **1.2 — JSON inputs schema** `fixtures/INPUTS_SCHEMA.md` + `fixtures/sample_inputs.json` (complete `criteria_scores` required — no invented Y/N).
+- [x] **1.3 — Wire `--non-interactive --inputs`** on `problem_filter.py`; optional `--output`, `--select-min-score`, `--open`; non-interactive skips auto-open by default.
+- [x] **1.4 — Keep interactive `run()` path** for bare script / `run_all_strategies.py` menu (shared scoring helpers only).
+- [x] **1.5 — Smoke:** `test_strategy12_noninteractive.py` — **7 passed** (2026-07-15).
+
+**Phase 1 definition of done:** ✅ Non-interactive standalone run green; interactive path preserved; menu still points at same script.
+
+**Phase 1 shipped (2026-07-15):** Modular scoring + NI CLI + fixture + smokes. **Does not** change agent Mode A (Phase 2).
+
+#### Phase 2 — Agent prompt dual-mode (Mode A + Mode B) ✅
+
+**Goal:** Multi-strategy agent runs must produce S12-traced ideas **and** keep overlay scoring.
+
+- [x] **2.1 — Update `prompts/agent_formulation_run.txt`:** Explicit Mode A (Prompt 1a-style → S12-traced ideas) **and** Mode B (GUEMF 1–5 overlay); execution summary must note **both** legs; removed overlay-only “where relevant” as sole GUEMF instruction.
+- [x] **2.2 — Update `agent-business-idea-runs/README.md`:** Strategy 12 dual-mode section; optional NI CLI as aid.
+- [x] **2.3 — Static assert:** `test_strategy12_prompt_dual_mode.py` — markers present; old overlay-only phrase absent (**8** S12-related pytest cases incl. Phase 1 when run together, 2026-07-15).
+
+**Phase 2 definition of done:** ✅ Prompt + agent README require dual-mode; next agent formulation run can satisfy Mode A without fetch-runner edits.
+
+**Phase 2 shipped (2026-07-15):** Prompt dual-mode + README + static smoke. Fetch `strategy_12_*` still optional (Phase 4).
+
+#### Phase 3 — Docs, MANUAL_TEST, regression gate ✅
+
+- [x] **3.1 — S12 README script section:** Interactive vs `--non-interactive --inputs` + fixture (shipped Phase 1; still current).
+- [x] **3.2 — `MANUAL_TEST.md`:** Automate-first — **no remaining manual steps** for dual-mode Phases 0–3.
+- [x] **3.3 — Regression bundle:** `test_strategy12_regression.py` (+ NI + prompt smokes) — **10 passed** 2026-07-15; confirms `STRATEGY_SCRIPTS[12]` + neighbors 1,5–7,9,11,13–15; 8/10 retired.
+- [x] **3.4 — Cross-ref:** Cyber §9 Phase 3 note points at S12 NI CLI (consumer later; no cyber code this task).
+
+**Phase 3 definition of done:** ✅ Automated green; docs match; cyber optional consumer noted.
+
+**Phase 3 shipped (2026-07-15):** MANUAL_TEST (no user steps) + regression bundle + cyber one-liner.
+
+#### Phase 4 — Optional soft agent fetch integration ✅
+
+**Goal:** Optional `strategy_12_*` in `agent_strategy_run.py` without aborting the fetch.
+
+- [x] **4.1 — Soft block:** `strategy_12_run` skipped by default; `--with-strategy12` runs non-interactive against fixture / `--strategy12-inputs`; failures → status in JSON only.
+- [x] **4.2 — Mode A remains agent-native** — fetch note states Mode B aid only; does not replace Mode A synthesis.
+- [x] **4.3 — Smoke:** `test_strategy12_fetch_soft.py` (default skip flag; fixture run ok; missing inputs soft status).
+
+**Phase 4 definition of done:** ✅ Optional soft fetch shipped; default agent fetch path unchanged for other keys.
+
+**Phase 4 shipped (2026-07-15):** `--with-strategy12` + `strategy_12_run` in fetch JSON.
+
+#### Explicitly out of scope (this task)
+
+- Replacing or retiring Mode B overlay.
+- Changing strategy numbers/folders; building a separate “GUEMF app.”
+- Rewriting Strategies 1, 5–7, 9, 11, 13–15; Hub Inc formulation front door Phase 5.
+- Cybernews vertical full Phase 3 implementation (may call S12 later).
+- Forcing paid news APIs for Mode A.
+
+#### Checkpoints (user)
+
+- [x] **Approve task entry** — 2026-07-15 (menu “1”).
+- [x] Approve **Phase 0** (docs/contract only) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 1** (CLI modular non-interactive) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 2** (agent prompt dual-mode) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 3** (docs/tests/sign-off) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 4** (optional fetch) — done 2026-07-15 via menu “1”.
+
+**Suggested milestones:** Phase 0–4 ✅ **2026-07-15** — **dual-mode v1 closed.**
+
+**v1 definition of done:** ✅ Standalone NI CLI + interactive preserved; agent prompt requires Mode A+B; soft `strategy_12_run`; automated suite green (`pytest Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering -q` — **13 passed** 2026-07-15). **No human MANUAL_TEST steps.**
+
+#### Conversation close-out (2026-07-15) — §13
+- **Safe to delete this chat.** Tracker = Current Priority §13 + Notes §13; tests = S12 folder `MANUAL_TEST.md` + pytest suite.
+- **Pending (optional only):** Re-run Hub/agent formulation so next `business_ideas_YYYYMMDD` includes S12 Mode A–traced ideas + dual-leg execution summary.
+
+**Related:** Chat 2026-07-15 (GUEMF overlay-only diagnosis + ASCII); `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/`; `prompts/agent_formulation_run.txt`; `run_all_strategies.py` already registers S12; Strategy 1 non-interactive / agent soft-fail patterns (§9 / §11).
+

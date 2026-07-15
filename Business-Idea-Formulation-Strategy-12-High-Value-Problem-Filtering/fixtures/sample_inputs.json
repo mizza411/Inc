@@ -1,0 +1,40 @@
+{
+  "strategy": 12,
+  "note": "Fixture for Strategy 12 --non-interactive --inputs. Every problem must include complete criteria_scores (0/1). Do not invent Y/N at runtime.",
+  "problems": [
+    {
+      "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+      "source": "S5-News-fixture",
+      "criteria_scores": {
+        "Growing": 1,
+        "Urgent": 1,
+        "Expensive to Solve": 1,
+        "Mandatory": 1,
+        "Frequent": 1
+      }
+    },
+    {
+      "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+      "source": "S1-fixture",
+      "criteria_scores": {
+        "Growing": 1,
+        "Urgent": 0,
+        "Expensive to Solve": 1,
+        "Mandatory": 0,
+        "Frequent": 1
+      }
+    },
+    {
+      "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+      "source": "noise-fixture",
+      "criteria_scores": {
+        "Growing": 0,
+        "Urgent": 0,
+        "Expensive to Solve": 0,
+        "Mandatory": 0,
+        "Frequent": 0
+      }
+    }
+  ],
+  "select_min_score": 4
+}
