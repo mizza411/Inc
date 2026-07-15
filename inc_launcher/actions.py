@@ -32,6 +32,18 @@ def run_action(item: Dict[str, Any], inc_root: Path | None = None) -> None:
         _run_command(item["command"], cwd)
     elif action == "cursor":
         _open_in_cursor(root)
+    elif action == "agent_run":
+        from inc_launcher.agent_run import DEFAULT_PASTE_DELAY_SEC, run_agent_formulation
+
+        prompt_path = item.get("prompt_path", "prompts/agent_formulation_run.txt")
+        paste_delay = float(item.get("paste_delay_sec", DEFAULT_PASTE_DELAY_SEC))
+        auto_paste = bool(item.get("auto_paste", True))
+        run_agent_formulation(
+            root,
+            prompt_path=prompt_path,
+            paste_delay_sec=paste_delay,
+            auto_paste=auto_paste,
+        )
     else:
         logger.error("Unknown action type: %s", action)
 

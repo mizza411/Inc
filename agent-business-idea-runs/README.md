@@ -10,6 +10,9 @@ Per-strategy scripts stay in their folders (`Strategy-1-Business-Variation/`, `B
 agent-business-idea-runs/
 ├── README.md                 ← this file
 ├── agent_strategy_run.py     ← RSS + OWID + S1 discovery + S6/S7 (S15 skipped by default)
+├── idea_card_schema.py       ← optional Pass 2 card-label validator (§14 Phase 3)
+├── fixtures/                 ← idea_cards_good.md / idea_cards_bad.md
+├── tests/                    ← pack prompt + schema smokes
 ├── inputs/
 │   └── agent_strategy_inputs_YYYYMMDD_HHMMSS.json
 └── outputs/
@@ -93,7 +96,24 @@ Contract: `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/RE
   (complete `criteria_scores` required; see strategy `fixtures/INPUTS_SCHEMA.md`). Soft-fail / timeout → agent synthesizes.
 - Optional fetch key: `strategy_12_run` via `agent_strategy_run.py --with-strategy12` (default **skipped**; Mode B aid only).
 
-Prompt: `prompts/agent_formulation_run.txt`
+Prompt (Pass 1 Discover): `prompts/agent_formulation_run.txt`  
+Prompt (Pass 2 Pack → Docx): `prompts/agent_formulation_pack.txt` (task.md §14)  
+Contract: `prompts/FORMULATION_PASS_CONTRACT.md`
+
+### Two-pass workflow (§14)
+
+1. **Pass 1** — paste Discover → write/update `outputs/business_ideas_YYYYMMDD.md` (content, ranks, gates). **No Docx open** in this pass (`_PENDING_PASS_2_PACK_`).
+2. **Pass 2** — paste Pack → normalize every idea card to the fixed subheads → **one-shot** `.docx` beside the `.md`.
+
+**Optional schema check (after Pass 2, before Docx):**
+
+```powershell
+python agent-business-idea-runs/idea_card_schema.py agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md
+```
+
+Exit `0` = required labels present on every idea; `1` = gaps. Soft aid only — **not** wired into Hub or `agent_strategy_run.py`.
+
+Hub Phase 5 clipboard-loads Pass 1 by default (**Agent formulation run**, pinned). Pass 2 is an additive Formulated card: **Agent formulation pack (Pass 2)** → `prompts/agent_formulation_pack.txt` (not pinned).
 
 ## Agent output path
 

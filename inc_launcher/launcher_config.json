@@ -67,6 +67,18 @@
           "pinned": true
         },
         {
+          "id": "agent_formulation_pack",
+          "label": "Agent formulation pack (Pass 2)",
+          "action": "agent_run",
+          "prompt_path": "prompts/agent_formulation_pack.txt",
+          "modal_title": "Ready for Pass 2 pack?",
+          "modal_bullets": [
+            "Opens Cursor at the Inc repo",
+            "Pastes pack prompt into chat (~8s)",
+            "Same dated .md \u2192 uniform cards \u2192 Docx once"
+          ]
+        },
+        {
           "label": "Run all strategies (CLI menu)",
           "action": "command",
           "command": "python run_all_strategies.py",

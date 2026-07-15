@@ -894,6 +894,15 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **Pending (optional, not blocking):** next agent formulation run so dated Docx shows S12 Mode A rows + dual-leg execution summary.  
 **Conversation handoff:** **Safe to delete this chat** for §13 delivery — tracker + tests + git hold the work.
 
+### 14. Agent formulation — Pass 1 Discover / Pass 2 Pack (prompt split) (NEW — Jul 2026)
+**Status:** **CLOSED / v1 complete** (2026-07-15) — Phases **0–5** shipped  
+**One-liner:** Split the mega agent formulation prompt into **Pass 1 (Discover & rank)** + **Pass 2 (Normalize/pack → Docx)** so every idea card keeps the same subheads (esp. **Regulatory**, **Competitors / alternatives**), without breaking Hub, strategy CLIs, §11/§13 gates, or existing one-file paste workflows.  
+**Full phased backlog:** see **§14** under Notes / formulation tasks below.  
+**Why:** `business_ideas_20260715` was gate-complete but card formatting/distribution drifted vs Jul 13. Root cause = one overloaded prompt.  
+**Shipped:** contract; pack prompt; Discover defers Docx; `idea_card_schema.py`; Hub Pass 2 card; Phase 5 proof pack of `business_ideas_20260715.md` (schema PASS 12 + Docx).  
+**Manual tests (you):** **None** beyond deferred Cursor Enter — `agent-business-idea-runs/MANUAL_TEST.md`.  
+**Conversation handoff:** **Safe to delete this chat** for §14 delivery — tracker + tests + prompts/Hub hold the work.
+
 ---
 
 ## 📋 General Maintenance Tasks
@@ -1521,4 +1530,150 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - **Pending (optional only):** Re-run Hub/agent formulation so next `business_ideas_YYYYMMDD` includes S12 Mode A–traced ideas + dual-leg execution summary.
 
 **Related:** Chat 2026-07-15 (GUEMF overlay-only diagnosis + ASCII); `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/`; `prompts/agent_formulation_run.txt`; `run_all_strategies.py` already registers S12; Strategy 1 non-interactive / agent soft-fail patterns (§9 / §11).
+
+---
+
+### 14. Agent formulation — Pass 1 Discover / Pass 2 Pack (prompt split) (NEW — Jul 2026)
+**Status:** **CLOSED / v1 complete** (2026-07-15) — Phases **0–5** ✅  
+**Parent / Current Priority:** §14  
+**Related:** Inc Hub Phase 5; §11 S1; §13 S12; `agent-business-idea-runs/`; Docx via `business_bookmark_sorter/docx_export.py`.  
+**Artifacts:** `prompts/FORMULATION_PASS_CONTRACT.md`; `prompts/agent_formulation_pack.txt`; Discover defer Docx; `idea_card_schema.py`; Hub `agent_formulation_pack`; proof `business_ideas_20260715.md` packed.
+
+**Goal:** Restore **consistent idea-card distribution** in `business_ideas_YYYYMMDD.md` / `.docx` by splitting agent work into two jobs:
+
+| Pass | Job | Output duty |
+|------|-----|-------------|
+| **1 — Discover** | Strategies, evidence, invent, score, dedup, rank, Best ideas, execution summary | Content-complete draft `.md` (uneven cards OK) |
+| **2 — Pack** | Rewrite **every** ranked idea to a **fixed subhead checklist**; then Docx **once** | Packed `.md` + paired `.docx` |
+
+**Diagnosis locked (2026-07-15):** Jul 15 run was §13-gate-complete but idea details dropped per-card **Regulatory**, uneven **Competitors** shape vs Jul 13 — one mega-prompt over-optimized for gates over schema.
+
+**User locks (2026-07-15):**
+- Prefer **two different jobs**, not two copies of the same mega-prompt.
+- Required card labels (exact / near-exact): Problem (or S1 Formula+citations), Solution, Target, MVP cost, **Regulatory**, **Competitors / alternatives** (2–4 + per-item why-Nigeria-buyer line), GUEMF (Mode A or B), Commercial viability, Dedup, Founder fit.
+- S1 / S12 Mode A extras are **add-ons**, never replacements for the shared list.
+- Incomplete Pass 2 = any ranked idea missing Regulatory, Competitors block, Solution, Target, or MVP cost.
+- Docx convert/open stays **Pass 2 only**, one-shot (existing rule).
+
+**Layout (locked unless later approved):**
+- Keep prompts under repo-root `prompts/`
+- **Add** `prompts/agent_formulation_pack.txt` (Pass 2) — do **not** delete `agent_formulation_run.txt` in early phases
+- Pass 1 stays the discover file (`agent_formulation_run.txt` after Phase 2 trim, or alias kept for Hub default)
+- Optional validator module under `agent-business-idea-runs/` only (new small file) — **not** inside strategy folders
+- Docs: `prompts/README.md`, `agent-business-idea-runs/README.md`
+- **Do not** create a third formulation product or a second outputs folder
+
+#### Modularization / anti-break rules (apply every phase)
+
+1. **Hub default preserved until Phase 4** — `inc_launcher` `DEFAULT_PROMPT_PATH` / card `agent_formulation_run` continues to load `prompts/agent_formulation_run.txt` until an explicit additive Hub sub-phase ships.
+2. **Additive files first** — new pack prompt + docs before rewriting discover prompt; never “swap path + rewrite” in one hop.
+3. **No strategy-script edits** — do not touch `Business-Idea-Formulation-Strategy-*/`, `run_all_strategies.py`, or gadget ops for this task.
+4. **Preserve §11 / §13 gates** — Pass 1 keeps S1 online cites + S12 Mode A (≥2 primary S12) + Mode B overlay; moving text between files must not drop gates.
+5. **One surface per sub-phase** — pack prompt ≠ discover trim ≠ schema validator ≠ Hub second card, unless user okays a bundled ship.
+6. **Soft-fail / non-abort** — Pass 2 must not invent fake competitors or silently change ranks; soft-fail missing fields = mark incomplete and fill from Pass 1 evidence, or note gap.
+7. **Automate-first** — static asserts on prompt files + optional markdown schema smoke; `MANUAL_TEST.md` only for leftover non-automatable Hub UX.
+8. **No drive-by** Hub Phase 5 rewrite, Prospect folder changes, or Docx exporter refactors beyond calling existing `regenerate_and_open_docx`.
+
+#### Phase 0 — Spec lock & inventory (docs only; zero runtime risk) ✅
+
+**Why first:** Freeze idea-card contract + Pass duties before editing either prompt so Hub and smokes share one vocabulary.
+
+- [x] **0.1 — Idea-card contract** in `prompts/FORMULATION_PASS_CONTRACT.md` (§0.1): required subheads; S1/S12 add-ons; incomplete definition; Pass 1 vs Pass 2 ownership table.
+- [x] **0.2 — Inventory:** Who loads `agent_formulation_run.txt` today — Hub `agent_run.py` / `actions.py` / pinned card, README pointers, §11/§13 prompt smokes (`FORMULATION_PASS_CONTRACT.md` §0.2).
+- [x] **0.3 — Acceptance sketch:** Executable checklist for Phases 1–5 — same file §0.3.
+- [x] **0.4 — README pointer:** `prompts/README.md` lists contract + notes Pass 2 file not created yet.
+
+**Phase 0 definition of done:** ✅ Contract + inventory + acceptance docs; **no** edits to Hub config, `agent_formulation_run.txt` body, strategy scripts, or `agent_strategy_run.py`.
+
+**Phase 0 shipped (2026-07-15):** `prompts/FORMULATION_PASS_CONTRACT.md` + README pointer.
+
+#### Phase 1 — Add Pass 2 pack prompt (additive; discover unchanged) ✅
+
+**Goal:** Ship a standalone pack prompt agents can paste second, without changing Pass 1 or Hub.
+
+- [x] **1.1 — Create** `prompts/agent_formulation_pack.txt`: fixed card checklist; Best ideas must reference packed details; Docx one-shot only after all cards pass; no new invent/re-rank by default.
+- [x] **1.2 — README one-liners:** `prompts/README.md` documents Pass 1 file vs Pass 2 file and run order; agent README points at pack file.
+- [x] **1.3 — Static smoke:** `agent-business-idea-runs/tests/test_formulation_pack_prompt.py` — pack markers + discover still present; §13 dual-mode prompt smoke still green.
+
+**Phase 1 definition of done:** ✅ Pack file exists + documented + static assert green; Hub still single-prompt; discover mega-prompt **unchanged**.
+
+**Phase 1 shipped (2026-07-15):** Pack prompt + README + smoke (3 passed with S12 dual-mode smoke).
+
+#### Phase 2 — Slim Pass 1 discover prompt (content only; Docx deferred) ✅
+
+**Goal:** Move schema-lock + Docx ownership out of Pass 1 so discover stops competing with formatting.
+
+- [x] **2.1 — Trim** `agent_formulation_run.txt`: keep strategies, S1, S12 dual-mode, dedup, Best ideas, ranked table, viability, execution summary; ends with Pass 2 pack required + `agent_formulation_pack.txt`; Docx status `_PENDING_PASS_2_PACK_`; no Pass 1 convert/open.
+- [x] **2.2 — §11/§13 preserved** — dual-mode + S1 markers still present (`test_strategy12_prompt_dual_mode.py` + pack discover asserts green).
+- [x] **2.3 — Agent README:** Two-pass workflow documented; same outputs path.
+
+**Phase 2 definition of done:** ✅ Discover is content/gate-focused; pack owns card uniformity + Docx; §13 prompt tests still pass.
+
+**Phase 2 shipped (2026-07-15):** Discover deferral + README + smoke updates.
+
+#### Phase 3 — Optional schema validator (modular aid; non-blocking) ✅
+
+**Goal:** Automate “does this `.md` have Regulatory + Competitors on every idea?” so Pass 2 gaps are detectable without human reading.
+
+- [x] **3.1 — New module** `agent-business-idea-runs/idea_card_schema.py`: parse Idea details cards; require Solution/Target/MVP cost/Regulatory/Competitors (+ Problem spine); exit non-zero on miss — **read-only**.
+- [x] **3.2 — Fixture smoke:** `fixtures/idea_cards_good.md` + `idea_cards_bad.md`; `tests/test_idea_card_schema.py` (4 passed).
+- [x] **3.3 — Soft integration:** README + pack prompt “run after Pass 2 before Docx”; **not** in Hub Start; **not** in `agent_strategy_run.py` (asserted in smoke).
+
+**Phase 3 definition of done:** ✅ Validator exists + tested; Hub/fetch paths unchanged.
+
+**Phase 3 shipped (2026-07-15):** Schema CLI + fixtures + MANUAL_TEST (no user steps).
+
+#### Phase 4 — Hub / clipboard (additive; optional second card) ✅
+
+**Goal:** Make two-pass usable from Inc Hub **without** breaking the existing Agent formulation run.
+
+- [x] **4.1 — Keep** primary card `agent_formulation_run` → Pass 1 discover path (same id / action / pinned).
+- [x] **4.2 — Add** `agent_formulation_pack` → `prompt_path` `agent_formulation_pack.txt`; custom `modal_title` / `modal_bullets`; **not** pinned.
+- [x] **4.3 — Tests:** config + `test_agent_run` pack path + phase5 pack modal/load asserts; Discover pin preserved.
+- [x] **4.4 — Fallback:** paste-two-files still valid via `prompts/`.
+
+**Phase 4 definition of done:** ✅ Hub supports both prompts additively; Discover stays primary pin.
+
+**Phase 4 shipped (2026-07-15):** Formulated Pass 2 card + modal item overrides.
+
+#### Phase 5 — Docs, MANUAL_TEST, regression, sign-off ✅
+
+- [x] **5.1 — Cross-READMEs** aligned (`prompts/`, `agent-business-idea-runs/`, Hub README).
+- [x] **5.2 — `MANUAL_TEST.md`:** Automate-first; leftover = Cursor Enter send only.
+- [x] **5.3 — Regression bundle:** pack asserts + §13 dual-mode + schema + Hub config/agent_run (2026-07-15). Tk modal tests may need a healthy local Tk install.
+- [x] **5.4 — Proof run:** Pass 2 packed `business_ideas_20260715.md` → `idea_card_schema` **PASS (12)** → Docx one-shot OK.
+
+**Phase 5 definition of done:** ✅ Automated green for formulation surfaces; proof shows uniform cards; §14 v1 closed.
+
+**Phase 5 shipped (2026-07-15):** Sign-off + Jul 15 packed Docx proof.
+
+#### Checkpoints (user)
+
+- [x] **Approve task entry** — 2026-07-15 (menu “2”).
+- [x] Approve **Phase 0** (docs/contract only) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 1** (add pack prompt; discover unchanged) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 2** (slim discover; Docx→Pass 2) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 3** (optional schema validator) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 4** (Hub second card) — done 2026-07-15 via menu “1”.
+- [x] Approve **Phase 5** (docs/tests/sign-off + optional proof run) — done 2026-07-15 via menu “1”.
+
+**Suggested milestones (from 2026-07-15):**
+- Phase 0–5: ✅ **2026-07-15** — **§14 packaging v1 closed.**
+
+**v1 definition of done:** ✅ Pass 2 pack file; Pass 1 discover defers Docx; schema validator; Hub Pass 2 card; static/Hub smokes; proof packed Docx. §11/§13 markers preserved.
+
+#### Explicitly out of scope (this task)
+
+- Rewriting strategy CLIs or `run_all_strategies.py`.
+- Changing S12 Mode A/B semantics (§13) or S1 online-discovery rules (§11).
+- Replacing Docx library / multi-convert loops.
+- Auto-committing formulation outputs.
+- Forcing Pass 2 to invent new ideas or re-rank.
+- Hub auto-chaining Pass 1→2 without user Start (nice-to-have later).
+
+#### Conversation close-out (2026-07-15) — §14
+- **Safe to delete this chat.** Tracker = Current Priority §14 + Notes §14; tests = `agent-business-idea-runs/MANUAL_TEST.md` + Hub Phase 5 tests.
+- **Ongoing use:** Hub **Agent formulation run** (Pass 1) → then **Agent formulation pack (Pass 2)**; optional `idea_card_schema.py` before Docx.
+
+**Related:** Chat 2026-07-15 (Docx quality / prompt split); `prompts/agent_formulation_run.txt` + `agent_formulation_pack.txt`; Jul 13 vs Jul 15 idea-detail shape.
 

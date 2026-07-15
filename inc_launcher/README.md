@@ -63,8 +63,9 @@ Action types: `folder`, `file`, `url`, `command`, `cursor`, `agent_run`.
 
 | Step | What happens |
 |------|----------------|
-| Hub or tray → **Agent formulation run** | Opens/focuses **Inc Hub** and shows **Option B** confirmation modal |
-| **Start** | Loads `prompts/agent_formulation_run.txt` → clipboard → opens Cursor on repo → auto-paste (~8s) if `pyautogui` installed |
+| Hub or tray → **Agent formulation run** | Opens/focuses **Inc Hub** and shows **Option B** confirmation modal (Pass **1** Discover) |
+| Hub → **Agent formulation pack (Pass 2)** | Same flow with `prompts/agent_formulation_pack.txt` (card schema → Docx once) |
+| **Start** | Loads the card’s `prompt_path` (default Discover) → clipboard → opens Cursor on repo → auto-paste (~8s) if `pyautogui` installed |
 | **Not now** | Dismisses modal; nothing runs |
 | You | Focus Cursor chat if needed → **Enter** to send |
 
@@ -79,9 +80,22 @@ Action types: `folder`, `file`, `url`, `command`, `cursor`, `agent_run`.
 }
 ```
 
-Optional keys on the item: `prompt_path`, `paste_delay_sec` (default 8), `auto_paste` (default true).
+Pass 2 (additive; not pinned — Discover stays primary):
 
-**Edit the prompt** in `prompts/agent_formulation_run.txt` — not in Python.
+```json
+{
+  "id": "agent_formulation_pack",
+  "label": "Agent formulation pack (Pass 2)",
+  "action": "agent_run",
+  "prompt_path": "prompts/agent_formulation_pack.txt",
+  "modal_title": "Ready for Pass 2 pack?",
+  "modal_bullets": ["…"]
+}
+```
+
+Optional keys on the item: `prompt_path`, `paste_delay_sec` (default 8), `auto_paste` (default true), `modal_title`, `modal_bullets`.
+
+**Edit prompts** under `prompts/` — not in Python. See `task.md` §14.
 
 Legacy CLI runner remains as **Run all strategies (CLI menu)**.
 

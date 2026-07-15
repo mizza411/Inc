@@ -1,5 +1,90 @@
 ﻿# Technical Intuition Log
 
+## 2026-07-15 — Formulation §14 Phase 5 (v1 closed)
+
+**What we did**
+- Closed §14: regression docs/MANUAL_TEST; Pass 2 packed all 12 Jul 15 idea cards to fixed subheads; `idea_card_schema` PASS; one-shot Docx.
+- Marked Current Priority §14 CLOSED / v1 complete.
+
+**Why it matters**
+The split is now the default operating model: Discover invents, Pack enforces Regulators/Competition shape, Hub has both buttons.
+
+**Intuition analogy**
+Like shipping a restaurant with a written menu and a plated photo for every dish—guests finally see the same garnish on every plate.
+
+---
+
+## 2026-07-15 — Formulation §14 Phase 4 (Hub Pass 2 card)
+
+**What we did**
+- Added Formulated Hub card `agent_formulation_pack` pointing at `prompts/agent_formulation_pack.txt`; Discover stays pinned primary.
+- Extended Option B modal with optional `modal_title` / `modal_bullets` per item; tests for pack path + modal copy.
+
+**Why it matters**
+You can start Pass 2 from the tray/Hub the same way as Discover, without swapping the default clipboard path.
+
+**Intuition analogy**
+Like a second labeled button on a label printer—one prints the picking list, the other prints the shipping label—same machine, different roll.
+
+---
+
+## 2026-07-15 — Formulation §14 Phase 3 (idea card schema)
+
+**What we did**
+- Added `agent-business-idea-runs/idea_card_schema.py` (read-only required-label check on Idea details).
+- Fixtures good/bad + pytest CLI exit codes; documented soft “after Pass 2 before Docx”; left Hub and `agent_strategy_run.py` unwired.
+
+**Why it matters**
+You can catch missing Regulatory/Competitors before Word opens, without making fetch or Hub fail.
+
+**Intuition analogy**
+Like a barcode scanner at the dock door: the truck still leaves on schedule if you skip the scan, but scanning stops short boxes from reaching the customer.
+
+---
+
+## 2026-07-15 — Formulation §14 Phase 2 (Discover defers Docx)
+
+**What we did**
+- Trimmed `prompts/agent_formulation_run.txt` so Pass 1 finishes the `.md` only (`_PENDING_PASS_2_PACK_`) and points at `agent_formulation_pack.txt` for card schema + one-shot Docx.
+- Kept §11/§13 markers; updated agent/prompts READMEs and pack smoke asserts for the deferral.
+
+**Why it matters**
+Discover can stay dense on strategy gates without also racing to format every Regulatory/Competitors line—Pack owns Word quality.
+
+**Intuition analogy**
+Like separating recipe development from plating: the kitchen still invents the dish; the pass window won’t ring until every plate has the same garnish set.
+
+---
+
+## 2026-07-15 — Formulation §14 Phase 1 (Pass 2 pack prompt)
+
+**What we did**
+- Added `prompts/agent_formulation_pack.txt` (fixed idea-card subheads + Docx once; no invent/re-rank).
+- Documented Pass 1→2 order in `prompts/README.md`; pointed agent README at the pack file.
+- Added `agent-business-idea-runs/tests/test_formulation_pack_prompt.py`; left Hub + discover mega-prompt unchanged.
+
+**Why it matters**
+Agents can now run a second job whose only job is uniform Regulators/Competition cards, without risking the pinned Hub discover path.
+
+**Intuition analogy**
+Like adding a dedicated packing station after assembly—assembly can stay messy; packing still enforces the shipping checklist before the lid closes.
+
+---
+
+## 2026-07-15 — Formulation §14 Phase 0 (Pass 1/2 contract)
+
+**What we did**
+- Added `prompts/FORMULATION_PASS_CONTRACT.md`: Pass 1 Discover vs Pass 2 Pack ownership, required idea-card subheads (Regulatory + Competitors on every card), incomplete rules, Hub/loader inventory, Phases 1–5 acceptance sketch.
+- Pointed `prompts/README.md` at the contract; marked `task.md` §14 Phase 0 done without editing the mega discover prompt or Hub.
+
+**Why it matters**
+Locks the “same subheads every idea” definition before any prompt split, so later pack/discover edits and Hub changes share one checklist and do not break pinned agent-run loaders.
+
+**Intuition analogy**
+Like posting the packing list on the warehouse wall before you redesign the shipping labels—everyone agrees what goes in every box before anybody remaps the conveyor.
+
+---
+
 ## 2026-07-12 — Strategy 1 §11 Phase D (sign-off)
 
 **What we did**

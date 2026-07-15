@@ -71,6 +71,11 @@ def _toggle_interval_nudges() -> None:
 def _item_handler(item: Dict[str, Any]) -> Callable[[], None]:
     def _run() -> None:
         try:
+            if item.get("action") == "agent_run":
+                from inc_launcher.hub_window import open_hub_with_agent_run
+
+                open_hub_with_agent_run(load_config(_config_path), item)
+                return
             run_action(item, INC_ROOT)
         except Exception as exc:
             logger.exception("Action failed for %s: %s", item.get("label"), exc)

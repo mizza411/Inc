@@ -48,8 +48,18 @@ def test_formulated_has_agent_formulation_run():
     agent = by_id["agent_formulation_run"]
     assert agent["action"] == "agent_run"
     assert agent.get("pinned") is True
+    assert "agent_formulation_pack" in by_id
+    pack = by_id["agent_formulation_pack"]
+    assert pack["action"] == "agent_run"
+    assert pack.get("prompt_path") == "prompts/agent_formulation_pack.txt"
+    assert pack.get("pinned") is not True
     labels = [item["label"] for item in formulated.get("items", [])]
     assert "Run all strategies (CLI menu)" in labels
+    assert "Agent formulation pack (Pass 2)" in labels
+    # Discover card remains before Pack in Formulated pillar
+    assert labels.index("Agent formulation run") < labels.index(
+        "Agent formulation pack (Pass 2)"
+    )
     assert "strategy1_run" in by_id
     s1 = by_id["strategy1_run"]
     assert s1["action"] == "command"

@@ -11,6 +11,7 @@ from tkinter import ttk
 from typing import Any, Callable, Dict, List, Optional
 
 from inc_launcher.actions import run_action
+from inc_launcher.agent_run_modal import show_agent_run_modal
 from inc_launcher.config import INC_ROOT, list_pillars
 from inc_launcher.recent import list_pinned, load_recent, record_recent
 
@@ -36,6 +37,7 @@ class HubController:
         self._config: Dict[str, Any] = {}
         self._window: Optional["HubWindow"] = None
         self._root: tk.Tk | None = None
+        self._pending_agent_run: Dict[str, Any] | None = None
 
     def show(self, config: Dict[str, Any]) -> None:
         self._config = config
@@ -47,6 +49,19 @@ class HubController:
             self._ready.wait(timeout=10)
         assert self._queue is not None
         self._queue.put("show")
+
+    def prompt_agent_run(self, config: Dict[str, Any], item: Dict[str, Any]) -> None:
+        """Open Hub and show Option B modal (tray or external callers)."""
+        self._config = config
+        self._pending_agent_run = item
+        if self._thread is None or not self._thread.is_alive():
+            self._queue = queue.Queue()
+            self._ready.clear()
+            self._thread = threading.Thread(target=self._run_loop, daemon=True, name="inc-hub")
+            self._thread.start()
+            self._ready.wait(timeout=10)
+        assert self._queue is not None
+        self._queue.put("show_agent_run")
 
     def _run_loop(self) -> None:
         self._root = tk.Tk()
@@ -65,6 +80,12 @@ class HubController:
                 continue
             if cmd == "show":
                 self._open_window()
+            elif cmd == "show_agent_run":
+                self._open_window()
+                if self._window is not None and self._pending_agent_run is not None:
+                    item = self._pending_agent_run
+                    self._pending_agent_run = None
+                    self._window.show_agent_run_for_item(item)
             elif cmd == "hide":
                 if self._window is not None:
                     self._window.withdraw()
@@ -184,7 +205,7 @@ class HubWindow(tk.Toplevel):
         # Content area with scroll
         content_outer = tk.Frame(self, bg=CONTENT_BG)
         content_outer.grid(row=0, column=1, sticky="nsew", padx=0, pady=0)
-        content_outer.rowconfigure(1, weight=1)
+        content_outer.rowconfigure(2, weight=1)
         content_outer.columnconfigure(0, weight=1)
 
         self._header = tk.Label(
@@ -205,7 +226,7 @@ class HubWindow(tk.Toplevel):
             font=("Segoe UI", 10),
             anchor="w",
         )
-        self._subtitle.grid(row=0, column=0, sticky="ew", padx=24, pady=(44, 12))
+        self._subtitle.grid(row=1, column=0, sticky="ew", padx=24, pady=(0, 8))
 
         canvas = tk.Canvas(content_outer, bg=CONTENT_BG, highlightthickness=0)
         scrollbar = ttk.Scrollbar(content_outer, orient="vertical", command=canvas.yview)
@@ -216,8 +237,8 @@ class HubWindow(tk.Toplevel):
         )
         canvas.create_window((0, 0), window=self._grid_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
-        canvas.grid(row=1, column=0, sticky="nsew", padx=(24, 0), pady=(0, 24))
-        scrollbar.grid(row=1, column=1, sticky="ns", pady=(0, 24))
+        canvas.grid(row=2, column=0, sticky="nsew", padx=(24, 0), pady=(0, 24))
+        scrollbar.grid(row=2, column=1, sticky="ns", pady=(0, 24))
 
         def _on_mousewheel(event: tk.Event) -> None:
             canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
@@ -299,7 +320,7 @@ class HubWindow(tk.Toplevel):
         self._grid_frame.columnconfigure(col, weight=1)
 
         action = item.get("action", "")
-        icon = {"folder": "📁", "file": "📄", "url": "🔗", "command": "▶", "cursor": "⌨"}.get(action, "•")
+        icon = {"folder": "📁", "file": "📄", "url": "🔗", "command": "▶", "cursor": "⌨", "agent_run": "🤖"}.get(action, "•")
 
         tk.Label(
             frame,
@@ -347,11 +368,30 @@ class HubWindow(tk.Toplevel):
 
     def _run_item(self, item: Dict[str, Any]) -> None:
         try:
+            if item.get("action") == "agent_run":
+                show_agent_run_modal(
+                    self,
+                    item,
+                    on_started=lambda: self._after_agent_run_started(item),
+                )
+                return
             run_action(item, INC_ROOT)
             record_recent(item, self._active_pillar_id)
             self._render_content()
         except Exception as exc:
             logger.exception("Hub action failed for %s: %s", item.get("label"), exc)
+
+    def show_agent_run_for_item(self, item: Dict[str, Any]) -> None:
+        """Show Option B modal when Hub was opened from tray for agent run."""
+        show_agent_run_modal(
+            self,
+            item,
+            on_started=lambda: self._after_agent_run_started(item),
+        )
+
+    def _after_agent_run_started(self, item: Dict[str, Any]) -> None:
+        record_recent(item, self._active_pillar_id)
+        self._render_content()
 
     def _handle_close(self) -> None:
         if self._on_close:
@@ -369,3 +409,11 @@ def show_hub(config: Dict[str, Any]) -> None:
     if _hub_controller is None:
         _hub_controller = HubController()
     _hub_controller.show(config)
+
+
+def open_hub_with_agent_run(config: Dict[str, Any], item: Dict[str, Any]) -> None:
+    """Open Hub and show agent formulation confirmation modal."""
+    global _hub_controller
+    if _hub_controller is None:
+        _hub_controller = HubController()
+    _hub_controller.prompt_agent_run(config, item)

@@ -25,6 +25,7 @@ python -m pytest business_bookmark_sorter/tests/test_cli_status.py -q
 | Phase 2 hub + menu build | `smoke_hub.py`, `test_config.py` |
 | Track C bookmark review menu | `test_track_c_bookmark.py`, `test_config.py::test_formulated_has_bookmark_review` |
 | Phase 5 agent run orchestration | `test_agent_run.py`, `test_phase5_signoff.py`, `test_config.py::test_formulated_has_agent_formulation_run` |
+| §14 Pass 2 Hub pack card | same + pack `prompt_path` / modal bullets asserts |
 | Bookmark queue counts | `test_cli_status.py`, `python -m business_bookmark_sorter status` |
 
 **Automated pass recorded:** 2026-06-30 (pytest 57+ green; smoke_hub passed; Phase 5 signoff).  
