@@ -587,50 +587,50 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 
 ---
 
-### 6. Abuja PropTech B2B — Verify-Ops (Phase 1)
-**Status:** Research complete (B2B pivot) — **implementation not started**  
-**Goal:** **B2B verify-ops infrastructure** for FCT intermediaries — agents, Kuje/Lugbe developers, law firms submit plots via partner portal; you orchestrate AGIS + lawyer/surveyor → **48h white-label PDF** (**₦35k–₦50k**/report wholesale). **End-buyers are their clients, not yours.**  
-**Folder:** `Abuja-Real-Estate-Research/` (research); build TBD under `abuja_land_verify/` or similar when kickoff  
+### 6. Abuja PropTech B2B — Land Sales OS (internal org SaaS)
+**Status:** Research updated for **internal-org SaaS** — **implementation not started**  
+**Goal:** Sell a **digital application for real estate organizations’ internal use** — **Land Sales OS** (CRM + diligence checklist + deal room + doc vault + buyer-pack PDF). Customers = **Kuje/Lugbe developers** first, then agencies. **Their staff** run workflows; you do **not** fulfill AGIS trips or sell to end-buyers.  
+**Folder:** `Abuja-Real-Estate-Research/` (research); build TBD under `abuja_land_sales_os/` or similar when kickoff  
 **Spec:** [abuja-real-estate-profitable-sub-niches.md](../Abuja-Real-Estate-Research/abuja-real-estate-profitable-sub-niches.md) §3.10 · §6  
-**GTM:** `abuja_lead_generator/` → **paying B2B accounts** (agents + developers), not diaspora retail  
-**Later phases (defer):** broker comps dashboard (Phase 2), white-label PM module (Phase 3), `titletrail.ng` escrow (Phase Later); NLRDTP/AGIS API as partnership narrative only — not v1 product
+**GTM:** `abuja_lead_generator/` → **paying developer orgs** (teams with many plots/month), not diaspora retail, not AGIS fulfillment  
+**Later phases (defer):** comps/pricing module (Phase 2), PM workspace module (Phase 3), `titletrail.ng` escrow (Phase Later); national MLS / NLRDTP API — not v1
 
-#### Phase 1 — B2B verify-ops portal (target: first **paying partner account** by **Day 21** from kickoff)
+#### Phase 1 — Land Sales OS MVP (target: first **paying org subscription** by **Day 30** from kickoff)
 
-**Week 1 — Partners, portal & contracts**
-- [ ] Sign MOU with **1 FCT property lawyer** + **1 licensed surveyor** (per-report fees or rev share)
-- [ ] CAC registration — **B2B PropTech / verification ops** (not brokerage; not consumer-facing brand)
-- [ ] Partner portal MVP: login, case submit (district, plot #, file #, uploads), case status
-- [ ] White-label PDF report template (Proceed / Conditions / Do not proceed) + partner branding option
-- [ ] B2B pricing sheet: **₦35k–₦50k**/report wholesale; 10-report pack discount
-- [ ] Partner agreement: wholesale terms, white-label rights, SLA, liability disclaimer
+**Week 1 — Product scaffold & packaging**
+- [ ] CAC registration — **B2B PropTech / software** (not brokerage; not consumer-facing brand)
+- [ ] MVP modules: plot inventory, lead/CRM pipeline stages, diligence checklist (AGIS step as human task), per-plot doc vault, buyer-pack PDF export
+- [ ] Org seats: admin + sales-user roles; team dashboard for sales manager
+- [ ] Pricing sheet: **₦15k–₦30k/mo** starter (2–3 seats); **₦50k–₦120k/mo** growth (5–10 seats)
+- [ ] T&Cs: software does not replace legal advice; no implied AGIS/government clearance
 
-**Week 2 — Pilot partners (not end-users)**
-- [ ] Onboard **2 pilot B2B partners** (1 agent + 1 Kuje/Lugbe developer) — **free** pilot cases for testimonial
-- [ ] T&Cs: not legal advice; 48h SLA; AGIS human-in-the-loop; no implied govt endorsement
-- [ ] NDPA: minimal PII; delete uploads after 12 months unless partner opts in
+**Week 2 — Pilot org (not end-users)**
+- [ ] Onboard **1–2 pilot developers** (Kuje/Lugbe) — free or discounted seats for feedback + testimonial
+- [ ] Seed 5–10 real plots into pipeline; confirm sales team can complete checklist without WhatsApp-only workflow
+- [ ] NDPA: minimal PII; retention policy for uploaded docs
 
 **Week 3–4 — Paid B2B GTM**
-- [ ] `abuja_lead_generator`: outreach → Abuja agents + Kuje/Lugbe developers as **subscription/wholesale customers**
-- [ ] **Target:** 3 paying partner accounts + 10 wholesale reports in 30 days
-- [ ] **Explicitly out:** B2C Paystack checkout, diaspora WhatsApp/Facebook campaigns, retail ₦75k pricing
+- [ ] `abuja_lead_generator`: outreach → **Abuja estate developers** (primary) + land-focused agencies (secondary)
+- [ ] **Target:** 2 paying org subscriptions in 30 days
+- [ ] **Explicitly out:** B2C Paystack to end-buyers; wholesale “we run AGIS for you” as core product; diaspora WhatsApp campaigns
 
-**v1 corridors only:** Kuje, Lugbe, Lokogoma, outer Gwarinpa estates
+**v1 corridors focus:** Kuje, Lugbe, Lokogoma, outer Gwarinpa (developer inventory)
 
 #### 90-day success metrics
-- [ ] ≥5 active B2B partner accounts
-- [ ] ≥25 wholesale reports completed
-- [ ] Avg turnaround ≤48h
-- [ ] ≥2 anchor partners (agent or dev) each doing ≥3 reports/month
-- [ ] Partner churn <20% in first 90 days
+- [ ] ≥4 active paying org accounts
+- [ ] ≥2 orgs with ≥3 seats each (team use, not single login)
+- [ ] Weekly active use (≥3 login days/week) for ≥50% of paying seats
+- [ ] Org churn <25% in first 90 days
+- [ ] At least 1 org producing buyer-pack PDFs from the app (not WhatsApp only)
 
 #### Out of scope (v1)
 - B2C verify concierge / end-user sales
+- AGIS fulfillment / white-label report service as core revenue
 - AGIS API / NLRDTP product integration
 - Escrow or holding funds for land purchase
-- Nationwide coverage; broker comps (Phase 2); white-label PM (Phase 3)
+- National MLS; mortgage origination; nationwide expansion
 
-**Budget:** ₦500k–₦1.5M (CAC, domain, portal build, ops float, subsidized pilot cases)
+**Budget:** ₦500k–₦1.5M (CAC, domain, MVP build, ops float, pilot discounts)
 
 ---
 
@@ -895,13 +895,116 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **Conversation handoff:** **Safe to delete this chat** for §13 delivery — tracker + tests + git hold the work.
 
 ### 14. Agent formulation — Pass 1 Discover / Pass 2 Pack (prompt split) (NEW — Jul 2026)
-**Status:** **CLOSED / v1 complete** (2026-07-15) — Phases **0–5** shipped  
+**Status:** **CLOSED / v1 complete** (2026-07-15) — Phases **0–5** shipped; operating model locked same day  
 **One-liner:** Split the mega agent formulation prompt into **Pass 1 (Discover & rank)** + **Pass 2 (Normalize/pack → Docx)** so every idea card keeps the same subheads (esp. **Regulatory**, **Competitors / alternatives**), without breaking Hub, strategy CLIs, §11/§13 gates, or existing one-file paste workflows.  
 **Full phased backlog:** see **§14** under Notes / formulation tasks below.  
-**Why:** `business_ideas_20260715` was gate-complete but card formatting/distribution drifted vs Jul 13. Root cause = one overloaded prompt.  
-**Shipped:** contract; pack prompt; Discover defers Docx; `idea_card_schema.py`; Hub Pass 2 card; Phase 5 proof pack of `business_ideas_20260715.md` (schema PASS 12 + Docx).  
-**Manual tests (you):** **None** beyond deferred Cursor Enter — `agent-business-idea-runs/MANUAL_TEST.md`.  
-**Conversation handoff:** **Safe to delete this chat** for §14 delivery — tracker + tests + prompts/Hub hold the work.
+**Shipped:** contract; pack prompt; Discover defers Docx; `idea_card_schema.py`; Hub Pass 2 card; Phase 5 proof pack; git **`2e964fb`** on `origin/main`.  
+**Operating model (locked 2026-07-15):** Prefer **two agent runs** (two Hub Starts), **not** one mega-prompt and **not** one chat that silently does both. Inc Hub **left as-is** — no meta-prompt card; card 1 = Run 1, card 2 = Run 2.  
+**Manual tests (you):** Optional once — Hub two-run flow in `agent-business-idea-runs/MANUAL_TEST.md` §Two-run + `inc_launcher/MANUAL_TEST.md` §G14. Not a build blocker.  
+**Optional pending (not blocking close / not started):** (A) Hub modal copy “Run 1 of 2 / Run 2 of 2”; (B) tray interval schedule firing card 1 then later card 2 — add as new task only when you ask to build.  
+**Conversation handoff:** **Safe to delete this chat** — see Notes §14 close-out (meta paste drafts + Hub leave-as-is locked there).
+
+### 15. Evergreen / always-in-demand formulation (NEW — Jul 2026)
+**Status:** Planning — **implementation not started**  
+**One-liner:** Generate business ideas from **things that stay in demand** (staples / evergreen consumer demand), via scrape or free API — **not** the same as trending (S7), OWID (S14), SimilarWeb peaks (S13), or GUEMF filtering (S12).  
+**Decision (open):** Strategy **16** dedicated folder vs Mode under `business_research/` + Prompt 1a/1b only. Prefer dedicated strategy if volume/reuse matches S5/S14; else Mode first.  
+**Not covered by:** S7 (hot now), S14 (macro data), S13 (traffic/seasonal demand), S12 (scores existing problems), S5/S9 (news), `problem_finder` Trends (rising searches), gadget `demand_analyzer` (ops tool).  
+**Do not fold into:** §9 cyber vertical.
+
+#### Phases
+**Phase 0 — Scope lock (read-only)**
+- [ ] Confirm sources in scope (e.g. category bestsellers, stable search, staple consumption) vs out (one-off trends, paywalled scrapes without approval)
+- [ ] Lock Strategy **16** vs `business_research/` Mode
+- [ ] Sketch Prompt 1a/1b contract (align with other formulation strategies)
+
+**Phase 1 — Scaffold (only after Phase 0 approve)**
+- [ ] Folder or Mode layout note in this section; wait for layout approval before many files
+- [ ] CLI stub + fixture smoke; wire to `run_all_strategies.py` only if Strategy 16 chosen
+
+**Phase 2 — Fetch + formulate**
+- [ ] Scrape and/or API intake → demand list artifact
+- [ ] Prompt 1a/1b path → dated `business_ideas_*.md` (privacy: proposed domain TBD)
+
+#### Out of scope (v1)
+- Paid marketplace APIs without explicit approval
+- Live login scrapers for Amazon/Jumia seller portals
+
+**Related:** §8 (if playbook Doc maps here); §16 Doc automation; agent formulation Pass 1/2 (§14).
+
+---
+
+### 16. Google Doc playbook automation (NEW — Jul 2026)
+**Status:** Planning — **implementation not started**  
+**One-liner:** After **local export** of one Google Doc playbook, automate it in Inc — either as a formulation strategy script (if it’s a new method) or as filing into pillars (if it’s unsorted notes).  
+**Privacy (non-negotiable):** No Drive API login unless you approve later; **no Doc IDs/URLs in committed outputs**; work from user-exported `.md`/`.txt` under `Google Drive Business Files/` or a paste you provide.
+
+#### Hypotheses (confirm one before build)
+| ID | Meaning | Then automate as |
+|----|---------|------------------|
+| **A** | Doc = always-in-demand playbook | Hook to §15 (Strategy 16 / Mode) |
+| **B** | Doc = unsorted business notes/ideas | Hook to §8 Drive sorter routing |
+| **C** | Doc = already mirrored Macrodroid step (S3–S14) | Dedupe only — do not rebuild |
+
+#### Phases
+**Phase 0 — Export + classify**
+- [ ] User exports Doc → local mirror (titles/body; no need to commit private links)
+- [ ] Agent classifies A / B / C against 12 Drive cards + Strategies 3–15
+- [ ] Write classification into this section; choose build path
+
+**Phase 1 — Automate chosen path**
+- [ ] If A → implement under §15
+- [ ] If B → inventory + route rules under §8
+- [ ] If C → mark synced; close this task
+
+#### Out of scope (v1)
+- Editing the live Google Doc in place
+- Committing private Doc URLs
+
+**Related:** §8 Google Drive Business Sorting; §15 evergreen demand; §17 ChatGPT sorter (same privacy/export model).
+
+---
+
+### 17. ChatGPT conversation sorter (NEW — Jul 2026)
+**Status:** Planning — **implementation not started**  
+**One-liner:** Treat a ChatGPT thread as a third **inbox** (after Chrome bookmarks §5 and Drive §8): user **exports** the chat → route items into Inc pillar destinations — no live chatgpt.com login from the agent.  
+**Privacy (non-negotiable):** No ChatGPT URLs in committed outputs or chat pastebacks to repo; work from local export only.
+
+#### Destination taxonomy (reuse §5 / §8)
+| Pillar | Inc destinations |
+|--------|------------------|
+| **Established** | `Started-Businesses/` (graduation only with your OK) |
+| **Prospect businesses** | `Prospect-Businesses/` |
+| **Formulated ideas** | `Business-Idea-Formulation-Strategy-*/`, `business_research/`, `agent-business-idea-runs/`, `past_business_ideas.md` |
+| **Problem identification** | `problem_identification_tool/`, `Strategy-2-Problem-Solving/problem_finder/` |
+| **My leads** | `abuja_lead_generator/` |
+| **Automation / content** | `Strategy-2-Problem-Solving/Content-Automation/` |
+| **Skip** | Leave in ChatGPT only / no Inc write |
+
+#### Layout (proposed — approve before creating files)
+**Recommendation:** Extend `business_bookmark_sorter/` with an `import-chatgpt-export` path **or** thin `chatgpt_conversation_sorter/` that reuses `config/routes.json` pillars.
+
+#### Phases
+**Phase 0 — Export + read-only map**
+- [ ] User provides local export (markdown/text; bullets/titles)
+- [ ] Diff/map each item → proposed destination; gap report only
+
+**Phase 1 — Inventory + routing**
+- [ ] Manifest: item id → destination + status (`needs_review` / `filed` / `skip`)
+- [ ] CLI: `discover` / `status` / `list` on export file
+
+**Phase 2 — Review + file**
+- [ ] Minimal review UI or markdown checklist (same pattern as bookmark sorter)
+- [ ] On file: append pointer lines to correct Inc markdown (no raw chat URLs unless you opt in)
+
+**Phase 3 — Launcher (optional)**
+- [ ] Hub card under Formulated ideas
+
+#### Out of scope (v1)
+- Scraping chatgpt.com while logged in
+- Auto-deleting ChatGPT messages
+- Committing private chat URLs
+
+**Related:** §5 Business Bookmark Sorting; §8 Drive sorter; same pillar model.
 
 ---
 
@@ -1672,8 +1775,34 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - Hub auto-chaining Pass 1→2 without user Start (nice-to-have later).
 
 #### Conversation close-out (2026-07-15) — §14
-- **Safe to delete this chat.** Tracker = Current Priority §14 + Notes §14; tests = `agent-business-idea-runs/MANUAL_TEST.md` + Hub Phase 5 tests.
-- **Ongoing use:** Hub **Agent formulation run** (Pass 1) → then **Agent formulation pack (Pass 2)**; optional `idea_card_schema.py` before Docx.
+- **Safe to delete this chat.** Tracker = Current Priority §14 + Notes §14; tests = `agent-business-idea-runs/MANUAL_TEST.md` + `inc_launcher/MANUAL_TEST.md` §G/§G14; code/prompts on `origin/main` as **`2e964fb`**.
+- **No new task file needed** — stay on `.cursor/rules/task.md` §14.
+- **Hub:** leave as shipped (two cards). Hub does **not** paste a meta-prompt; two Starts = two agent runs.
+- **Meta paste drafts** (manual Cursor only; optional — Hub cards preferred):
 
-**Related:** Chat 2026-07-15 (Docx quality / prompt split); `prompts/agent_formulation_run.txt` + `agent_formulation_pack.txt`; Jul 13 vs Jul 15 idea-detail shape.
+**RUN 1 of 2 (or Hub “Agent formulation run”):**
+```
+Inc formulation — AGENT RUN 1 of 2 (Pass 1 Discover only) at C:\dev\Inc.
+Follow prompts/agent_formulation_run.txt.
+Write agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md.
+Do NOT pack cards. Do NOT convert/open Docx. Leave _PENDING_PASS_2_PACK_.
+Stop when the draft .md is complete. Do not start Pass 2 in this response.
+Read-only on strategy scripts; write under agent-business-idea-runs/ only.
+Today’s local date in filenames; PYTHONIOENCODING=utf-8 on Windows.
+```
+
+**RUN 2 of 2 (or Hub “Agent formulation pack (Pass 2)”):**
+```
+Inc formulation — AGENT RUN 2 of 2 (Pass 2 Pack) at C:\dev\Inc.
+Follow prompts/agent_formulation_pack.txt on today’s agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md (same file from Run 1).
+Normalize every idea to §14 subheads (Regulatory + Competitors / alternatives on every idea).
+Optional: python agent-business-idea-runs/idea_card_schema.py <that .md> — fix gaps before Word.
+Then one-shot Docx convert/open. Do not invent a new ranked set.
+Contract: prompts/FORMULATION_PASS_CONTRACT.md.
+```
+
+- **Ongoing use:** Hub card 1 → finish chat → later Hub card 2; optional schema before Docx.
+- **Optional later (approve before build):** modal “Run N of 2” wording; tray intervals for card 1 then card 2.
+
+**Related:** Chat 2026-07-15 (Docx quality → prompt split → two-agent-run meta); `prompts/agent_formulation_run.txt` + `agent_formulation_pack.txt`; Jul 13 vs Jul 15 idea-detail shape.
 
