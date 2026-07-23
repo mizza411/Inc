@@ -2185,7 +2185,7 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 **Goal:** Make Pass 1/2 instructions safe to paste into Automations without rewriting Hub or strategy code.
 
 - [x] **1.1 — Cloud run note (docs):** `prompts/CLOUD_FORMULATION_AUTOMATIONS.md` + pointers in `prompts/README.md` and `agent-business-idea-runs/README.md` (2026-07-23).
-- [x] **1.2 — Prompt inventory:** `agent_formulation_run.txt` / `agent_formulation_pack.txt` / `FORMULATION_PASS_CONTRACT.md` / `idea_card_schema.py` are **git-tracked** on `main` (last formulation ship `2e964fb`). **Before Phase 2:** commit/push this Phase 1 cloud note so Automations can see it on remote.
+- [x] **1.2 — Prompt inventory:** `agent_formulation_run.txt` / `agent_formulation_pack.txt` / `FORMULATION_PASS_CONTRACT.md` / `idea_card_schema.py` are **git-tracked** on `main` (last formulation ship `2e964fb`). Cloud note + Phase 0–1 tracker **pushed** as `c0a51d2` (2026-07-23) so Automations can see them on remote.
 - [x] **1.3 — Static smokes still green:** pack + schema + §13 dual-mode + Hub config/agent_run — **26 passed** (2026-07-23). Hub untouched.
 - [x] **1.4 — Checkpoint:** Phase 1 complete via menu **1** (2026-07-23). **Do not** create Automation A until user approves Phase 2.
 
