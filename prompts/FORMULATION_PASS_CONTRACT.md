@@ -170,4 +170,5 @@ Phases **0–5** complete (prompt split + validator + Hub Pass 2 + proof).
 - [x] Zero edits to Hub, discover prompt body, strategy scripts, `agent_strategy_run.py`
 
 **Shipped:** 2026-07-15  
-**Next:** §14 **CLOSED** — optional: stage/commit/push; use Hub Pass 1 then Pass 2 on future runs.
+**Next:** §14 **CLOSED**. Hub leave-as-is (two cards = two agent runs). Meta paste drafts live in `task.md` Notes §14 close-out. Optional later: modal “Run N of 2” / tray intervals (new task when approved).
+

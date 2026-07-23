@@ -1,6 +1,94 @@
 # Active Task List
 *This file tracks all tasks - coding, business, research, and other activities*
 
+## Convo handoff — pending count + §7 Phase 1b + OTI Day 1 (2026-07-23)
+
+**Safe to delete this chat?** **Yes.** Durable state is on disk below — no chat-only secrets, signup results, or decisions left only in transcript.
+
+| Thread topic | Maps to | Progress / status | Pending (not chat-only) | Manual tests (you) |
+|--------------|---------|-------------------|-------------------------|--------------------|
+| Pending-task count + days-left + priority | **Portfolio time-left** (top of this file) | Recount method documented; focus order set | Refresh table after each completion | None for the count itself |
+| §7 DeepSeek / wedding launch | **§7** Post-Wedding Comms Pack | Phase **1b** + **landing artifact** shipped; suite green 2026-07-23 | Publish Pages + Streamlit host (`DEPLOY.md`) → §B/§D → IG/0b | `MANUAL_TEST.md` §B/§D/§P1 once at sign-off |
+| Switch to Online Tasks Income (menu **4**) | **OTI-INC-1** + tracker | Tooling complete; **core tabs opened**; all platform accounts still **No** | Day 1 signups + payment checks + CLI `update-platform` | `online_tasks_income/MANUAL_TEST.md` Day 1 |
+
+**Recommended new task file?** **No** — keep `.cursor/rules/task.md` + existing `ONLINE_TASKS_36_DAY_INCOME_TRACKER.md` + §7. Added `online_tasks_income/MANUAL_TEST.md` only (owner signup steps; not a second backlog).
+
+**Blocker if you delete too early?** Only if you finished a platform signup **in the browser** and never ran `update-platform` / never ticked `MANUAL_TEST.md` — then re-check accounts and record status once. Nothing unique is trapped in this chat.
+
+---
+
+## Portfolio time-left (update on every task completion)
+
+
+**Last recount:** 2026-07-23 (updated after §19 task add — approx; refresh on next completion)  
+**Method:** Unchecked `- [ ]` in this file, excluding deferred/optional/out-of-scope/parked lines; plus open checkboxes in `**/MANUAL_TEST.md` (overlap with this file is possible).
+
+| Metric | Count | @ 1 task/day | @ 2 tasks/day |
+|--------|------:|-------------:|--------------:|
+| Pending checkboxes (`task.md`, excl. deferred) | **240** | ~240 days | ~120 days |
+| Parent-level packages (`**…**` titles, excl. deferred) | **43** | ~43 days | ~22 days |
+| Open `MANUAL_TEST.md` checkboxes (all apps) | **65** | (sign-off / human steps; not all are parallel “build” tasks) | — |
+| Checked done in `task.md` | 333 | — | — |
+
+**When a task is completed:** retick here, then refresh this table (pending counts + day columns). Do not leave stale ETAs.
+
+**Active focus (2026-07-23):** §7 Post-Wedding — suite green; landing in repo; next = WhatsApp in `landing/config.js` → push Pages → Streamlit Cloud (`DEPLOY.md`) → short `MANUAL_TEST` §B/§D → Phase 0b DMs.
+
+**Suggested focus order (2026-07-23):** (1) **§7 Post-Wedding** host + 0b — nearest product revenue; (2) **OTI-INC-1** Day 1 signups — cash this week if platforms ready; (3) **§5 bookmark hygiene** — stress from ~1926 Chrome queue.
+
+---
+
+## OTI-INC-1 — Online tasks income toolkit (moved 22/07/2026)
+
+**Status:** 🟢 **Complete (move)** · execution (platform signups) still owner-pending — **Day 1 started 2026-07-23** (tabs opened; accounts not yet recorded)  
+**Folder:** `online_tasks_income/` at Inc root (`C:\dev\Inc\online_tasks_income\`)  
+**Source:** moved from `project_reminder` (stub README left there)  
+**Owner next:** TELUS → Clickworker → OneForma → uTest; record each with `income_cli.py update-platform`
+
+| Item | Path / command |
+|------|----------------|
+| Tracker | `online_tasks_income/ONLINE_TASKS_36_DAY_INCOME_TRACKER.md` |
+| CLI | `python online_tasks_income\income_cli.py status` (from Inc root) |
+| Opener | `python online_tasks_income\open_platforms.py --tier core` |
+| README | `online_tasks_income/README.md` |
+| **Manual (you)** | `online_tasks_income/MANUAL_TEST.md` — Day 1 signups + payment checks |
+
+**Not** auto-launched / no tray unless owner asks.
+
+#### Session handoff (2026-07-23)
+- Core opener run: TELUS, Clickworker, OneForma, uTest tabs opened.
+- `status`: all core Account/Profile/Payment still **No**.
+- Pending lives in tracker + `MANUAL_TEST.md` — **not** in chat.
+- Original 36-day calendar (May–Jun 2026) expired without signups; treat **2026-07-23** as execution restart (cash goal unchanged; re-date daily rows as you work).
+
+---
+
+## Sidebar chat batch assess (image — 2026-07-20)
+
+**Attempt:** status/handoff sync only — **no code implementation** this pass.  
+**Source:** Cursor history list (9 checkmarked / completed-looking chats, titles truncated).  
+**Goal:** Map each title → durable tracker + pending + manual tests + **delete yes/no**.
+
+| # | Sidebar title (truncated) | Maps to (authoritative) | Progress / status | Pending (not chat-only) | Manual tests (you) | Safe to delete chat? |
+|---|---------------------------|-------------------------|-------------------|-------------------------|--------------------|----------------------|
+| 1 | Profitable sub-niches in Abuja… | **§6** Land Sales OS + `Abuja-Real-Estate-Research/abuja-real-estate-profitable-sub-niches.md` (+ docx v1/v2) | Research **done**; PropTech reframed to **internal-org SaaS**; **build not started** | Phase 1 scaffold when you kick off §6 (CAC, MVP modules, pilot orgs) | **None yet** for research. Product MANUAL_TEST only after §6 kickoff | **Yes** — research + decisions on disk |
+| 2 | Run all executable business-id… | **§4** Hub + **§14** agent formulation; `run_all_strategies.py` / `agent-business-idea-runs/` (not interactive CLI as primary) | Agent front door **v1 CLOSED**; runner active set includes S1 + 3–7, 9, 11–15; **8/10 retired** | Optional live Hub two-run; schedule tune; do not confuse with CLI “Run all” | Optional: `agent-business-idea-runs/MANUAL_TEST.md` Two-run + `inc_launcher/MANUAL_TEST.md` §G/§G14 | **Yes** — tracker + tests hold it |
+| 3–7 | Business idea formulation stra… (×5) | Closed strategy workstreams already handed off: **§9–§14** Current Priority + Notes **§4–§14** (S1 verbal/online, S5 labels, S12 GUEMF, Pass1/2 pack, Crunchbase S6/S7 Tier1–2, S8/S10 retire, S15, etc.) | Titles identical when truncated — treat as **completed** strategy sessions already marked **Safe to delete** in their sections | Open leftovers are **cross-cutting** (e.g. Problem ID C3, bookmark queue, §6 build, §18 WTP) — not locked inside these five chats | Per-stream: mostly **none**; S1 = closed; S12 = none; §14 = optional Hub Enter only | **Yes** *if* each was one of the closed streams above. **Blocker only if** a fifth chat held unique unlogged decisions (unlikely with checkmarks + existing handoffs) |
+| 8 | Business content sorting and c… | **§5** Business Bookmark Sorting (`business_bookmark_sorter/`) | Import/review/file+docx **shipped**; secure workflow **planned**; ~**1926** pending (re-check `status`) | Hygiene → batch file; Phase 3 auto de-bookmark **not built**; Phase 5 options D–G code **not approved** | **Yes — you:** `business_bookmark_sorter/MANUAL_TEST.md` §§A–F (Chrome hygiene, batch file, Phase 2b sign-off) | **Yes** for planning/delivery chats — **pending work lives in §5 + MANUAL_TEST**, not chat memory |
+| 9 | Strategy 10 overview | Notes **§7** Retire ChatGPT Vision / Strategy 10 | Phases 1–3 **all [x]** — removed from runner, archived, `DEPRECATED.md` | None for retirement; use S3–5 for RE/construction discovery | **None** | **Yes** |
+
+### Batch delete verdict
+
+| Verdict | Detail |
+|---------|--------|
+| **Can you delete all 9 chats in the image?** | **Yes — no chat-memory blockers** for this batch as mapped above. Durable state is in this file + folders/tests cited. |
+| **Not blockers (still open work, but not “keep chat”)** | §6 Land Sales OS build; §5 bookmark filing (~2k queue + MANUAL_TEST A–F); §1 Problem ID **C3** Google Form retire; §18 WTP interviews; optional Hub Enter |
+| **Would become a blocker** | Finding a chat whose *only* copy of a decision/secret/file path is the transcript and is **not** reflected in `task.md` / repo — none identified for these nine titles |
+
+**Recommended new task file?** **No** — keep `.cursor/rules/task.md` authoritative. Optional later: only if §6 build grows past ~2 screens → then `abuja_land_sales_os/task.md` at kickoff (not now).
+
+---
+
 ## 🎯 Current Priority Projects
 
 ### 1. Problem Identification Tool (70% Complete - LIVE)
@@ -18,25 +106,32 @@
 
 **Layout:** `problem_identification_tool/` (survey + dashboard) + `Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification/` (outreach, distributor tracking)
 
-- [x] **Phase A — Questionnaire** (target: Jul 2026)
+- [x] **Phase A — Questionnaire** (done Jul 2026 — commit `e43091f`)
   - [x] Add `ill_pay_to_v1` to `web/data/questionnaires.json` (title “I'll pay to..”, WTP + urgency questions)
   - [x] Add `email` question type + validation in `questionnaire.js`
   - [x] Implement minimal conditional branching (2 rules)
   - [x] Set `ill_pay_to_v1` as active questionnaire (or `?survey=ill_pay_to_v1` param)
-- [ ] **Phase B — Strategy 3 integration** (split into sub-phases — Jul 2026)
-  - [x] **B1 — Distributor links + templates** (standalone; no changes to live survey or collector)
+- [x] **Phase B — Strategy 3 integration** (done Jul 2026)
+  - [x] **B1 — Distributor links + templates** (`534a3ba`)
     - [x] `distributor_links.py` — unique ref/UTM link generator + local registry
     - [x] `distributor_message_templates.txt` + `distributor_brief.md`
     - [x] `test_distributor_links.py` smoke tests
-  - [x] **B2 — Collector integration** — optional `--distributor` mode in `network_problem_collector.py`
-  - [x] **B3 — Sharing utilities** — wire `sharing_utilities.py` ref/UTM to Strategy 3 workflow
-- [ ] **Phase C — Data migration** (split — Jul 2026)
-  - [x] **C1 — Import script** — `scripts/import_google_forms_csv.py` + tests + sample CSV fixture
-  - [ ] **C2 — Dashboard merge** — dashboard reads `imports/google_forms_ill_pay_to.json` + localStorage
-  - [ ] **C3 — Retire Google Form** — run import on real export, verify counts, close form
-- [ ] **Phase D — Deploy & retire Google Form**
-  - [ ] Deploy to GitHub Pages; smoke-test live URL
-  - [ ] Close/archive Google Form after import verified
+  - [x] **B2 — Collector integration** — optional `--distributor` mode (`6e8c8cd`)
+  - [x] **B3 — Sharing utilities** — wire `sharing_utilities.py` ref/UTM (`1011558`)
+- [ ] **Phase C — Data migration** (in progress — Jul 2026)
+  - [x] **C1 — Import script** — `scripts/import_google_forms_csv.py` + tests + sample CSV fixture (`cfbef67`)
+  - [x] **C2 — Dashboard merge** — merges localStorage + `web/data/imports/google_forms_ill_pay_to.json`; `--sync-dashboard` flag; tests (`4c631ce`, pushed to `origin/main`)
+  - [ ] **C3 — Retire Google Form** — **USER ACTION** (see `problem_identification_tool/MANUAL_TEST.md`)
+    - [ ] Export real Google Form CSV (~12 responses)
+    - [ ] Run: `python scripts/import_google_forms_csv.py --input <csv> --sync-dashboard`
+    - [ ] Commit/push updated import JSON; verify dashboard count matches
+    - [ ] Close/archive Google Form
+- [ ] **Phase D — Deploy & smoke**
+  - [x] Survey live on GitHub Pages (A–C2 code pushed)
+  - [ ] Smoke-test live dashboard merge after C3 real-import push
+  - [ ] Optional: register first paid distributor + generate tracked link (`network_problem_collector.py --distributor`)
+
+**Manual tests for this work:** `problem_identification_tool/MANUAL_TEST.md` (C3 + live dashboard sign-off only; automate-first otherwise).
 
 #### High Priority - Next Steps (This Week)
 - [x] **UX Improvements** (Phase 1 — May 2026: `web/questionnaire.css`, step label + dots, transitions, inline validation, keyboard Enter)
@@ -162,27 +257,44 @@
 ---
 
 ### 4. Inc Tray Icon + Super Main Launcher
-**Status:** Phase 5 v1 complete (agent formulation front door) — **manual §G once** (`inc_launcher/MANUAL_TEST.md`) (2026-06-30)  
+**Status:** Phase 5 **v1 CLOSED** (agent formulation front door) — **2026-07-20 handoff**  
 **Goal:** Windows **tray icon** (notification area, near the clock) + optional super main hub; all `C:\dev\Inc` entry points organized under **4 pillars** (extensible to 5+ later).  
 **Folder:** `inc_launcher/` — run: `python -m inc_launcher.tray_app` from `C:\dev\Inc`  
-**Manual tests:** `inc_launcher/MANUAL_TEST.md` (most checks automated; optional §D reboot only)
+**Manual tests:** `inc_launcher/MANUAL_TEST.md` (Phase 5 §G mostly automated; optional Cursor **Enter** + §D reboot)
 
 > **Terminology:** “Tray icon” = the small icon you right-click in the Windows notification area. Same as “system tray app” — one background process, one icon, menu on right-click.
 
-#### Session handoff (Inc launcher + nudges + Track C — convo closed 2026-06-29)
+#### Session handoff — Phase 5 Hub agent front door (convo close 2026-07-20)
 
 | Item | Status |
 |------|--------|
-| Phase 4 interval nudges (4.1–4.5) | ✅ Shipped `4c54b9c`; **Interval nudges [ON]** in tray |
-| Track C — Bookmark review menu | ✅ Shipped `909c6d9`; **Formulated ideas → Bookmark review** |
-| Automated tests | ✅ `pytest inc_launcher/tests` (38+) + `smoke_hub`; `test_cli_status.py`, `test_track_c_bookmark.py` |
-| Boot | External-repo `auto_launcher.py` starts tray; Inc **Start at Windows login [OFF]** (intentional) |
-| Live nudge proof | `inc_launcher/schedule_fired.json` — fired 2026-06-29: 09:00 task.md, 09:15 Hub, 10:00 Problem ID live |
+| **5.0–5.4, 5.6** | ✅ Shipped — Hub header fix; `prompts/agent_formulation_run.txt`; `agent_run` action; pinned Hub card; Option B modal; docs |
+| **Option B only** | ✅ Documented — Hub-hosted modal; no detached Option A toast; tray must be running |
+| **CLI card demoted** | ✅ **Run all strategies (CLI menu)** — not confused with agent card |
+| **Automated sign-off** | ✅ `pytest inc_launcher/tests` (57+) + `smoke_hub` + `test_phase5_signoff.py` (incl. tray kill/`pythonw` restart + single-instance) |
+| **Manual remaining** | Optional only — `MANUAL_TEST.md` §G: Cursor chat **Enter** after Start (cannot automate reliably) |
+| **5.5 Schedule** | ⬜ Optional / not requested for v1 — weekday Hub+Option B modal only if you approve a slot later |
+| **Safe to delete this chat?** | **Yes** — tracker = this §4; tests = `inc_launcher/MANUAL_TEST.md` §G; no unique decisions left only in chat |
 
-**Active dev:** **Phase 5 — Agent formulation front door** (approved 2026-06-30). Earlier phases optional follow-ups below.
+**Earlier handoff (nudges + Track C — 2026-06-29):** Phase 4 nudges `4c54b9c`; Track C `909c6d9`; boot via external `auto_launcher`; Inc login startup OFF.
+
+#### Session handoff — Problem ID live URL auto-launch (Q&A 2026-07-20)
+
+| Item | Status |
+|------|--------|
+| **Q:** Does Inc Hub (or anything else) auto-open `https://mizza411.github.io/Inc/problem_identification_tool/web/index.html`? | **Answered** |
+| **Source of auto-open** | **Inc Launcher interval nudges only** — schedule `problem_id_live_mwf` → target `problem_id_live` (`action: url`) |
+| **When** | **Mon / Wed / Fri 10:00** (while tray running + `schedules.enabled: true`) |
+| **Not** | Inc Hub open/startup; Windows login; 09:15 Hub nudge; local pinned HTML file |
+| **Live proof** | `inc_launcher/schedule_fired.json` includes `problem_id_live_mwf:2026-06-29 10:00` |
+| **Elsewhere in repo** | Docs / QR / social copy only — **no other auto-launch** |
+| **Pending (optional)** | **Schedule tune** — keep / move / remove 10:00 Problem ID, or tray **Interval nudges [OFF]** — see `MANUAL_TEST.md` §E |
+| **Safe to delete this chat?** | **Yes** — durable answer = this block + Phase 4 schedule table + `MANUAL_TEST.md` §E; no code change this session |
+
+**Active Phase 5 Hub work:** none (v1 closed). Optional follow-ups: **5.5** schedule, §G Cursor Enter, older pending list below.
 
 #### Phase 5 — Inc Hub agent formulation front door (Track D)
-**Status:** Approved — not started (2026-06-30)  
+**Status:** **v1 CLOSED** (2026-06-30 ship; 2026-07-20 handoff synced) — automation signed off; Cursor Enter optional  
 **Goal:** Inc Hub becomes the **front door** for the repeatable **Cursor agent** formulation run (strategies **5, 6, 7, 9, 11, 12, 13, 14, 15**; skip 3, 4, retired 8/10; read-only on existing strategy scripts; write `business_ideas_YYYYMMDD.md` under **`agent-business-idea-runs/outputs/`**). **Not** the `run_all_strategies.py` interactive CLI menu.
 
 **Layout (2026-07-06, updated 2026-07-07):** `agent-business-idea-runs/` at repo root — `inputs/` (fetch JSON), `outputs/` (`.md` + `.docx`), `agent_strategy_run.py` (canonical fetch runner; Strategy 15 skipped by default). See `agent-business-idea-runs/README.md`.  
@@ -220,21 +332,26 @@
 - [x] **5.3 — Config + Hub card:** `launcher_config.json` — new pinned item under **formulated**; rename CLI item; tray submenu mirror optional
 - [x] **5.4 — Reminder UI (Option B, Hub-hosted):** Mini Toplevel on Hub on card click; `[ Start ]` runs `agent_run`; `[ Not now ]` dismisses; tray-running gate enforced
 - [ ] **5.5 — Schedule (optional, not v1):** Weekday slot (user approves first) → tray running → open/focus Hub → **same Option B modal**; no detached toast
-- [x] **5.6 — Tests + docs:** `test_agent_run.py` (mock clipboard/cursor/paste); `inc_launcher/README.md`, `MANUAL_TEST.md` §G (focus-chat + Enter)
+- [x] **5.6 — Tests + docs:** `test_agent_run.py`, `test_phase5_signoff.py`; `inc_launcher/README.md`; `MANUAL_TEST.md` §G (automation + deferred Enter)
 
-**v1 definition of done:** Inc Launcher tray running → click **Agent formulation run** → Hub shows **Option B modal** → **Start** → Cursor opens on repo → prompt on clipboard → auto-paste after delay if pyautogui present → user sends chat → agent run proceeds per prompt file. CLI menu card clearly labeled. Header no longer clipped. `pytest inc_launcher/tests -q` green.
+**v1 definition of done:** ✅ Met via automation (header, config, modal, orchestration, tray single-instance). Live Cursor **Enter** remains optional ops check in `MANUAL_TEST.md` §G — not a blocker to close Phase 5 Hub v1 or to delete the delivery chat.
+
+**Key files:** `inc_launcher/agent_run.py`, `agent_run_modal.py`, `hub_window.py`, `actions.py`, `tray_app.py`, `launcher_config.json`; `prompts/agent_formulation_run.txt`; tests `test_agent_run.py`, `test_phase5_signoff.py`.
 
 **Dependencies:** `cursor_copy_helper.py` (repo root); `pyautogui` optional for auto-paste  
-**Layout:** `prompts/` at repo root (new); changes in `inc_launcher/` only
+**Layout:** `prompts/` at repo root; orchestration in `inc_launcher/` (later Pass 1/2 / `agent-business-idea-runs/` tracked under §14 — do not reopen Phase 5 Hub for that)
 
 #### Pending (optional — not blocking)
 
-- [ ] **Schedule tune** — if 09:15 Hub or 10:00 Problem ID browser nudge is too noisy; edit `launcher_config.json` → `schedules.items` or tray **Interval nudges [OFF]**
+- [ ] **Phase 5.5** — scheduled Hub + Option B modal (only after you pick weekday/time) — **local tray nudge path**; do **not** conflate with **§19** cloud Automations
+- [ ] **MANUAL_TEST §G** — Cursor **Enter** once on a live agent session (when you choose)
+
+- [ ] **Schedule tune** — if 09:15 Hub or **10:00 Problem ID live** browser nudge is too noisy; edit `launcher_config.json` → `schedules.items` (id `problem_id_live_mwf`) or tray **Interval nudges [OFF]**. Confirmed 2026-07-20: that URL is **not** opened by Hub itself — only by this nudge (see handoff above + `MANUAL_TEST.md` §E).
 - [ ] **Track B** — clearer boot vs nudge toggle labels — **skipped** (user 2026-06-29); reopen only if menu still confusing
 - [ ] **Bookmark review schedule** — weekday nudge deferred; menu-only for now
 - [ ] **Phase 4 v1.1** — toast + Snooze before auto-open; catch-up if tray starts after missed slot
 - [ ] **MANUAL_TEST §D** — reboot + external `auto_launcher` one-tray check (skip if daily use already OK)
-- [ ] **Operational** — file Chrome bookmarks via tray review (~**1926** pending per `python -m business_bookmark_sorter status`)
+- [ ] **Operational** — file Chrome bookmarks via tray review (~**1926** pending as of 2026-06-29; re-check with `python -m business_bookmark_sorter status`). **Do not** bulk-export Chrome into chat. Secure workflow + pending options: **§5** + `business_bookmark_sorter/MANUAL_TEST.md`
 
 #### Four pillars (top-level nav — tray icon right-click + super main sidebar)
 
@@ -439,9 +556,11 @@ Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `p
 ---
 
 ### 5. Business Bookmark Sorting (Chrome → Inc folders)
-**Status:** Phase 0–2b implemented; Phase 3 (de-bookmark) pending — **~1926 pending** / 1942 total in queue (2026-06-29)  
-**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**). After Phase 2b, filing one bookmark should mean: **saved in queue, visible in the right markdown, docx open for eyeball check** — then user may delete from Chrome (Phase 3 still manual until built).  
-**Tray entry:** Formulated ideas → **Bookmark review** (`inc_launcher/launcher_config.json` → `bookmark_review`)
+**Status:** Phase **0–2c + Track C + removal dialog + tooltips + gitignore** shipped on `origin/main`; Phase **3** (auto de-bookmark) **not started** — user returning later. Queue ~**1926 pending** (re-check: `python -m business_bookmark_sorter status`). Secure filing plan (A–G) locked 2026-07-20.  
+**Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**). After Phase 2b/2c, filing means: **saved in `queue.json`**, visible under a **section** in one master **Business Links.md/.docx**, toast + **“Have you removed bookmark?”** gate, then user deletes in Chrome (Phase 3 still optional automation).  
+**Tray entry:** Formulated ideas → **Bookmark review** (`inc_launcher/launcher_config.json` → `bookmark_review`)  
+**Manual tests:** [`business_bookmark_sorter/MANUAL_TEST.md`](../business_bookmark_sorter/MANUAL_TEST.md) (human-only; agent runs pytest/status first)  
+**Task file note:** Keep tracking here in **§5** — no separate backlog file needed (same product as existing sorter).
 
 #### Problem (what “sorting” means)
 
@@ -453,6 +572,37 @@ Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `p
 **Hard cases:** Some Chrome entries are **folders** (e.g. `Google Go Voice Listen - Business..`) containing more bookmarks — workflow must expand folders, not only flat URLs.
 
 **Source of truth for import:** Chrome profile `Bookmarks` JSON (typical: `%LOCALAPPDATA%\Google\Chrome\User Data\Default\Bookmarks`), not the `chrome://` UI (not automatable as a page).
+
+#### Privacy (non-negotiable) — locked 2026-07-20
+
+| Do | Don’t |
+|----|--------|
+| Read Chrome **local** `Bookmarks` JSON on this PC via sorter CLI/UI | Bulk-export / zip / paste full Chrome bookmark trees into chat or cloud AI |
+| Rely on `chrome_filter` (folder name contains `business`) + queue on disk | Assume agent should “see everything” to help sort |
+| Keep `data/queue.json` / `actions.log` local (gitignored) | Commit or paste sensitive URLs into repo/chat |
+| Same model as Drive §8: Inc is filing cabinet; Chrome is inbox | Auto-delete Chrome before export succeeds |
+
+**Bottleneck understood:** Sorting ~2k items is slow; the **blocker to “just dump everything for AI help” is privacy** (mixed personal + business bookmarks), not tooling absence.
+
+#### Secure workflow planning (2026-07-09 convo → documented 2026-07-20)
+
+**Progress this session (docs only — no implementation):**
+- [x] User concern understood: time cost of filing vs risk of sharing sensitive Chrome data
+- [x] Secure options outlined (A–G); user confirmed understanding
+- [x] Short-term combo recommended: **A + B + C** (no new code)
+- [x] Medium/long options recorded for later approval (D, E, F); Drive parallel = G / §8
+
+| Option | Name | Code? | Status |
+|--------|------|-------|--------|
+| **A** | Chrome hygiene — move personal/sensitive out of `*business*` folders before import | No | **Pending user** — see MANUAL_TEST §A |
+| **B** | Tune local `keyword_rules` in `routes.json` (already used by `suggest.py`) | Config only | **Pending user** — paste example titles/URLs *you choose*, never full dump |
+| **C** | Batch by Chrome subfolder (one destination per session) | No | **Pending user** — MANUAL_TEST §C |
+| **D** | Two-speed queue + local domain blocklist (fast confirm vs slow open) | Yes — needs task approval | **Pending approval** — not started |
+| **E** | Separate Chrome profile for business only | Ops / habit | **Deferred** — long-term |
+| **F** | Local-only model suggest (e.g. Ollama on title/URL/path) | Yes — needs approval | **Deferred** — not started |
+| **G** | Drive sorting — same privacy; local mirrors only | See §8 | **Planning** — §8 |
+
+**Recommended next (when user has time):** run MANUAL_TEST **§A → §B → §C** in short sessions; **do not** request Option D/E/F code until user picks a combo and approves implementation.
 
 #### Destination taxonomy (Inc — align with launcher pillars)
 
@@ -539,7 +689,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] Toast copy: destination label + md/docx names or failure reason
 - [x] **Recovery:** Shift+click **File & open doc** = full re-export; CLI `export-md` retained
 - [ ] Optional: append-only fast path later; **v1 = rewrite destination file** for consistency
-- [ ] Manual verification: file one link → see it in opened docx → delete bookmark in Chrome → confirm removal dialog → next link
+- [ ] Manual verification: file one link → see it in opened docx → delete bookmark in Chrome → confirm removal dialog → next link — **see** `business_bookmark_sorter/MANUAL_TEST.md` §D
 - [x] Post-file dialog: “Have you removed bookmark from Chrome?” — Yes = next; No = stay + **Bookmark removed — next** button
 
 **Phase 2b tasks:**
@@ -560,30 +710,67 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] Legacy `inbox` filings export under **## Other**; `inbox` hidden from dropdown (`assignable: false`)
 - [x] Per-folder `links.md` files no longer written on file/export
 
-**Phase 3 — De-bookmark (optional / on demand)**
+**Phase 2d — UX polish (this convo arc)** ✅ (pushed)
+- [x] Hover tooltips on all review controls (`ui_tooltips.py`) — Skip vs Stay explained in tip text
+- [x] Post-file dialog: “Have you removed this bookmark from Chrome?” — **Yes** = sync + next; **No** = stay + **Bookmark removed — next** (`4387b96`)
+- [x] Unit tests: `tests/test_review_removal.py` (agent-automated)
+- [x] Gitignore local data: `data/**` (keep README), `Business Links.md/.docx`, Word `~$*` — `queue.json` **never** was on remote (`bcc4866`)
+
+**Phase 3 — De-bookmark (optional / on demand)** — **deferred (user returning)**
 - [ ] After Inc filing: mark for Chrome removal; **manual** checklist export first
 - [ ] Optional automation: update Chrome `Bookmarks` JSON (backup first; Chrome closed) or extension delete API
 - [ ] Never delete from Chrome without explicit user action or setting
+- **Note:** Until Phase 3 ships, Chrome delete stays **manual**; dialog (2d) is the gate before next link.
 
-**Phase 4 — Inc launcher integration (optional)**
+**Phase 4 — Inc launcher integration** ✅ (Track C)
 - [x] Add **Business bookmark sorter** item under Formulated ideas in `inc_launcher/launcher_config.json` (Track C menu only — `bookmark_review` → `python -m business_bookmark_sorter review`; no schedule yet)
 
+**Phase 5 — Secure / faster filing (planning → implement only after approval)**
+- [x] **5.0** Privacy + options documented (this § + MANUAL_TEST)
+- [ ] **5.A** User: Chrome hygiene (personal out of business folders) — MANUAL_TEST §A
+- [ ] **5.B** User/agent (config): expand `keyword_rules` from *user-selected* samples — MANUAL_TEST §B
+- [ ] **5.C** User: batch-by-subfolder filing habit — MANUAL_TEST §C
+- [ ] **5.D** (optional code) Two-speed queue + domain blocklist — **await user choice**
+- [ ] **5.E/F** (optional) Business Chrome profile / local LLM suggest — deferred
+- [ ] Re-run `python -m business_bookmark_sorter status` after hygiene/import; update pending count here
+
 #### Manual verification (after build)
+
+**Authoritative checklist:** [`business_bookmark_sorter/MANUAL_TEST.md`](../business_bookmark_sorter/MANUAL_TEST.md) (automate-first; user runs once at sign-off / when filing).
 
 - [ ] Import produces expected count vs Chrome business folder
 - [ ] One link filed to `Started-Businesses/` (or chosen folder) and visible in repo
 - [ ] **Phase 2b:** File one item → docx opens with new line → delete Chrome bookmark → link still in docx/queue
 - [ ] “Stay in Chrome” leaves bookmark untouched
 - [ ] De-bookmark step (if enabled) removes only confirmed URLs; backup restores if mistake
+- [ ] **Secure path:** no full Chrome dump shared; hygiene (§A) before large re-import
 
 #### Out of scope (unless added later)
 
 - Syncing with Google account cloud bookmarks beyond local profile file
-- Auto-classifying without user confirm (beyond suggestions)
+- Auto-classifying **without** user confirm (beyond local suggestions); cloud AI on full bookmark export
 - Sorting non-business Chrome collections
+- Agent reading / pasting user’s full Chrome profile into chat
 
 **Run (from `C:\dev\Inc`):** `import` → `python -m business_bookmark_sorter review` — see `business_bookmark_sorter/README.md`  
-**After Phase 2b:** one button in review UI; `python -m business_bookmark_sorter export-md` only for full re-export / repair.
+**After Phase 2b/2c:** one button **File & open doc**; always opens master `Business Links.docx`; `export-md` / Shift+click = full re-export.
+
+**Pending after this convo (code vs you):**
+
+| Item | Owner | Where |
+|------|--------|--------|
+| Phase 3 de-bookmark | Agent (when you ask) | this § Phase 3 |
+| MANUAL_TEST §§D–E (file → delete → dialog; Stay in Chrome) | **You** — sign-off | `MANUAL_TEST.md` |
+| MANUAL_TEST §§A–C (hygiene, keywords, batch habit) | **You** — ops | `MANUAL_TEST.md` |
+| Phase 5.D/E/F optional faster filing | Agent after approval | this § Phase 5 |
+| Append-only export / “don’t ask again” dialog | Optional later | not started |
+| Strategy 4 (Business Owner Problem Collection) | Q&A only this convo — scaffold exists; **no real collection run documented** | folder + `run_all_strategies.py` → **4**; not a §5 blocker |
+
+**Key commits (bookmark sorter):** `1904e54` (master doc + tooltips), `bcc4866` (gitignore), `4387b96` (removal dialog), `909c6d9` (tray Track C), `d3db322` (prospects route).
+
+**Conversation handoff (2026-07-20):** **Safe to delete this chat.** Tracker = this **§5**; tests = `business_bookmark_sorter/MANUAL_TEST.md`; code on `origin/main` as commits above. Nothing unique remains only in conversation memory. Re-open with: “Continue Business Bookmark Sorting Phase 3” or “Run MANUAL_TEST §D”.
+
+**Sidebar alias (2026-07-20):** “Business content sorting and c…” → this §5. **Safe to delete** that history item — pending filing is §§A–F in `MANUAL_TEST.md` + Phase 3/5 checkboxes here, not chat memory. See top **Sidebar chat batch assess** row 8.
 
 ---
 
@@ -594,6 +781,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 **Spec:** [abuja-real-estate-profitable-sub-niches.md](../Abuja-Real-Estate-Research/abuja-real-estate-profitable-sub-niches.md) §3.10 · §6  
 **GTM:** `abuja_lead_generator/` → **paying developer orgs** (teams with many plots/month), not diaspora retail, not AGIS fulfillment  
 **Later phases (defer):** comps/pricing module (Phase 2), PM workspace module (Phase 3), `titletrail.ng` escrow (Phase Later); national MLS / NLRDTP API — not v1
+
+**Conversation handoff (sidebar “Profitable sub-niches in Abuja…” — 2026-07-20):** Research + niche ranking + B2B SaaS reframes are on disk (`abuja-real-estate-profitable-sub-niches.md` / `.docx`). **Safe to delete that chat.** Pending = Phase 1 kickoff below (not chat-only). **Manual tests:** none until product scaffold exists — then create `abuja_land_sales_os/MANUAL_TEST.md` (or app-folder equivalent). See also top **Sidebar chat batch assess**.
 
 #### Phase 1 — Land Sales OS MVP (target: first **paying org subscription** by **Day 30** from kickoff)
 
@@ -635,79 +824,99 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 ---
 
 ### 7. Post-Wedding Comms Pack (Wedding — B2C digital)
-**Status:** P1 Paystack complete — **Phase 0b not started**; manual UI deferred to v1 sign-off  
+**Status (2026-07-23):** P0+P1 **code done**; Phase 1b DeepSeek shipped; **landing page in repo** (`landing/` + `DEPLOY.md`); automated suite **re-pass green** (incl. landing smoke); **Streamlit host + Phase 0b outreach still pending**; short manual **§B/§D/§P1** pending (you, once after host).  
 **Goal:** WhatsApp-first **post-wedding comms** for couples — AI-drafted guest thank-yous (gift/spray-aware), vendor wrap-up, checklist — **one-time B2C fee**; no MC/planner SaaS.  
 **Folder:** `Strategy-2-Problem-Solving/post-wedding-comms-pack/` — run: `python -m streamlit run app.py` from that folder  
-**Spec:** [post-wedding-comms-pack.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack.md) · [README](../Strategy-2-Problem-Solving/post-wedding-comms-pack/README.md) · [LAUNCH_PLAN.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/LAUNCH_PLAN.md) · [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md)  
+**Spec:** [post-wedding-comms-pack.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack.md) · [README](../Strategy-2-Problem-Solving/post-wedding-comms-pack/README.md) · [LAUNCH_PLAN.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/LAUNCH_PLAN.md) · [DEPLOY.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/DEPLOY.md) · [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md)  
 **Related (defer):** [wedding-games-icebreakers-app.md](../Strategy-2-Problem-Solving/wedding-games-icebreakers-app.md) — guest link feeds comms import in Phase 3 (P2)
 
-> **Phased plan:** Already defined in spec + folder README (P0/P1/P2). This section mirrors that in `task.md` for execution tracking — **not a duplicate doc**; tick here as you ship.
+> **Phased plan:** Spec + folder README (P0/P1/P2) + `LAUNCH_PLAN.md`. Track ticks here — **no separate `post-wedding-comms-pack_tasks.md` needed** unless this section exceeds ~2 screens.
+
+#### Progress snapshot (updated 2026-07-23 convo → disk)
+
+| Area | State |
+|------|--------|
+| P0 MVP + `test_p0_flow.py` | ✅ |
+| P1 Paystack + `test_paystack.py` | ✅ |
+| Streamlit UI smoke `test_streamlit_p0.py` + `run_automated_tests.py` | ✅ Pass 2026-06-30; **re-pass agent 2026-07-23** (providers + landing) |
+| Pricing ₦10k flat (`PAYSTACK_AMOUNT_KOBO=1000000`) | ✅ Committed (`2e05157`) |
+| `LAUNCH_PLAN.md` / `DEPLOY.md` | ✅ Written |
+| Phase 1b DeepSeek / multi-provider | ✅ Shipped |
+| Landing HTML (`landing/` + smoke) | ✅ **In repo** — set `config.js` WhatsApp; Pages URL after push |
+| Phase 0b couple outreach | ⬜ Pending (after live landing / app URL) |
+| Hosted Streamlit app | ⬜ Pending — see `DEPLOY.md` §B |
+| Short manual: §B AI, §D phone, §P1 live Paystack | ⬜ Pending — see `MANUAL_TEST.md` (DeepSeek for §B) |
 
 #### v1 definition of done (locked)
 
 | Milestone | Includes | Manual UI (`MANUAL_TEST.md`) | Ship meaning |
 |-----------|----------|------------------------------|--------------|
-| **v0.5 — P0 code** | Phase 0 ✅ + Phase 1 (P0) ✅ + `test_p0_flow.py` green | **Do not run** | Agent-only; not user-facing launch |
-| **v1.0 — soft launch** | v0.5 + **Phase 0b go** (≥2 couples WTP **₦10k flat** self-serve) | **P0 + P1 sections** | Paystack ₦10,000 unlock live |
+| **v0.5 — P0 code** | Phase 0 ✅ + Phase 1 (P0) ✅ + automated suite green | **Do not run** | Agent-only; not user-facing launch |
+| **v1.0 — soft launch** | v0.5 + **Phase 0b go** (≥2 couples WTP **₦10k flat** self-serve) | Short pass §B/§D + §P1 | Paystack ₦10,000 unlock live |
 | **v1 — launch-ready** | v1.0 + hosted deploy + manual test pass | Same | Public URL, same **₦10k flat** |
-| **v1.x optional** | P1 WhatsApp Business API auto-send | Extra rows in MANUAL_TEST §P1 | Only if copy-export insufficient after v1 |
+| **v1.x optional** | WhatsApp Business API auto-send | Extra rows in MANUAL_TEST §P1 | Only if copy-export insufficient after v1 |
 
-**WhatsApp API:** **Not required for v1.** v1 ships with copy-export + Paystack; API is v1.x if couples demand in-app send.
+**WhatsApp API:** **Not required for v1.**  
+**Native mobile app:** **Not required for v1** — mobile web / WhatsApp send is enough (see `LAUNCH_PLAN.md`).
 
-**Order of gates:** P0 code → Phase 0b (before P1 **launch**, may overlap P1 **build**) → P1 code → single `MANUAL_TEST.md` pass → stage/commit/deploy.
+**Order of gates (your flow):** Dev complete (`run_automated_tests.py` + short `MANUAL_TEST.md`) → hosted URL → **then** IG + Phase 0b DMs → 0b go → `PAYMENTS_DISABLED=0` public.
 
-**Agent during build:** automated tests only (see `deferred-manual-testing.mdc`). **User once:** manual pass at **v1.0** (P0 only) or **v1** (P0+P1) — whichever milestone you declare complete.
+**Agent during build:** automated tests only (see `deferred-manual-testing.mdc`).
 
 #### Layout (locked — no new folder)
 - [x] `post-wedding-comms-pack.md` — strategy one-pager
-- [x] `post-wedding-comms-pack/` — MVP code (`app.py`, `README.md`, `requirements.txt`, `MANUAL_TEST.md`)
-- [ ] Optional later: `post-wedding-comms-pack_tasks.md` only if P0 checklist outgrows this entry
+- [x] `post-wedding-comms-pack/` — MVP code + `MANUAL_TEST.md` + `LAUNCH_PLAN.md` + `PHASE_0b_PITCH.md`
+- [x] Keep tracking in this §7 — do **not** split to a new task file unless checklist grows again
 
 #### Phase 0 — Strategy & repo ✅
-- [x] Reposition from email thank-you generator → Post-Wedding Comms Pack (WhatsApp-first, vendor module)
-- [x] Rename `automated-thank-you-note-generator` → `post-wedding-comms-pack` (md + folder + cross-links)
-- [x] P0 Streamlit MVP (modular `app.py` + helpers)
+- [x] Reposition → Post-Wedding Comms Pack (WhatsApp-first, vendor module)
+- [x] Rename `automated-thank-you-note-generator` → `post-wedding-comms-pack`
+- [x] P0 Streamlit MVP (modular)
 
-#### Phase 0b — Validation (before P1 **launch**; target: **3 Wizard-of-Oz couples**)
-- [x] Landing / pitch copy draft — [`PHASE_0b_PITCH.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/PHASE_0b_PITCH.md)
-- [x] Launch playbook (marketing, timeline, credibility) — [`LAUNCH_PLAN.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/LAUNCH_PLAN.md)
-- [ ] Publish landing (Carrd / Notion / Google Site) from pitch doc
-- [ ] Wizard-of-Oz (optional): CSV → you generate → deliver; **₦15k** done-for-you OR test **₦10k** self-serve Paystack
-- [ ] **Go/no-go:** ≥2 couples WTP **₦10,000 flat** self-serve; kill if “in-person only” + zero WTP
-- [ ] **Do not launch P1 (Paystack)** to public until 0b passes
+#### Phase 0b — Validation (before public Paystack; target: **3 couples**)
+- [x] Pitch copy — [`PHASE_0b_PITCH.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/PHASE_0b_PITCH.md)
+- [x] Launch playbook — [`LAUNCH_PLAN.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/LAUNCH_PLAN.md) (dev first → IG; IG-first variant documented)
+- [x] Landing artifact — [`landing/`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/landing/) + [`DEPLOY.md`](../Strategy-2-Problem-Solving/post-wedding-comms-pack/DEPLOY.md) + `test_landing_smoke.py` (2026-07-23)
+- [ ] Publish landing live (GitHub Pages URL + `WHATSAPP_E164` in `landing/config.js`)
+- [ ] Host Streamlit Cloud app (`DEPLOY.md` §B); set `APP_URL` in `landing/config.js`
+- [ ] Create IG + 3 posts (**after** hosted URL / manual short pass)
+- [ ] DM 3 couples (Version A — ₦10k WTP); optional ₦15k done-for-you
+- [ ] **Go/no-go:** ≥2 couples WTP **₦10,000 flat** self-serve
+- [ ] **Do not** flip public Paystack until 0b passes
 
 #### Phase 1 (P0) — Nigeria-usable MVP ✅
-- [x] Replace `text-davinci-003` with Chat Completions API
-- [x] CSV schema: `Name`, `Phone`, `GiftOrSpray`, `Relationship`, `Email` (optional)
-- [x] Prompt templates with gift/relationship context
-- [x] “Copy to WhatsApp” batch export (no API cost)
-- [x] Vendor list + templates (thank-you, review request)
-- [x] Checklist UI: pending / sent / skipped
-- [x] Automated smoke test: `test_p0_flow.py`
+- [x] Chat Completions API (`generation.py` — DeepSeek default; OpenAI / NGPT via `LLM_PROVIDER`)
+- [x] CSV schema + prompts + WhatsApp export + vendors + checklist
+- [x] `test_p0_flow.py` + `test_streamlit_p0.py` + `run_automated_tests.py`
 
-#### Phase 2 (P1) — Monetization (required for **v1**, not v1.0) ✅
-- [x] Paystack one-time unlock per wedding
-- [x] Paystack webhook + basic auth (`webhook_server.py`)
-- [ ] (Optional v1.x) WhatsApp Business API or local BSP integration
+#### Phase 1b — LLM provider swap ✅ (2026-07-23)
+- [x] **Preferred:** DeepSeek via OpenAI-compatible client (`LLM_PROVIDER=deepseek`, `DEEPSEEK_API_KEY`, `base_url=https://api.deepseek.com`)
+- [x] Optional multi-provider: `deepseek` \| `openai` \| `ngpt` (NGPT for Pidgin/Yoruba/Igbo later — set `LLM_BASE_URL` if endpoint differs)
+- [x] Update `generation.py`, `.env.example`, README, pitch FAQ (“not ChatGPT — workflow”)
+- [ ] Re-run `run_automated_tests.py` on your machine after pull; then **MANUAL_TEST §B** with DeepSeek key
+- [x] African alternatives noted: NGPT (text via `ngpt`), OkeyMeta / Orinode documented as non-default (speech-only Orinode skipped for drafts)
+
+#### Phase 2 (P1) — Monetization ✅ (code)
+- [x] Paystack one-time unlock + webhook
+- [ ] Public live keys + `PAYMENTS_DISABLED=0` (after 0b go)
+- [ ] (Optional v1.x) WhatsApp Business API
 
 #### Phase 3 (P2) — Stack integration (post-v1)
-- [ ] Import from guest engagement export (`wedding-games-icebreakers-app.md` product)
-- [ ] Printable PDF export (print-shop affiliate)
-- [ ] English + Yoruba/Igbo/Hausa/Pidgin template picker
+- [ ] Guest-engagement import · PDF export · local-language templates (NGPT fit)
 
 #### v1 sign-off checklist (user — once)
-- [ ] **v1.0:** Phase 0b go + run `MANUAL_TEST.md` §P0 → soft launch OK
-- [ ] **v1:** P1 complete + run `MANUAL_TEST.md` §P0+P1 → launch-ready OK
+- [x] Automated: `python run_automated_tests.py` — **Pass 2026-06-30**; **re-pass 2026-07-23** (providers + landing smoke)
+- [ ] Short manual: `MANUAL_TEST.md` §B (AI tone) · §D (phone WhatsApp) · §P1 (live Paystack)
+- [ ] Hosted deploy + bio/landing URL (`DEPLOY.md` — Pages + Streamlit)
+- [ ] Phase 0b go → soft launch
+- [ ] Optional: Stage/commit/push landing + deploy docs when you choose
 
 #### Out of scope (v1)
-- MC or planner subscription / white-label
-- Native iOS/Android app store app
-- Full wedding planning suite
-- Physical print ops (affiliate export only)
+- MC/planner SaaS · native App Store app · full wedding suite · print ops · WhatsApp API required
 
-**Priority note:** Ship **post-event comms (this project)** before guest engagement link code.
+**Priority:** Set WhatsApp in `landing/config.js` → push → Streamlit Cloud → short manual §B/§D → IG/0b.
 
-> **Manual UI testing:** Deferred — see [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md) and `.cursor/rules/deferred-manual-testing.mdc`.
+> **Manual UI:** Only remaining human steps live in [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md) (“Your minimum checklist”). Policy: `.cursor/rules/deferred-manual-testing.mdc`.
 
 ---
 
@@ -727,6 +936,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - No Drive API login or cloud sync from the agent unless you explicitly approve a later phase
 - No Google Doc IDs, ChatGPT chat URLs, or personal network notes in repo outputs or chat pastebacks
 - Work from **user-exported** mirrors (e.g. `Google Drive Business Files/`) or a file list you provide
+- **Aligned with Bookmark §5 (2026-07-20):** same rule — local-first inbox; never bulk-share private trees into chat for “help sorting”
 
 #### Known mapping (12 local prompt cards → Inc strategies)
 
@@ -901,7 +1111,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 **Shipped:** contract; pack prompt; Discover defers Docx; `idea_card_schema.py`; Hub Pass 2 card; Phase 5 proof pack; git **`2e964fb`** on `origin/main`.  
 **Operating model (locked 2026-07-15):** Prefer **two agent runs** (two Hub Starts), **not** one mega-prompt and **not** one chat that silently does both. Inc Hub **left as-is** — no meta-prompt card; card 1 = Run 1, card 2 = Run 2.  
 **Manual tests (you):** Optional once — Hub two-run flow in `agent-business-idea-runs/MANUAL_TEST.md` §Two-run + `inc_launcher/MANUAL_TEST.md` §G14. Not a build blocker.  
-**Optional pending (not blocking close / not started):** (A) Hub modal copy “Run 1 of 2 / Run 2 of 2”; (B) tray interval schedule firing card 1 then later card 2 — add as new task only when you ask to build.  
+**Optional pending (not blocking close / not started):** (A) Hub modal copy “Run 1 of 2 / Run 2 of 2” — still optional Hub polish. **(B) superseded** → build tracked as **§19** (Cursor Automations daily Pass 1→2; not tray paste+Enter).  
 **Conversation handoff:** **Safe to delete this chat** — see Notes §14 close-out (meta paste drafts + Hub leave-as-is locked there).
 
 ### 15. Evergreen / always-in-demand formulation (NEW — Jul 2026)
@@ -1008,6 +1218,70 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 ---
 
+### 18. Abuja area opportunity scan + SME Compliance Lite (NEW — Jul 2026)
+**Status:** Discovery in progress — **no product code**; agent-only scan + MVP brief  
+**One-liner:** Ethically discover Abuja corridor business opportunities via Cursor agent (not Field Intelligence Android, not extending `abuja_lead_generator/` yet); advance **SME Compliance Lite** as reminders + checklists (**no CAC/FIRS document custody**).  
+**Conversation handoff (2026-07-20):** **Safe to delete** the discovery chat — progress lives here + files below.
+
+#### Decisions locked
+| Decision | Choice |
+|----------|--------|
+| Primary discovery mode | **Agent-only** (`prompts/abuja_area_opportunity_scan.txt`) — not drive-around Android as default |
+| `abuja_lead_generator/` extension | **Deferred** until agent-only proves need for DB/outreach factory |
+| Field Intelligence Android migrate | **Deferred** (optional capture-only later; not the engine) |
+| Agent formulation run (S5–15) | **Separate** — area scan may feed it later; not a new Strategy 16 yet |
+| Opportunity lens | **All-sector** (not real-estate-only); **Digital/Hybrid/Physical** quotas in prompt |
+| SME Compliance Lite custody | **No see/store** of CAC/FIRS docs — checklists + due dates + WhatsApp reminders only |
+| Problem provenance | Stonehill: https://stonehillresearch.com/the-hidden-cost-of-compliance-in-nigerias-msme-sector/ |
+
+#### Artifacts (repo)
+| Artifact | Path |
+|----------|------|
+| Area-scan prompt | `prompts/abuja_area_opportunity_scan.txt` |
+| Scan outputs | `agent-business-idea-runs/outputs/abuja_area_opportunities_20260710.md` (v1 RE-heavy), `_v2.md` (all-sector), `_v3.md` + `.docx` (**use v3**) |
+| Compliance Lite brief | `agent-business-idea-runs/outputs/sme_compliance_lite_mvp_brief_20260710.md` + `_r4.docx` (**use r4**) |
+| Manual / WTP steps | `agent-business-idea-runs/MANUAL_TEST.md` § Area scan / Compliance Lite |
+
+#### Done
+- [x] Rethink Field Intelligence vs agent vs leads (ethos: desk discovery first)
+- [x] Canonical area-scan prompt (all-sector + digital modality quotas + RE caps)
+- [x] Agent runs: v1 → v2 → **v3** dated outputs
+- [x] User interest: v3 #2 SME Compliance Lite → pivot off vault
+- [x] MVP brief (no custody) + Stonehill problem source + Word `r4`
+
+#### Pending
+- [ ] **WTP:** 5 Wuse II / Garki owner interviews per brief §8 (go/no-go) — see `MANUAL_TEST.md`
+- [ ] If go → Phase 0 product task (disclaimer copy + checklist/reminder MVP; **no vault**; layout folder TBD)
+- [ ] If no-go → revisit v3 Digital #5 (merchant ledger) or #3 (tutor match)
+- [ ] Optional: Hub card to paste area-scan prompt (like formulation run) — only after WTP path chosen
+- [ ] Optional: feed top Digital rows into a future agent formulation Pass 1
+- [ ] Do **not** build Field Intelligence port or lead-generator area scanner unless explicitly reopened
+
+#### Out of scope (until approved)
+- Implementing Compliance Lite app/code
+- Extending `abuja_lead_generator/` for geo opportunity scoring
+- Migrating Field Intelligence Android into Inc
+- New Strategy 16 solely for area scanning
+
+**Layout note:** Stay under `agent-business-idea-runs/outputs/` + `prompts/` for discovery; new product folder only after WTP go + task Phase 0 approve.  
+**Related:** §6 PropTech (verify-ops parked from area v1 — separate GTM); `abuja_lead_generator/` (My leads pillar).
+
+---
+
+
+### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
+**Status:** Phase **0–1 done** (2026-07-23) — **no Automations created yet**; next = Phase 2 after approve (Automation A only)
+**One-liner:** Replace manual Hub two-run (clipboard paste + Enter) with **daily Cursor Automations** that run **Pass 1 Discover** then **Pass 2 Pack** so `business_ideas_YYYYMMDD.md` + matching `.docx` land in-repo without babysitting — **without breaking** Hub, tray schedules, strategy CLIs, §11/§13 gates, or the §14 contract.
+**Full phased backlog:** see **§19** under Notes / formulation tasks below.
+**Locks (2026-07-23):** Cadence = **daily**; Autonomy = **B** (cloud Automations); Scope = Inc **A** now + **B** later opt-in; **C** = reminder only; **Phase 0 table** in Notes §19 (07:00 / 11:00 WAT; PR not direct main; cloud; Docx in-repo only; fetch separate).
+**Phase 1 shipped:** `prompts/CLOUD_FORMULATION_AUTOMATIONS.md` + README pointers; prompt inventory on `origin` (`2e964fb`); static smokes **26 passed** (2026-07-23).
+**Depends on:** §14 v1 CLOSED (prompts, `FORMULATION_PASS_CONTRACT.md`, `idea_card_schema.py`, Hub Pass 1/2 cards remain source of truth).
+**Layout:** Prefer **Cursor Automations** (dashboard / Agents Window) + existing `prompts/` + `agent-business-idea-runs/outputs/`. Do **not** create a third formulation product folder. Hub cards stay as **manual override**.
+**Manual tests (you):** None until Phase 2+ exists — then one live cloud-run sign-off section in `agent-business-idea-runs/MANUAL_TEST.md` (Automate-first otherwise).
+**Related:** §14; §4 Phase 5.5 (tray Hub nudge — separate path); reminder to integrate pattern **C** in other repos later (not here).
+
+---
+
 ## 📋 General Maintenance Tasks
 
 - [ ] Set up Git version control for Problem Identification Tool
@@ -1085,6 +1359,31 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 - [ ] **Phase 1.9:** Testing (All flows, error handling)
 - [ ] **Phase 1.10:** Deployment & Launch (Production, beta testers)
 - [ ] **Phase 1.11:** Marketing & Growth (Social media, referrals)
+
+### Software Development — Client follow-up playbook (NEW — Jul 2026)
+**One-liner:** Ethical post-delivery client contact playbook for hard-to-reach software clients (Started business ops doc — not a product build).
+
+**Canonical doc:** [`Started-Businesses/software-development.md`](../../Started-Businesses/software-development.md) — sections *Client follow-up playbook* + *Ethical hacks*.
+
+**No new task file needed** — stay on `.cursor/rules/task.md` (this section).  
+**No MANUAL_TEST.md** — ops/process documentation only; no app UI or automate-first product tests.
+
+#### Progress (2026-07-20)
+- [x] Ethical contact principles (do/don’t) documented
+- [x] Pre-delivery contract hooks + post-delivery touchpoint schedule
+- [x] Message templates (check-in, light ping, day-to-day contact, end-of-support, testimonial)
+- [x] Silence protocol + per-client internal checklist
+- [x] Ethical hacks table (15 tactics + red lines) + highest-ROI combo
+
+#### Pending (optional — approve before agent work)
+- [ ] Customize highest-ROI combo + message for one named hard-to-reach client
+- [ ] Draft standard post-delivery contract clause (acceptance + support window + check-ins)
+- [ ] Nigeria-specific channel notes (WhatsApp norms) in playbook
+- [ ] One-page printable client handover checklist
+- [ ] Stage / commit / push `Started-Businesses/software-development.md` + this task entry (user decides)
+
+#### Conversation close-out (2026-07-20)
+- **Safe to delete this chat.** Durable content is in `Started-Businesses/software-development.md` + this task section. No open agent work, no secrets-only-in-chat, no MANUAL_TEST blocker.
 
 ---
 
@@ -1186,11 +1485,14 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 ---
 
 ### 7. Retire ChatGPT Vision / Strategy 10 (phased)
+**Status:** **CLOSED** (all phases done)  
 **Goal:** Remove manual ChatGPT Vision image workflow from the active automation pipeline (no in-repo Vision API; manual upload/paste only). Use Strategies 3–5 for construction/real estate problem discovery.
 
 - [x] **Phase 1 — Master runner:** Remove Strategy 10 from `STRATEGY_SCRIPTS` / `STRATEGY_META` in `run_all_strategies.py`; add to `RETIRED_STRATEGIES` with clear menu messaging; update `run_all_strategies_README.md`.
 - [x] **Phase 2 — Cross-references:** Remove Strategy 10 from API docs; update Drive mapping in this task file.
 - [x] **Phase 3 — Strategy 10 folder:** Archive legacy script to `_archive/visual_content_analyzer_legacy.py`; stub `visual_content_analyzer.py`; add `DEPRECATED.md`; deprecate playbook markdown.
+
+**Conversation handoff (sidebar “Strategy 10 overview” — 2026-07-20):** **Safe to delete that chat.** Retirement is complete in runner + folder archive. **Manual tests:** none. Cross-ref: top **Sidebar chat batch assess** row 9.
 
 ---
 
@@ -1802,7 +2104,184 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 ```
 
 - **Ongoing use:** Hub card 1 → finish chat → later Hub card 2; optional schema before Docx.
-- **Optional later (approve before build):** modal “Run N of 2” wording; tray intervals for card 1 then card 2.
+- **Optional later:** modal “Run N of 2” wording (Hub polish). Tray intervals for card 1→2 superseded by **§19** (Cursor Automations).
 
 **Related:** Chat 2026-07-15 (Docx quality → prompt split → two-agent-run meta); `prompts/agent_formulation_run.txt` + `agent_formulation_pack.txt`; Jul 13 vs Jul 15 idea-detail shape.
+
+### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
+**Status:** Phase **0–1 done** (2026-07-23) — **no Automations created yet**; next = Phase 2 (Automation A only) after approve
+**Parent / Current Priority:** §19
+**Related:** §14 (Pass 1/2 contract — CLOSED v1); §4 Phase 5.5 (tray Hub modal schedule — **do not merge** into this task); `prompts/agent_formulation_run.txt`; `prompts/agent_formulation_pack.txt`; `prompts/FORMULATION_PASS_CONTRACT.md`; `prompts/CLOUD_FORMULATION_AUTOMATIONS.md`; `agent-business-idea-runs/`; Hub `agent_formulation_run` / `agent_formulation_pack`.
+
+**Goal:** Daily **unattended** cloud agent runs that produce today’s packed idea pack (`.md` + `.docx`) using the **same two-job model** as §14 — Discover then Pack — without requiring Inc Hub Start or Cursor Enter.
+
+**User locks (2026-07-23):**
+- Cadence: **daily** — see **Phase 0 decision table** below.
+- Autonomy: **Cursor Automations / cloud agents** (not Hub clipboard + paste + Enter).
+- Scope for this task: Inc **A** (formulation Pass 1→2 + closely related high-fit) and Inc **B** (medium-fit) only as **later opt-in phases**.
+- **C (other repos):** remind only — `project_reminder`, `anki_automation`, BrowserUse/Screenshot, `reelops`, Tegrid/Digi/Cooking Robot, gated trading checks, learning digests — **do not implement under §19**.
+- PC power: **cloud = PC may be off**; My Machines / open Word on desktop = **not** default (Phase 0.3–0.4).
+- Hub two-card manual path remains valid **override**; do not delete or fuse Hub cards.
+
+**Layout (locked unless Phase 0 changes it):**
+- Orchestration = **Cursor Automations** (scheduled / event triggers), not a new Python product.
+- Prompts stay under repo-root `prompts/`; outputs under `agent-business-idea-runs/outputs/`.
+- Optional small **docs-only** aids under `agent-business-idea-runs/` or `prompts/` (cloud run notes) — no strategy-folder edits.
+- Do **not** reopen §14 Phases 0–5 as a rewrite; additive follow-on only.
+
+#### Modularization / anti-break rules (apply every phase)
+
+1. **One surface per sub-phase** — Automation A (Pass 1) ≠ Automation B (Pass 2) ≠ fetch prep ≠ Hub tray schedule ≠ medium-fit B items. Ship one at a time unless user okays a bundle.
+2. **Hub left additive** — keep `agent_formulation_run` + `agent_formulation_pack` as manual override; do not remove, rename destructively, or replace with a mega-prompt card.
+3. **Do not fuse Pass 1 + Pass 2** into one mega-prompt or one chat that silently does both (§14 operating model stays locked).
+4. **No strategy-script edits** — do not touch `Business-Idea-Formulation-Strategy-*/`, `Strategy-1-Business-Variation/` formulation CLIs, or `run_all_strategies.py` for §19.
+5. **Preserve §11 / §13 gates** — Pass 1 Automations instructions must keep S1 online cites + S12 Mode A (≥2 primary) + Mode B overlay; soft-fail aids must not abort the run.
+6. **Preserve §14 card contract** — Pass 2 must normalize Regulatory + Competitors / alternatives on every idea; no invent/re-rank; Docx **one-shot** after cards pass; optional `idea_card_schema.py` before Word.
+7. **Do not break existing tray schedules** — `daily_task_md`, `daily_inc_hub`, `problem_id_live_mwf` stay unless a dedicated schedule-tune task says otherwise. §19 must not hijack Phase 4 nudge IDs for cloud work.
+8. **§4 Phase 5.5 stays separate** — tray “open Hub + Option B modal” is a **local nudge**; §19 is **cloud unattended**. Cross-link only; never implement 5.5 inside a §19 phase without explicit approve.
+9. **Git / cloud readiness** — cloud agents see **committed remote** state. Phase 0 must lock commit/PR policy for outputs before enabling auto-write. Do not assume unpushed local files exist in the sandbox.
+10. **Write scope** — Automations write under `agent-business-idea-runs/` (and agreed commit/PR); read-only on strategy scripts; `PYTHONIOENCODING=utf-8` guidance retained for any Windows-local helpers.
+11. **Automate-first verification** — prefer static prompt asserts + schema CLI + existing Hub/config pytest; `MANUAL_TEST.md` only for live cloud-run residual (cannot fully fake Cursor Automations billing/runtime locally).
+12. **No drive-by** Hub Phase 5 rewrite, Prospect folder changes, Docx exporter refactors, or other-repo C work in this task.
+13. **Rollback-friendly** — prefer disable/pause Automation over deleting Hub or prompt files if a run misbehaves.
+
+#### Phase 0 — Spec lock (docs / decisions only; zero runtime risk) ✅
+
+**Why first:** Lock times, git policy, and cloud vs local side effects before creating any Automation (avoids breaking Hub or polluting outputs).
+
+**Phase 0 decision table (locked 2026-07-23 — menu “1”; change only via explicit re-open):**
+
+| ID | Decision | Lock |
+|----|----------|------|
+| **0.1** | Clocks | **Pass 1 Discover:** daily **07:00** Africa/Lagos (WAT). **Pass 2 Pack:** daily **11:00** Africa/Lagos (WAT). Soft gate: if today’s draft `.md` missing or not `_PENDING_PASS_2_PACK_`, Pass 2 **no-ops** (no invent). Not “blind sleep after paste.” |
+| **0.2** | Git | Automations **open a PR** (branch e.g. `formulation/auto-YYYYMMDD`) against default branch; **you merge**. No direct push to `main`/`master`. (§14 “no auto-commit” superseded **only** for this PR path.) |
+| **0.3** | Runtime | **Cursor cloud** (PC may be off). My Machines = later opt-in only. |
+| **0.4** | Docx | **Create `.docx` in repo only** — do **not** auto-open Word on desktop. |
+| **0.5** | Fetch prep | **Separate** (Phase 4) — not bundled into Automation A v1. |
+
+- [x] **0.1 — Clock times** — 07:00 / 11:00 WAT + Pass 2 soft no-op gate (above).
+- [x] **0.2 — Git policy** — PR to default branch; owner merges (above).
+- [x] **0.3 — Runtime** — Cursor cloud (above).
+- [x] **0.4 — Docx open** — in-repo only (above).
+- [x] **0.5 — Fetch prep** — separate Phase 4 (above).
+- [x] **0.6 — Acceptance sketch** — see **Acceptance sketch (Phases 1–6)** below.
+- [x] **0.7 — Checkpoint** — user menu **1** (2026-07-23) approved this Phase 0 package.
+
+**Acceptance sketch (Phases 1–6) — docs-only:**
+
+| Phase | Done looks like |
+|-------|-----------------|
+| **1** | Cloud-run note + prompt inventory on Automation branch; existing pack/discover/schema/Hub pytest green; Hub untouched |
+| **2** | Automation A only; one PR with pending `business_ideas_YYYYMMDD.md`; Hub Start still works |
+| **3** | Automation B at 11:00; soft gate; packed `.md` + `.docx` on PR; schema preferred; Hub Pass 2 override intact |
+| **4** | Optional fetch prep isolated; disable-able without breaking A/B |
+| **5** | Only user-approved medium-fit items; each solo; no C repos |
+| **6** | READMEs + MANUAL_TEST Automations section; regression green; pause/disable documented |
+
+**Phase 0 definition of done:** ✅ Decisions 0.1–0.5 locked in this file; acceptance sketch written; **no** Automations created; **no** `launcher_config.json` / prompt body changes required.
+
+#### Phase 1 — Cloud-ready packaging (additive docs; discover/pack prompts unchanged unless gap found) ✅
+
+**Goal:** Make Pass 1/2 instructions safe to paste into Automations without rewriting Hub or strategy code.
+
+- [x] **1.1 — Cloud run note (docs):** `prompts/CLOUD_FORMULATION_AUTOMATIONS.md` + pointers in `prompts/README.md` and `agent-business-idea-runs/README.md` (2026-07-23).
+- [x] **1.2 — Prompt inventory:** `agent_formulation_run.txt` / `agent_formulation_pack.txt` / `FORMULATION_PASS_CONTRACT.md` / `idea_card_schema.py` are **git-tracked** on `main` (last formulation ship `2e964fb`). **Before Phase 2:** commit/push this Phase 1 cloud note so Automations can see it on remote.
+- [x] **1.3 — Static smokes still green:** pack + schema + §13 dual-mode + Hub config/agent_run — **26 passed** (2026-07-23). Hub untouched.
+- [x] **1.4 — Checkpoint:** Phase 1 complete via menu **1** (2026-07-23). **Do not** create Automation A until user approves Phase 2.
+
+**Phase 1 definition of done:** ✅ Docs/inventory ready; prompts/contract unchanged in spirit; tests green; Hub untouched; **no** Automations created.
+
+#### Phase 2 — Automation A only (Pass 1 Discover) — modular ship
+
+**Goal:** First unattended daily Discover run. **Stop after draft `.md`.** Do not pack; do not Docx.
+
+- [ ] **2.1 — Create Automation A** (Cursor Automations): daily cron; repo = Inc; instructions = Pass 1 Discover contract (same intent as Hub Run 1 meta / `agent_formulation_run.txt`).
+- [ ] **2.2 — Outputs:** Writes `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md` with `_PENDING_PASS_2_PACK_`; no Pass 2 work in the same run.
+- [ ] **2.3 — Persist per Phase 0 git policy** (commit/PR/artifacts-only).
+- [ ] **2.4 — Prove once:** One successful cloud Pass 1 artifact reviewed; Hub manual path still works (smoke or short MANUAL note).
+- [ ] **2.5 — Checkpoint:** Pause here unless user approves Phase 3 (do **not** auto-build Pass 2 in the same hop).
+
+**Phase 2 definition of done:** Daily Pass 1 Automation exists and has produced at least one valid pending draft; Pass 2 Automation **not** required yet; Hub unbroken.
+
+#### Phase 3 — Completion gate + Automation B (Pass 2 Pack) — modular ship
+
+**Goal:** Second job only after Pass 1 ready — pack cards + one-shot Docx; no new ranked set.
+
+- [ ] **3.1 — Gate:** Pass 2 starts only when today’s draft exists and still pending (marker / path / commit event) — **not** a blind short sleep after Pass 1 paste.
+- [ ] **3.2 — Create Automation B:** instructions = Pass 2 Pack (`agent_formulation_pack.txt` + §14 contract); same dated `.md`.
+- [ ] **3.3 — Schema:** Prefer `idea_card_schema.py` before Docx; fix gaps from Pass 1 evidence; soft-fail incomplete cards without inventing competitors.
+- [ ] **3.4 — Docx:** One-shot convert per contract; open-on-desktop only if Phase 0.4 allowed it.
+- [ ] **3.5 — Prove once:** Same-day `.md` + `.docx` pair; Hub Pass 2 card still works as override.
+- [ ] **3.6 — Checkpoint:** User sign-off on A→B chain before Phase 4 medium-fit work.
+
+**Phase 3 definition of done:** Daily chain yields packed `.md` + `.docx`; two Automations (or cron+event) remain separable; §14 gates intact; Hub override intact.
+
+#### Phase 4 — Optional fetch prep (A+) — still modular
+
+- [ ] **4.1 — Optional Automation or pre-step:** `agent_strategy_run.py` fetch → `inputs/*.json` before Pass 1 (soft-fail; never abort Discover).
+- [ ] **4.2 — Tests/docs** for fetch-prep path only; do not fold fetch failures into Hub `agent_run` clipboard behavior.
+- [ ] **4.3 — Checkpoint** before any Phase 5 medium-fit items.
+
+**Phase 4 definition of done:** Fetch prep optional and isolated; Pass 1/2 Automations still independently disable-able.
+
+#### Phase 5 — Inc medium-fit (bucket B) — opt-in only; one item per sub-phase
+
+**Do not start until Phases 2–3 signed off.** Each sub-phase is independently approvable:
+
+- [ ] **5.1 — PR hygiene on Inc** (PR opened/pushed → comment-only review) — optional.
+- [ ] **5.2 — Daily digest** (summarize new `outputs/` + `task.md` focus) — optional.
+- [ ] **5.3 — CI fail triage** (on checks failed → propose fix) — optional; only if CI exists and user wants it.
+- [ ] **5.4 — §5 bookmark classify-from-export** (cloud classify dump → proposed routes; **no** live Chrome delete) — optional.
+- [ ] **5.5 — §7 Post-Wedding** (`run_automated_tests.py` on PR/push comment if red) — optional.
+- [ ] **5.6 — §3 YouTube status digest** from exports JSON — optional.
+- [ ] **5.7 — Checkpoint** after each enabled item; never batch-break Hub or formulation Automations.
+
+**Phase 5 definition of done:** Only approved medium-fit Automations exist; formulation A/B still green; no other-repo C work.
+
+#### Phase 6 — Docs, MANUAL_TEST, regression, sign-off
+
+- [ ] **6.1 — READMEs:** Point at Automations as preferred daily path; Hub = manual override (`agent-business-idea-runs/README.md`, `prompts/README.md`, Hub README one-liners).
+- [ ] **6.2 — `MANUAL_TEST.md`:** Add Automations live sign-off section; keep Hub Two-run as optional override; Automate-first for everything else.
+- [ ] **6.3 — Regression bundle:** Existing pack/discover/schema/Hub pytest still green after any incidental doc/config touch.
+- [ ] **6.4 — Operating model lock:** Document disable/pause steps if a bad run occurs (rollback without deleting prompts).
+- [ ] **6.5 — User checkpoint:** §19 v1 complete (A+B daily chain) vs keep iterating Phase 5 items.
+
+**Phase 6 definition of done:** Docs + one live proof of daily `.md`+`.docx`; Hub override documented; automated tests green.
+
+#### Explicitly out of scope (this task)
+
+- Implementing **C** Automations in other repos (reminder only — integrate later outside §19).
+- Fusing Pass 1+2 into one mega-prompt / one Automation that invents a new ranked set on Pack.
+- Replacing or deleting Hub Pass 1/2 cards.
+- Editing strategy CLIs / `run_all_strategies.py` / gadget ops for this task.
+- Hijacking or rewriting existing tray schedules (`problem_id_live_mwf`, etc.) as the formulation engine.
+- Building §4 Phase 5.5 tray Hub modal schedule **inside** §19 (track under §4 if still desired).
+- Forcing My Machines / local Word-open as default.
+- Auto-trading, live payment, or credentialed browser signup Automations.
+- Chrome live de-bookmark without a separate approved local/browser design (§5 Phase 3 remains its own track).
+
+#### Reminder — C (other repos; not §19 work)
+
+When Inc A/B is stable, **separately** consider Automations for: `project_reminder`, `anki_automation`, BrowserUse/Screenshot_script, `reelops`, Tegrid IMS / Digi / Cooking Robot, gated Algorithmic trading health checks, learning-folder digests. Create **per-repo task entries** then — do not expand §19.
+
+#### Checkpoints (user)
+
+- [x] **Approve task entry** — 2026-07-23 (user asked to add phased §19; **implementation still not started**).
+- [x] Approve **Phase 0** (spec lock) — 2026-07-23 menu **1** (07:00/11:00 WAT; PR; cloud; Docx in-repo; fetch separate).
+- [x] Approve **Phase 1** (docs/inventory) — 2026-07-23 menu **1** (cloud note + inventory + 26 smokes; **no** Automation yet).
+- [ ] Approve **Phase 2** (Automation A only).
+- [ ] Approve **Phase 3** (gate + Automation B).
+- [ ] Approve **Phase 4** (optional fetch prep) if desired.
+- [ ] Approve each **Phase 5** medium-fit item individually.
+- [ ] Approve **Phase 6** sign-off.
+
+**Suggested milestones (from 2026-07-23):**
+- Phase 0: ✅ **2026-07-23** (spec lock)
+- Phase 1: ✅ **2026-07-23** (cloud note + inventory + smokes)
+- Phase 2: next after approve (Automation A only)
+- Phase 3: next day after first good Pass 1 cloud proof
+- Phase 4–5: only after A→B stable
+- Phase 6: when daily `.md`+`.docx` proven
+
+**v1 definition of done (formulation chain):** Daily Automation A + gated Automation B produce same-day packed `.md` + `.docx` under `agent-business-idea-runs/outputs/`; §14 contract held; Hub manual override intact; existing pytest green; **C not required**.
 

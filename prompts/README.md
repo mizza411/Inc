@@ -13,6 +13,9 @@ Canonical Cursor agent prompts for Inc Hub workflows.
 
 **Contract (required reading before editing):** `FORMULATION_PASS_CONTRACT.md`
 
+**Cloud Automations (task.md §19 — daily unattended Pass 1→2):** `CLOUD_FORMULATION_AUTOMATIONS.md`  
+(Hub clipboard Start remains the **manual override**; do not fuse Pass 1+2.)
+
 **Note:** After §14 Phase 2, Discover no longer owns Docx convert/open—always finish with Pass 2 when you need uniform cards + Word.
 
 - Edit prompts **here** — do not hardcode wording in launcher Python.

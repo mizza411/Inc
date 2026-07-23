@@ -98,7 +98,8 @@ Contract: `Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/RE
 
 Prompt (Pass 1 Discover): `prompts/agent_formulation_run.txt`  
 Prompt (Pass 2 Pack → Docx): `prompts/agent_formulation_pack.txt` (task.md §14)  
-Contract: `prompts/FORMULATION_PASS_CONTRACT.md`
+Contract: `prompts/FORMULATION_PASS_CONTRACT.md`  
+Cloud Automations (§19): `prompts/CLOUD_FORMULATION_AUTOMATIONS.md` — daily unattended A→B; Hub cards = manual override.
 
 ### Two-pass workflow (§14)
 
@@ -121,6 +122,10 @@ New formulation runs should write:
 
 - `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md`
 - `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.docx`
+
+## Abuja area opportunity scan (task.md §18)
+
+Separate from multi-strategy formulation. Prompt: `prompts/abuja_area_opportunity_scan.txt` (paste into Cursor). Outputs: `outputs/abuja_area_opportunities_YYYYMMDD[_vN].md` — prefer latest **v3**. SME Compliance Lite brief: `outputs/sme_compliance_lite_mvp_brief_20260710.md` (+ `_r4.docx`). Manual WTP: `MANUAL_TEST.md` § Area scan / SME Compliance Lite.
 
 ## Dedup sources (unchanged)
 

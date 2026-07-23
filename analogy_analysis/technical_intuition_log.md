@@ -1,5 +1,155 @@
 ﻿# Technical Intuition Log
 
+## 2026-07-23 — §19 Phase 1 cloud packaging (no Automations yet)
+
+**What we did**
+- Added `prompts/CLOUD_FORMULATION_AUTOMATIONS.md` (scope, cron locks, A/B instruction spines, inventory, rollback).
+- Pointed `prompts/README.md` + `agent-business-idea-runs/README.md` at it; confirmed Pass 1/2 prompts + contract + schema are on `main` (`2e964fb`).
+- Re-ran static smokes: **26 passed**; Hub/launcher untouched; **no** Cursor Automation created.
+
+**Why it matters**
+Cloud agents only see committed files — packaging the run contract first avoids broken remote checkouts when Phase 2 turns on Automation A.
+
+**Intuition analogy**
+Like laminating the recipe card and checking the pantry is stocked before switching on the oven timer — instructions ready; nothing cooking yet.
+
+---
+
+## 2026-07-23 — §19 Phase 0 lock (daily Pass 1→2 Automations)
+
+**What we did**
+- Locked Phase 0 in `.cursor/rules/task.md` §19: Pass 1 **07:00** / Pass 2 **11:00** WAT; Automations open **PR** (owner merges); **Cursor cloud**; **Docx in-repo only**; fetch prep stays Phase 4.
+- Wrote acceptance sketch for Phases 1–6; still **no** Automations or Hub/code changes.
+
+**Why it matters**
+Decisions are frozen before creating cloud agents, so Hub, tray schedules, and §14 two-job rules stay safe while daily unattended formulation gets a clear contract.
+
+**Intuition analogy**
+Like writing the bus timetable and “no boarding without a ticket” rules on the depot wall before buying the buses — the schedule exists; engines stay off until Phase 1–2.
+
+---
+
+## 2026-07-23 — Post-Wedding landing + deploy gate
+
+**What we did**
+- Built static Phase 0b landing under `post-wedding-comms-pack/landing/` (pitch copy, WhatsApp/`APP_URL` via `config.js`).
+- Added `DEPLOY.md` (GitHub Pages + Streamlit Cloud secrets), `.streamlit/config.toml`, `.env.example`, and `test_landing_smoke.py` wired into `run_automated_tests.py` (suite green).
+- Updated `task.md` §7 progress + portfolio focus note.
+
+**Why it matters**
+Marketing can start from a real bio link once you set WhatsApp + push/host — without waiting on Carrd or a custom site builder.
+
+**Intuition analogy**
+Like printing a storefront flyer and taping the WhatsApp number on it before the shop’s electric meter is connected — people can find you; checkout stays off until you’re ready.
+
+---
+
+## 2026-07-23 — Post-Wedding Comms Pack Phase 1b (DeepSeek default)
+
+**What we did**
+- Rewrote `generation.py` for `LLM_PROVIDER=deepseek|openai|ngpt` with DeepSeek as default (`DEEPSEEK_API_KEY` / `LLM_API_KEY`, OpenAI-compatible base URL).
+- Added `.env.example`, `test_generation_providers.py`, and wired it into `run_automated_tests.py` (suite green).
+- Updated README, `PHASE_0b_PITCH.md` FAQ, `MANUAL_TEST.md`, and `task.md` §7 (Phase 1b ✅).
+
+**Why it matters**
+AI drafts no longer depend on OpenAI; cheaper/default DeepSeek path unblocks the soft-launch sequence (manual §B → deploy → 0b).
+
+**Intuition analogy**
+Like swapping the kitchen’s gas cylinder for a cheaper supplier while keeping the same stove knobs — same cooking steps, different fuel behind the pipe.
+
+---
+
+## 2026-07-20 — Bookmark sorter convo handoff (Phases 2b–2d)
+
+
+**What we did**
+- Synced `.cursor/rules/task.md` §5: Phase 2d (tooltips, removal dialog, gitignore) marked done; Phase 3 deferred; pending table + key commits listed.
+- Refreshed `business_bookmark_sorter/MANUAL_TEST.md` with §§D–G (file/docx/dialog, Stay, Skip vs Stay, tooltips) plus existing A–C/H.
+- Confirmed no new task file — §5 remains authoritative for this product.
+
+**Why it matters**
+You can delete the long bookmark-sorter chat; “what shipped / what’s next / what you must click” live on disk.
+
+**Intuition analogy**
+Like labeling a filing cabinet drawer (task.md) and taping the checkout checklist on the drawer front (MANUAL_TEST) before shredding the meeting notes (chat).
+
+---
+
+## 2026-07-20 — Inc Hub Phase 5 agent front door: convo handoff
+
+**What we did**
+- Synced Phase 5 Hub status in `.cursor/rules/task.md` §4 (v1 CLOSED; 5.0–5.4/5.6 done; 5.5 optional).
+- Clarified `inc_launcher/MANUAL_TEST.md` §G: automation owns sign-off; Cursor **Enter** is optional only.
+- Confirmed no new task file — §4 remains authoritative for this thread.
+
+**Why it matters**
+You can delete the Phase 5 delivery chat; Hub card + Option B + agent_run behavior and “what’s left” live on disk.
+
+**Intuition analogy**
+Like finishing a checklist on a whiteboard, then wiping the sticky notes — the whiteboard (task.md + MANUAL_TEST) keeps the score; the chat was just the meeting.
+
+---
+
+## 2026-07-20 — Post-Wedding Comms Pack: convo handoff → task.md §7
+
+**What we did**
+- Synced progress into `.cursor/rules/task.md` §7 (pricing, automation green, LAUNCH_PLAN, pending 0b + short manual + DeepSeek Phase 1b).
+- Updated `MANUAL_TEST.md` with a **Your minimum checklist** (§B/§D/§P1 only) and LLM-swap note for §B.
+- Confirmed no new task file needed; disk trackers hold the handoff.
+
+**Why it matters**
+You can delete the chat without losing “what’s next” — gates and your remaining manual steps live in the repo.
+
+**Intuition analogy**
+Like writing the shopping list on the fridge before leaving the store chat — the fridge (task.md + MANUAL_TEST) is what you re-read later, not the conversation.
+
+---
+
+## 2026-07-20 — Secure bookmark filing (plan only, no code)
+
+**What we did**
+- Documented privacy-first bookmark workflow in `task.md` §5 (Phase 5 options A–G; short-term A+B+C).
+- Added `business_bookmark_sorter/MANUAL_TEST.md`; pointed launcher MANUAL_TEST §F + Drive §8 at the same local-first rule.
+- Explicit handoff: safe to delete planning chat — tracker + tests hold the decisions.
+
+**Why it matters**
+~2k pending links are a time problem; dumping Chrome into chat is a privacy problem — the plan separates them so help never requires oversharing.
+
+**Intuition analogy**
+Like sorting mail at home with a “business only” tray: the postman (Chrome) delivers mixed mail, but you never hand the whole stack to a stranger—only the letters already in the business tray get filed.
+
+---
+
+## 2026-07-19 — Abuja PropTech → internal org SaaS (Land Sales OS)
+
+**What we did**
+- Reframed Abuja PropTech research from B2C concierge → B2B wholesale verify-ops → **internal org SaaS**.
+- Updated `abuja-real-estate-profitable-sub-niches.md` (§3.10, §6) and `.cursor/rules/task.md` Project 6 for **Land Sales OS** (CRM + diligence + deal room).
+- Embedded globally validated gaps (MLS, deal room, RE CRM, PMS, title workflow) as Nigeria-absent categories orgs still run on WhatsApp/Excel.
+
+**Why it matters**
+You sell seats to developer teams, not AGIS trips or diaspora support — product scales with code, not fulfillment labor.
+
+**Intuition analogy**
+Like selling Shopify to shops instead of running their warehouse — the merchant owns the customers and the staff; you own the operating system.
+
+---
+
+## 2026-07-16 — Formulation Pass 2 Pack (business_ideas_20260716)
+
+
+**What we did**
+- Packed Pass 1 draft `business_ideas_20260716.md` to §14 subheads (Regulatory + Competitors on all 12); S1 Complaint citations made explicit.
+- `idea_card_schema.py` PASS (12); one-shot `regenerate_and_open_docx` → `business_ideas_20260716.docx` (no re-rank).
+
+**Why it matters**
+Same ranked set as Discover, now Word-ready with stable card shape so Regulatory/Competitors never drop in distribution.
+
+**Intuition analogy**
+Like locking a shipping label template after the warehouse already picked the boxes—you don’t re-pick stock; you just make every box scan the same fields.
+
+---
+
 ## 2026-07-15 — Formulation §14 Phase 5 (v1 closed)
 
 **What we did**
