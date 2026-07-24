@@ -38,6 +38,37 @@
 
 ---
 
+## FIR-INC-1 — Field Intelligence Radar (copied to Inc; cutover not finished)
+
+**Status:** 🟡 **In progress** — **Phase 0–5 ✅** (24/07/2026) · **6–8 ⏳**  
+**Canonical folder:** `C:\dev\Inc\field_intelligence_radar/`  
+**project_reminder:** full duplicate + stub `field_intelligence_radar/README.md` until **6a/6b**  
+**Authoritative phases:** `C:\dev\project_reminder\.cursor\rules\task.md` § **FIR-INC-1**  
+**Checklist:** `C:\dev\project_reminder\tests\FIR_INC_MOVE_MANUAL_TESTS.md`  
+**Do not:** fuse with `abuja_lead_generator/`; delete source until owner **6a**  
+**Sibling precedent:** **OTI-INC-1** below  
+
+### Money / field tracks (prefer Inc paths)
+
+| ID | Role | Path on Inc |
+|----|------|-------------|
+| **FIR-ABUJA-MON-1** | Abuja construction visit monetization (₦210k) | `field_intelligence_radar/ABUJA_DAY1_VISIT_SHEET.md` · `ABUJA_MONETIZATION_MANUAL_TESTS.md` |
+| FIR product / APK | Android radar + backend | `field_intelligence_radar/` (roadmap, `build_output/`, `mobile/`, `backend/`) |
+| **ABUJA-SIT-CHARGE-1** | Sit+charge venues | Pointer-only until owner saves; prefer `field_intelligence_radar/ABUJA_SIT_CHARGE_VENUES.md` here |
+
+### Open now
+
+```powershell
+cd C:\dev\Inc\field_intelligence_radar
+# Docs / scripts live here. Reinstall mobile deps only if you need to build:
+# cd mobile; npm install
+```
+
+**Secrets:** `FIR_KEYS_LOCAL.txt`, `DB_PASSWORD_DO_NOT_COMMIT.txt` are local — **do not commit**.  
+**Not** auto-launched / no tray / no Inc Hub card unless owner opts in (**8b**).
+
+---
+
 ## OTI-INC-1 — Online tasks income toolkit (moved 22/07/2026)
 
 **Status:** 🟢 **Complete (move)** · execution (platform signups) still owner-pending — **Day 1 started 2026-07-23** (tabs opened; accounts not yet recorded)  
@@ -1270,7 +1301,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 
 ### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
-**Status:** Phase **0–1 done** (2026-07-23) — **no Automations created yet**; next = Phase 2 after approve (Automation A only)
+**Status:** Phase **0–1 done** (2026-07-23, on `origin` `c0a51d2`/`c9e1961`) — **Phase 2 blocked** pending owner Privacy decision: Cursor requires leaving **Privacy Mode (Legacy)** (one-way; see `prompts/IMPORTANT_cursor_privacy_mode_legacy.md`). Automation A draft was approved in Agents Window; editor blocked until privacy switch or Cancel → park cloud path.
 **One-liner:** Replace manual Hub two-run (clipboard paste + Enter) with **daily Cursor Automations** that run **Pass 1 Discover** then **Pass 2 Pack** so `business_ideas_YYYYMMDD.md` + matching `.docx` land in-repo without babysitting — **without breaking** Hub, tray schedules, strategy CLIs, §11/§13 gates, or the §14 contract.
 **Full phased backlog:** see **§19** under Notes / formulation tasks below.
 **Locks (2026-07-23):** Cadence = **daily**; Autonomy = **B** (cloud Automations); Scope = Inc **A** now + **B** later opt-in; **C** = reminder only; **Phase 0 table** in Notes §19 (07:00 / 11:00 WAT; PR not direct main; cloud; Docx in-repo only; fetch separate).
