@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-07-30T06:02:48.560252",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Sterling Bank’s profit climbs 22%, but loan losses are rising faster",
+          "summary": "Sterling Bank has reported a pre-tax profit of N55.53 billion for the six months ended 30 June 2026, representing an increase of 21.92% from N45.55 billion in the corresponding period of 2025.\nThe post Sterling Bank’s profit climbs 22%, but loan losses are rising faster appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/sterling-banks-profit-climbs-22-but-loan-losses-are-rising-faster/",
+          "published": "Wed, 29 Jul 2026 21:20:53 +0000"
+        },
+        {
+          "title": "Wema Bank posts N154.56 billion H1 2026 pretax profit, up 53.65% YoY",
+          "summary": "Wema Bank Plc reported a pre-tax profit of N154.56 billion for the six months ended June 30, 2026, representing a 53.65% increase year-on-year from N100.59 billion in the corresponding period of 2025.\nThe post Wema Bank posts N154.56 billion H1 2026 pretax profit, up 53.65% YoY appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/wema-bank-posts-n154-56-billion-h1-2026-pretax-profit-up-53-65-yoy/",
+          "published": "Wed, 29 Jul 2026 21:00:14 +0000"
+        },
+        {
+          "title": "NASCON grew sales 4%, profit jumped 28%. Something changed",
+          "summary": "NASCON Allied Industries Plc reported a profit before tax of N29.70 billion for the first half of 2026, representing a 27.59% year-on-year increase, as stronger operating margins, higher finance income and lower borrowing costs boosted an otherwise modest revenue growth.\nThe post NASCON grew sales 4%, profit jumped 28%. Something changed appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/nascon-grew-sales-4-profit-jumped-28-something-changed/",
+          "published": "Wed, 29 Jul 2026 20:56:41 +0000"
+        },
+        {
+          "title": "Royal Exchange pre-tax profit declines 94.2% in H1 2026",
+          "summary": "Royal Exchange Plc has released its H1 2026 financial statement, reporting a sharp decline of 94.2% in pre-tax profit.\nThe post Royal Exchange pre-tax profit declines 94.2% in H1 2026 appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/royal-exchange-pre-tax-profit-declines-94-2-in-h1-2026/",
+          "published": "Wed, 29 Jul 2026 18:23:13 +0000"
+        },
+        {
+          "title": "PwC, EY jointly command an estimated 35.9% of Nigeria’s corporate audit market in 2025`",
+          "summary": "PricewaterhouseCoopers (PwC) and Ernst &#038; Young (EY) emerged as the leading auditors among 128 major Nigerian companies reviewed in 2025, with each firm auditing 23 companies, representing 17.97% of the total.\nThe post PwC, EY jointly command an estimated 35.9% of Nigeria&#8217;s corporate audit market in 2025` appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/pwc-ey-jointly-command-an-estimated-35-9-of-nigerias-corporate-audit-market-in-2025/",
+          "published": "Wed, 29 Jul 2026 17:00:13 +0000"
+        },
+        {
+          "title": "Flutterwave Named to CNBC and Statista’s World’s Top Fintech Companies List",
+          "summary": "Flutterwave, Africa&#8217;s leading payments technology company, has been named to CNBC and Statista&#8217;s 2025 World&#8217;s Top Fintech Companies list. The recognition highlights Flutterwave&#8217;s continued commitment to innovation, operational excellence, and building technology that powers seamless payments and cross-border commerce across Africa and beyond. The CNBC World’s Top Fintech Co",
+          "link": "https://nairametrics.com/2026/07/29/flutterwave-named-to-cnbc-and-statistas-worlds-top-fintech-companies-list/",
+          "published": "Wed, 29 Jul 2026 16:59:33 +0000"
+        },
+        {
+          "title": "NITDA to license tech firms for software testing under new framework",
+          "summary": "The National Information Technology Development Agency (NITDA) is set to license tech firms for software testing as it seeks to standardize IT project implementation across government and regulated private sector entities.\nThe post NITDA to license tech firms for software testing under new framework appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/nitda-to-license-tech-firms-for-software-testing-under-new-framework/",
+          "published": "Wed, 29 Jul 2026 16:10:05 +0000"
+        },
+        {
+          "title": "These professional certifications are quietly transforming careers across Nigeria",
+          "summary": "Professional certifications are becoming one of the clearest ways Nigerian professionals are distinguishing themselves in an increasingly competitive job market, as employers place greater value on verified expertise and workers seek skills that remain relevant in the age of artificial intelligence.\nThe post These professional certifications are quietly transforming careers across Nigeria appeared",
+          "link": "https://nairametrics.com/2026/07/29/these-professional-certifications-are-quietly-transforming-careers-across-nigeria/",
+          "published": "Wed, 29 Jul 2026 15:48:57 +0000"
+        },
+        {
+          "title": "Nigeria’s First SEC-Licensed Exchange, Quidax, Expands Stablecoin Infrastructure to Over 21 Countries",
+          "summary": "Quidax, the first digital assets exchange to receive a provisional licence from Nigeria&#8217;s Securities and Exchange Commission (SEC), today announced the expansion of its stablecoin infrastructure to more than 21 countries and 14 currencies, enabling startups, fintechs, and global enterprises to move value seamlessly across Africa and key international markets. Africa loses an estimated $5 [&#",
+          "link": "https://nairametrics.com/2026/07/29/nigerias-first-sec-licensed-exchange-quidax-expands-stablecoin-infrastructure-to-over-21-countries/",
+          "published": "Wed, 29 Jul 2026 15:00:50 +0000"
+        },
+        {
+          "title": "Nigeria’s $1 trillion target: What the numbers really mean for business",
+          "summary": "The opportunity in Nigeria is less about a small number of wealthy consumers and more about the rising incomes of a very large population.\nThe post Nigeria’s $1 trillion target: What the numbers really mean for business appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/07/29/nigerias-1-trillion-target-what-the-numbers-really-mean-for-business/",
+          "published": "Wed, 29 Jul 2026 14:47:29 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "South African attacks: Veritas Numquam Perit (1)",
+          "summary": "Witness to History I arrived South Africa in June 2002, and a year later the University of the Witwatersrand (Wits\nread more South African attacks: Veritas Numquam Perit (1)",
+          "link": "https://businessday.ng/life/article/south-african-attacks-veritas-numquam-perit-1/",
+          "published": "Thu, 30 Jul 2026 05:45:13 +0000"
+        },
+        {
+          "title": "Kudos for 4 new Army Divisions; cries from terrorists’ dens, and Fubara’s prodigal son mimicry?",
+          "summary": "There is an interplay of the good and the bad on the Nigerian political firmament. While the country is electric\nread more Kudos for 4 new Army Divisions; cries from terrorists’ dens, and Fubara’s prodigal son mimicry?",
+          "link": "https://businessday.ng/backpage/article/kudos-for-4-new-army-divisions-cries-from-terrorists-dens-and-fubaras-prodigal-son-mimicry/",
+          "published": "Thu, 30 Jul 2026 05:30:12 +0000"
+        },
+        {
+          "title": "Police raid criminal hideout in Delta, arrest seven cultists",
+          "summary": "&#8230;Foils planned gathering of criminals The operatives of the Delta State Police Command&#8217;s Anti-Kidnapping Unit (SAKU) have arrested seven suspects\nread more Police raid criminal hideout in Delta, arrest seven cultists",
+          "link": "https://businessday.ng/news/article/police-raid-criminal-hideout-in-delta-arrest-seven-cultists/",
+          "published": "Thu, 30 Jul 2026 05:10:19 +0000"
+        },
+        {
+          "title": "Our refinery represents 10% of US refining capacity – Aliko Dangote",
+          "summary": "Nigeria&#8217;s Federal Government cast the Dangote Petroleum Refinery and Petrochemicals as central to President Bola Tinubu&#8217;s target of a $1\nread more Our refinery represents 10% of US refining capacity &#8211; Aliko Dangote",
+          "link": "https://businessday.ng/news/article/our-refinery-represents-10-of-us-refining-capacity-aliko-dangote/",
+          "published": "Thu, 30 Jul 2026 05:05:18 +0000"
+        },
+        {
+          "title": "Lifecard University, Qatar Real Estate Academy graduate 100 property professionals",
+          "summary": "In a landmark achievement for international real estate education, Lifecard University, in partnership with the Qatar Real Estate Academy, has\nread more Lifecard University, Qatar Real Estate Academy graduate 100 property professionals",
+          "link": "https://businessday.ng/news/article/lifecard-university-qatar-real-estate-academy-graduate-100-property-professionals/",
+          "published": "Thu, 30 Jul 2026 04:58:17 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Mbah seeks 6,580 teachers, others for smart schools",
+          "summary": "Enugu State Governor Peter Mbah approves the recruitment of 6,580 teachers and staff for the state&#8217;s new Smart Green Schools. Apply by August 14, 2026.\n\nRead More: https://punchng.com/mbah-seeks-6580-teachers-others-for-smart-schools/",
+          "link": "https://punchng.com/mbah-seeks-6580-teachers-others-for-smart-schools/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:58:58 +0000"
+        },
+        {
+          "title": "C’River LG workers protest 11-month unpaid salaries",
+          "summary": "Cross River local government workers protest 11 months of unpaid salaries, urging Governor Bassey Otu to approve their enrolment on the state payroll.\n\nRead More: https://punchng.com/criver-lg-workers-protest-11-month-unpaid-salaries/",
+          "link": "https://punchng.com/criver-lg-workers-protest-11-month-unpaid-salaries/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:58:05 +0000"
+        },
+        {
+          "title": "Tinubu should tackle hunger, insecurity, not opponents – Atiku",
+          "summary": "Atiku Abubakar urges President Tinubu to focus on tackling Nigeria&#8217;s hunger, insecurity, and economic challenges instead of political opponents.\n\nRead More: https://punchng.com/tinubu-should-tackle-hunger-insecurity-not-opponents-atiku/",
+          "link": "https://punchng.com/tinubu-should-tackle-hunger-insecurity-not-opponents-atiku/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:57:41 +0000"
+        },
+        {
+          "title": "COAS names GOCs for four new Army divisions",
+          "summary": "The Nigerian Army expands its operational structure with four new divisions. Learn about the newly appointed GOCs and their areas of responsibility.\n\nRead More: https://punchng.com/coas-names-gocs-for-four-new-army-divisions/",
+          "link": "https://punchng.com/coas-names-gocs-for-four-new-army-divisions/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:51:50 +0000"
+        },
+        {
+          "title": "Councils vice chairmen back Otu, Tinubu’s re-election",
+          "summary": "Cross River local government vice chairmen declare support for Governor Bassey Otu and President Bola Tinubu&#8217;s re-election, citing ongoing reforms and deve\n\nRead More: https://punchng.com/councils-vice-chairmen-back-otu-tinubus-re-election/",
+          "link": "https://punchng.com/councils-vice-chairmen-back-otu-tinubus-re-election/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:49:08 +0000"
+        },
+        {
+          "title": "UK court jails Nigerian two years for sexual assault",
+          "summary": "A Nigerian man, Obinwa Obichukwu, has been jailed for two years in the UK for sexually assaulting a woman at Euston railway station. Learn more about the c\n\nRead More: https://punchng.com/uk-court-jails-nigerian-two-years-for-sexual-assault/",
+          "link": "https://punchng.com/uk-court-jails-nigerian-two-years-for-sexual-assault/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:46:11 +0000"
+        },
+        {
+          "title": "‘FG, Rivers tourism MoU, step towards sustainable investments’",
+          "summary": "The FG and Rivers State tourism MoU is hailed as a move towards sustainable investments in culture and tourism, unlocking the state&#8217;s vast potential.\n\nRead More: https://punchng.com/fg-rivers-tourism-mou-step-towards-sustainable-investments/",
+          "link": "https://punchng.com/fg-rivers-tourism-mou-step-towards-sustainable-investments/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:46:03 +0000"
+        },
+        {
+          "title": "Police arrest 14 suspected cultists in Enugu",
+          "summary": "Enugu State Police Command arrests 14 suspected cultists in two operations, recovering firearms and cartridges. Read more about the crackdown on cultism in\n\nRead More: https://punchng.com/police-arrest-14-suspected-cultists-in-enugu/",
+          "link": "https://punchng.com/police-arrest-14-suspected-cultists-in-enugu/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 05:43:31 +0000"
+        },
+        {
+          "title": "Benue woman, friend arrested over alleged self-kidnap",
+          "summary": "Two women have been arrested in Benue for allegedly staging a self-kidnap to extort money from family. Discover details of the fake abduction plot.\n\nRead More: https://punchng.com/benue-woman-friend-arrested-over-alleged-self-kidnap/",
+          "link": "https://punchng.com/benue-woman-friend-arrested-over-alleged-self-kidnap/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 04:34:37 +0000"
+        },
+        {
+          "title": "Nigeria’s consumer credit  drops 20% to N3.8tn",
+          "summary": "Nigeria&#8217;s consumer credit declined by 20% to N3.78tn in 2025, the first drop in six years, as high interest rates impacted household borrowing.\n\nRead More: https://punchng.com/nigerias-consumer-credit-drops-20-to-n3-8tn/",
+          "link": "https://punchng.com/nigerias-consumer-credit-drops-20-to-n3-8tn/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 30 Jul 2026 04:33:18 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "FG’s crude export earnings dip 14% to $31.54bn in 2025 — CBN",
+          "summary": "By Ediri Ejoh The Federal Government’s (FG) crude oil export earnings fell 14.41 percent to $31.54 billion in 2025 from $36.85 billion recorded in the corresponding period of 2024. The drop was attributed to lower international crude oil prices arising from a global supply glut in the review period. The Central Bank of Nigeria, CBN, made [&#8230;]\nThe post FG’s crude export earnings dip 14% to $31",
+          "link": "https://www.vanguardngr.com/2026/07/fgs-crude-export-earnings-dip-14-to-31-54bn-in-2025-cbn/",
+          "published": "Thu, 30 Jul 2026 06:00:59 +0000"
+        },
+        {
+          "title": "Dollar to Naira exchange rate today, July 30, 2026",
+          "summary": "The United States Dollar traded against the Nigerian Naira at an official rate of approximately 1,358.63 Naira per dollar in the Nigerian Foreign Exchange Market on Thursday, July 30, 2026. \nThe post Dollar to Naira exchange rate today, July 30, 2026 appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/dollar-to-naira-exchange-rate-today-july-30-2026/",
+          "published": "Thu, 30 Jul 2026 05:57:04 +0000"
+        },
+        {
+          "title": "Bank customers’ complaints rise 11% as CBN orders N19bn refunds",
+          "summary": "•Slams N1.69bn penalties on banks’ breaches By Babajide Komolafe Bank customers lodged 23,129 complaints against financial institutions in 2025, representing 11 per cent increase over the previous year, prompting the Central Bank of Nigeria, CBN, to order refunds totaling N19.12 billion and $329.3 million to affected consumers. The apex bank also imposed N1.69 billion in penalties [&#8230;]\nThe po",
+          "link": "https://www.vanguardngr.com/2026/07/bank-customers-complaints-rise-11-as-cbn-orders-n19bn-refunds/",
+          "published": "Thu, 30 Jul 2026 05:50:24 +0000"
+        },
+        {
+          "title": "Idi Amin’s grandson disqualified from Commonwealth boxing bout",
+          "summary": "The grandson of former Ugandan president Idi Amin saw his bid for Commonwealth boxing gold end in disgrace as Aziz Abdul was disqualified for a headbutt in his quarter-final on Wednesday.\nThe post Idi Amin&#8217;s grandson disqualified from Commonwealth boxing bout appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/idi-amins-grandson-disqualified-from-commonwealth-boxing-bout/",
+          "published": "Thu, 30 Jul 2026 05:26:00 +0000"
+        },
+        {
+          "title": "PFIPC: We failed due diligence on recruitment waiver — HCSF",
+          "summary": "Head of the Civil Service of the Federation, HCSF, Mrs. Esther Didi Walson-Jack, yesterday admitted before the House of Representatives Ad-hoc Committee investigating alleged creation of the Presidential Economic Advisory Council, PEAC, and the Presidential Foreign Investment Promotion Council, PFIPC, without legal backing that her office failed to carry out adequate due diligence before issuing k",
+          "link": "https://www.vanguardngr.com/2026/07/pfipc-we-failed-due-diligence-on-recruitment-waiver-hcsf/",
+          "published": "Thu, 30 Jul 2026 05:01:24 +0000"
+        },
+        {
+          "title": "Osun gov poll:  Police nab SSG, 5 others over alleged vote-buying",
+          "summary": "According to the Command, officers recovered a register containing voters' details, raising concerns over possible electoral offences.\nThe post Osun gov poll:  Police nab SSG, 5 others over alleged vote-buying appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/07/police-arrest-osun-ssg-five-others-over-allege-vote-buying-offences/",
+          "published": "Thu, 30 Jul 2026 05:00:00 +0000"
+        },
+        {
+          "title": "Too much politics in World Cup 2026",
+          "summary": "The 2026 World Cup, jointly hosted by Canada, Mexico and the United States, will be remembered less for goals than for the troubling intersection of sport and statecraft that unfolded across North America. FIFA&#8217;s projections and briefings indicate that the expanded 48 team tournament is set to be the most lucrative in history, with revenues [&#8230;]\nThe post Too much politics in World Cup 2",
+          "link": "https://www.vanguardngr.com/2026/07/too-much-politics-in-world-cup-2026/",
+          "published": "Thu, 30 Jul 2026 02:52:00 +0000"
+        },
+        {
+          "title": "Tacking poverty in Nigeria: Onus on crony billionaires, not self-made musicians! By Olu Fasan",
+          "summary": "Senator Oluremi Tinubu, Nigeria&#8217;s irrepressible first lady, recently made two controversial interventions on the country&#8217;s socio-economic situation. First, she told the jobless to start selling akara, roasted corn or kuli-kuli to eke out a living. Then, she admonished rich young musicians to help the poor. She received a torrent of criticism for the comments. Yet they [&#8230;]\nThe pos",
+          "link": "https://www.vanguardngr.com/2026/07/tacking-poverty-in-nigeria-onus-on-crony-billionaires-not-self-made-musicians-by-olu-fasan/",
+          "published": "Thu, 30 Jul 2026 02:46:00 +0000"
+        },
+        {
+          "title": "Eyirieyi Obohia: The culture of my people, by Ikechukwu Amaechi",
+          "summary": "On Tuesday, August 11, 2026 &#8211; the second Nkwo market day &#8211; all roads from far and near will lead to Obohia, a bucolic agrarian community in Ahiazu-Mbaise local government area, Imo State, for their unique cultural fiesta &#8211; Eyirieyi Obohia, an age-long festival that unites the community as a people of common heritage. One of [&#8230;]\nThe post Eyirieyi Obohia: The culture of my pe",
+          "link": "https://www.vanguardngr.com/2026/07/eyirieyi-obohia-the-culture-of-my-people-by-ikechukwu-amaechi/",
+          "published": "Thu, 30 Jul 2026 01:58:00 +0000"
+        },
+        {
+          "title": "Oriire: FG arraigns two Ansaru Commanders, three others over fresh charges of terrorism",
+          "summary": "By Ikechukwu Nnochiri ABUJA— The Federal Government has arraigned five persons accused of involvement in the beheading of two teachers who were abducted from schools in Oriire Local Government Area (LGA) of Oyo State. Among those docked before a vacation judge of the Federal High Court in Abuja were two alleged commanders of the Ansaru [&#8230;]\nThe post Oriire: FG arraigns two Ansaru Commanders, ",
+          "link": "https://www.vanguardngr.com/2026/07/oriire-school-kidnappings-fg-arraigns-2-ansaru-commanders-3-others/",
+          "published": "Thu, 30 Jul 2026 01:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "US resumes attack on Iran after Trump’s threat",
+          "summary": "Two people are reported to have been injured by the strikes on Iranian facilities. \nThe post US resumes attack on Iran after Trump’s threat  appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/899346-us-resumes-attack-on-iran-after-trumps-threat.html",
+          "published": "Thu, 30 Jul 2026 05:58:55 +0000"
+        },
+        {
+          "title": "Finance Ministry warns job seekers against extortion",
+          "summary": "The ministry said fraudsters are circulating a fake recruitment notice demanding payment from newly recruited staff.\nThe post Finance Ministry warns job seekers against extortion appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/899345-finance-ministry-warns-job-seekers-against-extortion.html",
+          "published": "Thu, 30 Jul 2026 05:53:32 +0000"
+        },
+        {
+          "title": "EXCLUSIVE: What longtime allies reveal about alleged coup leader’s life that shattered their confidence",
+          "summary": "This report captures hidden and pivotal bits of the personal life of the Army colonel who rallied fellow military officers to stage a coup against the Nigerian government last year, as told by his allies.\nThe post EXCLUSIVE: What longtime allies reveal about alleged coup leader’s life that shattered their confidence appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/899325-exclusive-what-longtime-allies-reveal-about-alleged-coup-leaders-life-that-shattered-their-confidence.html",
+          "published": "Thu, 30 Jul 2026 05:00:17 +0000"
+        },
+        {
+          "title": "INVESTIGATION: Gas flares, poisoned lives, regulatory failures in Nigeria’s oil fields",
+          "summary": "From disappearing fish in Akwa Ibom to polluted rainwater in Bayelsa, communities living beside Nigeria's oil facilities are confronting the human consequences of methane, a potent but largely invisible greenhouse gas.\nThe post INVESTIGATION: Gas flares, poisoned lives, regulatory failures in Nigeria’s oil fields appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/investigationspecial-reports/899305-investigation-gas-flares-poisoned-lives-regulatory-failures-in-nigerias-oil-fields.html",
+          "published": "Thu, 30 Jul 2026 04:00:11 +0000"
+        },
+        {
+          "title": "Local govt workers in Cross River protest 11 months’ unpaid salaries",
+          "summary": "Newly employed local government workers in Cross River protested 11 months of unpaid salaries, alleging severe hardship and deaths among colleagues, while urging Governor Bassey Otu to approve their payroll. The state government promised action within two weeks.\nThe post Local govt workers in Cross River protest 11 months&#8217; unpaid salaries appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/899310-local-govt-workers-in-cross-river-protest-11-months-unpaid-salaries.html",
+          "published": "Wed, 29 Jul 2026 22:09:51 +0000"
+        },
+        {
+          "title": "ASUU strike stalls examination in Nigerian university",
+          "summary": "The industrial action has left academic activities at a standstill, with students uncertain over when examinations will be rescheduled.\nThe post ASUU strike stalls examination in Nigerian university appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/ssouth-west/899306-asuu-strike-stalls-examination-in-nigerian-university.html",
+          "published": "Wed, 29 Jul 2026 22:01:30 +0000"
+        },
+        {
+          "title": "Court reduces Miyetti Allah leader’s N2 billlion bail bond in money laundering trial",
+          "summary": "The Miyeti Allah leader was initially ordered to produce one surety with evidence of three years' tax clearance in Abuja and second, who must own property worth N2 billion in the Nigerian capital.\nThe post Court reduces Miyetti Allah leader&#8217;s N2 billlion bail bond in money laundering trial appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/899301-court-reduces-miyetti-allah-leaders-n2-billlion-bail-bond-in-money-laundering-trial.html",
+          "published": "Wed, 29 Jul 2026 21:31:07 +0000"
+        },
+        {
+          "title": "Maduka University earns 100% full NUC accreditation",
+          "summary": "Achieving Full Accreditation in all seven programmes assessed demonstrates that the University meets the National Universities Commission's standards for academic quality, staffing, infrastructure, library resources, and governance.\nThe post Maduka University earns 100% full NUC accreditation appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/899272-maduka-university-earns-100-full-nuc-accreditation.html",
+          "published": "Wed, 29 Jul 2026 21:18:34 +0000"
+        },
+        {
+          "title": "Nigeria seeks stronger domestic funding to sustain HIV response",
+          "summary": "However, she warned that changing global economic realities and declining development assistance require the country to rethink how it finances its HIV programme.\nThe post Nigeria seeks stronger domestic funding to sustain HIV response appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/health/health-news/899275-nigeria-seeks-stronger-domestic-funding-to-sustain-hiv-response.html",
+          "published": "Wed, 29 Jul 2026 21:00:49 +0000"
+        },
+        {
+          "title": "SSS re-arraigns two jailed Ansaru leaders, three life-sentence terrorism convicts linked to Oyo school abduction",
+          "summary": "The arraignemnt of the five convicts on terrorism charges came after the SSS expressed dissatisfaction with the life sentences earlier imposed on them in two separate terrorism cases.\nThe post SSS re-arraigns two jailed Ansaru leaders, three life-sentence terrorism convicts linked to Oyo school abduction appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/899273-sss-re-arraigns-two-jailed-ansaru-leaders-three-life-sentence-terrorism-convicts-linked-to-oyo-school-abduction.html",
+          "published": "Wed, 29 Jul 2026 20:54:29 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": 200,
+    "snippet": "Startups in Africa | StartupList AfricaLive MarketSkip to contentLive MarketStartups in AfricaThe complete index of African technology companies.$18.5B total funding raised.3,129 Companies🦄 3 UnicornsEcosystem BriefLive DataStartup market signals in one viewTrack the latest movement across Financial Services and adjacent sectors, then drill into profiles and deal activity with current ecosystem context.Explore StartupsOpen Market Pulse Total Funding$18.5B Startups Tracked3,129 New This Week—Startup SnapshotFull Report Total Funding$18.5B13.4%vs last QStartups Tracked3,129Added this week: —Unicorns: 3Funding Activity13313.4%vs last QTop SectorsFinancial Services—Consumer Goods—Energy—FiltersIndustry11Financial Services6Consumer Goods3Energy3Banking1FinTech1Show 6 moreStage15Debt Financing3Series D2Series E2Venture2Corporate1Show 10 moreLocation7🇳🇬Nigeria6🇿🇦South Africa6🇰🇪Kenya3🇪🇬Egypt2🇷🇼Rwanda1Show 2 morePro FeatureUnlock All FiltersDeal Size & RevenueInvestor TypeAll IndustriesAll CountriesUpgrade to ProSubmit startupFiltersSort by:momentumCompanySectorStageValuationRaisedEmployeesMomentumAspen PharmacareDurban, South AfricaMedical DevicePost-IPO Debt$***,***Pro$***,***Pro5001ZiplineKigali, RwandaLogisticsSeries H$***,***Pro$***,***Pro201TabbyCairo, EgyptFinancial ServicesSeries E$***,***Pro$***,***Pro51Sun KingNairobi, KenyaEnergyVenture$***,***Pro$***,***Pro1001ZEZepzMogadishu, SomaliaFinancial ServicesSeries F$***,***Pro$***,***Pro1001MNT-HalanGiza, EgyptFinancial ServicesDebt Financing$***,***Pro$***,***Pro10001d.lightNairobi, KenyaEnergyFunding Round$***,***Pro$***,***Pro201JumiaLagos, NigeriaConsumer GoodsCorporate$***,***Pro$***,***Pro1001Steinhoff InternationalGauteng, South AfricaConsumer GoodsPost-IPO Equity$***,***Pro$***,***Pro10001Sign in to view moreJoin the largest community of African tech investors and founders.Create Free AccountAlready have an account? Log inShowing 1-20 of 3,129 startupsPrev123…157NextPage 2 onward stays locked until the account tier supports deeper access.How to use this startup directoryUse this page when you need a clean view of startup activity by country, sector, and stage, then move into profile-level research once you have a tight set of targets.01Filter by industry, stage, and geography to reduce noise.02Use market aggregates for quick directional context.03Pair shortlisted startups with the investor directory for outreach planning.Frequently asked questionsHow do I narrow results quickly?Start with industry and country, then add stage and keyword filters to get from broad discovery to a focused shortlist in a few clicks.Can this page support investment or partnership scouting?Yes. Teams use this directory to spot relevant companies first, then open profile-level details for funding context and deeper evaluation.What is the best next step after building a shortlist?Open company profiles for deeper diligence, then cross-reference with investor and sector pages to validate market fit and momentum.",
+    "nigeria_keyword_count": 0,
+    "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback."
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "/mission for Claude Code",
+        "summary": "Give Claude Code missions to spawn a team of agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/spine-2",
+        "published": "2026-07-27T13:34:51-07:00"
+      },
+      {
+        "title": "SceneNote",
+        "summary": "Free video feedback tool for editors & clients\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/scenenote-free-video-feedback-tool",
+        "published": "2026-07-28T00:27:23-07:00"
+      },
+      {
+        "title": "EQK 3.0",
+        "summary": "Mac app with dynamic AI Equaliser\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/eqk-eq-with-ai",
+        "published": "2026-07-21T04:15:17-07:00"
+      },
+      {
+        "title": "ClinicFrame",
+        "summary": "Like Granola, but for healthcare. Fully HIPAA-compliant.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/clinic-scribe-clinicframe",
+        "published": "2026-06-30T09:50:09-07:00"
+      },
+      {
+        "title": "MemoryCustodian",
+        "summary": "Repo-native memory for coding agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/memorycustodian",
+        "published": "2026-07-23T14:50:32-07:00"
+      },
+      {
+        "title": "Task Monki",
+        "summary": "Run coding agents through the full development process\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/task-monki",
+        "published": "2026-07-28T14:38:08-07:00"
+      },
+      {
+        "title": "AgentQuartz",
+        "summary": "Claude & Cursor usage in your macOS menu bar\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/agentquartz",
+        "published": "2026-07-28T15:37:48-07:00"
+      },
+      {
+        "title": "Totem",
+        "summary": "Your Twitter bookmarks organized to make you read them\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/totem-5",
+        "published": "2026-07-28T03:55:15-07:00"
+      },
+      {
+        "title": "Bo AI",
+        "summary": "An AI personal assistant that lives in your texts 💬\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/bo-ai",
+        "published": "2026-07-28T09:16:38-07:00"
+      },
+      {
+        "title": "SoundGate Guitar",
+        "summary": "AI Music Tutor that gives real-time feedback on your playing\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/soundgate-guitar-app",
+        "published": "2026-07-05T15:03:44-07:00"
+      },
+      {
+        "title": "Denovo",
+        "summary": "Turn your vibe-coded app into paying customers\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/denovo-business-manager",
+        "published": "2026-05-04T02:24:38-07:00"
+      },
+      {
+        "title": "JusTTY",
+        "summary": "A simple native macOS terminal built on Swift and libghostty\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/justty",
+        "published": "2026-07-28T12:15:04-07:00"
+      },
+      {
+        "title": "Vela",
+        "summary": "The AI Recruiting Coordinator\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/vela-4",
+        "published": "2026-07-27T20:02:10-07:00"
+      },
+      {
+        "title": "Epilude",
+        "summary": "Local voice dictation for Mac for polished text\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/epilude",
+        "published": "2026-07-28T23:16:22-07:00"
+      },
+      {
+        "title": "BlackFlare",
+        "summary": "Mission control for Claude Code & Codex in your menu bar\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/blackflare",
+        "published": "2026-07-28T01:04:32-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related topicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy consumption that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data is based on primary energy calculated by the 'substitution method' which attempts to correct for the inefficiencies in fossil fuel production. It does this by converting non-fossil fuel sources to their 'input equivalents': the amount of primary energy that would be required to produce the same amount of energy if it came from fossil fuels.Approximately one-seventh of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – "
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Sterling Bank’s profit climbs 22%, but loan losses are rising faster",
+        "url": "https://nairametrics.com/2026/07/29/sterling-banks-profit-climbs-22-but-loan-losses-are-rising-faster/",
+        "published": "Wed, 29 Jul 2026 21:20:53 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Wema Bank posts N154.56 billion H1 2026 pretax profit, up 53.65% YoY",
+        "url": "https://nairametrics.com/2026/07/29/wema-bank-posts-n154-56-billion-h1-2026-pretax-profit-up-53-65-yoy/",
+        "published": "Wed, 29 Jul 2026 21:00:14 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NASCON grew sales 4%, profit jumped 28%. Something changed",
+        "url": "https://nairametrics.com/2026/07/29/nascon-grew-sales-4-profit-jumped-28-something-changed/",
+        "published": "Wed, 29 Jul 2026 20:56:41 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Royal Exchange pre-tax profit declines 94.2% in H1 2026",
+        "url": "https://nairametrics.com/2026/07/29/royal-exchange-pre-tax-profit-declines-94-2-in-h1-2026/",
+        "published": "Wed, 29 Jul 2026 18:23:13 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "PwC, EY jointly command an estimated 35.9% of Nigeria’s corporate audit market in 2025`",
+        "url": "https://nairametrics.com/2026/07/29/pwc-ey-jointly-command-an-estimated-35-9-of-nigerias-corporate-audit-market-in-2025/",
+        "published": "Wed, 29 Jul 2026 17:00:13 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "South African attacks: Veritas Numquam Perit (1)",
+        "url": "https://businessday.ng/life/article/south-african-attacks-veritas-numquam-perit-1/",
+        "published": "Thu, 30 Jul 2026 05:45:13 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Kudos for 4 new Army Divisions; cries from terrorists’ dens, and Fubara’s prodigal son mimicry?",
+        "url": "https://businessday.ng/backpage/article/kudos-for-4-new-army-divisions-cries-from-terrorists-dens-and-fubaras-prodigal-son-mimicry/",
+        "published": "Thu, 30 Jul 2026 05:30:12 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Police raid criminal hideout in Delta, arrest seven cultists",
+        "url": "https://businessday.ng/news/article/police-raid-criminal-hideout-in-delta-arrest-seven-cultists/",
+        "published": "Thu, 30 Jul 2026 05:10:19 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Our refinery represents 10% of US refining capacity – Aliko Dangote",
+        "url": "https://businessday.ng/news/article/our-refinery-represents-10-of-us-refining-capacity-aliko-dangote/",
+        "published": "Thu, 30 Jul 2026 05:05:18 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Lifecard University, Qatar Real Estate Academy graduate 100 property professionals",
+        "url": "https://businessday.ng/news/article/lifecard-university-qatar-real-estate-academy-graduate-100-property-professionals/",
+        "published": "Thu, 30 Jul 2026 04:58:17 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Mbah seeks 6,580 teachers, others for smart schools",
+        "url": "https://punchng.com/mbah-seeks-6580-teachers-others-for-smart-schools/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 30 Jul 2026 05:58:58 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "C’River LG workers protest 11-month unpaid salaries",
+        "url": "https://punchng.com/criver-lg-workers-protest-11-month-unpaid-salaries/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 30 Jul 2026 05:58:05 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Tinubu should tackle hunger, insecurity, not opponents – Atiku",
+        "url": "https://punchng.com/tinubu-should-tackle-hunger-insecurity-not-opponents-atiku/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 30 Jul 2026 05:57:41 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "COAS names GOCs for four new Army divisions",
+        "url": "https://punchng.com/coas-names-gocs-for-four-new-army-divisions/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 30 Jul 2026 05:51:50 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Councils vice chairmen back Otu, Tinubu’s re-election",
+        "url": "https://punchng.com/councils-vice-chairmen-back-otu-tinubus-re-election/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 30 Jul 2026 05:49:08 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "FG’s crude export earnings dip 14% to $31.54bn in 2025 — CBN",
+        "url": "https://www.vanguardngr.com/2026/07/fgs-crude-export-earnings-dip-14-to-31-54bn-in-2025-cbn/",
+        "published": "Thu, 30 Jul 2026 06:00:59 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Dollar to Naira exchange rate today, July 30, 2026",
+        "url": "https://www.vanguardngr.com/2026/07/dollar-to-naira-exchange-rate-today-july-30-2026/",
+        "published": "Thu, 30 Jul 2026 05:57:04 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Bank customers’ complaints rise 11% as CBN orders N19bn refunds",
+        "url": "https://www.vanguardngr.com/2026/07/bank-customers-complaints-rise-11-as-cbn-orders-n19bn-refunds/",
+        "published": "Thu, 30 Jul 2026 05:50:24 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Idi Amin’s grandson disqualified from Commonwealth boxing bout",
+        "url": "https://www.vanguardngr.com/2026/07/idi-amins-grandson-disqualified-from-commonwealth-boxing-bout/",
+        "published": "Thu, 30 Jul 2026 05:26:00 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "PFIPC: We failed due diligence on recruitment waiver — HCSF",
+        "url": "https://www.vanguardngr.com/2026/07/pfipc-we-failed-due-diligence-on-recruitment-waiver-hcsf/",
+        "published": "Thu, 30 Jul 2026 05:01:24 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "==========\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmp1hki32et/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
