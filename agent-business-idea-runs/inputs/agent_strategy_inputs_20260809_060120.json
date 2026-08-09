@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-08-09T06:01:27.076649",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "NGX urges Tinubu to require FinTechs to list on Nigeria Stock Exchange",
+          "summary": "The Chief Executive Officer of Nigerian Exchange Limited (NGX), Temi Popoola, has called on President Bola Ahmed Tinubu to support policies that would require major companies operating in Nigeria, particularly high-growth fintech firms, to list on the domestic stock exchange.\nThe post NGX urges Tinubu to require FinTechs to list on Nigeria Stock Exchange appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/08/ngx-urges-tinubu-to-require-fintechs-to-list-on-nigeria-stock-exchange/",
+          "published": "Sat, 08 Aug 2026 18:11:43 +0000"
+        },
+        {
+          "title": "NGX market value to hit N230 trillion by end of 2026, says Popoola",
+          "summary": "The Group Managing Director and Chief Executive Officer of Nigerian Exchange Group (NGX Group), Temi Popoola, has projected that the market value of companies listed on the Nigerian Exchange will rise to N230 trillion by the end of 2026, driven by anticipated major listings and sustained investor interest.\nThe post NGX market value to hit N230 trillion by end of 2026, says Popoola appeared first o",
+          "link": "https://nairametrics.com/2026/08/08/ngx-market-value-to-hit-n230-trillion-by-end-of-2026-says-popoola/",
+          "published": "Sat, 08 Aug 2026 14:10:54 +0000"
+        },
+        {
+          "title": "Best performing Nigerian stocks for the week ended August 7, 2026",
+          "summary": "First HoldCo Plc extended its strong run on the NGX supported by FCMB Group, while newly listed AVA Capital delivered a stunning 33.33% weekly surge, helping the Nigerian equities market close the week higher amid renewed buying interest in banking and select large-cap stocks.\nThe post Best performing Nigerian stocks for the week ended August 7, 2026 appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/08/best-performing-nigerian-stocks-for-the-week-ended-august-7-2026/",
+          "published": "Sat, 08 Aug 2026 12:43:46 +0000"
+        },
+        {
+          "title": "Roqqu launches tokenized stocks, expands into global investment platform",
+          "summary": "Crypto exchange Roqqu has launched tokenized stocks, marking a major expansion beyond digital asset trading and positioning itself as a broader investment platform offering access to global equities.\nThe post Roqqu launches tokenized stocks, expands into global investment platform appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/08/roqqu-launches-tokenized-stocks-expands-into-global-investment-platform/",
+          "published": "Sat, 08 Aug 2026 12:33:52 +0000"
+        },
+        {
+          "title": "Tyms Brings Accounting and Bookkeeping to Claude and ChatGPT",
+          "summary": "Business owners can now ask an AI assistant what their books look like and get an answer from their actual numbers. Most business owners do not have a finance team. They have a rough sense of what came in this month, a folder of receipts, and a nagging feeling that the real picture is somewhere [&#8230;]\nThe post Tyms Brings Accounting and Bookkeeping to Claude and ChatGPT appeared first on Nairam",
+          "link": "https://nairametrics.com/2026/08/08/tyms-brings-accounting-and-bookkeeping-to-claude-and-chatgpt/",
+          "published": "Sat, 08 Aug 2026 11:00:13 +0000"
+        },
+        {
+          "title": "Nigeria’s virtual asset tax framework must enable compliance, not just demand it",
+          "summary": "The new NRS tax guidelines represent a significant step towards formalising Nigeria’s digital asset economy. The real test, however, is whether they can be implemented in a way that encourages compliance, protects innovation and ultimately increases national revenue. For years, one of the loudest demands from Nigeria’s digital asset industry has been regulatory clarity. Businesses [&#8230;]\nThe po",
+          "link": "https://nairametrics.com/2026/08/08/nigerias-virtual-asset-tax-framework-must-enable-compliance-not-just-demand-it/",
+          "published": "Sat, 08 Aug 2026 10:31:57 +0000"
+        },
+        {
+          "title": "Top 10 African countries with cheapest petrol in August",
+          "summary": "Libya, Angola and Algeria have emerged as the African countries with the cheapest petrol prices in August 2026, with pump prices in the three oil-producing countries significantly below the global average. Data from Global Petrol Prices, updated on August 3, 2026, showed that Libya had the continent’s lowest average retail price for octane-95 gasoline at [&#8230;]\nThe post Top 10 African countries",
+          "link": "https://nairametrics.com/2026/08/08/top-10-african-countries-with-cheapest-petrol-in-august/",
+          "published": "Sat, 08 Aug 2026 10:19:50 +0000"
+        },
+        {
+          "title": "NRS: FG to introduce unified, fair regulatory framework for crypto industry",
+          "summary": "The Nigeria Revenue Service (NRS) has said the Federal Government is working on a unified and business friendly regulatory framework for the cryptocurrency and broader virtual asset industry.\nThe post NRS: FG to introduce unified, fair regulatory framework for crypto industry appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/08/nrs-fg-to-introduce-unified-fair-regulatory-framework-for-crypto-industry/",
+          "published": "Sat, 08 Aug 2026 10:07:10 +0000"
+        },
+        {
+          "title": "FUGAZ banks rescue stock market with N237.8 billion gains first week of August",
+          "summary": "The Nigerian equities market closed the trading week on a bullish note on Friday, August 7, 2026, adding about N237.8 billion to market capitalisation as gains in the FUGAZ banking stocks outweighed losses across several other sectors.\nThe post FUGAZ banks rescue stock market with N237.8 billion gains first week of August appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/08/fugaz-banks-rescue-stock-market-with-n237-8-billion-gains-first-week-of-august/",
+          "published": "Sat, 08 Aug 2026 09:54:56 +0000"
+        },
+        {
+          "title": "CBN personnel expenses drop by N193 billion after voluntary staff exit",
+          "summary": "The Central Bank of Nigeria (CBN) reduced its personnel expenses by more than N193 billion in 2025 following the implementation of its voluntary Early Exit Programme, with both the Bank and the Group posting declines in staff costs despite higher spending on currency management and other operating activities.\nThe post CBN personnel expenses drop by N193 billion after voluntary staff exit appeared ",
+          "link": "https://nairametrics.com/2026/08/08/cbn-personnel-expenses-drop-by-n193-billion-after-voluntary-staff-exit/",
+          "published": "Sat, 08 Aug 2026 09:16:26 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "Abia Governor presents governance scorecard, urges citizens to demand accountability",
+          "summary": "Abia State Governor, Alex Otti, has presented the scorecard of his administration, highlighting reforms in healthcare, education, road infrastructure and\nread more Abia Governor presents governance scorecard, urges citizens to demand accountability",
+          "link": "https://businessday.ng/life/article/abia-governor-presents-governance-scorecard-urges-citizens-to-demand-accountability/",
+          "published": "Sun, 09 Aug 2026 05:08:00 +0000"
+        },
+        {
+          "title": "2027 election: CEHRAWS appeals for downward review of outdoor campaign advertisement fees in Abia",
+          "summary": "The Centre for Human Rights Advocacy and Wholesome Society (CEHRAWS), a non-profit organisation, has appealed for downward review of campaign\nread more 2027 election: CEHRAWS appeals for downward review of outdoor campaign advertisement fees in Abia",
+          "link": "https://businessday.ng/life/article/2027-election-cehraws-appeals-for-downward-review-of-outdoor-campaign-advertisement-fees-in-abia/",
+          "published": "Sun, 09 Aug 2026 04:59:38 +0000"
+        },
+        {
+          "title": "2027: Why Adamawa North is a battleground for next governorship election",
+          "summary": "The journey to occupy the one seat at Government House in Yola in next year&#8217;s general election could be decided\nread more 2027: Why Adamawa North is a battleground for next governorship election",
+          "link": "https://businessday.ng/life/article/2027-why-adamawa-north-is-a-battleground-for-next-governorship-election/",
+          "published": "Sun, 09 Aug 2026 04:58:14 +0000"
+        },
+        {
+          "title": "Remi Tinubu to inaugurate Tinubu torch bearers in Oyo as Ilaji resort hosts landmark event",
+          "summary": "Ilaji Hotels and Sports Resort, Akanran, Ibadan, is once again set to take centre stage on the national landscape as\nread more Remi Tinubu to inaugurate Tinubu torch bearers in Oyo as Ilaji resort hosts landmark event",
+          "link": "https://businessday.ng/life/article/remi-tinubu-to-inaugurate-tinubu-torch-bearers-in-oyo-as-ilaji-resort-hosts-landmark-event/",
+          "published": "Sun, 09 Aug 2026 04:54:17 +0000"
+        },
+        {
+          "title": "The creative economy requires a landlord",
+          "summary": "The Federal Ministry of Art, Culture, Tourism and the Creative Economy recently signed an agreement with Rivers State to support\nread more The creative economy requires a landlord",
+          "link": "https://businessday.ng/life/article/the-creative-economy-requires-a-landlord/",
+          "published": "Sun, 09 Aug 2026 04:52:11 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "I was joking when I asked God for triplets, says woman at RCCG convention",
+          "summary": "A woman shares her miraculous RCCG triplets testimony at the convention, revealing how a joke during Pastor Adeboye&#8217;s birthday led to the birth of her thre\n\nRead More: https://punchng.com/i-was-joking-when-i-asked-god-for-triplets-says-woman-at-rccg-convention/",
+          "link": "https://punchng.com/i-was-joking-when-i-asked-god-for-triplets-says-woman-at-rccg-convention/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 06:48:12 +0000"
+        },
+        {
+          "title": "Army kills kidnapper, rescue abducted farmer in Edo",
+          "summary": "Nigerian Army troops, in collaboration with police, rescued a 50-year-old farmer abducted in Edo State, neutralizing one kidnapper in the operation.\n\nRead More: https://punchng.com/army-kills-kidnapper-rescue-abducted-farmer-in-edo/",
+          "link": "https://punchng.com/army-kills-kidnapper-rescue-abducted-farmer-in-edo/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 06:48:07 +0000"
+        },
+        {
+          "title": "Iran sets conditions for reopening Strait of Hormuz",
+          "summary": "Iran demands compensation and an end to aggression as preconditions for reopening the Strait of Hormuz, a vital global shipping lane. Learn more about the\n\nRead More: https://punchng.com/iran-sets-conditions-for-reopening-strait-of-hormuz/",
+          "link": "https://punchng.com/iran-sets-conditions-for-reopening-strait-of-hormuz/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 06:41:32 +0000"
+        },
+        {
+          "title": "MTN warns subscribers against fake 25GB anniversary data giveaway",
+          "summary": "MTN Nigeria warns subscribers about fake 25GB anniversary data giveaways. Learn how to identify official MTN promotions and avoid scams.\n\nRead More: https://punchng.com/mtn-warns-subscribers-against-fake-25gb-anniversary-data-giveaway/",
+          "link": "https://punchng.com/mtn-warns-subscribers-against-fake-25gb-anniversary-data-giveaway/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 06:38:26 +0000"
+        },
+        {
+          "title": "Nigerian elected Commonwealth Fencing Federation president",
+          "summary": "Adeyinka Samuel makes history as the first Nigerian and African to be elected President of the Commonwealth Fencing Federation. Read more here.\n\nRead More: https://punchng.com/nigerian-elected-commonwealth-fencing-federation-president/",
+          "link": "https://punchng.com/nigerian-elected-commonwealth-fencing-federation-president/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 06:12:15 +0000"
+        },
+        {
+          "title": "Tony Elumelu steals show with dance moves at niece’s wedding",
+          "summary": "Nigerian business mogul Tony Elumelu surprised guests with energetic dance moves at his niece&#8217;s wedding in Rome. See highlights of the celebration.\n\nRead More: https://punchng.com/tony-elumelu-steals-show-with-dance-moves-at-nieces-wedding/",
+          "link": "https://punchng.com/tony-elumelu-steals-show-with-dance-moves-at-nieces-wedding/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 04:00:49 +0000"
+        },
+        {
+          "title": "13 rescued as building collapse injures 16 in Kano",
+          "summary": "A residential building collapse in Kano&#8217;s Dan Dishe area led to 13 rescues and 16 injuries. The Kano State Fire Service is investigating the cause.\n\nRead More: https://punchng.com/13-rescued-as-building-collapse-injures-16-in-kano/",
+          "link": "https://punchng.com/13-rescued-as-building-collapse-injures-16-in-kano/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 04:00:42 +0000"
+        },
+        {
+          "title": "Osun: Inside Tinubu’s emergency meeting with 76 APC leaders",
+          "summary": "President Tinubu summoned 76 Osun APC leaders to Aso Rock over party disquiet ahead of the August 15 governorship election. Discover the meeting&#8217;s outcome.\n\nRead More: https://punchng.com/osun-inside-tinubus-emergency-meeting-with-76-apc-leaders/",
+          "link": "https://punchng.com/osun-inside-tinubus-emergency-meeting-with-76-apc-leaders/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 03:46:20 +0000"
+        },
+        {
+          "title": "I want to beat Hrgovic, belts change nothing – Itauma",
+          "summary": "British-Nigerian heavyweight Moses Itauma declares his motivation to beat Filip Hrgovic remains unchanged, even with the IBF world title on the line.\n\nRead More: https://punchng.com/i-want-to-beat-hrgovic-belts-change-nothing-itauma/",
+          "link": "https://punchng.com/i-want-to-beat-hrgovic-belts-change-nothing-itauma/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 03:13:42 +0000"
+        },
+        {
+          "title": "Ezechukwu’s World U-20 dream ends in disqualification",
+          "summary": "Miracle Ezechukwu&#8217;s World U-20 dream ends in disqualification due to a lane infringement, sparking controversy and disappointment among Nigerian athletics\n\nRead More: https://punchng.com/ezechukwus-world-u-20-dream-ends-in-disqualification/",
+          "link": "https://punchng.com/ezechukwus-world-u-20-dream-ends-in-disqualification/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Sun, 09 Aug 2026 03:13:35 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Attack on Catholic Bishops is attack on entire Church, PFN fumes",
+          "summary": "National President of the Pentecostal Fellowship of Nigeria, PFN, Bishop Wale Oke, has thrown the full weight of the Pentecostal body behind the Catholic Bishops Conference of Nigeria, declaring that any attack on the Catholic bishops is an attack on the entire Body of Christ.\nThe post Attack on Catholic Bishops is attack on entire Church, PFN fumes appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/attack-on-catholic-bishops-is-attack-on-entire-church-pfn-fumes/",
+          "published": "Sun, 09 Aug 2026 05:45:56 +0000"
+        },
+        {
+          "title": "Six months in captivity: Woro freed victims recount ordeal",
+          "summary": "Six months after they were abducted by terrorists, survivors of the Woro community attack in Kaiama Local Government Area of Kwara State have recounted the harrowing experiences they endured in captivity, including the deaths of 13 children, forced marriages involving some young women and severe hunger and deprivation.\nThe post Six months in captivity: Woro freed victims recount ordeal  appeared f",
+          "link": "https://www.vanguardngr.com/2026/08/six-months-in-captivity-woro-freed-victims-recount-ordeal/",
+          "published": "Sun, 09 Aug 2026 05:42:04 +0000"
+        },
+        {
+          "title": "Nigeria may lose out on fresh $1.4bn US health aid over Christians persecution",
+          "summary": "By Nkiruka Nnorom&#160; Nigeria may be excluded from a new $1.4 billion U.S health and humanitarian assistance package announced earlier this week if the Federal Government fails to take measurable actions to address violence against Christians, according to terms contained in a bilateral Memorandum of Understanding signed by both countries. The MOU, signed on December 20, [&#8230;]\nThe post Niger",
+          "link": "https://www.vanguardngr.com/2026/08/nigeria-may-lose-out-on-fresh-1-4bn-us-health-aid-over-christians-persecution/",
+          "published": "Sun, 09 Aug 2026 05:37:49 +0000"
+        },
+        {
+          "title": "OSUN VIOLENCE: We’re the victims, Adeleke is playing victim to curry sympathy – Oyebamiji",
+          "summary": "By Adetutu Oyebanjo Governorship candidate of the All Progressives Congress, APC, in Osun State, Biodun Oyebamiji, has accused Governor Ademola Adeleke of playing the victim to curry sympathy ahead of Saturday’s governorship poll. Adeleke has repeatedly accused the APC of attacking his administration and members of his party, Accord Party, to instill fear ahead of the [&#8230;]\nThe post OSUN VIOLE",
+          "link": "https://www.vanguardngr.com/2026/08/osun-violence-were-the-victims-adeleke-is-playing-victim-to-curry-sympathy-oyebamiji/",
+          "published": "Sun, 09 Aug 2026 05:37:13 +0000"
+        },
+        {
+          "title": "Another Lagos bridge badly vandalised as Sanwo-Olu allays safety concerns",
+          "summary": "Another bridge in Lagos has allegedly been vandalised, with a section of the concrete protection of an overhead bridge around Mile 12 reportedly excavated to expose reinforced iron rods, raising fresh concerns over the safety of critical public infrastructure in the state.\nThe post Another Lagos bridge badly vandalised as Sanwo-Olu allays safety concerns appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/another-lagos-bridge-badly-vandalised-as-sanwo-olu-allays-safety-concerns/",
+          "published": "Sun, 09 Aug 2026 05:37:04 +0000"
+        },
+        {
+          "title": "Six days to Osun election: 18 ‘killed’ as fears of more violence mount",
+          "summary": "Fresh fears of further violence have gripped Osun State ahead of the August 15 governorship election, with the two major opposition parties, the All Progressives Congress, APC, and Accord Party, claiming to have lost a combined 18 members in the build-up to the poll.\nThe post Six days to Osun election: 18 ‘killed’ as fears of more violence mount appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/six-days-to-osun-election-18-killed-as-fears-of-more-violence-mount/",
+          "published": "Sun, 09 Aug 2026 04:46:20 +0000"
+        },
+        {
+          "title": "Ibadan meeting: Atiku, Obi, Kwankwaso still have opportunity for grand alliance — Ologbondiyan",
+          "summary": "Few opposition figures have witnessed Nigeria’s political twists and realignments from as close a vantage point as Kola Ologbondiyan. A former National Publicity Secretary of the Peoples Democratic Party (PDP), he now serves as Special Adviser on Media and Publicity to the National Chairman of the African Democratic Congress (ADC), Senator David Mark, placing him at the centre of fresh efforts to ",
+          "link": "https://www.vanguardngr.com/2026/08/ibadan-meeting-atiku-obi-kwankwaso-still-have-opportunity-for-grand-alliance-ologbondiyan/",
+          "published": "Sun, 09 Aug 2026 04:29:25 +0000"
+        },
+        {
+          "title": "Insecurity: Scores of schools in 40 LGAs shut down",
+          "summary": "At least 65 secondary and primary schools have been shut or rendered non-functional by insecurity across northern Nigeria, findings by Sunday Vanguard have shown...\nThe post Insecurity: Scores of schools in 40 LGAs shut down appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/insecurity-scores-of-schools-in-40-lgas-shut-down/",
+          "published": "Sun, 09 Aug 2026 04:13:31 +0000"
+        },
+        {
+          "title": "Tears, anger in Benue as 16 Otukpo attack victims buried",
+          "summary": "The victims were reportedly killed when the attackers invaded the community in the early hours of July 28, throwing residents into panic and forcing many to flee for safety.\nThe post Tears, anger in Benue as 16 Otukpo attack victims buried appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/tears-anger-in-benue-as-16-otukpo-attack-victims-buried/",
+          "published": "Sun, 09 Aug 2026 04:04:00 +0000"
+        },
+        {
+          "title": "Police arrest Osun Commissioner over gunshots at APC rally; Adeleke kicks",
+          "summary": "An eyewitness, Kola Adeoti disclosed that the boy was at his mother's shop when he was hit by a stray bullet  \nThe post Police arrest Osun Commissioner over gunshots at APC rally; Adeleke kicks appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/osun-commissioner-arrested-over-gunshots-at-apc-rally-in-osun/",
+          "published": "Sun, 09 Aug 2026 04:02:00 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "‘We know what is at stake’ — Madugu rallies Super Falcons for Cameroon WAFCON showdown",
+          "summary": "Madugu insists Nigeria are ready for the challenge and determined to keep their title defence alive.\nThe post ‘We know what is at stake’ — Madugu rallies Super Falcons for Cameroon WAFCON showdown appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/901600-we-know-what-is-at-stake-madugu-rallies-super-falcons-for-cameroon-wafcon-showdown.html",
+          "published": "Sun, 09 Aug 2026 05:24:20 +0000"
+        },
+        {
+          "title": "WAFCON 2026: Algeria, Morocco make history, achieve World Cup dreams with semi-final qualification",
+          "summary": "While Algeria produced a stunning comeback against Côte d’Ivoire, Morocco held off former champions South Africa to keep their title ambitions alive on home soil.\nThe post WAFCON 2026: Algeria, Morocco make history, achieve World Cup dreams with semi-final qualification appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/901603-wafcon-2026-algeria-morocco-make-history-achieve-world-cup-dreams-with-semi-final-qualification.html",
+          "published": "Sun, 09 Aug 2026 05:08:27 +0000"
+        },
+        {
+          "title": "INVESTIGATION: Social media, anonymous websites drive Nigeria’s poorly regulated weight-loss injection market",
+          "summary": "What appeared to be ordinary social media marketing led PREMIUM TIMES into a week-long open-source investigation that uncovered a growing digital marketplace where vendors sell the injections without requesting prescriptions and downplayed or denied their side effects.\nThe post INVESTIGATION: Social media, anonymous websites drive Nigeria&#8217;s poorly regulated weight-loss injection market  appe",
+          "link": "https://www.premiumtimesng.com/news/headlines/901574-investigation-social-media-anonymous-websites-drive-nigerias-poorly-regulated-weight-loss-injection-market.html",
+          "published": "Sun, 09 Aug 2026 04:00:42 +0000"
+        },
+        {
+          "title": "APGA candidate withdraws from Osun election, backs APC’s Oyebamiji",
+          "summary": "The APGA candidate said his decision followed consultations with the leadership and members of his party across Osun State.\nThe post APGA candidate withdraws from Osun election, backs APC’s Oyebamiji appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/901589-apga-candidate-withdraws-from-osun-election-backs-apcs-oyebamiji.html",
+          "published": "Sat, 08 Aug 2026 22:32:59 +0000"
+        },
+        {
+          "title": "Otti celebrates Ngige, Obiano on their birthday",
+          "summary": "Mr Otti has congratulated former Anambra governors Messrs Ngige and Obiano on their birthdays, praising their contributions to governance and urging them to remain committed to public service.\nThe post Otti celebrates Ngige, Obiano on their birthday appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/ssouth-west/901588-otti-celebrates-ngige-obiano-on-their-birthday.html",
+          "published": "Sat, 08 Aug 2026 22:28:27 +0000"
+        },
+        {
+          "title": "Muslim World League to commission cardiac centre in Kaduna",
+          "summary": "The new facility is expected to complement existing tertiary healthcare institutions in the state and provide residents with greater access to specialised cardiovascular services.\nThe post Muslim World League to commission cardiac centre in Kaduna appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/901572-muslim-world-league-to-commission-cardiac-centre-in-kaduna.html",
+          "published": "Sat, 08 Aug 2026 21:38:20 +0000"
+        },
+        {
+          "title": "Yilwatda, an asset to progressive family, Nigeria – Gov Lawal",
+          "summary": "Governor Lawal noted that Mr Yilwatda’s handling of the recent All Progressives Congress (APC) primary elections shows his knowledge, discipline, sincerity, and commitment to doing what is right\nThe post Yilwatda, an asset to progressive family, Nigeria &#8211; Gov Lawal appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/901569-yilwatda-an-asset-to-progressive-family-nigeria-gov-lawal.html",
+          "published": "Sat, 08 Aug 2026 21:30:23 +0000"
+        },
+        {
+          "title": "Gov Abiodun hails APC National Chairman, Yilwatda at 58",
+          "summary": "Mr Abiodun said the National Chairman has demonstrated the capacity, maturity and political dexterity required to lead the ruling party at a critical stage in the nation’s political development\nThe post Gov Abiodun hails APC National Chairman, Yilwatda at 58 appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/901565-gov-abiodun-hails-apc-national-chairman-yilwatda-at-58.html",
+          "published": "Sat, 08 Aug 2026 20:44:11 +0000"
+        },
+        {
+          "title": "Suspected thief dies while allegedly vandalising TCN electricity transmission tower",
+          "summary": "The TCN condemns the vandalism of its infrastructure and appeals to host communities and the public to remain vigilant.\nThe post Suspected thief dies while allegedly vandalising TCN electricity transmission tower appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/901563-suspected-thief-dies-while-allegedly-vandalising-tcn-electricity-transmission-tower.html",
+          "published": "Sat, 08 Aug 2026 20:34:25 +0000"
+        },
+        {
+          "title": "From Keke to Capacity: How Otti is empowering Abia youths differently, By Ferdinand Ekeoma",
+          "summary": "Through direct mentorship and exposure to public officials and industry experts, the Abia State Leadership Academy is grooming the next set of commissioners, CEOs, and community leaders. This addresses the leadership gap that keke distribution could never solve.\nThe post From Keke to Capacity: How Otti is empowering Abia youths differently, By Ferdinand Ekeoma appeared first on Premium Times Niger",
+          "link": "https://www.premiumtimesng.com/promoted/901555-from-keke-to-capacity-how-otti-is-empowering-abia-youths-differently-by-ferdinand-ekeoma.html",
+          "published": "Sat, 08 Aug 2026 17:05:41 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": 200,
+    "snippet": "Startups in Africa | StartupList AfricaLoading market dataSkip to contentLoading market dataStartups in AfricaThe complete index of African technology companies.$43.7B total funding raised.3,167 Companies🦄 3 Unicorns+29 This WeekEcosystem BriefLive DataStartup market signals in one viewTrack the latest movement across Financial Services and adjacent sectors, then drill into profiles and deal activity with current ecosystem context.Explore StartupsOpen Market Pulse Total Funding$43.7B Startups Tracked3,167 New This Week+29Startup SnapshotFull Report Total Funding$43.7B6.2%vs last QStartups Tracked3,167Added this week: +29Unicorns: 3Funding Activity1646.2%vs last QTop SectorsFinancial Services20.1%FinTech17.2%SaaS7.9%FiltersIndustry20Financial Services636FinTech546SaaS251Health Care250E-Commerce227Show 15 moreStage15Seed765Pre-seed309Venture257Grant240Series A171Show 10 moreLocation20🇳🇬Nigeria724🇪🇬Egypt714🇿🇦South Africa519🇰🇪Kenya438🇬🇭Ghana130Show 15 morePro FeatureUnlock All FiltersDeal Size & RevenueInvestor TypeAll IndustriesAll CountriesUpgrade to ProSubmit startupFiltersSort by:momentumCompanySectorStageValuationRaisedEmployeesMomentumAspen PharmacareDurban, South AfricaMedical DevicePost-IPO Debt$***,***Pro$***,***Pro5001TabbyCairo, EgyptFinancial ServicesSeries E$***,***Pro$***,***Pro51ZiplineKigali, RwandaLogisticsSeries H$***,***Pro$***,***Pro201ZEZepzMogadishu, SomaliaFinancial ServicesSeries F$***,***Pro$***,***Pro1001Sun KingNairobi, KenyaEnergyVenture$***,***Pro$***,***Pro1001MNT-HalanGiza, EgyptFinancial ServicesGrowth Equity$***,***Pro$***,***Pro10001d.lightNairobi, KenyaEnergyReceivables Financing$***,***Pro$***,***Pro201JumiaLagos, NigeriaConsumer GoodsCorporate$***,***Pro$***,***Pro1001Steinhoff InternationalGauteng, South AfricaConsumer GoodsPost-IPO Equity$***,***Pro$***,***Pro10001Sign in to view moreJoin the largest community of African tech investors and founders.Create Free AccountAlready have an account? Log inShowing 1-20 of 3,167 startupsPrev123…159NextPage 2 onward stays locked until the account tier supports deeper access.How to use this startup directoryUse this page when you need a clean view of startup activity by country, sector, and stage, then move into profile-level research once you have a tight set of targets.01Filter by industry, stage, and geography to reduce noise.02Use market aggregates for quick directional context.03Pair shortlisted startups with the investor directory for outreach planning.Frequently asked questionsHow do I narrow results quickly?Start with industry and country, then add stage and keyword filters to get from broad discovery to a focused shortlist in a few clicks.Can this page support investment or partnership scouting?Yes. Teams use this directory to spot relevant companies first, then open profile-level details for funding context and deeper evaluation.What is the best next step after building a shortlist?Open company profiles for deeper diligence, then cross-reference with investor and sector pages to validate market fit and momentum.",
+    "nigeria_keyword_count": 0,
+    "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback."
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "Hexis",
+        "summary": "Git-backed skills, tools & context for AI agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/bevel-4",
+        "published": "2026-08-03T09:15:36-07:00"
+      },
+      {
+        "title": "The GTM Co-Founder",
+        "summary": "Open-source GTM skills for technical founders\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/the-gtm-co-founder",
+        "published": "2026-07-27T06:50:43-07:00"
+      },
+      {
+        "title": "AstraPixels",
+        "summary": "​​A pixel-art solar system at its real current positions.​\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/astrapixels",
+        "published": "2026-08-05T20:18:25-07:00"
+      },
+      {
+        "title": "Basedash Subscriptions",
+        "summary": "Subscribe to any dashboard. Delivered on schedule.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/basedash",
+        "published": "2026-08-07T21:18:54-07:00"
+      },
+      {
+        "title": "Toolport",
+        "summary": "Every tool, one port. One MCP setup for all your AI agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/conduit-12",
+        "published": "2026-08-07T13:20:13-07:00"
+      },
+      {
+        "title": "Prompt Bridge",
+        "summary": "Keep AI Context Portable\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/prompt-bridge-2",
+        "published": "2026-08-06T04:38:18-07:00"
+      },
+      {
+        "title": "ShootClip",
+        "summary": "Edit videos 10x faster with AI\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/shootclip",
+        "published": "2026-08-02T03:43:52-07:00"
+      },
+      {
+        "title": "Whop CLI",
+        "summary": "Run your entire business from the terminal\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/whop-cli",
+        "published": "2026-08-05T18:40:05-07:00"
+      },
+      {
+        "title": "Soloop",
+        "summary": "Approval-first Agent OS for solo founders\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/soloop",
+        "published": "2026-08-06T03:36:29-07:00"
+      },
+      {
+        "title": "HAR",
+        "summary": "Open Source harness for multi-agent coding workflows\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/har",
+        "published": "2026-08-06T07:56:17-07:00"
+      },
+      {
+        "title": "Reference",
+        "summary": "Local semantic search for AI agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/reference-2",
+        "published": "2026-08-04T22:07:59-07:00"
+      },
+      {
+        "title": "AgentOne Desktop",
+        "summary": "Automate boring work. Extensible and free desktop AI agent.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/agentone-desktop",
+        "published": "2026-08-06T20:57:52-07:00"
+      },
+      {
+        "title": "Nitro 4.0",
+        "summary": "The first human translation platform built for AI agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/alconost-localization",
+        "published": "2026-07-31T05:24:54-07:00"
+      },
+      {
+        "title": "Rescript for Desktop",
+        "summary": "A free, open source, Descript alternative. Runs on-device.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/rescript-edit-videos-like-you-edit-text",
+        "published": "2026-08-06T21:56:04-07:00"
+      },
+      {
+        "title": "Coldtea.ai",
+        "summary": "Make your software self-driving\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/coldtea",
+        "published": "2026-07-17T01:59:06-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related topicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts.Just under a tenth of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is sh"
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NGX urges Tinubu to require FinTechs to list on Nigeria Stock Exchange",
+        "url": "https://nairametrics.com/2026/08/08/ngx-urges-tinubu-to-require-fintechs-to-list-on-nigeria-stock-exchange/",
+        "published": "Sat, 08 Aug 2026 18:11:43 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NGX market value to hit N230 trillion by end of 2026, says Popoola",
+        "url": "https://nairametrics.com/2026/08/08/ngx-market-value-to-hit-n230-trillion-by-end-of-2026-says-popoola/",
+        "published": "Sat, 08 Aug 2026 14:10:54 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Best performing Nigerian stocks for the week ended August 7, 2026",
+        "url": "https://nairametrics.com/2026/08/08/best-performing-nigerian-stocks-for-the-week-ended-august-7-2026/",
+        "published": "Sat, 08 Aug 2026 12:43:46 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Roqqu launches tokenized stocks, expands into global investment platform",
+        "url": "https://nairametrics.com/2026/08/08/roqqu-launches-tokenized-stocks-expands-into-global-investment-platform/",
+        "published": "Sat, 08 Aug 2026 12:33:52 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Tyms Brings Accounting and Bookkeeping to Claude and ChatGPT",
+        "url": "https://nairametrics.com/2026/08/08/tyms-brings-accounting-and-bookkeeping-to-claude-and-chatgpt/",
+        "published": "Sat, 08 Aug 2026 11:00:13 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Abia Governor presents governance scorecard, urges citizens to demand accountability",
+        "url": "https://businessday.ng/life/article/abia-governor-presents-governance-scorecard-urges-citizens-to-demand-accountability/",
+        "published": "Sun, 09 Aug 2026 05:08:00 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "2027 election: CEHRAWS appeals for downward review of outdoor campaign advertisement fees in Abia",
+        "url": "https://businessday.ng/life/article/2027-election-cehraws-appeals-for-downward-review-of-outdoor-campaign-advertisement-fees-in-abia/",
+        "published": "Sun, 09 Aug 2026 04:59:38 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "2027: Why Adamawa North is a battleground for next governorship election",
+        "url": "https://businessday.ng/life/article/2027-why-adamawa-north-is-a-battleground-for-next-governorship-election/",
+        "published": "Sun, 09 Aug 2026 04:58:14 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Remi Tinubu to inaugurate Tinubu torch bearers in Oyo as Ilaji resort hosts landmark event",
+        "url": "https://businessday.ng/life/article/remi-tinubu-to-inaugurate-tinubu-torch-bearers-in-oyo-as-ilaji-resort-hosts-landmark-event/",
+        "published": "Sun, 09 Aug 2026 04:54:17 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "The creative economy requires a landlord",
+        "url": "https://businessday.ng/life/article/the-creative-economy-requires-a-landlord/",
+        "published": "Sun, 09 Aug 2026 04:52:11 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "I was joking when I asked God for triplets, says woman at RCCG convention",
+        "url": "https://punchng.com/i-was-joking-when-i-asked-god-for-triplets-says-woman-at-rccg-convention/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Sun, 09 Aug 2026 06:48:12 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Army kills kidnapper, rescue abducted farmer in Edo",
+        "url": "https://punchng.com/army-kills-kidnapper-rescue-abducted-farmer-in-edo/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Sun, 09 Aug 2026 06:48:07 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Iran sets conditions for reopening Strait of Hormuz",
+        "url": "https://punchng.com/iran-sets-conditions-for-reopening-strait-of-hormuz/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Sun, 09 Aug 2026 06:41:32 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "MTN warns subscribers against fake 25GB anniversary data giveaway",
+        "url": "https://punchng.com/mtn-warns-subscribers-against-fake-25gb-anniversary-data-giveaway/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Sun, 09 Aug 2026 06:38:26 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Nigerian elected Commonwealth Fencing Federation president",
+        "url": "https://punchng.com/nigerian-elected-commonwealth-fencing-federation-president/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Sun, 09 Aug 2026 06:12:15 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Attack on Catholic Bishops is attack on entire Church, PFN fumes",
+        "url": "https://www.vanguardngr.com/2026/08/attack-on-catholic-bishops-is-attack-on-entire-church-pfn-fumes/",
+        "published": "Sun, 09 Aug 2026 05:45:56 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Six months in captivity: Woro freed victims recount ordeal",
+        "url": "https://www.vanguardngr.com/2026/08/six-months-in-captivity-woro-freed-victims-recount-ordeal/",
+        "published": "Sun, 09 Aug 2026 05:42:04 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Nigeria may lose out on fresh $1.4bn US health aid over Christians persecution",
+        "url": "https://www.vanguardngr.com/2026/08/nigeria-may-lose-out-on-fresh-1-4bn-us-health-aid-over-christians-persecution/",
+        "published": "Sun, 09 Aug 2026 05:37:49 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "OSUN VIOLENCE: We’re the victims, Adeleke is playing victim to curry sympathy – Oyebamiji",
+        "url": "https://www.vanguardngr.com/2026/08/osun-violence-were-the-victims-adeleke-is-playing-victim-to-curry-sympathy-oyebamiji/",
+        "published": "Sun, 09 Aug 2026 05:37:13 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Another Lagos bridge badly vandalised as Sanwo-Olu allays safety concerns",
+        "url": "https://www.vanguardngr.com/2026/08/another-lagos-bridge-badly-vandalised-as-sanwo-olu-allays-safety-concerns/",
+        "published": "Sun, 09 Aug 2026 05:37:04 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "==========\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmpafan_i13/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
