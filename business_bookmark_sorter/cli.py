@@ -1,10 +1,8 @@
-"""CLI for business bookmark sorting — Phase 0 discover, Phase 1 import/queue."""
+"""CLI for business bookmark sorting — import/queue plus review UI."""
 
 from __future__ import annotations
 
 import argparse
-import json
-import sys
 import webbrowser
 from pathlib import Path
 
@@ -14,9 +12,7 @@ from business_bookmark_sorter.chrome_import import (
 )
 from business_bookmark_sorter.paths import (
     CONFIG_PATH,
-    DISCOVER_PATH,
     INBOX_MD,
-    INC_ROOT,
     QUEUE_PATH,
     default_chrome_bookmarks_path,
 )
@@ -31,47 +27,6 @@ from business_bookmark_sorter.export_markdown import export_filed_to_markdown
 from business_bookmark_sorter.file_workflow import file_item
 from business_bookmark_sorter.review_actions import apply_mark_filed, apply_skip, apply_stay_in_chrome
 from business_bookmark_sorter.review_ui import run_review_panel
-
-
-def cmd_discover(args: argparse.Namespace) -> int:
-    bookmarks = Path(args.bookmarks)
-    if not bookmarks.is_file():
-        print(f"Bookmarks file not found: {bookmarks}")
-        print("Close Chrome or copy Bookmarks to a readable path, then retry.")
-        return 1
-
-    config = load_routes_config(CONFIG_PATH)
-    entries = extract_business_entries(bookmarks, config.get("chrome_filter"))
-    folders = sum(1 for e in entries if e.get("type") == "folder")
-    urls = sum(1 for e in entries if e.get("type") == "url")
-
-    report = {
-        "bookmarks_path": str(bookmarks),
-        "inc_root": str(INC_ROOT),
-        "total_entries": len(entries),
-        "url_count": urls,
-        "folder_count": folders,
-        "batch_link_reviewer": {
-            "path": r"C:\Users\'Sanmi\Downloads\coding projects\JavaScript Programming - Learning et al",
-            "chrome_extension": "chrome/",
-            "server": "node scripts/links-cli.js serve --port 4124",
-            "note": "Reuse banner UX in Phase 2; not required for Phase 0–1",
-        },
-        "sample": entries[:15],
-    }
-
-    DISCOVER_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with DISCOVER_PATH.open("w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2)
-
-    print(f"Discover: {urls} URLs, {folders} business folders")
-    print(f"Report: {DISCOVER_PATH}")
-    if args.dry_run:
-        for e in entries[:10]:
-            print(f"  [{e.get('type')}] {e.get('title', '')[:60]}")
-        if len(entries) > 10:
-            print(f"  ... and {len(entries) - 10} more")
-    return 0
 
 
 def cmd_import(args: argparse.Namespace) -> int:
@@ -231,11 +186,6 @@ def cmd_next(args: argparse.Namespace) -> int:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Business bookmark sorter (Inc)")
     sub = parser.add_subparsers(dest="command", required=True)
-
-    p_disc = sub.add_parser("discover", help="Phase 0: count business bookmarks (no queue write)")
-    p_disc.add_argument("--bookmarks", default=str(default_chrome_bookmarks_path()))
-    p_disc.add_argument("--dry-run", action="store_true", help="Print sample entries")
-    p_disc.set_defaults(func=cmd_discover)
 
     p_imp = sub.add_parser("import", help="Phase 1: build queue.json")
     p_imp.add_argument("--bookmarks", default=str(default_chrome_bookmarks_path()))

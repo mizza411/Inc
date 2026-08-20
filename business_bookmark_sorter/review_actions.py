@@ -49,6 +49,46 @@ def revert_filed(item_id: str) -> bool:
     return True
 
 
+def resolve_file_destination(
+    item: Optional[Dict[str, Any]],
+    config: Dict[str, Any],
+) -> str:
+    """BB-LINKS-UX-1 / R1: default dest = suggested → other (no Assign picker).
+
+    If the item is already filed, prefer ``filed_destination``. Never returns
+    ``stay_in_chrome``. Falls back to ``other`` when suggest is missing/invalid.
+    """
+    destinations = config.get("destinations", {}) or {}
+
+    def _ok(dest_id: str | None) -> bool:
+        if not dest_id or dest_id == "stay_in_chrome":
+            return False
+        meta = destinations.get(dest_id)
+        if not meta:
+            return False
+        if meta.get("assignable", True) is False and dest_id != "other":
+            return False
+        return True
+
+    candidates: list[str | None] = []
+    if item:
+        if item.get("status") == "filed":
+            candidates.append(item.get("filed_destination"))
+        candidates.append(item.get("suggested_destination"))
+        candidates.append(item.get("filed_destination"))
+    candidates.append("other")
+
+    for cand in candidates:
+        if _ok(cand):
+            assert cand is not None
+            return cand
+    # Last resort if config has no "other"
+    for key, meta in destinations.items():
+        if key != "stay_in_chrome" and meta.get("assignable", True) is not False:
+            return key
+    return "other"
+
+
 def mark_exported(item_id: str, md_path: Path) -> None:
     queue = load_queue()
     update_item(

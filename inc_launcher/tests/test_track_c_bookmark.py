@@ -29,3 +29,4 @@ def test_bookmark_review_cli_registered():
     )
     assert result.returncode == 0
     assert "review" in result.stdout
+    assert "discover" not in result.stdout

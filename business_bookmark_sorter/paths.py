@@ -10,7 +10,7 @@ INC_ROOT = PACKAGE_DIR.parent
 CONFIG_PATH = PACKAGE_DIR / "config" / "routes.json"
 DATA_DIR = PACKAGE_DIR / "data"
 QUEUE_PATH = DATA_DIR / "queue.json"
-DISCOVER_PATH = DATA_DIR / "discover_report.json"
+SESSION_SETTINGS_PATH = DATA_DIR / "session_settings.json"
 INBOX_MD = INC_ROOT / "business_bookmark_sorter" / "Business Links.md"
 
 

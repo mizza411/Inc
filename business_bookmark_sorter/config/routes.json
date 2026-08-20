@@ -1,10 +1,18 @@
 {
+  "product": {
+    "app_title": "Business links bookmark Reviewer",
+    "master_title": "Business Links",
+    "tray_tooltip": "Business links bookmark Reviewer",
+    "template_banner": "Template shell — this is the Business links instance. The same review + queue + master-links + tray pattern can later host other concept types (e.g. “Health links bookmark reviewer”, “Investment links bookmark reviewer”) via config, not a second app."
+  },
   "review": {
     "auto_export_on_mark": true,
     "open_docx_on_mark": true
   },
   "export": {
-    "master_links_file": "business_bookmark_sorter/Business Links.md"
+    "master_links_file": "business_bookmark_sorter/Business Links.md",
+    "flat_list": true,
+    "sort_by": "filed_at"
   },
   "export_section_order": [
     "started",

@@ -1,5 +1,508 @@
 ﻿# Technical Intuition Log
 
+## 2026-08-20 — BB-LINKS-UX-1 Phase 4: template rename + banner
+
+**What we did**
+- Added `instance_branding.py` + `routes.json` → `product` (title, banner, tray tip, master title).
+- UI/tray renamed to **Business links bookmark Reviewer**; top banner explains Health/Investment reuse.
+- Documented second-category hooks in `TEMPLATE.md` (no health build).
+
+**Why it matters**
+Business filing is clearly “instance one” of a reusable shell, without forking another app folder yet.
+
+**Intuition analogy**
+Like one coffee-shop POS branded for this café, with a sticker that says the same register software can be re-skinned for a juice bar later — same buttons, different name on the screen.
+
+---
+
+## 2026-08-20 — BB-LINKS-UX-1 Phase 3: Reviewer tray
+
+**What we did**
+- Added `review_tray.py` (pystray Open/focus + Quit) and `review_single_instance.py` (mutex + focus flag).
+- Second `review` launch focuses the existing window instead of opening a duplicate.
+- Inc Formulated → Bookmark review command left unchanged (config test).
+
+**Why it matters**
+You can raise or quit the Reviewer from the tray like other Inc apps, without losing the Formulated-ideas menu entry.
+
+**Intuition analogy**
+Like a phone app that stays as one icon in the status bar: tapping it brings the same screen forward instead of launching a second copy.
+
+---
+
+## 2026-08-20 — BB-LINKS-UX-1 Phase 2: flat Business Links
+
+**What we did**
+- Master export is now a flat list (`export.flat_list` + `sort_by: filed_at`); no category `##` headings.
+- Newest filed link is the last line; live regen: 18 links, md+docx cleaned.
+- Sectioned mode kept behind `flat_list: false` for later template instances.
+
+**Why it matters**
+Filing no longer scatters links under “Problem identification” / peers — the doc reads as one chronological list with the latest file at the bottom.
+
+**Intuition analogy**
+Like a single notebook page of URLs in the order you saved them, instead of a binder with tabbed category dividers you never flip through.
+
+---
+
+## 2026-08-20 — BB-LINKS-UX-1 Phase 1: no Assign picker
+
+**What we did**
+- Removed **Assign to:** combobox; File/Enter uses `resolve_file_destination` (suggest → `other`).
+- Added read-only **Filing as:** line; toast still shows destination label; removal dialog unchanged.
+- Tests: `test_bb_links_ux_phase1.py`; updated Phase 4 / removal / sign-off fixtures.
+
+**Why it matters**
+Filing no longer needs an extra category click — suggestions drive destination while you still see where the link will go.
+
+**Intuition analogy**
+Like a checkout that auto-fills your usual shipping address and shows it as text: you confirm with one button, instead of opening a long address dropdown every time.
+
+---
+
+## 2026-08-20 — Word Business Links.docx lock (STA Close)
+
+**What we did**
+- Diagnosed WinError 32: Word had the doc open and paths matched, but Close returned False because it ran on a **background thread** (Word COM is STA → hang/timeout).
+- Close now runs on the calling thread with `DisplayAlerts=0` and `Saved=True`; temp regenerate + replace unchanged; sibling `*.updated.docx` only if master stays locked.
+- Live regen with Word open: close True, master docx rewritten (~12KB).
+
+**Why it matters**
+Filing while the last export is still open in Word works again without asking you to close the tab by hand.
+
+**Intuition analogy**
+Like asking a receptionist for a file while she’s on another desk’s phone line — she never hears you. You have to speak at her own desk (the main thread), not shout from the hallway (a worker thread).
+
+---
+
+## 2026-08-20 — Word same-name Business Links.docx fix
+
+**What we did**
+- Fixed regenerate path: close open `Business Links.docx` **without** saving (md is source of truth), build to a temp `.__regen__.docx`, replace, reopen.
+- Clearer error if Word still holds the file; never `taskkill` WINWORD.
+- Pytest mocks in `test_docx_same_name_fix.py`.
+
+**Why it matters**
+Filing again while Word still shows the last export no longer dies with “same name as an open document.”
+
+**Intuition analogy**
+Like updating a printed flyer: you take the old sheet off the desk, print a new copy, then put the new one down — you don’t try to reprint onto a page that’s still sitting under someone’s hand.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 automate sign-off + restart
+
+**What we did**
+- Killed stale `python -m business_bookmark_sorter review` processes; restarted one clean instance.
+- Added `test_bb_timed_v1_signoff.py` (13) covering former MANUAL §§I–L + M/N config; suite **72** green.
+- Moved I–O to automated in `MANUAL_TEST.md`; left only live login/11:00 as deferred §P with ASCII pass/fail.
+
+**Why it matters**
+You asked not to do manual testing now — logic gates are proven in pytest; only true OS login/clock remain optional later.
+
+**Intuition analogy**
+Like a car’s factory diagnostics verifying brakes and sensors on a bench, while the “drive around the block once” step waits for a road day.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 7 polish + sign-off gate
+
+**What we did**
+- Softened review window copy to generic “Bookmark Reviewer” + config-driven filter note.
+- Marked Phases 0–7 complete; §5 + satellite point at **Ready for single manual pass** (`MANUAL_TEST` §O).
+- Full sorter + schedule pytest green this turn.
+
+**Why it matters**
+Build work for timed/minimal filing is done; the remaining gate is one human pass, not more mid-build clicking.
+
+**Intuition analogy**
+Like finishing a factory acceptance test checklist and handing the owner a single walkthrough sheet instead of asking them to inspect every bolt during assembly.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 6 PR boot (config-only)
+
+**What we did**
+- Added `applications.inc_business_bookmark_review` in project_reminder `launcher_config.json` (`pythonw -m business_bookmark_sorter review`, cwd `C:\dev\Inc`).
+- No `auto_launcher.py` edit; left `scripts.bookmark_sorter` alone.
+- Smoke `test_pr_boot_config.py` + MANUAL_TEST §N.
+
+**Why it matters**
+Login can open the Inc filing window without moving the product into project_reminder or merging two different bookmark tools.
+
+**Intuition analogy**
+Like a startup shortcut that opens Word on a specific document in another folder — the launcher only points; the app still lives where the files are.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 5 Inc weekday schedule
+
+**What we did**
+- Additive `bookmark_review_weekdays` schedule: Mon–Fri **11:00** → menu id `bookmark_review`.
+- Confirmed existing `resolve_schedule_target` maps the menu item; updated schedule tests + MANUAL_TEST notes.
+- Cleared deferred “Bookmark review schedule” checkbox in `task.md` §4.
+
+**Why it matters**
+The filing window can appear on a clock while the Inc tray (already started by project_reminder) is running — no remembering to open the menu.
+
+**Intuition analogy**
+Like a calendar reminder that launches the same app your Start menu already lists — one shared shortcut, two ways to open it.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 4 minimal confirm
+
+**What we did**
+- Pre-select suggested destination; **Enter** files (when focus isn’t in the dropdown).
+- Replacement removal dialog with “Don’t ask again this session” (in-memory flag only).
+- Tests for skip-flag + dest pre-select; existing removal flow tests updated.
+
+**Why it matters**
+A timed slot becomes glance → Enter → next, instead of hunting the dropdown and answering the same Chrome question every time.
+
+**Intuition analogy**
+Like a supermarket self-checkout that already highlights the suggested bagging option and lets you press OK, with a “don’t show this tip again” for the rest of the trip.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 3 auto-open link
+
+**What we did**
+- Added `auto_open.py` (one URL per item id; Settings toggle; no bulk open).
+- Hooked pending-item display in `review_ui`; pytest covers on/off + debounce.
+- `MANUAL_TEST` §K added.
+
+**Why it matters**
+You glance the page instead of clicking Open URL every time — less friction in a timed filing slot.
+
+**Intuition analogy**
+Like a slideshow that advances the slide and already opens the referenced webpage once, not fifty tabs at once.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 2 session timer
+
+**What we did**
+- Added `session_timer.py` (countdown, pause, extend, fake-clock tests).
+- Review UI shows time left; on expiry stops loading the next link; **Extend +5 min** resumes.
+- Settings Apply restarts the timer with the new length.
+
+**Why it matters**
+Filing becomes a timed slot instead of an open-ended window that you forget to close — and it stops nagging when time is up.
+
+**Intuition analogy**
+Like a kitchen timer on a study block: when it rings you stop pulling the next flashcard until you hit “+5 minutes.”
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 1.2 Settings… UI
+
+
+**What we did**
+- Added `session_settings_ui.py` (modal Settings dialog: minutes spinbox + auto-open checkbox + Apply).
+- Thin **Settings…** button on `review_ui` (no mega-edit of the 600+ line panel).
+- README + `MANUAL_TEST` §I; Phase 1 marked ✅ on satellite.
+
+**Why it matters**
+You can change session length from the review window itself — the lock “not through a JSON file” is now real for the UI path.
+
+**Intuition analogy**
+Like changing a phone’s screen timeout in Settings, not by editing a hidden preferences file with Notepad.
+
+---
+
+## 2026-08-20 — BB-TIMED-1 Phase 1.1 session settings store
+
+
+**What we did**
+- Added `business_bookmark_sorter/session_settings.py` (load/save/clamp; default 15 min; auto-open flag reserved).
+- Gitignored `data/session_settings.json`; pytest `test_session_settings.py` green.
+- Owner confirmed Phase 0.4; satellite `task_bookmark_timed_sessions.md` updated.
+
+**Why it matters**
+Session length can later be changed from a Settings UI without hand-editing JSON, and prefs stay out of git and away from bookmark URLs.
+
+**Intuition analogy**
+Like a microwave’s cook-time memory: the number is saved on the appliance, not something you rewrite in a config printout every meal.
+
+---
+
+
+**What we did**
+- Removed `python -m business_bookmark_sorter discover` (including `--dry-run`) from the CLI.
+- Docs and `task.md` §5 now point at **`review`** as the one launch command.
+- Added `test_cli_no_discover.py` so the old command stays gone.
+
+**Why it matters**
+You asked for one command to open the filing window. A separate count-only command was extra noise and looked like a second “start here.”
+
+**Intuition analogy**
+Like taking the “preview playlist” button off a music app when you only ever wanted Play — the library still loads when you hit Play.
+
+---
+
+
+**What we did**
+- Expanded `ask_people_ask_owners_playbook.md` with S3/S4 whom/openers/capture, after-ask CLI, ASCII flow, risks; regenerated `.docx`.
+- Marked Phase 5 ✅; Phase 6 (real conversations) remains owner-only.
+
+**Why it matters**
+The nudge now points at a complete how-to, not a stub — so when the Hub or morning Word file opens, you know what to say and how to log it.
+
+**Intuition analogy**
+Like upgrading a sticky note that said “ask someone” into a short field guide that still leaves the conversation to you.
+
+---
+
+## 2026-08-08 — NET-ASK-REMIND-1 Phase 4 PR docx
+
+
+**What we did**
+- Generated `ask_people_ask_owners_playbook.docx` via pandoc; additive `project_reminder` launcher key `ask_people_ask_owners_playbook` (`is_document`).
+- Skipped Task Reminder seed (AUTO-NAR-05) with an on-disk reason; validate-pr-launcher + phase4 smokes green.
+
+**Why it matters**
+Morning boot can surface the ask-people ritual beside your other guides without editing `auto_launcher.py`.
+
+**Intuition analogy**
+Like putting a laminated checklist on the kitchen counter that your morning routine already opens — not a second alarm app.
+
+---
+
+## 2026-08-08 — NET-ASK-REMIND-1 Phase 3 Inc Hub nudge
+
+
+**What we did**
+- Added `network_ask` Hub action + pinned Problem identification card; Mon/Wed/Fri 09:30 schedule opens Hub Option B modal (not a silent send).
+- Start opens playbook and copies openers; formulation Option B generalized via `option_b_actions` without breaking agent_run.
+- Phase 2+3 smokes + launcher regressions green (43 pytest + 16 unittest).
+
+**Why it matters**
+The ask-people habit now shows up where you already live (Inc Hub/tray), while you still choose whom to message.
+
+**Intuition analogy**
+Like a calendar popup that opens your draft notepad — it never hits “send” on your behalf.
+
+---
+
+## 2026-08-08 — NET-ASK-REMIND-1 Phase 2 core CLI
+
+
+**What we did**
+- Shipped modular CLI under `network_ask_reminder/`: config validate, S3/S4 rotate, JSONL log-add, status/streak, opener drafts, isolation-check.
+- 9/9 unittest smokes green; no Inc Hub / project_reminder wiring yet (Phases 3–4).
+
+**Why it matters**
+You can already run “what should I ask today?” and log answers offline before any toast or morning docx exists.
+
+**Intuition analogy**
+Like a paper habit tracker and message drafts in a notebook — the phone alarm that pokes you is a later accessory, not the notebook itself.
+
+---
+
+## 2026-08-08 — NET-ASK-REMIND-1 Phase 1 scaffold
+
+
+**What we did**
+- Created `network_ask_reminder/` with README, playbook stub, `config.example.json`, `MANUAL_TEST.md` (MAN-NAR only), data gitignore.
+- Additive one-line cross-links on Strategy 3 + 4 READMEs; no Hub/PR/CLI wiring yet.
+- Marked Phase 1 ✅ in `task_net_ask_remind.md` + main pointer.
+
+**Why it matters**
+The habit tool has a home and a config shape without touching formulation runners or sending messages for you.
+
+**Intuition analogy**
+Like putting a sticky-note pad and a calendar template on your desk before you wire the alarm clock — the reminder hardware comes next; the conversations stay yours.
+
+---
+
+## 2026-08-08 — Agric supplier quotes without sharing phones
+
+
+**What we did**
+- Locked privacy: owner never pastes phone numbers to the agent (supplier or grower).
+- Added number-free quote paste format; locked-supplier contact column marked owner-only; day pack/MANUAL_TEST/task updated.
+
+**Why it matters**
+You can still get help logging prices into the repo without leaking personal or vendor contact data into chat logs.
+
+**Intuition analogy**
+Like telling a bookkeeper “Vendor A sold me bags at X naira in Gudu” without handing over the vendor’s phone book.
+
+---
+
+## 2026-08-08 — Agric supplier visit/call day pack
+
+**What we did**
+- Added `supplier_visit_day_pack.md` (call script, on-site ticks, same-day route).
+- Enriched `suppliers_targets.md` with public phones for FarmFeed (0818 992 2811) and Biocrops (0805 482 5619); call log table; did **not** mark any supplier locked/visited.
+
+**Why it matters**
+You can start dialing today without inventing a route; results still require your legs and voice.
+
+**Intuition analogy**
+Like a courier giving you a call sheet and a map pin order — they don’t knock the doors; you do, then tick the sheet.
+
+---
+
+## 2026-08-08 — Agric ID 2 Week 1 ops scaffold
+
+**What we did**
+- Added `sku_starter_list.md` (10 SKUs), `suppliers_targets.md` (Abuja public-directory leads + visit tracker), `whatsapp_order_kit.md` (invite/order copy + 20-grower sheet).
+- Split Week 1 on the pilot one-pager: scaffold ✅ vs owner visit/WhatsApp still open; no fake “supplier locked” claims.
+
+**Why it matters**
+Field work needs a shopping list, a call sheet, and paste-ready WhatsApp text — not another strategy essay.
+
+**Intuition analogy**
+Like printing a market shopping list, a vendor map, and a pre-written group announcement before you leave the house — the bags still get bought in person.
+
+---
+
+## 2026-08-08 — Agric pilot ID 2 confirmed (farm-input aggregation)
+
+**What we did**
+- Owner locked pilot **ID 2**; wrote `pilot_id2_farm_input_aggregation.md` (+ docx); marked idea status `pilot`; regenerated ideas docx; left blank template for later IDs.
+- Task Phase **5.1** checked; 5.2–5.3 remain owner ops (no Started-Businesses write).
+
+**Why it matters**
+The shortlist is no longer “pick someday” — there is one prepaid aggregation play with a 30–90 day checklist on disk.
+
+**Intuition analogy**
+Like circling one supplier on a wholesale shortlist and writing the first purchase order draft — the other SKUs stay on the clipboard, not in the truck.
+
+---
+
+## 2026-08-08 — Niche event + agric Phase 4 docx + launcher
+
+**What we did**
+- Pandoc: `oldies_abuja_playbook.docx` (~15KB) · `agric_agrictech_ideas_ng.docx` (~14KB) under Inc folders.
+- Additive `launcher_config.json` keys `abuja_oldies_night_playbook` + `agric_agrictech_ideas_ng` (`is_document`, enabled); no `auto_launcher.py` edit; path smoke PASS; `MANUAL_TEST.md` T1/T2 in both folders.
+
+**Why it matters**
+Morning boot can surface the playbooks in Word without hunting folders, while unrelated launcher docs stay enabled.
+
+**Intuition analogy**
+Like adding two labeled folders to the auto-open tray on your desk — the binders already written now drop onto the desk at login, without rebuilding the tray itself.
+
+---
+
+## 2026-08-08 — Niche event + agric ideas Phase 2 bodies
+
+**What we did**
+- Filled `niche-event-series/oldies_abuja_playbook.md` §§1–9 (positioning, cost-kill, venue, tickets, sound, promo, run sheet, risks, ASCII).
+- Scored 10 agric ideas in `agric_agrictech_ideas_ng.md`; top 3 = IDs **2, 7, 6**; recommended pilot **ID 2** (input aggregation). Still no docx/launcher.
+
+**Why it matters**
+You can run venue pitches and pick an agric pilot from disk without re-asking chat for the plan.
+
+**Intuition analogy**
+Like finishing the chapters inside those two binders — the event binder is now a night-of script; the farm binder is a scored shortlist with a circled “start here,” still not stamped into the “opened businesses” drawer.
+
+---
+
+## 2026-08-08 — Niche event + agric ideas Phase 1 scaffolds
+
+**What we did**
+- Created `niche-event-series/` (README, playbook outline, break-even stub, venue pitch + empty targets) and `agric-business-ideas/` (README+rubric, seed ideas table, pilot one-pager template).
+- Phase 0 locks already on disk; Phase 1 marked done in `task_niche_event_agric.md`; **no** pandoc/docx/`launcher_config` yet (Phase 4).
+
+**Why it matters**
+Durable folders hold the ops playbooks so chat plans don’t evaporate, while isolation rules keep Tegrid/FIR/launcher core untouched until content is ready.
+
+**Intuition analogy**
+Like labeling two empty binders (event night vs farm ideas) and slipping in section tabs before writing the chapters — the filing cabinet stays separate from the office apps that open Word every morning.
+
+---
+
+## 2026-07-31 — Tegrid RE GTM Phase 4 (reply → demo → close)
+
+**What we did**
+- Added `tracker/` (hot/nurture/no + outcomes), `run_phase4.py`, `offer/DEMO_CHECKLIST.md`, `MANUAL_TEST.md`; tag `no` appends STOP list.
+- Phase 4 smokes green; full Phase 1–4 suite **17/17**; live send still locked.
+
+**Why it matters**
+After mock outreach, you need a simple place to mark interest and closes without mixing FIR visits or Tegrid product code.
+
+**Intuition analogy**
+Like a sticky-note board next to a practice phone log — green = call back, yellow = later, red = never dial again — while the real phone line stays switched off.
+
+---
+
+## 2026-07-31 — Tegrid RE GTM Phase 3 (Lane 3 mock + Tier-1 route)
+
+
+**What we did**
+- Built `outreach/` mock sender, rate/STOP rules, Lane 3 runner (Tier 2/3 mock drip; Tier 1 → Maps route pack), `run_phase3.py`, Phase 3 smokes (11/11 with prior phases).
+- `live_send=false` hard-refuses real send; route pack explicitly not FIR construction sheets.
+
+**Why it matters**
+You can rehearse the full Blend path (auto vs visit) and keep a campaign log without burning WhatsApp reputation.
+
+**Intuition analogy**
+Like a call center training mode that writes every “call” to a practice log and prints a door-to-door route sheet — headsets stay unplugged from the live phone lines.
+
+---
+
+## 2026-07-31 — Tegrid RE GTM Phase 2 (templates, no send)
+
+
+**What we did**
+- Added one-pager, WA/email D1+D3 templates, `offer/render.py`, `config/lane_config.json` (Lane 3 on; live_send false), lead-gen adapter stub OFF.
+- Phase 2 dry-render CLI + 5 new smokes (8/8 with Phase 1 green); still no outbound messages.
+
+**Why it matters**
+Personalization is separated from sending — you can preview copy for each firm before any WhatsApp/email risk.
+
+**Intuition analogy**
+Like printing personalized invitations on a home printer and stacking them in envelopes — nothing is mailed until you decide to walk them to the post office.
+
+---
+
+## 2026-07-31 — Tegrid RE GTM Phase 1 (fixture lead pipeline)
+
+
+**What we did**
+- Built `tegrid_re_gtm/` Phase 1: separate source adapters (Infoisinfo / Finelib / Maps seed), normalize+dedupe, ICP score + Tier 1/2/3, CLI export, unittest smoke (3/3 green).
+- Fixture-only ingest (no live scrape, no send); isolated from FIR, §6 Land Sales OS, and `abuja_lead_generator` core.
+
+**Why it matters**
+Lane 3 Blend needs a reviewable shortlist before any WhatsApp/email — this proves the list machine without burning contacts or touching other money tracks.
+
+**Intuition analogy**
+Like a mailroom that sorts incoming business cards into labeled trays from photocopies of directories first — you check the trays before anyone dials a number from the real phone book.
+
+---
+
+## 2026-07-26 — Post-Wedding landing: no phone in chat/git
+
+
+**What we did**
+- Switched public CTA to `CONTACT_URL` (Google Form / mailto / IG); kept WhatsApp only in gitignored `config.local.js`.
+- Updated `DEPLOY.md`, landing smoke tests, and `task.md` §7 notes.
+
+**Why it matters**
+Phase 0b can still collect leads without putting a personal number in Cursor chat or GitHub history.
+
+**Intuition analogy**
+Like putting a shop’s “write to this PO box” on the public flyer, while the private mobile stays in your desk drawer — customers can reach you; the flyer never prints your personal line.
+
+---
+
+## 2026-07-24 — IMPORTANT: Legacy Privacy one-way (§19 gate)
+
+**What we did**
+- Saved `prompts/IMPORTANT_cursor_privacy_mode_legacy.md` (cannot return to Legacy after Switch; can still disable Automations).
+- Linked from `CLOUD_FORMULATION_AUTOMATIONS.md`, `prompts/README.md`, and `task.md` §19 status (Phase 2 privacy blocker).
+
+**Why it matters**
+Owner must choose Switch vs Cancel with eyes open before Automation A can finish; “undo later” ≠ restore Legacy.
+
+**Intuition analogy**
+Like leaving a rent-controlled flat for a new lease that unlocks the building gym — you can stop using the gym anytime, but you can’t move back into the old flat once you hand in those keys.
+
+---
+
 ## 2026-07-23 — §19 Phase 1 cloud packaging (no Automations yet)
 
 **What we did**

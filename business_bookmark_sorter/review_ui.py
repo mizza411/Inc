@@ -14,8 +14,6 @@ from tkinter import font as tkfont
 
 from tkinter import messagebox
 
-from tkinter import ttk
-
 from typing import Any, Dict, List, Optional
 
 
@@ -40,7 +38,18 @@ from business_bookmark_sorter.queue_store import (
 
 )
 
-from business_bookmark_sorter.review_actions import apply_skip, apply_stay_in_chrome, find_item
+from business_bookmark_sorter.review_actions import (
+    apply_skip,
+    apply_stay_in_chrome,
+    find_item,
+    resolve_file_destination,
+)
+from business_bookmark_sorter.auto_open import LinkAutoOpener
+from business_bookmark_sorter.instance_branding import app_title, template_banner
+from business_bookmark_sorter.removal_dialog import ask_bookmark_removed_dialog
+from business_bookmark_sorter.session_settings import SessionSettings, load_session_settings
+from business_bookmark_sorter.session_settings_ui import open_session_settings_dialog
+from business_bookmark_sorter.session_timer import SessionTimer, format_remaining
 from business_bookmark_sorter.ui_tooltips import bind_tooltip
 
 
@@ -57,9 +66,9 @@ class ReviewPanel:
 
         self.root = tk.Tk()
 
-        self.root.title("Business Bookmark Reviewer")
+        self.root.title(app_title(self.config))
 
-        self.root.geometry("780x480")
+        self.root.geometry("780x520")
 
         self.root.attributes("-topmost", True)
 
@@ -69,11 +78,25 @@ class ReviewPanel:
 
         self._toast_timer: str | None = None
 
+        self._session_settings = load_session_settings()
+
+        self._timer = SessionTimer(self._session_settings.session_minutes * 60)
+
+        self._tick_job: str | None = None
+
+        self._session_ended = False
+
+        self._auto_opener = LinkAutoOpener()
+
+        self._skip_removal_prompt = False
+
         self._build()
 
         self._sync_queue(startup=True)
 
         self._load_current()
+
+        self._start_session_timer()
 
 
 
@@ -106,15 +129,29 @@ class ReviewPanel:
 
             self.root,
 
-            text="Business Bookmark Reviewer",
+            text=app_title(self.config),
 
             font=tkfont.Font(family="Segoe UI", size=14, weight="bold"),
 
         )
 
-        header.pack(anchor="w", padx=12, pady=(12, 4))
+        header.pack(anchor="w", padx=12, pady=(12, 2))
 
+        tk.Label(
+            self.root,
+            text=template_banner(self.config),
+            font=("Segoe UI", 8),
+            fg="#555",
+            wraplength=740,
+            justify="left",
+        ).pack(anchor="w", padx=12, pady=(0, 4))
 
+        tk.Label(
+            self.root,
+            text="Timed filing session — Chrome filter and destinations come from config (not hard-coded in this window).",
+            font=("Segoe UI", 8),
+            fg="#666",
+        ).pack(anchor="w", padx=12)
 
         self._stats = tk.Label(self.root, text="", font=("Segoe UI", 9), fg="#555")
 
@@ -124,11 +161,19 @@ class ReviewPanel:
 
         self._sync_label.pack(anchor="w", padx=12)
 
+        self._timer_label = tk.Label(
+            self.root,
+            text="",
+            font=("Segoe UI", 9, "bold"),
+            fg="#333",
+        )
+        self._timer_label.pack(anchor="w", padx=12)
+
         tk.Label(
 
             self.root,
 
-            text="File & open doc: one Business Links doc (sections per category). Shift+click = re-export all.",
+            text="File & open doc: one Business Links doc (flat list; newest file at bottom). Shift+click = re-export all.",
 
             font=("Segoe UI", 8),
 
@@ -170,34 +215,20 @@ class ReviewPanel:
 
         dest_row.pack(fill="x", padx=12)
 
-        assign_lbl = tk.Label(dest_row, text="Assign to:", font=("Segoe UI", 10))
-        assign_lbl.pack(side="left")
-        bind_tooltip(
-            assign_lbl,
-            "Category section in Business Links.md (e.g. Leads, Other). "
-            "Other = system could not match a pillar, or you chose it on purpose.",
+        self._filing_as = tk.Label(
+            dest_row,
+            text="Filing as: —",
+            font=("Segoe UI", 10),
+            fg="#333",
+            anchor="w",
         )
-
-        labels = [
-
-            f"{did} — {self.config['destinations'][did].get('label', did)}"
-
-            for did in self.dest_ids
-
-        ]
-
-        self._dest_var = tk.StringVar()
-
-        self._dest_combo = ttk.Combobox(dest_row, values=labels, width=58, state="readonly")
-
-        self._dest_combo.pack(side="left", padx=8)
+        self._filing_as.pack(side="left", fill="x", expand=True)
         bind_tooltip(
-            self._dest_combo,
-            "Where this link will appear in the master document. "
-            "Pick a pillar when it fits; pick Other when it does not (or you prefer Other).",
+            self._filing_as,
+            "Where File / Enter will put this link in Business Links (from suggestion, "
+            "or Other when nothing matches). No dropdown — change keywords in config later "
+            "if suggestions are often wrong.",
         )
-
-
 
         btn_row = tk.Frame(self.root)
 
@@ -236,7 +267,8 @@ class ReviewPanel:
         bind_tooltip(
             self._file_btn,
             "File this bookmark: save to queue, update Business Links.md/.docx, open the doc. "
-            "Shift+click: re-export all filed links without filing the current item.",
+            "Shift+click: re-export all filed links without filing the current item. "
+            "Enter = File using the suggested destination (or Other).",
         )
 
         self._removal_btn = tk.Button(
@@ -275,15 +307,41 @@ class ReviewPanel:
             "do not file to Business Links. Won't appear as pending again.",
         )
 
-        quit_btn = tk.Button(btn_row, text="Quit", command=self.root.destroy, width=7)
+        quit_btn = tk.Button(btn_row, text="Quit", command=self._quit_app, width=7)
         quit_btn.pack(side="right", padx=3)
-        bind_tooltip(quit_btn, "Close the Business Bookmark Reviewer.")
+        bind_tooltip(quit_btn, f"Close {app_title(self.config)} (and its tray icon).")
 
+        settings_btn = tk.Button(
+            btn_row,
+            text="Settings…",
+            command=self._open_settings,
+            width=10,
+        )
+        settings_btn.pack(side="right", padx=3)
+        bind_tooltip(
+            settings_btn,
+            "Change session length (and auto-open) in this window. "
+            "Do not edit session_settings.json by hand.",
+        )
 
+        extend_btn = tk.Button(
+            btn_row,
+            text="Extend +5 min",
+            command=self._extend_session,
+            width=12,
+        )
+        extend_btn.pack(side="right", padx=3)
+        bind_tooltip(
+            extend_btn,
+            "Add five minutes to this timed slot (also restarts after session ended).",
+        )
 
         self._status_msg = tk.Label(self.root, text="", fg="#080", font=("Segoe UI", 9))
 
         self._status_msg.pack(anchor="w", padx=12, pady=(0, 8))
+
+        self.root.bind("<Return>", self._on_enter_file)
+        self.root.bind("<KP_Enter>", self._on_enter_file)
 
 
 
@@ -291,7 +349,97 @@ class ReviewPanel:
 
         return getattr(self, "_item", None)
 
+    def _open_settings(self) -> None:
+        open_session_settings_dialog(
+            self.root,
+            on_saved=self._on_session_settings_saved,
+        )
 
+    def _on_session_settings_saved(self, settings: SessionSettings) -> None:
+        self._session_settings = settings
+        self._timer.restart(settings.session_minutes * 60)
+        self._session_ended = False
+        self._status_msg.config(
+            text=(
+                f"Session settings saved: {settings.session_minutes} min; "
+                f"auto-open {'ON' if settings.auto_open_links else 'OFF'}. "
+                "Timer restarted."
+            ),
+            fg="#080",
+        )
+        self._update_timer_label()
+
+    def _start_session_timer(self) -> None:
+        self._session_ended = False
+        self._timer.start()
+        self._update_timer_label()
+        self._schedule_tick()
+
+    def _schedule_tick(self) -> None:
+        if self._tick_job is not None:
+            try:
+                self.root.after_cancel(self._tick_job)
+            except tk.TclError:
+                pass
+            self._tick_job = None
+        self._tick_job = self.root.after(1000, self._tick_session)
+
+    def _tick_session(self) -> None:
+        self._tick_job = None
+        if self._timer.is_expired() and not self._session_ended:
+            self._on_session_expired()
+        else:
+            self._update_timer_label()
+        if not self._session_ended or not self._timer.is_expired():
+            self._schedule_tick()
+        else:
+            self._update_timer_label()
+
+    def _update_timer_label(self) -> None:
+        if self._session_ended and self._timer.is_expired():
+            self._timer_label.configure(
+                text="Session ended — stop nagging. Extend +5 min to continue, or Quit.",
+                fg="#a60",
+            )
+            return
+        left = self._timer.remaining_seconds()
+        self._timer_label.configure(
+            text=f"Session time left: {format_remaining(left)}",
+            fg="#333",
+        )
+
+    def _on_session_expired(self) -> None:
+        self._session_ended = True
+        self._update_timer_label()
+        self._status_msg.configure(
+            text="Timed session ended. Finish this item if you want, then Extend or Quit.",
+            fg="#a60",
+        )
+        messagebox.showinfo(
+            "Session ended",
+            "This timed filing slot is over.\n\n"
+            "You can finish the current bookmark, click Extend +5 min, "
+            "or Quit. No more auto-advance to the next link until you extend.",
+            parent=self.root,
+        )
+
+    def _extend_session(self) -> None:
+        self._timer.extend(5 * 60)
+        self._session_ended = False
+        self._update_timer_label()
+        self._status_msg.configure(text="Session extended by 5 minutes.", fg="#080")
+        self._schedule_tick()
+
+    def _session_allows_advance(self) -> bool:
+        if self._timer.is_expired() or self._session_ended:
+            self._session_ended = True
+            self._update_timer_label()
+            self._status_msg.configure(
+                text="Session ended — not loading the next link. Extend +5 min to continue.",
+                fg="#a60",
+            )
+            return False
+        return True
 
     def _hide_toast(self) -> None:
 
@@ -408,28 +556,19 @@ class ReviewPanel:
 
 
     def _dest_from_combo(self) -> str:
+        """BB-LINKS-UX-1: no Assign picker — resolve from current item (suggest → other)."""
+        return resolve_file_destination(self._current_item(), self.config)
 
-        val = self._dest_var.get() or self._dest_combo.get()
-
-        return val.split(" — ", 1)[0].strip() if val else self.dest_ids[0]
-
-
-
-    def _set_combo_dest(self, dest_id: str) -> None:
-
-        for i, did in enumerate(self.dest_ids):
-
-            if did == dest_id:
-
-                self._dest_combo.current(i)
-
-                return
-
-        if self.dest_ids:
-
-            self._dest_combo.current(0)
-
-
+    def _update_filing_as_label(self, item: Dict[str, Any] | None) -> None:
+        if item is None:
+            self._filing_as.configure(text="Filing as: —")
+            return
+        dest = resolve_file_destination(item, self.config)
+        label = self.config.get("destinations", {}).get(dest, {}).get("label", dest)
+        if item.get("status") == "filed":
+            self._filing_as.configure(text=f"Filed as: {label} ({dest})")
+        else:
+            self._filing_as.configure(text=f"Filing as: {label} ({dest})")
 
     def _update_stats_bar(self, queue: Dict[str, Any]) -> None:
         counts = count_by_status(queue)
@@ -460,8 +599,23 @@ class ReviewPanel:
         if extra_note:
             note = f"{extra_note}\n{note}".strip() if note else extra_note
         self._note.configure(text=note)
-        dest_pick = item.get("filed_destination") or item.get("suggested_destination", self.dest_ids[0])
-        self._set_combo_dest(dest_pick)
+        self._update_filing_as_label(item)
+        if not filed and item.get("type", "url") == "url":
+            self._auto_opener.maybe_open(
+                item_id=str(item.get("id") or ""),
+                url=str(item.get("url") or ""),
+                enabled=bool(self._session_settings.auto_open_links),
+            )
+
+    def _on_enter_file(self, _event: tk.Event | None = None) -> str:
+        """Enter confirms File using suggested destination (or Other)."""
+        focus = self.root.focus_get()
+        if focus is not None:
+            cls = focus.winfo_class()
+            if cls in ("TEntry", "Entry", "TSpinbox", "Spinbox"):
+                return ""
+        self._file_and_open()
+        return "break"
 
     def _show_removal_continue(self, show: bool) -> None:
         if show:
@@ -470,19 +624,17 @@ class ReviewPanel:
             self._removal_btn.pack_forget()
 
     def _ask_bookmark_removed(self, title: str) -> bool:
-        short = (title or "this bookmark")[:100]
-        return messagebox.askyesno(
-            "Remove bookmark from Chrome?",
-            f"Have you removed this bookmark from Chrome?\n\n{short}\n\n"
-            "Yes = removed — go to next link\n"
-            "No = not yet — stay on this link",
-            parent=self.root,
-            default=messagebox.NO,
-            icon="question",
-        )
+        if self._skip_removal_prompt:
+            return True
+        yes, dont_ask = ask_bookmark_removed_dialog(self.root, title)
+        if dont_ask:
+            self._skip_removal_prompt = True
+        return yes
 
     def _advance_after_removal(self) -> None:
         self._show_removal_continue(False)
+        if not self._session_allows_advance():
+            return
         self._sync_queue(startup=False)
         self._load_current()
 
@@ -498,6 +650,7 @@ class ReviewPanel:
             self._folder.configure(text="")
             self._suggest.configure(text="")
             self._note.configure(text="")
+            self._update_filing_as_label(None)
             return
         self._display_item(item)
 
@@ -549,7 +702,7 @@ class ReviewPanel:
 
             self._show_toast(
                 "Filed & exported",
-                f"Section: {result.destination_label}\n{md_name}"
+                f"Filing as: {result.destination_label}\n{md_name}"
                 + (f"\nOpened {docx_name}" if docx_name else ""),
                 success=True,
             )
@@ -624,7 +777,9 @@ class ReviewPanel:
 
             self._sync_queue(startup=False)
 
-            self._load_current()
+            if self._session_allows_advance():
+
+                self._load_current()
 
 
 
@@ -644,7 +799,9 @@ class ReviewPanel:
 
             self._sync_queue(startup=False)
 
-            self._load_current()
+            if self._session_allows_advance():
+
+                self._load_current()
 
 
 
@@ -652,12 +809,65 @@ class ReviewPanel:
 
         self.root.mainloop()
 
+    def focus_window(self) -> None:
+        """Raise the review window (tray Open / second-launch focus)."""
+        try:
+            self.root.deiconify()
+            self.root.lift()
+            self.root.attributes("-topmost", True)
+            self.root.focus_force()
+        except tk.TclError:
+            pass
 
+    def _quit_app(self) -> None:
+        from business_bookmark_sorter.review_tray import stop_review_tray
 
+        stop_review_tray()
+        try:
+            self.root.destroy()
+        except tk.TclError:
+            pass
+
+    def _poll_focus_request(self) -> None:
+        from business_bookmark_sorter.review_single_instance import consume_focus_request
+
+        try:
+            if consume_focus_request():
+                self.focus_window()
+            self.root.after(400, self._poll_focus_request)
+        except tk.TclError:
+            pass
 
 
 def run_review_panel() -> None:
+    from business_bookmark_sorter.review_single_instance import (
+        ensure_single_instance,
+        request_focus_existing,
+    )
+    from business_bookmark_sorter.review_tray import start_review_tray, stop_review_tray
 
-    ReviewPanel().run()
+    if not ensure_single_instance():
+        request_focus_existing()
+        return
+
+    panel = ReviewPanel()
+    panel.root.protocol("WM_DELETE_WINDOW", panel._quit_app)
+
+    def _on_open() -> None:
+        panel.root.after(0, panel.focus_window)
+
+    def _on_quit() -> None:
+        panel.root.after(0, panel._quit_app)
+
+    start_review_tray(
+        on_open=_on_open,
+        on_quit=_on_quit,
+        config=panel.config,
+    )
+    panel.root.after(400, panel._poll_focus_request)
+    try:
+        panel.run()
+    finally:
+        stop_review_tray()
 
 

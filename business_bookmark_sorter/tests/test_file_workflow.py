@@ -83,7 +83,8 @@ def test_file_item_success_without_docx(tmp_path, monkeypatch):
     assert result.md_path == master_links_path(config)
     assert result.md_path.is_file()
     text = result.md_path.read_text(encoding="utf-8")
-    assert "## My leads" in text
+    assert "## My leads" not in text
+    assert "example.com/abuja" in text
     updated = load_queue()["items"][0]
     assert updated["status"] == "filed"
     assert updated.get("exported_at")

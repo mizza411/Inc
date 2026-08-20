@@ -28,12 +28,14 @@ def test_load_schedule_settings_from_repo_config():
     settings = load_schedule_settings(config)
     assert isinstance(settings, ScheduleSettings)
     assert isinstance(settings.enabled, bool)
-    assert len(settings.entries) == 4
+    assert len(settings.entries) == 6
     ids = [entry.id for entry in settings.entries]
     assert ids == [
         "daily_task_md",
         "daily_inc_hub",
         "problem_id_live_mwf",
+        "network_ask_mwf",
+        "bookmark_review_weekdays",
         "youtube_status_sunday",
     ]
 
@@ -53,6 +55,27 @@ def test_resolve_hub_and_menu_targets():
     assert task is not None
     assert task["action"] == "file"
     assert task["path"] == ".cursor/rules/task.md"
+
+    review = resolve_schedule_target(config, "bookmark_review")
+    assert review is not None
+    assert review["action"] == "command"
+    assert "business_bookmark_sorter review" in review["command"]
+
+
+def test_bookmark_review_due_weekday_1100():
+    config = load_config()
+    config = dict(config)
+    schedules = dict(config["schedules"])
+    schedules["enabled"] = True
+    config["schedules"] = schedules
+    settings = load_schedule_settings(config)
+    monday = datetime(2026, 6, 1, 11, 0)
+    assert day_name(monday) == "mon"
+    due = entries_due_now(settings, config, monday, set())
+    assert [entry.id for entry in due] == ["bookmark_review_weekdays"]
+    saturday = datetime(2026, 5, 30, 11, 0)
+    assert day_name(saturday) == "sat"
+    assert entries_due_now(settings, config, saturday, set()) == []
 
 
 def test_entries_due_when_disabled():

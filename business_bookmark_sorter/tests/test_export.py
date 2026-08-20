@@ -49,7 +49,7 @@ def test_mark_filed_does_not_write_markdown(tmp_path, monkeypatch):
     assert not master.is_file()
 
 
-def test_export_master_single_file_with_sections(tmp_path, monkeypatch):
+def test_export_master_flat_list_no_category_headings(tmp_path, monkeypatch):
     from business_bookmark_sorter import queue_store as qs
     import business_bookmark_sorter.export_markdown as em
 
@@ -63,12 +63,14 @@ def test_export_master_single_file_with_sections(tmp_path, monkeypatch):
     )
     a["status"] = "filed"
     a["filed_destination"] = "leads"
+    a["filed_at"] = "2026-08-20T10:00:00+00:00"
     b = build_queue_item(
         {"type": "url", "title": "YT", "url": "https://youtube.com/b", "folder_path": ""},
         config,
     )
     b["status"] = "filed"
     b["filed_destination"] = "automation"
+    b["filed_at"] = "2026-08-20T11:00:00+00:00"
     save_queue({"version": 1, "items": [a, b]})
     queue = load_queue()
 
@@ -76,17 +78,43 @@ def test_export_master_single_file_with_sections(tmp_path, monkeypatch):
     assert count == 2
     assert path == master_links_path(config)
     text = path.read_text(encoding="utf-8")
-    assert "## My leads" in text
-    assert "## Automation / content" in text
+    assert "## My leads" not in text
+    assert "## Automation / content" not in text
+    assert "## Problem identification" not in text
     assert "example.com/a" in text
     assert "youtube.com" in text
+    # last filed (b) is last link line
+    link_lines = [ln for ln in text.splitlines() if ln.startswith("- ")]
+    assert len(link_lines) == 2
+    assert "youtube.com" in link_lines[-1]
+    assert "example.com/a" in link_lines[0]
 
     count2, paths = export_filed_to_markdown(config, queue)
     assert count2 == 2
     assert len(paths) == 1
 
 
-def test_inbox_filed_items_export_under_other_section(tmp_path, monkeypatch):
+def test_export_sectioned_mode_when_flat_list_false(tmp_path, monkeypatch):
+    from business_bookmark_sorter import queue_store as qs
+    import business_bookmark_sorter.export_markdown as em
+
+    monkeypatch.setattr(qs, "QUEUE_PATH", tmp_path / "queue.json")
+    monkeypatch.setattr(em, "INC_ROOT", tmp_path)
+
+    config = load_routes_config(CONFIG)
+    config = {**config, "export": {**config.get("export", {}), "flat_list": False}}
+    a = build_queue_item(
+        {"type": "url", "title": "Lead", "url": "https://example.com/a", "folder_path": ""},
+        config,
+    )
+    a["status"] = "filed"
+    a["filed_destination"] = "leads"
+    save_queue({"version": 1, "items": [a]})
+    text = export_master_document(config, load_queue())[1].read_text(encoding="utf-8")
+    assert "## My leads" in text
+
+
+def test_inbox_filed_items_export_in_flat_list(tmp_path, monkeypatch):
     from business_bookmark_sorter import queue_store as qs
     import business_bookmark_sorter.export_markdown as em
 
@@ -100,9 +128,10 @@ def test_inbox_filed_items_export_under_other_section(tmp_path, monkeypatch):
     )
     item["status"] = "filed"
     item["filed_destination"] = "inbox"
+    item["filed_at"] = "2026-08-20T12:00:00+00:00"
     save_queue({"version": 1, "items": [item]})
 
     _, path = export_master_document(config, load_queue())
     text = path.read_text(encoding="utf-8")
-    assert "## Other" in text
+    assert "## Other" not in text
     assert "example.com/misc" in text

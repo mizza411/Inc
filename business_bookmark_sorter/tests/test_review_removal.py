@@ -5,8 +5,6 @@ from __future__ import annotations
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-import tkinter as tk
-
 from business_bookmark_sorter.file_workflow import FileResult
 from business_bookmark_sorter.queue_store import build_queue_item, load_routes_config, save_queue
 from business_bookmark_sorter.review_ui import ReviewPanel
@@ -15,8 +13,7 @@ CONFIG = Path(__file__).resolve().parent.parent / "config" / "routes.json"
 
 
 def _panel_with_hidden_root() -> ReviewPanel:
-    root = tk.Tk()
-    root.withdraw()
+    root = MagicMock()
     panel = ReviewPanel.__new__(ReviewPanel)
     panel.root = root
     panel.config = load_routes_config(CONFIG)
@@ -32,24 +29,27 @@ def _panel_with_hidden_root() -> ReviewPanel:
     panel._suggest = MagicMock()
     panel._note = MagicMock()
     panel._status_msg = MagicMock()
-    panel._dest_combo = MagicMock()
+    panel._filing_as = MagicMock()
     panel._file_btn = MagicMock()
     panel._removal_btn = MagicMock()
     panel._item = None
+    panel._skip_removal_prompt = False
+    panel._session_settings = MagicMock(auto_open_links=False)
+    panel._auto_opener = MagicMock()
+    panel._timer_label = MagicMock()
     return panel
 
 
 def test_ask_bookmark_removed_uses_yes_no_dialog():
     panel = _panel_with_hidden_root()
+    panel._skip_removal_prompt = False
     with patch(
-        "business_bookmark_sorter.review_ui.messagebox.askyesno",
-        return_value=True,
+        "business_bookmark_sorter.review_ui.ask_bookmark_removed_dialog",
+        return_value=(True, False),
     ) as ask:
         assert panel._ask_bookmark_removed("Example bookmark title") is True
         ask.assert_called_once()
-        assert "removed" in ask.call_args[0][1].lower()
-        assert ask.call_args[1]["default"] == tk.messagebox.NO
-    panel.root.destroy()
+        assert "Example bookmark title" in ask.call_args[0][1]
 
 
 def test_file_and_open_advances_when_user_says_yes(tmp_path, monkeypatch):
@@ -61,13 +61,12 @@ def test_file_and_open_advances_when_user_says_yes(tmp_path, monkeypatch):
         {"type": "url", "title": "Test", "url": "https://example.com/t", "folder_path": ""},
         config,
     )
+    item["suggested_destination"] = "leads"
     save_queue({"version": 1, "items": [item]})
 
     panel = _panel_with_hidden_root()
     panel.config = config
-    panel._dest_combo.get.return_value = "leads — My leads"
     panel._item = item
-    panel._dest_from_combo = lambda: "leads"  # type: ignore[method-assign]
     panel._show_toast = MagicMock()  # type: ignore[method-assign]
     panel._update_stats_bar = MagicMock()  # type: ignore[method-assign]
     panel._display_item = MagicMock()  # type: ignore[method-assign]
@@ -90,7 +89,6 @@ def test_file_and_open_advances_when_user_says_yes(tmp_path, monkeypatch):
 
     panel._advance_after_removal.assert_called_once()
     panel._show_removal_continue.assert_not_called()
-    panel.root.destroy()
 
 
 def test_file_and_open_stays_when_user_says_not_yet(tmp_path, monkeypatch):
@@ -107,7 +105,6 @@ def test_file_and_open_stays_when_user_says_not_yet(tmp_path, monkeypatch):
     panel = _panel_with_hidden_root()
     panel.config = config
     panel._item = item
-    panel._dest_from_combo = lambda: "other"  # type: ignore[method-assign]
     panel._show_toast = MagicMock()  # type: ignore[method-assign]
     panel._update_stats_bar = MagicMock()  # type: ignore[method-assign]
     panel._display_item = MagicMock()  # type: ignore[method-assign]
@@ -125,4 +122,3 @@ def test_file_and_open_stays_when_user_says_not_yet(tmp_path, monkeypatch):
     panel._advance_after_removal.assert_not_called()
     panel._show_removal_continue.assert_called_once_with(True)
     assert panel._display_item.call_count >= 2
-    panel.root.destroy()

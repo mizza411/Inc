@@ -5,7 +5,9 @@ This folder holds machine-local state for the bookmark sorter. **Do not commit**
 | File | Contents |
 |------|----------|
 | `queue.json` | Import/review queue (Chrome URLs, titles, folder paths, filing decisions) |
-| `discover_report.json` | Phase 0 discover sample output |
 | `actions.log` | Review action audit log |
+| `session_settings.json` | Timed-session prefs (minutes, auto-open toggle) — **BB-TIMED-1**; change via review Settings UI only |
 
-Regenerate with `python -m business_bookmark_sorter import` and `review` from repo root.
+A leftover `discover_report.json` may exist from the old `discover` command (discontinued 2026-08-19). Safe to delete locally; still gitignored.
+
+Regenerate with `python -m business_bookmark_sorter import` (first time) and `review` from repo root.

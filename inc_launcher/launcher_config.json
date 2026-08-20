@@ -173,6 +173,12 @@
           "path": "Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification"
         },
         {
+          "id": "network_ask_remind",
+          "label": "Ask people / owners (S3+S4)",
+          "action": "network_ask",
+          "pinned": true
+        },
+        {
           "label": "Strategy 12 \u2014 High-value filtering",
           "action": "folder",
           "path": "Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering"
@@ -264,6 +270,28 @@
           "fri"
         ],
         "target": "problem_id_live"
+      },
+      {
+        "id": "network_ask_mwf",
+        "time": "09:30",
+        "days": [
+          "mon",
+          "wed",
+          "fri"
+        ],
+        "target": "network_ask_remind"
+      },
+      {
+        "id": "bookmark_review_weekdays",
+        "time": "11:00",
+        "days": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri"
+        ],
+        "target": "bookmark_review"
       },
       {
         "id": "youtube_status_sunday",
