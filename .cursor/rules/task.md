@@ -132,12 +132,19 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ## BB-LINKS-UX-1 — Reviewer UX / flat doc / app tray / template rename (§5 add-on) (pointer)
 
-**Status:** 🟢 **Phases 0–4 ✅** (2026-08-20) · optional **5** open · delete satellite after MANUAL  
+**Status:** 🟢 **Phases 0–4 ✅** (2026-08-20) · optional **5** open · delete after MANUAL (+ branding polish if still open)  
 **Authoritative backlog:** [`.cursor/rules/task_bb_links_reviewer_ux.md`](task_bb_links_reviewer_ux.md)  
-**Includes:** Owner **A1–A4** + agent **R1–R12** shipped for 0–4; Phase **5** = optional Settings dest override  
-**Phases:** **0–4 ✅** · **5** optional  
-**ETA remaining:** ~**40 min** if Phase 5 chosen · else owner MANUAL only  
-**Next:** owner MANUAL (§Q tray + File→last line) **or** Phase **5** **or** stage/commit/push
+**Polish follow-on:** [`.cursor/rules/task_bb_links_branding_polish.md`](task_bb_links_branding_polish.md) — **BB-BRAND-1** title casing + template-as-guide wording (**~35 min**; **1 day** @ 1–2 phases/day)  
+**Next:** implement **BB-BRAND-1** Phase 1 **or** owner MANUAL §Q **or** optional UX Phase 5
+
+---
+
+## BB-BRAND-1 — Title casing + template-as-guide (§5 / BB-LINKS polish) (pointer)
+
+**Status:** 🟢 **Phase 1 ✅** (2026-08-20) — owner glance then delete satellite  
+**Authoritative backlog:** [`.cursor/rules/task_bb_links_branding_polish.md`](task_bb_links_branding_polish.md)  
+**Owner:** “Business links **B**ookmark Reviewer” + banner/TEMPLATE = **guide for other apps** ✅  
+**Next:** owner 10s title/banner check → delete BB-BRAND-1 satellite **or** stage/commit/push polish
 
 ---
 
@@ -829,9 +836,9 @@ Automated sign-off **2026-06-29**: `python -m pytest inc_launcher/tests -q` + `p
 ### 5. Business Bookmark Sorting (Chrome → Inc folders)
 **Status:** Phase **0–2c + Track C + removal dialog + tooltips + gitignore** shipped; Phase **3** (auto de-bookmark) **not started**. **BB-TIMED-1 Phases 0–7 ✅** (2026-08-20) — timed Settings UI, session timer, auto-open, minimal confirm, Inc weekdays 11:00, PR boot config-only. Queue ~**1926 pending** (re-check: `python -m business_bookmark_sorter status`). Secure filing plan (A–G) locked 2026-07-20.  
 **ASAP add-on:** [`.cursor/rules/task_bookmark_timed_sessions.md`](task_bookmark_timed_sessions.md) — **Ready for single manual pass** (`MANUAL_TEST.md` §O / §§I–N); **delete satellite** after that pass + optional fold into this §5. **Stay in Inc**; do not move to `project_reminder`.  
-**UX follow-on (2026-08-20):** [`.cursor/rules/task_bb_links_reviewer_ux.md`](task_bb_links_reviewer_ux.md) — **BB-LINKS-UX-1 Phases 0–4 ✅** (no Assign · flat master · app tray · **Business links bookmark Reviewer** + `TEMPLATE.md`). Optional Phase **5**. **Delete satellite** after owner MANUAL (§Q + File→last line).  
+**UX follow-on (2026-08-20):** [`.cursor/rules/task_bb_links_reviewer_ux.md`](task_bb_links_reviewer_ux.md) — **BB-LINKS-UX-1 Phases 0–4 ✅**. Branding polish: [`.cursor/rules/task_bb_links_branding_polish.md`](task_bb_links_branding_polish.md) (**BB-BRAND-1** — “Business links **B**ookmark Reviewer” + template-as-**guide**-for-other-apps). Optional UX Phase **5**. Delete satellites after MANUAL / polish done.  
 **Goal:** Sort bookmarks from Chrome (`chrome://bookmarks/?q=business` and related trees) into the **correct folders/files inside `C:\dev\Inc`**, not into `business_bookmark_sorter\Business Links.md` (that path is a **temporary inbox only**). After Phase 2b/2c, filing means: **saved in `queue.json`**, visible in master **Business Links.md/.docx** (**flat** chronological list after BB-LINKS-UX-1 Phase 2), toast + **“Have you removed bookmark?”** gate, then user deletes in Chrome (Phase 3 still optional automation). Queue still keeps `filed_destination`.  
-**Tray entry:** Formulated ideas → **Bookmark review** (`bookmark_review`) · CLI: `python -m business_bookmark_sorter review` · app also has its **own** tray icon (Phase 3). Window title: **Business links bookmark Reviewer**.  
+**Tray entry:** Formulated ideas → **Bookmark review** (`bookmark_review`) · CLI: `python -m business_bookmark_sorter review` · app also has its **own** tray icon (Phase 3). Window title: **Business links Bookmark Reviewer**.  
 **Manual tests:** [`business_bookmark_sorter/MANUAL_TEST.md`](../business_bookmark_sorter/MANUAL_TEST.md) (human-only; agent runs pytest/status first)  
 **Task file note:** Shipped §5 history stays here; timed/minimal-UI → **BB-TIMED-1**; UX/template → **BB-LINKS-UX-1**.  
 

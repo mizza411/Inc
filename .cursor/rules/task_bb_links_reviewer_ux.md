@@ -15,7 +15,7 @@
 1. Remove **Assign to:** dropdown + label from Reviewer; File still works with a default destination; Enter / File / remove-bookmark flow intact.
 2. Stop writing / showing category subsection headings in Business Links (e.g. “Problem identification”); identify from live md/docx + exporter; regen cleans noise; **last filed link = last entry**.
 3. Dedicated **tray icon** for this app (peer behavior to today’s trays): open/focus + quit; do **not** break Formulated ideas → Bookmark review.
-4. Treat business flow as **template instance #1**; rename UI to **Business links bookmark Reviewer**; top banner that the same shell can host e.g. Health / Investment reviewers; document hooks for a second category (**no** full health build).
+4. Treat business flow as **template instance #1**; UI name **Business links Bookmark Reviewer** (casing polish = **BB-BRAND-1**); top banner + `TEMPLATE.md` = **guide for building other apps** (Health / Investment) — see [task_bb_links_branding_polish.md](task_bb_links_branding_polish.md).
 
 ---
 
@@ -112,7 +112,7 @@ SORTER PROCESS (this app)
   └──────────┬─────────────────────────────┘
              │ focus / quit
   ┌──────────▼─────────────────────────────┐
-  │ Business links bookmark Reviewer       │
+  │ Business links Bookmark Reviewer       │
   │ banner: shell also for Health / …      │
   │ timer | Settings…                      │
   │ current item                           │
@@ -197,7 +197,7 @@ SORTER PROCESS (this app)
 **Goal:** Business = instance #1 of reusable shell; visible rename + banner + hooks doc.
 
 - [x] **4.1** Config-driven product title / banner (`instance_branding.py` + `routes.json` → `product`).
-- [x] **4.2** Rename UI → **Business links bookmark Reviewer**; top template banner (Health / Investment examples).
+- [x] **4.2** Rename UI → **Business links Bookmark Reviewer** (casing polish completed in **BB-BRAND-1**); top template banner (Health / Investment as guide for other apps).
 - [x] **4.3** Document second-category hooks — `business_bookmark_sorter/TEMPLATE.md`.
 - [x] **4.4** Grep user-facing “Bookmark Reviewer” in UI/tray; package path unchanged.
 - [x] **4.5** Automated suite green; owner one MANUAL pass still required before **deleting this satellite**.
@@ -246,5 +246,6 @@ SORTER PROCESS (this app)
 
 ## Owner pick (next)
 
-1. Confirm **0.1** (suggest → other) if not already.  
-2. Reply **1** (start Phase 1), **0→4** (auto-proceed required track), or **0→5** (include optional Settings override).
+- BB-LINKS-UX optional **5** (Settings dest override) — reply on that track if wanted.  
+- **Branding polish** → [task_bb_links_branding_polish.md](task_bb_links_branding_polish.md) — reply **1** / **0→1** there.  
+- Delete **this** satellite after MANUAL §Q (+ BB-BRAND-1 done if still open).

@@ -1,9 +1,9 @@
 {
   "product": {
-    "app_title": "Business links bookmark Reviewer",
+    "app_title": "Business links Bookmark Reviewer",
     "master_title": "Business Links",
-    "tray_tooltip": "Business links bookmark Reviewer",
-    "template_banner": "Template shell — this is the Business links instance. The same review + queue + master-links + tray pattern can later host other concept types (e.g. “Health links bookmark reviewer”, “Investment links bookmark reviewer”) via config, not a second app."
+    "tray_tooltip": "Business links Bookmark Reviewer",
+    "template_banner": "Guide for other apps — this Business links Bookmark Reviewer shows the pattern (queue + timed review + file + master links + tray). Use it when you build apps like a Health links Bookmark Reviewer or an Investment links Bookmark Reviewer later."
   },
   "review": {
     "auto_export_on_mark": true,

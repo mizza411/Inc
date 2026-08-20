@@ -1,21 +1,20 @@
-"""Product branding for this sorter instance (BB-LINKS-UX-1 Phase 4).
+"""Product branding for this sorter instance (BB-LINKS-UX-1 / BB-BRAND-1).
 
-Business links is instance #1 of a reusable shell. A future Health/Investment
-instance would swap ``routes.json`` → ``product`` (and chrome filter / master
-path) without forking a second app package.
+Business links is the shipped first app built on this review shell. Use it as a
+guide when building later apps (e.g. Health or Investment Bookmark Reviewers).
 """
 
 from __future__ import annotations
 
 from typing import Any, Dict
 
-DEFAULT_APP_TITLE = "Business links bookmark Reviewer"
+DEFAULT_APP_TITLE = "Business links Bookmark Reviewer"
 DEFAULT_MASTER_TITLE = "Business Links"
 DEFAULT_TEMPLATE_BANNER = (
-    "Template shell — this is the Business links instance. "
-    "The same review + queue + master-links + tray pattern can later host "
-    "other concept types (e.g. “Health links bookmark reviewer”, "
-    "“Investment links bookmark reviewer”) via config, not a second app."
+    "Guide for other apps — this Business links Bookmark Reviewer shows the "
+    "pattern (queue + timed review + file + master links + tray). Use it when "
+    "you build apps like a Health links Bookmark Reviewer or an Investment "
+    "links Bookmark Reviewer later."
 )
 
 

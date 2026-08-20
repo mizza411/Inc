@@ -6,7 +6,7 @@ All filed links export to **one document**: `business_bookmark_sorter/Business L
 
 **Privacy:** Import from the **local** Chrome `Bookmarks` file only — never bulk-export the full tree into chat/AI. Human checklist: [`MANUAL_TEST.md`](MANUAL_TEST.md). Task tracker: `.cursor/rules/task.md` §5.
 
-**Main command** (opens **Business links bookmark Reviewer**):
+**Main command** (opens **Business links Bookmark Reviewer**):
 
 ```powershell
 cd C:\dev\Inc
@@ -14,7 +14,7 @@ python -m business_bookmark_sorter review
 ```
 
 Same action from the Inc tray: **Formulated ideas → Bookmark review** (launcher label unchanged).  
-**Template hooks** for a future Health/Investment instance: [`TEMPLATE.md`](TEMPLATE.md).
+**Guide for building other apps** (Health / Investment Bookmark Reviewers later): [`TEMPLATE.md`](TEMPLATE.md).
 
 `discover` / `discover --dry-run` is **discontinued** (2026-08-19). Do not run it.
 

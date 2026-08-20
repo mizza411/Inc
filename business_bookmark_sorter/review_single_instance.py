@@ -1,4 +1,4 @@
-"""Single-instance guard for Business links bookmark Reviewer (BB-LINKS-UX-1 Phase 3)."""
+"""Single-instance guard for Business links Bookmark Reviewer (BB-LINKS-UX-1 Phase 3)."""
 
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ def ensure_single_instance() -> bool:
     _mutex_handle = kernel32.CreateMutexW(None, False, _MUTEX_NAME)
     last_error = kernel32.GetLastError()
     if last_error == 183:  # ERROR_ALREADY_EXISTS
-        logger.info("Business links bookmark Reviewer already running — requesting focus.")
+        logger.info("Business links Bookmark Reviewer already running — requesting focus.")
         return False
     return True
 

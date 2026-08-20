@@ -1,5 +1,19 @@
 ﻿# Technical Intuition Log
 
+## 2026-08-20 — BB-BRAND-1: Bookmark casing + guide banner
+
+**What we did**
+- Renamed product title to **Business links Bookmark Reviewer** (config + defaults + docs/tests).
+- Rewrote banner and `TEMPLATE.md` as a **guide for building other apps** (Health / Investment), removing “not a second app” framing.
+
+**Why it matters**
+The name matches the requested casing, and the template copy matches your intent: this app teaches how to build more Reviewers later.
+
+**Intuition analogy**
+Like a flagship store whose signage and staff handbook say “open more shops like this one,” instead of “never open another shop.”
+
+---
+
 ## 2026-08-20 — BB-LINKS-UX-1 Phase 4: template rename + banner
 
 **What we did**

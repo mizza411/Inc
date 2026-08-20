@@ -162,7 +162,7 @@ Agent should run the above before asking you for any section below.
 PASS — boot
   login / auto_launcher
        |
-       +--(~8s)--> window title "Business links bookmark Reviewer" appears
+       +--(~8s)--> window title "Business links Bookmark Reviewer" appears
        +---------> PR old bookmark_sorter may also open (OK — different app)
        X  FAIL if Inc review never opens and key is still enabled
 
@@ -176,7 +176,7 @@ PASS — weekday clock (Interval nudges ON, Inc tray running)
 SKIP for now if you are not doing manual work this session.
 ```
 
-- [ ] (Deferred) Next login: Inc Business links bookmark Reviewer opens from PR boot key
+- [ ] (Deferred) Next login: Inc Business links Bookmark Reviewer opens from PR boot key
 - [ ] (Deferred) Weekday 11:00 with Interval nudges ON opens review
 
 **Pass:** Live surfaces match config tests. **Fail:** enabled config but no window after login/11:00 with tray healthy.
