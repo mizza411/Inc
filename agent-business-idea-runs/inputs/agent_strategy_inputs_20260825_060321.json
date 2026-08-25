@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-08-25T06:03:25.594077",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Lagos issues traffic diversion plan for Oke-Afa Bridge rehabilitation starting Friday",
+          "summary": "The Lagos State Government has issued a traffic diversion plan ahead of the three-week rehabilitation of Oke-Afa Bridge in Isolo, which begins Friday, August 28.\nThe post Lagos issues traffic diversion plan for Oke-Afa Bridge rehabilitation starting Friday appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/25/lagos-issues-traffic-diversion-plan-for-oke-afa-bridge-rehabilitation-starting-friday/",
+          "published": "Tue, 25 Aug 2026 05:59:10 +0000"
+        },
+        {
+          "title": "NITDA inaugurates taskforce to drive Nigeria’s sovereign cloud implementation",
+          "summary": "The National Information Technology Development Agency (NITDA) has inaugurated the National Sovereign Cloud Initiative Implementation Taskforce (NSCI-ITF).\nThe post NITDA inaugurates taskforce to drive Nigeria’s sovereign cloud implementation appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/25/nitda-inaugurates-taskforce-to-drive-nigerias-sovereign-cloud-implementation/",
+          "published": "Tue, 25 Aug 2026 05:54:21 +0000"
+        },
+        {
+          "title": "Africa finance corporation launches infrastructure climate-resilient fund Nigeria to mobilise domestic institutional capital",
+          "summary": "AFC Capital Partners (ACP), the asset management subsidiary of Africa Finance Corporation (AFC), has launched the Infrastructure Climate-Resilient Fund Nigeria (ICRF Nigeria) as a dedicated platform to mobilise domestic institutional capital for investment in climate-resilient infrastructure projects across Nigeria and the wider African continent.Registered with the Securities and Exchange Commiss",
+          "link": "https://nairametrics.com/2026/08/25/africa-finance-corporation-launches-infrastructure-climate-resilient-fund-nigeria-to-mobilise-domestic-institutional-capital/",
+          "published": "Tue, 25 Aug 2026 04:49:59 +0000"
+        },
+        {
+          "title": "Chioma afe calls for sustainability beyond csr, positions it as risk management tool",
+          "summary": "Businesses have been urged to move beyond treating sustainability as a standalone corporate social responsibility (CSR) function and embed it into strategy, operations and decision-making as a tool for managing risk, creating business value and driving measurable impact.Director of External Affairs &#38; Social Performance, Seplat Energy Plc, Chioma Afe, made the call at the 2026 [&#8230;]\nThe pos",
+          "link": "https://nairametrics.com/2026/08/25/chioma-afe-calls-for-sustainability-beyond-csr-positions-it-as-risk-management-tool/",
+          "published": "Tue, 25 Aug 2026 04:24:27 +0000"
+        },
+        {
+          "title": "Court of Appeal overturns ruling against Presco’s AGM, rights issue",
+          "summary": "The Court of Appeal in Benin has overturned a Federal High Court ruling that had affected Presco Plc’s 2025 Annual General Meeting (AGM), rights issue and other corporate actions, clearing the way for the company to proceed with the resolutions and capital-raising programme.\nThe post Court of Appeal overturns ruling against Presco’s AGM, rights issue appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/24/court-of-appeal-overturns-ruling-against-prescos-agm-rights-issue/",
+          "published": "Mon, 24 Aug 2026 21:04:54 +0000"
+        },
+        {
+          "title": "Nigerian equities sustain bearish run with N137.12 billion losses ahead of Eid-Ul-Mawlid break",
+          "summary": "The Nigerian equities market extended its bearish trajectory into the third straight week on Monday, August 24, 2026, losing N137.12 billion as sustained profit-taking in selected large-cap stocks continued to weigh on the benchmark index, ahead of the Eid-Ul-Mawlid public holiday on Tuesday.\nThe post Nigerian equities sustain bearish run with N137.12 billion losses ahead of Eid-Ul-Mawlid break ap",
+          "link": "https://nairametrics.com/2026/08/24/nigerian-equities-sustain-bearish-run-with-n137-12-billion-losses-ahead-of-eid-ul-mawlid-break/",
+          "published": "Mon, 24 Aug 2026 19:50:53 +0000"
+        },
+        {
+          "title": "Otedola increases First HoldCo stake with fresh N12.58 billion share acquisition",
+          "summary": "Chairman of First HoldCo Plc, Femi Otedola, has increased his stake in the financial services group following the acquisition of an additional 95.7 million ordinary shares valued at N12.58 billion.\nThe post Otedola increases First HoldCo stake with fresh N12.58 billion share acquisition appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/24/otedola-increases-first-holdco-stake-with-fresh-n12-58-billion-share-acquisition/",
+          "published": "Mon, 24 Aug 2026 19:11:32 +0000"
+        },
+        {
+          "title": "Trump proposes $103,265 H-1B fee for highly skilled foreign workers",
+          "summary": "The administration of U.S. President Donald Trump has proposed a $103,265 fee on new H-1B visas for highly skilled foreign workers, seeking to make permanent a charge that was temporarily introduced last year but subsequently blocked by a federal court.\nThe post Trump proposes $103,265 H-1B fee for highly skilled foreign workers appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/24/trump-proposes-103265-h-1b-fee-for-highly-skilled-foreign-workers/",
+          "published": "Mon, 24 Aug 2026 18:22:23 +0000"
+        },
+        {
+          "title": "FG releases 2026/2027 Federal Unity Colleges admission list",
+          "summary": "The Federal Government has released the 2026/2027 admission list for Junior Secondary School One (JSS1) candidates admitted into Federal Unity Colleges (FUCs) nationwide.\nThe post FG releases 2026/2027 Federal Unity Colleges admission list appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/24/fg-releases-2026-2027-federal-unity-colleges-admission-list/",
+          "published": "Mon, 24 Aug 2026 18:17:56 +0000"
+        },
+        {
+          "title": "GPC Energy and Logistics plans N30 Billion infrastructure bond offer",
+          "summary": "GPC-SPV Company Plc has announced plans to issue a N30 billion Series 1 Senior Guaranteed Fixed Rate Infrastructure Bond under its N100 billion Bond Issuance Programme.\nThe post GPC Energy and Logistics plans N30 Billion infrastructure bond offer appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/08/24/gpc-energy-and-logistics-plans-n30-billion-infrastructure-bond-offer/",
+          "published": "Mon, 24 Aug 2026 17:54:16 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "The organization rewritten: The forces reshaping the modern enterprise",
+          "summary": "Something profound is happening to the modern organization. It is easy to mistake it for another technology cycle, another bout\nread more The organization rewritten: The forces reshaping the modern enterprise",
+          "link": "https://businessday.ng/columnist/article/the-organization-rewritten-the-forces-reshaping-the-modern-enterprise/",
+          "published": "Tue, 25 Aug 2026 04:57:46 +0000"
+        },
+        {
+          "title": "Nigeria cannot win the war against insecurity with a demoralised military",
+          "summary": "No nation can successfully confront insecurity when those entrusted with defending it are poorly motivated, inadequately rewarded and increasingly viewed\nread more Nigeria cannot win the war against insecurity with a demoralised military",
+          "link": "https://businessday.ng/editorial/article/nigeria-cannot-win-the-war-against-insecurity-with-a-demoralised-military/",
+          "published": "Tue, 25 Aug 2026 04:00:16 +0000"
+        },
+        {
+          "title": "When leaders choose accountability over ego",
+          "summary": "Leadership is often associated with strength—the confidence to make difficult decisions, the courage to stand alone and the certainty to\nread more When leaders choose accountability over ego",
+          "link": "https://businessday.ng/columnist/article/when-leaders-choose-accountability-over-ego/",
+          "published": "Tue, 25 Aug 2026 03:52:38 +0000"
+        },
+        {
+          "title": "Beyond board papers",
+          "summary": "Corporate governance has never been more demanding. Boards are expected to provide strategic direction, oversee risk, monitor performance, ensure accountability,\nread more Beyond board papers",
+          "link": "https://businessday.ng/opinion/article/beyond-board-papers/",
+          "published": "Tue, 25 Aug 2026 03:52:30 +0000"
+        },
+        {
+          "title": "Nigeria and its high cost of justice",
+          "summary": "A few years ago, someone I know reported a criminal offence to the police, believing, as any responsible citizen should,\nread more Nigeria and its high cost of justice",
+          "link": "https://businessday.ng/opinion/article/nigeria-and-its-high-cost-of-justice/",
+          "published": "Tue, 25 Aug 2026 03:52:08 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Pack your bags, Melaye tells Tinubu ahead of 2027 polls",
+          "summary": "Dino Melaye urges President Tinubu to prepare for departure from Aso Rock, predicting ADC victory in 2027 due to widespread dissatisfaction.\n\nRead More: https://punchng.com/pack-your-bags-melaye-tells-tinubu-ahead-of-2027-polls/",
+          "link": "https://punchng.com/pack-your-bags-melaye-tells-tinubu-ahead-of-2027-polls/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 06:58:52 +0000"
+        },
+        {
+          "title": "ICYMI: US plans mass visa revocation for asylum seekers — Report",
+          "summary": "The US government plans to revoke up to 200,000 business and tourism visas for asylum seekers. Learn how this mass US visa revocation could affect Nigerian\n\nRead More: https://punchng.com/us-plans-mass-visa-revocation-for-asylum-seekers-report/",
+          "link": "https://punchng.com/us-plans-mass-visa-revocation-for-asylum-seekers-report/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 06:37:58 +0000"
+        },
+        {
+          "title": "Edo Assembly impeaches suspended speaker eight days after resignation",
+          "summary": "Edo State House of Assembly formally impeaches Blessing Agbebaku, eight days after his controversial resignation. Learn more about the Edo Speaker impeache\n\nRead More: https://punchng.com/edo-assembly-impeaches-suspended-speaker-eight-days-after-resignation/",
+          "link": "https://punchng.com/edo-assembly-impeaches-suspended-speaker-eight-days-after-resignation/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 05:00:50 +0000"
+        },
+        {
+          "title": "Sokoto armoured vehicles reduce bandit attacks, says LG chair",
+          "summary": "Sokoto&#8217;s Sabon Birni LGA chairman reports a significant reduction in bandit attacks following the deployment of new armoured vehicles, boosting Sokoto secu\n\nRead More: https://punchng.com/sokoto-armoured-vehicles-reduce-bandit-attacks-says-lg-chair/",
+          "link": "https://punchng.com/sokoto-armoured-vehicles-reduce-bandit-attacks-says-lg-chair/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 05:00:18 +0000"
+        },
+        {
+          "title": "Immigration moves to digitise border management, boost security",
+          "summary": "Nigeria Immigration Service accelerates digital identity systems and automated border controls to tighten Nigeria&#8217;s border management and boost security.\n\nRead More: https://punchng.com/immigration-moves-to-digitise-border-management-boost-security/",
+          "link": "https://punchng.com/immigration-moves-to-digitise-border-management-boost-security/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 04:59:43 +0000"
+        },
+        {
+          "title": "Nigeria risks future mineral imports, geophysicists warn",
+          "summary": "Geophysicists warn Nigeria risks importing minerals if strategic deposits aren&#8217;t conserved. Learn about the call for a national mineral conservation policy\n\nRead More: https://punchng.com/nigeria-risks-future-mineral-imports-geophysicists-warn/",
+          "link": "https://punchng.com/nigeria-risks-future-mineral-imports-geophysicists-warn/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 04:58:35 +0000"
+        },
+        {
+          "title": "FG moves to revive stalled Kolmani oil exploration",
+          "summary": "The Federal Government pledges to remobilise exploration activities at the Kolmani Oil Field in Bauchi State. Learn more about the efforts to revive Kolman\n\nRead More: https://punchng.com/fg-moves-to-revive-stalled-kolmani-oil-exploration/",
+          "link": "https://punchng.com/fg-moves-to-revive-stalled-kolmani-oil-exploration/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 04:57:55 +0000"
+        },
+        {
+          "title": "Autonomy: Judicial workers lock out Edo Assembly workers",
+          "summary": "Edo judiciary workers protest plans to repeal financial autonomy for the judiciary and legislature. Learn why they demand the proposed bill be stopped.\n\nRead More: https://punchng.com/autonomy-judicial-workers-lock-out-edo-assembly-workers/",
+          "link": "https://punchng.com/autonomy-judicial-workers-lock-out-edo-assembly-workers/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 04:55:26 +0000"
+        },
+        {
+          "title": "Monarch honours Charterhouse Lagos head",
+          "summary": "John Todd, Founding Head of Charterhouse Lagos, receives the Aare Oluko title from the Oba of Ogombo, recognising his contributions to education and commun\n\nRead More: https://punchng.com/monarch-honours-charterhouse-lagos-head/",
+          "link": "https://punchng.com/monarch-honours-charterhouse-lagos-head/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 04:54:26 +0000"
+        },
+        {
+          "title": "Ace actor Ogogo buried, Tinubu, Abiodun mourn",
+          "summary": "President Tinubu and Governor Abiodun lead tributes as veteran Nollywood actor Taiwo Hassan, popularly known as Ogogo, is laid to rest in Ilaro, Ogun State\n\nRead More: https://punchng.com/ace-actor-ogogo-buried-tinubu-abiodun-mourn/",
+          "link": "https://punchng.com/ace-actor-ogogo-buried-tinubu-abiodun-mourn/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 25 Aug 2026 04:53:40 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "E-payment transaction volume falls 9.2%, value rises to N1,053trn",
+          "summary": "•POS transactions fall 20%, value drops to N59.3trn&#160; •ATM transaction value jumps 64.6% to N26.3trn By Babajide Komolafe Electronic payment transactions, via six channels,&#160; recorded a 2.85 per cent, year-on-year, YoY increase&#160; in value&#160; to N1.053 quadrillion&#160; in the first quarter of 2026, Q1’26 from N1.024 quadrillion in the same period of 2025, Q1’25. This [&#8230;]\nThe p",
+          "link": "https://www.vanguardngr.com/2026/08/e-payment-transaction-volume-falls-9-2-value-rises-to-n1053trn/",
+          "published": "Tue, 25 Aug 2026 05:58:39 +0000"
+        },
+        {
+          "title": "Dollar to Naira exchange rate today, August 25, 2026",
+          "summary": "The Nigerian naira remained relatively stable against the United States dollar on Tuesday, August 25, 2026, as traders continued to monitor developments in the official and parallel foreign exchange markets.\nThe post Dollar to Naira exchange rate today, August 25, 2026 appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/dollar-to-naira-exchange-rate-today-august-25-2026/",
+          "published": "Tue, 25 Aug 2026 05:40:46 +0000"
+        },
+        {
+          "title": "Obi disagrees with Atiku on fuel subsidy removal",
+          "summary": "P/Harcourt -The Presidential candidate of the Nigerian Democratic Congress, NDC, Mr. Peter Obi, has disagreed with the presidential candidate of the African Democratic Congress, ADC, Alhaji Atiku Abubakar, over his proposed return of fuel subsidy if elected in 2027.\nThe post Obi disagrees with Atiku on fuel subsidy removal appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/obi-disagrees-with-atiku-on-fuel-subsidy-removal/",
+          "published": "Tue, 25 Aug 2026 05:03:57 +0000"
+        },
+        {
+          "title": "Peace on paper, peril in practice: Why 2027’s elections remain at risk, by Dakuku Peterside",
+          "summary": "There is something reassuring about political rivals gathering beneath one roof to sign a common promise of peace. In a country where elections have too often been accompanied by intimidation, inflammatory rhetoric, and violence, the symbolism matters. It affirms that opponents are adversaries, not enemies, and that the pursuit of power must remain subordinate to the survival [&#8230;]\nThe post Pe",
+          "link": "https://www.vanguardngr.com/2026/08/peace-on-paper-peril-in-practice-why-2027s-elections-remain-at-risk-by-dakuku-peterside/",
+          "published": "Tue, 25 Aug 2026 05:01:52 +0000"
+        },
+        {
+          "title": "DSS, NIA to probe NFF over alleged sabotage of national interests",
+          "summary": "Department of State Services, (DSS) and the Nigerian Intelligence Agency (NIA) are investigating intelligence reports that certain top officials of the Nigeria Football Federation (NFF) are working with some foreign interests to undermine national security.\nThe post DSS, NIA to probe NFF over alleged sabotage of national interests appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/dss-nia-to-probe-nff-over-alleged-sabotage-of-national-interests/",
+          "published": "Tue, 25 Aug 2026 05:00:39 +0000"
+        },
+        {
+          "title": "Adeleke receives new Osun CP, demands release of detainees",
+          "summary": "Osun State Government has formally received the newly deployed Commissioner of Police, Ibrahim Zungura, with Governor Ademola Adeleke urging him to reform the state police command and secure the release of persons he described as political detainees. Zungura, who assumed office in Osun on Monday, visited the governor alongside senior officers of the command. During [&#8230;]\nThe post Adeleke recei",
+          "link": "https://www.vanguardngr.com/2026/08/adeleke-receives-new-osun-cp-demands-release-of-detainees/",
+          "published": "Tue, 25 Aug 2026 04:54:43 +0000"
+        },
+        {
+          "title": "Opposition parties lash Yari over APC’ll rule beyond 2031 vow",
+          "summary": "OPPOSITION parties and some stakeholders, yesterday, batted the Director-General of All Progressives Congress Presidential Campaign Council, APC-PCC, Senator Abdul’Aziz Yari, over his comments that the ruling party would win the 2027 presidential polls and rule the country beyond 2031.\nThe post Opposition parties lash Yari over APC’ll rule beyond 2031 vow appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/opposition-parties-lash-yari-over-apcll-rule-beyond-2031-vow/",
+          "published": "Tue, 25 Aug 2026 04:39:09 +0000"
+        },
+        {
+          "title": "Domestic petrol supply falls 20.6%, imports rise in July — NMDPRA",
+          "summary": "Average daily petrol supply from domestic refineries fell by 20.6 per cent to 25.8 million litres in July 2026, from 32.5 million litres per day recorded in June, data from the Nigerian Midstream and Downstream Petroleum Regulatory Authority (NMDPRA) has shown.\nThe post Domestic petrol supply falls 20.6%, imports rise in July — NMDPRA appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/08/domestic-petrol-supply-falls-20-6-imports-rise-in-july-nmdpra/",
+          "published": "Tue, 25 Aug 2026 04:01:37 +0000"
+        },
+        {
+          "title": "Tompolo’s ‘manumission’ mission, the ironies and the joys of life",
+          "summary": "By ENEWARIDIDEKE EKANPOU The state of being swept into oblivion after a sacrificial engagement to free a people from developmental enslavement sounds retrogressive and meaningless. It sounds retrogressive and meaningless because it has no historical bequest to inspire and guide the next generations away from the path that once convulsed their entire existence like the deadly [&#8230;]\nThe post Tom",
+          "link": "https://www.vanguardngr.com/2026/08/tompolos-manumission-mission-the-ironies-and-the-joys-of-life/",
+          "published": "Tue, 25 Aug 2026 00:05:25 +0000"
+        },
+        {
+          "title": "The Nigerian dream: Is it still alive? By Ejiro Ofoye",
+          "summary": "There is a question that Nigerians do not ask often enough, perhaps because the answer frightens us. Is the Nigerian Dream still alive? Not the dream politicians describe at rallies. Not the Nigeria of campaign posters, television advertisements and carefully prepared speeches. I mean the ordinary Nigerian dream-the quiet hope of a father who wants his children [&#8230;]\nThe post The Nigerian drea",
+          "link": "https://www.vanguardngr.com/2026/08/the-nigerian-dream-is-it-still-alive-by-ejiro-ofoye/",
+          "published": "Tue, 25 Aug 2026 00:00:32 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "US announces new sanctions on Iran, threatens to punish countries, entities trading with it",
+          "summary": "Mr Bessent said the US was launching an “economic onslaught” against Iran’s financial connections to sever its economic pipeline, “until Tehran stands alone.\nThe post US announces new sanctions on Iran, threatens to punish countries, entities trading with it appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/foreign/905226-us-announces-new-sanctions-on-iran-threatens-to-punish-countries-entities-trading-with-it.html",
+          "published": "Tue, 25 Aug 2026 05:36:01 +0000"
+        },
+        {
+          "title": "INVESTIGATION: How criminals exploited Benue’s conflicts to traffic children, women",
+          "summary": "Conflict, displacement and economic hardship in Benue State have created conditions that traffickers exploit to traffic children and women.\nThe post INVESTIGATION: How criminals exploited Benue&#8217;s conflicts to traffic children, women appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/features-and-interviews/905206-investigation-how-criminals-exploited-benues-conflicts-to-traffic-children-women.html",
+          "published": "Tue, 25 Aug 2026 04:37:20 +0000"
+        },
+        {
+          "title": "ESUT lecturers suspend strike",
+          "summary": "PREMIUM TIMES reported that Governor Peter Mbah of Enugu State on Tuesday approved an additional ₦115 million in monthly subventions for the university, bringing the state government’s total monthly funding to the institution from ₦161 million to ₦276 million.\nThe post ESUT lecturers suspend strike appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/905200-esut-lecturers-suspend-strike.html",
+          "published": "Mon, 24 Aug 2026 22:46:35 +0000"
+        },
+        {
+          "title": "University suspends professor stripped over attempted sexual assault",
+          "summary": "PREMIUM TIMES reported that the professor was physically assaulted and stripped on 15 August by some angry students over an alleged attempt to molest a female student sexually.\nThe post University suspends professor stripped over attempted sexual assault appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/905196-university-suspends-professor-stripped-over-attempted-sexual-assault.html",
+          "published": "Mon, 24 Aug 2026 22:43:18 +0000"
+        },
+        {
+          "title": "Edo ‌‌Assembly converts ex-speaker’s ‘resignation’ to impeachment",
+          "summary": "The majority leader, who moved a motion for the former speaker’s impeachment, said the verbal resignation process “was unknown to parliamentary practices and did not conform to parliamentary procedures”.\nThe post Edo ‌‌Assembly converts ex-speaker’s ‘resignation’ to impeachment appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/905193-edo-%e2%81%a0%e2%81%a0%e2%81%a0%e2%81%a0assembly-converts-ex-speakers-resignation.html",
+          "published": "Mon, 24 Aug 2026 22:33:20 +0000"
+        },
+        {
+          "title": "Tinubu will win 2027 presidential election by landslide, says ex-INEC commissioner",
+          "summary": "Mr Olurode dismissed suggestions that the defeat suffered by the All Progressives Congress (APC) in the recent Osun governorship election amounted to a rejection of President Tinubu.\nThe post Tinubu will win 2027 presidential election by landslide, says ex-INEC commissioner appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/905174-tinubu-will-win-2027-presidential-election-by-landslide-says-ex-inec-commissioner.html",
+          "published": "Mon, 24 Aug 2026 22:26:49 +0000"
+        },
+        {
+          "title": "Africa largest beneficiary of GEF funding – Official",
+          "summary": "The Global Environment Facility (GEF) says Africa remains the largest regional beneficiary of its funding, receiving about 30 per cent of available resources.\nThe post Africa largest beneficiary of GEF funding – Official appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/business/business-news/905190-africa-largest-beneficiary-of-gef-funding-official.html",
+          "published": "Mon, 24 Aug 2026 22:17:37 +0000"
+        },
+        {
+          "title": "Ex-minister sacked by Tinubu over corruption allegations appointed into president’s campaign",
+          "summary": "President Tinubu appointed Edu to lead women's mobilisation for his 2027 campaign, reviving scrutiny of her 2024 suspension and EFCC investigation amid opposition criticism.\nThe post Ex-minister sacked by Tinubu over corruption allegations appointed into president&#8217;s campaign appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/905187-ex-minister-sacked-by-tinubu-over-corruption-allegations-appointed-into-presidents-campaign.html",
+          "published": "Mon, 24 Aug 2026 22:02:44 +0000"
+        },
+        {
+          "title": "FIFA U20 Women’s World Cup Falconets depart for Poland, target strong showing",
+          "summary": "Head coach Moses Aduku said the players are physically and mentally prepared for the challenge in Poland.\nThe post FIFA U20 Women’s World Cup Falconets depart for Poland, target strong showing appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/905184-fifa-u20-womens-world-cup-falconets-depart-for-poland-target-strong-showing.html",
+          "published": "Mon, 24 Aug 2026 21:39:19 +0000"
+        },
+        {
+          "title": "Uba Sani approves ₦300m for KASU-ASUU, sets up negotiation c’ttee to avert strike",
+          "summary": "The government approved a one-off payment of ₦300 million as Earned Academic Allowance (EAA) for academic staff of the university\nThe post Uba Sani approves ₦300m for KASU-ASUU, sets up negotiation c’ttee to avert strike appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/905181-uba-sani-approves-%e2%82%a6300m-for-kasu-asuu-sets-up-negotiation-cttee-to-avert-strike.html",
+          "published": "Mon, 24 Aug 2026 21:29:14 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": 200,
+    "snippet": "Startups in Africa | StartupList AfricaLoading market dataSkip to contentLoading market dataStartups in AfricaThe complete index of African technology companies.$43.8B total funding raised.3,181 Companies🦄 3 Unicorns+4 This WeekEcosystem BriefLive DataStartup market signals in one viewTrack the latest movement across Financial Services and adjacent sectors, then drill into profiles and deal activity with current ecosystem context.Explore StartupsOpen Market Pulse Total Funding$43.8B Startups Tracked3,181 New This Week+4Startup SnapshotFull Report Total Funding$43.8B6.4%vs last QStartups Tracked3,181Added this week: +4Unicorns: 3Funding Activity1736.4%vs last QTop SectorsFinancial Services20%FinTech17.3%SaaS7.9%FiltersIndustry20Financial Services636FinTech550SaaS251Health Care250E-Commerce227Show 15 moreStage15Seed767Pre-seed312Venture257Grant240Series A171Show 10 moreLocation20🇳🇬Nigeria732🇪🇬Egypt714🇿🇦South Africa523🇰🇪Kenya439🇬🇭Ghana130Show 15 morePro FeatureUnlock All FiltersDeal Size & RevenueInvestor TypeAll IndustriesAll CountriesUpgrade to ProSubmit startupFiltersSort by:momentumCompanySectorStageValuationRaisedEmployeesMomentumAspen PharmacareDurban, South AfricaMedical DevicePost-IPO Debt$***,***Pro$***,***Pro5001TabbyCairo, EgyptFinancial ServicesSeries E$***,***Pro$***,***Pro51ZiplineKigali, RwandaLogisticsSeries H$***,***Pro$***,***Pro201ZEZepzMogadishu, SomaliaFinancial ServicesSeries F$***,***Pro$***,***Pro1001Sun KingNairobi, KenyaEnergyVenture$***,***Pro$***,***Pro1001MNT-HalanGiza, EgyptFinancial ServicesGrowth Equity$***,***Pro$***,***Pro10001d.lightNairobi, KenyaEnergyReceivables Financing$***,***Pro$***,***Pro201JumiaLagos, NigeriaConsumer GoodsVenture$***,***Pro$***,***Pro1001Steinhoff InternationalGauteng, South AfricaConsumer GoodsPost-IPO Equity$***,***Pro$***,***Pro10001Sign in to view moreJoin the largest community of African tech investors and founders.Create Free AccountAlready have an account? Log inShowing 1-20 of 3,181 startupsPrev123…160NextPage 2 onward stays locked until the account tier supports deeper access.How to use this startup directoryUse this page when you need a clean view of startup activity by country, sector, and stage, then move into profile-level research once you have a tight set of targets.01Filter by industry, stage, and geography to reduce noise.02Use market aggregates for quick directional context.03Pair shortlisted startups with the investor directory for outreach planning.Frequently asked questionsHow do I narrow results quickly?Start with industry and country, then add stage and keyword filters to get from broad discovery to a focused shortlist in a few clicks.Can this page support investment or partnership scouting?Yes. Teams use this directory to spot relevant companies first, then open profile-level details for funding context and deeper evaluation.What is the best next step after building a shortlist?Open company profiles for deeper diligence, then cross-reference with investor and sector pages to validate market fit and momentum.",
+    "nigeria_keyword_count": 0,
+    "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback."
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "Contrive",
+        "summary": "Search and act across all your work apps\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/contrive",
+        "published": "2026-08-23T01:19:57-07:00"
+      },
+      {
+        "title": "Destiny Rings",
+        "summary": "Proximity-powered dating, social & networking\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/destiny-rings",
+        "published": "2026-08-19T19:09:37-07:00"
+      },
+      {
+        "title": "IFAH",
+        "summary": "Instruments for composing and experiencing sound as a space\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/ifah-a-new-experience-of-sound",
+        "published": "2026-08-23T09:44:19-07:00"
+      },
+      {
+        "title": "PaymentKit",
+        "summary": "Billing that survives a processor shutdown\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/paymentkit",
+        "published": "2026-08-20T08:10:48-07:00"
+      },
+      {
+        "title": "Decawork",
+        "summary": "Control your company's internal AI agents and tools\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/decawork",
+        "published": "2026-08-22T22:41:57-07:00"
+      },
+      {
+        "title": "Trama",
+        "summary": "Create macOS native automations using plain language\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/trama-mac-automation-in-plain-language",
+        "published": "2026-08-22T12:15:06-07:00"
+      },
+      {
+        "title": "Treebar",
+        "summary": "Treebar gives you one view of every active worktree\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/treebar-where-is-codex",
+        "published": "2026-08-23T09:03:52-07:00"
+      },
+      {
+        "title": "Localdock",
+        "summary": "Every local project gets a real address.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/localdock",
+        "published": "2026-08-23T04:54:19-07:00"
+      },
+      {
+        "title": "Navigara",
+        "summary": "Connect Your AI Spend Directly to Your Roadmap\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/navigara",
+        "published": "2026-08-13T15:04:24-07:00"
+      },
+      {
+        "title": "Cortex by SKYNETLAB",
+        "summary": "The memory layer that decides what's worth remembering\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/cortex-by-skynetlab",
+        "published": "2026-08-23T04:18:32-07:00"
+      },
+      {
+        "title": "Lucid Train",
+        "summary": "Build system design for new and existing codebase\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/lucid-train",
+        "published": "2026-08-23T10:08:08-07:00"
+      },
+      {
+        "title": "Bumply",
+        "summary": "Update your dependencies and undo anything\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/bumply",
+        "published": "2026-08-23T04:55:52-07:00"
+      },
+      {
+        "title": "WorldMap.lol",
+        "summary": "Put your startup on the map. Literally.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/worldmap-lol",
+        "published": "2026-08-23T06:07:55-07:00"
+      },
+      {
+        "title": "Offloop",
+        "summary": "A shared workspace where people and AI agents get work done\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/offloop",
+        "published": "2026-08-22T08:50:38-07:00"
+      },
+      {
+        "title": "Antigravity Remote Control",
+        "summary": "Drive Antigravity agents from any browser\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/google-antigravity",
+        "published": "2026-08-23T22:00:08-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related TopicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts.Just under a tenth of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is sh"
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Lagos issues traffic diversion plan for Oke-Afa Bridge rehabilitation starting Friday",
+        "url": "https://nairametrics.com/2026/08/25/lagos-issues-traffic-diversion-plan-for-oke-afa-bridge-rehabilitation-starting-friday/",
+        "published": "Tue, 25 Aug 2026 05:59:10 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NITDA inaugurates taskforce to drive Nigeria’s sovereign cloud implementation",
+        "url": "https://nairametrics.com/2026/08/25/nitda-inaugurates-taskforce-to-drive-nigerias-sovereign-cloud-implementation/",
+        "published": "Tue, 25 Aug 2026 05:54:21 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Africa finance corporation launches infrastructure climate-resilient fund Nigeria to mobilise domestic institutional capital",
+        "url": "https://nairametrics.com/2026/08/25/africa-finance-corporation-launches-infrastructure-climate-resilient-fund-nigeria-to-mobilise-domestic-institutional-capital/",
+        "published": "Tue, 25 Aug 2026 04:49:59 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Chioma afe calls for sustainability beyond csr, positions it as risk management tool",
+        "url": "https://nairametrics.com/2026/08/25/chioma-afe-calls-for-sustainability-beyond-csr-positions-it-as-risk-management-tool/",
+        "published": "Tue, 25 Aug 2026 04:24:27 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Court of Appeal overturns ruling against Presco’s AGM, rights issue",
+        "url": "https://nairametrics.com/2026/08/24/court-of-appeal-overturns-ruling-against-prescos-agm-rights-issue/",
+        "published": "Mon, 24 Aug 2026 21:04:54 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "The organization rewritten: The forces reshaping the modern enterprise",
+        "url": "https://businessday.ng/columnist/article/the-organization-rewritten-the-forces-reshaping-the-modern-enterprise/",
+        "published": "Tue, 25 Aug 2026 04:57:46 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Nigeria cannot win the war against insecurity with a demoralised military",
+        "url": "https://businessday.ng/editorial/article/nigeria-cannot-win-the-war-against-insecurity-with-a-demoralised-military/",
+        "published": "Tue, 25 Aug 2026 04:00:16 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "When leaders choose accountability over ego",
+        "url": "https://businessday.ng/columnist/article/when-leaders-choose-accountability-over-ego/",
+        "published": "Tue, 25 Aug 2026 03:52:38 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Beyond board papers",
+        "url": "https://businessday.ng/opinion/article/beyond-board-papers/",
+        "published": "Tue, 25 Aug 2026 03:52:30 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Nigeria and its high cost of justice",
+        "url": "https://businessday.ng/opinion/article/nigeria-and-its-high-cost-of-justice/",
+        "published": "Tue, 25 Aug 2026 03:52:08 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Pack your bags, Melaye tells Tinubu ahead of 2027 polls",
+        "url": "https://punchng.com/pack-your-bags-melaye-tells-tinubu-ahead-of-2027-polls/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 25 Aug 2026 06:58:52 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "ICYMI: US plans mass visa revocation for asylum seekers — Report",
+        "url": "https://punchng.com/us-plans-mass-visa-revocation-for-asylum-seekers-report/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 25 Aug 2026 06:37:58 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Edo Assembly impeaches suspended speaker eight days after resignation",
+        "url": "https://punchng.com/edo-assembly-impeaches-suspended-speaker-eight-days-after-resignation/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 25 Aug 2026 05:00:50 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Sokoto armoured vehicles reduce bandit attacks, says LG chair",
+        "url": "https://punchng.com/sokoto-armoured-vehicles-reduce-bandit-attacks-says-lg-chair/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 25 Aug 2026 05:00:18 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Immigration moves to digitise border management, boost security",
+        "url": "https://punchng.com/immigration-moves-to-digitise-border-management-boost-security/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 25 Aug 2026 04:59:43 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "E-payment transaction volume falls 9.2%, value rises to N1,053trn",
+        "url": "https://www.vanguardngr.com/2026/08/e-payment-transaction-volume-falls-9-2-value-rises-to-n1053trn/",
+        "published": "Tue, 25 Aug 2026 05:58:39 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Dollar to Naira exchange rate today, August 25, 2026",
+        "url": "https://www.vanguardngr.com/2026/08/dollar-to-naira-exchange-rate-today-august-25-2026/",
+        "published": "Tue, 25 Aug 2026 05:40:46 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Obi disagrees with Atiku on fuel subsidy removal",
+        "url": "https://www.vanguardngr.com/2026/08/obi-disagrees-with-atiku-on-fuel-subsidy-removal/",
+        "published": "Tue, 25 Aug 2026 05:03:57 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Peace on paper, peril in practice: Why 2027’s elections remain at risk, by Dakuku Peterside",
+        "url": "https://www.vanguardngr.com/2026/08/peace-on-paper-peril-in-practice-why-2027s-elections-remain-at-risk-by-dakuku-peterside/",
+        "published": "Tue, 25 Aug 2026 05:01:52 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "DSS, NIA to probe NFF over alleged sabotage of national interests",
+        "url": "https://www.vanguardngr.com/2026/08/dss-nia-to-probe-nff-over-alleged-sabotage-of-national-interests/",
+        "published": "Tue, 25 Aug 2026 05:00:39 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "==========\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmpuk7bgjme/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
