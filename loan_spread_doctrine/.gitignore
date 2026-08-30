@@ -1,0 +1,4 @@
+# Personal deal numbers, offers, BVN — never commit
+data/**
+!data/.gitignore
+!data/README.md
