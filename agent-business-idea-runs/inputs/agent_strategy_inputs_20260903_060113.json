@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-09-03T06:01:18.992674",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "FG urged to cut aviation charges as high costs keep airfares out of reach",
+          "summary": "The Federal Government has been advised to reduce aviation charges and taxes to lower airfares and make air travel more affordable in Nigeria.\nThe post FG urged to cut aviation charges as high costs keep airfares out of reach appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/03/fg-urged-to-cut-aviation-charges-as-high-costs-keep-airfares-out-of-reach/",
+          "published": "Thu, 03 Sep 2026 05:52:34 +0000"
+        },
+        {
+          "title": "NGX Megacaps gain N46.69 trillion in market value in eight months of 2026",
+          "summary": "Nine listed MegaCap companies added N46.69 trillion in market value between December 31, 2025 and August 31, 2026, as the largest stocks on the Nigerian Exchange (NGX) recorded substantial increases in market capitalization during the first eight months of the year.\nThe post NGX Megacaps gain N46.69 trillion in market value in eight months of 2026 appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/03/ngx-megacaps-gain-n46-69-trillion-in-market-value-in-eight-months-of-2026/",
+          "published": "Thu, 03 Sep 2026 05:46:22 +0000"
+        },
+        {
+          "title": "Bolt vows to stay in Nigeria despite Uber exit, industry challenges",
+          "summary": "Ride-hailing company, Bolt, has vowed to remain in Nigeria despite the exit of rival ride hailing company Uber and the challenges facing the country’s mobility industry. The company, in a statement shared with Nairametrics, said Nigeria remains an important market for its growth, assuring riders, drivers, and other stakeholders that it remains focused on strengthening [&#8230;]\nThe post Bolt vows ",
+          "link": "https://nairametrics.com/2026/09/02/bolt-vows-to-stay-in-nigeria-despite-uber-exit-industry-challenges/",
+          "published": "Wed, 02 Sep 2026 20:04:06 +0000"
+        },
+        {
+          "title": "Adamawa approves N2.2 billion to procure fertiliser for dry-season farming",
+          "summary": "The Adamawa State Government has approved N2.2 billion to procure assorted fertilisers for dry-season farming across the state.\nThe post Adamawa approves N2.2 billion to procure fertiliser for dry-season farming appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/02/adamawa-approves-n2-2-billion-to-procure-fertiliser-for-dry-season-farming/",
+          "published": "Wed, 02 Sep 2026 18:48:27 +0000"
+        },
+        {
+          "title": "Dangote Cement to host investors in London ahead of LSE listing",
+          "summary": "Dangote Cement Plc will host a Capital Markets Day (CMD) in London on September 21, 2026, as the company prepares for its proposed secondary listing on the London Stock Exchange (LSE).\nThe post Dangote Cement to host investors in London ahead of LSE listing appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/02/dangote-cement-to-host-investors-in-london-ahead-of-lse-listing/",
+          "published": "Wed, 02 Sep 2026 18:47:40 +0000"
+        },
+        {
+          "title": "Uber to cut 3,300 jobs globally in major restructuring",
+          "summary": "Uber Technologies is set to cut about 3,300 jobs globally, representing roughly 10% of its workforce, as the ride-hailing company restructures its operations to reduce management layers and redirect spending towards growth and autonomous vehicle technology.\nThe post Uber to cut 3,300 jobs globally in major restructuring appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/02/uber-to-cut-3300-jobs-globally-in-major-restructuring/",
+          "published": "Wed, 02 Sep 2026 16:45:13 +0000"
+        },
+        {
+          "title": "Royal Exchange appoints Geoffrey Ohen as Non-Executive Director",
+          "summary": "Royal Exchange Plc has appointed Dr. Geoffrey C. Ohen as a Non-Executive Director of the company, effective July 23, 2026.\nThe post Royal Exchange appoints Geoffrey Ohen as Non-Executive Director appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/02/royal-exchange-appoints-geoffrey-ohen-as-non-executive-director/",
+          "published": "Wed, 02 Sep 2026 16:13:58 +0000"
+        },
+        {
+          "title": "Top 10 fastest growing sectors in Nigeria in Q2 2026",
+          "summary": "Nigeria's economy grew 4.43% year-on-year in Q2 2026, its highest quarterly performance in five years, since Q3 2021, according to the Q2 GDP data from the Nigerian Bureau of statistics (NBS).\nThe post Top 10 fastest growing sectors in Nigeria in Q2 2026 appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/02/top-10-fastest-growing-sectors-in-nigeria-in-q2-2026/",
+          "published": "Wed, 02 Sep 2026 15:19:09 +0000"
+        },
+        {
+          "title": "Uber shuts down operations in Nigeria, Uganda",
+          "summary": "Global ride-hailing company Uber has announced plans to wind down its operations in Nigeria and Uganda, effective Wednesday, September 2, 2026.\nThe post Uber shuts down operations in Nigeria, Uganda appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/02/uber-shuts-down-operations-in-nigeria-uganda/",
+          "published": "Wed, 02 Sep 2026 13:58:23 +0000"
+        },
+        {
+          "title": "Pivot Integrated Energy Services’ ₦100 billion debut commercial paper oversubscribed at ₦100.08 billion",
+          "summary": "Pivot Integrated Energy Services Limited (“Pivot”), a leading indigenous integrated downstream energy company, has successfully completed its maiden ₦100 billion Series 1 Commercial Paper (“CP”) issuance under its ₦300 billion Commercial Paper Programme. The landmark issuance was oversubscribed at ₦100.08 billion, reflecting strong demand and significant confidence from institutional and sophistic",
+          "link": "https://nairametrics.com/2026/09/02/pivot-integrated-energy-services-%e2%82%a6100-billion-debut-commercial-paper-oversubscribed-at-%e2%82%a6100-08-billion/",
+          "published": "Wed, 02 Sep 2026 13:34:07 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "When will Nigeria’s economic growth finally reach the people?",
+          "summary": "Nigeria is beginning to win the battle over macroeconomic stability but losing the argument at the household level. GDP is\nread more When will Nigeria’s economic growth finally reach the people?",
+          "link": "https://businessday.ng/editorial/article/when-will-nigerias-economic-growth-finally-reach-the-people/",
+          "published": "Thu, 03 Sep 2026 04:00:24 +0000"
+        },
+        {
+          "title": "BusinessDay 03rd Sep 2026",
+          "summary": "read more BusinessDay 03rd Sep 2026",
+          "link": "https://businessday.ng/e-edition/article/businessday-03rd-sep-2026/",
+          "published": "Thu, 03 Sep 2026 03:37:14 +0000"
+        },
+        {
+          "title": "Why Uber is retreating from Africa’s ride-hailing market",
+          "summary": "&#8230;.US-based firm leaves four African countries in one year as low fares, rising operating costs, competition and regulation squeeze the economics\nread more Why Uber is retreating from Africa’s ride-hailing market",
+          "link": "https://businessday.ng/africa/article/why-uber-is-retreating-from-africas-ride-hailing-market/",
+          "published": "Thu, 03 Sep 2026 03:00:52 +0000"
+        },
+        {
+          "title": "Uber leaves Nigeria after 12 years, exposing economics of ride-hailing",
+          "summary": "&#8230;.as 2,500 ride-hailing apps struggle to survive Uber, the mobility giant that changed the way people and businesses move is\nread more Uber leaves Nigeria after 12 years, exposing economics of ride-hailing",
+          "link": "https://businessday.ng/technology/article/uber-leaves-nigeria-after-12-years-exposing-the-brutal-economics-of-ride-hailing/",
+          "published": "Thu, 03 Sep 2026 03:00:47 +0000"
+        },
+        {
+          "title": "WORLD IN BRIEF: Netherlands shifts gold to London, Zelensky warns airlines over Russian airspace, Mozambique and Zimbabwe expand fuel pipeline and other stories",
+          "summary": "US pounds Iran as Tehran strikes back at regional bases The United States and Iran have exchanged their heaviest attacks\nread more WORLD IN BRIEF: Netherlands shifts gold to London, Zelensky warns airlines over Russian airspace, Mozambique and Zimbabwe expand fuel pipeline and other stories",
+          "link": "https://businessday.ng/world/article/world-in-brief-netherlands-shifts-gold-to-london-zelensky-warns-airlines-over-russian-airspace-mozambique-and-zimbabwe-expand-fuel-pipeline-and-other-stories/",
+          "published": "Thu, 03 Sep 2026 03:00:32 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Morning recap: States owe N5.3tn debt, INEC fears AI disinformation threat, other top stories",
+          "summary": "Stay informed with Nigeria&#8217;s top stories: states&#8217; N5.3tn debt, INEC&#8217;s AI disinformation fears, N300k minimum wage demand, and Wike&#8217;s 2027 election concerns\n\nRead More: https://punchng.com/morning-recap-states-owe-n5-3tn-debt-inec-fears-ai-disinformation-threat-other-top-stories/",
+          "link": "https://punchng.com/morning-recap-states-owe-n5-3tn-debt-inec-fears-ai-disinformation-threat-other-top-stories/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 06:41:11 +0000"
+        },
+        {
+          "title": "Bolivia orders state intervention as fuel shortage bites",
+          "summary": "The Bolivian government announced Wednesday that it had placed state oil company YPFB under temporary supervision, citing problems with fuel imports and distribution amid a severe supply crisis. Long lines of drivers queuing for scarce fuel have become a regular sight in Bolivia, where President Rodrigo Paz took power last November on a pledge to\n\nRead More: https://punchng.com/bolivia-orders-stat",
+          "link": "https://punchng.com/bolivia-orders-state-intervention-as-fuel-shortage-bites/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 06:35:25 +0000"
+        },
+        {
+          "title": "Ex-BBNaija Danboskid seeks support to rebuild life, plans movie",
+          "summary": "Former BBNaija housemate Danboskid opens up about his struggles and seeks support to rebuild his life, planning a movie, accessories brand, and Uber drivin\n\nRead More: https://punchng.com/ex-bbnaija-danboskid-seeks-support-to-rebuild-life-plans-movie/",
+          "link": "https://punchng.com/ex-bbnaija-danboskid-seeks-support-to-rebuild-life-plans-movie/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 06:00:57 +0000"
+        },
+        {
+          "title": "Fury confirms Joshua fight in USA",
+          "summary": "Tyson Fury confirms his highly anticipated heavyweight fight with Anthony Joshua will take place at Madison Square Garden, New York. Get details on the ven\n\nRead More: https://punchng.com/fury-confirms-joshua-fight-in-usa/",
+          "link": "https://punchng.com/fury-confirms-joshua-fight-in-usa/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 05:50:53 +0000"
+        },
+        {
+          "title": "Awujale: Court reassigns ruling house suit over stalled selection",
+          "summary": "A suit challenging the stalled Awujale succession process has been reassigned by an Ogun State High Court. The Fusengbuwa Ruling House seeks to compel the\n\nRead More: https://punchng.com/awujale-court-reassigns-ruling-house-suit-over-stalled-selection/",
+          "link": "https://punchng.com/awujale-court-reassigns-ruling-house-suit-over-stalled-selection/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 05:50:42 +0000"
+        },
+        {
+          "title": "Court dismisses Petrocam’s bid to change N9.05bn security order",
+          "summary": "Lagos Federal High Court dismisses Petrocam&#8217;s bid to vary a N9.05bn security order, citing abuse of court process. Learn more about the Petrocam court case\n\nRead More: https://punchng.com/court-dismisses-petrocams-bid-to-change-n9-05bn-security-order/",
+          "link": "https://punchng.com/court-dismisses-petrocams-bid-to-change-n9-05bn-security-order/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 05:49:45 +0000"
+        },
+        {
+          "title": "NBA resisted attempts to interfere with its independence – Osigwe",
+          "summary": "Former NBA President Afam Osigwe details how his administration resisted attempts to undermine the association&#8217;s independence and defended constitutional d\n\nRead More: https://punchng.com/nba-resisted-attempts-to-interfere-with-its-independence-osigwe/",
+          "link": "https://punchng.com/nba-resisted-attempts-to-interfere-with-its-independence-osigwe/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 05:49:11 +0000"
+        },
+        {
+          "title": "NLNG/SEPNU leads as domestic cooking gas supply rises",
+          "summary": "Nigeria&#8217;s domestic cooking gas supply reached 5,332 tonnes/day in July 2026, with NLNG/SEPNU as the top contributor. Learn about the rise in cooking gas su\n\nRead More: https://punchng.com/nlng-sepnu-leads-as-domestic-cooking-gas-supply-rises/",
+          "link": "https://punchng.com/nlng-sepnu-leads-as-domestic-cooking-gas-supply-rises/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 05:48:33 +0000"
+        },
+        {
+          "title": "W’Bank backs tariff, subsidy reforms in Nigeria’s power sector",
+          "summary": "The World Bank will support Nigeria&#8217;s power sector reforms, focusing on electricity tariff and subsidy frameworks to restore financial sustainability and i\n\nRead More: https://punchng.com/wbank-backs-tariff-subsidy-reforms-in-nigerias-power-sector/",
+          "link": "https://punchng.com/wbank-backs-tariff-subsidy-reforms-in-nigerias-power-sector/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 04:15:31 +0000"
+        },
+        {
+          "title": "2027 polls won’t derail constitutional amendment, Senate assures",
+          "summary": "The Nigerian Senate assures that the constitutional amendment process will be completed before the 2027 general elections, dismissing fears of derailment.\n\nRead More: https://punchng.com/2027-polls-wont-derail-constitutional-amendment-senate-assures/",
+          "link": "https://punchng.com/2027-polls-wont-derail-constitutional-amendment-senate-assures/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Thu, 03 Sep 2026 04:14:11 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "NFF crisis: FIFA to visit Nigeria; yet to ratify NFF Normalisation Committee",
+          "summary": "NFF crisis: More facts have emerged from the meeting between the Nigerian delegation led by Chairman of the National Sports Commission Mallam Shehu Dikko and FIFA President at the FIFA headquarters in Zurich on Tuesday.\nThe post NFF crisis: FIFA to visit Nigeria; yet to ratify NFF Normalisation Committee appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/nff-crisis-fifa-to-visit-nigeria-yet-to-ratify-nff-normalisation-committee/",
+          "published": "Thu, 03 Sep 2026 05:03:41 +0000"
+        },
+        {
+          "title": "U.S to demand more proofs for children’s passports in new Trump policy",
+          "summary": "United States has proposed new rules that would compel parents applying for passports for their children to provide proof of their own citizenship or immigration status. The move, according to a draft guidance reviewed by Reuters, is part of President Donald Trump’s latest push to curtail birthright citizenship in the United States. Under the proposed [&#8230;]\nThe post U.S to demand more proofs f",
+          "link": "https://www.vanguardngr.com/2026/09/u-s-to-demand-more-proofs-for-childrens-passports-in-new-trump-policy/",
+          "published": "Thu, 03 Sep 2026 04:40:32 +0000"
+        },
+        {
+          "title": "Nigerians see no signs of economic growth —Labour",
+          "summary": "The Association of Senior Civil Servants of Nigeria, ASCSN, yesterday said Nigerians have seen no sign of economic growth according to the gross domestic product, GDP, released by the federal government on Tuesday.  \nThe post Nigerians see no signs of economic growth —Labour appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/nigerians-see-no-signs-of-economic-growth-labour/",
+          "published": "Thu, 03 Sep 2026 04:25:30 +0000"
+        },
+        {
+          "title": "Awujale Stool: Court warns parties to maintain status quo",
+          "summary": "AN Ogun State High Court, sitting in Ijebu-Ode, yesterday, warned parties involved in the legal dispute over the succession to the Awujale stool against taking any action capable of undermining the court process or altering the existing status quo.\nThe post Awujale Stool: Court warns parties to maintain status quo  appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/awujale-stool-court-warns-parties-to-maintain-status-quo/",
+          "published": "Thu, 03 Sep 2026 04:17:49 +0000"
+        },
+        {
+          "title": "We were offered $3m to stop campaign against Tinubu — Atiku-linked US lobbying firm",
+          "summary": "A United States-based policy advisory and lobbying firm linked to former Vice President Atiku Abubakar has alleged that its founder, Dr Karl Von Batten, was offered $3 million and invited to a confidential meeting in London to persuade him to end the firm’s campaign concerning allegations against President Bola Tinubu.\nThe post We were offered $3m to stop campaign against Tinubu — Atiku-linked US ",
+          "link": "https://www.vanguardngr.com/2026/09/we-were-offered-3m-to-stop-campaign-against-tinubu-atiku-linked-us-lobbying-firm/",
+          "published": "Thu, 03 Sep 2026 03:50:00 +0000"
+        },
+        {
+          "title": "Imo, Kwara govs at ‘war’with me — Wike",
+          "summary": "Federal Capital Territory FCT, Minister, Nyesom Wike, has accused the governors of Imo and Kwara states, Senator Hope Uzodinma and Alhaji Abdulrahman Abdulrazaq, of working against him, alleging that both men have failed to reciprocate the political support he claimed to have extended to them in the past.\nThe post Imo, Kwara govs at ‘war’with me — Wike appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/imo-kwara-govs-at-warwith-me-wike/",
+          "published": "Thu, 03 Sep 2026 03:45:19 +0000"
+        },
+        {
+          "title": "Lies, damned lies about fuel subsidy removal in Nigeria, by Olu Fasan",
+          "summary": "For decades, removing the petroleum subsidy in Nigeria was a political hot potato and then a political football. The first metaphor refers to the squeamishness of some past governments about removing the subsidy. The second describes self-interested and hypocritical politicians whose presidential ambitions led them to be Janus-faced on subsidy removal. In 2012, Bola Tinubu [&#8230;]\nThe post Lies,",
+          "link": "https://www.vanguardngr.com/2026/09/lies-damned-lies-about-fuel-subsidy-removal-in-nigeria-by-olu-fasan/",
+          "published": "Thu, 03 Sep 2026 03:27:00 +0000"
+        },
+        {
+          "title": "Zamfara guards arrest bandit doctors, lawyer, couriers, informants",
+          "summary": "Zamfara State Community Protection Guards (Askarawan Zamfara) have paraded nine suspects in Gusau, including bandits, informants, logistics suppliers and a fake legal practitioner. The arrests followed intelligence-led operations across the state. The commandant of the CPG, retired AIG Shehu Dalijan, disclosed during the parade of the suspects yesterday. He said the breakthrough came from detailed",
+          "link": "https://www.vanguardngr.com/2026/09/zamfara-guards-arrest-bandit-doctors-lawyer-couriers-informants/",
+          "published": "Thu, 03 Sep 2026 03:22:00 +0000"
+        },
+        {
+          "title": "PFIPC: Reps panel clears Gbaja, links 12 agencies, 58 bank accounts to DG",
+          "summary": "\"The purported appointment letter was fabricated and falsely attributed to the Presidency.”\nThe post PFIPC: Reps panel clears Gbaja, links 12 agencies, 58 bank accounts to DG appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/pfipc-reps-panel-exonerates-gbajabiamila-uncovers-forged-documents/",
+          "published": "Thu, 03 Sep 2026 03:17:00 +0000"
+        },
+        {
+          "title": "As Tinubu’s dark past imperils Nigeria’s future, by Ikechukwu Amaechi",
+          "summary": "It is indubitable, all pretensions to the contrary notwithstanding, that this is not the best of times for President Bola Tinubu. Granted, he is a hard guy – tough, unyielding and some will say lacking in empathy – but even the hardest of men have their vulnerable moments. This must be such a moment for [&#8230;]\nThe post As Tinubu’s dark past imperils Nigeria’s future, by Ikechukwu Amaechi appear",
+          "link": "https://www.vanguardngr.com/2026/09/as-tinubus-dark-past-imperils-nigerias-future-by-ikechukwu-amaechi/",
+          "published": "Thu, 03 Sep 2026 03:00:00 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "PFIPC Probe: Why we didn’t invite, interrogate Gbajabiamila – Reps panel chair",
+          "summary": "“If our mandate was to establish how the agency came into existence, who established the agency? It’s not for Femi (Gbajabiamila).”\nThe post PFIPC Probe: Why we didn&#8217;t invite, interrogate Gbajabiamila &#8211; Reps panel chair appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/907130-pfipc-probe-why-we-didnt-invite-interrogate-gbajabiamila-reps-panel-chair.html",
+          "published": "Wed, 02 Sep 2026 23:37:09 +0000"
+        },
+        {
+          "title": "INTERVIEW: How we are reforming the SSS – DG, Oluwatosin Ajayi",
+          "summary": "The SSS DG speaks on the agency’s institutional reforms, international cooperation and the fight against terrorism and other crimes.\nThe post INTERVIEW: How we are reforming the SSS – DG, Oluwatosin Ajayi appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/features-and-interviews/907115-interview-how-we-are-reforming-the-sss-dg-oluwatosin-ajayi.html",
+          "published": "Wed, 02 Sep 2026 23:30:00 +0000"
+        },
+        {
+          "title": "Igbo traditional rulers, others seek an end to ‘Osu caste’ practice",
+          "summary": "They made the call when the producer, directors, and crew of the new Nollywood movie, “Properties of the Gods”, visited their palaces separately on Wednesday.\nThe post Igbo traditional rulers, others seek an end to ‘Osu caste’ practice appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/907119-igbo-traditional-rulers-others-seek-an-end-to-osu-caste-practice.html",
+          "published": "Wed, 02 Sep 2026 22:23:33 +0000"
+        },
+        {
+          "title": "2027: Ex-Lawmaker rejects zoning claim, backs Ugochinyere for second term in Imo constituency",
+          "summary": "Rufus Omeire claimed incumbent lawmaker Ikenga Ugochinyere emerged through the choice of voters rather than a rotational agreement.\nThe post 2027: Ex-Lawmaker rejects zoning claim, backs Ugochinyere for second term in Imo constituency appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/ssouth-east/907114-2027-ex-lawmaker-rejects-zoning-claim-backs-ugochinyere-for-second-term-in-imo-constituency.html",
+          "published": "Wed, 02 Sep 2026 22:03:10 +0000"
+        },
+        {
+          "title": "2027: Wike vows to deliver Rivers, FCT to Tinubu",
+          "summary": "Mr Wike, who described himself as the “General Commander of the Political Infantry” dismissed the suggestion that only a sitting governor could control a state’s political structure.\nThe post 2027: Wike vows to deliver Rivers, FCT to Tinubu appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/907112-2027-wike-vows-to-deliver-rivers-fct-to-tinubu.html",
+          "published": "Wed, 02 Sep 2026 21:58:06 +0000"
+        },
+        {
+          "title": "CAFWCLQ: Edo Queens thrash USFA to reach WAFU-B final",
+          "summary": "The result caps an impressive campaign so far for Edo Queens, who had earlier navigated their way through Group B with two wins from three matches\nThe post CAFWCLQ: Edo Queens thrash USFA to reach WAFU-B final appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/907108-cafwclq-edo-queens-thrash-usfa-to-reach-wafu-b-final.html",
+          "published": "Wed, 02 Sep 2026 21:49:31 +0000"
+        },
+        {
+          "title": "Akwa Ibom publishes Q2 budget report but fails to show where trillions went — BudgIT",
+          "summary": "The Akwa Ibom government has published its Q2 budget report. Still, BudgIT says the scant details leave citizens unable to properly trace where the trillions of naira received by the state government were spent.\nThe post Akwa Ibom publishes Q2 budget report but fails to show where trillions went — BudgIT appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/907104-akwa-ibom-publishes-q2-budget-report-but-fails-to-show-where-trillions-went-budgit.html",
+          "published": "Wed, 02 Sep 2026 21:39:48 +0000"
+        },
+        {
+          "title": "2027: We’ll remove you from office if APC loses in your area, governor threatens council chairmen",
+          "summary": "The governor’s remarks have raised many fundamental questions, including the independence of local government areas and their chairmen, as well as the executive influence of sitting governors in Nigeria.\nThe post 2027: We’ll remove you from office if APC loses in your area, governor threatens council chairmen appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/ssouth-east/907102-2027-well-remove-you-from-office-if-apc-loses-in-your-area-governor-threatens-council-chairmen.html",
+          "published": "Wed, 02 Sep 2026 21:26:27 +0000"
+        },
+        {
+          "title": "Police dismiss four officers over fatal shooting of motorist",
+          "summary": "The police said the officers were found complicit in the alleged killing of the motorist and would face criminal charges in court.\nThe post Police dismiss four officers over fatal shooting of motorist appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/south-south-regional/907099-police-dismiss-four-officers-over-fatal-shooting-of-motorist.html",
+          "published": "Wed, 02 Sep 2026 21:21:09 +0000"
+        },
+        {
+          "title": "Uba Sani thumbs up Tinubu for raising national tax revenue as JRB holds 160th meeting",
+          "summary": "The Kaduna governor commended the Chairman of the Joint Revenue Bostd (JRB) and the Nigeria Revenue Service (NRS), Dr Zacch Adedeji, for what he described as his exceptional leadership and statesmanship in advancing Nigeria’s tax reform agenda.\nThe post Uba Sani thumbs up Tinubu for raising national tax revenue as JRB holds 160th meeting appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/907094-uba-sani-thumbs-up-tinubu-for-raising-national-tax-revenue-as-jrb-holds-160th-meeting.html",
+          "published": "Wed, 02 Sep 2026 21:10:58 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": 200,
+    "snippet": "Startups in Africa | StartupList AfricaLoading market dataSkip to contentLoading market dataStartups in AfricaThe complete index of African technology companies.$43.8B total funding raised.3,188 Companies🦄 3 Unicorns+7 This WeekEcosystem BriefLive DataStartup market signals in one viewTrack the latest movement across Financial Services and adjacent sectors, then drill into profiles and deal activity with current ecosystem context.Explore StartupsOpen Market Pulse Total Funding$43.8B Startups Tracked3,188 New This Week+7Startup SnapshotFull Report Total Funding$43.8B3.5%vs last QStartups Tracked3,188Added this week: +7Unicorns: 3Funding Activity1813.5%vs last QTop SectorsFinancial Services19.9%FinTech17.3%SaaS7.9%FiltersIndustry20Financial Services636FinTech552SaaS252Health Care250E-Commerce227Show 15 moreStage15Seed766Pre-seed314Venture258Grant240Series A171Show 10 moreLocation20🇳🇬Nigeria734🇪🇬Egypt714🇿🇦South Africa525🇰🇪Kenya440🇬🇭Ghana130Show 15 morePro FeatureUnlock All FiltersDeal Size & RevenueInvestor TypeAll IndustriesAll CountriesUpgrade to ProSubmit startupFiltersSort by:momentumCompanySectorStageValuationRaisedEmployeesMomentumAspen PharmacareDurban, South AfricaMedical DevicePost-IPO Debt$***,***Pro$***,***Pro5001TabbyCairo, EgyptFinancial ServicesSeries E$***,***Pro$***,***Pro51ZiplineKigali, RwandaLogisticsSeries H$***,***Pro$***,***Pro201ZEZepzMogadishu, SomaliaFinancial ServicesSeries F$***,***Pro$***,***Pro1001Sun KingNairobi, KenyaEnergyVenture$***,***Pro$***,***Pro1001MNT-HalanGiza, EgyptFinancial ServicesGrowth Equity$***,***Pro$***,***Pro10001d.lightNairobi, KenyaEnergyReceivables Financing$***,***Pro$***,***Pro201JumiaLagos, NigeriaConsumer GoodsVenture$***,***Pro$***,***Pro1001Steinhoff InternationalGauteng, South AfricaConsumer GoodsPost-IPO Equity$***,***Pro$***,***Pro10001Sign in to view moreJoin the largest community of African tech investors and founders.Create Free AccountAlready have an account? Log inShowing 1-20 of 3,188 startupsPrev123…160NextPage 2 onward stays locked until the account tier supports deeper access.How to use this startup directoryUse this page when you need a clean view of startup activity by country, sector, and stage, then move into profile-level research once you have a tight set of targets.01Filter by industry, stage, and geography to reduce noise.02Use market aggregates for quick directional context.03Pair shortlisted startups with the investor directory for outreach planning.Frequently asked questionsHow do I narrow results quickly?Start with industry and country, then add stage and keyword filters to get from broad discovery to a focused shortlist in a few clicks.Can this page support investment or partnership scouting?Yes. Teams use this directory to spot relevant companies first, then open profile-level details for funding context and deeper evaluation.What is the best next step after building a shortlist?Open company profiles for deeper diligence, then cross-reference with investor and sector pages to validate market fit and momentum.",
+    "nigeria_keyword_count": 0,
+    "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback."
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "Claude Fable 5.1",
+        "summary": "Claude’s most advanced models for coding and knowledge work\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/claude-fable-5-1",
+        "published": "2026-09-01T14:04:24-07:00"
+      },
+      {
+        "title": "GhostReply",
+        "summary": "AI auto-replier for iMessage on your Mac\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/ghostreply-2",
+        "published": "2026-08-31T21:35:26-07:00"
+      },
+      {
+        "title": "Basedash AI Sources",
+        "summary": "Trust every AI answer by seeing what built it\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/basedash",
+        "published": "2026-09-01T21:29:20-07:00"
+      },
+      {
+        "title": "Dynamic Edge",
+        "summary": "The Dynamic Island for Windows\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/dynamic-edge",
+        "published": "2026-09-01T03:31:29-07:00"
+      },
+      {
+        "title": "Roadie",
+        "summary": "Keep your Mac on the right microphone and speakers\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/roadie-4",
+        "published": "2026-09-01T08:40:57-07:00"
+      },
+      {
+        "title": "HydraDB OSS",
+        "summary": "Now open source: the fastest, cheapest graph DB\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/hydradb-oss",
+        "published": "2026-07-10T01:07:54-07:00"
+      },
+      {
+        "title": "Articos",
+        "summary": "Launch with confidence, not gut instinct\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/articos",
+        "published": "2026-08-25T14:29:22-07:00"
+      },
+      {
+        "title": "Dyson CameraJet",
+        "summary": "Precision-floss between teeth while you brush\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/dyson-humidifier",
+        "published": "2026-09-01T22:33:12-07:00"
+      },
+      {
+        "title": "Onset MCP",
+        "summary": "Write and publish release notes from your AI assistant\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/onset-io",
+        "published": "2026-07-28T14:30:24-07:00"
+      },
+      {
+        "title": "Userlens",
+        "summary": "AI agent to improve product adoption\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/userlens",
+        "published": "2026-04-25T08:16:39-07:00"
+      },
+      {
+        "title": "Parasocial",
+        "summary": "The podcast player for sharing.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/parasocial",
+        "published": "2026-08-18T08:15:24-07:00"
+      },
+      {
+        "title": "Doop",
+        "summary": "Design with AI agents - live on the same canvas\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/doop",
+        "published": "2026-09-01T23:26:19-07:00"
+      },
+      {
+        "title": "Dial",
+        "summary": "Give your AI agent a real phone number in 10 seconds\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/dial-3",
+        "published": "2026-08-15T14:20:05-07:00"
+      },
+      {
+        "title": "Stitch AI by Dynamic Mockups",
+        "summary": "The first embroidery digitizing agent\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/stitch-ai-by-dynamic-mockups",
+        "published": "2026-09-01T05:39:23-07:00"
+      },
+      {
+        "title": "Browzer",
+        "summary": "Put your technical content on autopilot\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/browzer",
+        "published": "2026-08-23T17:18:46-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related TopicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts.Just under a tenth of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is sh"
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "FG urged to cut aviation charges as high costs keep airfares out of reach",
+        "url": "https://nairametrics.com/2026/09/03/fg-urged-to-cut-aviation-charges-as-high-costs-keep-airfares-out-of-reach/",
+        "published": "Thu, 03 Sep 2026 05:52:34 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NGX Megacaps gain N46.69 trillion in market value in eight months of 2026",
+        "url": "https://nairametrics.com/2026/09/03/ngx-megacaps-gain-n46-69-trillion-in-market-value-in-eight-months-of-2026/",
+        "published": "Thu, 03 Sep 2026 05:46:22 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Bolt vows to stay in Nigeria despite Uber exit, industry challenges",
+        "url": "https://nairametrics.com/2026/09/02/bolt-vows-to-stay-in-nigeria-despite-uber-exit-industry-challenges/",
+        "published": "Wed, 02 Sep 2026 20:04:06 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Adamawa approves N2.2 billion to procure fertiliser for dry-season farming",
+        "url": "https://nairametrics.com/2026/09/02/adamawa-approves-n2-2-billion-to-procure-fertiliser-for-dry-season-farming/",
+        "published": "Wed, 02 Sep 2026 18:48:27 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Dangote Cement to host investors in London ahead of LSE listing",
+        "url": "https://nairametrics.com/2026/09/02/dangote-cement-to-host-investors-in-london-ahead-of-lse-listing/",
+        "published": "Wed, 02 Sep 2026 18:47:40 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "When will Nigeria’s economic growth finally reach the people?",
+        "url": "https://businessday.ng/editorial/article/when-will-nigerias-economic-growth-finally-reach-the-people/",
+        "published": "Thu, 03 Sep 2026 04:00:24 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "BusinessDay 03rd Sep 2026",
+        "url": "https://businessday.ng/e-edition/article/businessday-03rd-sep-2026/",
+        "published": "Thu, 03 Sep 2026 03:37:14 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Why Uber is retreating from Africa’s ride-hailing market",
+        "url": "https://businessday.ng/africa/article/why-uber-is-retreating-from-africas-ride-hailing-market/",
+        "published": "Thu, 03 Sep 2026 03:00:52 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Uber leaves Nigeria after 12 years, exposing economics of ride-hailing",
+        "url": "https://businessday.ng/technology/article/uber-leaves-nigeria-after-12-years-exposing-the-brutal-economics-of-ride-hailing/",
+        "published": "Thu, 03 Sep 2026 03:00:47 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "WORLD IN BRIEF: Netherlands shifts gold to London, Zelensky warns airlines over Russian airspace, Mozambique and Zimbabwe expand fuel pipeline and other stories",
+        "url": "https://businessday.ng/world/article/world-in-brief-netherlands-shifts-gold-to-london-zelensky-warns-airlines-over-russian-airspace-mozambique-and-zimbabwe-expand-fuel-pipeline-and-other-stories/",
+        "published": "Thu, 03 Sep 2026 03:00:32 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Morning recap: States owe N5.3tn debt, INEC fears AI disinformation threat, other top stories",
+        "url": "https://punchng.com/morning-recap-states-owe-n5-3tn-debt-inec-fears-ai-disinformation-threat-other-top-stories/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 03 Sep 2026 06:41:11 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Bolivia orders state intervention as fuel shortage bites",
+        "url": "https://punchng.com/bolivia-orders-state-intervention-as-fuel-shortage-bites/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 03 Sep 2026 06:35:25 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Ex-BBNaija Danboskid seeks support to rebuild life, plans movie",
+        "url": "https://punchng.com/ex-bbnaija-danboskid-seeks-support-to-rebuild-life-plans-movie/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 03 Sep 2026 06:00:57 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Fury confirms Joshua fight in USA",
+        "url": "https://punchng.com/fury-confirms-joshua-fight-in-usa/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 03 Sep 2026 05:50:53 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Awujale: Court reassigns ruling house suit over stalled selection",
+        "url": "https://punchng.com/awujale-court-reassigns-ruling-house-suit-over-stalled-selection/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Thu, 03 Sep 2026 05:50:42 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "NFF crisis: FIFA to visit Nigeria; yet to ratify NFF Normalisation Committee",
+        "url": "https://www.vanguardngr.com/2026/09/nff-crisis-fifa-to-visit-nigeria-yet-to-ratify-nff-normalisation-committee/",
+        "published": "Thu, 03 Sep 2026 05:03:41 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "U.S to demand more proofs for children’s passports in new Trump policy",
+        "url": "https://www.vanguardngr.com/2026/09/u-s-to-demand-more-proofs-for-childrens-passports-in-new-trump-policy/",
+        "published": "Thu, 03 Sep 2026 04:40:32 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Nigerians see no signs of economic growth —Labour",
+        "url": "https://www.vanguardngr.com/2026/09/nigerians-see-no-signs-of-economic-growth-labour/",
+        "published": "Thu, 03 Sep 2026 04:25:30 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Awujale Stool: Court warns parties to maintain status quo",
+        "url": "https://www.vanguardngr.com/2026/09/awujale-stool-court-warns-parties-to-maintain-status-quo/",
+        "published": "Thu, 03 Sep 2026 04:17:49 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "We were offered $3m to stop campaign against Tinubu — Atiku-linked US lobbying firm",
+        "url": "https://www.vanguardngr.com/2026/09/we-were-offered-3m-to-stop-campaign-against-tinubu-atiku-linked-us-lobbying-firm/",
+        "published": "Thu, 03 Sep 2026 03:50:00 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "==========\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmp95rqzbwa/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
