@@ -10,7 +10,7 @@ Treat it as a **guide / pattern** when you later build apps such as a **Health l
 | Piece | Role |
 |-------|------|
 | Queue + timed review UI | `review_ui.py`, session settings/timer, auto-open |
-| File → master links → docx | `export_markdown.py`, `docx_export.py`, `file_workflow.py` |
+| File → master links → docx | `export_markdown.py`, `docx_export.py`, `word_open.py`, `file_workflow.py` |
 | App tray + single-instance | `review_tray.py`, `review_single_instance.py` |
 | Branding strings | `instance_branding.py` + `config/routes.json` → `product` |
 

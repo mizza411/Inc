@@ -49,3 +49,28 @@ def append_link(
     block = f"\n## Filed {stamp}\n{line}\n"
     path.write_text(content.rstrip() + block, encoding="utf-8")
     return path
+
+
+def append_to_master_md(
+    path: Path,
+    item: Dict[str, Any],
+    *,
+    heading: str = "Business Links",
+) -> int:
+    """Append one filed line to the master md. Does not rewrite the rest of the file."""
+    line = format_link_line(item)
+    url = (item.get("url") or "").strip()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.is_file():
+        content = path.read_text(encoding="utf-8", errors="replace")
+    else:
+        content = f"# {heading}\n\n"
+    already = (url and url in content) or (not url and line in content)
+    if not already:
+        content = content.rstrip() + "\n" + line + "\n"
+        path.write_text(content, encoding="utf-8")
+    elif not path.is_file():
+        path.write_text(content, encoding="utf-8")
+    text = path.read_text(encoding="utf-8", errors="replace")
+    return len([ln for ln in text.splitlines() if ln.startswith("- ")])
+

@@ -38,7 +38,7 @@ python -m business_bookmark_sorter review
 | Button | Action |
 |--------|--------|
 | **Open URL** | Opens link in browser |
-| **File & open doc** | Filed in queue → rebuild **Business Links.md** (flat list) → open **Business Links.docx** |
+| **File & open doc** | Filed in queue → **append** that link to the open **Business Links.docx** (keeps your typed/pasted lines) |
 | **Skip** | Skip for now |
 | **Stay in Chrome** | Keep bookmark; mark `stay_in_chrome` |
 | **Refresh now** | Re-sync from current Chrome bookmarks |
@@ -66,7 +66,7 @@ Settings in `config/routes.json`:
 - `export_section_order` — used only when `flat_list` is false
 - `review.auto_export_on_mark`, `review.open_docx_on_mark`
 
-**Docx:** Pandoc on PATH, or Microsoft Word + `pywin32`. If Word already has **Business Links.docx** open, File rebuilds via a temp file after politely closing that tab (**no** `taskkill` on Word).
+**Docx:** Pandoc on PATH, or Microsoft Word + `pywin32`. **File & open doc** does **not** rebuild the Word file. It **adds** the new filed link at the bottom of the document you already have open (your typed/pasted lines stay). If there is no `.docx` yet, it creates one from markdown once. **No** `taskkill` on Word.
 
 CLI:
 

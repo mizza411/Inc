@@ -87,12 +87,14 @@ Agent should run the above before asking you for any section below.
 
 ### D. Phase 2b/2c/2d — File & open doc + removal dialog (sign-off)
 
-**Why not automated:** Needs live Chrome delete + Word/docx open + eyeball that the line landed in the right section + human Yes/No on the dialog.
+**Why not automated:** Needs live Chrome delete + Word/docx open + eyeball that the newest line is last + Word window z-order (COM mocks cannot prove the window came to the front on this PC) + human Yes/No on the dialog.
 
 - [ ] Start review UI with at least one **pending** item
 - [ ] Pick destination (or accept **Other**) → **File & open doc**
 - [ ] Confirm success toast; **same** `Business Links.docx` opens (not a different per-folder docx)
-- [ ] Confirm new line under the right `##` section (e.g. My leads / Other)
+- [ ] File again while **other Word docs** are also open: Business Links comes **to the front** and the **last (newest) link** is in view (not a blank window behind other docs)
+- [x] Type extra text in Word (not an app-filed bullet), click **File & open doc**: extra text is **still there** and the new filed link is at the bottom. **Restart Reviewer first** if it was left running from before this fix. *(owner confirmed 2026-09-16: everything works well now)*
+- [ ] Confirm new line is the last bullet in the flat list
 - [ ] Delete that bookmark in Chrome
 - [ ] Answer **Yes** in “Have you removed…?” **or** answer **No** then click **Bookmark removed — next**
 - [ ] Confirm queue advanced; link still present in doc / `queue.json` as `filed`

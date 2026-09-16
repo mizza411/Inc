@@ -1,4 +1,79 @@
-﻿# Technical Intuition Log
+# Technical Intuition Log
+
+## 2026-09-16 — File appends; does not rebuild Word
+
+**What we did**
+- Quit the 11:00 Bookmark Reviewer so it cannot keep running the old File button.
+- **File & open doc** now **appends** the new filed link at the end of the open Word document and saves. It does **not** close, extract, or pandoc-replace the file.
+- Master `.md` also **appends** one line and leaves any notes already in that file.
+
+**Why it matters**
+Lines you type or paste in Word stay when you file the next bookmark. Only the new app-filed link is added at the bottom.
+
+**Intuition analogy**
+Like writing a new address on the last line of a notebook instead of photocopying a typed list and throwing the notebook away.
+
+---
+
+## 2026-09-16 — Keep saved Business Links extras
+
+**What we did**
+- File now **saves** the open Word tab before rebuild (no more close-without-save).
+- Export **keeps existing saved lines** from the docx/md and only **appends** newly filed queue links.
+- Tests: `test_preserve_links.py`, `test_export_keeps_hand_typed_extra_links`; Word Save-then-Close mock.
+
+**Why it matters**
+Saving in Word is no longer thrown away on the next File. The 26 queue links stay, and extra lines you saved stay too.
+
+**Intuition analogy**
+Like adding a new contact to the bottom of a paper address book instead of reprinting the book from a database and losing the names you had written in by hand.
+
+---
+
+## 2026-09-16 — Business Links extras beyond the 26
+
+**What we did**
+- Counted the live Word doc: 26 list items, 24 hyperlinks, 0 Word versions — matches the queue, not a longer pre-close copy.
+- Proved with pytest that File rebuilds from `queue.json` only: hand-typed extra lines in the md/docx are dropped (close without save, then replace).
+- No Word AutoRecover / UnsavedFiles copy of a longer `Business Links.docx` from today.
+
+**Why it matters**
+If you added links in Word (or kept old lines the queue does not know), the next **File & open doc** throws that Word copy away and writes only the filed queue. Those extra lines are not in the 26.
+
+**Intuition analogy**
+Like reprinting a flyer from the office database: anything you scribbled on the last printout is gone when the new stack arrives.
+
+---
+
+## 2026-09-16 — Business Links Word reopen (front + newest)
+
+**What we did**
+- After **File & open doc**, Word now reopens `Business Links.docx` through the same Word instance (not a blind `start` that can hide behind other docs).
+- That window is brought to the front; the cursor moves to the last line (newest filed link).
+- Mocked tests in `test_docx_same_name_fix.py`; live z-order still a one-time `MANUAL_TEST.md` §D check.
+
+**Why it matters**
+Filed links were never deleted, but closing the tab and reopening in the background made the list look gone. You should see the same document, in front, at the newest line.
+
+**Intuition analogy**
+Like handing a clerk an updated printout and pointing at the last line, instead of dropping it on a back desk while you keep staring at the empty counter.
+
+---
+
+## 2026-08-30 — LOAN-SPREAD-1: Closed-loop doctrine pack (This PC)
+
+**What we did**
+- Added `loan_spread_doctrine/` (README, closed-loop playbook, spread test + fixture, track map, MANUAL once, heading smoke).
+- Left FIR, Tegrid, gadget, Abuja research, launchers, and main `task.md` untouched.
+- Cloud skipped after view-only Automations; This-PC wrote Phases 1–4.
+
+**Why it matters**
+You get a dated campaign (borrow → beat cost → repay → keep) on disk, with a kill list so “loan to invest” cannot mean a salary loan or a negative-carry Abuja mortgage.
+
+**Intuition analogy**
+Like renting a van for one delivery, unloading, returning the van, and keeping the delivery fee — not leasing the van for life or waiting forty years for a pension cheque.
+
+---
 
 ## 2026-08-20 — BB-BRAND-1: Bookmark casing + guide banner
 

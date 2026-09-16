@@ -10,6 +10,7 @@ from typing import Any, Dict, List, Tuple
 from business_bookmark_sorter.file_link import format_link_line
 from business_bookmark_sorter.instance_branding import master_title
 from business_bookmark_sorter.paths import INC_ROOT
+from business_bookmark_sorter.preserve_links import existing_link_lines, merge_link_lines
 
 
 def master_links_path(config: Dict[str, Any]) -> Path:
@@ -80,8 +81,7 @@ def _header_lines(config: Dict[str, Any], stamp: str) -> List[str]:
     title = master_title(config)
     if use_flat_list(config):
         blurb = (
-            "_One flat list (oldest → newest by filed time). "
-            "Source of truth: queue.json._"
+            "_One flat list. Saved lines are kept; newly filed links are added at the bottom._"
         )
     else:
         blurb = (
@@ -100,14 +100,15 @@ def _header_lines(config: Dict[str, Any], stamp: str) -> List[str]:
 def _export_flat(config: Dict[str, Any], queue: Dict[str, Any], path: Path) -> int:
     stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     items = sorted(_filed_items(queue), key=_sort_key_filed_at)
+    queue_lines = [format_link_line(item) for item in items]
+    merged = merge_link_lines(existing_link_lines(path), queue_lines)
     lines = _header_lines(config, stamp)
-    for item in items:
-        lines.append(format_link_line(item))
-    if items:
+    lines.extend(merged)
+    if merged:
         lines.append("")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-    return len(items)
+    return len(merged)
 
 
 def _export_sectioned(config: Dict[str, Any], queue: Dict[str, Any], path: Path) -> int:
@@ -142,8 +143,8 @@ def export_master_document(
     """
     Rebuild the single master markdown file.
 
-    Default (``export.flat_list`` true): no category ``##`` headings; links ordered
-    by ``filed_at`` ascending so the newest file is the last line.
+    Default (``export.flat_list`` true): keep already-saved link lines, then append
+    newly filed queue items so the newest file is the last line.
     """
     path = master_links_path(config)
     if use_flat_list(config):

@@ -53,7 +53,7 @@ def test_file_item_rollback_on_export_error(tmp_path, monkeypatch):
     save_queue({"version": 1, "items": [item]})
 
     with patch(
-        "business_bookmark_sorter.file_workflow.export_destination",
+        "business_bookmark_sorter.file_workflow.append_to_master_md",
         side_effect=RuntimeError("disk full"),
     ):
         result = file_item(item["id"], "leads", config, open_docx=False)
@@ -77,13 +77,19 @@ def test_file_item_success_without_docx(tmp_path, monkeypatch):
         config,
     )
     save_queue({"version": 1, "items": [item]})
+    master = master_links_path(config)
+    master.parent.mkdir(parents=True, exist_ok=True)
+    master.write_text(
+        "# Business Links\n\nI typed this note by hand.\n\n- [Old](https://example.com/old)\n",
+        encoding="utf-8",
+    )
 
     result = file_item(item["id"], "leads", config, open_docx=False)
     assert result.ok
-    assert result.md_path == master_links_path(config)
-    assert result.md_path.is_file()
+    assert result.md_path == master
     text = result.md_path.read_text(encoding="utf-8")
-    assert "## My leads" not in text
+    assert "I typed this note by hand." in text
+    assert "example.com/old" in text
     assert "example.com/abuja" in text
     updated = load_queue()["items"][0]
     assert updated["status"] == "filed"

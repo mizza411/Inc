@@ -135,3 +135,57 @@ def test_inbox_filed_items_export_in_flat_list(tmp_path, monkeypatch):
     text = path.read_text(encoding="utf-8")
     assert "## Other" not in text
     assert "example.com/misc" in text
+
+
+def test_export_keeps_hand_typed_extra_links(tmp_path, monkeypatch):
+    """Saved extra lines stay; newly filed queue links are appended."""
+    from business_bookmark_sorter import queue_store as qs
+    import business_bookmark_sorter.export_markdown as em
+
+    monkeypatch.setattr(qs, "QUEUE_PATH", tmp_path / "queue.json")
+    monkeypatch.setattr(em, "INC_ROOT", tmp_path)
+
+    config = load_routes_config(CONFIG)
+    master = master_links_path(config)
+    master.parent.mkdir(parents=True, exist_ok=True)
+    master.write_text(
+        "# Business Links\n\n"
+        "- [KeepMe](https://example.com/keep)\n"
+        "- [HandTypedExtra](https://example.com/extra)\n",
+        encoding="utf-8",
+    )
+    keep = build_queue_item(
+        {
+            "type": "url",
+            "title": "KeepMe",
+            "url": "https://example.com/keep",
+            "folder_path": "",
+        },
+        config,
+    )
+    keep["status"] = "filed"
+    keep["filed_destination"] = "other"
+    keep["filed_at"] = "2026-09-16T10:00:00+00:00"
+    newbie = build_queue_item(
+        {
+            "type": "url",
+            "title": "NewFiled",
+            "url": "https://example.com/new",
+            "folder_path": "",
+        },
+        config,
+    )
+    newbie["status"] = "filed"
+    newbie["filed_destination"] = "other"
+    newbie["filed_at"] = "2026-09-16T11:00:00+00:00"
+    save_queue({"version": 1, "items": [keep, newbie]})
+
+    count, path = export_master_document(config, load_queue())
+    text = path.read_text(encoding="utf-8")
+    bullets = [ln for ln in text.splitlines() if ln.startswith("- ")]
+    assert count == 3
+    assert bullets == [
+        "- [KeepMe](https://example.com/keep)",
+        "- [HandTypedExtra](https://example.com/extra)",
+        "- [NewFiled](https://example.com/new)",
+    ]

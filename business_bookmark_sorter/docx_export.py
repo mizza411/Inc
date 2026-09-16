@@ -11,8 +11,9 @@ import time
 import zipfile
 from pathlib import Path
 
-# Word COM can stall on dialogs; Close must stay on the calling STA thread.
-# Never kill WINWORD.EXE from this module.
+# Word: wdSaveChanges — persist the open doc before File rebuilds.
+# Close must stay on the calling STA thread. Never kill WINWORD.EXE.
+WD_SAVE_CHANGES = -1
 WORD_COM_CLOSE_TIMEOUT_SEC = 10
 
 _PANDOC_REFERENCE_DOC = Path(__file__).resolve().parent / "pandoc_reference.docx"
@@ -121,12 +122,10 @@ def _doc_matches_target(full: str, target: str, target_name: str) -> bool:
 
 
 def _close_word_document_if_open_impl(docx_path: Path) -> bool:
-    """Close *docx_path* in a running Word instance when that file is open.
+    """Save then close *docx_path* in a running Word instance when that file is open.
 
-    Closes **without** saving: regenerate rebuilds from markdown, so keeping
-    Word's buffer would fight the new export (and SaveAs same-name errors).
-    Must run on the **calling (STA) thread** — Word COM hangs if Close is
-    issued from a worker thread. Never kills WINWORD.EXE.
+    Saving first keeps extra lines you already put in Word. Must run on the
+    **calling (STA) thread**. Never kills WINWORD.EXE.
     Returns True if a matching doc was closed.
     """
     target = str(docx_path.resolve())
@@ -136,13 +135,11 @@ def _close_word_document_if_open_impl(docx_path: Path) -> bool:
         return False
 
     try:
-        # Suppress Save / Protected View prompts that block Close.
         word.DisplayAlerts = 0  # wdAlertsNone
     except Exception:
         pass
 
     closed = False
-    # Indexed access is more reliable than iterating the COM collection.
     try:
         count = int(word.Documents.Count)
     except Exception:
@@ -157,16 +154,17 @@ def _close_word_document_if_open_impl(docx_path: Path) -> bool:
         if not _doc_matches_target(full, target, target_name):
             continue
         try:
-            # Mark clean so Word will not prompt despite unsaved buffer.
-            doc.Saved = True
-        except Exception:
-            pass
+            doc.Save()
+        except Exception as exc:
+            raise RuntimeError(
+                f"Could not save {docx_path.name} before filing — extras would be lost. {exc}"
+            ) from exc
         try:
-            doc.Close(SaveChanges=0)  # wdDoNotSaveChanges
+            doc.Close(SaveChanges=WD_SAVE_CHANGES)
             closed = True
         except Exception:
             try:
-                doc.Close(False)
+                doc.Close(True)
                 closed = True
             except Exception:
                 continue
@@ -177,7 +175,7 @@ def close_word_document_if_open(
     docx_path: Path,
     timeout: float = WORD_COM_CLOSE_TIMEOUT_SEC,
 ) -> bool:
-    """Close without save before regenerate. Never kills WINWORD.EXE.
+    """Save then close before regenerate. Never kills WINWORD.EXE.
 
     *timeout* is kept for API compatibility but unused: Word COM must not run
     on a background thread (STA deadlock / silent hang).
@@ -254,24 +252,6 @@ def _replace_with_temp(temp_docx: Path, docx_path: Path) -> Path:
 
     temp_docx.replace(docx_path)
     return docx_path
-
-
-def _open_path_detached(path: Path) -> None:
-    """Open *path* in the default app without blocking the caller."""
-    path = path.resolve()
-    if os.name == "nt":
-        subprocess.Popen(  # noqa: S603
-            ["cmd", "/c", "start", "", str(path)],
-            stdin=subprocess.DEVNULL,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            close_fds=True,
-        )
-        return
-
-    import webbrowser
-
-    webbrowser.open(path.as_uri())
 
 
 def _convert_with_pandoc(md_path: Path, docx_path: Path) -> None:
@@ -362,10 +342,11 @@ def _write_with_retry(path: Path, write_fn) -> None:
 
 
 def regenerate_and_open_docx(md_path: Path) -> Path:
-    """Close open docx if present, rebuild from md (via temp), open in default app.
+    """Close open docx if present, rebuild from md (via temp), reopen in Word.
 
-    Avoids Word error: cannot give a document the same name as an open document.
-    Never kills WINWORD.EXE.
+    Reopens in the same Word instance, brings it to the front, and places the
+    cursor on the last line (newest filed link). Falls back to the default app
+    if Word COM is unavailable. Never kills WINWORD.EXE.
     """
     md_path = md_path.resolve()
     docx_path = docx_path_for_md(md_path)
@@ -406,5 +387,7 @@ def regenerate_and_open_docx(md_path: Path) -> Path:
             ) from exc
         raise
 
-    _open_path_detached(open_path["path"])
+    from business_bookmark_sorter.word_open import open_docx_for_owner
+
+    open_docx_for_owner(open_path["path"])
     return open_path["path"]

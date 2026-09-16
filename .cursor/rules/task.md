@@ -960,6 +960,8 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 | Export fails after mark → user deletes bookmark and loses link | **Atomic flow:** if export or docx step fails, show **red toast**, do **not** advance to next item; keep item `filed` only if export succeeded, or roll back to `pending` (pick one policy in code and document in README). |
 | Force-closing Word loses unsaved edits | **Prefer:** before regenerate, **Close without save** on the **calling thread** (Word COM is STA — worker-thread Close hangs) + `DisplayAlerts=0` + mark `Saved` + rebuild via temp `.__regen__.docx` then replace. Never silent `taskkill` on `WINWORD.EXE`. |
 | Word “same name as an open document” / WinError 32 | Fixed 2026-08-20 (attempt 3): STA-safe close + temp replace; optional `Business Links.updated.docx` if master stays locked |
+| Word reopen looks empty / behind other docs | Fixed 2026-09-16: reopen via Word COM in the **same instance**, bring to front, cursor on last (newest) link; `start` only as fallback |
+| Word had **more than** queue count before File | **Fixed 2026-09-16 (append):** File **does not rebuild** Word. It **saves the live buffer**, **appends** the new filed hyperlink at the end. Typed/pasted content stays. Quit/restart Reviewer required (old 11:00 process). Tests: `test_file_item_success_without_docx` keeps a hand note; `test_append_filed_link_in_word_saves_without_rebuild`. |
 | OneDrive/sync locks `.md` / `.docx` | Catch write errors; retry once with short delay; surface path in error toast. |
 | Full rebuild of all destinations on every click (slow with ~2k filed) | **Destination-scoped export** on each action (rewrite only that destination’s `links.md` + optional summary). Full rebuild only via CLI `export-md` or Shift+recovery. |
 | Wrong doc opened | Open **only** the `links_file` for the chosen destination (e.g. `abuja_lead_generator/links.docx`), not every destination. For `inbox`, use `business_bookmark_sorter/Business Links.md` (+ its docx). |
@@ -981,6 +983,9 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 - [x] **2b.4** `review_ui.py`: **File & open doc**; Export button removed; Shift+click = full re-export; no advance on failure.
 - [x] **2b.5** Tests: `test_file_workflow.py`; inbox fixture in `test_import.py`.
 - [x] **2b.6** README + `config/routes.json` `review` settings.
+- [x] **2b.7** Word reopen UX (2026-09-16): `word_open.py` same Word instance to front + cursor on newest link; mocked in `test_docx_same_name_fix.py`. Live z-order: `MANUAL_TEST.md` §D.
+- [x] **2b.8** Keep saved Word/md extras (2026-09-16): save-then-close + merge existing lines; `preserve_links.py`.
+- [x] **2b.9** File appends in Word (2026-09-16): **do not regenerate** the docx; `append_filed_link_in_word`. Quit old Reviewer first.
 
 **Layout:** No new folder; modules stay under `business_bookmark_sorter/` (new `docx_export.py`, keep files under ~500 lines).
 
