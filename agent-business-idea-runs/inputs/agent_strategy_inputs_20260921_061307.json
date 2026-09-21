@@ -1,0 +1,685 @@
+{
+  "generated_at": "2026-09-21T06:13:13.809200",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Nigeria’s private sector credit rises for third straight month to N84.55 trillion in August",
+          "summary": "Credit to Nigeria’s private sector rose for the third consecutive month in August 2026, reaching N84.55 trillion.\nThe post Nigeria’s private sector credit rises for third straight month to N84.55 trillion in August appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/21/nigerias-private-sector-credit-rises-for-third-straight-month-to-n84-55-trillion-in-august/",
+          "published": "Mon, 21 Sep 2026 05:57:12 +0000"
+        },
+        {
+          "title": "Brent crude falls to $101.71, WTI below $100 as US-Iran diplomacy hopes grow",
+          "summary": "Brent crude fell to $101.71 per barrel while US West Texas Intermediate (WTI) crude slipped below $100 as investors weighed renewed hopes of diplomatic engagement between the United States and Iran this week.\nThe post Brent crude falls to $101.71, WTI below $100 as US-Iran diplomacy hopes grow appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/21/brent-crude-falls-to-101-71-wti-below-100-as-us-iran-diplomacy-hopes-grow/",
+          "published": "Mon, 21 Sep 2026 05:41:49 +0000"
+        },
+        {
+          "title": "NLC opposes King’s College concession, warns it could put Unity Colleges at risk",
+          "summary": "The NLC has opposed the proposed concession of King’s College, Lagos, warning that it could set a bad precedent for other Federal unity colleges.\nThe post NLC opposes King’s College concession, warns it could put Unity Colleges at risk appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/20/nlc-opposes-kings-college-concession-warns-it-could-put-unity-colleges-at-risk/",
+          "published": "Sun, 20 Sep 2026 22:39:48 +0000"
+        },
+        {
+          "title": "Tax Ombud warns against revenue-first approach to tax reforms",
+          "summary": "Nigeria&#8217;s Tax Ombud has warned against a revenue-first approach to the country&#8217;s tax reforms, arguing that pursuing collection targets without building taxpayer trust risks undermining the sustainability of the entire system. The warning was contained in a speech by Dr. John Nwabueze, Nigeria&#8217;s first Tax Ombudsman, delivered on his behalf by his Chief of Staff, [&#8230;]\nThe post",
+          "link": "https://nairametrics.com/2026/09/20/tax-ombud-warns-against-revenue-first-approach-to-tax-reforms/",
+          "published": "Sun, 20 Sep 2026 17:34:39 +0000"
+        },
+        {
+          "title": "CPPE says Nigeria retail trade faces growing foreign competition",
+          "summary": "The Centre for the Promotion of Private Enterprise (CPPE) has raised concerns over how foreign traders, particularly Chinese nationals, are...\nThe post CPPE says Nigeria retail trade faces growing foreign competition appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/20/cppe-says-nigeria-retail-trade-faces-growing-foreign-competition/",
+          "published": "Sun, 20 Sep 2026 17:13:57 +0000"
+        },
+        {
+          "title": "Paga CEO Tayo Oviosu says company processes $1.5 billion monthly",
+          "summary": "Paga CEO Tayo Oviosu has said the fintech company processes about $1.5 billion in monthly transaction volume, while revealing that the business is valued in hundreds of millions of dollars. Oviosu made the disclosure during an interview with School of Hard Knocks, which returned to Nigeria to feature the Paga founder. According to Oviosu, Paga [&#8230;]\nThe post Paga CEO Tayo Oviosu says company p",
+          "link": "https://nairametrics.com/2026/09/20/paga-ceo-tayo-oviosu-says-company-generates-1-5-billion-monthly/",
+          "published": "Sun, 20 Sep 2026 17:04:02 +0000"
+        },
+        {
+          "title": "Why 18% returns make you richer in Abia but poorer in Lagos",
+          "summary": "Nigeria’s inflation continued to decelerate in August, with headline inflation falling for the third consecutive month to 15.39% from...\nThe post Why 18% returns make you richer in Abia but poorer in Lagos appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/20/why-18-returns-make-you-richer-in-abia-but-poorer-in-lagos/",
+          "published": "Sun, 20 Sep 2026 15:05:09 +0000"
+        },
+        {
+          "title": "FG moves to ensure equitable 13% derivation fund distribution, re-verifies oil wells",
+          "summary": "The Federal Government through the RMAFC has moved to ensure equitable distribution of the 13% derivation fund among oil-producing states through the re-verification of disputed and newly drilled oil and gas wells.\nThe post FG moves to ensure equitable 13% derivation fund distribution, re-verifies oil wells appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/20/fg-moves-to-ensure-equitable-13-derivation-fund-distribution-re-verifies-oil-wells/",
+          "published": "Sun, 20 Sep 2026 14:24:42 +0000"
+        },
+        {
+          "title": "CNG adoption faces supply and safety hurdles as Nigeria expands rollout, expert says",
+          "summary": "Nigeria’s push to expand compressed natural gas (CNG) as an alternative transport fuel is entering a crucial stage, with the success of the...\nThe post CNG adoption faces supply and safety hurdles as Nigeria expands rollout, expert says appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/20/cng-adoption-faces-supply-and-safety-hurdles-as-nigeria-expands-rollout-expert-says/",
+          "published": "Sun, 20 Sep 2026 13:30:45 +0000"
+        },
+        {
+          "title": "Binance founder Changpeng Zhao’s net worth jumps $9.8bn in 24 hours to $91.2 billion.",
+          "summary": "Cryptocurrency billionaire Changpeng Zhao’s net worth rose by $9.76 billion in 24 hours to $91.2 billion, according to Forbes’ real-time...\nThe post Binance founder Changpeng Zhao’s net worth jumps $9.8bn in 24 hours to $91.2 billion. appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/09/20/binance-founder-changpeng-zhaos-net-worth-jumps-9-8bn-in-24-hours-to-91-2-billion/",
+          "published": "Sun, 20 Sep 2026 12:37:13 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "Nigeria expanded broadband but missed its 70% penetration target",
+          "summary": "Nigeria&#8217;s five-year broadband strategy ended with the country well short of its central access target, leaving a large gap between\nread more Nigeria expanded broadband but missed its 70% penetration target",
+          "link": "https://businessday.ng/backpage/article/nigeria-expanded-broadband-but-missed-its-70-penetration-target/",
+          "published": "Mon, 21 Sep 2026 06:00:30 +0000"
+        },
+        {
+          "title": "PTAs slam Education Ministry over N20m Unity College admission fee claims",
+          "summary": "…Demands transparency, accountability, and legality of King’s College concession &#160; ​The Parent-Teacher Association (PTA) of Federal Unity Colleges has challenged\nread more PTAs slam Education Ministry over N20m Unity College admission fee claims",
+          "link": "https://businessday.ng/education/article/ptas-slam-education-ministry-over-n20m-unity-college-admission-fee-claims/",
+          "published": "Mon, 21 Sep 2026 05:44:18 +0000"
+        },
+        {
+          "title": "WORLD IN BRIEF:Ukraine launches largest drone attack on Moscow, 10 lions die in Tanzania, Mozambique seeks IMF deal and other stories",
+          "summary": "Bachelet withdraws from race to become UN secretary-general Michelle Bachelet, former president of Chile and former UN human rights chief,\nread more WORLD IN BRIEF:Ukraine launches largest drone attack on Moscow, 10 lions die in Tanzania, Mozambique seeks IMF deal and other stories",
+          "link": "https://businessday.ng/world/article/world-in-briefukraine-launches-largest-drone-attack-on-moscow-10-lions-die-in-tanzania-mozambique-seeks-imf-deal-and-other-stories/",
+          "published": "Mon, 21 Sep 2026 05:21:44 +0000"
+        },
+        {
+          "title": "Why wealth creation must be matched by long-term planning",
+          "summary": "As wealth creation accelerates among Nigeria’s entrepreneurs, professionals and business owners, the question is increasingly shifting from how to make\nread more Why wealth creation must be matched by long-term planning",
+          "link": "https://businessday.ng/interview/article/why-wealth-creation-must-be-matched-by-long-term-planning/",
+          "published": "Mon, 21 Sep 2026 05:00:29 +0000"
+        },
+        {
+          "title": "NATO looks south: Why Africa, the Mediterranean and Middle East are becoming the alliance’s next strategic front",
+          "summary": "For most of the period since Russia&#8217;s full-scale invasion of Ukraine, NATO&#8217;s strategic geography has appeared overwhelmingly eastern. Poland, the\nread more NATO looks south: Why Africa, the Mediterranean and Middle East are becoming the alliance’s next strategic front",
+          "link": "https://businessday.ng/insight-2/article/nato-looks-south-why-africa-the-mediterranean-and-middle-east-are-becoming-the-alliances-next-strategic-front/",
+          "published": "Mon, 21 Sep 2026 04:50:13 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "NiMet predicts thunderstorms, rain nationwide",
+          "summary": "The Nigerian Meteorological Agency has forecast thunderstorms and rainfall across Nigeria from Monday to Wednesday, warning of strong winds in some areas.\n\nRead More: https://punchng.com/nimet-predicts-thunderstorms-rain-nationwide/",
+          "link": "https://punchng.com/nimet-predicts-thunderstorms-rain-nationwide/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 06:56:02 +0000"
+        },
+        {
+          "title": "Morning recap: CNG: States race to cut transport fares, 8,000 communities, 4,500 schools at risk over flood, other top stories",
+          "summary": "Read your morning news recap on states&#8217; race to cut CNG transport fares, the FG&#8217;s flood warning for 8,000 communities, and other top stories in Nigeria.\n\nRead More: https://punchng.com/morning-recap-cng-states-race-to-cut-transport-fares-8000-communities-4500-schools-at-risk-over-flood-other-top-stories/",
+          "link": "https://punchng.com/morning-recap-cng-states-race-to-cut-transport-fares-8000-communities-4500-schools-at-risk-over-flood-other-top-stories/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 06:50:47 +0000"
+        },
+        {
+          "title": "Messi hits 930 career goals in Inter Miami’s 2-2 draw with San Diego",
+          "summary": "Lionel Messi scored his 930th career goal with a free-kick as Inter Miami were held to a 2-2 draw by San Diego FC in the Major League Soccer.\n\nRead More: https://punchng.com/messi-hits-930-career-goals-in-inter-miamis-2-2-draw-with-san-diego/",
+          "link": "https://punchng.com/messi-hits-930-career-goals-in-inter-miamis-2-2-draw-with-san-diego/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 06:32:01 +0000"
+        },
+        {
+          "title": "Kwankwaso opens reconciliation door to estranged Kano gov",
+          "summary": "Former Kano Governor Rabiu Kwankwaso says he is willing to reconcile with Governor Abba Yusuf following their political fallout, according to a BBC intervi\n\nRead More: https://punchng.com/kwankwaso-opens-reconciliation-door-to-estranged-kano-gov/",
+          "link": "https://punchng.com/kwankwaso-opens-reconciliation-door-to-estranged-kano-gov/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:51:23 +0000"
+        },
+        {
+          "title": "Awoniyi gets first Eagles call-up since 2024",
+          "summary": "Taiwo Awoniyi returns to the Super Eagles squad for the 2027 AFCON qualifiers, replacing injured Galatasaray striker Victor Osimhen.\n\nRead More: https://punchng.com/awoniyi-gets-first-eagles-call-up-since-2024/",
+          "link": "https://punchng.com/awoniyi-gets-first-eagles-call-up-since-2024/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:50:23 +0000"
+        },
+        {
+          "title": "Lagos mechanic lured with car repair job killed inside bush",
+          "summary": "A mechanic in Lagos, Samson, has been killed after he was allegedly lured with a car repair job to the Abijo area of Ibeju-Lekki and hacked to death.\n\nRead More: https://punchng.com/lagos-mechanic-lured-with-car-repair-job-killed-inside-bush/",
+          "link": "https://punchng.com/lagos-mechanic-lured-with-car-repair-job-killed-inside-bush/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:50:07 +0000"
+        },
+        {
+          "title": "Awujale: Fusengbuwa heads sue 12 over leadership dispute, demand N1bn",
+          "summary": "Leaders of the Fusengbuwa Ruling House have sued 12 members at an Ogun high court over their purported removal from office amid the Awujale selection.\n\nRead More: https://punchng.com/awujale-fusengbuwa-heads-sue-12-over-leadership-dispute-demand-n1bn/",
+          "link": "https://punchng.com/awujale-fusengbuwa-heads-sue-12-over-leadership-dispute-demand-n1bn/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:48:21 +0000"
+        },
+        {
+          "title": "Dangote acquires 4,000 machines for refinery expansion",
+          "summary": "Dangote Industries has acquired 4,000 new machines for its refinery expansion, bringing its total construction equipment fleet to 6,500.\n\nRead More: https://punchng.com/dangote-acquires-4000-machines-for-refinery-expansion/",
+          "link": "https://punchng.com/dangote-acquires-4000-machines-for-refinery-expansion/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:47:40 +0000"
+        },
+        {
+          "title": "Woman crushed to death after falling from motorcycle in Ogun",
+          "summary": "An unidentified woman has been crushed to death by a truck after falling from a motorcycle on the Agbara-Lusada Expressway in Ado-Odo/Ota LGA, Ogun State.\n\nRead More: https://punchng.com/woman-crushed-to-death-after-falling-from-motorcycle-in-ogun/",
+          "link": "https://punchng.com/woman-crushed-to-death-after-falling-from-motorcycle-in-ogun/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:40:06 +0000"
+        },
+        {
+          "title": "MDAs’ foreign trips gulp N50bn",
+          "summary": "Nigerian federal ministries, departments, and agencies spent at least N50.41bn on foreign trips, air tickets, and allowances between June 2023 and June 202\n\nRead More: https://punchng.com/mdas-foreign-trips-gulp-n50bn/",
+          "link": "https://punchng.com/mdas-foreign-trips-gulp-n50bn/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 21 Sep 2026 05:15:47 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Cardoso, Oyedele sign Monetary-Fiscal policy coordination MOU",
+          "summary": "By Emma Ujah, Abuja Bureau Chief The Central Bank of Nigeria (CBN) and the Federal Ministry of Finance have signed a Memorandum of Understanding (MOU) on Monetary-Fiscal Policy Coordination to strengthen their partnership in the pursuit of stronger macroeconomic management, lasting economic stability and sustainable prosperity for all Nigerians. The Governor of the CBN, Mr. [&#8230;]\nThe post Card",
+          "link": "https://www.vanguardngr.com/2026/09/cardoso-oyedele-sign-monetary-fiscal-policy-coordination-mou/",
+          "published": "Mon, 21 Sep 2026 06:10:26 +0000"
+        },
+        {
+          "title": "Stock market rebounds, investors gain N4.57trn despite Dangote IPO",
+          "summary": "By Peter Egwuatu The stock market recorded a strong rebound last week as investors gained over N4.57 trillion on the Nigerian Exchange Limited, NGX, despite the ongoing N2.2 trillion Initial Public Offering, IPO, of Dangote Petroleum Refinery. The market had, the previous week, lost N1.9 trillion following widespread profit-taking across major stocks. Analysts noted that [&#8230;]\nThe post Stock m",
+          "link": "https://www.vanguardngr.com/2026/09/stock-market-rebounds-investors-gain-n4-57trn-despite-dangote-ipo/",
+          "published": "Mon, 21 Sep 2026 06:07:16 +0000"
+        },
+        {
+          "title": "I can forgive, reconcile with Abba Yusuf; I still like him — Kwankwaso",
+          "summary": "“In 2007, when we were in the ministry of defence, he was my special assistant (SA), but they held meetings to bring me down\"\nThe post I can forgive, reconcile with Abba Yusuf; I still like him — Kwankwaso appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/i-can-forgive-reconcile-with-abba-yusuf-i-still-like-him-kwankwaso/",
+          "published": "Mon, 21 Sep 2026 05:55:09 +0000"
+        },
+        {
+          "title": "Cartoon: ‘Nigeria on auto-drive?’",
+          "summary": "Vanguard News\nThe post Cartoon: &#8216;Nigeria on auto-drive?&#8217; appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/cartoon-nigeria-on-auto-drive/",
+          "published": "Mon, 21 Sep 2026 05:36:14 +0000"
+        },
+        {
+          "title": "Dollar to Naira exchange rate today, September 21, 2026",
+          "summary": "The Nigerian naira opened the new week at different rates against the United States dollar across the official foreign exchange market and the parallel market.\nThe post Dollar to Naira exchange rate today, September 21, 2026 appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/dollar-to-naira-exchange-rate-today-september-21-2026/",
+          "published": "Mon, 21 Sep 2026 05:35:35 +0000"
+        },
+        {
+          "title": "FG pays N1.1bn exit bonus to retirees",
+          "summary": "Retirees are required to provide the necessary documents, including their clearance letter and recent payslips, to their Pension Fund Administrators\nThe post FG pays N1.1bn exit bonus to retirees  appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/fg-pays-n1-1bn-exit-bonus-to-retirees/",
+          "published": "Mon, 21 Sep 2026 05:28:52 +0000"
+        },
+        {
+          "title": "Fresh Plateau attacks: Pastor, 8 passengers killed",
+          "summary": "At least nine persons have been killed in fresh attacks in Barkin Ladi, Riyom and neighbouring communities in Plateau State between Saturday night and Sunday morning, triggering tension and evacuation of women and children.\nThe post Fresh Plateau attacks: Pastor, 8 passengers killed appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/fresh-plateau-attacks-pastor-8-passengers-killed/",
+          "published": "Mon, 21 Sep 2026 05:00:48 +0000"
+        },
+        {
+          "title": "Illegal miners’ deaths: NSCDC parades detained commandant, 23 others",
+          "summary": "The Nigeria Security and Civil Defence Corps (NSCDC) has arrested and detained 24 personnel in connection with the deaths of 37 suspected illegal miners in Niger State, parading the suspended Niger State Commandant, Commandant Subaru Siyaka Aniviye, and 23 other officers at the Corps Headquarters in Abuja. \nThe post Illegal miners&#8217; deaths: NSCDC parades detained commandant, 23 others appeare",
+          "link": "https://www.vanguardngr.com/2026/09/illegal-miners-deaths-nscdc-parades-detained-commandant-23-others/",
+          "published": "Mon, 21 Sep 2026 04:51:42 +0000"
+        },
+        {
+          "title": "Dangote Refinery IPO is not for you, by Dele Sobowale",
+          "summary": "Alhaji Aliko Dangote said he wants millions of Nigerians to share in the wealth which will be generated by the Dangote Refinery by buying at least ten shares priced at N525 each. That amounts to N5250 for each minimum investor. The impression was given that wealth sharing is guaranteed once the investment is made. Even [&#8230;]\nThe post Dangote Refinery IPO is not for you, by Dele Sobowale appear",
+          "link": "https://www.vanguardngr.com/2026/09/dangote-refinery-ipo-is-not-for-you-by-dele-sobowale/",
+          "published": "Mon, 21 Sep 2026 04:44:09 +0000"
+        },
+        {
+          "title": "Economic crunch: Many employers now prefer commission-based salaries",
+          "summary": "Trapped under the weight of soaring operational costs, high inflation and dwindling consumer purchasing power, Economy&#038;Lifestyle has discovered that businesses across major commercial hubs are abandoning traditional fixed salary structures.\nThe post Economic crunch: Many employers now prefer commission-based salaries  appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/09/economic-crunch-many-employers-now-prefer-commission-based-salaries/",
+          "published": "Mon, 21 Sep 2026 04:43:51 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "2027: Group rejects Wike’s reason for promoting Rainbow Coalition",
+          "summary": "“Just as he did with the PDP in the past, using lackeys from Kano and Edo states, the same script is being played all over again; this time in the APC.”\nThe post 2027: Group rejects Wike&#8217;s reason for promoting Rainbow Coalition appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/911153-2027-group-rejects-wikes-reason-for-promoting-rainbow-coalition.html",
+          "published": "Mon, 21 Sep 2026 04:30:35 +0000"
+        },
+        {
+          "title": "2027: Makinde, running mate to hold nationwide town hall meetings",
+          "summary": "The Makinde-Daura Campaign Council Organisation says the meetings will be strictly issue-based and citizen-driven, focusing mainly on national stability and the well-being of all Nigerians\nThe post 2027: Makinde, running mate to hold nationwide town hall meetings appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/911152-2027-makinde-running-mate-to-hold-nationwide-town-hall-meetings.html",
+          "published": "Mon, 21 Sep 2026 04:25:23 +0000"
+        },
+        {
+          "title": "The church and the prophetic destiny of Nigeria (1), By Brendy Mba",
+          "summary": "The process for the 2027 election has officially commenced with the announcement of the start of the electioneering campaign for various offices. Unofficially, that process had been underway since the end of the 2023 election. We have witnessed political alignments and realignments at an unprecedented level. Instead of the grand opportunity given to them by [&#8230;]\nThe post The church and the pr",
+          "link": "https://www.premiumtimesng.com/opinion/911146-the-church-and-the-prophetic-destiny-of-nigeria-1-by-brendy-mba.html",
+          "published": "Mon, 21 Sep 2026 03:46:31 +0000"
+        },
+        {
+          "title": "Tinubu hails by-election winners in four states",
+          "summary": "Mr Tinubu urged INEC to build on the progress recorded in the by-elections and address identified shortcomings ahead of future polls.\nThe post Tinubu hails by-election winners in four states appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/911139-tinubu-hails-by-election-winners-in-four-states.html",
+          "published": "Sun, 20 Sep 2026 23:09:46 +0000"
+        },
+        {
+          "title": "Presidential Campaign Council: We don’t need your validation, OK Movement replies NDC",
+          "summary": "\"The OK Movement will not compromise its standards. The OK Movement will not surrender its independence. The OK Movement will not be intimidated.\"\nThe post Presidential Campaign Council: We don’t need your validation, OK Movement replies NDC appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/911137-presidential-campaign-council-we-dont-need-your-validation-ok-movement-replies-ndc.html",
+          "published": "Sun, 20 Sep 2026 22:58:40 +0000"
+        },
+        {
+          "title": "LECON Finance Receives ‘B/Stable/B’ Ratings from S&P Global",
+          "summary": "The Stable Outlook reflects S&#38;P’s expectation that LECON Finance will remain a core subsidiary of BOI and receive support when needed.\nThe post LECON Finance Receives ‘B/Stable/B’ Ratings from S&amp;P Global appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/business/business-news/911134-lecon-finance-receives-b-stable-b-ratings-from-sp-global.html",
+          "published": "Sun, 20 Sep 2026 22:51:16 +0000"
+        },
+        {
+          "title": "Alawuba seeks to deepen Nigeria-Brazil trade, investment ties",
+          "summary": "The Group Managing Director highlighted numerous collaboration opportunities in agriculture, manufacturing, energy, technology and the creative industries.\nThe post Alawuba seeks to deepen Nigeria-Brazil trade, investment ties appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/911129-alawuba-seeks-to-deepen-nigeria-brazil-trade-investment-ties.html",
+          "published": "Sun, 20 Sep 2026 21:33:34 +0000"
+        },
+        {
+          "title": "My wife miraculously woke up after six months in coma – Akpabio",
+          "summary": "The Senate president said his wife underwent a failed surgery and was declared 98 per cent dead while in a coma.\nThe post My wife miraculously woke up after six months in coma – Akpabio appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/911126-my-wife-miraculously-woke-up-after-six-months-in-coma-akpabio.html",
+          "published": "Sun, 20 Sep 2026 21:27:12 +0000"
+        },
+        {
+          "title": "EXCLUSIVE: EFCC sets up team to investigate Atiku, Malami, others named in ICC ruling on Mambilla deal",
+          "summary": "PREMIUM TIMES’ review of the tribunal’s award showed that many Nigerian politicians and individuals who held public offices were named as associates or officials who had dealings with Mr Adesanya.\nThe post EXCLUSIVE: EFCC sets up team to investigate Atiku, Malami, others named in ICC ruling on Mambilla deal appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/911121-exclusive-efcc-sets-up-team-to-investigate-atiku-malami-others-named-in-icc-ruling-on-mambilla-deal.html",
+          "published": "Sun, 20 Sep 2026 21:08:47 +0000"
+        },
+        {
+          "title": "Triple eviction rocks BBNaija Season 11 as Bells, Yusuf, Chisom exit",
+          "summary": "The trio were evicted during Sunday’s live show on Day 56 of the reality television competition, hosted by Ebuka Obi-Uchendu\nThe post Triple eviction rocks BBNaija Season 11 as Bells, Yusuf, Chisom exit appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/entertainment/naija-fashion/911115-triple-eviction-rocks-bbnaija-season-11-as-bells-yusuf-chisom-exit.html",
+          "published": "Sun, 20 Sep 2026 20:51:40 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": 200,
+    "snippet": "Startups in Africa | StartupList AfricaLoading market dataSkip to contentLoading market dataStartups in AfricaThe complete index of African technology companies.$44.1B total funding raised.3,240 Companies🦄 3 Unicorns+17 This WeekEcosystem BriefLive DataStartup market signals in one viewTrack the latest movement across Financial Services and adjacent sectors, then drill into profiles and deal activity with current ecosystem context.Explore StartupsOpen Market Pulse Total Funding$44.1B Startups Tracked3,240 New This Week+17Startup SnapshotFull Report Total Funding$44.1B7.3%vs last QStartups Tracked3,240Added this week: +17Unicorns: 3Funding Activity1997.3%vs last QTop SectorsFinancial Services19.7%FinTech17.2%SaaS7.8%FiltersIndustry20Financial Services638FinTech558SaaS253Health Care250E-Commerce227Show 15 moreStage15Seed765Pre-seed314Venture259Grant239Series A172Show 10 moreLocation20🇳🇬Nigeria763🇪🇬Egypt715🇿🇦South Africa528🇰🇪Kenya444🇬🇭Ghana133Show 15 morePro FeatureUnlock All FiltersDeal Size & RevenueInvestor TypeAll IndustriesAll CountriesUpgrade to ProSubmit startupFiltersSort by:momentumCompanySectorStageValuationRaisedEmployeesMomentumAspen PharmacareDurban, South AfricaMedical DevicePost-IPO Debt$***,***Pro$***,***Pro5001TabbyCairo, EgyptFinancial ServicesSeries E$***,***Pro$***,***Pro51ZiplineKigali, RwandaLogisticsSeries H$***,***Pro$***,***Pro201ZEZepzMogadishu, SomaliaFinancial ServicesSeries F$***,***Pro$***,***Pro1001Sun KingNairobi, KenyaEnergyVenture$***,***Pro$***,***Pro1001MNT-HalanGiza, EgyptFinancial ServicesGrowth Equity$***,***Pro$***,***Pro10001d.lightNairobi, KenyaEnergyReceivables Financing$***,***Pro$***,***Pro201JumiaLagos, NigeriaConsumer GoodsVenture$***,***Pro$***,***Pro1001Steinhoff InternationalGauteng, South AfricaConsumer GoodsPost-IPO Equity$***,***Pro$***,***Pro10001Sign in to view moreJoin the largest community of African tech investors and founders.Create Free AccountAlready have an account? Log inShowing 1-20 of 3,240 startupsPrev123…162NextPage 2 onward stays locked until the account tier supports deeper access.How to use this startup directoryUse this page when you need a clean view of startup activity by country, sector, and stage, then move into profile-level research once you have a tight set of targets.01Filter by industry, stage, and geography to reduce noise.02Use market aggregates for quick directional context.03Pair shortlisted startups with the investor directory for outreach planning.Frequently asked questionsHow do I narrow results quickly?Start with industry and country, then add stage and keyword filters to get from broad discovery to a focused shortlist in a few clicks.Can this page support investment or partnership scouting?Yes. Teams use this directory to spot relevant companies first, then open profile-level details for funding context and deeper evaluation.What is the best next step after building a shortlist?Open company profiles for deeper diligence, then cross-reference with investor and sector pages to validate market fit and momentum.",
+    "nigeria_keyword_count": 0,
+    "note": "Filter Nigeria + sector on site; Crunchbase optional legacy fallback."
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "Mycel",
+        "summary": "Bring one past deliverable. Mycel drafts every future one.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/mycel",
+        "published": "2026-09-04T19:51:02-07:00"
+      },
+      {
+        "title": "Minicart",
+        "summary": "Launch your store. Let AI run the busywork.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/minicart",
+        "published": "2026-09-14T10:22:27-07:00"
+      },
+      {
+        "title": "Morsa Signals",
+        "summary": "GTM and AI visibility workflows for developer tools\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/morsa-signals",
+        "published": "2026-09-17T08:07:28-07:00"
+      },
+      {
+        "title": "Scrapboard Cloud 4",
+        "summary": "Digital family refrigerator door, now pocket-sized n synced\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/scrapboard-cloud-4",
+        "published": "2026-09-14T14:14:31-07:00"
+      },
+      {
+        "title": "ManyPI",
+        "summary": "10x your revenue by finding your ideal customers\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/manypi",
+        "published": "2026-09-10T23:18:15-07:00"
+      },
+      {
+        "title": "Launchie 1.6.1",
+        "summary": "Launchpad Replacement for MacOS 27 Golden Gate\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/launchie",
+        "published": "2026-09-18T23:59:49-07:00"
+      },
+      {
+        "title": "Embedful",
+        "summary": "Launch customer dashboards in minutes\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/embedful",
+        "published": "2026-09-05T20:28:24-07:00"
+      },
+      {
+        "title": "The 101 Plays Itself",
+        "summary": "Five lanes of LA highway turned into an instrument\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/the-101-plays-itself",
+        "published": "2026-09-19T22:59:42-07:00"
+      },
+      {
+        "title": "Harbor",
+        "summary": "The Evernote alternative that puts its price in writing\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/harbor-2",
+        "published": "2026-09-13T20:32:00-07:00"
+      },
+      {
+        "title": "Termphin",
+        "summary": "SSH client with sessions that never drop.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/termphin",
+        "published": "2026-09-04T13:50:17-07:00"
+      },
+      {
+        "title": "SmartPause",
+        "summary": "The play/pause key, finally aimed at what's playing\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/smartpause-2",
+        "published": "2026-09-12T10:57:22-07:00"
+      },
+      {
+        "title": "YABAI",
+        "summary": "Real Japanese slang, one giant word at a time\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/yabai",
+        "published": "2026-09-11T09:42:09-07:00"
+      },
+      {
+        "title": "Epismo OS",
+        "summary": "Keep your work when you switch AI tools\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/epismo",
+        "published": "2026-09-19T13:05:33-07:00"
+      },
+      {
+        "title": "Answers by Context.dev",
+        "summary": "Give it a research task + the JSON shape you want back.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/context-dev",
+        "published": "2026-09-19T01:54:55-07:00"
+      },
+      {
+        "title": "BiBimba",
+        "summary": "Clipboard history that can read your screenshots\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/bibimba",
+        "published": "2026-09-11T19:47:52-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related TopicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts.Just under a tenth of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is sh"
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Nigeria’s private sector credit rises for third straight month to N84.55 trillion in August",
+        "url": "https://nairametrics.com/2026/09/21/nigerias-private-sector-credit-rises-for-third-straight-month-to-n84-55-trillion-in-august/",
+        "published": "Mon, 21 Sep 2026 05:57:12 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Brent crude falls to $101.71, WTI below $100 as US-Iran diplomacy hopes grow",
+        "url": "https://nairametrics.com/2026/09/21/brent-crude-falls-to-101-71-wti-below-100-as-us-iran-diplomacy-hopes-grow/",
+        "published": "Mon, 21 Sep 2026 05:41:49 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NLC opposes King’s College concession, warns it could put Unity Colleges at risk",
+        "url": "https://nairametrics.com/2026/09/20/nlc-opposes-kings-college-concession-warns-it-could-put-unity-colleges-at-risk/",
+        "published": "Sun, 20 Sep 2026 22:39:48 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Tax Ombud warns against revenue-first approach to tax reforms",
+        "url": "https://nairametrics.com/2026/09/20/tax-ombud-warns-against-revenue-first-approach-to-tax-reforms/",
+        "published": "Sun, 20 Sep 2026 17:34:39 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "CPPE says Nigeria retail trade faces growing foreign competition",
+        "url": "https://nairametrics.com/2026/09/20/cppe-says-nigeria-retail-trade-faces-growing-foreign-competition/",
+        "published": "Sun, 20 Sep 2026 17:13:57 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Nigeria expanded broadband but missed its 70% penetration target",
+        "url": "https://businessday.ng/backpage/article/nigeria-expanded-broadband-but-missed-its-70-penetration-target/",
+        "published": "Mon, 21 Sep 2026 06:00:30 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "PTAs slam Education Ministry over N20m Unity College admission fee claims",
+        "url": "https://businessday.ng/education/article/ptas-slam-education-ministry-over-n20m-unity-college-admission-fee-claims/",
+        "published": "Mon, 21 Sep 2026 05:44:18 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "WORLD IN BRIEF:Ukraine launches largest drone attack on Moscow, 10 lions die in Tanzania, Mozambique seeks IMF deal and other stories",
+        "url": "https://businessday.ng/world/article/world-in-briefukraine-launches-largest-drone-attack-on-moscow-10-lions-die-in-tanzania-mozambique-seeks-imf-deal-and-other-stories/",
+        "published": "Mon, 21 Sep 2026 05:21:44 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Why wealth creation must be matched by long-term planning",
+        "url": "https://businessday.ng/interview/article/why-wealth-creation-must-be-matched-by-long-term-planning/",
+        "published": "Mon, 21 Sep 2026 05:00:29 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "NATO looks south: Why Africa, the Mediterranean and Middle East are becoming the alliance’s next strategic front",
+        "url": "https://businessday.ng/insight-2/article/nato-looks-south-why-africa-the-mediterranean-and-middle-east-are-becoming-the-alliances-next-strategic-front/",
+        "published": "Mon, 21 Sep 2026 04:50:13 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "NiMet predicts thunderstorms, rain nationwide",
+        "url": "https://punchng.com/nimet-predicts-thunderstorms-rain-nationwide/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 21 Sep 2026 06:56:02 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Morning recap: CNG: States race to cut transport fares, 8,000 communities, 4,500 schools at risk over flood, other top stories",
+        "url": "https://punchng.com/morning-recap-cng-states-race-to-cut-transport-fares-8000-communities-4500-schools-at-risk-over-flood-other-top-stories/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 21 Sep 2026 06:50:47 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Messi hits 930 career goals in Inter Miami’s 2-2 draw with San Diego",
+        "url": "https://punchng.com/messi-hits-930-career-goals-in-inter-miamis-2-2-draw-with-san-diego/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 21 Sep 2026 06:32:01 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Kwankwaso opens reconciliation door to estranged Kano gov",
+        "url": "https://punchng.com/kwankwaso-opens-reconciliation-door-to-estranged-kano-gov/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 21 Sep 2026 05:51:23 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Awoniyi gets first Eagles call-up since 2024",
+        "url": "https://punchng.com/awoniyi-gets-first-eagles-call-up-since-2024/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 21 Sep 2026 05:50:23 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Cardoso, Oyedele sign Monetary-Fiscal policy coordination MOU",
+        "url": "https://www.vanguardngr.com/2026/09/cardoso-oyedele-sign-monetary-fiscal-policy-coordination-mou/",
+        "published": "Mon, 21 Sep 2026 06:10:26 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Stock market rebounds, investors gain N4.57trn despite Dangote IPO",
+        "url": "https://www.vanguardngr.com/2026/09/stock-market-rebounds-investors-gain-n4-57trn-despite-dangote-ipo/",
+        "published": "Mon, 21 Sep 2026 06:07:16 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "I can forgive, reconcile with Abba Yusuf; I still like him — Kwankwaso",
+        "url": "https://www.vanguardngr.com/2026/09/i-can-forgive-reconcile-with-abba-yusuf-i-still-like-him-kwankwaso/",
+        "published": "Mon, 21 Sep 2026 05:55:09 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Cartoon: ‘Nigeria on auto-drive?’",
+        "url": "https://www.vanguardngr.com/2026/09/cartoon-nigeria-on-auto-drive/",
+        "published": "Mon, 21 Sep 2026 05:36:14 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Dollar to Naira exchange rate today, September 21, 2026",
+        "url": "https://www.vanguardngr.com/2026/09/dollar-to-naira-exchange-rate-today-september-21-2026/",
+        "published": "Mon, 21 Sep 2026 05:35:35 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "==========\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmpxv_dd37s/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
