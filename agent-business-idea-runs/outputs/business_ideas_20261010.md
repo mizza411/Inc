@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-10 ~06:00–07:30 UTC — **Pass 1 Discover only**  
+**Generated:** 2026-10-10 ~06:00–07:30 UTC — **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-10 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261010.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261010_060825.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; Punch politics-heavy + Vanguard opinion-heavy early Saturday — lean Nairametrics + Punch business + THISDAY/Channels web cites for commercial Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-09 (esp. NNPC Transport Discount Access Desk, Project BRIDGE Fibre Ready Pack, OPay FrozenButUnreversed Clock, NELFUND HoldRefund Student Desk, Moniepoint BankLetter Escalation Clock, LAGIS Title Prep Desk, AutoNARP Licence Stake Pack, Moniepoint×OPay DualRail Refund Clock, SoftTest RiskTier Prep Desk, Moniepoint CourtOrder Refund Clock, PalmPay RecoveredNotCredited Clock, Flutterwave WrongDigit Recover Clock, Flutterwave PriorOrder Vacate Trace, KudaDecline Hold Desk, KudaCorp NoOrder Lien Pack, CNGFare StateGap Desk, DigiPostcode Capture Desk); older `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -73,10 +73,10 @@
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Informational only — not CBN, NDIC, or bank official; not legal advice; NDPA for director ID fields.
 - **Competitors / alternatives:**
-  - **Big Four / bank internal audit** — thorough; slow and expensive for Mid boards. Why Nigeria buyer still chooses this: fast seat-risk map.
-  - **CBN circular PDFs DIY** — free; dense. Why still us: filled exposure checklist.
-  - **ShareCap Monthly Desk (prior)** — share-capital filings. Why still us: **insider-credit seat exit** job.
-  - **Unknown InsiderCredit SaaS** — not found. Why still us: Naira-priced board desk.
+  - **Big Four / bank internal audit** — thorough; slow and expensive for Mid boards. Why a Nigeria buyer might still choose this idea: fast seat-risk map.
+  - **CBN circular PDFs DIY** — free; dense. Why a Nigeria buyer might still choose this idea: filled exposure checklist.
+  - **ShareCap Monthly Desk (prior)** — share-capital filings. Why a Nigeria buyer might still choose this idea: **insider-credit seat exit** job.
+  - **Board Excel / WhatsApp exposure lists** — common DIY. Why a Nigeria buyer might still choose this idea: a Naira checklist before a CBN challenge, instead of a product that was not found.
 - **GUEMF:** Mode A **5/5/5/5/4 = 24** (Growing post-recap governance enforcement; Urgent director exit risk; Expensive seat/reputation loss; Mandatory BOFIA/CBN limits; Frequent board credit reviews). Evidence: Nairametrics — https://nairametrics.com/2026/10/09/cbn-insider-credit-crackdown-forces-some-bank-owners-directors-out-of-banking-system/ ; Business Times — https://businesstimes.com.ng/2026/10/cbn-steps-up-oversight-of-loans-to-bank-directors-major-shareholders/ ; Nigeria Communications Week — https://www.nigeriacommunicationsweek.com.ng/2026/10/08/cbn-asks-owners-others-to-leave-banks-over-insider-credit
 - **Commercial viability:** High — seat/exit risk + BOFIA limits.
 - **Dedup:** High vs ShareCap Monthly / UBO Payments Disclose / IPOEvidence Filter.
@@ -90,10 +90,10 @@
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not FAAN, NCAA, or airline official; NDPA for passenger details.
 - **Competitors / alternatives:**
-  - **Airline apps / call centres** — official; fragmented across carriers. Why Nigeria buyer still chooses this: multi-airline + alternate-airport checklist.
-  - **WhatsApp family groups** — rumour-heavy. Why still us: dated closure calendar.
-  - **FlightDelay Care Clock (prior)** — delay care after disruption. Why still us: **planned 25-day runway closure** ops.
-  - **Travel agents** — human; uneven quality. Why still us: self-serve evidence pack.
+  - **Airline apps / call centres** — official; fragmented across carriers. Why a Nigeria buyer might still choose this idea: multi-airline + alternate-airport checklist.
+  - **WhatsApp family groups** — rumour-heavy. Why a Nigeria buyer might still choose this idea: dated closure calendar.
+  - **FlightDelay Care Clock (prior)** — delay care after disruption. Why a Nigeria buyer might still choose this idea: **planned 25-day runway closure** ops.
+  - **Travel agents** — human; uneven quality. Why a Nigeria buyer might still choose this idea: self-serve evidence pack.
 - **GUEMF:** Mode A **5/5/4/4/5 = 23** (Growing Christmas SE traffic; Urgent Oct 20 start; Expensive missed flights/cargo; Near-mandatory for Owerri itineraries; Frequent multi-passenger family trips). Evidence: Punch — https://punchng.com/fg-shuts-owerri-airport-over-runway-repair/ ; Vanguard — https://www.vanguardngr.com/2026/10/owerri-airport-to-close-for-25-days-for-runway-rehabilitation-ahead-of-christmas-fg-2/ ; Premium Times — https://www.premiumtimesng.com/business/business-news/915677-faan-proposes-25-day-closure-of-owerri-airport-runway-for-repairs.html
 - **Commercial viability:** High — fixed Oct 20 start + Christmas surge.
 - **Dedup:** High vs FlightDelay Care Clock / FAANCab Oct1 Upgrade Desk.
@@ -102,15 +102,16 @@
 ### 3. PalmPay FourteenDay Lien Clock — 14-day Instant-EFT freeze window tracker (S1)
 
 - **Formula:** **Successful business:** PalmPay (mass Nigeria wallet / MFB rail). **Recurring complaint:** after a wrong or disputed transfer, PalmPay’s temporary restriction under CBN Instant EFT guidance often lasts only about **14 days** unless a court order arrives in time — once the window lapses, recovery can become a **lien on future credits** instead of an immediate refund (Newspointer/ATIMS, 2026). **Variation:** Fourteen-day freeze→lien clock with court-order deadline calendar — not PalmPay RecoveredNotCredited Clock (funds recovered but not credited) and not OPay FrozenButUnreversed Clock.
+- **Complaint citations:** Newspointer (22 Jul 2026), https://newspointerng.com/2026/07/22/calls-for-cbn-sanctions-grow-as-palmpay-faces-allegations-of-ignoring-court-backed-refund-process/ (PalmPay cites a 14-day Instant EFT restriction, then a lien after a late court order).
 - **Solution:** Incident wizard (mis-send / fraud flag) → 14-day countdown → court-order document checklist → freeze vs lien status log → export packet for support / CBN CPD notes.
 - **Target:** Individuals and SMEs sending to or receiving from PalmPay wallets who need to beat the temporary-restriction window.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN Instant EFT / consumer-protection path notes; NDPA; never store full card PAN; not legal practice.
 - **Competitors / alternatives:**
-  - **PalmPay in-app support** — official; opaque on day-count. Why Nigeria buyer still chooses this: visible 14-day clock.
-  - **CBN consumer portal** — escalation rail; hard without a pack. Why still us: pack before escalate.
-  - **Lawyer only** — expensive for mid-size mis-sends. Why still us: structured evidence + deadline first.
-  - **PalmPay RecoveredNotCredited Clock (Oct 2)** — recovered funds not credited. Why still us: **14-day window then lien** job.
+  - **PalmPay in-app support** — official; opaque on day-count. Why a Nigeria buyer might still choose this idea: visible 14-day clock.
+  - **CBN consumer portal** — escalation rail; hard without a pack. Why a Nigeria buyer might still choose this idea: pack before escalate.
+  - **Lawyer only** — expensive for mid-size mis-sends. Why a Nigeria buyer might still choose this idea: structured evidence + deadline first.
+  - **PalmPay RecoveredNotCredited Clock (Oct 2)** — recovered funds not credited. Why a Nigeria buyer might still choose this idea: **14-day window then lien** job.
 - **GUEMF:** Mode B **5/5/5/4/5 = 24**. Success signal: PalmPay mass wallet footprint in dispute coverage. Citations: Newspointer — https://newspointerng.com/2026/07/22/calls-for-cbn-sanctions-grow-as-palmpay-faces-allegations-of-ignoring-court-backed-refund-process/ (PalmPay cites 14-day Instant EFT restriction then lien after late court order).
 - **Commercial viability:** High — 14-day freeze clock + cash risk.
 - **Dedup:** High vs RecoveredNotCredited / OPay FrozenButUnreversed / Flutterwave WrongDigit Recover (Sep 21) / PriorOrder Vacate.
@@ -124,10 +125,10 @@
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NCDMB, NUPRC, or NipeX official; NDPA for company docs.
 - **Competitors / alternatives:**
-  - **NCDMB / NipeX portals** — official; weak coaching UX. Why Nigeria buyer still chooses this: filled evidence pack.
-  - **Big energy consultancies** — expensive. Why still us: Naira micro-desk.
-  - **ANAMGIS CoO Recert Desk (prior)** — CoO recert path. Why still us: **asset/finance access + 2027 capacity** pack.
-  - **DIY Google Drive** — common; misses audit windows. Why still us: checklist + handoff PDF.
+  - **NCDMB / NipeX portals** — official; weak coaching UX. Why a Nigeria buyer might still choose this idea: filled evidence pack.
+  - **Big energy consultancies** — expensive. Why a Nigeria buyer might still choose this idea: Naira micro-desk.
+  - **ANAMGIS CoO Recert Desk (prior)** — CoO recert path. Why a Nigeria buyer might still choose this idea: **asset/finance access + 2027 capacity** pack.
+  - **DIY Google Drive** — common; misses audit windows. Why a Nigeria buyer might still choose this idea: checklist + handoff PDF.
 - **GUEMF:** Mode B **5/4/4/4/4 = 21**. Evidence: Premium Times headline via fetch; Valuechain — https://www.thevaluechainng.com/ncdmb-pushes-for-greater-access-to-assets-to-boost-indigenous-participation-in-energy-sector/ ; SaviNews — https://savinewsafrica.ng/2026/10/09/ncdmb-targets-70-local-content-by-2027-pushes-for-greater-asset-access/
 - **Commercial viability:** Medium-high — 2027 local-content clock.
 - **Dedup:** High vs ANAMGIS / ETLS Origin Coach / PortAnchor Cost Desk.
@@ -136,15 +137,16 @@
 ### 5. Kuda Downtime Safe Promise Clock — post-outage missing-funds tracker (S1)
 
 - **Formula:** **Successful business:** Kuda (mass Nigeria digital bank / neobank). **Recurring complaint:** after a major downtime where Kuda publicly assured customers money was safe, some customers still report missing balances unresolved for years (FIJ). **Variation:** Downtime-assurance vs missing-funds evidence clock — not KudaDecline Hold Desk (decline/hold UX) or KudaCorp NoOrder Lien Pack (corporate lien without order).
+- **Complaint citations:** FIJ, https://fij.ng/article/kuda-bank-told-customers-their-money-was-safe-after-downtime-3-years-on-abuja-beauticians-n250000-hasnt-been-recovered/ (after a downtime assurance that money was safe, an Abuja customer’s funds were still missing years later).
 - **Solution:** Incident type (downtime date → missing amount) → public assurance archive link → ticket timeline → export packet for support / CBN CPD notes.
 - **Target:** Kuda retail customers and micro-merchants with unresolved post-outage balance disputes.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice.
 - **Competitors / alternatives:**
-  - **Kuda in-app support / X replies** — official; long stalls. Why Nigeria buyer still chooses this: assurance-vs-loss clock.
-  - **CBN consumer portal** — escalation rail; hard without a pack. Why still us: pack before escalate.
-  - **KudaDecline Hold Desk (prior)** — decline/hold friction. Why still us: **downtime safe-promise missing funds** job.
-  - **Lawyer only** — expensive for mid amounts. Why still us: structured evidence first.
+  - **Kuda in-app support / X replies** — official; long stalls. Why a Nigeria buyer might still choose this idea: assurance-vs-loss clock.
+  - **CBN consumer portal** — escalation rail; hard without a pack. Why a Nigeria buyer might still choose this idea: pack before escalate.
+  - **KudaDecline Hold Desk (prior)** — decline/hold friction. Why a Nigeria buyer might still choose this idea: **downtime safe-promise missing funds** job.
+  - **Lawyer only** — expensive for mid amounts. Why a Nigeria buyer might still choose this idea: structured evidence first.
 - **GUEMF:** Mode B **4/5/5/3/4 = 21**. Success signal: Kuda mass retail footprint (FIJ). Citations: FIJ — https://fij.ng/article/kuda-bank-told-customers-their-money-was-safe-after-downtime-3-years-on-abuja-beauticians-n250000-hasnt-been-recovered/
 - **Commercial viability:** High — multi-year lost-funds WTP.
 - **Dedup:** High vs KudaDecline Hold / KudaCorp NoOrder Lien / OPayGlitchLien.
@@ -158,10 +160,10 @@
 - **MVP cost:** $8k–$16k.
 - **Regulatory:** Informational attribution to public minister remarks; not NNPC, NMDPRA, or Dangote official guidance.
 - **Competitors / alternatives:**
-  - **NNPC / ministry statements DIY** — free; sparse ops UX. Why Nigeria buyer still chooses this: weekly scenario board.
-  - **Energy consultancies** — expensive. Why still us: Naira SME brief.
-  - **NNPC Transport Discount Access Desk (Oct 9)** — PMS transporter pump access. Why still us: **free-crude quantity reality** for downstream planning.
-  - **WhatsApp rumour chains** — common. Why still us: sourced brief.
+  - **NNPC / ministry statements DIY** — free; sparse ops UX. Why a Nigeria buyer might still choose this idea: weekly scenario board.
+  - **Energy consultancies** — expensive. Why a Nigeria buyer might still choose this idea: Naira SME brief.
+  - **NNPC Transport Discount Access Desk (Oct 9)** — PMS transporter pump access. Why a Nigeria buyer might still choose this idea: **free-crude quantity reality** for downstream planning.
+  - **WhatsApp rumour chains** — common. Why a Nigeria buyer might still choose this idea: sourced brief.
 - **GUEMF:** Mode B **5/4/5/3/3 = 20**. Evidence: Channels — https://www.channelstv.com/2026/10/09/nigeria-doesnt-have-enough-crude-for-dangote-refinery-and-local-production-says-oyedele/ ; TheCable — https://www.thecable.ng/oyedele-nigeria-cant-meet-dangote-refinerys-700000-bpd-crude-needs/ ; Punch — https://punchng.com/subsidy-removal-exposed-nigerias-crude-shortfall-oyedele/
 - **Commercial viability:** Medium-high — downstream planning pain.
 - **Dedup:** High vs NNPC Transport Discount / DepotOldStock / NMDPRA Compete Comment.
@@ -175,11 +177,11 @@
 - **MVP cost:** $12k–$26k.
 - **Regulatory:** Educational only — not licensed audit, tax, or legal advice; NDPA for uploaded docs.
 - **Competitors / alternatives:**
-  - **Regunow global** — PH trend; FX/pricing friction. Why Nigeria buyer still chooses this: Naira + local rule packs.
-  - **Big Four** — expensive for micros. Why still us: lightweight gap list.
-  - **SoftTest RiskTier Prep Desk (prior)** — NITDA SoftTest. Why still us: **general regulatory research→audit checklist** product.
-  - **DIY Excel of circulars** — common. Why still us: actionable audit template.
-- **GUEMF:** Mode B **5/4/4/4/3 = 20**.
+  - **Regunow global** — PH trend; FX/pricing friction. Why a Nigeria buyer might still choose this idea: Naira + local rule packs.
+  - **Big Four** — expensive for micros. Why a Nigeria buyer might still choose this idea: lightweight gap list.
+  - **SoftTest RiskTier Prep Desk (prior)** — NITDA SoftTest. Why a Nigeria buyer might still choose this idea: **general regulatory research→audit checklist** product.
+  - **DIY Excel of circulars** — common. Why a Nigeria buyer might still choose this idea: actionable audit template.
+- **GUEMF:** Mode B **5/4/4/4/3 = 20**. Evidence URL not in Pass 1 (Product Hunt RSS title Regunow only).
 - **Commercial viability:** Medium-high.
 - **Dedup:** High vs SoftTest / VirtAsset Tax Trail / DigiTaxCost Ladder.
 - **Founder fit:** Strong.
@@ -192,10 +194,10 @@
 - **MVP cost:** $8k–$16k.
 - **Regulatory:** Educational financial hygiene only — not NGX, SEC, or investment advice.
 - **Competitors / alternatives:**
-  - **Bloomberg/S&P terminals** — expensive FX. Why Nigeria buyer still chooses this: Naira Mid-SME pack.
-  - **Big IR firms** — heavy retainers. Why still us: one-pager stress pack.
-  - **FrontierIR Kit / NGX Crash Journal (priors)** — frontier upgrade / crash journal. Why still us: **profit-vs-cash short-term obligation** job.
-  - **DIY Excel** — common; no board template. Why still us: handoff one-pager.
+  - **Bloomberg/S&P terminals** — expensive FX. Why a Nigeria buyer might still choose this idea: Naira Mid-SME pack.
+  - **Big IR firms** — heavy retainers. Why a Nigeria buyer might still choose this idea: one-pager stress pack.
+  - **FrontierIR Kit / NGX Crash Journal (priors)** — frontier upgrade / crash journal. Why a Nigeria buyer might still choose this idea: **profit-vs-cash short-term obligation** job.
+  - **DIY Excel** — common; no board template. Why a Nigeria buyer might still choose this idea: handoff one-pager.
 - **GUEMF:** Mode B **4/3/4/3/3 = 17**. Evidence: BusinessDay — https://businessday.ng/market-intelligence/article/profits-vs-cash-can-ngx-top-50-firms-meet-their-short-term-obligations/
 - **Commercial viability:** Medium.
 - **Dedup:** High vs FrontierIR / NGX Crash Journal / IPOConfirm.
@@ -209,10 +211,10 @@
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only — not CBN FX allocation advice.
 - **Competitors / alternatives:**
-  - **Bank treasury WhatsApp** — default; opaque. Why Nigeria buyer still chooses this: dated plan board.
-  - **GTFX45 Dispense Pack (prior)** — dispense window. Why still us: **reserves-confidence vs own invoice timing** board.
-  - **DIY spreadsheet** — common. Why still us: template + reminders.
-  - **Unknown Reserves46 SaaS** — not found. Why still us: Naira SME UX.
+  - **Bank treasury WhatsApp** — default; opaque. Why a Nigeria buyer might still choose this idea: dated plan board.
+  - **GTFX45 Dispense Pack (prior)** — dispense window. Why a Nigeria buyer might still choose this idea: **reserves-confidence vs own invoice timing** board.
+  - **DIY spreadsheet** — common. Why a Nigeria buyer might still choose this idea: template + reminders.
+  - **Accountant or bank WhatsApp notes** — default for many importers. Why a Nigeria buyer might still choose this idea: one dated plan board instead of chat scraps. No named Reserves46 product was found in Pass 1.
 - **GUEMF:** Mode B **4/3/3/2/3 = 15**. Evidence: Nairametrics — https://nairametrics.com/2026/10/09/nigerias-net-foreign-reserves-rise-to-record-46-billion-2/ ; THISDAY — https://www.thisdaylive.com/2026/10/10/cardoso-nigerias-net-external-reserves-hit-46bn-links-stronger-buffers-to-fx-stability-investor-confidence/
 - **Commercial viability:** Medium.
 - **Dedup:** High vs GTFX45 / CBN-Asia Fintech Corridor Brief.
@@ -226,10 +228,10 @@
 - **MVP cost:** $8k–$16k.
 - **Regulatory:** Contract hygiene education; NDPA for client data; not legal advice.
 - **Competitors / alternatives:**
-  - **Notion/Foreign SaaS** — FX friction. Why Nigeria buyer still chooses this: Naira + local payment rails.
-  - **Agencies/lawyers** — expensive for micros. Why still us: self-serve kit.
-  - **ReviewReel SME (prior)** — review videos. Why still us: **business structure** for creatives.
-  - **DIY WhatsApp** — default. Why still us: checklist + invoice path.
+  - **Notion/Foreign SaaS** — FX friction. Why a Nigeria buyer might still choose this idea: Naira + local payment rails.
+  - **Agencies/lawyers** — expensive for micros. Why a Nigeria buyer might still choose this idea: self-serve kit.
+  - **ReviewReel SME (prior)** — review videos. Why a Nigeria buyer might still choose this idea: **business structure** for creatives.
+  - **DIY WhatsApp** — default. Why a Nigeria buyer might still choose this idea: checklist + invoice path.
 - **GUEMF:** Mode B **4/3/3/2/4 = 16**. Evidence: BusinessDay — https://businessday.ng/bd-weekender/article/nigerias-creative-economy-lacks-structure-not-talent-nbcc-boss-says/
 - **Commercial viability:** Medium.
 - **Dedup:** High vs ReviewReel / QuietClose CRM.
@@ -243,10 +245,10 @@
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA; NBC/NITDA context notes; not a government verifier.
 - **Competitors / alternatives:**
-  - **Global deepfake detectors** — FX + weak local context. Why Nigeria buyer still chooses this: 2027 Nigeria playbook.
-  - **DIY Twitter/X rumour checks** — common. Why still us: structured incident log.
-  - **SMECyber Week Shield (prior)** — general SME cyber. Why still us: **synthetic media / election** focus.
-  - **Unknown local SyntheticMedia SaaS** — not found. Why still us: Naira pack.
+  - **Global deepfake detectors** — FX + weak local context. Why a Nigeria buyer might still choose this idea: 2027 Nigeria playbook.
+  - **DIY Twitter/X rumour checks** — common. Why a Nigeria buyer might still choose this idea: structured incident log.
+  - **SMECyber Week Shield (prior)** — general SME cyber. Why a Nigeria buyer might still choose this idea: **synthetic media / election** focus.
+  - **Foreign SaaS detectors (manual export)** — priced in FX, weak local steps. Why a Nigeria buyer might still choose this idea: a Naira checklist the comms team can run without a new vendor. No named local SyntheticMedia product was found in Pass 1.
 - **GUEMF:** Mode B **4/3/3/3/3 = 16**. Evidence: Premium Times headline via fetch RSS (`strategy_5_9_rss` / discovery leads 10 Oct 2026).
 - **Commercial viability:** Medium.
 - **Dedup:** Medium-high vs SMECyber / FakeGrant Spot Desk.
@@ -260,10 +262,10 @@
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not embassy, immigration, or legal advice.
 - **Competitors / alternatives:**
-  - **Embassy travel advisories DIY** — free; dense. Why Nigeria buyer still chooses this: filled trip template.
-  - **Global risk firms** — expensive. Why still us: Naira micro-brief.
-  - **DIY WhatsApp from PA** — common. Why still us: checklist + log.
-  - **Unknown DetentionBrief SaaS** — not found. Why still us: founder-English UX.
+  - **Embassy travel advisories DIY** — free; dense. Why a Nigeria buyer might still choose this idea: filled trip template.
+  - **Global risk firms** — expensive. Why a Nigeria buyer might still choose this idea: Naira micro-brief.
+  - **DIY WhatsApp from PA** — common. Why a Nigeria buyer might still choose this idea: checklist + log.
+  - **Travel-agent email threads** — human, uneven. Why a Nigeria buyer might still choose this idea: a filled template in plain English, without a risk-firm retainer. No named DetentionBrief product was found in Pass 1.
 - **GUEMF:** Mode B **3/4/4/2/2 = 15**. Evidence: Punch headline via fetch (10 Oct 2026) — https://punchng.com/ (US warns business executives against detention risks in Nigeria).
 - **Commercial viability:** Low-medium niche.
 - **Dedup:** High.
@@ -310,13 +312,15 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles. Trustpilot not used (egress blocks). S15 skipped by design.
 
+**Pass 2 pack:** 2026-10-10. Same 12 ideas and same ranks. Subheads kept in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Competitor lines that named a product as unknown were replaced with DIY, WhatsApp, accountant, travel-agent, or foreign-SaaS patterns. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | Date | Step |
 |------|------|
-| **2026-10-10** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` — normalize §14 subheads; Docx once in-repo only. |
+| **2026-10-10** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-11** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
 | **2026-10-13** | Owner pick: validate InsiderCredit Board Exit Guard with 1 Mid-bank board contact (no secrets in repo). |
 | **2026-10-15** | Owner pick: OwerriRunway Reroute Desk landing-page copy test with 5 South-East travellers before Oct 20 closure. |
@@ -324,6 +328,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before Docx. Do not treat Word as final until `prompts/agent_formulation_pack.txt` is run on this file.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
