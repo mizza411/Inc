@@ -5,7 +5,7 @@
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261010_060825.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; Punch politics-heavy + Vanguard opinion-heavy early Saturday — lean Nairametrics + Punch business + THISDAY/Channels web cites for commercial Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
-**Dedup sources:** memory tops 2026-09-01→2026-10-09 (esp. NNPC Transport Discount Access Desk, Project BRIDGE Fibre Ready Pack, OPay FrozenButUnreversed Clock, NELFUND HoldRefund Student Desk, Moniepoint BankLetter Escalation Clock, LAGIS Title Prep Desk, AutoNARP Licence Stake Pack, Moniepoint×OPay DualRail Refund Clock, SoftTest RiskTier Prep Desk, Moniepoint CourtOrder Refund Clock, PalmPay RecoveredNotCredited Clock, Flutterwave PriorOrder Vacate Trace, KudaDecline Hold Desk, KudaCorp NoOrder Lien Pack, CNGFare StateGap Desk, DigiPostcode Capture Desk); older `business_ideas_20260715.md`  
+**Dedup sources:** memory tops 2026-09-01→2026-10-09 (esp. NNPC Transport Discount Access Desk, Project BRIDGE Fibre Ready Pack, OPay FrozenButUnreversed Clock, NELFUND HoldRefund Student Desk, Moniepoint BankLetter Escalation Clock, LAGIS Title Prep Desk, AutoNARP Licence Stake Pack, Moniepoint×OPay DualRail Refund Clock, SoftTest RiskTier Prep Desk, Moniepoint CourtOrder Refund Clock, PalmPay RecoveredNotCredited Clock, Flutterwave WrongDigit Recover Clock, Flutterwave PriorOrder Vacate Trace, KudaDecline Hold Desk, KudaCorp NoOrder Lien Pack, CNGFare StateGap Desk, DigiPostcode Capture Desk); older `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
 **Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
 
@@ -17,7 +17,7 @@
 |------|------|-------------------|
 | **1** | **InsiderCredit Board Exit Guard** (**S12 Mode A**) | Nairametrics/Business Times (8–9 Oct 2026): CBN confirms stricter insider-credit enforcement is already forcing some bank owners, shareholders, and directors out — boards and related-party borrowers need a related-loan map before seats are lost, ≠ ShareCap Monthly or UBO Payments Disclose. |
 | **2** | **OwerriRunway Reroute Desk** (**S12 Mode A**) | Punch/Vanguard/Premium Times (9–10 Oct 2026): Sam Mbakwe (Owerri) runway closes ~**25 days from 20 Oct 2026** ahead of Christmas — travellers, cargo SMEs, and South-East businesses need alternate-airport + refund/rebook evidence packs ≠ FlightDelay Care Clock. |
-| **3** | **Flutterwave OneDigit Recover Clock** (S1) | Flutterwave is a major Nigeria payment rail; FIJ: one-digit wrong-account send still unrecovered after weeks of support promises — digit-error recovery clock ≠ PriorOrder Vacate Trace. |
+| **3** | **PalmPay FourteenDay Lien Clock** (S1) | PalmPay is a mass Nigeria wallet/MFB rail; Newspointer/ATIMS (2026): temporary freeze under CBN Instant EFT rules lasts only **~14 days** without a court order, then funds can leave and later disputes become **lien-only** — 14-day window clock ≠ RecoveredNotCredited or OPay FrozenButUnreversed. |
 | **4** | **NCDMB AssetAccess Capacity Pack** (S5→S12) | Premium Times/Valuechain/SaviNews (9–10 Oct 2026): NCDMB pushes asset/finance/tech access toward **70% local content by 2027** with Project 100 / NCI Fund / capacity audits — indigenous vendors need evidence packs ≠ ANAMGIS CoO Recert. |
 | **5** | **Kuda Downtime Safe Promise Clock** (S1) | Kuda is a mass digital bank; FIJ: after a downtime “money is safe” assurance, an Abuja customer still cannot recover missing funds years later — downtime-safe promise clock ≠ KudaDecline Hold or KudaCorp NoOrder Lien. |
 
@@ -29,7 +29,7 @@
 |------|------|------------------------|-------------------|-----------|----------------|------------------|----------------------|
 | 1 | InsiderCredit Board Exit Guard | **S12** → S5 → S9 | 5/5/5/5/4 | **24** | $10k–$22k | High | **Strong** |
 | 2 | OwerriRunway Reroute Desk | **S12** → S5 → S9 | 5/5/4/4/5 | **23** | $6k–$14k | High | **Strong** |
-| 3 | Flutterwave OneDigit Recover Clock | S1 → S9 → S12 | 5/5/4/3/5 | **22** | $8k–$18k | High | **Strong** |
+| 3 | PalmPay FourteenDay Lien Clock | S1 → S9 → S12 | 5/5/5/4/5 | **24** | $8k–$18k | High | **Strong** |
 | 4 | NCDMB AssetAccess Capacity Pack | S5 → S9 → S12 | 5/4/4/4/4 | **21** | $8k–$18k | High | **Good** |
 | 5 | Kuda Downtime Safe Promise Clock | S1 → S9 → S12 | 4/5/5/3/4 | **21** | $8k–$18k | High | **Strong** |
 | 6 | FreeCrude Qty Reality Board | S5 → S12 → S9 | 5/4/5/3/3 | **20** | $8k–$16k | High | **Good** |
@@ -50,7 +50,7 @@
 |------|----------------------|------------|----------------|------------------|----------------------|
 | InsiderCredit Board Exit Guard | **High** — seat/exit risk + BOFIA limits | Yes | Not CBN official; not legal advice | High vs ShareCap / UBO Disclose | Strong |
 | OwerriRunway Reroute Desk | **High** — fixed Oct 20 start + Christmas surge | Yes | Not FAAN/airline official | High vs FlightDelay Care | Strong |
-| Flutterwave OneDigit Recover Clock | **High** — cash locked on wrong account | Yes | CBN CPD notes; NDPA | High vs PriorOrder Vacate | Strong |
+| PalmPay FourteenDay Lien Clock | **High** — 14-day freeze clock + cash risk | Yes | CBN Instant EFT notes; NDPA | High vs RecoveredNotCredited / FrozenButUnreversed | Strong |
 | NCDMB AssetAccess Capacity Pack | **Medium-high** — 2027 local-content clock | Yes | Not NCDMB/NipeX broker | High vs ANAMGIS / ETLS Origin | Good |
 | Kuda Downtime Safe Promise Clock | **High** — multi-year lost-funds WTP | Yes | CBN CPD notes; NDPA | High vs KudaDecline / KudaCorp Lien | Strong |
 | FreeCrude Qty Reality Board | **Medium-high** — downstream planning pain | Yes | Not NNPC/Dangote official | High vs NNPC Transport Discount | Good |
@@ -99,21 +99,21 @@
 - **Dedup:** High vs FlightDelay Care Clock / FAANCab Oct1 Upgrade Desk.
 - **Founder fit:** Strong.
 
-### 3. Flutterwave OneDigit Recover Clock — wrong-digit transfer recovery tracker (S1)
+### 3. PalmPay FourteenDay Lien Clock — 14-day Instant-EFT freeze window tracker (S1)
 
-- **Formula:** **Successful business:** Flutterwave (major Nigeria/Africa payment and merchant rail). **Recurring complaint:** funds mistyped by one digit into another Flutterwave-linked account stay unrecovered for weeks despite support tickets and promises (FIJ). **Variation:** One-digit error recovery clock with session ID, recipient name match, and escalation timeline — not Flutterwave PriorOrder Vacate Trace (court-order vacate path).
-- **Solution:** Incident wizard (sender → wrong Flutterwave account) → evidence checklist → ticket/ETA log → export packet for support / CBN CPD notes.
-- **Target:** Freelancers, engineers, SMEs paid via Flutterwave account numbers; senders who mistype one digit.
+- **Formula:** **Successful business:** PalmPay (mass Nigeria wallet / MFB rail). **Recurring complaint:** after a wrong or disputed transfer, PalmPay’s temporary restriction under CBN Instant EFT guidance often lasts only about **14 days** unless a court order arrives in time — once the window lapses, recovery can become a **lien on future credits** instead of an immediate refund (Newspointer/ATIMS, 2026). **Variation:** Fourteen-day freeze→lien clock with court-order deadline calendar — not PalmPay RecoveredNotCredited Clock (funds recovered but not credited) and not OPay FrozenButUnreversed Clock.
+- **Solution:** Incident wizard (mis-send / fraud flag) → 14-day countdown → court-order document checklist → freeze vs lien status log → export packet for support / CBN CPD notes.
+- **Target:** Individuals and SMEs sending to or receiving from PalmPay wallets who need to beat the temporary-restriction window.
 - **MVP cost:** $8k–$18k.
-- **Regulatory:** CBN consumer-protection path notes; NDPA; never store full card PAN; not legal practice.
+- **Regulatory:** CBN Instant EFT / consumer-protection path notes; NDPA; never store full card PAN; not legal practice.
 - **Competitors / alternatives:**
-  - **Flutterwave support chat/email** — official; opaque waits. Why Nigeria buyer still chooses this: digit-error clock + pack.
+  - **PalmPay in-app support** — official; opaque on day-count. Why Nigeria buyer still chooses this: visible 14-day clock.
   - **CBN consumer portal** — escalation rail; hard without a pack. Why still us: pack before escalate.
-  - **Lawyer only** — expensive for mid-size mis-sends. Why still us: structured evidence first.
-  - **Flutterwave PriorOrder Vacate Trace (Oct 1)** — court-order vacate. Why still us: **one-digit wrong-account recovery** job.
-- **GUEMF:** Mode B **5/5/4/3/5 = 22**. Success signal: Flutterwave scale in Nigeria merchant/payout coverage (FIJ dispute reporting). Citations: FIJ — https://fij.ng/article/6-weeks-after-one-digit-error-flutterwave-still-cant-recover-lagos-engineers-n80000/
-- **Commercial viability:** High — cash locked on wrong account.
-- **Dedup:** High vs PriorOrder Vacate / WrongBank Recall / Flutterwave FlaggedSettle.
+  - **Lawyer only** — expensive for mid-size mis-sends. Why still us: structured evidence + deadline first.
+  - **PalmPay RecoveredNotCredited Clock (Oct 2)** — recovered funds not credited. Why still us: **14-day window then lien** job.
+- **GUEMF:** Mode B **5/5/5/4/5 = 24**. Success signal: PalmPay mass wallet footprint in dispute coverage. Citations: Newspointer — https://newspointerng.com/2026/07/22/calls-for-cbn-sanctions-grow-as-palmpay-faces-allegations-of-ignoring-court-backed-refund-process/ (PalmPay cites 14-day Instant EFT restriction then lien after late court order).
+- **Commercial viability:** High — 14-day freeze clock + cash risk.
+- **Dedup:** High vs RecoveredNotCredited / OPay FrozenButUnreversed / Flutterwave WrongDigit Recover (Sep 21) / PriorOrder Vacate.
 - **Founder fit:** Strong.
 
 ### 4. NCDMB AssetAccess Capacity Pack — indigenous vendor evidence for 2027 local content (S5, S9, S12)
@@ -275,10 +275,10 @@
 
 - **NNPC Transport Discount Access Desk** (2026-10-09) — PMS transporter 30-day pump access ≠ FreeCrude Qty Reality Board.
 - **Project BRIDGE Fibre Ready Pack** (2026-10-09) — fibre ROW/bid ≠ today’s set.
-- **OPay FrozenButUnreversed Clock** / **Moniepoint BankLetter Escalation Clock** (2026-10-09) — distinct from Flutterwave OneDigit / Kuda Downtime Safe Promise.
+- **OPay FrozenButUnreversed Clock** / **Moniepoint BankLetter Escalation Clock** (2026-10-09) — distinct from PalmPay FourteenDay Lien / Kuda Downtime Safe Promise.
 - **NELFUND HoldRefund Student Desk** (2026-10-09) — student withhold/refund ≠ today’s set.
-- **PalmPay RecoveredNotCredited Clock** (2026-10-02) — recovered-not-credited ≠ today’s S1 clocks.
-- **Flutterwave PriorOrder Vacate Trace** (2026-10-01) — court vacate ≠ one-digit recovery.
+- **PalmPay RecoveredNotCredited Clock** (2026-10-02) — recovered-not-credited ≠ 14-day freeze→lien clock.
+- **Flutterwave WrongDigit Recover Clock** (2026-09-21) / **Flutterwave PriorOrder Vacate Trace** (2026-10-01) — not re-proposed (digit recover / court vacate).
 - **KudaDecline Hold Desk** / **KudaCorp NoOrder Lien Pack** — decline/lien ≠ downtime safe-promise missing funds.
 - **FlightDelay Care Clock** — post-delay care ≠ planned Owerri 25-day closure.
 - **ShareCap Monthly** / **UBO Payments Disclose** — capital/UBO filings ≠ insider-credit seat exit.
@@ -290,7 +290,7 @@
 
 | Strategy | Status | Notes |
 |----------|--------|-------|
-| **1** Variation | **synthesized** | Online discovery via fetch `strategy_1_discovery` (**ok**, 20 leads) + agent web/FIJ cites; **no** `seed_businesses.json`. S1 ideas: Flutterwave OneDigit Recover Clock; Kuda Downtime Safe Promise Clock — each with formula + URL citations. |
+| **1** Variation | **synthesized** | Online discovery via fetch `strategy_1_discovery` (**ok**, 20 leads) + agent web/FIJ/Newspointer cites; **no** `seed_businesses.json`. S1 ideas: PalmPay FourteenDay Lien Clock; Kuda Downtime Safe Promise Clock — each with formula + URL citations. Avoided re-propose of Flutterwave WrongDigit Recover (Sep 21). |
 | **2** Verbal | **skipped** | Verbal-only per prompt. |
 | **3** Network | **skipped** | Per prompt. |
 | **4** Questionnaire | **skipped** | Per prompt. |
@@ -306,7 +306,7 @@
 | **14** OWID | **ran** | OWID internet + renewable-energy topics **status 200** in fetch JSON. |
 | **15** Telecom figures | **skipped** | Default skip (no `--with-strategy15`); import-only / prior figures not overwritten. |
 
-**Data freshness:** Fetch JSON stamped **2026-10-10T06:08:25** (UTC). Saturday spine leans Nairametrics (CBN insider credit, Zenith H1, reserves narrative), Punch/Vanguard/Premium Times (Owerri runway), Channels/TheCable (free-crude shortfall), BusinessDay (profit vs cash, creative economy), FIJ (Flutterwave one-digit, Kuda downtime). Cold-image deps: `feedparser` + `beautifulsoup4` + `lxml` installed before fetch.
+**Data freshness:** Fetch JSON stamped **2026-10-10T06:08:25** (UTC). Saturday spine leans Nairametrics (CBN insider credit, Zenith H1, reserves narrative), Punch/Vanguard/Premium Times (Owerri runway), Channels/TheCable (free-crude shortfall), BusinessDay (profit vs cash, creative economy), Newspointer (PalmPay 14-day Instant EFT), FIJ (Kuda downtime). Cold-image deps: `feedparser` + `beautifulsoup4` + `lxml` installed before fetch.
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles. Trustpilot not used (egress blocks). S15 skipped by design.
 
@@ -320,7 +320,7 @@
 | **2026-10-11** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
 | **2026-10-13** | Owner pick: validate InsiderCredit Board Exit Guard with 1 Mid-bank board contact (no secrets in repo). |
 | **2026-10-15** | Owner pick: OwerriRunway Reroute Desk landing-page copy test with 5 South-East travellers before Oct 20 closure. |
-| **2026-10-17** | Soft kill / merge decision on Flutterwave OneDigit vs Kuda Downtime clocks after support-path probes (no customer PII in git). |
+| **2026-10-17** | Soft kill / merge decision on PalmPay FourteenDay Lien vs Kuda Downtime clocks after support-path probes (no customer PII in git). |
 
 ---
 
