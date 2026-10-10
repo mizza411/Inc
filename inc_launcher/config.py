@@ -51,3 +51,23 @@ def set_interval_nudges_enabled(enabled: bool, config_path: Path | None = None) 
     with path.open("w", encoding="utf-8") as handle:
         json.dump(data, handle, indent=2)
         handle.write("\n")
+
+
+def is_formulation_catchup_enabled(config_path: Path | None = None) -> bool:
+    """Section 19 Phase 7 — open pending formulation .docx on tray start. Default ON."""
+    config = load_config(config_path)
+    settings = config.get("settings") or {}
+    return bool(settings.get("formulation_catchup_enabled", True))
+
+
+def set_formulation_catchup_enabled(
+    enabled: bool, config_path: Path | None = None
+) -> None:
+    path = config_file_path(config_path)
+    with path.open(encoding="utf-8") as handle:
+        data = json.load(handle)
+    settings = data.setdefault("settings", {})
+    settings["formulation_catchup_enabled"] = bool(enabled)
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, indent=2)
+        handle.write("\n")

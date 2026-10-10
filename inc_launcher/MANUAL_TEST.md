@@ -1,15 +1,15 @@
-# Inc Launcher — Manual test (Phase 4 + Track C + Phase 5)
+# Inc Launcher ΓÇö Manual test (Phase 4 + Track C + Phase 5)
 
 **Policy:** [.cursor/rules/deferred-manual-testing.mdc](../.cursor/rules/deferred-manual-testing.mdc)  
-**Task tracker:** [.cursor/rules/task.md](../.cursor/rules/task.md) §4 and §5  
+**Task tracker:** [.cursor/rules/task.md](../.cursor/rules/task.md) ┬º4 and ┬º5  
 **Session closed:** 2026-06-29 (Inc launcher + interval nudges + Track C bookmark menu)  
-**Phase 5 agent formulation front door:** 2026-06-30 (5.0–5.4 shipped; §G manual once at v1 sign-off)
+**Phase 5 agent formulation front door:** 2026-06-30 (5.0ΓÇô5.4 shipped; ┬ºG manual once at v1 sign-off)
 
 **Live on PC:** Interval nudges **[ON]**; Start at Windows login **[OFF]** (external `auto_launcher` boots tray). Commits: `4c54b9c` (Phase 4), `909c6d9` (Track C).
 
 ---
 
-## Automated sign-off (agent runs — no manual UI)
+## Automated sign-off (agent runs ΓÇö no manual UI)
 
 ```powershell
 cd C:\dev\Inc
@@ -25,18 +25,18 @@ python -m pytest business_bookmark_sorter/tests/test_cli_status.py -q
 | Phase 2 hub + menu build | `smoke_hub.py`, `test_config.py` |
 | Track C bookmark review menu | `test_track_c_bookmark.py`, `test_config.py::test_formulated_has_bookmark_review` |
 | Phase 5 agent run orchestration | `test_agent_run.py`, `test_phase5_signoff.py`, `test_config.py::test_formulated_has_agent_formulation_run` |
-| §14 Pass 2 Hub pack card | same + pack `prompt_path` / modal bullets asserts |
+| ┬º14 Pass 2 Hub pack card | same + pack `prompt_path` / modal bullets asserts |
 | Bookmark queue counts | `test_cli_status.py`, `python -m business_bookmark_sorter status` |
 
 **Automated pass recorded:** 2026-06-30 (pytest 57+ green; smoke_hub passed; Phase 5 signoff).  
 **Prior:** 2026-06-29 (pytest 38+ green).  
-**Live nudge proof:** `inc_launcher/schedule_fired.json` — 2026-06-29 09:00 task.md, 09:15 Hub, 10:00 Problem ID live (Monday).
+**Live nudge proof:** `inc_launcher/schedule_fired.json` ΓÇö 2026-06-29 09:00 task.md, 09:15 Hub, 10:00 Problem ID live (Monday).
 
 Treat Phase 2 hub, Phase 4 A/B/C/E as **passed via automation** unless you opt into optional manual sections below.
 
 ---
 
-## Manual only (optional — your choice)
+## Manual only (optional ΓÇö your choice)
 
 ### D. External auto-launcher at reboot
 
@@ -51,27 +51,27 @@ Treat Phase 2 hub, Phase 4 A/B/C/E as **passed via automation** unless you opt i
 
 ---
 
-### E. Schedule comfort check (product decision — not a test pass/fail)
+### E. Schedule comfort check (product decision ΓÇö not a test pass/fail)
 
 **Why manual:** Only you know if timed opens are too disruptive.
 
 After living with nudges for a few days, decide:
 
 - [ ] Keep schedule as-is (09:00 task, 09:15 Hub, M/W/F 10:00 Problem ID live, Sun YouTube)
-- [ ] Tune `launcher_config.json` → `schedules.items` (e.g. remove/move **10:00 Problem ID** or **09:15 Hub**)
-- [ ] Or tray → **Interval nudges [OFF]**
+- [ ] Tune `launcher_config.json` ΓåÆ `schedules.items` (e.g. remove/move **10:00 Problem ID** or **09:15 Hub**)
+- [ ] Or tray ΓåÆ **Interval nudges [OFF]**
 
 **Note (2026-06-29):** User linked unexpected auto-open to **10:00 Problem ID live** (browser tab, not Inc Hub). Hub auto-open is **09:15**.
 
 ---
 
-### F. Bookmark filing workflow (operational — when you choose to file)
+### F. Bookmark filing workflow (operational ΓÇö when you choose to file)
 
 **Why manual:** Tkinter review UI + Chrome delete confirm; ~1926 pending links.
 
-- [ ] Tray → **Formulated ideas → Bookmark review**
+- [ ] Tray ΓåÆ **Formulated ideas ΓåÆ Bookmark review**
 - [ ] File one link (**File & open doc**); confirm section in opened docx
-- [ ] Delete bookmark in Chrome; confirm dialog → next item
+- [ ] Delete bookmark in Chrome; confirm dialog ΓåÆ next item
 
 Not required for launcher sign-off. Track progress: `python -m business_bookmark_sorter status`.
 
@@ -79,14 +79,14 @@ Not required for launcher sign-off. Track progress: `python -m business_bookmark
 
 ### G. Agent formulation run (Phase 5 v1)
 
-**Automated (agent runs — no manual UI):**
+**Automated (agent runs ΓÇö no manual UI):**
 
 ```powershell
 cd C:\dev\Inc
 python -m pytest inc_launcher/tests/test_phase5_signoff.py inc_launcher/tests/test_agent_run.py -q
 ```
 
-| §G step | Automated by |
+| ┬ºG step | Automated by |
 |---------|----------------|
 | Prompt file exists + loads | `test_phase5_signoff.py::test_prompt_file_exists_and_loads` |
 | Formulated pillar: agent + CLI cards | `test_formulated_pillar_agent_and_cli_items` |
@@ -95,29 +95,29 @@ python -m pytest inc_launcher/tests/test_phase5_signoff.py inc_launcher/tests/te
 | Option B modal copy (title, bullets, buttons) | `test_option_b_modal_copy` |
 | **Not now** skips run | `test_modal_not_now_skips_run_action` |
 | **Start** invokes `agent_run` | `test_modal_start_runs_agent_action` |
-| Hub card → modal (not direct action) | `test_hub_card_routes_to_modal_not_direct_action` |
-| Tray path → Hub + modal | `test_tray_agent_run_opens_hub` (`test_agent_run.py`) |
+| Hub card ΓåÆ modal (not direct action) | `test_hub_card_routes_to_modal_not_direct_action` |
+| Tray path ΓåÆ Hub + modal | `test_tray_agent_run_opens_hub` (`test_agent_run.py`) |
 | Orchestration (clipboard/cursor/paste) | `test_agent_run.py` |
 | Kill old tray + restart + single instance | `test_tray_restart_single_instance` |
 
 **Automated pass:** run pytest block above after tray restart (see `test_tray_restart_single_instance`).
 
-**Manual only (deferred — when you choose):**
+**Manual only (deferred ΓÇö when you choose):**
 
 **Why not automated:** Pressing **Enter** in Cursor chat to send the agent message needs your IDE session and is subjective (prompt landed correctly in chat).
 
-- [ ] After **Start**, focus Cursor chat if paste missed → **Enter** → confirm agent begins formulation run
+- [ ] After **Start**, focus Cursor chat if paste missed ΓåÆ **Enter** ΓåÆ confirm agent begins formulation run
 
-Not required for Phase 5 dev sign-off; automation above covers §G steps 1–6, 9–10.
+Not required for Phase 5 dev sign-off; automation above covers ┬ºG steps 1ΓÇô6, 9ΓÇô10.
 
 ---
 
-## H — Prospect Businesses folder (Formulated card) — 2026-07-12
+## H ΓÇö Prospect Businesses folder (Formulated card) ΓÇö 2026-07-12
 
-**Task:** `.cursor/rules/task.md` §4 Prospect + Current Priority §12  
-**Policy:** automate-first — **no required manual steps** for v1 sign-off.
+**Task:** `.cursor/rules/task.md` ┬º4 Prospect + Current Priority ┬º12  
+**Policy:** automate-first ΓÇö **no required manual steps** for v1 sign-off.
 
-### Automated (agent runs — no manual UI)
+### Automated (agent runs ΓÇö no manual UI)
 
 | Check | Covered by |
 |-------|------------|
@@ -130,28 +130,43 @@ Not required for Phase 5 dev sign-off; automation above covers §G steps 1–6, 
 python -m pytest inc_launcher/tests/test_config.py business_bookmark_sorter/tests/test_prospect_route.py -q
 ```
 
-### Manual only (optional — your choice)
+### Manual only (optional ΓÇö your choice)
 
-**Why not automated:** Confirming the live tray/Hub UI after a local restart is a subjective “I see the card” glance (config already asserted in pytest).
+**Why not automated:** Confirming the live tray/Hub UI after a local restart is a subjective ΓÇ£I see the cardΓÇ¥ glance (config already asserted in pytest).
 
-- [ ] Restart Inc Launcher tray → Formulated ideas → **Prospect Businesses folder** opens `Prospect-Businesses/`
+- [ ] Restart Inc Launcher tray ΓåÆ Formulated ideas ΓåÆ **Prospect Businesses folder** opens `Prospect-Businesses/`
 
 Not required for Prospect v1 close.
 
 ---
 
+
+### I. Formulation catch-up on tray start (section 19 Phase 7) — once at sign-off
+
+**Why not automated:** real Word + Inc tray process + optional multi-pack catch-up on this PC.
+
+**Automated already:** \	est_formulation_repo_sync.py\, \	est_formulation_pending.py\, \	est_formulation_docx_opener.py\, \	est_formulation_catchup.py\.
+
+- [ ] Tray menu shows **Open formulation packs on start [ON]** (default)
+- [ ] With a pending \usiness_ideas_YYYYMMDD.docx\ not in shown-state, restart Inc tray → Word opens that pack once
+- [ ] Restart tray again → same pack does **not** re-open
+- [ ] Toggle catch-up **OFF** → restart tray → no Word open for a new pending pack
+- [ ] Toggle **ON** again when done testing
+
+
 ## Sign-off summary
 
 | Check | Automated | Manual (optional) |
 |-------|-----------|-------------------|
-| Phase 4 nudges | Yes (2026-06-29) | Schedule tune (§E) |
-| Phase 2 hub / menu | Yes | — |
-| Track C menu wiring | Yes | Filing workflow (§F) |
-| Phase 5 agent formulation | Yes — `test_phase5_signoff.py`, `test_agent_run.py` (2026-06-30) | Cursor **Enter** send (deferred §G) |
-| Prospect Businesses Hub card | Yes — `test_formulated_has_prospect_businesses_folder` (2026-07-12) | Tray restart glance (§H) |
-| External boot | — | §D if desired |
+| Phase 4 nudges | Yes (2026-06-29) | Schedule tune (┬ºE) |
+| Phase 2 hub / menu | Yes | ΓÇö |
+| Track C menu wiring | Yes | Filing workflow (┬ºF) |
+| Phase 5 agent formulation | Yes ΓÇö `test_phase5_signoff.py`, `test_agent_run.py` (2026-06-30) | Cursor **Enter** send (deferred ┬ºG) |
+| Prospect Businesses Hub card | Yes ΓÇö `test_formulated_has_prospect_businesses_folder` (2026-07-12) | Tray restart glance (┬ºH) |
+| Phase 7 formulation catch-up | Yes — sync/pending/opener/catchup unit tests (2026-10-10) | Real Word + tray (§I) once at sign-off |
+| External boot | ΓÇö | ┬ºD if desired |
 
-**Phase 5 v1:** Dev sign-off **passed via automation** (§G). Optional: Cursor **Enter** when you run a live agent session.  
-**Prospect v1:** Dev sign-off **passed via automation** (§H). Optional: tray restart glance.
+**Phase 5 v1:** Dev sign-off **passed via automation** (┬ºG). Optional: Cursor **Enter** when you run a live agent session.  
+**Prospect v1:** Dev sign-off **passed via automation** (┬ºH). Optional: tray restart glance.
 
 After any config change: stage, commit, and push (respect `.gitignore`).

@@ -4,7 +4,8 @@
   "settings": {
     "single_instance": true,
     "icon_path": "inc_launcher/assets/icon.png",
-    "youtube_ops_active": true
+    "youtube_ops_active": true,
+    "formulation_catchup_enabled": true
   },
   "pillars": [
     {

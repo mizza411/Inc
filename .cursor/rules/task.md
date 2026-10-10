@@ -121,12 +121,30 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ---
 
+## NET-ASK-ALWAYS-SHOW-1 — Ask people / owners window always with Inc launcher (pointer)
+
+**Status:** ⏳ Proposed (01/09/2026) — **do not implement** until a phase is picked  
+**Authoritative backlog:** [`.cursor/rules/task_net_ask_always_show.md`](task_net_ask_always_show.md)  
+**Owner:** every Inc launcher start ⇒ small Ask people/owners window visible (not intermittent)  
+**Next:** Phase **0** diagnose — not code until picked
+
+---
+
 ## BB-TIMED-1 — Timed / minimal-UI bookmark review (§5 add-on) (pointer)
 
 **Status:** 🟢 **BB-TIMED-1 Phases 0–7 ✅** + automated sign-off ✅ (2026-08-20)  
 **Authoritative backlog:** [`.cursor/rules/task_bookmark_timed_sessions.md`](task_bookmark_timed_sessions.md) — delete after optional `MANUAL_TEST` §P or owner skip  
 **Locks:** stay in Inc · Settings UI for session length · auto-open current link · PR boot via `launcher_config` · Inc daytime schedule · do **not** fuse PR `bookmark_sorter.py`  
 **Next:** stage/commit/push; optional later §P live boot/11:00
+
+---
+
+## BB-IDLE-AUTO-1 — Bookmark review idle Action A then 20s Action B (pointer)
+
+**Status:** ⏳ Proposed (01/09/2026) — **do not implement** until a phase is picked  
+**Authoritative backlog:** [`.cursor/rules/task_bb_idle_auto.md`](task_bb_idle_auto.md)  
+**Locks:** stay in Inc `business_bookmark_sorter/` · owner override of BB-TIMED-1 “no zero-confirm” for this idle path · do **not** fuse PR `bookmark_sorter.py`  
+**Next:** Phase **0** lock Action A / Action B names — not code until picked
 
 ---
 
@@ -1562,13 +1580,13 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 
 ### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
-**Status:** Phase **2** — Automation A **Active** (2026-07-24); proof 2.4 pending; **Phase 3** (B) not started; **Phase 7** (local Word open-on-login) **backlogged 2026-07-24** — docs only, no code yet.
-**One-liner:** Replace manual Hub two-run with **daily Cursor Automations** (Pass 1 → Pass 2 → `.md`+`.docx`) plus optional **local** open of today’s new `.docx` once on laptop login — **without breaking** Hub, tray schedules, strategy CLIs, §11/§13, or §14.
+**Status:** Automation A+B **Active**; Phase 3 proof PR **#67**; **Phase 7.2–7.6 shipped 2026-10-10** (sync + pending + opener + tray wire + opt-out). Left: **7.8** MANUAL once, **7.9** deferred, **7.10** docs polish if needed.
+**One-liner:** Daily Cursor Automations (Pass 1 → Pass 2 → `.md`+`.docx`) plus Inc tray catch-up that syncs `main` and opens **every not-yet-shown** formulation `.docx` — **without** daily owner merge/pull/open clicks on the happy path.
 **Full phased backlog:** see **§19** under Notes (Phases **0–7**).
-**Locks:** Phase 0 table + **0.4b / Phase 7** (2026-07-24): cloud still creates Docx in-repo; **local** opens **today’s** `business_ideas_YYYYMMDD.docx` **once** when **new** and on disk — not every boot; not cloud Word-open.
-**Depends on:** §14 v1; Automation A live; Phase 7 **after** Phase 3 Docx exists (or explicit early stub).
-**Layout:** Cloud = Cursor Automations; local open = **Inc tray / small helper** under `inc_launcher/` (preferred) or Task Scheduler — **not** fused into Automation A/B prompts. No third formulation product folder.
-**Manual tests (you):** Cloud sign-off + later Phase 7 login open (Why not automated: real Word + Windows login).
+**Locks:** Phase 0 cloud/PR table still holds for Automations. **Phase 7 (2026-10-10)** supersedes old **0.4b / today-only** open rule — see Notes §19 Phase 7 decision table (**7.R1–7.R10**). Cloud never opens Word. Local owns pull/sync + Word open + shown-state.
+**Depends on:** §14 v1; A+B Active; Phase 7 implementation after 7.0 approve.
+**Layout:** Cloud = Cursor Automations; local open/sync = **Inc tray / small helper** under `inc_launcher/` (preferred) or Task Scheduler — **not** fused into Automation A/B prompts. No third formulation product folder.
+**Manual tests (you):** Phase 7 login/catch-up once at sign-off (Why not automated: real Word + Windows login + multi-day missed packs).
 **Related:** §14; §4 tray; `prompts/IMPORTANT_cursor_privacy_mode_legacy.md`; **C** other repos = reminder only.
 
 ---
@@ -2405,11 +2423,11 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 **Related:** Chat 2026-07-15 (Docx quality → prompt split → two-agent-run meta); `prompts/agent_formulation_run.txt` + `agent_formulation_pack.txt`; Jul 13 vs Jul 15 idea-detail shape.
 
 ### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
-**Status:** Phase **2** — Automation A **Active** (2026-07-24); proof 2.4 pending; Phase 3 not started; **Phase 7 backlogged** (local Word open-on-login; rules locked; no code yet).
+**Status:** Automation A+B **Active**; Phase 3 PR **#67** merged; **Phase 7.2–7.6 shipped 2026-10-10** (tray catch-up). **7.8** MANUAL once, **7.9** deferred (2c), **7.10** docs.
 **Parent / Current Priority:** §19
 **Related:** §14 (Pass 1/2 contract — CLOSED v1); §4 Phase 5.5 (tray Hub modal schedule — **do not merge** into this task); `prompts/agent_formulation_run.txt`; `prompts/agent_formulation_pack.txt`; `prompts/FORMULATION_PASS_CONTRACT.md`; `prompts/CLOUD_FORMULATION_AUTOMATIONS.md`; `agent-business-idea-runs/`; Hub `agent_formulation_run` / `agent_formulation_pack`.
 
-**Goal:** Daily **unattended** cloud agent runs that produce today’s packed idea pack (`.md` + `.docx`) using the **same two-job model** as §14 — Discover then Pack — without requiring Inc Hub Start or Cursor Enter.
+**Goal:** Daily **unattended** cloud agent runs that produce today’s packed idea pack (`.md` + `.docx`) using the **same two-job model** as §14 — Discover then Pack — without requiring Inc Hub Start or Cursor Enter. Plus a **local** path so the owner sees Word open for **pending** packs (including missed days) with **no daily manual** merge/pull/open.
 
 **User locks (2026-07-23):**
 - Cadence: **daily** — see **Phase 0 decision table** below.
@@ -2457,13 +2475,13 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 | **0.3** | Runtime | **Cursor cloud** (PC may be off). My Machines = later opt-in only. |
 | **0.4** | Docx (cloud) | **Create `.docx` in repo only** via Pass 2 Automation — cloud does **not** open Word on your PC. |
 | **0.5** | Fetch prep | **Separate** (Phase 4) — not bundled into Automation A v1. |
-| **0.4b** | Docx (local open) | **Supersedes “never open Word”** for **local only** (2026-07-24). On laptop login / Inc tray start: if **today’s** `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.docx` exists **and** is **new** (not yet auto-opened) → open in Word **once** → record opened. Else **no-op**. Not every boot. Not “latest old pack.” File must be **on local disk** (after merge/pull or local Pass 2). |
+| **0.4b** | Docx (local open) | **Superseded 2026-10-10** by Phase 7 **7.R1–7.R10** (catch-up + zero-manual). Old 2026-07-24 today-only once-when-new rule is historical only. Cloud still never opens Word. |
 
 - [x] **0.1 — Clock times** — 07:00 / 11:00 WAT + Pass 2 soft no-op gate (above).
-- [x] **0.2 — Git policy** — PR to default branch; owner merges (above).
+- [x] **0.2 — Git policy** — PR to default branch; owner merges (above). *Phase 7 may add a separate auto-merge recommendation (7.R9) — does not silently change this row until owner approves.*
 - [x] **0.3 — Runtime** — Cursor cloud (above).
 - [x] **0.4 — Docx (cloud)** — in-repo create only; cloud does not open Word (above).
-- [x] **0.4b — Docx (local open rule)** — locked 2026-07-24 (user request + recommend once-when-new/today-only); **implement in Phase 7** (no code in Phase 0).
+- [x] **0.4b — Docx (local open rule)** — original today-only lock 2026-07-24; **superseded 2026-10-10** → implement under Phase 7 **7.R*** (no code in Phase 0).
 - [x] **0.5 — Fetch prep** — separate Phase 4 (above).
 - [x] **0.6 — Acceptance sketch** — see **Acceptance sketch (Phases 1–6)** below.
 - [x] **0.7 — Checkpoint** — user menu **1** (2026-07-23) approved this Phase 0 package.
@@ -2478,7 +2496,7 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 | **4** | Optional fetch prep isolated; disable-able without breaking A/B |
 | **5** | Only user-approved medium-fit items; each solo; no C repos |
 | **6** | READMEs + MANUAL_TEST Automations section; regression green; pause/disable documented |
-| **7** | Local once-when-new open of today’s `.docx` on login/tray; state file; Hub/cloud A/B untouched; opt-out documented |
+| **7** | Local sync + open **all not-yet-shown** formulation `.docx` on login/tray (missed days included); zero daily owner clicks; state file; Hub/cloud A/B untouched; opt-out documented |
 
 **Phase 0 definition of done:** ✅ Decisions 0.1–0.5 locked in this file; acceptance sketch written; **no** Automations created; **no** `launcher_config.json` / prompt body changes required.
 
@@ -2509,14 +2527,14 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 
 **Goal:** Second job only after Pass 1 ready — pack cards + one-shot Docx; no new ranked set.
 
-- [ ] **3.1 — Gate:** Pass 2 starts only when today’s draft exists and still pending (marker / path / commit event) — **not** a blind short sleep after Pass 1 paste.
-- [ ] **3.2 — Create Automation B:** instructions = Pass 2 Pack (`agent_formulation_pack.txt` + §14 contract); same dated `.md`.
-- [ ] **3.3 — Schema:** Prefer `idea_card_schema.py` before Docx; fix gaps from Pass 1 evidence; soft-fail incomplete cards without inventing competitors.
-- [ ] **3.4 — Docx:** One-shot convert **in-repo** per contract (cloud). Desktop Word open is **Phase 7** (local), not Automation B.
-- [ ] **3.5 — Prove once:** Same-day `.md` + `.docx` pair; Hub Pass 2 card still works as override.
-- [ ] **3.6 — Checkpoint:** User sign-off on A→B chain before Phase 4 medium-fit work.
+- [x] **3.1 — Gate:** Soft gate in Automation B instructions (missing / not pending → no-op) — **2026-10-10**.
+- [x] **3.2 — Create Automation B:** **Inc §19 B — Pass 2 Pack**; daily **11:00 GMT+1**; **Active** 2026-10-10.
+- [x] **3.3 — Schema:** Test run used schema PASS (12) before Docx — 2026-10-10 (PR #67).
+- [x] **3.4 — Docx:** In-repo `business_ideas_20261010.docx` on PR #67 — desktop Word **not** opened by cloud.
+- [x] **3.5 — Prove once:** Same-day packed `.md` + `.docx` on PR #67 (test run Succeeded, then merged 2026-10-10).
+- [ ] **3.6 — Checkpoint:** User sign-off on A→B daily chain before Phase 4 medium-fit work (first scheduled 11:00 fire still optional proof).
 
-**Phase 3 definition of done:** Daily chain yields packed `.md` + `.docx`; two Automations (or cron+event) remain separable; §14 gates intact; Hub override intact.
+**Phase 3 definition of done:** Daily chain yields packed `.md` + `.docx`; two Automations remain separable; §14 gates intact; Hub override intact. **Create+proof:** met 2026-10-10. **3.6** still open for explicit sign-off.
 
 #### Phase 4 — Optional fetch prep (A+) — still modular
 
@@ -2550,45 +2568,54 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 
 **Phase 6 definition of done:** Docs + one live proof of daily `.md`+`.docx`; Hub override documented; automated tests green.
 
-#### Phase 7 — Local Word open-on-login (owner request 2026-07-24) — modular; **no code until Phase 3 Docx path works** (or stub approved)
+#### Phase 7 — Local sync + Word open (catch-up + zero-manual) — modular; **docs re-locked 2026-10-10; no code until 7.0**
 
-**Owner ask:** Open the formulation Word document when the laptop starts.  
-**Locked rule (recommend + owner lean):** **Only when a new doc exists** — not every boot.
+**Owner ask (2026-07-24):** Open the formulation Word document when the laptop starts.  
+**Owner ask (2026-10-10):** After cloud A/B is done, **no daily owner interaction**. Local script/hook takes the PC part. On PC start, open Word for packs that have **not yet been shown on this machine**. **Not a fixed “two days” window** — the helper uses **shown-state** (what was last successfully opened on this PC) to know **how many** `business_ideas_*.docx` files are still unopened, whether that is 1, 2, or more.
 
-**Decision table (locked 2026-07-24 — backlog add; implement later):**
+**Decision table (locked 2026-10-10 — supersedes 2026-07-24 today-only 7.R* / 0.4b; clarified same day: shown-state count, not N-day window):**
 
 | ID | Topic | Lock |
 |----|-------|------|
-| **7.R1** | When | **Only if new** — today’s `.docx` present and not yet marked auto-opened |
-| **7.R2** | Which file | **Today only:** `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.docx` (local date). Do **not** reopen yesterday’s pack as “latest” |
-| **7.R3** | Where file comes from | Must exist **on local disk** (after you merge/pull Pass 2 PR, or local Hub Pass 2). Cloud Automation alone cannot open Word on your PC |
-| **7.R4** | How often | **Once** per dated file → write small state (e.g. under `inc_launcher/` or `agent-business-idea-runs/` gitignored) → skip next boots |
-| **7.R5** | Trigger surface | Prefer **Inc tray start / login hook** (additive). Windows Task Scheduler “at logon” OK as alternative — pick one in 7.1; do not double-open |
-| **7.R6** | Opt-out | Tray toggle or config flag **OFF** without disabling Automation A/B |
-| **7.R7** | Dependency | **After Phase 3** produces `.docx` regularly (or explicit “stub with Hub Pass 2 docx” approve). Do not block Phase 2.4 / Phase 3 on this |
+| **7.R1** | Owner effort | **Zero daily clicks** for merge / `git pull` / hunting the file / opening Word. Cloud stays unattended. Local helper owns the PC path. |
+| **7.R2** | When | On **Inc tray start** (**7.1 lock 2026-10-10**). Not Task Scheduler logon for v1. Not every poll tick. Do not also wire a second logon task. |
+| **7.R3** | Which files | **Shown-state pending set:** compare on-disk `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.docx` files to the local **shown** ledger. Open every pack **not yet marked shown**. Count = however many are unopened since last successful opens (not a hardcoded 2-day or N-day lookback). Not “today only.” Not re-open already-shown packs. |
+| **7.R4** | Order | Open pending packs **oldest date first**. **7.0 lock (2026-10-10): open all** pending from the shown-state set (no max-N cap). |
+| **7.R5** | How often | **Once per dated file** after a successful open → gitignored shown-state. Later boots skip already-shown dates. |
+| **7.R6** | Sync before open | Helper **must** bring remote packs onto local disk before open (at least `git fetch` + `git pull` of `main` when clean/safe). Soft no-op if pull unsafe (dirty conflict) — never crash tray. Log why. |
+| **7.R7** | Cloud vs local | Cloud creates `.docx` in-repo / PR only. **Never** put “open Word” in Automation A/B. |
+| **7.R8** | Opt-out | Tray / Settings toggle **OFF** without disabling Automation A/B. |
+| **7.R9** | Auto-merge / PR-fetch | **7.0 lock (2026-10-10): defer (2c).** v1 uses safe `git pull` of `main` only (7.2). **0.2** owner-merge stays. Optional later: (a) auto-merge formulation PRs, or (b) fetch `.docx` from open `formulation/auto-*` branches — tracked as **7.9**, not in v1 opener. |
+| **7.R10** | Dependency | Phase 3 Docx path exists (met 2026-10-10). Implement after **7.0** approve. |
 
 ##### Modularization / anti-break (Phase 7 only)
 
-1. **New small module** — e.g. `inc_launcher/formulation_docx_opener.py` (or similar) + thin tray/login call — **not** inside `agent_run.py` clipboard path.
+1. **New small module** — e.g. `inc_launcher/formulation_docx_opener.py` (+ optional sync helper) + thin tray/login call — **not** inside `agent_run.py` clipboard path.
 2. **Do not edit** Automation A/B prompts to “open Word.”
 3. **Do not change** `docx_export` semantics beyond calling “open this path” if a helper already exists.
 4. **Do not open** Hub or Option B modal for this feature.
-5. **Soft no-op** if file missing, Word missing, or already opened — never crash tray.
-6. **Automate-first:** unit test detector with fixtures; MANUAL_TEST only for real login + Word.
+5. **Soft no-op** if nothing pending, Word missing, pull unsafe, or already shown — never crash tray.
+6. **Automate-first:** unit tests for pending detection + shown-state + safe-pull skip; MANUAL_TEST only for real login + Word + multi-day catch-up.
+7. **Do not** auto-merge PRs or rewrite **0.2** inside 7.2–7.6 — that is **7.9 / 7.R9** only after explicit pick.
+8. **Do not** double-wire tray start **and** Task Scheduler for the same open.
 
-##### Sub-phases
+##### Sub-phases (requests + recommendations — ship one surface at a time)
 
-- [ ] **7.0 — Checkpoint:** User confirms still want Phase 7 after first Pass 2 `.docx` exists (or approves early stub).
-- [ ] **7.1 — Layout note:** Choose tray-start vs Task Scheduler logon; one-liner in this §19; **wait approve** before wiring startup.
-- [ ] **7.2 — Detector module:** Decide whether today’s `.docx` should open (exists + not yet marked opened).
-- [ ] **7.3 — Opener:** Open path with Word / default `.docx` handler; record state on success.
-- [ ] **7.4 — Wire once:** Single hook (tray start **or** logon task) — not both.
-- [ ] **7.5 — Opt-out:** Config/tray toggle; default ON/OFF locked at 7.0.
-- [ ] **7.6 — Tests:** Fixture unit tests green; no Hub/config regression.
-- [ ] **7.7 — MANUAL_TEST:** One login session with a fresh today’s `.docx`; Why not automated: real Word + Windows logon.
-- [ ] **7.8 — Docs:** README / cloud-run note one-liner: cloud creates file; local opens once-when-new.
+- [x] **7.0a — Backlog re-lock:** Catch-up + zero-manual rules written (2026-10-10 menu **1**). **No code.**
+- [x] **7.0 — Checkpoint:** **2026-10-10** — **1a** open all pending (shown-state count, no fixed day window, no max-N). **2c** defer 7.R9 (v1 = pull `main` only). Ready for layout pick at **7.1**. **No code yet.**
+- [x] **7.1 — Layout note:** **Inc tray start** chosen (2026-10-10). Task Scheduler logon = not v1. Wire only in **7.5** after 7.2–7.4 modules exist. **No startup wiring yet.**
+- [x] **7.2 — Sync module:** `inc_launcher/formulation_repo_sync.py` — `safe_pull_main()` (`fetch` + `pull --ff-only` when clean + on `main`). Soft skip dirty/wrong branch/not-git. Log `formulation_sync.log`. Tests: `test_formulation_repo_sync.py` **7 passed** (2026-10-10). **Not tray-wired** (7.5).
+- [x] **7.3 — Pending detector:** `inc_launcher/formulation_pending.py` — shown ledger + `list_pending_packs()` / `mark_shown()`. Oldest first, any count. Tests: `test_formulation_pending.py` green with 7.2 suite (**14 passed**, 2026-10-10). **Not tray-wired** (7.5).
+- [x] **7.4 — Opener:** `inc_launcher/formulation_docx_opener.py` — `open_pending_packs()` via default handler, mark shown only on success, open all pending. Tests with 7.2–7.3: **19 passed** (2026-10-10). **Not tray-wired** (7.5).
+- [x] **7.5 — Wire once:** `formulation_catchup` + background call from `tray_app.run_tray` (Inc tray start only, 2026-10-10).
+- [x] **7.6 — Opt-out:** Tray menu **Open formulation packs on start [ON/OFF]** + `settings.formulation_catchup_enabled` (default ON). Does not touch Automation A/B.
+- [x] **7.7 — Tests:** sync/pending/opener/catchup unit tests green (see 7.2–7.6). Hub/config regression covered by existing suite + new toggle tests.
+- [x] **7.8a — Live proof (2026-10-10):** Tray restart opened `business_ideas_20261010.docx` once, marked shown. Sync soft-skipped dirty tree (honest). Historical July packs baselined into shown-ledger so first run did not flood Word. Full §I toggle OFF/ON still owner-optional.
+- [ ] **7.8 — MANUAL_TEST remainder:** (b) multi-pack catch-up if desired, (c) confirm reboot does not re-open shown, (d) toggle OFF. See `inc_launcher/MANUAL_TEST.md` §I.
+- [ ] **7.9 — Optional zero-merge path (deferred by 7.0):** Re-open only if owner later picks **7.R9** (a) auto-merge or (b) PR-branch `.docx` fetch. v1 skips this.
+- [ ] **7.10 — Docs:** README / cloud-run note: cloud creates file, local syncs + opens all not-yet-shown packs, opt-out, 7.R9 choice.
 
-**Phase 7 definition of done:** Today’s new formulation `.docx` opens **once** after login/tray when present on disk; other boots quiet; A/B Automations and Hub unchanged; opt-out works.
+**Phase 7 definition of done:** After cloud A/B has produced packs, PC start syncs what it can and opens **every not-yet-shown** formulation `.docx` (missed days included) **without** daily owner merge/pull/open clicks for the happy path; shown packs stay closed on later boots; A/B Automations and Hub unchanged; opt-out works. **7.R9** only if owner approved a path.
 
 #### Explicitly out of scope (this task)
 
@@ -2599,7 +2626,8 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 - Hijacking or rewriting existing tray schedules (`problem_id_live_mwf`, etc.) as the formulation engine.
 - Building §4 Phase 5.5 tray Hub modal schedule **inside** §19 (track under §4 if still desired).
 - Putting “open Word” inside **cloud** Automation A/B or requiring My Machines for A/B.
-- Opening Word **every** boot or opening **non-today** packs by default.
+- Opening Word **every** boot for packs already marked shown (catch-up of **unshown** packs is in scope under Phase 7).
+- Implementing **7.R9** auto-merge / PR-branch fetch without an explicit owner pick.
 - Auto-trading, live payment, or credentialed browser signup Automations.
 - Chrome live de-bookmark without a separate approved local/browser design (§5 Phase 3 remains its own track).
 
@@ -2613,21 +2641,23 @@ When Inc A/B is stable, **separately** consider Automations for: `project_remind
 - [x] Approve **Phase 0** (spec lock) — 2026-07-23 menu **1** (07:00/11:00 WAT; PR; cloud; Docx in-repo; fetch separate).
 - [x] Approve **Phase 1** (docs/inventory) — 2026-07-23 menu **1** (cloud note + inventory + 26 smokes; **no** Automation yet).
 - [x] Approve **Phase 2** (Automation A only) — created + **Active** 2026-07-24; proof run (2.4) still pending first fire.
-- [ ] Approve **Phase 3** (gate + Automation B).
+- [x] Approve **Phase 3** create (gate + Automation B Active) — **2026-10-10** (test + PR #67). **3.6** daily-chain sign-off still open.
 - [ ] Approve **Phase 4** (optional fetch prep) if desired.
 - [ ] Approve each **Phase 5** medium-fit item individually.
 - [ ] Approve **Phase 6** sign-off.
-- [x] Approve **Phase 7 backlog entry** (local Word open-on-login rules) — 2026-07-24 (docs only; **no code** until 7.0 + Phase 3 Docx).
-- [ ] Approve **Phase 7 implementation** (7.0+) when ready.
+- [x] Approve **Phase 7 backlog entry** (local Word open-on-login rules) — 2026-07-24 (docs only).
+- [x] Re-lock **Phase 7** (catch-up + zero-manual **7.R1–7.R10**) — **2026-10-10** menu **1** (docs only; **no code** until 7.0).
+- [x] **7.0 picks locked** — 1a + 2c (2026-10-10).
+- [ ] Approve **Phase 7 implementation** starting at **7.1** (layout) when ready.
 
-**Suggested milestones (from 2026-07-23 / updated 2026-07-24):**
+**Suggested milestones (from 2026-07-23 / updated 2026-10-10):**
 - Phase 0–1: ✅ **2026-07-23**
-- Phase 2 create: ✅ **2026-07-24** (proof 2.4 pending first fire)
-- Phase 3: after Pass 1 proof (or early approve)
-- Phase 4–5: only after A→B stable
-- Phase 6: when daily `.md`+`.docx` proven
-- Phase 7: after Phase 3 Docx exists (login once-when-new open)
+- Phase 2 create: ✅ **2026-07-24**
+- Phase 3 create+proof: ✅ **2026-10-10** (A+B Active, PR #67). **3.6** optional scheduled-fire sign-off still open
+- Phase 4–5: only after A→B stable + 3.6 if desired
+- Phase 6: when daily `.md`+`.docx` proven on schedule
+- Phase 7: build after **7.0** (catch-up + zero-manual)
 
 **v1 definition of done (formulation chain):** Daily Automation A + gated Automation B produce same-day packed `.md` + `.docx`; §14 held; Hub override intact; pytest green; **C not required**.  
-**v1.1 (optional):** Phase 7 once-when-new local Word open on login/tray.
+**v1.1:** Phase 7 local sync + open **all not-yet-shown** packs (missed days), zero daily owner clicks on the happy path.
 

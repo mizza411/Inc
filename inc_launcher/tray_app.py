@@ -18,9 +18,12 @@ from inc_launcher.config import (
     load_config,
     list_global_actions,
     list_pillars,
+    is_formulation_catchup_enabled,
     is_interval_nudges_enabled,
+    set_formulation_catchup_enabled,
     set_interval_nudges_enabled,
 )
+from inc_launcher.formulation_catchup import start_formulation_catchup_background
 from inc_launcher.hub_window import show_hub
 from inc_launcher.icon_loader import load_tray_icon
 from inc_launcher.nudge_scheduler import start_nudge_scheduler, stop_nudge_scheduler
@@ -66,6 +69,22 @@ def _toggle_interval_nudges() -> None:
         _refresh_tray_menu()
     except Exception as exc:
         logger.exception("Failed to toggle interval nudges: %s", exc)
+
+
+
+def _toggle_formulation_catchup() -> None:
+    try:
+        set_formulation_catchup_enabled(
+            not is_formulation_catchup_enabled(_config_path),
+            _config_path,
+        )
+        state = (
+            "enabled" if is_formulation_catchup_enabled(_config_path) else "disabled"
+        )
+        logger.info("Formulation catch-up %s", state)
+        _refresh_tray_menu()
+    except Exception as exc:
+        logger.exception("Failed to toggle formulation catch-up: %s", exc)
 
 
 def _item_handler(item: Dict[str, Any]) -> Callable[[], None]:
@@ -119,6 +138,15 @@ def build_menu(config: Dict[str, Any]):
             lambda icon, item: _toggle_interval_nudges(),
         )
     )
+    catchup_on = is_formulation_catchup_enabled(_config_path)
+    entries.append(
+        item(
+            "Open formulation packs on start [ON]"
+            if catchup_on
+            else "Open formulation packs on start [OFF]",
+            lambda icon, item: _toggle_formulation_catchup(),
+        )
+    )
     entries.append(Menu.SEPARATOR)
     entries.append(item("Quit", lambda icon, item: icon.stop()))
 
@@ -159,6 +187,10 @@ def run_tray(config_path: str | None = None) -> None:
     )
     _tray_icon = icon
     logger.info("Inc tray icon running (Inc root: %s)", INC_ROOT)
+    start_formulation_catchup_background(
+        enabled=is_formulation_catchup_enabled(config_path_obj),
+        repo_root=INC_ROOT,
+    )
     try:
         icon.run()
     finally:

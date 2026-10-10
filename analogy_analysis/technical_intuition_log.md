@@ -1,5 +1,90 @@
 # Technical Intuition Log
 
+## 2026-10-10 — Formulation Phase 7.5–7.6 tray catch-up wire
+
+**What we did**
+- Added `formulation_catchup.py` (sync then open). Wired a background call on Inc tray start.
+- Tray toggle **Open formulation packs on start [ON/OFF]** (default ON). MANUAL_TEST §I for real Word.
+- Unit tests: 37 related passed. No Task Scheduler logon wire.
+
+**Why it matters**
+Modules alone do not run at boot. Tray start is the hands-off PC hook after cloud packing.
+
+**Intuition analogy**
+Like a doorman who, when you unlock the office, quietly fetches the mail and lays out every unopened letter before you sit down, and you can tell him to skip that ritual tomorrow.
+
+---
+
+---
+
+## 2026-10-10 — Formulation Phase 7.4 docx opener
+
+**What we did**
+- Added `inc_launcher/formulation_docx_opener.py` to open all pending packs oldest-first via `os.startfile`.
+- Marks shown only after a successful launch. Soft-continues on single-file failures. Opener log gitignored.
+- Unit tests green (19 with 7.2–7.3). Tray wire still Phase 7.5.
+
+**Why it matters**
+Detection alone does not put Word on screen. This is the last module before the tray can call sync → pending → open with zero daily clicks.
+
+**Intuition analogy**
+Like a mail clerk who only stamps “delivered” after the envelope is actually handed over, and keeps going down the stack if one letter sticks.
+
+---
+
+---
+
+## 2026-10-10 — Formulation Phase 7.3 pending detector
+
+**What we did**
+- Added `inc_launcher/formulation_pending.py` with shown ledger + oldest-first pending list.
+- Pending count = on-disk packs minus shown keys (no fixed day window). Gitignored `formulation_shown_state.json`.
+- Unit tests green (7 new, 14 with 7.2). No tray wire yet.
+
+**Why it matters**
+Catch-up only works if the PC remembers what you already saw and opens everything else, whether that is one pack or many.
+
+**Intuition analogy**
+Like a reading list that tracks finished books by title, then hands you every unfinished one on the shelf when you sit down, not “whatever is from the last two days.”
+
+---
+
+---
+
+## 2026-10-10 — Formulation Phase 7.2 safe main sync
+
+**What we did**
+- Added `inc_launcher/formulation_repo_sync.py` with `safe_pull_main` (ff-only pull when clean and on `main`).
+- Soft-skips dirty tree / wrong branch / missing `.git`. Appends `formulation_sync.log`. No tray wire yet.
+- Unit tests with scripted git runner: 7 passed.
+
+**Why it matters**
+Catch-up Word open only works if remote packs can land on disk without a force-reset that would wipe owner work.
+
+**Intuition analogy**
+Like a night clerk who restocks the shelf only when the aisle is clear, and leaves a note instead of shoving carts out of the way.
+
+---
+
+---
+
+## 2026-10-10 — Formulation Phase 7 catch-up + zero-manual re-lock
+
+**What we did**
+- Re-locked section 19 Phase 7 in `task.md`: local sync + open all not-yet-shown `business_ideas_*.docx` packs (missed days), zero daily owner clicks.
+- Superseded old today-only 0.4b open rule. Noted optional 7.R9 auto-merge / PR-fetch (owner pick later). No opener code yet.
+- Recorded Automation B Active + PR #67 Phase 3 proof alongside the backlog edit.
+
+**Why it matters**
+Cloud packing alone still leaves a desk gap. Catch-up + local sync is what makes “I was away two days” still surface unread packs without a daily merge/pull ritual.
+
+**Intuition analogy**
+Like a mailbox that not only gets new letters while you travel, but also puts every unopened envelope on the table when you walk in the door, once each, instead of only today’s mail.
+
+---
+
+---
+
 ## 2026-09-16 — File appends; does not rebuild Word
 
 **What we did**

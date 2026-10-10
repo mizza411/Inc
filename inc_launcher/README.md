@@ -101,6 +101,22 @@ Legacy CLI runner remains as **Run all strategies (CLI menu)**.
 
 Manual sign-off: `MANUAL_TEST.md` §G.
 
+## Section 19 Phase 7.2 — Formulation repo sync (module only)
+
+`formulation_repo_sync.safe_pull_main()` fast-forward pulls `origin/main` when the tree is clean and HEAD is `main`. Soft-skips dirty / wrong branch. Never force-resets. Log: `inc_launcher/formulation_sync.log` (gitignored via `*.log`). **Not wired to tray yet** (Phase 7.5).
+
+## Section 19 Phase 7.3 — Pending detector (module only)
+
+`formulation_pending.list_pending_packs()` diffs on-disk `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.docx` against `inc_launcher/formulation_shown_state.json` (gitignored). Returns **all** unshown packs, oldest first — count comes from the ledger, not a fixed day window. `mark_shown()` is ready for Phase 7.4. **Not wired to tray yet.**
+
+## Section 19 Phase 7.4 — Docx opener (module only)
+
+`formulation_docx_opener.open_pending_packs()` opens every pending pack with the OS default app (`os.startfile` on Windows), oldest first, and marks shown **only** after a successful launch. Failures are soft (next pack still tried). Log: `inc_launcher/formulation_opener.log`.
+
+## Section 19 Phase 7.5–7.6 — Tray wire + opt-out
+
+On Inc tray start, a background thread runs `formulation_catchup` (safe `main` pull → open all not-yet-shown packs). Tray menu: **Open formulation packs on start [ON/OFF]** (default ON). Does not disable Automation A/B.
+
 ## Tests
 
 ```powershell
