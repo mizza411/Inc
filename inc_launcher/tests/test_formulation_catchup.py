@@ -17,45 +17,63 @@ from inc_launcher.tray_app import build_menu
 
 
 def test_catchup_disabled_skips():
-    called = {"sync": 0, "open": 0}
+    called = {"sync": 0, "fetch": 0, "open": 0}
 
     def sync(_root):
         called["sync"] += 1
         return SyncResult(status="pulled", detail="x")
+
+    def fetch(_root):
+        called["fetch"] += 1
+        from inc_launcher.formulation_pr_fetch import FetchResult
+
+        return FetchResult(status="skipped_no_branch", detail="x")
 
     def open_packs(_root):
         called["open"] += 1
         return OpenBatchResult()
 
     result = run_formulation_catchup(
-        enabled=False, sync_fn=sync, open_fn=open_packs
+        enabled=False, sync_fn=sync, fetch_fn=fetch, open_fn=open_packs
     )
 
     assert result.skipped is True
     assert result.skip_reason == "disabled"
-    assert called == {"sync": 0, "open": 0}
+    assert called == {"sync": 0, "fetch": 0, "open": 0}
 
 
-def test_catchup_runs_sync_then_open(tmp_path: Path):
+def test_catchup_runs_sync_then_fetch_then_open(tmp_path: Path):
     order: list[str] = []
 
     def sync(_root):
         order.append("sync")
         return SyncResult(status="already_up_to_date", detail="ok")
 
+    def fetch(_root):
+        order.append("fetch")
+        from inc_launcher.formulation_pr_fetch import FetchResult
+
+        return FetchResult(status="skipped_no_branch", detail="none")
+
     def open_packs(_root):
         order.append("open")
         return OpenBatchResult()
 
     result = run_formulation_catchup(
-        tmp_path, enabled=True, sync_fn=sync, open_fn=open_packs
+        tmp_path,
+        enabled=True,
+        sync_fn=sync,
+        fetch_fn=fetch,
+        open_fn=open_packs,
     )
 
     assert isinstance(result, CatchupResult)
     assert result.skipped is False
-    assert order == ["sync", "open"]
+    assert order == ["sync", "fetch", "open"]
     assert result.sync is not None
     assert result.sync.status == "already_up_to_date"
+    assert result.fetch is not None
+    assert result.fetch.status == "skipped_no_branch"
 
 
 def test_catchup_continues_open_after_sync_exception(tmp_path: Path):
@@ -64,12 +82,21 @@ def test_catchup_continues_open_after_sync_exception(tmp_path: Path):
     def sync(_root):
         raise RuntimeError("git down")
 
+    def fetch(_root):
+        from inc_launcher.formulation_pr_fetch import FetchResult
+
+        return FetchResult(status="skipped_no_branch", detail="x")
+
     def open_packs(_root):
         opened["n"] += 1
         return OpenBatchResult()
 
     result = run_formulation_catchup(
-        tmp_path, enabled=True, sync_fn=sync, open_fn=open_packs
+        tmp_path,
+        enabled=True,
+        sync_fn=sync,
+        fetch_fn=fetch,
+        open_fn=open_packs,
     )
 
     assert result.skipped is False

@@ -1,4 +1,19 @@
-# Technical Intuition Log
+﻿# Technical Intuition Log
+
+## 2026-10-11 — Formulation 7.9.1 PR-branch pack fetch
+
+**What we did**
+- Added `inc_launcher/formulation_pr_fetch.py` to copy today’s `.md`+`.docx` from `origin/formulation/auto-YYYYMMDD` via `git show` (no force-reset).
+- Catch-up order is now sync → fetch → open. Soft-skips missing branch/files and newer local packs.
+- Unit tests green (23 related). Docs + task 7.9.0/7.9.1/7.9.3 updated. Live proof 7.9.4 still open.
+
+**Why it matters**
+Cloud packs often sit on an open PR while a dirty tree blocks `git pull` of `main`. Without this fetch, Word never sees the file.
+
+**Intuition analogy**
+Like grabbing only today’s envelope from the courier’s bag when the main mailbox is jammed, instead of emptying the whole street’s mail.
+
+---
 
 ## 2026-10-10 — Formulation Phase 7.5–7.6 tray catch-up wire
 

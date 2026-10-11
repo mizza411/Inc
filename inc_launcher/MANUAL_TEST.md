@@ -141,30 +141,29 @@ Not required for Prospect v1 close.
 ---
 
 
-### I. Formulation catch-up on tray start (section 19 Phase 7) — once at sign-off
+### I. Formulation catch-up on tray start (section 19 Phase 7)
 
-**Why not automated:** real Word + Inc tray process + optional multi-pack catch-up on this PC.
+**Automated (required):** `test_formulation_phase78_signoff.py` plus sync/pending/opener/catchup/pr_fetch tests - multi-pack open, no re-open, toggle OFF skip, menu default ON, PR-branch pack fetch soft paths.
 
-**Automated already:** \	est_formulation_repo_sync.py\, \	est_formulation_pending.py\, \	est_formulation_docx_opener.py\, \	est_formulation_catchup.py\.
+**Optional eyes-only (not a build blocker):** glance that Word actually appears once on a real tray restart. Why not automated: OS Word window focus is not asserted in CI.
 
-- [ ] Tray menu shows **Open formulation packs on start [ON]** (default)
-- [ ] With a pending \usiness_ideas_YYYYMMDD.docx\ not in shown-state, restart Inc tray → Word opens that pack once
-- [ ] Restart tray again → same pack does **not** re-open
-- [ ] Toggle catch-up **OFF** → restart tray → no Word open for a new pending pack
-- [ ] Toggle **ON** again when done testing
+- [x] Phase 7.8 behaviors covered by pytest (2026-10-10)
+- [x] Real Word glance - owner saw the document open on this PC (2026-10-10)
+- [x] Phase 7.9.1 PR-fetch unit tests (2026-10-11)
+- [ ] Phase 7.9.4 live proof - A/B leaves pack on open PR only, dirty tree, tray start opens Word with no merge click
 
 
 ## Sign-off summary
 
 | Check | Automated | Manual (optional) |
 |-------|-----------|-------------------|
-| Phase 4 nudges | Yes (2026-06-29) | Schedule tune (┬ºE) |
-| Phase 2 hub / menu | Yes | ΓÇö |
-| Track C menu wiring | Yes | Filing workflow (┬ºF) |
-| Phase 5 agent formulation | Yes ΓÇö `test_phase5_signoff.py`, `test_agent_run.py` (2026-06-30) | Cursor **Enter** send (deferred ┬ºG) |
-| Prospect Businesses Hub card | Yes ΓÇö `test_formulated_has_prospect_businesses_folder` (2026-07-12) | Tray restart glance (┬ºH) |
-| Phase 7 formulation catch-up | Yes — sync/pending/opener/catchup unit tests (2026-10-10) | Real Word + tray (§I) once at sign-off |
-| External boot | ΓÇö | ┬ºD if desired |
+| Phase 4 nudges | Yes (2026-06-29) | Schedule tune (section E) |
+| Phase 2 hub / menu | Yes | - |
+| Track C menu wiring | Yes | Filing workflow (section F) |
+| Phase 5 agent formulation | Yes - test_phase5_signoff / test_agent_run (2026-06-30) | Cursor Enter (section G, optional) |
+| Prospect Businesses Hub card | Yes - prospect folder config test (2026-07-12) | Tray restart glance (section H) |
+| Phase 7 formulation catch-up | Yes - Phase 7.8 signoff + module tests (2026-10-10) | Optional Word glance (section I) |
+| External boot | - | section D if desired |
 
 **Phase 5 v1:** Dev sign-off **passed via automation** (┬ºG). Optional: Cursor **Enter** when you run a live agent session.  
 **Prospect v1:** Dev sign-off **passed via automation** (┬ºH). Optional: tray restart glance.

@@ -115,7 +115,11 @@ Manual sign-off: `MANUAL_TEST.md` §G.
 
 ## Section 19 Phase 7.5–7.6 — Tray wire + opt-out
 
-On Inc tray start, a background thread runs `formulation_catchup` (safe `main` pull → open all not-yet-shown packs). Tray menu: **Open formulation packs on start [ON/OFF]** (default ON). Does not disable Automation A/B.
+On Inc tray start, a background thread runs `formulation_catchup` (safe `main` pull → open all not-yet-shown packs). Tray menu: **Open formulation packs on start [ON/OFF]** (default ON). Does not disable Automation A/B. Phase 7.8 behaviors are covered by `tests/test_formulation_phase78_signoff.py` (no owner tray click required).
+
+## Section 19 Phase 7.9.1 — Fetch pack from formulation PR branch
+
+When `main` pull is skipped (dirty tree) or today’s pack is only on the open PR branch, `formulation_pr_fetch.fetch_today_formulation_pack()` runs after the safe pull: `git fetch` of `formulation/auto-YYYYMMDD`, then copies only that day’s `.md` + `.docx` under `agent-business-idea-runs/outputs/` via `git show`. Soft no-op if the branch or files are missing. Does not overwrite a newer local file. Does not force-reset. Same log: `formulation_sync.log` (`pr_fetch …` lines). Wired into catch-up before open. Auto-merge of PRs is still deferred (7.9.2).
 
 ## Tests
 
