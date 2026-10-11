@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-11 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-11 ~06:00–07:30 UTC — **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-11 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261011.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261011_060207.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; Sunday Punch politics/lifestyle-heavy + Vanguard opinion/security-heavy — lean Nairametrics + BusinessDay life/capital + Leadership/web cites for commercial Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-10 (esp. InsiderCredit Board Exit Guard, OwerriRunway Reroute Desk, PalmPay FourteenDay Lien Clock, NCDMB AssetAccess Capacity Pack, Kuda Downtime Safe Promise Clock, FreeCrude Qty Reality Board, NNPC Transport Discount Access Desk, Project BRIDGE Fibre Ready Pack, OPay FrozenButUnreversed Clock, LAGIS Title Prep Desk, AutoNARP Licence Stake Pack, FairMoneySettle Receipt Desk, FairMoney WrongDebt Shield, IPOChannel Verify Desk, RefineryIPO ScamShield, Paystack16h Chargeback Desk, Paystack NIBSS Pending Pack, Flutterwave WrongDigit Recover Clock); older `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -215,7 +215,7 @@
   - **WhatsApp voice notes DIY** — common; not structured. Why a Nigeria buyer might still choose this idea: receipt-line accuracy checklist.
   - **POS print only** — offline; no remote confirm. Why a Nigeria buyer might still choose this idea: shareable audio confirm.
   - **Foreign TTS SaaS** — FX. Why a Nigeria buyer might still choose this idea: Naira merchant workflow.
-- **GUEMF:** Mode B **4/3/3/2/4 = 16**. Evidence: Product Hunt RSS title Onepin via fetch (tagline: AI voiceover with names/prices/dates said right).
+- **GUEMF:** Mode B **4/3/3/2/4 = 16**. Evidence: Product Hunt Onepin — https://www.producthunt.com/products/onepin (fetch `20261011_060207`, tagline: AI voiceover with names, prices, and dates said right).
 - **Commercial viability:** Medium.
 - **Dedup:** Medium-high vs CreativeStructure Kit / ReviewReel.
 - **Founder fit:** Good.
@@ -310,7 +310,7 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). S15 skipped by design.
 
-**Pass 2 pack:** Required next. Do not treat Word/Docx as final until Pass 2 normalizes §14 subheads and converts once in-repo.
+**Pass 2 pack:** 2026-10-11. Same 12 ideas and same ranks. Subheads kept in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Onepin evidence link filled from the same day's fetch JSON. No new ideas and no re-rank.
 
 ---
 
@@ -318,7 +318,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-11** | Pass 2 Pack on this same file (`prompts/agent_formulation_pack.txt`) — same ranks, §14 subheads, one-shot in-repo Docx (desktop Word not opened). |
+| **2026-10-11** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-12** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
 | **2026-10-13** | Owner pick: WayvePay Unauthorized IPO Guard landing copy test before IPO close (no secrets in repo). |
 | **2026-10-15** | Owner pick: LagosLongLease Diligence Desk checklist pilot with 3 mainland lease inquiries (no owner PII in git). |
@@ -326,4 +326,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
