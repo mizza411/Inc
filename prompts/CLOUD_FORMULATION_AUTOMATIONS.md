@@ -7,6 +7,8 @@ Does **not** replace Hub clipboard Start (manual override). Does **not** change 
 **Card contract:** `FORMULATION_PASS_CONTRACT.md` (§14).  
 **Phase 0 locks (2026-07-23):** Pass 1 **07:00** WAT · Pass 2 **11:00** WAT · open **PR** (owner merges) · **Cursor cloud** · **Docx in-repo only** · fetch prep = Phase 4.
 
+> **IMPORTANT:** Cloud Automations need Cursor **Privacy Mode** (not **Legacy**). Leaving Legacy is **one-way**. Full note: [`IMPORTANT_cursor_privacy_mode_legacy.md`](IMPORTANT_cursor_privacy_mode_legacy.md).
+
 ---
 
 ## What to create (later phases — not this file’s job)
@@ -53,15 +55,32 @@ Open a PR (formulation/auto-YYYYMMDD); do not push directly to main.
 
 ```
 Inc formulation — AUTOMATION B (Pass 2 Pack).
-If today’s agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md is missing
-or not pending Pass 2, stop with a short no-op note — do not invent ideas.
+Find today’s draft agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md
+(local date Africa/Lagos) that is still pending Pass 2 (_PENDING_PASS_2_PACK_
+or equivalent pending marker / Docx not yet produced for that date).
+
+Search order (do not no-op after checking main only):
+1) Current checkout / default branch
+2) Open PR or branch formulation/auto-YYYYMMDD for today
+3) Any open Inc PR whose head has today’s business_ideas_YYYYMMDD.md pending Pass 2
+
+If found on a formulation branch/PR: check out that branch (or continue on that PR),
+then pack that same file. Prefer updating the existing Pass 1 PR — do not invent a
+second ranked set or a new idea list.
+
+Only if the draft is missing in all of the above: stop with a short no-op note
+(do not invent ideas). Say which places you checked.
+
 Otherwise follow prompts/agent_formulation_pack.txt on that same file.
-Normalize every idea to §14 subheads (Regulatory + Competitors / alternatives on every idea).
+Normalize every idea to section 14 subheads (Regulatory + Competitors / alternatives
+on every idea).
 Optional: python agent-business-idea-runs/idea_card_schema.py <that .md> — fix gaps before Word.
 Then one-shot Docx convert in-repo only (do not open desktop Word).
 Do not invent a new ranked set. Contract: prompts/FORMULATION_PASS_CONTRACT.md.
-Open/update PR per Phase 0 git policy.
+Open/update PR per Phase 0 git policy (formulation/auto-YYYYMMDD, not direct main).
 ```
+
+**Known failure (2026-10-11):** Scheduled B **Succeeded** in under 1 minute with no tools when today’s draft lived only on open PR `formulation/auto-20261011` and the agent checked `main` alone. The search order above is required so Pass 2 updates that PR instead of soft-gating.
 
 ---
 
