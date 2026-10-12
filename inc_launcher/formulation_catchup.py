@@ -1,6 +1,7 @@
-"""Tray-start formulation catch-up: sync, PR-fetch, then open pending packs.
+"""Formulation catch-up: sync, PR-fetch, then open pending packs.
 
 Section 19 Phase 7.5 + 7.9.1 (fetch from formulation/auto-* when needed).
+Phase 7.11.1 also calls this while the tray stays up (post-B schedule).
 """
 
 from __future__ import annotations
@@ -17,6 +18,9 @@ from inc_launcher.formulation_pr_fetch import FetchResult, fetch_today_formulati
 from inc_launcher.formulation_repo_sync import SyncResult, safe_pull_main
 
 logger = logging.getLogger(__name__)
+
+# One catch-up at a time (tray-start + post-B schedule must not race git fetch).
+_CATCHUP_LOCK = threading.Lock()
 
 
 @dataclass
@@ -38,48 +42,55 @@ def run_formulation_catchup(
 ) -> CatchupResult:
     """Safe pull of main, fetch today's pack from formulation PR if needed, open.
 
-    Never raises.
+    Never raises. If another catch-up is already running, skips immediately.
     """
     if not enabled:
         logger.info("formulation catch-up skipped (disabled)")
         return CatchupResult(skipped=True, skip_reason="disabled")
 
-    root = Path(repo_root or INC_ROOT)
-    sync_impl = sync_fn or safe_pull_main
-    fetch_impl = fetch_fn or fetch_today_formulation_pack
-    open_impl = open_fn or open_pending_packs
+    if not _CATCHUP_LOCK.acquire(blocking=False):
+        logger.info("formulation catch-up skipped (already_running)")
+        return CatchupResult(skipped=True, skip_reason="already_running")
 
     try:
-        sync_result = sync_impl(root)
-    except Exception as exc:  # noqa: BLE001
-        logger.exception("formulation sync failed: %s", exc)
-        sync_result = SyncResult(status="failed", detail=str(exc))
+        root = Path(repo_root or INC_ROOT)
+        sync_impl = sync_fn or safe_pull_main
+        fetch_impl = fetch_fn or fetch_today_formulation_pack
+        open_impl = open_fn or open_pending_packs
 
-    try:
-        fetch_result = fetch_impl(root)
-    except Exception as exc:  # noqa: BLE001
-        logger.exception("formulation pr fetch failed: %s", exc)
-        fetch_result = FetchResult(status="failed", detail=str(exc))
+        try:
+            sync_result = sync_impl(root)
+        except Exception as exc:  # noqa: BLE001
+            logger.exception("formulation sync failed: %s", exc)
+            sync_result = SyncResult(status="failed", detail=str(exc))
 
-    try:
-        open_batch = open_impl(root)
-    except Exception as exc:  # noqa: BLE001
-        logger.exception("formulation open failed: %s", exc)
-        open_batch = OpenBatchResult()
+        try:
+            fetch_result = fetch_impl(root)
+        except Exception as exc:  # noqa: BLE001
+            logger.exception("formulation pr fetch failed: %s", exc)
+            fetch_result = FetchResult(status="failed", detail=str(exc))
 
-    logger.info(
-        "formulation catch-up done sync=%s fetch=%s opened=%s failed=%s",
-        sync_result.status,
-        fetch_result.status,
-        open_batch.opened_count,
-        open_batch.failed_count,
-    )
-    return CatchupResult(
-        skipped=False,
-        sync=sync_result,
-        fetch=fetch_result,
-        open_batch=open_batch,
-    )
+        try:
+            open_batch = open_impl(root)
+        except Exception as exc:  # noqa: BLE001
+            logger.exception("formulation open failed: %s", exc)
+            open_batch = OpenBatchResult()
+
+        logger.info(
+            "formulation catch-up done sync=%s fetch=%s opened=%s failed=%s",
+            sync_result.status,
+            fetch_result.status,
+            open_batch.opened_count,
+            open_batch.failed_count,
+        )
+        return CatchupResult(
+            skipped=False,
+            sync=sync_result,
+            fetch=fetch_result,
+            open_batch=open_batch,
+        )
+    finally:
+        _CATCHUP_LOCK.release()
 
 
 def start_formulation_catchup_background(

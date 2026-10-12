@@ -42,6 +42,44 @@ def test_catchup_disabled_skips():
     assert called == {"sync": 0, "fetch": 0, "open": 0}
 
 
+def test_catchup_skips_when_already_running(tmp_path: Path):
+    import threading
+    import time
+
+    started = threading.Event()
+    release = threading.Event()
+    second: dict = {}
+
+    def sync(_root):
+        started.set()
+        release.wait(timeout=5)
+        return SyncResult(status="already_up_to_date", detail="ok")
+
+    def fetch(_root):
+        from inc_launcher.formulation_pr_fetch import FetchResult
+
+        return FetchResult(status="skipped_no_branch", detail="x")
+
+    def open_packs(_root):
+        return OpenBatchResult()
+
+    def _first() -> None:
+        run_formulation_catchup(
+            tmp_path, enabled=True, sync_fn=sync, fetch_fn=fetch, open_fn=open_packs
+        )
+
+    t = threading.Thread(target=_first, daemon=True)
+    t.start()
+    assert started.wait(timeout=5)
+    second["result"] = run_formulation_catchup(
+        tmp_path, enabled=True, sync_fn=sync, fetch_fn=fetch, open_fn=open_packs
+    )
+    release.set()
+    t.join(timeout=5)
+    assert second["result"].skipped is True
+    assert second["result"].skip_reason == "already_running"
+
+
 def test_catchup_runs_sync_then_fetch_then_open(tmp_path: Path):
     order: list[str] = []
 
@@ -126,4 +164,4 @@ def test_formulation_catchup_toggle_roundtrip(tmp_path: Path):
 def test_tray_menu_shows_formulation_catchup_toggle():
     menu = build_menu(load_config())
     labels = [getattr(entry, "text", "") or "" for entry in menu]
-    assert any("Open formulation packs on start" in label for label in labels)
+    assert any("Open formulation packs auto" in label for label in labels)
