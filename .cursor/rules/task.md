@@ -123,10 +123,11 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ## NET-ASK-ALWAYS-SHOW-1 — Ask people / owners window always with Inc launcher (pointer)
 
-**Status:** ⏳ Proposed (01/09/2026) — **do not implement** until a phase is picked  
-**Authoritative backlog:** [`.cursor/rules/task_net_ask_always_show.md`](task_net_ask_always_show.md)  
-**Owner:** every Inc launcher start ⇒ small Ask people/owners window visible (not intermittent)  
-**Next:** Phase **0** diagnose — not code until picked
+**Status:** 🟢 **COMPLETE** (2026-10-12) — Phases **0 · 0b · 1a · 1b · 1c**  
+**Authoritative backlog:** [`.cursor/rules/task_net_ask_always_show.md`](task_net_ask_always_show.md) (safe to delete satellite after commit)  
+**Owner:** every Inc launcher Hub open ⇒ Ask Option B modal with it, restore after dismiss  
+**1c lock:** Automated sign-off + smoke_hub green. Optional eyes-only glance in `inc_launcher/MANUAL_TEST.md` section J.  
+**Next:** stage/commit/push, then optional live glance / delete satellite
 
 ---
 
@@ -1580,7 +1581,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 
 ### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
-**Status:** Automation A+B **Active**; Phase 3 proof PR **#67**; **Phase 7 COMPLETE 2026-10-10** (7.2–7.8 + 7.10). **7.9** reopened **2026-10-11** (hands-free gap; pick **7.9.0** before code).
+**Status:** Automation A+B **Active**; Phase 3 proof PR **#67**; **Phase 7 core COMPLETE 2026-10-10** (7.2–7.8 + 7.10). **7.9.1** fetch shipped **2026-10-11**. **7.11.1** post-B while-running catch-up shipped **2026-10-12**. **7.11.2–7.11.5** still open.
 **One-liner:** Daily Cursor Automations (Pass 1 → Pass 2 → `.md`+`.docx`) plus Inc tray catch-up that syncs `main` and opens **every not-yet-shown** formulation `.docx` — **without** daily owner merge/pull/open clicks on the happy path.
 **Full phased backlog:** see **§19** under Notes (Phases **0–7**).
 **Locks:** Phase 0 cloud/PR table still holds for Automations. **Phase 7 (2026-10-10)** supersedes old **0.4b / today-only** open rule — see Notes §19 Phase 7 decision table (**7.R1–7.R10**). Cloud never opens Word. Local owns pull/sync + Word open + shown-state.
@@ -2618,10 +2619,30 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
   - [x] **7.9.1 — Fetch module (b):** `inc_launcher/formulation_pr_fetch.py` + catch-up wire (sync → fetch → open). Soft paths + local-newer skip. Tests: `test_formulation_pr_fetch.py` + catch-up order (**23** related passed 2026-10-11). Log: `pr_fetch …` in `formulation_sync.log`.
   - [ ] **7.9.2 — Auto-merge (deferred):** Owner picked **(b) only**. Leave until explicit re-pick of **(a)** or **both**.
   - [x] **7.9.3 — Docs:** README 7.9.1 + MANUAL_TEST section I (unit tests ticked, 7.9.4 live proof open). **0.2** unchanged (no auto-merge).
-  - [ ] **7.9.4 — Live proof:** One real day: A/B → pack on open PR only → dirty tree → tray start → Word opens **without** owner merge click.
+  - [x] **7.9.4 — Live proof (2026-10-11):** A→B cloud already proven (B Test ~14:26 → PR #68 docx). Local hands-free gap proven same day: removed local pack + cleared shown, dirty tree → `skipped_dirty` → `pr_fetch fetched` from `origin/formulation/auto-20261011` → Word opened (`opened=1`) with **no merge**. Wall-clock 07:00/11:00 still optional (3.6).
 - [x] **7.10 — Docs:** `inc_launcher/README.md` Phase 7.2–7.6 + 7.8 automation note; `MANUAL_TEST.md` section I; `task.md` §19 locks. Cloud-run note already points at Pass 1/2. Closed 2026-10-10.
+- [ ] **7.11 — Catch-up while tray stays up / after cloud B (opened 2026-10-12):** Owner saw no Word on **12 Oct** though `origin/formulation/auto-20261012` already had `.md`+`.docx`. Tray PID had been up since **11 Oct ~15:08**. Catch-up ran only at tray start, so the later pack was never fetched or opened. **Do not** restart or auto-start the tray after cloud A/B. Cloud still never opens Word.
 
-**Phase 7 definition of done:** After cloud A/B has produced packs, PC start syncs what it can and opens **every not-yet-shown** formulation `.docx` (missed days included) **without** daily owner merge/pull/open clicks for the happy path; shown packs stay closed on later boots; A/B Automations and Hub unchanged; opt-out works. **Core met 2026-10-10.** **Hands-free merge gap = 7.9** (reopened 2026-10-11; blocked on **7.9.0** pick).
+  **Locks (7.11 — 2026-10-12):**
+
+  | ID | Topic | Lock |
+  |----|-------|------|
+  | **7.11.R1** | After cloud | Word open must happen **after B** has left a pack on the remote/PR, even if the tray never restarted that day |
+  | **7.11.R2** | Not restart | **Do not** restart / auto-start Inc tray when A or B finishes |
+  | **7.11.R3** | Keep start catch-up | Tray-start catch-up (7.5) stays. This adds a **while-running** path |
+  | **7.11.R4** | When (recommend) | Primary: local schedule **~11:15–11:30 WAT** (after B at 11:00). Optional capped soft retries if today’s pack is still missing |
+  | **7.11.R5** | Shown-state | Still open each pack **once**, then skip (7.R3 / 7.R5 unchanged) |
+  | **7.11.R6** | Soft no-op | No pack yet, already shown, toggle OFF, pull unsafe → log and continue, never crash tray |
+  | **7.11.R7** | Isolation | New/extended catch-up timer only. Do not edit Automation A/B prompts. Do not hijack Hub / bookmark / Problem ID schedules as the formulation engine |
+
+  - [x] **7.11.0 — Diagnose + locks (no code):** 2026-10-12. Remote pack present, local missing, sync log stale, tray age ~24h, toggle ON. Owner confirmed: not “restart after cloud,” but catch-up again while tray is up.
+  - [x] **7.11.1 — Post-B catch-up while running (2026-10-12):** `formulation_catchup_schedule.py` — once per local day at/after **11:15**, same sync → fetch → open chain. Independent of Interval nudges. Tray menu label **Open formulation packs auto [ON/OFF]**. Keep tray-start path. Soft no-op if nothing pending. Tests: `test_formulation_catchup_schedule.py` green. **Race harden (same day):** single-flight lock (`already_running` skip), boot past 11:15 marks day fired before schedule starts, schedule waits one poll before first tick (no parallel start+post-B git fetch).
+  - [ ] **7.11.2 — Optional late-pack retries (modular):** If today’s pack is still absent after 7.11.1, capped soft retries (e.g. every 30–60 min until shown or end of day). Off or N=0 must leave 7.11.1 alone. (~30 min)
+  - [ ] **7.11.3 — Tests:** Unit/smoke for scheduled fire, no double-open after shown, toggle OFF skip, retry cap. Do not require live Word in CI. (~25 min)
+  - [ ] **7.11.4 — Docs:** README + `inc_launcher/MANUAL_TEST.md` (overnight tray + pack lands later). (~15 min)
+  - [ ] **7.11.5 — Live proof:** Tray stays up across B, today’s not-yet-shown pack opens once without tray restart. (~20 min)
+
+**Phase 7 definition of done:** After cloud A/B has produced packs, the PC opens **every not-yet-shown** formulation `.docx` (missed days included) **without** daily owner merge/pull/open clicks on the happy path, including when the tray **stayed up** and the pack landed later (**7.11**). Shown packs stay closed on later boots. A/B Automations and Hub unchanged. Opt-out works. **Core (7.2–7.8 + 7.10) met 2026-10-10.** **7.9.1 fetch met 2026-10-11.** **7.11 open until 7.11.1–7.11.5 done.**
 
 #### Explicitly out of scope (this task)
 
@@ -2633,6 +2654,7 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 - Building §4 Phase 5.5 tray Hub modal schedule **inside** §19 (track under §4 if still desired).
 - Putting “open Word” inside **cloud** Automation A/B or requiring My Machines for A/B.
 - Opening Word **every** boot for packs already marked shown (catch-up of **unshown** packs is in scope under Phase 7).
+- Restarting or auto-starting the Inc tray when cloud A or B finishes (**7.11** uses while-running catch-up instead).
 - Implementing **7.R9** auto-merge / PR-branch fetch without an explicit owner pick.
 - Auto-trading, live payment, or credentialed browser signup Automations.
 - Chrome live de-bookmark without a separate approved local/browser design (§5 Phase 3 remains its own track).
@@ -2655,14 +2677,16 @@ When Inc A/B is stable, **separately** consider Automations for: `project_remind
 - [x] Re-lock **Phase 7** (catch-up + zero-manual **7.R1–7.R10**) — **2026-10-10** menu **1** (docs only; **no code** until 7.0).
 - [x] **7.0 picks locked** — 1a + 2c (2026-10-10).
 - [x] Approve **Phase 7 complete** — 2026-10-10 (7.2–7.8 + 7.10; optional Word glance waived; 7.9 deferred).
+- [x] **7.11 backlog entry** (catch-up while tray stays up / after B) — **2026-10-12** menu **1** (docs only; **no code** until 7.11.1 pick).
 
-**Suggested milestones (from 2026-07-23 / updated 2026-10-10):**
+**Suggested milestones (from 2026-07-23 / updated 2026-10-12):**
 - Phase 0–1: ✅ **2026-07-23**
 - Phase 2 create: ✅ **2026-07-24**
 - Phase 3 create+proof: ✅ **2026-10-10** (A+B Active, PR #67). **3.6** optional scheduled-fire sign-off still open
 - Phase 4–5: only after A→B stable + 3.6 if desired
 - Phase 6: when daily `.md`+`.docx` proven on schedule
-- Phase 7: ✅ **COMPLETE 2026-10-10** (catch-up + zero-manual; 7.9 deferred)
+- Phase 7 core: ✅ **COMPLETE 2026-10-10** (catch-up + zero-manual; 7.9.1 fetch 2026-10-11)
+- Phase **7.11**: ⏳ opened **2026-10-12** (while-running / post-B catch-up)
 
 **v1 definition of done (formulation chain):** Daily Automation A + gated Automation B produce same-day packed `.md` + `.docx`; §14 held; Hub override intact; pytest green; **C not required**.  
 **v1.1:** Phase 7 local sync + open **all not-yet-shown** packs — **met 2026-10-10**.

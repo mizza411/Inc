@@ -1,5 +1,92 @@
 ﻿# Technical Intuition Log
 
+## 2026-10-12 — NET-ASK-ALWAYS-SHOW Phase 1c automated sign-off
+
+**What we did**
+- Added `test_net_ask_always_show_signoff.py` (Hub always-queue, daily_inc_hub → show_hub, schedule Option B, restore/enrich/tray labels, off-cadence copy).
+- Extended `smoke_hub` for Ask card + tray restore label. 18 related pytest + smoke PASSED.
+
+**Why it matters**
+Locks the “Hub up ⇒ Ask with it” chain without needing a live click every build.
+
+**Intuition analogy**
+Like a shop checklist that proves the greeter is scheduled and the recall button works, even if you still walk the floor once for feel.
+
+---
+
+## 2026-10-12 — NET-ASK-ALWAYS-SHOW Phase 1b restore Ask after dismiss
+
+**What we did**
+- Tray menu **Show Ask people / owners** and Hub sidebar **Show Ask reminder** (with hover label).
+- Shared `restore_network_ask()` opens Hub + Ask Option B again. Unit tests green.
+
+**Why it matters**
+Always-show still allows Not now. Without restore, the pair is gone until the next Hub open.
+
+**Intuition analogy**
+Like a doorbell that always greets you on entry, plus a second button labeled “call the greeter again” if you waved them away.
+
+---
+
+## 2026-10-12 — NET-ASK-ALWAYS-SHOW Phase 1a Hub always pairs Ask modal
+
+**What we did**
+- `HubController.show` queues `always_show_network_ask` after opening Hub (covers tray Open Hub and `daily_inc_hub`).
+- Resolves `network_ask_remind` from config and opens Option B. Soft skip if card missing.
+- `prompt_agent_run` for formulation does not stack a second Ask grab. Unit tests green.
+
+**Why it matters**
+Hub alone was the common “sometimes” path. Pairing Ask on every Hub open makes the small window reliable without waiting for Mon/Wed/Fri 09:30.
+
+**Intuition analogy**
+Like a shop door that always brings the greeter to the front when you open it, not only on the days the greeter’s shift was officially scheduled.
+
+---
+
+## 2026-10-12 — NET-ASK-ALWAYS-SHOW Phase 0b network_ask Option B dispatch
+
+**What we did**
+- Wired `network_ask` in `actions.py` to `run_network_ask_start`.
+- Hub/tray/schedule use `uses_option_b_modal` + `open_hub_with_option_b` + `prepare_option_b_item` (enrich copy).
+- Phase 3 dispatch test and new `test_option_b_network_ask.py` green. Formulation `agent_run` path kept.
+
+**Why it matters**
+The Ask schedule was marking “fired” while doing nothing useful. Always-show cannot work until the small window path actually opens.
+
+**Intuition analogy**
+Like fixing the doorbell so pressing it opens the front door again, before you add “always leave the porch light on.”
+
+---
+
+## 2026-10-12 — Formulation 7.11.1 race harden (start + post-B)
+
+**What we did**
+- Single-flight lock on `run_formulation_catchup` (second call skips as `already_running`).
+- Boot past 11:15 marks the post-B day fired so start catch-up owns that day.
+- Schedule waits one poll before first tick (no immediate race on restart).
+
+**Why it matters**
+A live restart showed start + missed-slot schedule both fetching at once. That slowed Word open and raced git.
+
+**Intuition analogy**
+Like telling the afternoon courier check “already covered by opening-time mail” so two clerks do not fight over the same envelope.
+
+---
+
+## 2026-10-12 — Formulation 7.11.1 post-B catch-up while tray stays up
+
+**What we did**
+- Added `inc_launcher/formulation_catchup_schedule.py`: once per local day at/after 11:15, re-runs the same catch-up chain without restarting the tray.
+- Wired from `tray_app` (start/stop with tray). Same opt-out toggle. Unit tests green.
+
+**Why it matters**
+Cloud B can land a pack hours after boot. Start-only catch-up then never runs again, so Word stays closed even though the remote file exists.
+
+**Intuition analogy**
+Like a receptionist who not only checks the mail when the office opens, but also walks to the lobby again after the 11:00 courier drop, even if nobody unlocked the door a second time.
+
+---
+
 ## 2026-10-11 — Formulation 7.9.1 PR-branch pack fetch
 
 **What we did**

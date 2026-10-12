@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable, Dict, List
 
@@ -23,7 +24,14 @@ from inc_launcher.config import (
     set_formulation_catchup_enabled,
     set_interval_nudges_enabled,
 )
+from inc_launcher.option_b_actions import uses_option_b_modal
 from inc_launcher.formulation_catchup import start_formulation_catchup_background
+from inc_launcher.formulation_catchup_schedule import (
+    mark_post_b_day_fired,
+    past_or_at_post_b,
+    start_formulation_catchup_schedule,
+    stop_formulation_catchup_schedule,
+)
 from inc_launcher.hub_window import show_hub
 from inc_launcher.icon_loader import load_tray_icon
 from inc_launcher.nudge_scheduler import start_nudge_scheduler, stop_nudge_scheduler
@@ -46,6 +54,18 @@ def _refresh_tray_menu() -> None:
 def _open_hub() -> None:
     if _hub_config is not None:
         show_hub(_hub_config)
+
+
+def _restore_network_ask() -> None:
+    """Phase 1b: tray restore after Ask modal dismiss."""
+    try:
+        from inc_launcher.hub_window import restore_network_ask
+
+        cfg = load_config(_config_path)
+        if not restore_network_ask(cfg):
+            logger.warning("Tray restore Ask: network_ask card missing from config")
+    except Exception as exc:
+        logger.exception("Tray restore Ask failed: %s", exc)
 
 
 def _toggle_login_startup() -> None:
@@ -90,10 +110,10 @@ def _toggle_formulation_catchup() -> None:
 def _item_handler(item: Dict[str, Any]) -> Callable[[], None]:
     def _run() -> None:
         try:
-            if item.get("action") == "agent_run":
-                from inc_launcher.hub_window import open_hub_with_agent_run
+            if uses_option_b_modal(item.get("action")):
+                from inc_launcher.hub_window import open_hub_with_option_b
 
-                open_hub_with_agent_run(load_config(_config_path), item)
+                open_hub_with_option_b(load_config(_config_path), item)
                 return
             run_action(item, INC_ROOT)
         except Exception as exc:
@@ -108,6 +128,10 @@ def build_menu(config: Dict[str, Any]):
 
     entries: List[Any] = [
         item("Open Inc Hub", lambda icon, item: _open_hub(), default=True),
+        item(
+            "Show Ask people / owners",
+            lambda icon, item: _restore_network_ask(),
+        ),
         Menu.SEPARATOR,
     ]
 
@@ -141,9 +165,9 @@ def build_menu(config: Dict[str, Any]):
     catchup_on = is_formulation_catchup_enabled(_config_path)
     entries.append(
         item(
-            "Open formulation packs on start [ON]"
+            "Open formulation packs auto [ON]"
             if catchup_on
-            else "Open formulation packs on start [OFF]",
+            else "Open formulation packs auto [OFF]",
             lambda icon, item: _toggle_formulation_catchup(),
         )
     )
@@ -154,6 +178,12 @@ def build_menu(config: Dict[str, Any]):
 
 
 def _run_menu_action(item: Dict[str, Any]) -> None:
+    """Scheduled nudges: Option B actions open Hub + modal (not bare Start)."""
+    if uses_option_b_modal(item.get("action")):
+        from inc_launcher.hub_window import open_hub_with_option_b
+
+        open_hub_with_option_b(load_config(_config_path), item)
+        return
     run_action(item, INC_ROOT)
 
 
@@ -187,14 +217,25 @@ def run_tray(config_path: str | None = None) -> None:
     )
     _tray_icon = icon
     logger.info("Inc tray icon running (Inc root: %s)", INC_ROOT)
+    catchup_enabled = is_formulation_catchup_enabled(config_path_obj)
     start_formulation_catchup_background(
-        enabled=is_formulation_catchup_enabled(config_path_obj),
+        enabled=catchup_enabled,
+        repo_root=INC_ROOT,
+    )
+    # If boot is already past post-B, start catch-up owns today — do not also
+    # schedule-fire the same chain (avoids parallel git fetch on restart).
+    if catchup_enabled and past_or_at_post_b(datetime.now()):
+        mark_post_b_day_fired()
+    # 7.11.1: while tray stays up, re-run catch-up at/after 11:15 local (post cloud B).
+    start_formulation_catchup_schedule(
+        config_path=config_path_obj,
         repo_root=INC_ROOT,
     )
     try:
         icon.run()
     finally:
         _tray_icon = None
+        stop_formulation_catchup_schedule()
         stop_nudge_scheduler()
 
 

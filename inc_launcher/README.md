@@ -25,9 +25,12 @@ The icon appears near the clock.
 
 | Interaction | Result |
 |-------------|--------|
-| **Left-click** icon | Opens **Inc Hub** window |
+| **Left-click** icon | Opens **Inc Hub** window + Ask people/owners Option B modal (always-show) |
 | **Right-click** icon | Tray menu (pillars + global actions) |
-| **Open Inc Hub** (menu, default) | Same hub window |
+| **Open Inc Hub** (menu, default) | Same hub window + Ask modal |
+| **Show Ask people / owners** (tray) | Restore Ask modal after dismiss (Phase 1b) |
+| **Show Ask reminder** (Hub sidebar) | Same restore from Hub |
+| **daily_inc_hub** schedule | Same pair (Hub + Ask modal) |
 
 ## Pillars (config-driven)
 
@@ -115,7 +118,11 @@ Manual sign-off: `MANUAL_TEST.md` §G.
 
 ## Section 19 Phase 7.5–7.6 — Tray wire + opt-out
 
-On Inc tray start, a background thread runs `formulation_catchup` (safe `main` pull → open all not-yet-shown packs). Tray menu: **Open formulation packs on start [ON/OFF]** (default ON). Does not disable Automation A/B. Phase 7.8 behaviors are covered by `tests/test_formulation_phase78_signoff.py` (no owner tray click required).
+On Inc tray start, a background thread runs `formulation_catchup` (safe `main` pull → fetch today’s pack from the formulation branch if needed → open all not-yet-shown packs). Tray menu: **Open formulation packs auto [ON/OFF]** (default ON). Does not disable Automation A/B. Phase 7.8 behaviors are covered by `tests/test_formulation_phase78_signoff.py` (no owner tray click required).
+
+## Section 19 Phase 7.11.1 — Post-B catch-up while tray stays up
+
+Cloud B packs at ~11:00 WAT. If the tray never restarts that day, start-only catch-up would miss the new `.docx`. A dedicated poller (`formulation_catchup_schedule.py`) fires the **same** catch-up chain once per local calendar day at/after **11:15**. Independent of Interval nudges. Same opt-out toggle. Does **not** restart the tray when A/B finish. Soft no-op if nothing pending. Race-hardening: catch-up is single-flight (skip if already running), boot past 11:15 marks the day fired so start + schedule do not both fetch, and the schedule waits one poll before its first tick.
 
 ## Section 19 Phase 7.9.1 — Fetch pack from formulation PR branch
 

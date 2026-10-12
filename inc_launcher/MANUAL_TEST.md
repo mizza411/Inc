@@ -143,14 +143,25 @@ Not required for Prospect v1 close.
 
 ### I. Formulation catch-up on tray start (section 19 Phase 7)
 
-**Automated (required):** `test_formulation_phase78_signoff.py` plus sync/pending/opener/catchup/pr_fetch tests - multi-pack open, no re-open, toggle OFF skip, menu default ON, PR-branch pack fetch soft paths.
+**Automated (required):** `test_formulation_phase78_signoff.py` plus sync/pending/opener/catchup/pr_fetch/catchup_schedule tests - multi-pack open, no re-open, toggle OFF skip, menu default ON, PR-branch pack fetch soft paths, post-B while-running schedule.
 
 **Optional eyes-only (not a build blocker):** glance that Word actually appears once on a real tray restart. Why not automated: OS Word window focus is not asserted in CI.
 
 - [x] Phase 7.8 behaviors covered by pytest (2026-10-10)
 - [x] Real Word glance - owner saw the document open on this PC (2026-10-10)
 - [x] Phase 7.9.1 PR-fetch unit tests (2026-10-11)
-- [ ] Phase 7.9.4 live proof - A/B leaves pack on open PR only, dirty tree, tray start opens Word with no merge click
+- [x] Phase 7.9.4 live proof (2026-10-11) - dirty tree + pack only on formulation branch → fetch → Word open, no merge (plus earlier A/B Test for cloud half)
+- [x] Phase 7.11.1 schedule unit tests (2026-10-12) - once per day at/after 11:15, toggle OFF skip, missed-slot afternoon fire
+- [ ] Phase 7.11.5 live proof (optional) - tray stays up across B, today’s pack opens without tray restart. Why not automated: real Word + wall-clock after 11:00 WAT
+
+### J. Ask people/owners always with Hub (NET-ASK-ALWAYS-SHOW-1)
+
+**Automated (required):** `test_option_b_network_ask.py` + `test_net_ask_always_show.py` + `test_net_ask_always_show_signoff.py` + `smoke_hub` Ask checks - Hub `show` queues Ask, `daily_inc_hub` path, schedule Option B, restore, cadence copy still present off-day.
+
+**Optional eyes-only (1c leftover):** Open Inc Hub from tray → Hub + Ask together. Dismiss → tray **Show Ask people / owners** or Hub **Show Ask reminder**. Why not automated: live tk z-order / grab feel.
+
+- [x] Phase 0b + 1a + 1b + 1c automated sign-off (2026-10-12) - 18 related pytest + smoke_hub PASSED
+- [ ] Optional live pair + restore glance (not a build blocker)
 
 
 ## Sign-off summary

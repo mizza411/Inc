@@ -13,7 +13,7 @@ if str(ROOT) not in sys.path:
 
 from inc_launcher.actions import run_action
 from inc_launcher.config import INC_ROOT, load_config, list_pillars, resolve_path
-from inc_launcher.hub_window import HubController
+from inc_launcher.hub_window import HubController, resolve_network_ask_item
 from inc_launcher.recent import list_pinned, load_recent, record_recent
 from inc_launcher.tray_app import build_menu
 
@@ -62,12 +62,24 @@ def main() -> int:
         if menu is None:
             errors.append("Tray menu build returned None")
         else:
+            labels = [getattr(entry, "text", "") or "" for entry in menu]
             print("[OK] Tray menu builds")
+            if not any("Show Ask people / owners" in label for label in labels):
+                errors.append("Tray menu missing Show Ask people / owners (ALWAYS-SHOW 1b)")
+            else:
+                print("[OK] Tray restore Ask item present")
     except Exception as exc:
         errors.append(f"Tray menu build failed: {exc}")
 
+    ask = resolve_network_ask_item(cfg)
+    if ask is None:
+        errors.append("network_ask_remind card missing from config")
+    else:
+        print(f"[OK] Ask card: {ask.get('label')}")
+
     # Hub window: open briefly on background thread, then close
-    print("[..] Hub window: open 2s then close...")
+    # show() also queues always_show_network_ask (ALWAYS-SHOW 1a)
+    print("[..] Hub window: open 2s then close (pairs Ask modal)...")
     controller = HubController()
     done = threading.Event()
 
@@ -80,7 +92,8 @@ def main() -> int:
             if controller._window is None:
                 errors.append("Hub window was not created")
             elif controller._queue is not None:
-                time.sleep(0.5)
+                # Let always_show_network_ask process before hide
+                time.sleep(1.0)
                 controller._queue.put("hide")
                 time.sleep(0.3)
         except Exception as exc:

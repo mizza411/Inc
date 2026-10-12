@@ -13,9 +13,23 @@ from typing import Any, Callable, Dict, List, Optional
 from inc_launcher.actions import run_action
 from inc_launcher.agent_run_modal import show_agent_run_modal
 from inc_launcher.config import INC_ROOT, list_pillars
+from inc_launcher.option_b_actions import prepare_option_b_item, uses_option_b_modal
 from inc_launcher.recent import list_pinned, load_recent, record_recent
+from inc_launcher.scheduled_nudges import find_menu_item_by_id
 
 logger = logging.getLogger(__name__)
+
+NETWORK_ASK_ITEM_ID = "network_ask_remind"
+
+
+def resolve_network_ask_item(config: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Return the Ask people/owners card from Hub config, or None."""
+    item = find_menu_item_by_id(config, NETWORK_ASK_ITEM_ID)
+    if item is None:
+        return None
+    if item.get("action") != "network_ask":
+        return None
+    return item
 
 # Theme
 SIDEBAR_BG = "#1e293b"
@@ -40,6 +54,7 @@ class HubController:
         self._pending_agent_run: Dict[str, Any] | None = None
 
     def show(self, config: Dict[str, Any]) -> None:
+        """Open Hub and always pair the Ask people/owners Option B modal (1a)."""
         self._config = config
         if self._thread is None or not self._thread.is_alive():
             self._queue = queue.Queue()
@@ -49,9 +64,15 @@ class HubController:
             self._ready.wait(timeout=10)
         assert self._queue is not None
         self._queue.put("show")
+        # NET-ASK-ALWAYS-SHOW-1 Phase 1a: Hub open ⇒ Ask modal (copy may be off-cadence preview).
+        self._queue.put("always_show_network_ask")
 
     def prompt_agent_run(self, config: Dict[str, Any], item: Dict[str, Any]) -> None:
-        """Open Hub and show Option B modal (tray or external callers)."""
+        """Open Hub and show Option B modal (tray or external callers).
+
+        Does not also force Ask on top when the item is agent_run (avoids two grabs).
+        network_ask items already are the Ask modal.
+        """
         self._config = config
         self._pending_agent_run = item
         if self._thread is None or not self._thread.is_alive():
@@ -80,6 +101,8 @@ class HubController:
                 continue
             if cmd == "show":
                 self._open_window()
+            elif cmd == "always_show_network_ask":
+                self._open_network_ask_modal()
             elif cmd == "show_agent_run":
                 self._open_window()
                 if self._window is not None and self._pending_agent_run is not None:
@@ -104,6 +127,20 @@ class HubController:
         self._window.deiconify()
         self._window.lift()
         self._window.focus_force()
+
+    def _open_network_ask_modal(self) -> None:
+        """Show Ask Option B with Hub (always-show). Soft no-op if card missing."""
+        self._open_window()
+        if self._window is None:
+            return
+        item = resolve_network_ask_item(self._config)
+        if item is None:
+            logger.warning(
+                "Always-show Ask skipped: no menu item id=%s",
+                NETWORK_ASK_ITEM_ID,
+            )
+            return
+        self._window.show_agent_run_for_item(item)
 
     def _on_window_close(self) -> None:
         if self._window is not None:
@@ -185,6 +222,24 @@ class HubWindow(tk.Toplevel):
             self._sidebar_buttons[pid] = btn
 
         tk.Frame(sidebar, bg=SIDEBAR_BG, height=1).pack(fill="x", pady=12)
+
+        restore_ask = tk.Button(
+            sidebar,
+            text="Show Ask reminder",
+            bg=SIDEBAR_BG,
+            fg=SIDEBAR_FG,
+            activebackground=SIDEBAR_ACTIVE,
+            activeforeground="#ffffff",
+            relief="flat",
+            anchor="w",
+            padx=16,
+            pady=8,
+            font=("Segoe UI", 9),
+            cursor="hand2",
+            command=self._restore_network_ask,
+        )
+        restore_ask.pack(fill="x")
+        self._attach_hover_label(restore_ask, "Show the Ask people / owners window again")
 
         tk.Button(
             sidebar,
@@ -320,7 +375,15 @@ class HubWindow(tk.Toplevel):
         self._grid_frame.columnconfigure(col, weight=1)
 
         action = item.get("action", "")
-        icon = {"folder": "📁", "file": "📄", "url": "🔗", "command": "▶", "cursor": "⌨", "agent_run": "🤖"}.get(action, "•")
+        icon = {
+            "folder": "📁",
+            "file": "📄",
+            "url": "🔗",
+            "command": "▶",
+            "cursor": "⌨",
+            "agent_run": "🤖",
+            "network_ask": "💬",
+        }.get(action, "•")
 
         tk.Label(
             frame,
@@ -368,11 +431,12 @@ class HubWindow(tk.Toplevel):
 
     def _run_item(self, item: Dict[str, Any]) -> None:
         try:
-            if item.get("action") == "agent_run":
+            if uses_option_b_modal(item.get("action")):
+                prepared = prepare_option_b_item(item)
                 show_agent_run_modal(
                     self,
-                    item,
-                    on_started=lambda: self._after_agent_run_started(item),
+                    prepared,
+                    on_started=lambda: self._after_option_b_started(prepared),
                 )
                 return
             run_action(item, INC_ROOT)
@@ -382,16 +446,63 @@ class HubWindow(tk.Toplevel):
             logger.exception("Hub action failed for %s: %s", item.get("label"), exc)
 
     def show_agent_run_for_item(self, item: Dict[str, Any]) -> None:
-        """Show Option B modal when Hub was opened from tray for agent run."""
+        """Show Option B modal when Hub was opened from tray / schedule."""
+        prepared = prepare_option_b_item(item)
         show_agent_run_modal(
             self,
-            item,
-            on_started=lambda: self._after_agent_run_started(item),
+            prepared,
+            on_started=lambda: self._after_option_b_started(prepared),
         )
 
-    def _after_agent_run_started(self, item: Dict[str, Any]) -> None:
+    def _restore_network_ask(self) -> None:
+        """Phase 1b: bring Ask modal back after dismiss (Hub sidebar)."""
+        item = resolve_network_ask_item(self.config_data)
+        if item is None:
+            logger.warning("Restore Ask skipped: no menu item id=%s", NETWORK_ASK_ITEM_ID)
+            return
+        self.show_agent_run_for_item(item)
+
+    def _attach_hover_label(self, widget: tk.Misc, text: str) -> None:
+        tip: tk.Toplevel | None = None
+
+        def _show(_event: tk.Event) -> None:
+            nonlocal tip
+            if tip is not None:
+                return
+            tip = tk.Toplevel(self)
+            tip.wm_overrideredirect(True)
+            tip.attributes("-topmost", True)
+            tk.Label(
+                tip,
+                text=text,
+                bg="#1e293b",
+                fg="#f8fafc",
+                font=("Segoe UI", 9),
+                padx=8,
+                pady=4,
+            ).pack()
+            x = widget.winfo_rootx() + 8
+            y = widget.winfo_rooty() + widget.winfo_height() + 4
+            tip.geometry(f"+{x}+{y}")
+
+        def _hide(_event: tk.Event) -> None:
+            nonlocal tip
+            if tip is not None:
+                try:
+                    tip.destroy()
+                except tk.TclError:
+                    pass
+                tip = None
+
+        widget.bind("<Enter>", _show)
+        widget.bind("<Leave>", _hide)
+
+    def _after_option_b_started(self, item: Dict[str, Any]) -> None:
         record_recent(item, self._active_pillar_id)
         self._render_content()
+
+    # Compat name used by older tests / call sites
+    _after_agent_run_started = _after_option_b_started
 
     def _handle_close(self) -> None:
         if self._on_close:
@@ -411,9 +522,24 @@ def show_hub(config: Dict[str, Any]) -> None:
     _hub_controller.show(config)
 
 
-def open_hub_with_agent_run(config: Dict[str, Any], item: Dict[str, Any]) -> None:
-    """Open Hub and show agent formulation confirmation modal."""
+def open_hub_with_option_b(config: Dict[str, Any], item: Dict[str, Any]) -> None:
+    """Open Hub and show Option B confirmation modal (agent_run or network_ask)."""
     global _hub_controller
     if _hub_controller is None:
         _hub_controller = HubController()
-    _hub_controller.prompt_agent_run(config, item)
+    _hub_controller.prompt_agent_run(config, prepare_option_b_item(item))
+
+
+def restore_network_ask(config: Dict[str, Any]) -> bool:
+    """Phase 1b: open Hub + Ask modal again after dismiss. Returns False if card missing."""
+    item = resolve_network_ask_item(config)
+    if item is None:
+        logger.warning("Restore Ask skipped: no menu item id=%s", NETWORK_ASK_ITEM_ID)
+        return False
+    open_hub_with_option_b(config, item)
+    return True
+
+
+def open_hub_with_agent_run(config: Dict[str, Any], item: Dict[str, Any]) -> None:
+    """Compat alias for open_hub_with_option_b."""
+    open_hub_with_option_b(config, item)

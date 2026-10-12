@@ -44,6 +44,10 @@ def run_action(item: Dict[str, Any], inc_root: Path | None = None) -> None:
             paste_delay_sec=paste_delay,
             auto_paste=auto_paste,
         )
+    elif action == "network_ask":
+        from network_ask_reminder.hub_nudge import run_network_ask_start
+
+        run_network_ask_start(root)
     else:
         logger.error("Unknown action type: %s", action)
 

@@ -143,7 +143,7 @@ def test_tray_agent_run_opens_hub(monkeypatch):
     def _fake_open(config, item):
         opened.append(item)
 
-    monkeypatch.setattr("inc_launcher.hub_window.open_hub_with_agent_run", _fake_open)
+    monkeypatch.setattr("inc_launcher.hub_window.open_hub_with_option_b", _fake_open)
 
     from inc_launcher.tray_app import _item_handler
 
@@ -151,6 +151,40 @@ def test_tray_agent_run_opens_hub(monkeypatch):
     handler()
 
     assert opened and opened[0]["action"] == "agent_run"
+
+
+def test_tray_network_ask_opens_hub(monkeypatch):
+    opened: list[dict] = []
+
+    def _fake_open(config, item):
+        opened.append(item)
+
+    monkeypatch.setattr("inc_launcher.hub_window.open_hub_with_option_b", _fake_open)
+
+    from inc_launcher.tray_app import _item_handler
+
+    handler = _item_handler({"action": "network_ask", "label": "Ask people / owners"})
+    handler()
+
+    assert opened and opened[0]["action"] == "network_ask"
+
+
+def test_run_action_dispatches_network_ask(monkeypatch):
+    called: list[object] = []
+
+    def _fake_start(inc_root=None):
+        called.append(inc_root)
+
+    monkeypatch.setattr(
+        "network_ask_reminder.hub_nudge.run_network_ask_start",
+        _fake_start,
+    )
+    from pathlib import Path
+
+    from inc_launcher.actions import run_action
+
+    run_action({"action": "network_ask", "label": "Ask"}, inc_root=Path("."))
+    assert len(called) == 1
 
 
 def test_run_action_existing_folder_unchanged(tmp_path: Path):
