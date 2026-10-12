@@ -1,7 +1,7 @@
 """Formulation catch-up: sync, PR-fetch, then open pending packs.
 
 Section 19 Phase 7.5 + 7.9.1 (fetch from formulation/auto-* when needed).
-Phase 7.11.1 also calls this while the tray stays up (post-B schedule).
+Phase 7.11 also calls this while the tray stays up (post-B primary + late retries).
 """
 
 from __future__ import annotations

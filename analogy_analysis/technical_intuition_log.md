@@ -1,5 +1,20 @@
 ﻿# Technical Intuition Log
 
+## 2026-10-12 — Section 19 Phase 7.11.2 late-pack retries
+
+**What we did**
+- Extended `formulation_catchup_schedule.py`: after the once-per-day 11:15 primary fire, capped retries every 45 min (max 8) while today’s pack is still unshown.
+- State file gained a `retries` map. `MAX_LATE_RETRIES=0` leaves 7.11.1 alone. `tick()` returns `primary` / `retry` / `""`.
+- Tests in `test_formulation_catchup_schedule.py` (13 passed). Docs/task checkboxes updated for 7.11.2–7.11.3.
+
+**Why it matters**
+Cloud B can land late or fail the first fetch. Without retries, a tray that already fired at 11:15 would wait until tomorrow’s boot.
+
+**Intuition analogy**
+Like a post office that checks once at lunch, then peeks every 45 minutes until the parcel shows up or closing time, without restarting the whole shop.
+
+---
+
 ## 2026-10-12 — NET-ASK-ALWAYS-SHOW Phase 1c automated sign-off
 
 **What we did**
