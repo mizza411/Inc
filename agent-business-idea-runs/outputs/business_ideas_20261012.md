@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-12 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-12 ~06:00–07:30 UTC — **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-12 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261012.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261012_061239.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; Monday Punch politics/lifestyle-heavy early + BusinessDay opinion/world-heavy — lean Nairametrics + Punch Metro/business + Vanguard labour + Guardian/Technext for e-hailing; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-11 (esp. WayvePay Unauthorized IPO Guard, LagosLongLease Diligence Desk, FairMoney DiscountSettle Clock, MissingMiddle Bundle Pack, PaystackGlovo DoubleDebit Trace, PalmPay FourteenDay Lien Clock, PalmPay RecoveredNotCredited Clock, Flutterwave WrongDigit Recover Clock, BoltKara Surge Log, BoltMigrate Doc Pack, BoltFuelTakeHome Desk, UKPassport Slot Pack, Moniepoint×OPay DualRail Refund Clock, OPay×PalmPay FraudFlag PingPong Clock, IPOChannel Verify Desk, RefineryIPO ScamShield); older `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -309,7 +309,7 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). S15 skipped by design. StartupList Nigeria keyword count **0** in raw snippet — treated as soft filter note, not abort.
 
-**Pass 2 pack:** Required before Docx. Do **not** convert or open Word in this pass. Leave `_PENDING_PASS_2_PACK_`.
+**Pass 2 pack:** 2026-10-12. Same 12 ideas and same ranks. Subheads were already in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Schema check PASS 12 before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -317,7 +317,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-12** | Automation B / Pass 2 pack on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
+| **2026-10-12** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-13** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
 | **2026-10-14** | Owner pick: AUATONFare Commission Strike Desk checklist pilot with 2 Lagos fleet managers (no owner PII in git). |
 | **2026-10-16** | Owner pick: UKOffer Withdraw Deposit Guard landing copy test with 3 education-agent sample flows (no student PII in git). |
@@ -325,4 +325,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
