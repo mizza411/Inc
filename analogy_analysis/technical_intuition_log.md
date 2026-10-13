@@ -1,5 +1,78 @@
 ﻿# Technical Intuition Log
 
+## 2026-10-13 — GOV-IRON-THEFT-1 Phase 4 ops UI + WA stub
+
+**What we did**
+- Added `/ops` HTML desk (seed asset, simulate WA report, advance tickets, KPI table).
+- Added `whatsapp_webhook.py` stub parser + `POST /webhooks/whatsapp` with `X-Stub-Token`.
+- Phase 4 HTTP smokes green. Live Meta WA and field sensors stay in `MANUAL_TEST.md`.
+
+**Why it matters**
+Council demos can click a desk and hit a webhook without waiting on WhatsApp Business approval.
+
+**Intuition analogy**
+Like a hotel front desk with a practice phone line that rings the same ticket board the real guest line will use later.
+
+---
+
+## 2026-10-13 — GOV-IRON-THEFT-1 Phase 3 iron_protect scaffold
+
+**What we did**
+- Built stdlib package `iron_protect/` (assets, tickets, report/sensor ingest, hotspots, KPIs, roles, static yard packs).
+- Added `run_demo.py`, `app_web.py` stub, `tests/test_phase3_smoke.py`, `MANUAL_TEST.md` for WhatsApp/field only.
+- No Hub / tray / auto-launch wiring.
+
+**Why it matters**
+Pilot sales now have a working ticket and KPI core to demo without waiting on hardware.
+
+**Intuition analogy**
+Like opening a small dispatch desk with paper tickets and a wall map before buying a full call-centre platform.
+
+---
+
+## 2026-10-13 — GOV-IRON-THEFT-1 Phase 1 requirements
+
+**What we did**
+- Wrote `PHASE_1_REQUIREMENTS.md`: product bounds, F1–F12 acceptance criteria, KPIs matched to the gov proposal, module plan for later scaffold.
+- Owner keeps LGA / fee blanks on the proposal. No code scaffold yet.
+
+**Why it matters**
+Build and sales share one scorecard before any dashboard code starts.
+
+**Intuition analogy**
+Like a hospital listing triage steps and bed counts before ordering monitors, so the ward is not full of beeping machines with no nurses assigned.
+
+---
+
+## 2026-10-13 — GOV-IRON-THEFT-1 gov pilot proposal
+
+**What we did**
+- Added `gov_iron_theft_mitigation/GOV_PILOT_PROPOSAL.md`: Chairman/Works tone, 90-day one-LGA scope, roles, KPIs, blank fees, MoU annex headings.
+- Kept `SOLUTION_BRIEF.md` as internal. Marked Phase 2a done in task.md. Pricing stays blank in tracked files.
+
+**Why it matters**
+Gov buyers need an ask and a scorecard, not a vendor design memo.
+
+**Intuition analogy**
+Like a contractor quoting one streetlight corridor with a 90-day defect period, not handing over the full city lighting design binder on first visit.
+
+---
+
+## 2026-10-13 — GOV-IRON-THEFT-1 Phase 0 B2G brief
+
+**What we did**
+- Locked commercial intent: sell detect/respond stack to LGs/MDAs (not research-only).
+- Froze tech-led brief at `gov_iron_theft_mitigation/SOLUTION_BRIEF.md` (sensors, tags, report channel, dashboard, scrap-gate patterns).
+- Added parent **GOV-IRON-THEFT-1** to `.cursor/rules/task.md`. No product scaffold yet. No thief-bypass content.
+
+**Why it matters**
+Street sensors alone fail without response SLA and scrap cash-out friction. The brief makes that the product story before any build.
+
+**Intuition analogy**
+Like selling a store a shoplifting kit that pairs door chimes with stock tags and a till log, not chimes alone while stolen goods still sell freely next door.
+
+---
+
 ## 2026-10-13 — Section 19 Phase 7.11.6 faster late retries
 
 **What we did**

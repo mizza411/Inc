@@ -28,7 +28,7 @@
 | Metric | Count | @ 1 task/day | @ 2 tasks/day |
 |--------|------:|-------------:|--------------:|
 | Pending checkboxes (`task.md`, excl. deferred/optional) | **242** | ~242 days | ~121 days |
-| Open Current Priority packages (§1–§19 with remaining work) + FIR/OTI/Tegrid + EVENT/AGRIC + NET-ASK + HB-LC-NG-1 + BB-TIMED tracks | **21** (12 CP + FIR-INC-1 + FIR-ABUJA-MON-1 + OTI-INC-1 + TEGRID-RE-GTM-1 + NICHE-EVENT-1 + AGRIC-IDEAS-1 + NET-ASK-REMIND-1 + HB-LC-NG-1 + BB-TIMED-1) | ~21 days | ~11 days |
+| Open Current Priority packages (§1–§19 with remaining work) + FIR/OTI/Tegrid + EVENT/AGRIC + NET-ASK + HB-LC-NG-1 + BB-TIMED + **GOV-IRON-THEFT-1** tracks | **22** (12 CP + FIR-INC-1 + FIR-ABUJA-MON-1 + OTI-INC-1 + TEGRID-RE-GTM-1 + NICHE-EVENT-1 + AGRIC-IDEAS-1 + NET-ASK-REMIND-1 + HB-LC-NG-1 + BB-TIMED-1 + GOV-IRON-THEFT-1) | ~22 days | ~11 days |
 | Bold unchecked parents (nested phases; finer grain) | **71** | ~71 days | ~36 days |
 | Open `MANUAL_TEST.md` checkboxes (Inc apps) | **80** | (sign-off / human steps; not all are parallel “build” tasks) | — |
 | Open Abuja monetization manual (`ABUJA_MONETIZATION_MANUAL_TESTS.md`) | **42** | owner field/ops steps | — |
@@ -38,7 +38,7 @@
 
 **When a task is completed:** retick here, then refresh this table (pending counts + day columns). Do not leave stale ETAs.
 
-**Active focus (2026-07-28; + EVENT/AGRIC 2026-08-08; + NET-ASK 2026-08-08):** Priority ladder = health (if available) → money → stress. Inc has **no open health track**; money = **FIR-ABUJA-MON-1** visits / **§7** host+`CONTACT_URL` / **OTI-INC-1** Day 1 / **NICHE-EVENT-1** + **AGRIC-IDEAS-1**; habit = **NET-ASK-REMIND-1** (S3+S4 — Phase 6 manual pass); stress = **§5** bookmark hygiene. Health lives in **project_reminder** (`GMAIL-ALERTS-PICK-1.1a`).
+**Active focus (2026-07-28; + EVENT/AGRIC 2026-08-08; + NET-ASK 2026-08-08; + GOV-IRON 2026-10-13):** Priority ladder = health (if available) → money → stress. Inc has **no open health track**; money = **FIR-ABUJA-MON-1** visits / **§7** host+`CONTACT_URL` / **OTI-INC-1** Day 1 / **NICHE-EVENT-1** + **AGRIC-IDEAS-1** / **GOV-IRON-THEFT-1** (B2G iron-theft detect-respond, Phase 0 brief done); habit = **NET-ASK-REMIND-1** (S3+S4 — Phase 6 manual pass); stress = **§5** bookmark hygiene. Health lives in **project_reminder** (`GMAIL-ALERTS-PICK-1.1a`).
 
 **Suggested focus order (2026-07-28):** (1) **Health (PR):** `GMAIL-ALERTS-PICK-1.1a` if working in project_reminder — else skip; (2) **Money:** **FIR-ABUJA-MON-1** Day-1 prep/visits (₦210k) *or* **§7** `CONTACT_URL` + Pages/Streamlit; (3) **Stress:** **§5** Chrome bookmark hygiene *or* **OTI-INC-1** Day 1 signups (also money). **New (2026-08-08):** **NICHE-EVENT-1** / **AGRIC-IDEAS-1** · **NET-ASK-REMIND-1** Phase 6 owner asks — see satellites below.
 
@@ -181,6 +181,42 @@ cd C:\dev\Inc\field_intelligence_radar
 - [ ] Owner picks 1–2 opportunities for a Phase 0 one-pager
 - [ ] If go: write durable md under `business_research/` (pandoc docx optional); **do not** auto-graduate to `Prospect-Businesses/`
 - [ ] If no-go: leave pointer only; do not build
+
+---
+
+## GOV-IRON-THEFT-1 — Gov iron theft mitigation (B2G detect / respond)
+
+**Status:** 🟢 **Phase 0–1 ✅ · 2a ✅ · 3–4 ✅** · Phase 2b optional (2026-10-13)  
+**Attempt:** 5 (Phase 4 ops UI + WA webhook stub)  
+**Commercial intent:** **Yes — monetize, sell to governments** (LGs / MDAs). Original offer, do not clone foreign smart-cover brands.  
+**Goal:** Tech-led prevent + detect + respond stack for theft of government iron (manholes, barricades, railings, similar), guided by developed-country practice patterns, fit for Nigeria ops and procurement.  
+**Brief (internal):** `gov_iron_theft_mitigation/SOLUTION_BRIEF.md`  
+**Gov proposal (external draft):** `gov_iron_theft_mitigation/GOV_PILOT_PROPOSAL.md` — **owner fills LGA / vendor / contact / fees**  
+**Phase 1 requirements:** `gov_iron_theft_mitigation/PHASE_1_REQUIREMENTS.md`  
+**Code:** `iron_protect/` · `app_web.py` (`/ops` + `/webhooks/whatsapp`) · smokes Phase 3+4  
+**Folder:** `gov_iron_theft_mitigation/` at Inc root  
+**Hard rule:** no content that helps thieves bypass controls  
+**Launcher / tray:** **not wired** — ask owner before Project Manager / Hub  
+**Solution-complete (software MVP):** Phase 3–4 code + green smokes. Hardware / live WA = manual waive OK.  
+
+### Layout (locked 2026-10-13)
+
+**Decision:** dedicated folder `gov_iron_theft_mitigation/` (brief + offer + `iron_protect` package). **No** Hub card, tray, or auto-launch until owner opts in.  
+
+**Signals:** multi-phase B2G track, own docs/code, must not fuse with FIR / Tegrid / scrap-yard crime how-tos.
+
+### Phases
+
+- [x] **Phase 0** — Freeze tech-led + commercial solution brief (`SOLUTION_BRIEF.md`)
+- [x] **Phase 1** — Requirements + one-LGA pilot scope (`PHASE_1_REQUIREMENTS.md`: F1–F12, KPIs, module plan). Still no mass build.
+- [x] **Phase 2a** — Gov-facing one-LGA pilot proposal (`GOV_PILOT_PROPOSAL.md`) — owner fills blanks before send
+- [ ] **Phase 2b** — Pilot pricing numbers in local quote annex (not secrets in tracked file) + optional one-page leave-behind
+- [x] **Phase 3** — Scaffold `iron_protect` modules + `run_demo.py`
+- [x] **Phase 4** — Ops HTML desk (`/ops`), WhatsApp webhook stub, `tests/test_phase4_smoke.py`, `MANUAL_TEST.md` leftovers documented
+
+**Related (do not merge):** FIR-ABUJA-MON-1 (site reports) · TEGRID-RE-GTM-1 · HB-LC-NG-1 discovery · §18 compliance lite  
+
+**Next:** owner fill proposal blanks / Phase 2b leave-behind **or** stage-commit-push **or** single manual pass (`MANUAL_TEST.md`, M1–M2 often waived)  
 
 ---
 
