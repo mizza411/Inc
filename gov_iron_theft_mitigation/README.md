@@ -7,6 +7,7 @@ Sell to LGs / MDAs. **No thief-bypass content.**
 
 | File | Audience |
 |------|----------|
+| `SOLUTION_PLAYBOOK.md` | **Run** the full solution (start→finish) |
 | `SOLUTION_BRIEF.md` | Internal design |
 | `GOV_PILOT_PROPOSAL.md` | Gov proposal (owner fills blanks) |
 | `ONE_PAGER_LEAVE_BEHIND.md` | One-page handout for meetings |

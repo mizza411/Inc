@@ -1,5 +1,19 @@
 ﻿# Technical Intuition Log
 
+## 2026-10-13 — GOV-IRON-THEFT-1 Solution Playbook
+
+**What we did**
+- Wrote `SOLUTION_PLAYBOOK.md`: Prepare → Prevent → Detect → Respond → Deny cash-out → Learn/scale, with owners, exit criteria, daily/weekly rhythm, and software-vs-human map.
+- Pointed README/task at the playbook as the run-the-solution file (sell docs stay separate).
+
+**Why it matters**
+Owner asked for the actual end-to-end solution, not more sales packaging.
+
+**Intuition analogy**
+Like a hospital pathway from triage to discharge: every ward knows its step, and the chart says who moves the patient next.
+
+---
+
 ## 2026-10-13 — GOV-IRON-THEFT-1 Phase 2b leave-behind
 
 **What we did**

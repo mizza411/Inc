@@ -6,6 +6,7 @@
 **Status:** Phase 0 brief frozen (no product scaffold yet)  
 **Hard rule:** No content that helps thieves bypass controls  
 
+**Run the solution (start→finish):** [`SOLUTION_PLAYBOOK.md`](SOLUTION_PLAYBOOK.md)  
 **Gov-facing pilot proposal (send after filling blanks):** [`GOV_PILOT_PROPOSAL.md`](GOV_PILOT_PROPOSAL.md) — this file stays internal.  
 **One-page leave-behind:** [`ONE_PAGER_LEAVE_BEHIND.md`](ONE_PAGER_LEAVE_BEHIND.md)  
 **Phase 1 requirements (internal):** [`PHASE_1_REQUIREMENTS.md`](PHASE_1_REQUIREMENTS.md)

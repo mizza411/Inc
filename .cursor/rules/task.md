@@ -186,14 +186,14 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ## GOV-IRON-THEFT-1 — Gov iron theft mitigation (B2G detect / respond)
 
-**Status:** 🟢 **Phases 0–4 ✅** (2026-10-13) — owner fills LGA/fee blanks + optional local quote  
-**Attempt:** 6 (Phase 2b leave-behind)  
+**Status:** 🟢 **Phases 0–4 ✅** · **Solution Playbook ✅** (2026-10-13) — owner fills LGA/fee blanks  
+**Attempt:** 7 (Solution Playbook start→finish)  
 **Commercial intent:** **Yes — monetize, sell to governments** (LGs / MDAs). Original offer, do not clone foreign smart-cover brands.  
 **Goal:** Tech-led prevent + detect + respond stack for theft of government iron (manholes, barricades, railings, similar), guided by developed-country practice patterns, fit for Nigeria ops and procurement.  
-**Brief (internal):** `gov_iron_theft_mitigation/SOLUTION_BRIEF.md`  
-**Gov proposal:** `GOV_PILOT_PROPOSAL.md` · **Leave-behind:** `ONE_PAGER_LEAVE_BEHIND.md` — **owner fills LGA / vendor / contact / fees**  
-**Phase 1 requirements:** `gov_iron_theft_mitigation/PHASE_1_REQUIREMENTS.md`  
-**Code:** `iron_protect/` · `app_web.py` (`/ops` + `/webhooks/whatsapp`) · smokes Phase 3+4  
+**Run the solution:** `gov_iron_theft_mitigation/SOLUTION_PLAYBOOK.md` (Prepare→Prevent→Detect→Respond→Deny cash-out→Learn)  
+**Brief (design):** `SOLUTION_BRIEF.md` · **Sell:** `GOV_PILOT_PROPOSAL.md` · `ONE_PAGER_LEAVE_BEHIND.md` — **owner fills blanks**  
+**Phase 1 requirements:** `PHASE_1_REQUIREMENTS.md`  
+**Code:** `iron_protect/` · `app_web.py` · smokes Phase 3+4  
 **Folder:** `gov_iron_theft_mitigation/` at Inc root  
 **Hard rule:** no content that helps thieves bypass controls  
 **Launcher / tray:** **not wired** — ask owner before Project Manager / Hub  
@@ -201,7 +201,7 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ### Layout (locked 2026-10-13)
 
-**Decision:** dedicated folder `gov_iron_theft_mitigation/` (brief + offer + `iron_protect` package). **No** Hub card, tray, or auto-launch until owner opts in.  
+**Decision:** dedicated folder `gov_iron_theft_mitigation/` (brief + offer + playbook + `iron_protect` package). **No** Hub card, tray, or auto-launch until owner opts in.  
 
 **Signals:** multi-phase B2G track, own docs/code, must not fuse with FIR / Tegrid / scrap-yard crime how-tos.
 
@@ -213,10 +213,11 @@ cd C:\dev\Inc\field_intelligence_radar
 - [x] **Phase 2b** — One-page leave-behind (`ONE_PAGER_LEAVE_BEHIND.md`). Fee line blank in repo. Real ₦ figures stay in owner local quote letter.
 - [x] **Phase 3** — Scaffold `iron_protect` modules + `run_demo.py`
 - [x] **Phase 4** — Ops HTML desk (`/ops`), WhatsApp webhook stub, `tests/test_phase4_smoke.py`, `MANUAL_TEST.md` leftovers documented
+- [x] **Solution Playbook** — Start-to-finish ops (`SOLUTION_PLAYBOOK.md`): Prepare, Prevent, Detect, Respond, Deny cash-out, Learn/scale
 
 **Related (do not merge):** FIR-ABUJA-MON-1 (site reports) · TEGRID-RE-GTM-1 · HB-LC-NG-1 discovery · §18 compliance lite  
 
-**Next:** owner fill leave-behind / proposal blanks → approach LGA **or** stage/commit/push leave-behind **or** `MANUAL_TEST.md` once  
+**Next:** follow `SOLUTION_PLAYBOOK.md` with a named LGA **or** stage/commit/push playbook **or** fill sell blanks  
 
 ---
 
