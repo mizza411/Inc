@@ -152,7 +152,8 @@ Not required for Prospect v1 close.
 - [x] Phase 7.9.1 PR-fetch unit tests (2026-10-11)
 - [x] Phase 7.9.4 live proof (2026-10-11) - dirty tree + pack only on formulation branch → fetch → Word open, no merge (plus earlier A/B Test for cloud half)
 - [x] Phase 7.11.1 schedule unit tests (2026-10-12) - once per day at/after 11:15, toggle OFF skip, missed-slot afternoon fire
-- [x] Phase 7.11.2–7.11.3 late-retry unit tests (2026-10-12) - interval, cap, shown skip, max_retries=0 leaves primary alone (13 passed)
+- [x] Phase 7.11.2–7.11.3 late-retry unit tests (2026-10-12) - interval, cap, shown skip, max_retries=0 leaves primary alone
+- [x] Phase 7.11.6 fast retry interval (2026-10-13) - default 10 min (not 45), cap still 8
 - [ ] Phase 7.11.5 live proof (optional) - tray stays up across B, today’s pack opens without tray restart (primary or late retry). Why not automated: real Word + wall-clock after 11:00 WAT
 
 ### J. Ask people/owners always with Hub (NET-ASK-ALWAYS-SHOW-1)

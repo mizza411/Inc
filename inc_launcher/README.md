@@ -124,7 +124,7 @@ On Inc tray start, a background thread runs `formulation_catchup` (safe `main` p
 
 Cloud B packs at ~11:00 WAT. If the tray never restarts that day, start-only catch-up would miss the new `.docx`. A dedicated poller (`formulation_catchup_schedule.py`) fires the **same** catch-up chain once per local calendar day at/after **11:15** (**7.11.1**). Independent of Interval nudges. Same opt-out toggle. Does **not** restart the tray when A/B finish. Soft no-op if nothing pending. Race-hardening: catch-up is single-flight (skip if already running), boot past 11:15 marks the day fired so start + schedule do not both fetch, and the schedule waits one poll before its first tick.
 
-**7.11.2 late-pack retries:** If today’s date key is still absent from the shown ledger after the primary 11:15 fire, the poller retries the same chain every **45 minutes**, up to **8** times, until the pack is shown or local hour is past 23. Setting `MAX_LATE_RETRIES=0` turns retries off without changing the primary slot. State file: `formulation_catchup_schedule_fired.json` (`fired` days + per-day `retries`).
+**7.11.2 / 7.11.6 late-pack retries:** If today’s date key is still absent from the shown ledger after the primary 11:15 fire (including after a failed `git fetch`), the poller retries the same chain every **10 minutes**, up to **8** times, until the pack is shown or local hour is past 23. Setting `MAX_LATE_RETRIES=0` turns retries off without changing the primary slot. State file: `formulation_catchup_schedule_fired.json` (`fired` days + per-day `retries`).
 
 ## Section 19 Phase 7.9.1 — Fetch pack from formulation PR branch
 

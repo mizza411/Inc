@@ -1,5 +1,20 @@
 ﻿# Technical Intuition Log
 
+## 2026-10-13 — Section 19 Phase 7.11.6 faster late retries
+
+**What we did**
+- Dropped late-retry interval from 45 min to **10 min** when today’s pack is still unshown (max 8 unchanged).
+- Triggered by the 2026-10-13 case: primary fired, `git fetch` reset, Word stayed closed until a manual catch-up.
+- Tests lock the default at 10 min. Docs/task updated.
+
+**Why it matters**
+A flaky network at 11:15 should not mean waiting until noon for the next automatic open.
+
+**Intuition analogy**
+Like refreshing the tracking page every ten minutes after a failed delivery scan, instead of only once every three-quarters of an hour.
+
+---
+
 ## 2026-10-12 — Section 19 Phase 7.11.2 late-pack retries
 
 **What we did**

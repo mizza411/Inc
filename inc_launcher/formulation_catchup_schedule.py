@@ -1,9 +1,10 @@
 """While-running formulation catch-up after cloud B (section 19 Phase 7.11).
 
 7.11.1: once per local day at/after 11:15.
-7.11.2: if today's pack is still not shown, capped soft retries every
-RETRY_INTERVAL_MINUTES until shown or end of day. MAX_LATE_RETRIES=0
-disables retries only (primary 11:15 still runs).
+7.11.2 / 7.11.6: if today's pack is still not shown (e.g. fetch failed),
+capped soft retries every RETRY_INTERVAL_MINUTES (default 10) until shown
+or end of day. MAX_LATE_RETRIES=0 disables retries only (primary 11:15
+still runs).
 """
 
 from __future__ import annotations
@@ -28,8 +29,9 @@ POLL_SECONDS = 30
 FIRED_STATE_FILE = PACKAGE_DIR / "formulation_catchup_schedule_fired.json"
 MAX_FIRED_DAYS = 21
 
-# 7.11.2 — late pack retries (0 = off, leaves 7.11.1 alone)
-RETRY_INTERVAL_MINUTES = 45
+# 7.11.2 / 7.11.6 — late pack retries (0 = off, leaves 7.11.1 alone).
+# 10 min recovers from transient git fetch failures sooner than the old 45.
+RETRY_INTERVAL_MINUTES = 10
 MAX_LATE_RETRIES = 8
 LATE_RETRY_END_HOUR = 23
 
