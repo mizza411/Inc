@@ -9,6 +9,7 @@ Sell to LGs / MDAs. **No thief-bypass content.**
 |------|----------|
 | `SOLUTION_BRIEF.md` | Internal design |
 | `GOV_PILOT_PROPOSAL.md` | Gov proposal (owner fills blanks) |
+| `ONE_PAGER_LEAVE_BEHIND.md` | One-page handout for meetings |
 | `PHASE_1_REQUIREMENTS.md` | F1–F12 acceptance criteria |
 | `MANUAL_TEST.md` | Owner once at sign-off |
 

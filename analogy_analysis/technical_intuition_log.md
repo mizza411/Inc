@@ -1,5 +1,19 @@
 ﻿# Technical Intuition Log
 
+## 2026-10-13 — GOV-IRON-THEFT-1 Phase 2b leave-behind
+
+**What we did**
+- Added `ONE_PAGER_LEAVE_BEHIND.md`: problem, 90-day deliverables, KPIs, MoU ask, blank fee line.
+- Marked Phase 2b done in task.md. Real naira stays in owner local quote.
+
+**Why it matters**
+A chairman will take one page from a meeting, not the full proposal binder.
+
+**Intuition analogy**
+Like a clinic flyer that lists the checkup package and the call-to-book line, while the itemised invoice stays in the billing office.
+
+---
+
 ## 2026-10-13 — GOV-IRON-THEFT-1 Phase 4 ops UI + WA stub
 
 **What we did**

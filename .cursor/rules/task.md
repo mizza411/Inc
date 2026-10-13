@@ -186,12 +186,12 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ## GOV-IRON-THEFT-1 — Gov iron theft mitigation (B2G detect / respond)
 
-**Status:** 🟢 **Phase 0–1 ✅ · 2a ✅ · 3–4 ✅** · Phase 2b optional (2026-10-13)  
-**Attempt:** 5 (Phase 4 ops UI + WA webhook stub)  
+**Status:** 🟢 **Phases 0–4 ✅** (2026-10-13) — owner fills LGA/fee blanks + optional local quote  
+**Attempt:** 6 (Phase 2b leave-behind)  
 **Commercial intent:** **Yes — monetize, sell to governments** (LGs / MDAs). Original offer, do not clone foreign smart-cover brands.  
 **Goal:** Tech-led prevent + detect + respond stack for theft of government iron (manholes, barricades, railings, similar), guided by developed-country practice patterns, fit for Nigeria ops and procurement.  
 **Brief (internal):** `gov_iron_theft_mitigation/SOLUTION_BRIEF.md`  
-**Gov proposal (external draft):** `gov_iron_theft_mitigation/GOV_PILOT_PROPOSAL.md` — **owner fills LGA / vendor / contact / fees**  
+**Gov proposal:** `GOV_PILOT_PROPOSAL.md` · **Leave-behind:** `ONE_PAGER_LEAVE_BEHIND.md` — **owner fills LGA / vendor / contact / fees**  
 **Phase 1 requirements:** `gov_iron_theft_mitigation/PHASE_1_REQUIREMENTS.md`  
 **Code:** `iron_protect/` · `app_web.py` (`/ops` + `/webhooks/whatsapp`) · smokes Phase 3+4  
 **Folder:** `gov_iron_theft_mitigation/` at Inc root  
@@ -210,13 +210,13 @@ cd C:\dev\Inc\field_intelligence_radar
 - [x] **Phase 0** — Freeze tech-led + commercial solution brief (`SOLUTION_BRIEF.md`)
 - [x] **Phase 1** — Requirements + one-LGA pilot scope (`PHASE_1_REQUIREMENTS.md`: F1–F12, KPIs, module plan). Still no mass build.
 - [x] **Phase 2a** — Gov-facing one-LGA pilot proposal (`GOV_PILOT_PROPOSAL.md`) — owner fills blanks before send
-- [ ] **Phase 2b** — Pilot pricing numbers in local quote annex (not secrets in tracked file) + optional one-page leave-behind
+- [x] **Phase 2b** — One-page leave-behind (`ONE_PAGER_LEAVE_BEHIND.md`). Fee line blank in repo. Real ₦ figures stay in owner local quote letter.
 - [x] **Phase 3** — Scaffold `iron_protect` modules + `run_demo.py`
 - [x] **Phase 4** — Ops HTML desk (`/ops`), WhatsApp webhook stub, `tests/test_phase4_smoke.py`, `MANUAL_TEST.md` leftovers documented
 
 **Related (do not merge):** FIR-ABUJA-MON-1 (site reports) · TEGRID-RE-GTM-1 · HB-LC-NG-1 discovery · §18 compliance lite  
 
-**Next:** owner fill proposal blanks / Phase 2b leave-behind **or** stage-commit-push **or** single manual pass (`MANUAL_TEST.md`, M1–M2 often waived)  
+**Next:** owner fill leave-behind / proposal blanks → approach LGA **or** stage/commit/push leave-behind **or** `MANUAL_TEST.md` once  
 
 ---
 

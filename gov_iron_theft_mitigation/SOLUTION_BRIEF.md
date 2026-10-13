@@ -7,6 +7,7 @@
 **Hard rule:** No content that helps thieves bypass controls  
 
 **Gov-facing pilot proposal (send after filling blanks):** [`GOV_PILOT_PROPOSAL.md`](GOV_PILOT_PROPOSAL.md) — this file stays internal.  
+**One-page leave-behind:** [`ONE_PAGER_LEAVE_BEHIND.md`](ONE_PAGER_LEAVE_BEHIND.md)  
 **Phase 1 requirements (internal):** [`PHASE_1_REQUIREMENTS.md`](PHASE_1_REQUIREMENTS.md)
 
 ---
@@ -191,7 +192,7 @@ Street sensors plus scrap records beat either alone.
 | **0** | This brief frozen on disk — done |
 | **1** | Requirements + one-LGA pilot scope + acceptance criteria — done (`PHASE_1_REQUIREMENTS.md`) |
 | **2a** | Gov pilot proposal — done (owner fills blanks) |
-| **2b** | Local pricing + optional leave-behind |
+| **2b** | One-page leave-behind — done (fee blank in repo) |
 | **3** | Scaffold `iron_protect` — done (2026-10-13) |
 | **4** | Ops UI + WhatsApp stub + smokes — done (2026-10-13) |
 
