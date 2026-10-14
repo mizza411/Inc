@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-14 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-14 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-14 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261014.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261014_060156.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; Wednesday Punch politics/security-heavy + BusinessDay opinion/features-heavy early — lean Nairametrics + BusinessDay energy weekender + Punch business / web cites for commercial Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on; StartupList Africa **ok** HTTP 200 after `requests` install)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-13 (esp. CashTransfer AuditTrail Desk, IPOExtend Africa Channel Desk, Remita KYC Breach Ready Pack, RetailDilution Rights Defense Pack, PiggyVest Impersonation Spot Desk, AUATONFare Commission Strike Desk, UKOffer Withdraw Deposit Guard, PalmPay UnwantedLoan Interest Clock, Lagos3000MW MeterReady Pack, Carbon×Moniepoint WrongXfer PingPong Clock, WayvePay Unauthorized IPO Guard, AppVsPump FuelRelief Access Desk, DMSOct6 Onboard Desk, NAFDAC BannedPesticide Spot Desk, Flutterwave WrongDigit Recover Clock, Kuda Downtime Safe Promise Clock, FairMoney DiscountSettle Clock); older `business_ideas_20260715.md` / `past_business_ideas.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -304,7 +304,9 @@
 
 **Data freshness:** Fetch timestamp in `agent_strategy_inputs_20261014_060156.json` (~06:01 UTC 14 Oct 2026). Soft-fails: Techpoint/FN RSS empty; BusinessDay/Punch early mix lifestyle/politics — commercial spine from Nairametrics + BusinessDay energy weekender + Punch business + FIJ.
 
-**Partial runs / blockers:** None aborting. S1 script interactive path skipped (`strategy_1_run` skipped — agent-native synthesis). S15 skipped by design.
+**Partial runs / blockers:** None aborting. S1 script interactive path skipped (`strategy_1_run` skipped, agent-native synthesis). S15 skipped by design.
+
+**Pass 2 pack:** 2026-10-14. Same 12 ideas and same ranks. Subheads were already in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Schema check PASS 12 before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -312,7 +314,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-14** | Pass 2 Pack: paste `prompts/agent_formulation_pack.txt` on this same `.md`, normalize section-14 subheads, optional `idea_card_schema.py`, then one-shot Docx in-repo only. |
+| **2026-10-14** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-15–16** | Validate DeviceChecker: call 2–3 Computer Village / importer sellers — would they pay for a pre-sale IMEI/type-approval pack before Customs clearance? |
 | **2026-10-15–17** | Validate ShellVaaris: interview 1–2 industrial gas customers on Ogun/Rivers laterals — what notices they fear during ownership transfer. |
 | **2026-10-16–18** | S1 clocks: 5-user smoke on evidence-pack UX (PebbleScore hold + GTBank×OPay find-who flows) without storing BVN/NIN in tracked files. |
@@ -321,5 +323,6 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+## Docx status
+
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
