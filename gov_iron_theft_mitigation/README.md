@@ -13,6 +13,10 @@ Sell to LGs / MDAs. **No thief-bypass content.**
 | `ONE_PAGER_LEAVE_BEHIND.md` | One-page handout for meetings |
 | `PHASE_1_REQUIREMENTS.md` | F1–F12 acceptance criteria |
 | `MANUAL_TEST.md` | Owner once at sign-off |
+| `media/VIDEO_PRODUCTION_PACKAGE.md` | Claude storyboard + shot specs for HD motion video |
+| `media/chatgpt_workflow_storyboard.jpg` | ChatGPT 6-panel visual storyboard (UI mock insight) |
+
+**Note:** Day-90 numbers and LGA labels in the ChatGPT image are **illustrative mocks**, not real pilot results.
 
 ## Run (Phase 3–4)
 

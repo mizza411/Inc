@@ -192,6 +192,7 @@ cd C:\dev\Inc\field_intelligence_radar
 **Goal:** Tech-led prevent + detect + respond stack for theft of government iron (manholes, barricades, railings, similar), guided by developed-country practice patterns, fit for Nigeria ops and procurement.  
 **Run the solution:** `gov_iron_theft_mitigation/SOLUTION_PLAYBOOK.md` (Prepare→Prevent→Detect→Respond→Deny cash-out→Learn)  
 **Brief (design):** `SOLUTION_BRIEF.md` · **Sell:** `GOV_PILOT_PROPOSAL.md` · `ONE_PAGER_LEAVE_BEHIND.md` — **owner fills blanks**  
+**Media (video refs):** `media/VIDEO_PRODUCTION_PACKAGE.md` (Claude) · `media/chatgpt_workflow_storyboard.jpg` (ChatGPT) — mock KPIs/LGA labels are illustrative only  
 **Phase 1 requirements:** `PHASE_1_REQUIREMENTS.md`  
 **Code:** `iron_protect/` · `app_web.py` · smokes Phase 3+4  
 **Folder:** `gov_iron_theft_mitigation/` at Inc root  
