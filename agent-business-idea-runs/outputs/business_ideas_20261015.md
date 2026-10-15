@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-15 ~06:00–07:00 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-15 ~06:00-07:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-15 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261015.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261015_060213.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; Thursday Punch politics/lifestyle-heavy + BusinessDay politics/world-heavy — lean Nairametrics + Punch business/web cites + FIJ for commercial Mode A / S1; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-14 (esp. DeviceChecker Import Ready Pack, ShellVaaris Gas Continuity Desk, PebbleScore FairMoney Hold Clock, N66 Discount Exit Disclosure Desk, GTBank×OPay Unauth FindWho Clock, CashTransfer AuditTrail Desk, IPOExtend Africa Channel Desk, Remita KYC Breach Ready Pack, AUATONFare Commission Strike Desk, WayvePay Unauthorized IPO Guard, LagosLongLease Diligence Desk, FairMoney DiscountSettle Clock, PalmPay FourteenDay Lien Clock, Kuda Downtime Safe Promise Clock, Carbon×Moniepoint WrongXfer PingPong Clock, Flutterwave WrongDigit Recover Clock, NNPC Transport Discount Access Desk, SoftTest RiskTier Prep Desk, LAWMA PSP Capacity Guard); older `business_ideas_20260715.md` / `20261010` / `20261011`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -312,7 +312,7 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). BusinessDay/Punch early feeds politics/lifestyle-heavy — commercial Mode A drawn from Nairametrics + Punch business + FIJ. Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). S15 skipped by design.
 
-**Pass 2 pack:** Required before Docx. Paste `prompts/agent_formulation_pack.txt` against this same dated `.md`. Do not invent a new ranked set in Pass 2.
+**Pass 2 pack:** 2026-10-15. Same 12 ideas and same ranks. Subheads were already in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Schema check PASS 12 before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -320,7 +320,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-15** | Pass 2 pack on this same file (same ranks, section 14 subheads). Optional `idea_card_schema.py` after pack. One-shot in-repo Docx, desktop Word not opened. |
+| **2026-10-15** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-16** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve. |
 | **2026-10-17** | Owner pick: IndependentMarketer Discount Access Desk landing copy test while 30-day window is live (no secrets in repo). |
 | **2026-10-18** | Owner pick: DealRoom Bankable Ready Pack checklist pilot with 2 public-portal project shortlists (no owner PII in git). |
@@ -328,4 +328,6 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+## Docx status
+
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
