@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-16 ~06:00–07:30 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-10-16 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-16 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261016.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261016_060304.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList S6 **429**; Friday Punch politics/lifestyle-heavy early + Vanguard lifestyle/politics-heavy — lean Nairametrics + BusinessDay + Punch business + FIJ for commercial Mode A / S1; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-15 (esp. IndependentMarketer Discount Access Desk, DealRoom Bankable Ready Pack, Moniepoint×OPay ErroneousCredit Refuse Clock, LagosBetting Licence Verify Pack, PalmPay FuelPOS TwoYear Refund Clock, DeviceChecker Import Ready Pack, ShellVaaris Gas Continuity Desk, PebbleScore FairMoney Hold Clock, N66 Discount Exit Disclosure Desk, GTBank×OPay Unauth FindWho Clock, CashTransfer AuditTrail Desk, IPOExtend Africa Channel Desk, Remita KYC Breach Ready Pack, RetailDilution Rights Defense Pack, PiggyVest Impersonation Spot Desk, AUATONFare Commission Strike Desk, WayvePay Unauthorized IPO Guard, LagosLongLease Diligence Desk, FairMoney DiscountSettle Clock, MissingMiddle Bundle Pack, PaystackGlovo DoubleDebit Trace, InsiderCredit Board Exit Guard, OwerriRunway Reroute Desk, PalmPay FourteenDay Lien Clock, Kuda Downtime Safe Promise Clock, Flutterwave WrongDigit Recover Clock, Moniepoint CourtOrder Refund Clock, NNPC Transport Discount Access Desk); older `business_ideas_20260715.md` / `past_business_ideas.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -308,13 +308,15 @@
 
 **Partial runs:** None aborted the whole job. S6 directory blocked on 429; continued with synthesis.
 
+**Pass 2 pack:** 2026-10-16. Same 12 ideas and same ranks. Subheads were already in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Schema check PASS 12 before Docx. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | Date | Step |
 |------|------|
-| **2026-10-16** | Pass 2 Pack: paste `prompts/agent_formulation_pack.txt` against this same `.md`; normalize §14 subheads; optional `idea_card_schema.py`; one-shot in-repo Docx (do not open desktop Word) |
+| **2026-10-16** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-17–18** | Spot-check Best ideas 1–3 URLs still live; interview 2 Nollywood producers + 1 marketer association desk for WTP on packs |
 | **2026-10-20** | Smoke MultiRail Deny Clock evidence template with 1 anonymised multi-bank dispute timeline (no real customer PII in repo) |
 | **2026-10-23** | Decide keep/kill Navige AgentSpend NG after 3 SME agent-spend interviews |
@@ -323,6 +325,4 @@
 
 ## Docx status
 
-`_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before Docx. Do not treat Word as final until `prompts/agent_formulation_pack.txt` is run on this file.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
