@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-17 ~06:00–07:30 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-10-17 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-17 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261017.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261017_060127.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Saturday Punch politics/lifestyle-heavy + Vanguard lifestyle-heavy + BusinessDay features-heavy early — lean Nairametrics + BusinessDay market-intelligence + Punch NSIB + FIJ for commercial Mode A / S1; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-16 (esp. Nollywood Data Void Invest Pack, PetrolPriceCap PIA Stake Pack, MultiRail Unauth Deny Clock, EnergyVsHeadline SME Cost Board, FX Services Absorb Evidence Pack, IndependentMarketer Discount Access Desk, DealRoom Bankable Ready Pack, Moniepoint×OPay ErroneousCredit Refuse Clock, LagosBetting Licence Verify Pack, PalmPay FuelPOS TwoYear Refund Clock, DeviceChecker Import Ready Pack, ShellVaaris Gas Continuity Desk, PebbleScore FairMoney Hold Clock, N66 Discount Exit Disclosure Desk, GTBank×OPay Unauth FindWho Clock, CashTransfer AuditTrail Desk, Carbon×Moniepoint WrongXfer PingPong Clock, Flutterwave WrongDigit Recover Clock, Kuda Downtime Safe Promise Clock, OPay PartialCourt Balance Clock, Moniepoint CourtOrder Refund Clock); older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -304,6 +304,8 @@
 
 **Data freshness:** Fetch `20261017_060127` UTC. Techpoint **0**, Financial Nigeria **0**, StartupList **429**. Soft-fail continued.
 
+**Pass 2 pack:** 2026-10-17. Same 12 ideas and same ranks. Subheads were already in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Schema check PASS 12 before Docx. No new ideas and no re-rank.
+
 **Partial runs:** S6 directory blocked (429); S7 PH titles used without Cloudflare product-page fetches; S1 Trustpilot skipped (egress blocks).
 
 ---
@@ -312,7 +314,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-17** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` — fixed subheads + one-shot Docx; do not re-rank |
+| **2026-10-17** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-18** | Spot-check Brent relief + DMO auction figures vs primary Nairametrics pages; confirm MeCure CP still open before 20 Oct |
 | **2026-10-20** | MeCure Series 8 allotment window — validate diligence-pack WTP with 3 treasury/HNWI conversations |
 | **2026-10-22** | S1: 5 user interviews on MyMTN/OPay airtime failures + ATM fee receipt capture willingness |
@@ -320,5 +322,4 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
