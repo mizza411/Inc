@@ -173,6 +173,32 @@ Not required for Prospect v1 close.
 - [x] Phase 0b + 1a + 1b + 1c automated sign-off (2026-10-12) - 18 related pytest + smoke_hub PASSED
 - [ ] Optional live pair + restore glance (not a build blocker)
 
+### K. Tray Restart (INC-TRAY-RESTART-1)
+
+**Automated (required):**
+
+```powershell
+cd C:\dev\Inc
+python -m pytest inc_launcher/tests/test_tray_restart_menu.py inc_launcher/tests/test_tray_restart_handoff.py inc_launcher/tests/test_tray_restart_smoke.py -q
+```
+
+| Check | Covered by |
+|-------|------------|
+| Restart above Quit + hover constant | `test_tray_restart_menu.py` |
+| `exit_before_spawn` order + wiring | `test_tray_restart_handoff.py` |
+| Live handoff leaves one tray process | `test_tray_restart_smoke.py::test_restart_smoke_leaves_one_tray_process` |
+| Smoke env not inherited by replacement | `test_spawn_strips_restart_smoke_env` |
+
+**Note:** The live smoke kills any running Inc tray for that process match, then starts one with `INC_LAUNCHER_RESTART_SMOKE=1` (auto-Restart once). Replacement does not inherit that env.
+
+**Optional eyes-only (Phase 3):** Right-click tray → **Restart** → confirm one icon returns and Hub still opens. Why not automated: subjective notification-area glance after a real click (process count already automated).
+
+**Confirm Restart via log (after lifecycle log shipped):** open `inc_launcher/tray_lifecycle.log`. A successful click shows `Restart selected - shutting down`, then `Restart handoff spawn ok`, then a new `starting handoff=yes` from the replacement.
+
+- [x] Phase 2 automated prove (2026-10-17)
+- [x] Tray lifecycle log file (2026-10-17) - `tray_lifecycle.log` + `test_lifecycle_log.py`
+- [x] Optional live Restart click glance (2026-10-17) - log showed Restart selected + spawn ok + starting handoff=yes
+
 
 ## Sign-off summary
 
@@ -184,6 +210,7 @@ Not required for Prospect v1 close.
 | Phase 5 agent formulation | Yes - test_phase5_signoff / test_agent_run (2026-06-30) | Cursor Enter (section G, optional) |
 | Prospect Businesses Hub card | Yes - prospect folder config test (2026-07-12) | Tray restart glance (section H) |
 | Phase 7 formulation catch-up | Yes - Phase 7.8 signoff + module tests (2026-10-10) | Optional Word glance (section I) |
+| Tray Restart (INC-TRAY-RESTART-1) | Yes - menu + handoff + one-process smoke (2026-10-17) | Optional click glance (section K) |
 | External boot | - | section D if desired |
 
 **Phase 5 v1:** Dev sign-off **passed via automation** (┬ºG). Optional: Cursor **Enter** when you run a live agent session.  

@@ -30,7 +30,11 @@ The icon appears near the clock.
 | **Open Inc Hub** (menu, default) | Same hub window + Ask modal |
 | **Show Ask people / owners** (tray) | Restore Ask modal after dismiss (Phase 1b) |
 | **Show Ask reminder** (Hub sidebar) | Same restore from Hub |
+| **Restart** (menu, above Quit) | Stops this tray, then starts **one** replacement (single-icon handoff). Not the same as Quit. |
+| **Quit** | Removes the icon and ends the process (no respawn) |
 | **daily_inc_hub** schedule | Same pair (Hub + Ask modal) |
+
+**Lifecycle log:** `inc_launcher/tray_lifecycle.log` (gitignored). Lines include `starting`, `Restart selected`, `Restart handoff spawn ok`, `Exit selected`, `shutting down`. Use this to confirm Restart after a click (pythonw has no console).
 
 ## Pillars (config-driven)
 

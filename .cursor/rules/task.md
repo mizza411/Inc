@@ -131,6 +131,38 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ---
 
+## INC-TRAY-RESTART-1 — Inc Launcher tray Restart (single-icon handoff)
+
+**Status:** 🟢 **COMPLETE** (2026-10-17) — Phases **0 · 1a · 1b · 2 · 3 · 4**  
+**Goal:** Right-click Inc Launcher tray menu gains **Restart** above **Quit**. Restart tears down this tray, then starts **one** replacement (single-icon handoff). Not the same as Quit.  
+**Folder:** `inc_launcher/` — primary file `tray_app.py`  
+**Locks (owner 2026-10-17):** stay in Inc `task.md` (no Task Reminder / Pending row) · placement = after toggles, above Quit · match Auto Scroll–style `exit_before_spawn=True` handoff · hover label on Restart · do **not** restart Project Manager to prove this tray  
+**Out of scope:** changing Interval nudges / formulation catch-up / login toggles · Hub menu · second tray icon · JSON hand-edit as the owner path  
+
+**Phase 0 lock (2026-10-17):**
+- Menu order: toggles → separator → **Restart** → **Quit**
+- Replacement entry: `pythonw -m inc_launcher.tray_app --tray-restart` from `C:\dev\Inc`
+- Handoff: shut down current icon/process first, then spawn **one** replacement (`exit_before_spawn=True`). Mutex released in `before_exit`. `--tray-restart` retries mutex acquire
+- Hover action text: `RESTART_HOVER_LABEL` = “Restart Inc Launcher tray”
+- Prove with this tray only, not Project Manager restart
+
+### Phases
+
+- [x] **Phase 0 — Lock** — Confirm menu order (Restart above Quit), handoff pattern, and which launcher entry the replacement process uses. Done when: short lock note here matches owner OK (no code yet if still locking).
+- [x] **Phase 1a — Menu row** — Add **Restart** to `build_menu` with hover/tooltip text (e.g. “Restart Inc Launcher tray”). Done when: menu label present in unit/menu-label test, still no live dual-icon. (2026-10-17: stub handler logs only, no spawn)
+- [x] **Phase 1b — Handoff** — Wire Restart to shut down icon/process in `before_exit` (or house equivalent), then spawn **one** replacement with `exit_before_spawn=True`. Second normal launch still notifies/exits. Done when: one-app smoke shows one icon after Restart, no orphan `pythonw` for this tray. (2026-10-17: `tray_process_restart` + mutex release + unit order/wiring tests green. Live one-icon glance = Phase 2/3.)
+- [x] **Phase 2 — Prove** — Automated smoke (start → Restart path or equivalent kill/handoff assert) + append any non-automatable eyes-only line to `inc_launcher/MANUAL_TEST.md` with Why not automated. Done when: smoke PASS, README one-liner if needed. (2026-10-17: `test_tray_restart_smoke.py` + MANUAL section K + README Restart row)
+- [x] **Phase 3 — Sign-off** — Optional live glance (one Restart click). Done when: owner ticks manual leftover or waives. (2026-10-17: owner click + `tray_lifecycle.log` handoff lines + live `--tray-restart` PID)
+- [x] **Phase 4 — Lifecycle log** — File log `inc_launcher/tray_lifecycle.log` with starting / Restart selected / spawn ok / Exit selected / shutting down. Done when: unit test green, README points at the path. (2026-10-17)
+
+**v1 definition of done:** ✅ Met. Tray menu shows Restart above Quit, one Restart yields exactly one tray icon, Quit still exits without respawn, automated proof green, live log confirm.
+
+**Key files:** `inc_launcher/tray_app.py`, `inc_launcher/lifecycle_log.py`, `inc_launcher/tray_process_restart.py`, `inc_launcher/single_instance.py`, `inc_launcher/tests/test_tray_restart_*.py`, `inc_launcher/tests/test_lifecycle_log.py`, `inc_launcher/MANUAL_TEST.md`, `inc_launcher/README.md`
+
+**Next:** stage/commit/push when ready. Safe to delete this chat after commit (durable state is on disk).
+
+---
+
 ## BB-TIMED-1 — Timed / minimal-UI bookmark review (§5 add-on) (pointer)
 
 **Status:** 🟢 **BB-TIMED-1 Phases 0–7 ✅** + automated sign-off ✅ (2026-08-20)  
@@ -678,6 +710,7 @@ cd C:\dev\Inc\field_intelligence_radar
 
 #### Pending (optional — not blocking)
 
+- [x] **INC-TRAY-RESTART-1** — tray menu **Restart** above **Quit** (single-icon handoff) — **COMPLETE** 2026-10-17
 - [ ] **Phase 5.5** — scheduled Hub + Option B modal (only after you pick weekday/time) — **local tray nudge path**; do **not** conflate with **§19** cloud Automations
 - [ ] **MANUAL_TEST §G** — Cursor **Enter** once on a live agent session (when you choose)
 

@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import logging
+import os
 import sys
+import threading
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable, Dict, List
@@ -34,11 +36,25 @@ from inc_launcher.formulation_catchup_schedule import (
 )
 from inc_launcher.hub_window import show_hub
 from inc_launcher.icon_loader import load_tray_icon
+from inc_launcher.lifecycle_log import append_lifecycle
 from inc_launcher.nudge_scheduler import start_nudge_scheduler, stop_nudge_scheduler
-from inc_launcher.single_instance import ensure_single_instance
+from inc_launcher.single_instance import (
+    BYPASS_FLAG,
+    acquire_for_start,
+    bypass_requested,
+    release_single_instance,
+)
 from inc_launcher.startup import is_login_startup_enabled, set_login_startup
 
 logger = logging.getLogger(__name__)
+
+# INC-TRAY-RESTART-1 — menu label + intended hover text.
+# pystray MenuItem has no tooltip API on Windows, so the hover string is the
+# documented action text (tests assert it, Phase 1b keeps the same wording).
+RESTART_MENU_LABEL = "Restart"
+RESTART_HOVER_LABEL = "Restart Inc Launcher tray"
+# Phase 2 automated prove only. Never set in normal owner launches.
+_RESTART_SMOKE_ENV = "INC_LAUNCHER_RESTART_SMOKE"
 
 _hub_config: Dict[str, Any] | None = None
 _config_path: Path | None = None
@@ -107,6 +123,52 @@ def _toggle_formulation_catchup() -> None:
         logger.exception("Failed to toggle formulation catch-up: %s", exc)
 
 
+def _shutdown_for_restart(icon=None) -> None:
+    """Tear down icon + schedulers + mutex before spawning a replacement."""
+    append_lifecycle("Restart selected - shutting down")
+    logger.info("Restart selected (%s) - shutting down", RESTART_HOVER_LABEL)
+    global _tray_icon
+    ic = icon if icon is not None else _tray_icon
+    if ic is not None:
+        try:
+            ic.stop()
+        except Exception:
+            logger.exception("icon.stop failed during Restart")
+    stop_formulation_catchup_schedule()
+    stop_nudge_scheduler()
+    release_single_instance()
+    _tray_icon = None
+
+
+def _on_quit_menu(icon=None, _item=None) -> None:
+    append_lifecycle("Exit selected - shutting down")
+    logger.info("Exit selected - shutting down")
+    if icon is not None:
+        icon.stop()
+
+
+def _on_restart_menu(icon=None, _item=None) -> None:
+    """Single-icon handoff: stop this tray, then start one replacement."""
+    from inc_launcher.tray_process_restart import restart_tray_process
+
+    def _exit_after_spawn(code: int) -> None:
+        append_lifecycle("Restart handoff spawn ok - exiting for replacement")
+        sys.exit(code)
+
+    ok, msg = restart_tray_process(
+        module="inc_launcher.tray_app",
+        app_name="Inc Launcher",
+        cwd=INC_ROOT,
+        extra_args=(BYPASS_FLAG,),
+        before_exit=lambda: _shutdown_for_restart(icon),
+        exit_fn=_exit_after_spawn,
+        exit_before_spawn=True,
+    )
+    if not ok:
+        append_lifecycle(f"Restart handoff spawn failed: {msg}")
+        logger.error("Tray Restart failed: %s", msg)
+
+
 def _item_handler(item: Dict[str, Any]) -> Callable[[], None]:
     def _run() -> None:
         try:
@@ -172,7 +234,10 @@ def build_menu(config: Dict[str, Any]):
         )
     )
     entries.append(Menu.SEPARATOR)
-    entries.append(item("Quit", lambda icon, item: icon.stop()))
+    entries.append(
+        item(RESTART_MENU_LABEL, lambda icon, item: _on_restart_menu(icon, item))
+    )
+    entries.append(item("Quit", lambda icon, item: _on_quit_menu(icon, item)))
 
     return pystray.Menu(*entries)
 
@@ -202,6 +267,10 @@ def run_tray(config_path: str | None = None) -> None:
     global _hub_config, _config_path, _tray_icon
     _hub_config = config
     _config_path = config_path_obj
+    handoff = bypass_requested()
+    append_lifecycle(
+        f"starting handoff={'yes' if handoff else 'no'} root={INC_ROOT}"
+    )
 
     start_nudge_scheduler(
         config_path_obj,
@@ -231,19 +300,37 @@ def run_tray(config_path: str | None = None) -> None:
         config_path=config_path_obj,
         repo_root=INC_ROOT,
     )
+    if os.environ.get(_RESTART_SMOKE_ENV) == "1":
+        def _smoke_restart_soon() -> None:
+            try:
+                threading.Event().wait(1.5)
+                logger.info("INC_LAUNCHER_RESTART_SMOKE: triggering Restart handoff")
+                _on_restart_menu(_tray_icon, None)
+            except Exception:
+                logger.exception("INC_LAUNCHER_RESTART_SMOKE handoff failed")
+
+        threading.Thread(
+            target=_smoke_restart_soon,
+            name="inc-tray-restart-smoke",
+            daemon=True,
+        ).start()
     try:
         icon.run()
     finally:
+        append_lifecycle("shutting down")
         _tray_icon = None
         stop_formulation_catchup_schedule()
         stop_nudge_scheduler()
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
+    args = list(sys.argv[1:] if argv is None else argv)
+    handoff = bypass_requested(args)
     config = load_config()
     settings = config.get("settings") or {}
-    if settings.get("single_instance", True) and not ensure_single_instance():
-        sys.exit(0)
+    if settings.get("single_instance", True):
+        if not acquire_for_start(bypass=handoff):
+            sys.exit(0 if not handoff else 1)
     run_tray()
 
 
