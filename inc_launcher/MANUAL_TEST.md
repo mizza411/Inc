@@ -124,6 +124,7 @@ Not required for Phase 5 dev sign-off; automation above covers ┬ºG steps 1Γ�
 | Formulated card `prospect_businesses_folder` present | `inc_launcher/tests/test_config.py::test_formulated_has_prospect_businesses_folder` |
 | Path `Prospect-Businesses/` resolves | same test |
 | Established / Formulated anchors unchanged | same test |
+| Established All-launchers duplicate `prospect_businesses_folder_established` | `inc_launcher/tests/test_config.py::test_established_has_prospect_businesses_folder_duplicate` |
 | Sorter destination `prospects` | `business_bookmark_sorter/tests/test_prospect_route.py` |
 
 ```powershell
@@ -135,6 +136,7 @@ python -m pytest inc_launcher/tests/test_config.py business_bookmark_sorter/test
 **Why not automated:** Confirming the live tray/Hub UI after a local restart is a subjective ΓÇ£I see the cardΓÇ¥ glance (config already asserted in pytest).
 
 - [ ] Restart Inc Launcher tray ΓåÆ Formulated ideas ΓåÆ **Prospect Businesses folder** opens `Prospect-Businesses/`
+- [ ] Same restart ΓåÆ My Established business ideas ΓåÆ All launchers ΓåÆ **Prospect Businesses folder** opens the same folder (duplicate shortcut only)
 
 Not required for Prospect v1 close.
 

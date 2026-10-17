@@ -18,6 +18,12 @@
           "path": "Started-Businesses"
         },
         {
+          "id": "prospect_businesses_folder_established",
+          "label": "Prospect Businesses folder",
+          "action": "folder",
+          "path": "Prospect-Businesses"
+        },
+        {
           "label": "Strategy 1 folder (playbook + gadget ops)",
           "action": "folder",
           "path": "Strategy-1-Business-Variation"

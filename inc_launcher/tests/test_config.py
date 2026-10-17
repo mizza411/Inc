@@ -84,6 +84,33 @@ def test_formulated_has_prospect_businesses_folder():
     assert any("Started Businesses folder" in i["label"] for i in established["items"])
 
 
+def test_established_has_prospect_businesses_folder_duplicate():
+    """Additive Established All-launchers shortcut; Formulated card unchanged."""
+    config = load_config()
+    established = next(p for p in list_pillars(config) if p["id"] == "established")
+    by_id = {item.get("id"): item for item in established.get("items", []) if item.get("id")}
+    assert "prospect_businesses_folder_established" in by_id
+    card = by_id["prospect_businesses_folder_established"]
+    assert card["action"] == "folder"
+    assert card["path"] == "Prospect-Businesses"
+    assert card["label"] == "Prospect Businesses folder"
+    assert card.get("pinned") is not True
+    assert resolve_path(card["path"]).is_dir()
+    # Anchors on Established still present
+    labels = [i["label"] for i in established["items"]]
+    assert "Started Businesses folder" in labels
+    assert "YouTube automation (status)" in labels
+    # Beside Started Businesses (All launchers order)
+    assert labels.index("Started Businesses folder") + 1 == labels.index(
+        "Prospect Businesses folder"
+    )
+    # Formulated original id untouched
+    formulated = next(p for p in list_pillars(config) if p["id"] == "formulated")
+    f_ids = {item.get("id") for item in formulated.get("items", []) if item.get("id")}
+    assert "prospect_businesses_folder" in f_ids
+    assert "prospect_businesses_folder_established" not in f_ids
+
+
 def test_strategy1_hub_and_established_paths_resolve():
     """Former MANUAL_TEST A/B — config targets exist on disk."""
     config = load_config()
