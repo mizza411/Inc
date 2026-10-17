@@ -43,6 +43,7 @@ def test_hub_card_click_shows_modal_for_network_ask():
     from unittest.mock import MagicMock
 
     with patch("inc_launcher.hub_window.show_agent_run_modal") as mock_modal:
+        # signature: master, item, on_started=, on_closed=
         with patch("inc_launcher.hub_window.run_action") as mock_run:
             from inc_launcher.hub_window import HubWindow
 

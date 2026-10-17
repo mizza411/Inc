@@ -20,6 +20,14 @@ from inc_launcher.scheduled_nudges import find_menu_item_by_id
 logger = logging.getLogger(__name__)
 
 NETWORK_ASK_ITEM_ID = "network_ask_remind"
+PROSPECT_ESTABLISHED_ITEM_ID = "prospect_businesses_folder_established"
+
+PROSPECT_NUDGE_TITLE = "Check your prospective businesses?"
+PROSPECT_NUDGE_BULLETS = (
+    "On My Established business ideas, open All launchers",
+    "Click Prospect Businesses folder (beside Started Businesses)",
+    "That shortlist is not Started businesses yet",
+)
 
 
 def resolve_network_ask_item(config: Dict[str, Any]) -> Optional[Dict[str, Any]]:
@@ -30,6 +38,31 @@ def resolve_network_ask_item(config: Dict[str, Any]) -> Optional[Dict[str, Any]]
     if item.get("action") != "network_ask":
         return None
     return item
+
+
+def resolve_prospect_established_item(config: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Return Established All-launchers Prospect folder card, or None."""
+    for pillar in list_pillars(config):
+        if pillar.get("id") != "established":
+            continue
+        for item in pillar.get("items", []):
+            if item.get("id") == PROSPECT_ESTABLISHED_ITEM_ID:
+                return dict(item)
+    return None
+
+
+def build_prospect_nudge_item(config: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Option B-shaped item that opens Prospect-Businesses/ from the nudge."""
+    base = resolve_prospect_established_item(config)
+    if base is None:
+        return None
+    return {
+        **base,
+        "modal_title": PROSPECT_NUDGE_TITLE,
+        "modal_bullets": list(PROSPECT_NUDGE_BULLETS),
+        "modal_start_label": "Open folder",
+        "modal_start_hover": "Open the Prospect Businesses folder",
+    }
 
 # Theme
 SIDEBAR_BG = "#1e293b"
@@ -140,7 +173,11 @@ class HubController:
                 NETWORK_ASK_ITEM_ID,
             )
             return
-        self._window.show_agent_run_for_item(item)
+        # After Ask dismiss: Prospect nudge (Established All launchers).
+        self._window.show_agent_run_for_item(
+            item,
+            on_closed=self._window.schedule_prospect_nudge_after_ask,
+        )
 
     def _on_window_close(self) -> None:
         if self._window is not None:
@@ -445,13 +482,46 @@ class HubWindow(tk.Toplevel):
         except Exception as exc:
             logger.exception("Hub action failed for %s: %s", item.get("label"), exc)
 
-    def show_agent_run_for_item(self, item: Dict[str, Any]) -> None:
+    def show_agent_run_for_item(
+        self,
+        item: Dict[str, Any],
+        on_closed: Callable[[], None] | None = None,
+    ) -> None:
         """Show Option B modal when Hub was opened from tray / schedule."""
         prepared = prepare_option_b_item(item)
         show_agent_run_modal(
             self,
             prepared,
             on_started=lambda: self._after_option_b_started(prepared),
+            on_closed=on_closed,
+        )
+
+    def schedule_prospect_nudge_after_ask(self) -> None:
+        """Queue Prospect nudge after Ask grab releases (same Hub session)."""
+        try:
+            self.after(0, self.show_prospect_folder_nudge)
+        except tk.TclError:
+            logger.warning("Prospect nudge skipped: Hub no longer available")
+
+    def show_prospect_folder_nudge(self) -> None:
+        """Guide owner to Established → All launchers → Prospect Businesses folder."""
+        if not self.winfo_exists():
+            return
+        nudge = build_prospect_nudge_item(self.config_data)
+        if nudge is None:
+            logger.warning(
+                "Prospect nudge skipped: no menu item id=%s",
+                PROSPECT_ESTABLISHED_ITEM_ID,
+            )
+            return
+        self._select_pillar("established")
+        self.deiconify()
+        self.lift()
+        # No on_closed chain (avoid loops). Start opens the folder via run_action.
+        show_agent_run_modal(
+            self,
+            nudge,
+            on_started=lambda: self._after_option_b_started(nudge),
         )
 
     def _restore_network_ask(self) -> None:
@@ -460,7 +530,10 @@ class HubWindow(tk.Toplevel):
         if item is None:
             logger.warning("Restore Ask skipped: no menu item id=%s", NETWORK_ASK_ITEM_ID)
             return
-        self.show_agent_run_for_item(item)
+        self.show_agent_run_for_item(
+            item,
+            on_closed=self.schedule_prospect_nudge_after_ask,
+        )
 
     def _attach_hover_label(self, widget: tk.Misc, text: str) -> None:
         tip: tk.Toplevel | None = None

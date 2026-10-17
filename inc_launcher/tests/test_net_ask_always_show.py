@@ -51,6 +51,10 @@ def test_open_network_ask_modal_calls_show_for_item():
     window.show_agent_run_for_item.assert_called_once()
     shown = window.show_agent_run_for_item.call_args[0][0]
     assert shown["action"] == "network_ask"
+    assert (
+        window.show_agent_run_for_item.call_args.kwargs.get("on_closed")
+        == window.schedule_prospect_nudge_after_ask
+    )
 
 
 def test_prompt_agent_run_does_not_enqueue_always_show():

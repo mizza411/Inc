@@ -33,6 +33,20 @@ def title_for_item(item: Dict[str, Any]) -> str:
     return MODAL_TITLE
 
 
+def start_label_for_item(item: Dict[str, Any]) -> str:
+    custom = item.get("modal_start_label")
+    if isinstance(custom, str) and custom.strip():
+        return custom.strip()
+    return "Start"
+
+
+def start_hover_for_item(item: Dict[str, Any]) -> str:
+    custom = item.get("modal_start_hover")
+    if isinstance(custom, str) and custom.strip():
+        return custom.strip()
+    return "Start this action"
+
+
 class AgentRunModal(tk.Toplevel):
     """Hub-hosted confirmation before agent formulation orchestration."""
 
@@ -41,18 +55,24 @@ class AgentRunModal(tk.Toplevel):
         master: tk.Misc,
         item: Dict[str, Any],
         on_started: Callable[[], None] | None = None,
+        on_closed: Callable[[], None] | None = None,
     ) -> None:
         super().__init__(master)
         self._item = item
         self._on_started = on_started
+        self._on_closed = on_closed
+        self._closed_notified = False
         self._bullets: Sequence[str] = bullets_for_item(item)
         self._modal_title = title_for_item(item)
+        self._start_label = start_label_for_item(item)
+        self._start_hover = start_hover_for_item(item)
 
         self.title(item.get("label") or "Agent formulation run")
         self.configure(bg="#ffffff")
         self.resizable(False, False)
         self.transient(master)
         self.grab_set()
+        self.protocol("WM_DELETE_WINDOW", self.destroy)
 
         pad = {"padx": 20, "pady": 4}
         tk.Label(
@@ -93,7 +113,7 @@ class AgentRunModal(tk.Toplevel):
 
         start_btn = tk.Button(
             btn_frame,
-            text="Start",
+            text=self._start_label,
             command=self._on_start,
             font=("Segoe UI", 10, "bold"),
             bg="#228be6",
@@ -105,10 +125,25 @@ class AgentRunModal(tk.Toplevel):
             cursor="hand2",
         )
         start_btn.pack(side="right")
-        self._set_hover_label(start_btn, "Start this action")
+        self._set_hover_label(start_btn, self._start_hover)
 
         self.update_idletasks()
         self._center_on_parent(master)
+
+    def destroy(self) -> None:  # type: ignore[override]
+        cb = None
+        if not self._closed_notified and self._on_closed is not None:
+            self._closed_notified = True
+            cb = self._on_closed
+            self._on_closed = None
+        try:
+            super().destroy()
+        finally:
+            if cb is not None:
+                try:
+                    cb()
+                except Exception:
+                    logger.exception("Option B on_closed callback failed")
 
     def _set_hover_label(self, widget: tk.Misc, text: str) -> None:
         tip: tk.Toplevel | None = None
@@ -176,8 +211,14 @@ def show_agent_run_modal(
     master: tk.Misc,
     item: Dict[str, Any],
     on_started: Callable[[], None] | None = None,
+    on_closed: Callable[[], None] | None = None,
 ) -> AgentRunModal:
-    modal = AgentRunModal(master, item, on_started=on_started)
+    modal = AgentRunModal(
+        master,
+        item,
+        on_started=on_started,
+        on_closed=on_closed,
+    )
     modal.lift()
     modal.focus_force()
     return modal

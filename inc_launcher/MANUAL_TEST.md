@@ -164,6 +164,12 @@ Not required for Prospect v1 close.
 
 **Optional eyes-only (1c leftover):** Open Inc Hub from tray → Hub + Ask together. Dismiss → tray **Show Ask people / owners** or Hub **Show Ask reminder**. Why not automated: live tk z-order / grab feel.
 
+### J2. Prospect nudge after Ask dismiss (2026-10-17)
+
+**Automated (required):** `inc_launcher/tests/test_prospect_nudge_after_ask.py` - resolve Established Prospect card, Ask always-show passes `on_closed`, nudge selects Established, Open folder copy.
+
+**Optional eyes-only:** Open Hub → dismiss Ask (Not now) → Prospect nudge appears → Established All launchers visible → **Open folder** or click the Prospect card. Why not automated: live modal grab / Hub glance.
+
 - [x] Phase 0b + 1a + 1b + 1c automated sign-off (2026-10-12) - 18 related pytest + smoke_hub PASSED
 - [ ] Optional live pair + restore glance (not a build blocker)
 

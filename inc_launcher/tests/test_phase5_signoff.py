@@ -192,7 +192,7 @@ def test_modal_start_runs_agent_action(tk_root: tk.Tk):
 def test_hub_card_routes_to_modal_not_direct_action(tk_root: tk.Tk, monkeypatch):
     shown: list[dict[str, Any]] = []
 
-    def _fake_show(master, item, on_started=None):
+    def _fake_show(master, item, on_started=None, on_closed=None):
         shown.append(item)
 
     monkeypatch.setattr("inc_launcher.hub_window.show_agent_run_modal", _fake_show)
