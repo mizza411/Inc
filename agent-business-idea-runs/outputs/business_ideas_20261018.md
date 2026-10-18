@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-18 ~06:00–07:30 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-10-18 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-18 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261018.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261018_060200.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Sunday Punch sports/lifestyle-heavy + BusinessDay life/politics-heavy + Vanguard politics/security-heavy — lean Nairametrics + THISDAY/Channels/FIJ/web cites for commercial Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-17 (esp. Brent110 Petrol Relief Stress Board, DMO NTB BidReject Rate Desk, MTN×OPay ThreeYear Airtime Clock, MeCure CP Series8 Diligence Pack, DividendH1 Concentration Guard, Nollywood Data Void Invest Pack, PetrolPriceCap PIA Stake Pack, MultiRail Unauth Deny Clock, IndependentMarketer Discount Access Desk, DealRoom Bankable Ready Pack, Moniepoint×OPay ErroneousCredit Refuse Clock, Moniepoint CourtOrder Refund Clock, PalmPay FuelPOS TwoYear Refund Clock, Access Bank ATM Fee Overcharge, DeviceChecker Import Ready Pack, WayvePay Unauthorized IPO Guard, FairMoney DiscountSettle Clock); older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -301,7 +301,9 @@ Brent110 Petrol Relief Stress Board; DMO NTB BidReject Rate Desk; MTN×OPay Thre
 
 **Data freshness:** Fetch `20261018_060200` UTC. Techpoint **0**, Financial Nigeria **0**, StartupList **429** — soft-failed and continued.  
 **Partial runs:** S6 directory blocked by 429; S1 collector subprocess not required (agent-native web research used); S15 skipped by design.  
-**Pass boundary:** Pass 1 Discover complete. **Do not** treat Word as final until Pass 2 pack.
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-18. Same 12 ideas and same ranks. Subheads were already in the shared card order. Regulatory and Competitors / alternatives stay on every idea. S1 complaint-citation labels use URLs already in this file. Schema check PASS 12 (strict-full) before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -309,14 +311,12 @@ Brent110 Petrol Relief Stress Board; DMO NTB BidReject Rate Desk; MTN×OPay Thre
 
 | Date | Step |
 |------|------|
-| **2026-10-18** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same file — fixed subheads + one-shot Docx in-repo only (no desktop Word open). |
+| **2026-10-18** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-19** | Spot-check DMO Oct 19 auction outcome vs idea 5 calendar pack assumptions (allotment vs offer). |
 | **2026-10-20–22** | Founder interviews (5): China importers (idea 1), independent marketers (idea 2), Moniepoint POS merchants (idea 3). |
-| **2026-10-25** | Optional schema: `python agent-business-idea-runs/idea_card_schema.py agent-business-idea-runs/outputs/business_ideas_20261018.md` after Pass 2. |
+| **2026-10-25** | Optional re-check: `python3 agent-business-idea-runs/idea_card_schema.py agent-business-idea-runs/outputs/business_ideas_20261018.md` (already PASS 12 on pack day). |
 | **2026-10-30** | Kill/keep gate on Best ideas 1–5 using interview notes (no auto-build). |
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-**Pass 2 pack is required before Docx.** Next paste: `prompts/agent_formulation_pack.txt` against `agent-business-idea-runs/outputs/business_ideas_20261018.md`.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
