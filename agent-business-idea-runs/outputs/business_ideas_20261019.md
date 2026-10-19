@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-19 ~06:00–07:00 UTC — **Pass 1 Discover only**  
+**Generated:** 2026-10-19 ~06:00-07:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-19 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261019.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261019_060209.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Monday commercial spine from Independent/THISDAY + BusinessDay + Nairametrics + Punch money + FIJ — Punch politics-heavy early, Vanguard FX/lifestyle mix; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-10-18→2026-09-01 (esp. ChinaCrossBorder Pay Prep Desk, LCFE Petroleum Benchmark Ready Pack, Moniepoint AgentOfficer SixteenMonth Clock, PepsiYellow CapChange Auth Desk, DMO Oct19 Bond Calendar Desk, Brent110 Petrol Relief Stress Board, DMO NTB BidReject Rate Desk, MTN×OPay ThreeYear Airtime Clock, MeCure CP Series8 Diligence Pack, DividendH1 Concentration Guard, Nollywood Data Void Invest Pack, PetrolPriceCap PIA Stake Pack, MultiRail Unauth Deny Clock, WayvePay Unauthorized IPO Guard, FairMoney DiscountSettle Clock, PalmPay FourteenDay Lien / FuelPOS TwoYear, Access ATM Fee Overcharge, Flutterwave WrongDigit, Carbon×Moniepoint WrongXfer PingPong); older `business_ideas_20261011.md` / `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,7 +67,7 @@
 
 ### 1. OPay DualListing NGX Stake Pack — dual-list readiness before assuming local shares (**S12 Mode A**)
 
-- **Problem:** Independent (19 Oct 2026): OPay’s 9 Oct 2026 US Form F-1 signals an NYSE ADS IPO (ticker “OPAY”) and board/shareholder approval to pursue a **secondary NGX listing after** the US listing — still subject to market conditions and Nigerian approvals. NGX Group had already named OPay in an August 2026 Villa briefing on tech dual listings. Retail and pension desks risk treating the headline as “you can buy OPay on NGX now.”
+- **Problem / trend:** Independent (19 Oct 2026): OPay’s 9 Oct 2026 US Form F-1 signals an NYSE ADS IPO (ticker “OPAY”) and board/shareholder approval to pursue a **secondary NGX listing after** the US listing — still subject to market conditions and Nigerian approvals. NGX Group had already named OPay in an August 2026 Villa briefing on tech dual listings. Retail and pension desks risk treating the headline as “you can buy OPay on NGX now.”
 - **Solution:** Dual-list status board (NYSE vs NGX conditions) → document checklist (F-1 excerpt fields, NGX eligibility notes) → “not yet listed locally” stop sheet → adviser handoff PDF (**not** a broker, not an allocation guarantee).
 - **Target:** Retail investors, pension/ discretionary desks tracking fintech listings, SME owners who use OPay daily and want a local-ownership path.
 - **MVP cost:** $6k–$14k.
@@ -84,7 +84,7 @@
 
 ### 2. Renaissance VendorFinance Ready Pack — confirmed-contract evidence for RVFS banks (**S12 Mode A**)
 
-- **Problem:** BusinessDay (19 Oct 2026): Sterling Bank joins a **$4.1 billion and N435 billion** Renaissance Vendor Financing Scheme (RVFS) with 13 financial institutions — structured working capital against **confirmed contracts** from Renaissance Africa Energy. Indigenous contractors still lose mobilisation time because contract, invoice, and KYC packs sit in WhatsApp while banks credit-assess.
+- **Problem / trend:** BusinessDay (19 Oct 2026): Sterling Bank joins a **$4.1 billion and N435 billion** Renaissance Vendor Financing Scheme (RVFS) with 13 financial institutions — structured working capital against **confirmed contracts** from Renaissance Africa Energy. Indigenous contractors still lose mobilisation time because contract, invoice, and KYC packs sit in WhatsApp while banks credit-assess.
 - **Solution:** Contract award capture → eligibility checklist (confirmed contract fields, equipment/materials note) → bank submission PDF (**not** a lender, not credit approval).
 - **Target:** Engineering/service SMEs on Renaissance jobs, boutique arrangers coaching vendors, Nigerian-content contractors chasing mobilisation.
 - **MVP cost:** $8k–$18k.
@@ -154,7 +154,7 @@
 
 ### 6. MfgCredit Fall Evidence Pack — manufacturer credit-crunch lender pack (S5, S12, S9)
 
-- **Problem:** Nairametrics (19 Oct 2026): CBN data show bank credit to manufacturers fell **26.8%** year-on-year to **N5.19 trillion** (June 2026), while manufacturers still face ~30% lending quotes even after MPR cuts. SME factories still approach banks with unstructured WhatsApp packs.
+- **Problem / trend:** Nairametrics (19 Oct 2026): CBN data show bank credit to manufacturers fell **26.8%** year-on-year to **N5.19 trillion** (June 2026), while manufacturers still face ~30% lending quotes even after MPR cuts. SME factories still approach banks with unstructured WhatsApp packs.
 - **Solution:** Credit-need inventory → MAN/CBN figure cite sheet → lender submission checklist → handoff PDF (**not** a loan decision).
 - **Target:** Mid manufacturers, MAN-adjacent CFOs, boutique credit consultants.
 - **MVP cost:** $8k–$18k.
@@ -171,7 +171,7 @@
 
 ### 7. Border Modernisation Trade Prep Desk — NCS/Afreximbank corridor checklist (S5, S9, S12)
 
-- **Problem:** Nairametrics (18 Oct 2026): Nigeria, Benin, and Cameroon customs partner with Afreximbank on border modernisation for AfCFTA trade — SMEs still lack a simple corridor document checklist when infrastructure and procedure upgrades land.
+- **Problem / trend:** Nairametrics (18 Oct 2026): Nigeria, Benin, and Cameroon customs partner with Afreximbank on border modernisation for AfCFTA trade — SMEs still lack a simple corridor document checklist when infrastructure and procedure upgrades land.
 - **Solution:** Corridor map → document naming checklist → handoff PDF (**not** a customs broker licence).
 - **Target:** Cross-border traders, logistics SMEs, boutique trade consultants.
 - **MVP cost:** $8k–$18k.
@@ -188,7 +188,7 @@
 
 ### 8. MiniGrid Oyo Tariff Certainty Pack — mini-grid + no-hike signal (S5, S14, S12)
 
-- **Problem:** BusinessDay (19 Oct 2026): Oyo gets **17.7MW** interconnected mini-grid projects while the Power minister rules out an electricity tariff hike; FG also launches Gombe solar mini-grids. Communities and SMEs still lack a simple “what changes for my bill / connection” pack when mini-grids land.
+- **Problem / trend:** BusinessDay (19 Oct 2026): Oyo gets **17.7MW** interconnected mini-grid projects while the Power minister rules out an electricity tariff hike; FG also launches Gombe solar mini-grids. Communities and SMEs still lack a simple “what changes for my bill / connection” pack when mini-grids land.
 - **Solution:** Project notice capture → connection/tariff FAQ checklist → community handoff PDF (**not** NERC tariff setting).
 - **Target:** Community associations, SME clusters near mini-grids, boutique energy facilitators.
 - **MVP cost:** $6k–$14k.
@@ -205,7 +205,7 @@
 
 ### 9. DebtInterest 124 Fiscal Compare Board — World Bank vs FG revenue picture (S5, S14, S12)
 
-- **Problem:** Nairametrics (18 Oct 2026): FG pushes back as World Bank says debt interest swallowed **124%** of revenue in H1 2026 — SMEs and civic readers still share one headline without a simple “what the figure includes / excludes” compare board.
+- **Problem / trend:** Nairametrics (18 Oct 2026): FG pushes back as World Bank says debt interest swallowed **124%** of revenue in H1 2026 — SMEs and civic readers still share one headline without a simple “what the figure includes / excludes” compare board.
 - **Solution:** Claim vs rebuttal fields → source links → one-page compare PDF (**not** fiscal advice).
 - **Target:** SME owners tracking fiscal risk, journalists, boutique policy educators.
 - **MVP cost:** $5k–$12k.
@@ -222,7 +222,7 @@
 
 ### 10. CoreInflation Mirage Cost Board — food down vs core pressures (S5, S14, S12)
 
-- **Problem:** Nairametrics (18 Oct 2026): headline inflation falls while “inflation mirage” coverage notes food prices ease but **core pressures** mount; imported-food price growth slows to **9.2%**. SME cost planners still treat one CPI print as their whole cost path.
+- **Problem / trend:** Nairametrics (18 Oct 2026): headline inflation falls while “inflation mirage” coverage notes food prices ease but **core pressures** mount; imported-food price growth slows to **9.2%**. SME cost planners still treat one CPI print as their whole cost path.
 - **Solution:** Headline vs food vs core fields → imported-food note → 30-day SME cost board PDF (**not** CBN forecasting).
 - **Target:** Import SMEs, restaurant/retail operators, boutique accountants.
 - **MVP cost:** $5k–$12k.
@@ -256,7 +256,7 @@
 
 ### 12. Growth7 Cost Reality Board — 7% growth ambition vs SME cost stack (S5, S9)
 
-- **Problem:** BusinessDay (19 Oct 2026): Nigeria bets on **7%** growth by 2027 while ruling out subsidy/multiple FX returns — businesses still face expensive credit, energy, and weak infrastructure. SME owners need a one-page “ambition vs my cost stack” board, not another forecast debate.
+- **Problem / trend:** BusinessDay (19 Oct 2026): Nigeria bets on **7%** growth by 2027 while ruling out subsidy/multiple FX returns — businesses still face expensive credit, energy, and weak infrastructure. SME owners need a one-page “ambition vs my cost stack” board, not another forecast debate.
 - **Solution:** Ambition headline fields → credit/energy/infra cost checklist → 90-day SME plan PDF (**not** MoF forecasting).
 - **Target:** SME owners, chambers, boutique strategy facilitators.
 - **MVP cost:** $5k–$12k.
@@ -309,7 +309,9 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). StartupList Africa **429** (S6 blocked, synthesized). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). S15 skipped by design.
 
-**Pass 2 pack required before Docx.** Next paste: `prompts/agent_formulation_pack.txt` against this same dated `.md`. Do not treat Word as final until Pass 2.
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-19. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -317,7 +319,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-19** | Pass 2 pack on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
+| **2026-10-19** | Pass 2 pack applied on this same file (same ranks, section 14 subheads). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-20** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
 | **2026-10-21** | Owner pick: OPay DualListing NGX Stake Pack landing copy test (no secrets in repo). |
 | **2026-10-22** | Owner pick: Renaissance VendorFinance Ready Pack checklist pilot with 2 contractor packs (no owner PII in git). |
@@ -325,4 +327,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
