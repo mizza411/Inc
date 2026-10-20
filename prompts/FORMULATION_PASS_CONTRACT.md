@@ -23,7 +23,7 @@ Authoritative backlog: `.cursor/rules/task.md` → Current Priority **§14** + N
 Use these **exact / near-exact** labels so Word distribution stays stable:
 
 1. **Problem** — or **Problem / trend**; for S1 use **Formula** (+ citations) as the problem spine  
-2. **Solution.** Before writing this line, find how this job is already done in a developed market. The Solution is that product, as software, hardware, or both, named so a Nigeria buyer could buy or build it. The Solution line contains only that product.
+2. **Solution.** Under this label, write exactly these two lines and no other solution text. **Established solution:** Name the developed-market product that already does this job, as software, hardware, or both. **Variant:** Name the Nigeria version of that same product, and say how it is different for a Nigeria buyer.
 3. **Target**  
 4. **MVP cost**  
 5. **Regulatory** — required on every card (not only the viability table)  
@@ -43,7 +43,7 @@ Use these **exact / near-exact** labels so Word distribution stays stable:
 
 ### Incomplete Pass 2
 
-Any ranked idea missing **Regulatory**, **Competitors / alternatives** block, **Solution**, **Target**, or **MVP cost** → Pass 2 incomplete. Fill from Pass 1 evidence; do not invent fake competitors. A Solution is complete only when it names the developed-market product in item 2. Do not fill it with a checklist, note sheet, one-pager, or PDF.
+Any ranked idea missing **Regulatory**, **Competitors / alternatives** block, **Solution**, **Target**, or **MVP cost** → Pass 2 incomplete. Fill from Pass 1 evidence; do not invent fake competitors. A Solution is complete only when it has both Established solution and Variant. Do not fill either line with a checklist, note sheet, one-pager, or PDF.
 
 ### File-level skeleton (both passes agree)
 
