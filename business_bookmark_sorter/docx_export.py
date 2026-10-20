@@ -24,41 +24,48 @@ def _pandoc_reference_doc() -> Path | None:
     return _PANDOC_REFERENCE_DOC if _PANDOC_REFERENCE_DOC.is_file() else None
 
 
+# sz is eighths of a point. 12 = 1.5pt, dark, so the grid stays visible in Word.
 _TABLE_BORDERS_XML = (
     "<w:tblBorders>"
-    '<w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>'
-    '<w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>'
-    '<w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>'
-    '<w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>'
-    '<w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>'
-    '<w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>'
+    '<w:top w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
+    '<w:left w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
+    '<w:bottom w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
+    '<w:right w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
+    '<w:insideH w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
+    '<w:insideV w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
     "</w:tblBorders>"
 )
+_TBL_RE = re.compile(r"<w:tbl\b[^>]*>.*?</w:tbl>", re.DOTALL)
+_TBL_PR_RE = re.compile(r"<w:tblPr\b[^>]*>.*?</w:tblPr>", re.DOTALL)
+_TBL_BORDERS_RE = re.compile(r"<w:tblBorders>.*?</w:tblBorders>", re.DOTALL)
+
+
+def _grid_borders_on_tbl_pr(tbl_pr: str) -> str:
+    """Replace any border block with a full grid, placed after the table style."""
+    stripped = _TBL_BORDERS_RE.sub("", tbl_pr)
+    return stripped.replace("</w:tblPr>", _TABLE_BORDERS_XML + "</w:tblPr>", 1)
+
+
+def _grid_borders_on_table(table_xml: str) -> str:
+    if _TBL_PR_RE.search(table_xml):
+        return _TBL_PR_RE.sub(lambda m: _grid_borders_on_tbl_pr(m.group(0)), table_xml, count=1)
+    return re.sub(
+        r"<w:tbl\b([^>]*)>",
+        lambda m: f"<w:tbl{m.group(1)}><w:tblPr>{_TABLE_BORDERS_XML}</w:tblPr>",
+        table_xml,
+        count=1,
+    )
 
 
 def _inject_inline_table_borders(docx_path: Path) -> None:
-    """Ensure each table in document.xml has explicit grid borders (Word-visible)."""
+    """Give every table a visible full grid. Word ignores borders that sit before the table style."""
     with zipfile.ZipFile(docx_path, "r") as zin:
         names = zin.namelist()
         if "word/document.xml" not in names:
             return
         doc_xml = zin.read("word/document.xml").decode("utf-8")
 
-    if "w:tblBorders" in doc_xml:
-        return
-
-    def _patch_tbl_pr(match: re.Match[str]) -> str:
-        inner = match.group(1)
-        if "w:tblBorders" in inner:
-            return match.group(0)
-        return f"<w:tblPr>{_TABLE_BORDERS_XML}{inner}</w:tblPr>"
-
-    doc_xml = re.sub(
-        r"<w:tblPr>(.*?)</w:tblPr>",
-        _patch_tbl_pr,
-        doc_xml,
-        flags=re.DOTALL,
-    )
+    doc_xml = _TBL_RE.sub(lambda m: _grid_borders_on_table(m.group(0)), doc_xml)
 
     buf = io.BytesIO()
     with zipfile.ZipFile(docx_path, "r") as zin, zipfile.ZipFile(
@@ -278,13 +285,17 @@ def _convert_with_word(md_path: Path, docx_path: Path) -> None:
     word = win32com.client.Dispatch("Word.Application")
     word.Visible = False
     doc = None
+    saved = False
     try:
         doc = word.Documents.Open(str(md_path.resolve()), ReadOnly=True)
         doc.SaveAs2(str(docx_path.resolve()), FileFormat=16)
+        saved = True
     finally:
         if doc is not None:
             doc.Close(False)
         word.Quit()
+    if saved:
+        _inject_inline_table_borders(docx_path)
 
 
 def convert_md_to_docx(md_path: Path, docx_path: Path | None = None) -> Path:
