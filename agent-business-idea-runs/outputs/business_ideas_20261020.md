@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-20 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-20 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-20 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261020.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261020_060359.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Punch politics/lifestyle-heavy + Premium Times opinion/security-heavy early Tuesday — lean Nairametrics + BusinessDay + THISDAY/Vanguard capital-market cites for commercial Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-19 (esp. OPay DualListing NGX Stake Pack, Renaissance VendorFinance Ready Pack, AccessBank PhantomDebit Merchant Trace, Sunbeth Cocoa CP Season Diligence Pack, PalmPay RecoveredNotCredited Clock, ChinaCrossBorder Pay Prep Desk, LCFE Petroleum Benchmark Ready Pack, Moniepoint AgentOfficer SixteenMonth Clock, PepsiYellow CapChange Auth Desk, DMO Oct19 Bond Calendar Desk, Brent110 Petrol Relief Stress Board, MeCure CP Series8 Diligence Pack, N66 Discount Exit Disclosure Desk, PalmPay FourteenDay Lien Clock, Flutterwave WrongDigit Recover Clock, PostDangote Listing Ready Pack, Remita KYC Breach Ready Pack, LAWMA PSP Capacity Guard); older `business_ideas_20260715.md` / `business_ideas_20261011.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,8 +67,8 @@
 
 ### 1. CapMarket MasterPlan Retail Onboard Desk — 6m→20m savers + private-list incentive pack (**S12 Mode A**)
 
-- **Problem:** Nairametrics and BusinessDay (19–20 Oct 2026): Vice President Shettima unveiled Capital Market Master Plan 2.0 targeting roughly **N250trn→N750trn** by 2036. Finance Minister Oyedele added a **$1trn** ambition, **146→250** listed companies, retail investors **6m→20m**, and SEC DG Agama announced a National Savings Scheme for traders/farmers/graduates. Private companies and first-time savers still lack a practical incentive/listing + CSCS/broker onboarding checklist.
-- **Solution:** Master-plan target sheet → private-company listing-incentive checklist → retail CSCS/broker/National Savings Scheme path map → handoff PDF (**not** a broker, not an allocation guarantee).
+- **Problem / trend:** Nairametrics and BusinessDay (19-20 Oct 2026): Vice President Shettima unveiled Capital Market Master Plan 2.0 targeting roughly **N250trn→N750trn** by 2036. Finance Minister Oyedele added a **$1trn** ambition, **146→250** listed companies, retail investors **6m→20m**, and SEC DG Agama announced a National Savings Scheme for traders/farmers/graduates. Private companies and first-time savers still lack a practical incentive/listing + CSCS/broker onboarding checklist.
+- **Solution:** Carta (private-company equity and listing-readiness software).
 - **Target:** Mid-size private companies exploring NGX listing incentives, SACCOS/trade associations, first-time retail savers, boutique capital-markets counsel.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not SEC, NGX, or CSCS official; not investment advice; NDPA for ID fields.
@@ -84,8 +84,8 @@
 
 ### 2. SEC Tokenisation Rule Gap Desk — ISA 2025 yes, implementing rules incomplete (**S12 Mode A**)
 
-- **Problem:** Nairametrics (20 Oct 2026): Senate Capital Market chair Osita Izunaso challenged the SEC to accelerate digital-asset / tokenisation regulations, arguing stakeholders explore opportunities abroad while domestic implementing rules lag — even though ISA 2025 recognises virtual assets and SEC has proposed N30m registration fees / N500m capital for RWA tokenisation platforms.
-- **Solution:** Statute vs proposed-rule gap map → capital/fee readiness checklist → risk/disclosure note → counsel handoff PDF (**not** an SEC filing portal, not a licence broker).
+- **Problem / trend:** Nairametrics (20 Oct 2026): Senate Capital Market chair Osita Izunaso challenged the SEC to accelerate digital-asset / tokenisation regulations, arguing stakeholders explore opportunities abroad while domestic implementing rules lag — even though ISA 2025 recognises virtual assets and SEC has proposed N30m registration fees / N500m capital for RWA tokenisation platforms.
+- **Solution:** CUBE (regulatory-change software that maps a statute against implementing rules).
 - **Target:** Would-be RATOP/DAOP operators, real-estate and bond tokenisation pilots, fintech counsel, family offices testing fractional RWA.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not SEC official; not legal advice; NDPA for applicant docs.
@@ -103,7 +103,7 @@
 
 - **Formula:** **Successful business:** Access Bank (mass Nigeria deposit-money bank / mobile banking). **Recurring complaint:** after a corps member lost a phone, an unknown party took a **N246,000** loan on the account; Access Bank confirmed the transfer to PalmPay as fraudulent but told her to recover the money herself, and the loan stayed attached for years (FIJ, 30 Sep 2026). **Variation:** Lost-phone → unauthorised loan → bank-confirmed-fraud → no-recovery clock — not AccessBank PhantomDebit Merchant Trace (unnamed merchant phantom debit) and not PalmPay UnwantedLoan Interest Clock (PalmPay unwanted loan).
 - **Complaint citations:** FIJ (30 Sep 2026), https://fij.ng/article/unknown-entity-took-n246000-loan-on-lagos-corps-members-missing-phone-access-bank-confirmed-fraud-but-offered-no-help/ (lost phone, N246k loan, bank confirmed fraud, refused recovery help, multi-year open balance).
-- **Solution:** Phone-loss affidavit/police note capture → loan + PalmPay beneficiary log → bank confirmation screenshot timeline → CBN CPD export packet.
+- **Solution:** Resolver (consumer complaint software that tracks a bank dispute).
 - **Target:** Access Bank customers with unauthorised loans after device loss who need an evidence clock before escalation.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice.
@@ -120,7 +120,7 @@
 ### 4. UnitedNigeria Airline CP Diligence Pack — first domestic airline commercial paper kit (S5, S9, S12)
 
 - **Problem / trend:** Nairametrics and Guardian (16 Oct 2026): United Nigeria Airlines plans a **N20 billion** debut commercial-paper issuance (Series 1/2, 270- and 364-day) under a **N100 billion** programme — reported as the first domestic airline CP — while BusinessDay notes airlines pivoting away from surge-priced bank loans. Investors and airline treasury teams still track ratings, fleet, and working-capital use in scattered decks.
-- **Solution:** CP programme checklist → rating/arranger map → fleet/use-of-proceeds evidence log → investor one-pager (**not** a placement agent, not an investment recommendation).
+- **Solution:** S&P Capital IQ (credit and issuance diligence software).
 - **Target:** HNWI/treasury desks screening aviation CP, boutique arrangers, airline finance staff preparing FMDQ-ready packs.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Informational only — not FMDQ, SEC, or NCAA official; not investment advice.
@@ -138,7 +138,7 @@
 
 - **Formula:** **Successful business:** OPay and PalmPay (mass Nigeria wallet / digital-bank rails). **Recurring complaint:** a publisher flagged **N480,000** scam transfers (OPay→PalmPay) and waited **11 months** without resolution while PalmPay said the beneficiary profile was not fraudulent and requested more information or a court order (FIJ, 31 Jan 2026). **Variation:** Scam → dual-rail flag → 11-month no-refund clock — not Moniepoint×OPay DualRail Refund Clock (dual-rail refund ping-pong), not OPay FrozenButUnreversed, and not PalmPay RecoveredNotCredited (recovered but not credited).
 - **Complaint citations:** FIJ (31 Jan 2026), https://fij.ng/article/opay-palmpay-keep-publisher-waiting-11-months-after-he-flagged-n480000-taken-by-fraudsters/ (flagged N360k+N120k PalmPay legs, 11-month wait, court-order/info request).
-- **Solution:** Transfer receipts → flag timestamps → PalmPay/OPay ticket log → court-order readiness checklist → CPD export packet.
+- **Solution:** Aura (consumer fraud-restoration case tracker).
 - **Target:** Consumers and SMEs who flagged scam transfers across OPay/PalmPay and need a timeline pack.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN Instant EFT / CPD notes; NDPA; not legal practice.
@@ -155,7 +155,7 @@
 ### 6. PetrolDiscount Bill Stress Board — N99bn→N114bn fiscal/ops stress under Brent upside (S5, S12, S9)
 
 - **Problem / trend:** BusinessDay (20 Oct 2026): NNPC retail cost-price petrol discount (~**N66**/litre) is estimated at about **N99bn** over 30 days, rising toward **N114bn** if Brent reaches **$120**, with BMI warning of a longer pre-election extension. Filling-station SMEs and fleet operators still plan inventory/cash without a published end date.
-- **Solution:** Brent scenario board → daily/30-day bill estimate sheet → station/fleet cash-plan checklist → policy-watch handoff (**not** an NNPC pricing desk).
+- **Solution:** S&P Global Commodity Insights (oil and fuel price software).
 - **Target:** Independent marketers near NNPC retail competition, logistics fleets, state transport unions, energy analysts briefing SMEs.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NNPC, NMDPRA, or MoF official.
@@ -172,7 +172,7 @@
 ### 7. NNPCL×NLNG Listing Stake Pack — SOE listing readiness for citizens/stakeholders (S5, S9, S12)
 
 - **Problem / trend:** Nairametrics/Vanguard (19–20 Oct 2026): Finance Minister Oyedele says NNPCL and NLNG “choice assets” must be listed to improve transparency and let Nigerians share wealth, claiming NNPC could be worth more than today’s entire market in a cleaned-up scenario — while H1 2026 profit fell ~**35%**. Citizens and employee groups lack a stakeholder diligence pack that separates ambition from timetable risk.
-- **Solution:** Listing-ambition vs timetable map → financial/governance gap checklist → citizen/employee FAQ → counsel handoff (**not** an IPO bookrunner).
+- **Solution:** Workiva (listing and disclosure readiness software).
 - **Target:** Staff associations, retail investor clubs, subnational stakeholders briefing constituents, boutique IR firms.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NNPC, NLNG, or SEC official; not investment advice.
@@ -189,7 +189,7 @@
 ### 8. Moniepoint TxData Credit Ready Pack — transaction-data underwriting prep for SMEs (S5, S12, S9)
 
 - **Problem / trend:** BusinessDay (20 Oct 2026): Moniepoint MFB is expanding SME credit using transaction histories and payment behaviour (N1trn+ credit narrative, 36% average transaction-value growth claims) while traditional banks pull back. Merchants still arrive at loan chats without a clean transaction-evidence pack.
-- **Solution:** 90-day transaction export checklist → seasonality note → repayment capacity sheet → lender handoff PDF (**not** a Moniepoint loan product, not credit scoring as a regulated bureau).
+- **Solution:** Codat (software that turns SME transaction data into a lender pack).
 - **Target:** Moniepoint/POS merchants seeking first formal loans, cooperatives aggregating members, SME bookkeepers.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for transaction exports; not a licensed credit bureau; not Moniepoint official.
@@ -206,7 +206,7 @@
 ### 9. readywhen WhatsApp Ops NG — WhatsApp senior-assistant niche for Nigerian SMEs (S7, S6, S11)
 
 - **Problem / trend:** Product Hunt lists **readywhen** as a senior personal assistant that works inside WhatsApp. Nigerian SME owners already run ops on WhatsApp but lack structured reminder/handoff for supplier payments, staff shifts, and follow-ups — personal-problem conversion (S11) plus StartupList soft-fail niches.
-- **Solution:** WhatsApp ops templates → reminder/handoff bot lite → Naira Paystack billing stub → bilingual (English/Pidgin) prompts (**not** a full HRIS).
+- **Solution:** readywhen (WhatsApp senior-assistant software).
 - **Target:** 2–20 person Lagos/Abuja/PH traders and agencies already living in WhatsApp.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for chat/ops data; Meta WhatsApp Business policy hygiene.
@@ -223,7 +223,7 @@
 ### 10. NGX SingleDay Drawdown Guard — N1.47trn session loss retail brief (S5, S9, S12)
 
 - **Problem / trend:** Nairametrics (19 Oct 2026): NGX lost about **N1.47 trillion** in a single session as Dangote Cement and banking stocks slid; THISDAY notes market cap dipping below **N160trn** on profit-taking. New retail investors onboarded under Master Plan messaging still lack a same-day drawdown evidence brief.
-- **Solution:** Session loss capture → holdings impact sheet → stop-check FAQ → broker handoff note (**not** investment advice).
+- **Solution:** Sharesight (portfolio performance and drawdown software).
 - **Target:** First-time NGX retail investors and association investment clubs.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Not investment advice; not NGX official.
@@ -240,7 +240,7 @@
 ### 11. Kano FAAC Budget Cut Desk — state contractor payment-risk pack after FAAC shortfall (S5, S12, S9)
 
 - **Problem / trend:** Nairametrics (19 Oct 2026): Kano cuts its 2026 budget by **N276 billion**, citing FAAC revenue shortfall. Contractors and local SMEs still plan receivables as if appropriations were fixed.
-- **Solution:** Budget-cut notice log → contract/receivable map → payment-priority checklist → counsel/union handoff (**not** a state treasury portal).
+- **Solution:** Deltek GovWin IQ (government-contract pipeline and payment-risk software).
 - **Target:** Kano/state contractors, local suppliers, SME associations.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not state MoF official; not legal advice.
@@ -257,7 +257,7 @@
 ### 12. NAFDAC Counterfeit Alcohol Spot Desk — Abia factory raid retail hygiene (S5, S9)
 
 - **Problem / trend:** Nairametrics (19 Oct 2026): NAFDAC uncovers a suspected counterfeit alcohol factory in Abia valued at over **N500 million**. Hotels, bars, and distributors still lack a fast supplier-verification checklist after raids.
-- **Solution:** Supplier invoice/photo checklist → batch/label spot sheet → NAFDAC complaint path note → handoff PDF (**not** NAFDAC enforcement).
+- **Solution:** TraceGains (food and beverage supplier-compliance software).
 - **Target:** Hospitality SMEs, distributors, state consumer-protection desks.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Not NAFDAC official; not legal advice.
@@ -305,14 +305,18 @@
 
 **Partial runs / blockers:** None aborting the run. S6 directory blocked by 429 (continued with synthesis). S1 online discovery succeeded via FIJ URLs.
 
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-20. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** names one developed-market product. Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | When | Step |
 |------|------|
-| **2026-10-20** | Owner skim Best ideas 1–5; confirm CapMarket / Tokenisation Mode A still feel non-duplicate vs PostDangote / SoftTest |
-| **2026-10-20–21** | **Pass 2 Pack** — paste `prompts/agent_formulation_pack.txt` against this same `.md`; normalize section-14 subheads; optional `idea_card_schema.py`; one-shot Docx in-repo only |
+| **2026-10-20** | Owner skim Best ideas 1-5. Confirm CapMarket / Tokenisation Mode A still feel non-duplicate vs PostDangote / SoftTest. |
+| **2026-10-20** | Pass 2 pack applied on this same file (same ranks, section 14 subheads, product-only Solutions). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-21** | Spot-check FIJ + Nairametrics URLs still resolve; note any Access Bank / OPay public replies |
 | **2026-10-22** | If keeping #4 Airline CP: verify United Nigeria CP pricing/window updates on FMDQ/arranger notices |
 | **2026-10-24** | Thin customer interviews (3–5): first-time CSCS onboard friction, tokenisation counsel gap, lost-phone loan evidence needs |
@@ -321,6 +325,4 @@
 
 ## Docx status
 
-`_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before treating Word/Docx as final. Do not convert or open Docx in Pass 1.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
