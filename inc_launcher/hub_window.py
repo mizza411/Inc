@@ -6,6 +6,7 @@ import logging
 import queue
 import threading
 import tkinter as tk
+from pathlib import Path
 from tkinter import font as tkfont
 from tkinter import ttk
 from typing import Any, Callable, Dict, List, Optional
@@ -85,6 +86,7 @@ class HubController:
         self._window: Optional["HubWindow"] = None
         self._root: tk.Tk | None = None
         self._pending_agent_run: Dict[str, Any] | None = None
+        self._times_window: tk.Toplevel | None = None
 
     def show(self, config: Dict[str, Any]) -> None:
         """Open Hub and always pair the Ask people/owners Option B modal (1a)."""
@@ -117,6 +119,18 @@ class HubController:
         assert self._queue is not None
         self._queue.put("show_agent_run")
 
+    def show_hub_open_times(self, config: Dict[str, Any]) -> None:
+        """Queue the Hub open times form on this Hub thread. Does not create a Tk root."""
+        self._config = config
+        if self._thread is None or not self._thread.is_alive():
+            self._queue = queue.Queue()
+            self._ready.clear()
+            self._thread = threading.Thread(target=self._run_loop, daemon=True, name="inc-hub")
+            self._thread.start()
+            self._ready.wait(timeout=10)
+        assert self._queue is not None
+        self._queue.put("show_hub_open_times")
+
     def _run_loop(self) -> None:
         self._root = tk.Tk()
         self._root.withdraw()
@@ -142,6 +156,8 @@ class HubController:
                     item = self._pending_agent_run
                     self._pending_agent_run = None
                     self._window.show_agent_run_for_item(item)
+            elif cmd == "show_hub_open_times":
+                self._open_hub_open_times()
             elif cmd == "hide":
                 if self._window is not None:
                     self._window.withdraw()
@@ -178,6 +194,27 @@ class HubController:
             item,
             on_closed=self._window.schedule_prospect_nudge_after_ask,
         )
+
+    def _open_hub_open_times(self) -> None:
+        """Open the times form on the existing Hub root."""
+        if self._root is None:
+            return
+        if self._times_window is not None:
+            try:
+                if self._times_window.winfo_exists():
+                    self._times_window.deiconify()
+                    self._times_window.lift()
+                    self._times_window.focus_force()
+                    return
+            except tk.TclError:
+                self._times_window = None
+        from inc_launcher.hub_open_times_window import HubOpenTimesWindow
+
+        path_text = self._config.get("_config_path")
+        path = Path(path_text) if path_text else None
+        self._times_window = HubOpenTimesWindow(self._root, path)
+        self._times_window.deiconify()
+        self._times_window.lift()
 
     def _on_window_close(self) -> None:
         if self._window is not None:
@@ -585,6 +622,14 @@ class HubWindow(tk.Toplevel):
 
 
 _hub_controller: HubController | None = None
+
+
+def show_hub_open_times(config: Dict[str, Any]) -> None:
+    """Open Hub open times on the running Hub thread."""
+    global _hub_controller
+    if _hub_controller is None:
+        _hub_controller = HubController()
+    _hub_controller.show_hub_open_times(config)
 
 
 def show_hub(config: Dict[str, Any]) -> None:

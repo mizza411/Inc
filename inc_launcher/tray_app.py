@@ -53,6 +53,8 @@ logger = logging.getLogger(__name__)
 # documented action text (tests assert it, Phase 1b keeps the same wording).
 RESTART_MENU_LABEL = "Restart"
 RESTART_HOVER_LABEL = "Restart Inc Launcher tray"
+HUB_OPEN_TIMES_MENU_LABEL = "Settings"
+HUB_OPEN_TIMES_HOVER_LABEL = "Open the Settings window for the two clocks that open Inc Hub"
 # Phase 2 automated prove only. Never set in normal owner launches.
 _RESTART_SMOKE_ENV = "INC_LAUNCHER_RESTART_SMOKE"
 
@@ -70,6 +72,12 @@ def _refresh_tray_menu() -> None:
 def _open_hub() -> None:
     if _hub_config is not None:
         show_hub(_hub_config)
+
+
+def _open_hub_open_times() -> None:
+    from inc_launcher.hub_window import show_hub_open_times
+
+    show_hub_open_times(load_config(_config_path))
 
 
 def _restore_network_ask() -> None:
@@ -222,6 +230,12 @@ def build_menu(config: Dict[str, Any]):
         item(
             "Interval nudges [ON]" if nudges_on else "Interval nudges [OFF]",
             lambda icon, item: _toggle_interval_nudges(),
+        )
+    )
+    entries.append(
+        item(
+            HUB_OPEN_TIMES_MENU_LABEL,
+            lambda icon, item: _open_hub_open_times(),
         )
     )
     catchup_on = is_formulation_catchup_enabled(_config_path)
