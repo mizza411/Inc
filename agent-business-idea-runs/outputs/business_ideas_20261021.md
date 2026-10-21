@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-21 ~06:00–07:00 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-10-21 ~06:00-07:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-21 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261021.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261021_060216.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Wednesday Punch politics/mourning-heavy + Premium Times politics/health-heavy — lean Nairametrics + BusinessDay + Punch JPMorgan + FIJ/Vanguard for commercial Mode A and S1 cites; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-20 (esp. CapMarket MasterPlan Retail Onboard Desk, SEC Tokenisation Rule Gap Desk, AccessBank LostPhone Loan Clock, UnitedNigeria Airline CP Diligence Pack, OPay×PalmPay ElevenMonth Flag Clock, OPay DualListing NGX Stake Pack, Renaissance VendorFinance Ready Pack, AccessBank PhantomDebit Merchant Trace, Sunbeth Cocoa CP Season Diligence Pack, PalmPay RecoveredNotCredited Clock, ChinaCrossBorder Pay Prep Desk, LCFE Petroleum Benchmark Ready Pack, Moniepoint AgentOfficer SixteenMonth Clock, PepsiYellow CapChange Auth Desk, DMO Oct19 Bond Calendar Desk, Brent110 Petrol Relief Stress Board, FreeCrude Qty Reality Board, OPay PartialCourt Balance Clock, Moniepoint×OPay DualRail Refund Clock, CapMarket-adjacent listing/retail jobs); older `business_ideas_20261011.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. PrivateFirm Listing Incentive Prep Desk — Growth Board / disclosure pack before unpublished incentives (**S12 Mode A**)
 
-- **Problem:** BusinessDay (20 Oct 2026): Finance Minister Taiwo Oyedele said the FG will use incentives rather than compulsion to attract privately owned businesses onto NGX, as Capital Market Master Plan 2026–2036 targets **250** listed companies and equity market cap **≥60%** of GDP. Incentive design, eligibility, and timing are still unpublished — founders still treat “list someday” as a WhatsApp rumour without a disclosure / governance / Growth Board readiness pack.
+- **Problem / trend:** BusinessDay (20 Oct 2026): Finance Minister Taiwo Oyedele said the FG will use incentives rather than compulsion to attract privately owned businesses onto NGX, as Capital Market Master Plan 2026-2036 targets **250** listed companies and equity market cap **≥60%** of GDP. Incentive design, eligibility, and timing are still unpublished. Founders still treat "list someday" as a WhatsApp rumour without disclosure, governance, and Growth Board readiness software.
 - **Solution:**
-  - **Established solution:** Nasdaq Private Market / Carta-style pre-IPO readiness and cap-table hygiene software for private companies preparing to list.
-  - **Variant:** Nigeria Growth Board listing-readiness checklist with Naira fee quotes, SEC/NGX disclosure map, and incentive-watch log (not a listing sponsor).
+  - **Established solution:** Carta and Nasdaq Private Market (private-company cap-table and pre-listing readiness software).
+  - **Variant:** PrivateFirm Listing Incentive Prep, the Nigeria version of that software. It uses Naira fee quotes, an SEC and NGX disclosure map, and an incentive-status watch. It is not a listing sponsor.
 - **Target:** Mid-size private manufacturers, fintechs, and family businesses considering NGX Growth Board or Main Board within 12–36 months.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not SEC, NGX, or issuing-house official; not investment advice; NDPA for founder docs.
@@ -86,10 +86,10 @@
 
 ### 2. PoS Agent TransferShift Survival Pack — fee-mix + principal transition after mobile-transfer shift (**S12 Mode A**)
 
-- **Problem:** Nairametrics (20 Oct 2026): Nigeria’s vast PoS agency network is under pressure as consumers abandon cash withdrawals for direct mobile transfers. Onafriq’s Baxi agent-banking wind-down (16 Oct 2026) already forced agents to move to another principal within 30 days — thousands of agents still lack a fee-mix, float, and principal-bank transition pack.
+- **Problem / trend:** Nairametrics (20 Oct 2026): Nigeria's vast PoS agency network is under pressure as consumers abandon cash withdrawals for direct mobile transfers. Onafriq's Baxi agent-banking wind-down (16 Oct 2026) already forced agents to move to another principal within 30 days. Thousands of agents still lack fee-mix, float, and principal-bank transition software.
 - **Solution:**
-  - **Established solution:** Square / Clover agent-merchant ops dashboards that track fee mix, float, and terminal economics.
-  - **Variant:** Nigeria PoS-agent survival workbook with Naira fee-mix calculator, principal-bank switch checklist, and transfer-vs-cash volume log (not a super-agent licence).
+  - **Established solution:** Square and Clover (merchant software that tracks fee mix, float, and terminal economics).
+  - **Variant:** PoS Agent TransferShift Survival, the Nigeria version of that software. It uses Naira fee-mix math, a principal-bank switch path, and a transfer-versus-cash volume log. It is not a super-agent licence.
 - **Target:** Independent PoS agents, small super-agent hubs, and agents mid-transition after Baxi/principal exits.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not CBN agent-banking licensing; not a payments PSP; NDPA for agent IDs.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** GTBank / Guaranty Trust (mass Nigeria retail bank with GTWorld channel). **Recurring complaint:** Oyo retiree’s **N552,000** (borrowed for daughter’s law-school tuition) was transferred to a Gomoney account without his authorisation and **without an alert**; the bank identified the recipient yet said it “can’t assume liability” because the transaction passed security checks (FIJ, 18 Sep 2026). **Variation:** No-alert → recipient named → liability-denial evidence clock — not GTBank×OPay Unauth FindWho (cross-rail find-who) and not AccessBank LostPhone Loan Clock.
 - **Complaint citations:** FIJ (18 Sep 2026), https://fij.ng/article/oyo-retiree-got-no-alert-as-stranger-stole-n552000-meant-for-daughters-tuition-gtbank-said-it-cant-assume-liability/ (no alert, N552k to Gomoney Rukkaya Muhammed, bank letter denies liability).
 - **Solution:**
-  - **Established solution:** Plaid / MX-style transaction dispute evidence packs plus US bank “Reg E” unauthorized-transfer timelines.
-  - **Variant:** Nigeria no-alert dispute clock with GTWorld screenshot log, recipient-rail note, and CBN CPD handoff PDF (not a law firm).
+  - **Established solution:** Plaid (bank-transaction software used to assemble an unauthorized-transfer dispute timeline).
+  - **Variant:** GTBank NoAlert Liability Clock, the Nigeria version of Plaid. It keeps a GTWorld debit timeline, a named recipient rail, and a CBN consumer-protection handoff. It is not a law firm.
 - **Target:** GTBank retail customers who discover large unauthorised debits without alerts, especially tuition/salary wallets.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not GTBank official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** Punch and BusinessDay (20–21 Oct 2026): JPMorgan Chase deposited **N50bn** with CBN toward a merchant-banking licence (minimum paid-up capital under recap rules). Approval is still pending; Bloomberg-linked reporting points to late 2026 or early 2027. Large Nigerian corporates still lack a plain-language pack comparing merchant-bank vs commercial-bank wholesale rails (treasury, structured deals, Eurobond adjacency) without treating the deposit as approval.
 - **Solution:**
-  - **Established solution:** CapIQ / Dealogic-style bank relationship scorecards for corporate treasury teams evaluating new wholesale counterparties.
-  - **Variant:** Nigeria merchant-bank readiness one-pager with CBN licence-status watch, product-scope checklist, and Naira/USD relationship ask-list (not a licence broker).
+  - **Established solution:** S&P Capital IQ (treasury software that scores a new wholesale bank relationship).
+  - **Variant:** JPMorgan MerchantBank Stake Ready, the Nigeria version of Capital IQ. It watches CBN licence status, compares product scope, and lists Naira or USD relationship questions. It is not a licence broker.
 - **Target:** CFOs/treasurers at large corporates, state-linked issuers, and boutique arrangers preparing for a new wholesale entrant.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not CBN; not JPMorgan; not investment advice.
@@ -147,8 +147,8 @@
 - **Formula:** **Successful business:** OPay (mass Nigeria digital wallet / payments rail). **Recurring complaint:** after GTBank→OPay wrong transfer of **N90,000**, OPay required a court order; order was served (Dec 2024), yet only **N25,000** returned (May 2025) and **N65,000** remained unpaid for ~20 months (FIJ, 14 Sep 2026). **Variation:** Court-order served → partial credit → remainder clock — not OPay PartialCourt Balance Clock (balance after partial court path on other facts) and not DualRail Refund.
 - **Complaint citations:** FIJ (14 Sep 2026), https://fij.ng/article/despite-court-order-opay-keeps-ibadan-woman-waiting-20-months-for-n65000-refund/ (court order acknowledged; N25k of N90k returned; N65k still open).
 - **Solution:**
-  - **Established solution:** Expensify / Stripe dispute timelines that track partial credits vs open balances after escalations.
-  - **Variant:** Nigeria court-order remainder clock with order PDF hash, partial-credit ledger, and CBN CPD export (not a court filing service).
+  - **Established solution:** Stripe (payments software that shows a partial credit against an open dispute balance).
+  - **Variant:** OPay CourtOrder Remainder Clock, the Nigeria version of Stripe. It records the court order, a partial-credit ledger, and a CBN consumer-protection export. It is not a court filing service.
 - **Target:** Consumers and SMEs stuck after fintechs demand court orders then pay only part of the ordered amount.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN CPD notes; NDPA; not legal practice; not OPay official.
@@ -166,8 +166,8 @@
 
 - **Problem / trend:** Nairametrics (20 Oct 2026): Kelvin Obasuyi argues payment uncertainty is raising the cost of international trade for Nigerian businesses — importers/exporters still run FX and correspondent-rail chaos on WhatsApp without a dated evidence pack for banks and counterparties.
 - **Solution:**
-  - **Established solution:** Trade finance documentary collections / letter-of-credit checklist tools (e.g. Bolero-style trade document workflows).
-  - **Variant:** Nigeria trade-pay uncertainty desk with Naira cost-of-delay log, payment-rail timeline, and bank handoff PDF (not an FX bureau).
+  - **Established solution:** Bolero (electronic trade-document software for cross-border payment files).
+  - **Variant:** TradePay Uncertainty Cost Desk, the Nigeria version of Bolero. It keeps a Naira cost-of-delay log, a payment-rail timeline, and a bank handoff. It is not an FX bureau.
 - **Target:** SME importers/exporters, freight forwarders, and boutique trade desks.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not CBN FX desk; not a licensed dealer.
@@ -185,8 +185,8 @@
 
 - **Problem / trend:** BusinessDay (21 Oct 2026): Oyedele dismisses political promises of returning fuel subsidies, stating Nigeria does not have enough crude capacity to sustain a subsidy. Fleet owners and SME fuel buyers still price “subsidy is coming back” rumours without a crude-capacity reality board.
 - **Solution:**
-  - **Established solution:** EIA / Bloomberg energy policy scenario boards that separate political signals from physical supply constraints.
-  - **Variant:** Nigeria subsidy-return reality board with crude-capacity citations, landing-cost notes, and SME fuel-budget stress sheet (not NNPC pricing).
+  - **Established solution:** S&P Global Commodity Insights (oil supply and policy scenario software).
+  - **Variant:** SubsidyReturn Crude Reality Board, the Nigeria version of that software. It shows crude-capacity citations, landing-cost context, and an SME fuel-budget stress view. It is not NNPC pricing.
 - **Target:** Transporters, generators-heavy SMEs, and LGA fuel buyers planning Q4–Q1 budgets.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NNPC Retail or PIB official; not investment advice.
@@ -204,8 +204,8 @@
 
 - **Problem / trend:** BusinessDay opinion (21 Oct 2026): West African port rail growth fails when critical railway switches/points fail; Hamburg’s sensor-based predictive maintenance is cited as a model for Apapa–Tin Can / Lekki rail builds. Terminal and logistics SMEs still lack a critical-asset monitoring priority pack tied to cargo evacuation risk.
 - **Solution:**
-  - **Established solution:** Siemens / Network Rail-style points condition monitoring and predictive maintenance software.
-  - **Variant:** Nigeria port-rail points priority desk with critical-junction shortlist, sensor-vs-inspection roadmap, and cargo-delay cost log (not an NRC contractor).
+  - **Established solution:** Siemens (railway points condition-monitoring software).
+  - **Variant:** Apapa Rail Points Monitor, the Nigeria version of that software. It keeps a critical-junction shortlist, a sensor-versus-inspection roadmap, and a cargo-delay cost log. It is not an NRC contractor.
 - **Target:** Terminal operators, rail concession planners, and cargo logistics SMEs near Apapa/Tin Can/Lekki.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Informational only — not NRC/NPA official; not safety certification.
@@ -223,8 +223,8 @@
 
 - **Problem / trend:** Nairametrics (20 Oct 2026): Nigeria CIS assets near **N9.885tn** (~**N10tn**), with money market funds at **N6.718tn** (~**68%** of NAV) and money market + dollar funds ~**86%** combined — retail savers still treat “mutual fund” as diversified when concentration risk is extreme.
 - **Solution:**
-  - **Established solution:** Morningstar-style fund category concentration and allocation education tools.
-  - **Variant:** Nigeria money-market concentration guard with SEC NAV cite sheet, category share pie, and disclaimer one-pager (not investment advice).
+  - **Established solution:** Morningstar (fund category and allocation software).
+  - **Variant:** MoneyMarket Concentration Guard, the Nigeria version of Morningstar. It shows an SEC NAV cite view, a category-share chart, and a clear not-advice label. It is not investment advice.
 - **Target:** First-time retail savers, HR voluntary-savings educators, cooperative treasurers.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not SEC fund distribution or advice.
@@ -242,8 +242,8 @@
 
 - **Problem / trend:** Nairametrics / FG (20 Oct 2026): Nigeria confirmed an imported Ebola Bundibugyo case in FCT (patient arrived from Uganda, private hospital care for days before confirmation); **44** contacts traced; FG urges all public and private facilities onto high alert. Private clinics still lack a same-day IPC / isolation / reporting pack.
 - **Solution:**
-  - **Established solution:** WHO / CDC facility IPC readiness checklists and outbreak playbooks for clinics.
-  - **Variant:** Nigeria private-clinic IPC ready pack with NCDC 6232 reporting path, isolation room checklist, and staff exposure log (not a diagnostic lab).
+  - **Established solution:** VigiLanz (hospital infection-surveillance software).
+  - **Variant:** Ebola PrivateClinic IPC Ready, the Nigeria version of VigiLanz. It includes an NCDC 6232 reporting path, an isolation-room readiness flow, and a staff exposure log. It is not a diagnostic lab and it is not medical advice.
 - **Target:** Private hospitals/clinics in FCT and major cities, clinic managers, occupational health leads.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NCDC/FMoH official; not medical advice; NDPA for staff logs.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Nairametrics (20 Oct 2026): NCC plans to expand phone-number verification across sectors to curb fraud. Banks, fintechs, and merchants will face new verify workflows — SMEs still lack a prep checklist for multi-sector MSISDN verification.
 - **Solution:**
-  - **Established solution:** Twilio Verify / Onfido-style phone and identity verification orchestration for regulated sectors.
-  - **Variant:** Nigeria multi-sector verify prep desk with NCC-watch log, sector checklist, and customer consent note (not an NCC licence).
+  - **Established solution:** Twilio Verify (phone-number verification software for regulated sectors).
+  - **Variant:** NCC MultiSector Verify Prep, the Nigeria version of Twilio Verify. It keeps an NCC policy watch, a sector readiness flow, and a customer consent record. It is not an NCC licence.
 - **Target:** Fintech compliance leads, lending apps, marketplace merchants, and HR payroll tools using phone as ID.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NCC official verifier; NDPA for phone/ID data.
@@ -281,8 +281,8 @@
 - **Formula:** **Successful business:** MTN Nigeria (mass mobile network). **Recurring complaint:** during multi-state service disruptions affecting Lagos/Oyo/Rivers/Delta/FCT, subscribers reported hours without data; at least one digital marketer said he was debited after purchasing data but had not received a refund while the outage continued (Vanguard, 14 Oct 2026; MTN confirmed related outages earlier in Oct). **Variation:** Outage window → data purchase debit → refund clock — not Kuda Downtime Safe Promise (fintech downtime promise) and not generic QoS dashboards.
 - **Complaint citations:** Vanguard (14 Oct 2026), https://www.vanguardngr.com/2026/10/subscribers-lament-hours-of-disrupted-mobile-service-2/ (Joel Okikioluwa: debited for data purchase, no refund at interview time during disruption). MTN outage confirmation context: Punch — https://punchng.com/mtn-confirms-network-outage-in-lagos-fct-four-other-states/
 - **Solution:**
-  - **Established solution:** Carrier billing dispute / refund timeline tools used by developed-market MVNOs and FCC complaint packs.
-  - **Variant:** Nigeria telco outage refund clock with purchase receipt, outage window log, and NCC consumer handoff PDF (not NCC enforcement).
+  - **Established solution:** Zendesk (customer-support software that tracks a billing dispute from purchase to refund).
+  - **Variant:** MTN DataRefund Outage Clock, the Nigeria version of Zendesk. It keeps a data-purchase receipt, an outage-window log, and an NCC consumer handoff. It is not NCC enforcement.
 - **Target:** Students, online sellers, and freelancers who buy data during outages and need refund evidence.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** NCC consumer notes; NDPA; not legal practice; not MTN official.
@@ -336,7 +336,9 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). StartupList Africa **429** (continued with synthesis). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). S15 skipped by design.
 
-**Pass 2 pack:** Required before Docx. Same dated `.md` — do not invent a new ranked set in Pass 2.
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-21. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -344,7 +346,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-10-21** | Pass 2 pack (`prompts/agent_formulation_pack.txt`) on this same file — fixed section 14 subheads, then one-shot in-repo Docx (do not open desktop Word). |
+| **2026-10-21** | Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-22** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
 | **2026-10-23** | Owner pick: PrivateFirm Listing Incentive Prep Desk landing copy test with 3 founder interviews (no owner PII in git). |
 | **2026-10-25** | Owner pick: PoS Agent TransferShift Survival Pack pilot with 5 agents post-Baxi transition (no agent PII in git). |
@@ -352,4 +354,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
