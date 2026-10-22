@@ -40,3 +40,16 @@ Checklist when you approve graduating prospect **X**:
 ## Template
 
 Use [`TEMPLATE.md`](TEMPLATE.md) for each new prospect.
+
+Each prospect can have a sibling `{slug}-funding.md` copied from [`FUNDING_TEMPLATE.md`](FUNDING_TEMPLATE.md), which is a funding note and not a second prospect, and moving a prospect to Started businesses still needs an explicit yes.
+
+## Active shortlist (pointers)
+
+| Slug | Notes |
+|------|--------|
+| `examfee-planner.md` | Formulation shortlist |
+| `agentdispute-ai.md` | Formulation shortlist |
+| `scimlite-ng.md` | Formulation shortlist |
+| `cert-privacy-readiness.md` | Certification / privacy readiness |
+| `sme-hybrid-loss-prevention-ng.md` | SME workshop loss prevention |
+| `public-iron-asset-protect.md` | B2G iron-theft detect/respond (GOV-IRON-THEFT-1) |

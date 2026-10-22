@@ -739,7 +739,7 @@ cd C:\dev\Inc\field_intelligence_radar
 **Goal:** Dedicated home for businesses **not started** but with **strong prospects** — separate from `Started-Businesses/` (e.g. software) and from raw formulation dumps (`agent-business-idea-runs/outputs/`).
 
 **Layout:** Folder `Prospect-Businesses/` at repo root (`C:\dev\Inc\Prospect-Businesses/`) — **created**.  
-**Active prospects (3):** `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md` (from `business_ideas_20260712.md`).  
+**Active prospects:** `examfee-planner.md`, `agentdispute-ai.md`, `scimlite-ng.md`, `cert-privacy-readiness.md`, `sme-hybrid-loss-prevention-ng.md`, **`public-iron-asset-protect.md`** (GOV-IRON-THEFT-1, added 2026-10-22).  
 **Hub:** Formulated ideas → **Prospect Businesses folder** (`id: prospect_businesses_folder` in `inc_launcher/launcher_config.json`).  
 **Bookmark sorter:** destination id `prospects` → `Prospect-Businesses/` (`business_bookmark_sorter/config/routes.json`).
 
