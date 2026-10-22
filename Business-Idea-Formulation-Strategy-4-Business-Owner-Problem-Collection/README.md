@@ -83,4 +83,6 @@ After completing this strategy, you should have:
 
 **Remember to use voice typing via AnyDesk for more efficient communication - it's more efficient than Google Docs' voice typing tool and eliminates the need for copying and pasting into IDE text fields.**
 
+The reminder for this ask is NET-ASK-REMIND-1 in `network_ask_reminder/`.
+
 

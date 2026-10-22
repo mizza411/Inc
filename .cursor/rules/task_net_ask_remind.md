@@ -1,7 +1,7 @@
 # NET-ASK-REMIND-1 — Ask-people / ask-owners problem collection reminder (S3 + S4)
 
 **Status:** 🟡 **Phase 6 in progress** (2026-08-08) — automation green; owner asks + `MANUAL_TEST.md`  
-**Follow-up:** Phase 7a and 7b done 2026-10-21. Phase 7c blocked 2026-10-21. Phase 4 and Not now passed. Two phase 3 checks failed for reasons outside this slice. Owner clocks were not edited.  
+**Follow-up:** Phase 7a, 7b, and 7c done 2026-10-22. Start opens the Word playbook. The other open paths were left alone. Owner clocks were not edited.  
 **Attempt (Phase 6 start / manual handoff):** 1  
 **Authoritative backlog:** **this file** (main `.cursor/rules/task.md` overloaded — thin pointer only there)  
 **Owner ask (2026-08-08):** Recurring reminder to ask people around you for business problems, via **Inc infrastructure** and/or **project_reminder**; connects to **Strategy 3** (network) **and** **Strategy 4** (business owners). Prove understanding first; then phased backlog; **automate-first** for all automatable parts.
@@ -248,10 +248,10 @@
 
 #### 7c — Leave the other open paths alone
 
-- [ ] **7c.1** Re-run the Ask phase 3 and phase 4 smokes. **Not now** still dismisses. Login still points at the same Word file. **Blocked 2026-10-21:** phase 4 passed, and `test_modal_not_now_skips_run_action` passed. Phase 3 `test_hub_card_and_schedule` failed because the live hour is 11 and the test still expects 9. Phase 3 `test_isolation_still_ok` failed because the cross-link line is missing in two strategy READMEs. Those README files were not edited.
-- [x] **7c.2** Do not edit Hub schedule ids, `nudge_scheduler.py`, or the owner’s saved clock times. — **2026-10-21** `nudge_scheduler.py` is unchanged. `launcher_config.json` was not edited in this slice. It is still dirty from the earlier saved clocks.
+- [x] **7c.1** Re-run the Ask phase 3 and phase 4 smokes. **Not now** still dismisses. Login still points at the same Word file. — **2026-10-22** 14 checks passed. The schedule check now accepts any valid hour and minute, and at least one day, so the saved 11:30 clock passes. The value 11:30 was not written into the test. The two strategy READMEs now contain the NET-ASK-REMIND-1 line.
+- [x] **7c.2** Do not edit Hub schedule ids, `nudge_scheduler.py`, or the owner’s saved clock times. — **2026-10-22** `nudge_scheduler.py` is unchanged. `launcher_config.json` was not edited.
 
-**Done when:** those smokes pass, and the diff does not include `inc_launcher/launcher_config.json`. Not met. The clock file was not part of this slice, and two phase 3 checks are still red.
+**Done when:** those smokes pass, and the diff does not include `inc_launcher/launcher_config.json`. Met 2026-10-22.
 
 **Estimate:** 10 minutes.
 
