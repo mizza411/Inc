@@ -1,0 +1,7 @@
+data/*.jsonl
+data/*.csv
+data/last_openers.txt
+config.json
+__pycache__/
+*.pyc
+.pytest_cache/

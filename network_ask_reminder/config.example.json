@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "timezone": "Africa/Lagos",
+  "cadence": {
+    "days": ["mon", "wed", "fri"],
+    "local_time": "09:30"
+  },
+  "rotate_mode": "alternate_s3_s4",
+  "surfaces": {
+    "inc_hub": true,
+    "project_reminder_docx": true,
+    "task_reminder_seed": false
+  },
+  "quiet_hours": {
+    "start": "21:00",
+    "end": "07:00"
+  },
+  "prompts": {
+    "s3": "Ask someone in your network: what business or work problem is costing them time or money?",
+    "s4": "Ask a business owner: what is the hardest operational problem this week? Offer the short questionnaire if appropriate."
+  },
+  "capture": {
+    "log_path": "data/ask_log.jsonl",
+    "pointers": {
+      "strategy3": "Business-Idea-Formulation-Strategy-3-Network-Based-Problem-Identification/",
+      "strategy4": "Business-Idea-Formulation-Strategy-4-Business-Owner-Problem-Collection/",
+      "problem_id": "problem_identification_tool/"
+    }
+  },
+  "notes": "Copy to config.json locally. AUTO-NAR-01 will validate this schema in Phase 2."
+}
