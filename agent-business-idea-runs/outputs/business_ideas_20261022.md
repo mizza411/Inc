@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-22 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-22 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-22 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261022.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261022_060246.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Punch politics/lifestyle-heavy + Premium Times politics/health-heavy — lean Nairametrics + BusinessDay + Vanguard commercial + Punch petroleum ledger + FIJ/web cites for Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-21 (esp. PrivateFirm Listing Incentive Prep Desk, PoS Agent TransferShift Survival Pack, GTBank NoAlert Liability Clock, JPMorgan MerchantBank Stake Ready Pack, OPay CourtOrder Remainder Clock, CapMarket MasterPlan Retail Onboard Desk, SEC Tokenisation Rule Gap Desk, AccessBank LostPhone Loan Clock, UnitedNigeria Airline CP Diligence Pack, OPay×PalmPay ElevenMonth Flag Clock, OPay DualListing NGX Stake Pack, Renaissance VendorFinance Ready Pack, AccessBank PhantomDebit Merchant Trace, Sunbeth Cocoa CP Season Diligence Pack, PalmPay RecoveredNotCredited Clock, ChinaCrossBorder Pay Prep Desk, LCFE Petroleum Benchmark Ready Pack, Moniepoint AgentOfficer SixteenMonth Clock, Brent110 Petrol Relief Stress Board, MeCure CP Series8 Diligence Pack, InsiderCredit Board Exit Guard, OwerriRunway Reroute Desk, PalmPay FourteenDay Lien Clock); older `business_ideas_20260715.md` / `20261010.md` / `20261011.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. InsurerEscrow N300bn Release Desk — CBN verification timeline pack (**S12 Mode A**)
 
-- **Problem:** Vanguard (22 Oct 2026) and Business Times / Arise (13–19 Oct 2026): about **N300bn** deposited by insurers during recapitalisation remains in CBN escrow while the apex bank completes due-diligence/verification. NAICOM has instructed return to original accounts; a September release target slipped into October. Board CFOs still track “when will capital land?” in email threads without a verification evidence pack.
+- **Problem / trend:** Vanguard (22 Oct 2026) and Business Times / Arise (13–19 Oct 2026): about **N300bn** deposited by insurers during recapitalisation remains in CBN escrow while the apex bank completes due-diligence/verification. NAICOM has instructed return to original accounts, and a September release target slipped into October. Board CFOs still track “when will capital land?” in email threads without a verification evidence pack.
 - **Solution:**
-  - **Established solution:** Workiva / Diligent disclosure + escrow-status workspaces used by US/EU insurers during capital raises.
-  - **Variant:** Nigeria insurer escrow-release desk — NAICOM instruction → CBN verification checklist → account-match evidence log → board handoff PDF (**not** a CBN portal, not legal representation).
+  - **Established solution:** Workiva and Diligent (disclosure and escrow-status software used by US and EU insurers during capital raises).
+  - **Variant:** InsurerEscrow Release Desk, the Nigeria version of that software. It tracks the NAICOM return instruction, the CBN verification steps, and which account should receive the funds. It is not a CBN portal and it is not legal representation.
 - **Target:** Insurance/reinsurance CFOs and company secretaries among the ~24 firms that raised into escrow; boutique insurance counsel.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not CBN, NAICOM, or NDIC official; not legal or investment advice; NDPA for account identifiers.
@@ -86,10 +86,10 @@
 
 ### 2. MMA2 Concession Closeout Playbook — reciprocal-waiver settlement kit (**S12 Mode A**)
 
-- **Problem:** Nairametrics (21 Oct 2026), BusinessDay (22 Oct 2026), Channels/Tribune (20 Oct 2026): FG, FAAN, Bi-Courtney and Stabilini Visinoni signed settlement agreements ending a nearly **20-year** MMA2 (and related hotel) dispute after FEC approval. Bi-Courtney waived a **N132bn** damages/interest claim; government/FAAN waived accumulated concession-fee claims; FAAN can begin collecting MMA2 revenue. Other aviation and PPP concession desks still lack a reusable closeout checklist when reciprocal waivers restart fee flows.
+- **Problem / trend:** Nairametrics (21 Oct 2026), BusinessDay (22 Oct 2026), Channels/Tribune (20 Oct 2026): FG, FAAN, Bi-Courtney and Stabilini Visinoni signed settlement agreements ending a nearly **20-year** MMA2 (and related hotel) dispute after FEC approval. Bi-Courtney waived a **N132bn** damages/interest claim, government and FAAN waived accumulated concession-fee claims, and FAAN can begin collecting MMA2 revenue. Other aviation and PPP concession desks still lack a reusable closeout checklist when reciprocal waivers restart fee flows.
 - **Solution:**
-  - **Established solution:** InfraPPP / World Bank concession closeout toolkits and US airport P3 settlement playbooks.
-  - **Variant:** Nigeria aviation/PPP closeout playbook — claim map → reciprocal-waiver checklist → fee-restart calendar → ICRC/FAAN handoff one-pager (**not** a government filing portal, not legal counsel).
+  - **Established solution:** Intralinks and DealCloud (deal-room and closeout software used on US airport and infrastructure settlements).
+  - **Variant:** MMA2 Concession Closeout, the Nigeria version of that software. It maps the waived claims, the reciprocal waiver, and the date FAAN can restart fees. It is not a government filing portal and it is not legal counsel.
 - **Target:** Mid-tier airport/concession CFOs, state PPP desks, boutique infrastructure counsel watching MMA2 precedents.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Informational only — not FAAN, ICRC, or Ministry of Aviation official; not legal advice.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** Moniepoint (mass Nigeria agent banking / MFB rail). **Recurring complaint:** after a court order froze a recipient account with enough balance, Moniepoint still required the sender’s bank (GTBank) to send an official email — and after GTBank did so, the **N250,000** still was not reversed for weeks until media pressure (FIJ, Feb–Mar 2026). **Variation:** Condition-set → condition-done → still-hold clock — not Moniepoint CourtOrder Refund Clock (order ignored alone) and not Moniepoint AgentOfficer SixteenMonth (officer/state ping-pong).
 - **Complaint citations:** FIJ (20 Feb 2026), https://fij.ng/article/kwara-civil-servant-gtbank-act-accordingly-but-moniepoint-still-withholds-n250000-refund/ (GTBank emailed as required; refund still withheld; Moniepoint then asked for email subject line). Follow-up: FIJ (1 Mar 2026), https://fij.ng/article/after-fijs-story-moniepoint-returns-kwara-civil-servants-n250000-held-for-9-months/ (funds returned after coverage).
 - **Solution:**
-  - **Established solution:** Resolver / Zendesk dispute clocks used by US/UK digital banks for chargeback evidence timelines.
-  - **Variant:** Nigeria Moniepoint condition-fulfilled clock — capture bank-email proof → court-order log → balance-still-held timeline → CBN CPD export packet.
+  - **Established solution:** Zendesk and Resolver (dispute-timeline software used by US and UK digital banks).
+  - **Variant:** Moniepoint BankEmail Done StillHold Clock, the Nigeria version of that software. It stores the GTBank email proof, the court-order log, and the days the N250,000 stayed held after the bank's own condition was met. It is not Moniepoint official support.
 - **Target:** Consumers and SMEs who complete Moniepoint’s stated bank-email step and still wait on frozen funds.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not Moniepoint official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** Vanguard, Guardian, THISDAY, Blueprint (21 Oct 2026): House of Representatives Ad Hoc Committee on poor telecom quality gave CEOs of MTN, Airtel, Globacom, Mafab and others **seven days** to appear personally on **28 Oct 2026** (Hearing Room 447), with documents, after prior no-shows. Lawmakers tied QoS failures to POS and payment disruptions nationwide.
 - **Solution:**
-  - **Established solution:** RootMetrics / Opensignal enterprise outage evidence packs used by US SMEs in FCC complaint workflows.
-  - **Variant:** Nigeria SME TelcoQoS hearing pack — outage log → POS-fail screenshots → NCC complaint IDs → one-pager for counsel or association submission (**not** an NCC portal, not legal representation).
+  - **Established solution:** Opensignal and RootMetrics (network-quality software used by US businesses in FCC complaint workflows).
+  - **Variant:** TelcoQoS Hearing Evidence Pack, the Nigeria version of that software. It logs outages, POS failures, and NCC complaint IDs ahead of the 28 Oct 2026 House hearing. It is not an NCC portal and it is not legal representation.
 - **Target:** POS agents, payment SMEs, and trade associations preparing evidence before/around the 28 Oct hearing.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NCC or National Assembly official; not legal advice.
@@ -147,8 +147,8 @@
 - **Formula:** **Successful business:** Kuda (mass Nigeria digital bank). **Recurring complaint:** after a WhatsApp gadget-group buyer paid **N1.44m** for an iPhone 17 Pro to a named Kuda account used by a poser, the bank said **N1m** was already withdrawn and only **N440k** remained under lien pending a court order (FIJ, 28 Sep 2026). **Variation:** Marketplace payment → partial withdrawal → lien-remainder court-order clock — not Kuda Downtime Safe Promise Clock (downtime assurance) and not KudaDecline Hold Desk (decline/hold hygiene).
 - **Complaint citations:** FIJ (28 Sep 2026), https://fij.ng/article/poser-uses-kuda-account-ajao-olakunle-lukman-to-steal-n1-4m-from-iphone-17-pro-buyer/ (N1.44m paid; N1m withdrawn; N440k lien; court order still needed).
 - **Solution:**
-  - **Established solution:** Venmo/Cash App purchase-protection dispute clocks plus US marketplace escrow evidence kits.
-  - **Variant:** Nigeria Kuda marketplace lien-remainder clock — receipt + chat log → lien confirmation → court-order checklist → export packet for bank/CBN CPD notes.
+  - **Established solution:** Cash App and Venmo (purchase-protection software that tracks a marketplace payment and what remains recoverable).
+  - **Variant:** Kuda Marketplace Lien Remainder Clock, the Nigeria version of that software. It keeps the chat receipt, the lien on the remaining balance, and the court-order step. It is not Kuda official support.
 - **Target:** Gadget resellers and consumers paying peer Kuda accounts in WhatsApp marketplace groups.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN Instant EFT / consumer notes; NDPA; not legal practice; not Kuda official.
@@ -166,8 +166,8 @@
 
 - **Problem / trend:** Guardian/Daily Trust/Business Daily (21–22 Oct 2026) citing PwC *VAT in Africa: Digital Services 2026*: non-resident taxable suppliers (cloud, streaming, ads, marketplaces) likely fall under Nigeria’s e-invoicing frame, but NRS has not defined operational steps. Mandatory e-invoicing (as of Feb 2026) targets large taxpayers with ≥**N5bn** turnover without an express NRTS exclusion.
 - **Solution:**
-  - **Established solution:** Avalara / Vertex e-invoicing readiness packs for EU OSS and LATAM NR suppliers.
-  - **Variant:** Nigeria NRTS scope pack — registration checklist → e-invoice field map → written NRS clarification request template → penalty-exposure note (**not** tax advice, not an NRS portal).
+  - **Established solution:** Avalara and Vertex (e-invoicing readiness software used by foreign digital suppliers in the EU and Latin America).
+  - **Variant:** NRTS VAT E-Invoice Scope Pack, the Nigeria version of that software. It maps registration fields, e-invoice fields, and a written NRS clarification request for non-resident suppliers. It is not tax advice and it is not an NRS portal.
 - **Target:** Foreign digital suppliers serving Nigeria and local tax agents advising them.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Informational only — not NRS official; not tax practice.
@@ -185,8 +185,8 @@
 
 - **Problem / trend:** Punch / Inside Business / Business Daily (20–21 Oct 2026): six months after Executive Order 9 (13 Feb 2026), OAGF ledgers show **N211.74bn** accumulated across Frontier Exploration Fund (**N106.75bn**) and gas-flaring penalty escrow (**N104.98bn**) with **no payments** listed, while identical monthly figures across ledgers raise implementation questions for FAAC stakeholders.
 - **Solution:**
-  - **Established solution:** Extractive Industries Transparency Initiative (EITI) reconciliation boards and US state oil-royalty dashboards.
-  - **Variant:** Nigeria EO9 ledger clarity board — account map → receipt vs payment checklist → FAAC question list → CSO/state analyst one-pager (**not** an OAGF portal, not advocacy lobbying as a product).
+  - **Established solution:** EITI open-data portals and the US Office of Natural Resources Revenue royalty dashboards (public oil-revenue software).
+  - **Variant:** EO9 Petroleum Ledger Clarity Board, the Nigeria version of that software. It maps Frontier Exploration Fund and gas-flare escrow lines and flags months with receipts and no payments. It is not an OAGF portal.
 - **Target:** State FAAC desks, energy journalists, civil-society budget trackers, boutique energy counsel.
 - **MVP cost:** $8k–$16k.
 - **Regulatory:** Informational only — not OAGF, FAAC, NNPC, or Midstream Gas Infrastructure Fund official.
@@ -204,8 +204,8 @@
 
 - **Problem / trend:** BusinessDay (21–22 Oct 2026): excitement around a **N4.66trn** petrochemicals investment heading to Bonny — local vendors still lack bankable HSE, capacity, and local-content evidence packs before EPC shortlists.
 - **Solution:**
-  - **Established solution:** Ariba / Coupa supplier readiness kits used on US Gulf Coast petrochem builds.
-  - **Variant:** Nigeria Bonny vendor ready pack — capacity/HSE checklist → local-content evidence → pre-qual one-pager (**not** an NCDMB/NipeX broker).
+  - **Established solution:** SAP Ariba and Coupa (supplier-readiness software used on large US petrochemical builds).
+  - **Variant:** Bonny Petrochem Vendor Ready Pack, the Nigeria version of that software. It stores HSE evidence, capacity evidence, and local-content files before an EPC shortlist. It is not an NCDMB or NipeX broker.
 - **Target:** Indigenous fabricators, logistics SMEs, and service vendors near Bonny/Port Harcourt.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NCDMB, NipeX, or project-owner official.
@@ -223,8 +223,8 @@
 
 - **Problem / trend:** BusinessDay interview (21 Oct 2026): operators say inland market logistical gaps keep firms stuck at the seaport instead of focusing on growth — SMEs need a port-to-inland documentation and partner-map kit.
 - **Solution:**
-  - **Established solution:** Flexport / Freightos inland continuity playbooks for US importers.
-  - **Variant:** Nigeria inland logistics gap desk — document checklist → partner map (haulage/warehouse) → cost/time log → shipper one-pager (**not** a freight forwarder licence).
+  - **Established solution:** Flexport and Freightos (freight software that tracks a shipment from port to inland delivery).
+  - **Variant:** Inland Logistics Gap Bridge Desk, the Nigeria version of that software. It keeps the document list, the haulage and warehouse partner map, and a Naira cost and time log. It is not a freight-forwarder licence.
 - **Target:** Importers and distributors moving cargo past Lagos/Onne ports into inland markets.
 - **MVP cost:** $8k–$16k.
 - **Regulatory:** Contract hygiene; Customs process notes only; NDPA for shipment IDs.
@@ -242,8 +242,8 @@
 
 - **Problem / trend:** FIJ alert: fake FRSC fine websites generate offences for invented plates, push “discount if you pay now,” and harvest card/PIN via third-party checkouts. FRSC’s legitimate electronic fine path uses **Remita** (and bank/POS at commands) — motorists still confuse SMS links with Remita.
 - **Solution:**
-  - **Established solution:** US DMV official-payment verify widgets and phishing-spot checklists.
-  - **Variant:** Nigeria FakeFRSC Remita spot desk — notice capture → Remita path checklist → stop-if-asks-PIN rule → FRSC advisory handoff (**not** FRSC official).
+  - **Established solution:** Google Safe Browsing and official US state DMV payment pages (software that checks whether a fine-payment link is the real government channel).
+  - **Variant:** FakeFRSC Remita Spot Desk, the Nigeria version of that software. It checks a notice against the Remita path and stops the user if the page asks for a card PIN. It is not FRSC official.
 - **Target:** Motorists and fleet SMEs receiving SMS “new offence” links.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not FRSC official; not legal advice.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Nairametrics (21 Oct 2026): NGX fined **15** companies about **N123.17m** for late filings; experts seek tougher sanctions. Company secretaries still track deadlines in scattered email.
 - **Solution:**
-  - **Established solution:** Broadridge / Diligent filing calendars for US listed issuers.
-  - **Variant:** Nigeria NGX late-filing fine guard — filing calendar → reminder log → evidence folder → company-secretary handoff (**not** NGX official, not legal advice).
+  - **Established solution:** Broadridge and Diligent (filing-calendar software used by US listed companies).
+  - **Variant:** NGX LateFiling Fine Guard, the Nigeria version of that software. It keeps the filing calendar, the reminder log, and the evidence folder for company secretaries. It is not an NGX compliance desk and it is not legal advice.
 - **Target:** Company secretaries and IR teams at mid-cap NGX issuers.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NGX compliance desk; not investment advice.
@@ -280,8 +280,8 @@
 
 - **Problem / trend:** Product Hunt (20 Oct 2026): Lea by LeanAIOS launches as an autonomous AI team for construction management and pre-con. Nigeria mid builders still run BOQs and site updates on WhatsApp without a local context layer (Naira rates, local HSE, NDPA).
 - **Solution:**
-  - **Established solution:** Lea / Autodesk Construction IQ-style pre-con assistants.
-  - **Variant:** Nigeria Lea-style construction context lite — BOQ/site note capture → Naira rate tags → HSE checklist → export for QS (**not** a full Lea clone, not Autodesk licence resale).
+  - **Established solution:** Lea by LeanAIOS and Autodesk Construction IQ (pre-construction management software).
+  - **Variant:** Lea Construction Context NG, the Nigeria version of that software. It tags site notes with Naira rates and a local HSE list for a quantity surveyor export. It is not a full Lea clone and it is not an Autodesk licence resale.
 - **Target:** Mid-size contractors and QS boutiques in Lagos/Abuja.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for project docs; not a licensed QS firm substitute.
@@ -323,7 +323,11 @@ PrivateFirm Listing Incentive Prep Desk; PoS Agent TransferShift Survival Pack; 
 | **14** OWID | **ran** | Internet-users snippet fetched (status 200); used lightly for digital/telco context. |
 | **15** Telecom figures | **skipped** | Default skip (no `--with-strategy15`). |
 
-**Data freshness:** Fetch `20261022_060246` UTC; news cites 20–22 Oct 2026 plus dated FIJ complaints. Partial: Techpoint/FN **0**; StartupList **429**.
+**Data freshness:** Fetch `20261022_060246` UTC. News cites 20-22 Oct 2026 plus dated FIJ complaints. Partial: Techpoint/FN **0**, StartupList **429**.
+
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-22. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -331,7 +335,7 @@ PrivateFirm Listing Incentive Prep Desk; PoS Agent TransferShift Survival Pack; 
 
 | When | Step |
 |------|------|
-| **2026-10-22** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` — fixed subheads + one-shot Docx. Do **not** invent a new ranked set. |
+| **2026-10-22** | Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-23** | Spot-check InsurerEscrow: confirm whether any of the ~24 firms already received escrow returns (NAICOM/CBN notices). |
 | **2026-10-28** | TelcoQoS: note House hearing outcomes; update evidence-pack fields if CEOs appear. |
 | **2026-10-29–31** | S1 clocks: re-check FIJ for Moniepoint/Kuda resolution follow-ups before any founder outreach. |
@@ -339,8 +343,4 @@ PrivateFirm Listing Incentive Prep Desk; PoS Agent TransferShift Survival Pack; 
 
 ---
 
-## Docx status
-
-`_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before Docx. Next paste: `prompts/agent_formulation_pack.txt` against `agent-business-idea-runs/outputs/business_ideas_20261022.md`.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
