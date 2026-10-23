@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-23 ~06:00–07:30 UTC. **Pass 1 Discover** only.  
+**Generated:** 2026-10-23 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-23 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261023.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261023_060131.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; BusinessDay lifestyle/politics-heavy + Punch politics/sports-heavy + Premium Times politics/Ebola-heavy — lean Nairametrics + Vanguard food/CNG + Punch CBN erroneous-credit + Premium Times NEC/pharma + FIJ/web cites for Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-22 (esp. InsurerEscrow N300bn Release Desk, MMA2 Concession Closeout Playbook, Moniepoint BankEmail Done StillHold Clock, TelcoQoS Oct28 Hearing Evidence Pack, Kuda Marketplace Lien Remainder Clock, PrivateFirm Listing Incentive Prep Desk, PoS Agent TransferShift Survival Pack, GTBank NoAlert Liability Clock, JPMorgan MerchantBank Stake Ready Pack, OPay CourtOrder Remainder Clock, CapMarket MasterPlan Retail Onboard Desk, SEC Tokenisation Rule Gap Desk, AccessBank LostPhone Loan Clock, ChinaCrossBorder Pay Prep Desk, DMO Oct19 Bond Calendar Desk, DMO NTB BidReject Rate Desk, PalmPay FuelPOS TwoYear Refund Clock, PalmPay RecoveredNotCredited Clock, MultiRail Unauth Deny Clock, NGX LateFiling Fine Guard); older `business_ideas_20260715.md` / `20261010.md` / `20261011.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -327,7 +327,9 @@ InsurerEscrow N300bn Release Desk; MMA2 Concession Closeout Playbook; Moniepoint
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). StartupList Africa returned **429** (continued, S6 synthesized). BusinessDay/Punch lifestyle-politics-heavy — commercial Mode A from Nairametrics + Vanguard + web. Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). S15 skipped by design.
 
-**Pass boundary:** Pass 1 Discover complete. **Do not** pack cards or convert/open Docx in this pass. Pass 2 pack is required before Docx (`prompts/agent_formulation_pack.txt` on this same dated `.md`).
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-23. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -335,7 +337,7 @@ InsurerEscrow N300bn Release Desk; MMA2 Concession Closeout Playbook; Moniepoint
 
 | Date | Step |
 |------|------|
-| **2026-10-23** | Pass 2 pack on this same file (same ranks, section 14 subheads). One-shot in-repo Docx only after pack. Schema optional: `idea_card_schema.py`. |
+| **2026-10-23** | Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-27** | RefineryIPO: confirm application-list close messaging and retail allotment FAQ fields (no secrets in repo). |
 | **2026-10-29** | NEC90Day: sample 5 staple prices in Lagos/Abuja markets for board pilot fields (no owner PII in git). |
 | **2026-11-05** | CNG FarePass: check whether FG–state financing committee published operator eligibility notes. |
@@ -343,4 +345,4 @@ InsurerEscrow N300bn Release Desk; MMA2 Concession Closeout Playbook; Moniepoint
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
