@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-24 ~06:00–07:30 UTC. **Pass 1 Discover** only.  
+**Generated:** 2026-10-24 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-24 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261024.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261024_060202.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; BusinessDay weekender/lifestyle-heavy + Punch politics/crime/sports-heavy + Premium Times politics/security/Ebola-heavy + Vanguard sports/crime-heavy — lean Nairametrics commercial + Punch physio + BusinessDay FX web cite + FIJ/web cites for Mode A; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-23 (esp. NEC90Day FoodPrice Evidence Board, CNG FarePass Financing Stake Pack, OPay RecipientRefuse ErroneousCredit Clock, RefineryIPO AllotmentRefund Timeline Desk, UBA×OPay PoS WrongCredit Claim Clock, InsurerEscrow N300bn Release Desk, MMA2 Concession Closeout Playbook, Moniepoint BankEmail Done StillHold Clock, TelcoQoS Oct28 Hearing Evidence Pack, Kuda Marketplace Lien Remainder Clock, JPMorgan MerchantBank Stake Ready Pack, GTBank NoAlert Liability Clock, PalmPay FuelPOS TwoYear Refund Clock, MultiRail Unauth Deny Clock, Kuda Downtime Safe Promise Clock, DMO Bond/NTB desks, BOI N1.85tn Lending Access Pack); older `business_ideas_20260715.md` / `20261010.md` / `20261011.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -322,7 +322,11 @@
 | **15** Telecom audited figures | **skipped** | Default skip (`--with-strategy15` not set). |
 | **2, 3, 4, 8, 10** | **skipped** | Per prompt (verbal/network/retired). |
 
-**Data freshness:** Fetch generated_at **2026-10-24T06:02:05Z**. Saturday feeds: commercial density concentrated in Nairametrics; lifestyle/politics elsewhere. Soft-fail on Techpoint/FN empty RSS and StartupList 429 did not abort the run.
+**Data freshness:** Fetch generated_at **2026-10-24T06:02:05Z**. Saturday feeds: commercial density concentrated in Nairametrics, lifestyle and politics elsewhere. Soft-fail on Techpoint/FN empty RSS and StartupList 429 did not abort the run.
+
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-24. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -330,7 +334,7 @@
 
 | When | Step |
 |------|------|
-| **2026-10-24 (today)** | Pass 2 Pack: paste `prompts/agent_formulation_pack.txt` against this same file. Do **not** invent a new ranked set. |
+| **2026-10-24 (today)** | Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. |
 | **2026-10-25** | Spot-check CoastalHighway section list vs FMWH/Arise follow-ups; confirm OMO stop rates vs next CBN auction PDF. |
 | **2026-10-27** | If still relevant, keep Refinery IPO allotment/refund watch as **prior** idea validation only (not re-proposed here). |
 | **2026-10-28–31** | Customer interviews: 3 treasury desks (OMO/FX), 3 First Bank/GTBank dispute victims (evidence-pack WTP), 2 physio clinic admins (referral queue WTP). |
@@ -340,6 +344,4 @@
 
 ## Docx status
 
-_PENDING_PASS_2_PACK_
-
-Pass 2 pack is required before Docx. Next: run `prompts/agent_formulation_pack.txt` against `agent-business-idea-runs/outputs/business_ideas_20261024.md` (same ranked set, no re-rank). Do not convert or open Word in Pass 1.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
