@@ -121,13 +121,11 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ---
 
-## NET-ASK-ALWAYS-SHOW-1 — Ask people / owners window always with Inc launcher (pointer)
+## NET-ASK-ALWAYS-SHOW-1 — Ask people / owners window always with Inc launcher
 
-**Status:** 🟢 **COMPLETE** (2026-10-12) — Phases **0 · 0b · 1a · 1b · 1c**  
-**Authoritative backlog:** [`.cursor/rules/task_net_ask_always_show.md`](task_net_ask_always_show.md) (safe to delete satellite after commit)  
+**Status:** 🟢 **COMPLETE** (2026-10-12) — Phases **0 · 0b · 1a · 1b · 1c**. Satellite `task_net_ask_always_show.md` **deleted 2026-10-25** (history in git / analogy log).  
 **Owner:** every Inc launcher Hub open ⇒ Ask Option B modal with it, restore after dismiss  
-**1c lock:** Automated sign-off + smoke_hub green. Optional eyes-only glance in `inc_launcher/MANUAL_TEST.md` section J.  
-**Next:** stage/commit/push, then optional live glance / delete satellite
+**1c lock:** Automated sign-off + smoke_hub green. Optional eyes-only glance in `inc_launcher/MANUAL_TEST.md` section J.
 
 ---
 
