@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-25 ~06:00-07:30 UTC. **Pass 1 Discover** only.  
+**Generated:** 2026-10-25 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-25 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261025.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261025_060033.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; BusinessDay Sunday lifestyle/politics-heavy + Punch politics/lifestyle-heavy + Premium Times politics/opinion-heavy + Vanguard floods/oil-spill/politics — lean Nairametrics commercial + Punch CRR/data-centre web cites + BusinessDay LASCOPA + FIJ/web cites for Mode A/S1; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-09-01→2026-10-24 (esp. CoastalHighway Section3yr Evidence Pack, OMO N2.63tn Overallot Rate Desk, FirstBank×Paga PhoneUpdate Debit Clock, FX $1.01bn Turnover Stress Board, GTBank FailedXfer 17Month Clock, NEC90Day FoodPrice Evidence Board, CNG FarePass Financing Stake Pack, OPay RecipientRefuse ErroneousCredit Clock, RefineryIPO AllotmentRefund Timeline Desk, UBA×OPay PoS WrongCredit Claim Clock, InsurerEscrow N300bn Release Desk, MMA2 Concession Closeout Playbook, Moniepoint BankEmail Done StillHold Clock, TelcoQoS Oct28 Hearing Evidence Pack, Kuda Marketplace Lien Remainder Clock, JPMorgan MerchantBank Stake Ready / AIP≠Licence packs, GTBank NoAlert Liability Clock, AccessBank LostPhone Loan Clock, PalmPay RecoveredNotCredited / FuelPOS, MultiRail Unauth Deny, Moniepoint AgentOfficer SixteenMonth Clock, DMO Bond/NTB desks); older `business_ideas_20260715.md` / `20261010.md` / `20261011.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -261,7 +261,7 @@
 
 - **Problem / trend:** Nairametrics (24 Oct 2026): Geregu Power signed a Siemens Energy deal for three generator transformers after a sharp H1 2026 electricity revenue decline, disclosed to NGX on 23 Oct 2026. Counterparties and minority investors need a plain capex-vs-reliability evidence desk when plants announce large equipment deals after revenue stress.
 - **Solution:**
-  - **Established solution:** Power-plant CMMS / capex tracking boards (developed-market industrial asset software).
+  - **Established solution:** IBM Maximo / SAP Plant Maintenance capex and asset boards (developed-market industrial asset software).
   - **Variant:** Geregu Siemens Transformer Capex Desk, the Nigeria version of that software. It logs disclosed equipment scope, revenue-stress context, and a one-page counterparty question list. It is not NERC official.
 - **Target:** Power-sector lenders, offtakers, and minority investors tracking Geregu-class capex.
 - **MVP cost:** $6k–$14k.
@@ -325,7 +325,9 @@
 
 **Data freshness:** Fetch generated_at **2026-10-25T06:00:35Z**. Sunday feeds: commercial density concentrated in Nairametrics (Sat publish) + Punch business web cites; lifestyle and politics elsewhere. Soft-fail on Techpoint/FN empty RSS and StartupList 429 did not abort the run.
 
-**Pass boundary:** Pass 1 Discover complete. **Do not start Pass 2 in this automation.** Pass 2 pack is required before Docx (`prompts/agent_formulation_pack.txt` against this same dated `.md`).
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-25. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -333,8 +335,8 @@
 
 | When | Step |
 |------|------|
-| **2026-10-25 (today)** | Pass 1 draft complete. Leave `_PENDING_PASS_2_PACK_`. Do not convert/open Docx in this pass. |
-| **2026-10-25 ~11:00 WAT** | Automation B / Pass 2 pack on this same file (same ranks, section 14 subheads, Established solution + Variant). Optional `idea_card_schema.py` before one-shot in-repo Docx. |
+| **2026-10-25 (today)** | Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. |
+| **2026-10-25 ~11:00 WAT** | Done this run. Same file, no second ranked set. |
 | **2026-10-27–28** | Spot-check CBN DataLocal guidance vs bank migration circulars; confirm next FMDQ monthly turnover print vs N551tn 9M. |
 | **2026-10-28–31** | Customer interviews: 3 bank/fintech CIOs (DataLocal pack WTP), 3 treasury desks (FMDQ/CRR boards), 3 GTBank dispute victims (ForcedLoan clock WTP). Strengthen Polaris×OPay with primary FIJ/NIBSS cite or demote. |
 | **2026-11-07** | Kill/keep review on Byter/Shedi adaptations and Geregu Capex Desk after one more PH/news week. |
@@ -344,6 +346,4 @@
 
 ## Docx status
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-Pass 2 pack required before Docx. Do not call regenerate_and_open_docx, Pandoc-to-open, or desktop Word in Pass 1.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
