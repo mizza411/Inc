@@ -156,7 +156,7 @@ Not required for Prospect v1 close.
 - [x] Phase 7.11.1 schedule unit tests (2026-10-12) - once per day at/after 11:15, toggle OFF skip, missed-slot afternoon fire
 - [x] Phase 7.11.2–7.11.3 late-retry unit tests (2026-10-12) - interval, cap, shown skip, max_retries=0 leaves primary alone
 - [x] Phase 7.11.6 fast retry interval (2026-10-13) - default 10 min (not 45), cap still 8
-- [ ] Phase 7.11.5 live proof (optional) - tray stays up across B, today’s pack opens without tray restart (primary or late retry). Why not automated: real Word + wall-clock after 11:00 WAT
+- [x] Phase 7.11.5 live proof (2026-10-25) - while-running 11:15 primary fetched and opened `business_ideas_20261025.docx`, marked shown. Why not automated: real Word + wall-clock after 11:00 WAT
 
 ### J. Ask people/owners always with Hub (NET-ASK-ALWAYS-SHOW-1)
 
