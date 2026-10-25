@@ -71,8 +71,6 @@ def run_isolation_checks() -> list[str]:
         raw = LAUNCHER_CONFIG.read_text(encoding="utf-8")
         if '"network_ask_remind"' not in raw:
             errors.append("launcher_config missing network_ask_remind card")
-        if '"network_ask_mwf"' not in raw:
-            errors.append("launcher_config missing network_ask_mwf schedule")
         if "agent_formulation_run" not in raw:
             errors.append("launcher_config lost agent_formulation_run (regression)")
     else:

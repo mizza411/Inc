@@ -26,7 +26,7 @@ def test_tray_menu_label_and_hover_constant():
     assert HUB_OPEN_TIMES_MENU_LABEL in labels
     assert HUB_OPEN_TIMES_MENU_LABEL == "Settings"
     assert HUB_OPEN_TIMES_HOVER_LABEL == (
-        "Open the Settings window for the two clocks that open Inc Hub"
+        "Open the Settings window for the Daily Hub open clock"
     )
 
 

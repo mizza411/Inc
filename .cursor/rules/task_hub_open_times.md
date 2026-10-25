@@ -1,10 +1,10 @@
 # HUB-OPEN-TIMES-1 - Settings control for Inc Hub open times
 
-**Status:** Phases 1-5 done (2026-10-21). 39 tests passed. Manual layout line waived. A tray already running keeps the old menu until that tray is restarted.
-**Attempt (backlog write):** 1
+**Status:** Phases 1-6 done (Phase 6 on 2026-10-25). Phases 1-5 had 39 tests on 2026-10-21. Phase 6 checks passed, with one Tcl file-lock error on a crowded run that passed when that single check was run again. Manual layout line waived. A tray already running keeps the old menu until that tray is restarted.
+**Attempt (backlog write):** 1. Follow-up write: 1 (2026-10-25).
 **Authoritative backlog:** this file only
 **Main `task.md`:** not referenced (overloaded, about 2,700 lines). Do not add a pointer there.
-**Delete when:** Phases 1-5 are done or waived, the temp-config tests are green, and the one manual layout look is done or waived. Then delete this satellite. Do not fold it into `task.md`.
+**Delete when:** Phases 1-5 and Phase 6 are done or waived, the temp-config tests are green, and the one manual layout look is done or waived. Then delete this satellite. Do not fold it into `task.md`. Do not delete this file while Phase 6 is open.
 
 ## Owner ask (2026-10-21)
 
@@ -97,6 +97,44 @@ The two clocks in scope:
 - **Done when:** 5.1 passes, and 5.2 is done or waived.
 - **Minutes:** 25
 
+## Follow-up Phase 6 - Remove the Ask alarm row (2026-10-25)
+
+**Do not code until a later pick.** This section is the backlog only.
+
+### Owner ask
+
+Remove only the Settings row "Ask window, which also opens Hub" (`network_ask_mwf`, 11:30, Mon Tue Wed Fri Sat Sun). That row is the extra Ask window.
+
+Keep Daily Hub open. The Hub still opens one Ask window. Start on that window stays. Not now on that window still opens the prospect window. No other Settings row is removed.
+
+### Recommendations
+
+| ID | Recommendation | Why | Phase |
+|----|----------------|-----|-------|
+| R10 | Take the row off the form and stop `network_ask_mwf` from firing. Unticking every day is not the removal. Save already refuses a row with no day ticked. | The owner asked to remove the alarm, and the form will not store an empty day list. | 6.1, 6.2 |
+| R11 | Keep Show Ask reminder, the tray Show Ask people / owners item, and the Ask card. | Those open one Ask window on purpose. They are not the 11:30 duplicate. | 6.3 |
+| R12 | Keep always-show on Hub open, and keep Not now on that window opening the prospect window. | Daily Hub open is the one Ask window that stays. | 6.3, 6.4 |
+| R13 | Patch-remove only the `network_ask_mwf` schedule entry. Leave the saved Daily Hub open time and days as they are. Leave every other schedule id alone. | One writer, same isolation as R3. | 6.1 |
+| R14 | Tests use a temp config. Do not write the live `launcher_config.json` from tests. Do not restart Project Manager. | Same proof rule as R8. | 6.4, 6.5 |
+| R15 | With one row left, Save stays refused when Daily Hub open has no day ticked. | R5 still holds for the row that remains. | 6.2 |
+
+### Out of scope for Phase 6
+
+- Changing the time or days the owner saved on Daily Hub open.
+- Removing the Ask window that opens with the Hub.
+- Changing Start, the playbook, or the copied openers.
+- A second Hub program, a tray restart, or a Project Manager restart.
+
+### Phase 6 - Remove the Ask alarm row
+
+- [x] **6.1** Narrow the patch writer to `daily_inc_hub` only. On save, remove the `network_ask_mwf` schedule entry and no other entry. Leave `daily_inc_hub` time and days unchanged. (20 min, 2026-10-25)
+- [x] **6.2** Settings form shows one row, Daily Hub open. The Ask alarm title, hour, minute, and day ticks are gone. Save, Cancel, hover labels, and the zero-day refusal stay. (20 min, 2026-10-25)
+- [x] **6.3** The scheduler does not fire `network_ask_mwf`, even if an old copy of that entry is still in a file. A click on the Ask card, Show Ask reminder, or the tray Show Ask item still opens one Ask window. (15 min, 2026-10-25)
+- [x] **6.4** Temp-config tests: Sunday 11:30 fires `daily_inc_hub` only. Hub open still queues one Ask window, and that window's Not now still schedules the prospect step. Other schedule ids stay. The test run does not write the live config. (25 min, 2026-10-25)
+- [x] **6.5** Update the Hub-open-times tests that still expect two rows, then run those tests plus the nudge schedule tests. Done when they pass and no product file outside this row's writer, form, scheduler skip, and tests was edited. (15 min, 2026-10-25. Also updated the tray hover sentence and the isolation check that required the old alarm id.)
+- **Done when:** the Settings window has Daily Hub open only, 11:30 no longer adds a second Ask window, and the one Hub Ask window still reaches the prospect window on Not now.
+- **Minutes:** 95
+
 ## Minutes (this plan)
 
 | Phase | Minutes |
@@ -107,6 +145,7 @@ The two clocks in scope:
 | 3 | 25 (done) |
 | 4 | 20 (done) |
 | 5 | 25 (done) |
+| 6 | 95 (done 2026-10-25) |
 | **Remaining** | **0** |
 
 ## Cloud

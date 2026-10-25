@@ -1,4 +1,4 @@
-"""Settings form for the two clocks that auto-open Inc Hub.
+"""Settings form for the Daily Hub open clock.
 
 Not on the tray yet. The caller supplies the parent window. This file does not
 create its own Tk root.
@@ -28,7 +28,6 @@ DEFAULT_GEOMETRY = "640x360"
 
 ROW_TITLES = {
     "daily_inc_hub": "Daily Hub open",
-    "network_ask_mwf": "Ask window, which also opens Hub",
 }
 
 DAY_CAPTIONS = {
@@ -109,7 +108,7 @@ class _Row:
 
 
 class HubOpenTimesWindow(tk.Toplevel):
-    """Two Hub clocks, Save, and Cancel. Cancel does not write."""
+    """Daily Hub open, Save, and Cancel. Cancel does not write."""
 
     def __init__(self, master: tk.Misc, config_path: Path | None = None) -> None:
         super().__init__(master)

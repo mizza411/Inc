@@ -54,7 +54,7 @@ logger = logging.getLogger(__name__)
 RESTART_MENU_LABEL = "Restart"
 RESTART_HOVER_LABEL = "Restart Inc Launcher tray"
 HUB_OPEN_TIMES_MENU_LABEL = "Settings"
-HUB_OPEN_TIMES_HOVER_LABEL = "Open the Settings window for the two clocks that open Inc Hub"
+HUB_OPEN_TIMES_HOVER_LABEL = "Open the Settings window for the Daily Hub open clock"
 # Phase 2 automated prove only. Never set in normal owner launches.
 _RESTART_SMOKE_ENV = "INC_LAUNCHER_RESTART_SMOKE"
 

@@ -10,7 +10,7 @@ from unittest.mock import patch
 from inc_launcher.actions import run_action
 from inc_launcher.config import load_config, list_pillars
 from inc_launcher.option_b_actions import uses_option_b_modal
-from inc_launcher.scheduled_nudges import find_menu_item_by_id, load_schedule_settings
+from inc_launcher.scheduled_nudges import find_menu_item_by_id
 from network_ask_reminder.build_docx import PLAYBOOK_DOCX
 from network_ask_reminder.hub_nudge import enrich_hub_item, run_network_ask_start
 from network_ask_reminder.isolation import run_isolation_checks
@@ -27,16 +27,6 @@ class TestPhase3ConfigWiring(unittest.TestCase):
         self.assertEqual(card["action"], "network_ask")
         self.assertTrue(card.get("pinned"))
 
-        settings = load_schedule_settings(config)
-        ids = {e.id: e for e in settings.entries}
-        self.assertIn("network_ask_mwf", ids)
-        entry = ids["network_ask_mwf"]
-        self.assertEqual(entry.target, "network_ask_remind")
-        self.assertGreaterEqual(entry.hour, 0)
-        self.assertLessEqual(entry.hour, 23)
-        self.assertGreaterEqual(entry.minute, 0)
-        self.assertLessEqual(entry.minute, 59)
-        self.assertTrue(entry.days)
         resolved = find_menu_item_by_id(config, "network_ask_remind")
         self.assertIsNotNone(resolved)
 

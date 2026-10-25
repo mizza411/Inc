@@ -1,10 +1,13 @@
 """Tests for Phase 4.1: schedule config parsing and due-time logic."""
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from inc_launcher.config import load_config
 from inc_launcher.scheduled_nudges import (
+    DAY_NAMES,
     HUB_TARGET,
+    RETIRED_SCHEDULE_IDS,
+    ScheduleEntry,
     ScheduleSettings,
     day_name,
     entries_due_now,
@@ -121,6 +124,31 @@ def test_entries_due_monday_hub_and_mwf_problem_id():
     assert day_name(monday) == "mon"
     due = entries_due_now(settings, config, monday, fired)
     assert [entry.id for entry in due] == ["problem_id_live_mwf"]
+
+
+def test_retired_ask_alarm_is_not_due_beside_daily_hub():
+    config = load_config()
+    config = dict(config)
+    schedules = dict(config["schedules"])
+    schedules["enabled"] = True
+    config["schedules"] = schedules
+    settings = load_schedule_settings(config)
+    hub = next(entry for entry in settings.entries if entry.id == "daily_inc_hub")
+    day = min(hub.days, key=DAY_NAMES.index)
+    when = datetime(2026, 10, 26, hub.hour, hub.minute) + timedelta(days=DAY_NAMES.index(day))
+    assert day_name(when) == day
+    retired = ScheduleEntry(
+        id="network_ask_mwf",
+        hour=hub.hour,
+        minute=hub.minute,
+        days=frozenset({day}),
+        target="network_ask_remind",
+    )
+    combined = ScheduleSettings(enabled=True, entries=tuple(settings.entries) + (retired,))
+    due = [entry.id for entry in entries_due_now(combined, config, when, set())]
+    assert "network_ask_mwf" not in due
+    assert due == ["daily_inc_hub"]
+    assert "network_ask_mwf" in RETIRED_SCHEDULE_IDS
 
 
 def test_youtube_sunday_skipped_when_ops_inactive():

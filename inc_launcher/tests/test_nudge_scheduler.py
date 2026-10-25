@@ -1,7 +1,7 @@
 """Tests for Phase 4.2: background nudge scheduler."""
 
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import inc_launcher.nudge_scheduler as scheduler_mod
 from inc_launcher.config import load_config
@@ -11,6 +11,7 @@ from inc_launcher.nudge_scheduler import (
     prune_fired_keys,
     save_fired_keys,
 )
+from inc_launcher.scheduled_nudges import DAY_NAMES, load_schedule_settings
 
 
 def test_prune_fired_keys_drops_old_entries():
@@ -82,7 +83,7 @@ def test_scheduler_tick_fires_due_entry_once(tmp_path, monkeypatch):
     assert fired == ["open_task_md"]
 
 
-def test_scheduler_tick_fires_hub_at_0915(tmp_path, monkeypatch):
+def test_scheduler_tick_fires_daily_hub_at_its_saved_clock(tmp_path, monkeypatch):
     state_file = tmp_path / "schedule_fired.json"
     monkeypatch.setattr(scheduler_mod, "FIRED_STATE_FILE", state_file)
 
@@ -93,6 +94,10 @@ def test_scheduler_tick_fires_hub_at_0915(tmp_path, monkeypatch):
     config_path = tmp_path / "launcher_config.json"
     config_path.write_text(json.dumps(config), encoding="utf-8")
 
+    hub = next(entry for entry in load_schedule_settings(config).entries if entry.id == "daily_inc_hub")
+    day = min(hub.days, key=DAY_NAMES.index)
+    when = datetime(2026, 10, 26, hub.hour, hub.minute) + timedelta(days=DAY_NAMES.index(day))
+
     fired: list[str] = []
 
     scheduler = NudgeScheduler(
@@ -101,7 +106,6 @@ def test_scheduler_tick_fires_hub_at_0915(tmp_path, monkeypatch):
         run_menu_action=lambda _item: fired.append("action"),
         poll_seconds=999,
     )
-    when = datetime(2026, 5, 30, 9, 15)
 
     assert scheduler.tick(when) == ["daily_inc_hub"]
     assert fired == ["hub"]

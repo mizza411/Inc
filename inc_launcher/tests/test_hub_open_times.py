@@ -1,4 +1,4 @@
-"""HUB-OPEN-TIMES-1 Phase 1: patch-save the two Hub clocks on a temp config."""
+"""HUB-OPEN-TIMES-1: patch-save the Daily Hub open clock on a temp config."""
 
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ def _item(data: dict, item_id: str) -> dict:
     raise AssertionError(item_id)
 
 
-def test_live_config_has_only_the_two_hub_open_ids():
+def test_live_config_loads_only_the_daily_hub_open():
     rows = load_hub_open_times(DEFAULT_CONFIG)
     assert tuple(rows) == HUB_OPEN_TIME_IDS
     for row in rows.values():
@@ -55,7 +55,7 @@ def test_save_changes_one_hub_row_and_leaves_the_rest(tmp_path: Path):
     assert _item(after, "daily_inc_hub")["time"] == "10:45"
     assert _item(after, "daily_inc_hub")["days"] == ["tue"]
     assert _item(after, "daily_inc_hub")["target"] == _item(before, "daily_inc_hub")["target"]
-    assert _item(after, "network_ask_mwf") == _item(before, "network_ask_mwf")
+    assert all(item.get("id") != "network_ask_mwf" for item in after["schedules"]["items"])
     assert _item(after, "daily_task_md") == _item(before, "daily_task_md")
     assert _item(after, "youtube_status_sunday") == _item(before, "youtube_status_sunday")
     assert after["schedules"]["enabled"] == before["schedules"]["enabled"]
@@ -74,7 +74,7 @@ def test_zero_days_is_refused_and_file_is_not_written(tmp_path: Path):
     path = _copy_config(tmp_path)
     before = path.read_bytes()
     with pytest.raises(HubOpenTimeError):
-        save_hub_open_time("network_ask_mwf", 9, 30, [], path)
+        save_hub_open_time("daily_inc_hub", 9, 30, [], path)
     assert path.read_bytes() == before
 
 
@@ -86,6 +86,7 @@ def test_geometry_save_restores_and_leaves_clocks_alone(tmp_path: Path):
     assert saved == {"x": 120, "y": 80, "width": 640, "height": 360}
     after = _load(path)
     assert _item(after, "daily_inc_hub") == _item(before, "daily_inc_hub")
+    assert _item(after, "network_ask_mwf") == _item(before, "network_ask_mwf")
     assert after["schedules"]["enabled"] == before["schedules"]["enabled"]
     assert after["settings"]["single_instance"] == before["settings"]["single_instance"]
 

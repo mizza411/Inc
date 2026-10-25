@@ -1,6 +1,8 @@
-"""Load and patch-save the two clocks that auto-open Inc Hub.
+"""Load and patch-save the Daily Hub open clock.
 
-Other schedule rows are left as they are. This module does not open a window.
+The old Ask alarm is not a Settings clock. Saving this clock removes that
+schedule entry. Other schedule rows are left as they are. This module does
+not open a window.
 """
 
 from __future__ import annotations
@@ -11,10 +13,10 @@ from pathlib import Path
 from typing import Iterable
 
 from inc_launcher.config import config_file_path, load_config
-from inc_launcher.scheduled_nudges import DAY_NAMES, parse_days, parse_time
+from inc_launcher.scheduled_nudges import DAY_NAMES, RETIRED_SCHEDULE_IDS, parse_days, parse_time
 
-# Only these rows open Inc Hub. Do not add task.md, Problem ID, bookmarks, or YouTube.
-HUB_OPEN_TIME_IDS: tuple[str, ...] = ("daily_inc_hub", "network_ask_mwf")
+# Only Daily Hub open stays in Settings. Do not add the retired Ask alarm back.
+HUB_OPEN_TIME_IDS: tuple[str, ...] = ("daily_inc_hub",)
 
 
 class HubOpenTimeError(ValueError):
@@ -64,7 +66,7 @@ def _row_from_item(item: dict) -> HubOpenTime:
 
 
 def load_hub_open_times(config_path: Path | None = None) -> dict[str, HubOpenTime]:
-    """Return the two Hub-opening clocks. Raises if either id is missing."""
+    """Return the Daily Hub open clock. Raises if that row is missing."""
     config = load_config(config_path)
     items = (config.get("schedules") or {}).get("items") or []
     found: dict[str, HubOpenTime] = {}
@@ -85,7 +87,7 @@ def save_hub_open_time(
     days: Iterable[str],
     config_path: Path | None = None,
 ) -> None:
-    """Patch one Hub-opening row's time and days. Other keys and rows stay."""
+    """Patch the Daily Hub open clock and drop the retired Ask alarm. Other rows stay."""
     if entry_id not in HUB_OPEN_TIME_IDS:
         raise HubOpenTimeError("That clock is not a Hub open time.")
     time_text, ordered_days = _check_clock(hour, minute, days)
@@ -104,6 +106,10 @@ def save_hub_open_time(
 
     target["time"] = time_text
     target["days"] = list(ordered_days)
+    schedules = data.setdefault("schedules", {})
+    schedules["items"] = [
+        item for item in items if str(item.get("id")) not in RETIRED_SCHEDULE_IDS
+    ]
     with path.open("w", encoding="utf-8") as handle:
         json.dump(data, handle, indent=2)
         handle.write("\n")

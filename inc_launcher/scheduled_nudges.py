@@ -13,6 +13,8 @@ logger = logging.getLogger(__name__)
 
 DAY_NAMES: Tuple[str, ...] = ("mon", "tue", "wed", "thu", "fri", "sat", "sun")
 HUB_TARGET = "hub"
+# Hub open already shows one Ask window. This old alarm must not add a second one.
+RETIRED_SCHEDULE_IDS: FrozenSet[str] = frozenset({"network_ask_mwf"})
 
 
 @dataclass(frozen=True)
@@ -128,6 +130,8 @@ def entries_due_now(
     due: List[ScheduleEntry] = []
     today = day_name(when)
     for entry in settings.entries:
+        if entry.id in RETIRED_SCHEDULE_IDS:
+            continue
         if today not in entry.days:
             continue
         if when.hour != entry.hour or when.minute != entry.minute:

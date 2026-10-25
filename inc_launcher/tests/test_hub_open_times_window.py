@@ -25,7 +25,7 @@ def _item(path: Path, item_id: str) -> dict:
     raise AssertionError(item_id)
 
 
-def test_form_uses_default_size_and_two_rows(tk_root, tmp_path: Path):
+def test_form_uses_default_size_and_one_row(tk_root, tmp_path: Path):
     path = _copy_config(tmp_path)
     data = json.loads(path.read_text(encoding="utf-8"))
     data.get("settings", {}).pop("hub_open_times_window", None)
@@ -34,9 +34,8 @@ def test_form_uses_default_size_and_two_rows(tk_root, tmp_path: Path):
     win.withdraw()
     # A withdrawn test root reports 1x1. The form still asks for the default size.
     assert win._opening_geometry == DEFAULT_GEOMETRY
-    assert len(win._rows) == 2
+    assert len(win._rows) == 1
     assert win._rows[0].title == "Daily Hub open"
-    assert win._rows[1].title == "Ask window, which also opens Hub"
     assert tuple(win._rows[0].days) == DAY_NAMES
     win.cancel()
 
@@ -67,17 +66,17 @@ def test_save_disabled_until_a_day_is_ticked(tk_root, tmp_path: Path):
     win.cancel()
 
 
-def test_save_writes_both_rows_through_the_phase_1_writer(tk_root, tmp_path: Path):
+def test_save_writes_daily_hub_and_drops_the_ask_alarm(tk_root, tmp_path: Path):
     path = _copy_config(tmp_path)
-    ask_time = _item(path, "network_ask_mwf")["time"]
     task_time = _item(path, "daily_task_md")["time"]
     win = HubOpenTimesWindow(tk_root, path)
     win.withdraw()
     win._rows[0].hour.set("11")
     win._rows[0].minute.set("5")
     win.save()
+    data = json.loads(path.read_text(encoding="utf-8"))
     assert _item(path, "daily_inc_hub")["time"] == "11:05"
-    assert _item(path, "network_ask_mwf")["time"] == ask_time
+    assert all(item.get("id") != "network_ask_mwf" for item in data["schedules"]["items"])
     assert _item(path, "daily_task_md")["time"] == task_time
     assert not win.winfo_exists()
 
