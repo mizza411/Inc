@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-26 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-10-26 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-26 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261026.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261026_060112.json` (`strategy_12_run` **ok** Mode B aid; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on; Monday commercial spine from THISDAY/BusinessDay/Vanguard/Nairametrics/Punch + FIJ S1 cites)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-10-10→2026-10-25 (esp. DataLocal Jan2027 Capacity Crisis Pack, FMDQ N551tn FX/OMO Concentration Desk, GTBank UnauthDebit ForcedLoan Clock, PublicDeposit CRR75 Liquidity Stress Board, ABC Transport N6.5bn RightsBond Diligence Pack, CoastalHighway Section3yr Evidence Pack, OMO N2.63tn Overallot Rate Desk, FirstBank×Paga PhoneUpdate Debit Clock, FX $1.01bn Turnover Stress Board, GTBank FailedXfer 17Month Clock, NEC90Day FoodPrice Evidence Board, OPay RecipientRefuse ErroneousCredit Clock, RefineryIPO AllotmentRefund Timeline Desk, UBA×OPay PoS WrongCredit Claim Clock, InsurerEscrow N300bn Release Desk, Moniepoint BankEmail Done StillHold Clock, GTBank NoAlert Liability Clock, AccessBank LostPhone Loan Clock, OPay CourtOrder Remainder Clock, PalmPay RecoveredNotCredited Clock, CapMarket MasterPlan Retail Onboard Desk); older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. StapleAdulteration Spot Desk — open-market staple pre-buy evidence pack (**S12 Mode A**)
 
-- **Problem:** BusinessDay Toxic Food Series (26 Oct 2026): adulterated palm oil, dichlorvos (“Sniper”) on beans, dyed ground pepper, and syrup-stretched honey push Lagos shoppers into Instagram/WhatsApp DIY tests and weekend farm-coop buys, while NAFDAC focus stays on packaged goods and MoA lacks open-market staple oversight for ~200m people.
+- **Problem / trend:** BusinessDay Toxic Food Series (26 Oct 2026): adulterated palm oil, dichlorvos ("Sniper") on beans, dyed ground pepper, and syrup-stretched honey push Lagos shoppers into Instagram/WhatsApp DIY tests and weekend farm-coop buys, while NAFDAC focus stays on packaged goods and MoA lacks open-market staple oversight for ~200m people.
 - **Solution:**
-  - **Established solution:** Consumer Reports / lab-backed grocery residue alerts and EU Rapid Alert-style food-fraud dashboards (software + optional lab partners).
-  - **Variant:** Nigeria StapleAdulteration Spot Desk — WhatsApp-first pre-buy checklist + photo evidence log for Mile-12/open-market staples, Naira Paystack tip jar, no claim of NAFDAC certification.
+  - **Established solution:** Consumer Reports food-safety alerts (developed-market consumer food-risk reports and software).
+  - **Variant:** StapleAdulteration Spot Desk, the Nigeria version of that product. It logs open-market palm oil, beans, pepper, and honey pre-buy notes with photos for Mile-12 style markets, and it takes a Naira Paystack tip. It is not a NAFDAC, MoA, or SON lab, and it does not certify food.
 - **Target:** Lagos/Ogun household shoppers, school feeding buyers, small caterers who buy palm oil/beans/honey/pepper in open markets.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NAFDAC, MoA, or SON enforcement; not a certified lab; NDPA for buyer photos/contacts.
@@ -86,10 +86,10 @@
 
 ### 2. RefineryIPO FinalClose27 Checklist — last-day authorised subscription complete pack (**S12 Mode A**)
 
-- **Problem:** THISDAY (26 Oct 2026): Dangote Petroleum Refinery IPO enters final days with a hard close **27 Oct 2026** and explicit “no further extension.” Retail and diaspora rush risk incomplete broker/fintech channel packs after prior unauthorised-platform confusion.
+- **Problem / trend:** THISDAY (26 Oct 2026): Dangote Petroleum Refinery IPO enters final days with a hard close **27 Oct 2026** and explicit "no further extension." Retail and diaspora rush risk incomplete broker/fintech channel packs after prior unauthorised-platform confusion.
 - **Solution:**
-  - **Established solution:** Broadridge / Computershare IPO subscription workflow kits and SEC EDGAR retail offer checklists (software).
-  - **Variant:** Nigeria FinalClose27 Checklist — authorised stockbroker/channel list → application screenshot log → payment-rail proof → “stop if incomplete before close” PDF (not an allocation guarantee).
+  - **Established solution:** Broadridge / Computershare IPO subscription workflow software (developed-market shareholder-services software).
+  - **Variant:** RefineryIPO FinalClose27 Checklist, the Nigeria version of that software. It logs the authorised broker or channel, the application screenshot, and the payment-rail proof, and it stops the user when that record is incomplete before the 27 Oct 2026 close. It is not SEC, NGX, CSCS, or an issuing house, and it does not guarantee an allocation.
 - **Target:** First-time retail IPO applicants, diaspora relatives funding family subscriptions, SME owners finishing applications on the last day.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not SEC, NGX, CSCS, or issuing-house official; not investment advice; NDPA for ID fields.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** OPay (mass Nigeria digital wallet / payments). **Recurring complaint:** after a Moniepoint POS withdrawal failed, OPay still debited the customer and repeatedly promised a **3–5 working day** refund while ~**4 weeks** passed with no money returned (FIJ, Aug 2026). **Variation:** Failed POS → debit kept → refund-SLA clock — not OPay RecipientRefuse (erroneous-credit refuse) and not OPay CourtOrder Remainder (post-order unpaid).
 - **Complaint citations:** FIJ (26 Aug 2026), https://fij.ng/article/opay-told-abia-businesswoman-to-wait-5-days-for-n32400-refund-4-weeks-on-she-got-nothing/ (N32,400 failed Moniepoint POS withdrawal, OPay debit kept, 3–5 day promise, ~4 weeks unpaid).
 - **Solution:**
-  - **Established solution:** Plaid / Stripe dispute timeline tools and CFPB-style complaint export packs (software).
-  - **Variant:** Nigeria FailedPOS 5Day Refund Clock — capture decline slip + debit alert + OPay ticket timestamps → SLA breach timeline → CBN CPD handoff PDF.
+  - **Established solution:** Plaid / Stripe dispute timeline tools (developed-market payments dispute software).
+  - **Variant:** OPay×Moniepoint FailedPOS 5Day Refund Clock, the Nigeria version of that software. It logs the decline slip, the OPay debit alert, and the ticket timestamps against the promised 3-5 working day refund. It is not OPay, Moniepoint, or a law firm.
 - **Target:** Traders and consumers whose OPay wallet is debited on a failed Moniepoint (or other) POS cash-out.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not OPay or Moniepoint official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** Vanguard (26 Oct 2026): electricity experts and AMMON call for more local meter manufacturing, sustainable financing, MAP/vendor-finance models, and a coordinated national metering plan to close estimated-billing gaps after DISREP/local-content disputes earlier in 2026.
 - **Solution:**
-  - **Established solution:** India RDSS / smart-meter programme vendor diligence kits and MAP financing playbooks (software + templates).
-  - **Variant:** Nigeria LocalMeter VendorFinance Ready Pack — DisCo feeder metering gap sheet → MAP/vendor-finance checklist → local-content participation evidence → investor one-pager (not a NERC licence desk).
+  - **Established solution:** Itron / Landis+Gyr AMI with Oracle Utilities meter-asset software (developed-market metering software and hardware).
+  - **Variant:** LocalMeter VendorFinance Ready Pack, the Nigeria version of that software. It logs DisCo feeder metering gaps, MAP or vendor-finance notes, and local-content participation evidence. It is not NERC, a DisCo, or AMMON, and it does not issue a licence.
 - **Target:** Local meter manufacturers, MAPs, DisCo revenue-assurance teams, state power desks preparing financing packs.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NERC, BPE, World Bank DISREP, or AMMON official; not investment advice.
@@ -147,8 +147,8 @@
 - **Formula:** **Successful business:** PalmPay (mass Nigeria MFB / wallet / card payments). **Recurring complaint:** a filling-station card payment showed a **dispense error** yet PalmPay still debited **N15,200**, and ~**2 years** of calls, emails, and in-app complaints did not return the money (FIJ, Aug 2026). **Variation:** Failed fuel pay → debit kept → multi-year refund clock — not PalmPay RecoveredNotCredited (recovery without credit) and not PalmPay Consent-form trap (merchant consent without release).
 - **Complaint citations:** FIJ (28 Aug 2026), https://fij.ng/article/palmpay-debited-n15200-despite-failed-payment-it-watched-ogun-trader-chase-refund-for-2-years/ (fuel card dispense error, debit kept, ~2-year chase).
 - **Solution:**
-  - **Established solution:** Card-network chargeback timeline tools (Visa Resolve Online-style packs) and fintech dispute exporters (software).
-  - **Variant:** Nigeria FuelDispense 2Year Refund Clock — receipt/dispense-error capture → debit alert → ticket timeline → export for PalmPay support / CBN CPD notes.
+  - **Established solution:** Visa Resolve Online (developed-market card-network dispute software).
+  - **Variant:** PalmPay FuelDispense 2Year Refund Clock, the Nigeria version of that software. It logs the dispense-error note, the PalmPay debit, and the support-ticket timeline for a failed fuel card payment. It is not PalmPay and it is not legal practice.
 - **Target:** Traders and drivers paying fuel with PalmPay cards who see failed dispense yet keep the debit.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN CPD notes; NDPA; not legal practice; not PalmPay official.
@@ -164,10 +164,10 @@
 
 ### 6. NDPC SME Register Gap Pack — NDPA registration / audit readiness for SMEs (**S12 Mode A**)
 
-- **Problem:** BusinessDay interview with NDPC CEO Vincent Olatunji (26 Oct 2026): registrations rose to ~**41,000** yet remain **under 5%** of expected compliance. SMEs adopt AI tools faster than they document lawful bases, while NDPA fines and audit-return duties expand.
+- **Problem / trend:** BusinessDay interview with NDPC CEO Vincent Olatunji (26 Oct 2026): registrations rose to ~**41,000** yet remain **under 5%** of expected compliance. SMEs adopt AI tools faster than they document lawful bases, while NDPA fines and audit-return duties expand.
 - **Solution:**
-  - **Established solution:** OneTrust / TrustArc privacy program starters and GDPR SME compliance kits (software).
-  - **Variant:** Nigeria NDPC SME Register Gap Pack — controller/processor self-class checklist → registration document list → AI-paste risk note → NDPA-aware handoff PDF (not NDPC filing software).
+  - **Established solution:** OneTrust / TrustArc privacy-program software (developed-market privacy compliance software).
+  - **Variant:** NDPC SME Register Gap Pack, the Nigeria version of that software. It logs controller or processor class, the NDPA registration document list, and an AI-paste risk note. It is not the NDPC portal and it is not legal advice.
 - **Target:** Nigerian SMEs processing customer phone/KYC data, agencies onboarding clients to NDPA duties, founders using AI chat tools with customer text.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NDPC official registration portal; not legal advice; NDPA awareness copy only.
@@ -185,8 +185,8 @@
 
 - **Problem / trend:** THISDAY (26 Oct 2026): NGX market capitalisation fell ~**N210bn** WoW to **N160.52tn**, ASI −0.97% to 247,222.27, breadth **20 gainers / 55 decliners**, with analysts urging selective bargain-hunting as earnings season starts.
 - **Solution:**
-  - **Established solution:** Bloomberg/Refinitiv portfolio rebalance heatmaps and retail risk dashboards (software).
-  - **Variant:** Nigeria ProfitTaking Rebalance Board — breadth/decliner sheet → earnings-week watchlist → “do not chase” notes in plain English (not a broker).
+  - **Established solution:** Bloomberg / Refinitiv portfolio rebalance dashboards (developed-market market software).
+  - **Variant:** NGX ProfitTaking N210bn Rebalance Board, the Nigeria version of that software. It logs weekly breadth, decliners, and an earnings-week watchlist in plain English. It is not a broker and it is not NGX or SEC official.
 - **Target:** Retail NGX investors and small advisory desks navigating profit-taking weeks.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Not investment advice; not NGX or SEC official; NDPA for any saved watchlists.
@@ -204,8 +204,8 @@
 
 - **Problem / trend:** Vanguard / NMDPRA (Oct 2026): domestic crude supply to refineries fell **6.3%** to **15.97mb** in Sep from 17.05mb in Aug, while average daily petrol receipts fell **23.4%** to **38.7m litres**, with Dangote utilisation ~**106%** drawing inventory when receipts lagged processing.
 - **Solution:**
-  - **Established solution:** Platts/Argus midstream balance dashboards and inventory stress boards (software).
-  - **Variant:** Nigeria DomesticCrude Inventory Stress Desk — monthly NMDPRA crude/petrol sheet → inventory-draw flag → importer/marketer planning one-pager (not a trading desk).
+  - **Established solution:** S&P Global Platts / Argus Media midstream balance dashboards (developed-market commodity software).
+  - **Variant:** DomesticCrude 6.3pct Inventory Stress Desk, the Nigeria version of that software. It logs the monthly NMDPRA crude and petrol sheet and flags an inventory draw when receipts lag processing. It is not an NMDPRA filing portal and it is not a trading desk.
 - **Target:** Independent marketers, state energy desks, midstream SMEs planning around domestic vs import petrol mix.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NMDPRA or NUPRC filing portal; not trading advice.
@@ -223,8 +223,8 @@
 
 - **Problem / trend:** BusinessDay (26 Oct 2026): Premium Board YtD dispersion is extreme — First HoldCo **~186.6%**, Seplat **~175.4%**, HBM **~163.9%**, Zenith **~100.7%**, while UBA **~0.84%** and Access **~33.1%** lag, raising retail FOMO and rebalance risk into year-end.
 - **Solution:**
-  - **Established solution:** Morningstar style-box / peer dispersion screens (software).
-  - **Variant:** Nigeria PremiumBoard Dispersion Screen — YtD peer table → concentration warning → plain-language “do not chase parabola” card (not a broker).
+  - **Established solution:** Morningstar peer-dispersion screens (developed-market investment research software).
+  - **Variant:** PremiumBoard YtD Dispersion Screen, the Nigeria version of that software. It logs Premium Board year-to-date peer returns and a concentration warning. It is not a broker and it is not NGX official.
 - **Target:** Retail investors overweighting a few Premium names after parabolic runs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Not investment advice; not NGX official.
@@ -242,8 +242,8 @@
 
 - **Problem / trend:** Product Hunt (Oct 2026): Specsight turns code changes into a living product map and release updates so Product/Sales/Support stay aligned when AI speeds shipping. Nigeria SaaS/agency teams shipping with Cursor/ChatGPT still brief support on WhatsApp threads.
 - **Solution:**
-  - **Established solution:** Specsight (product observability from code) / Notion release wikis (software).
-  - **Variant:** Specsight NG Release Map Lite — Git changelog → plain-English feature map → WhatsApp/PDF support brief, Naira pricing, offline-friendly export.
+  - **Established solution:** Specsight product-release maps (developed-market product-observability software).
+  - **Variant:** Specsight NG Release Map Lite, the Nigeria version of that software. It turns a Git changelog into a plain-English feature map and a WhatsApp support brief, with Naira pricing and an offline-friendly export. It is not a security audit.
 - **Target:** Lagos/Abuja SaaS startups and digital agencies shipping weekly with AI coding tools.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for customer/feature text; not a security audit.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Nairametrics / Premium Times (25 Oct 2026): FG disbursed **N38.93 billion** to **166** public tertiary institutions under the Needs Assessment Revitalisation Fund for infrastructure — campuses still struggle to turn disbursement notices into contractor-ready evidence packs.
 - **Solution:**
-  - **Established solution:** Grant-management evidence kits (Submittable-style packs) and campus capital-project checklists (software + templates).
-  - **Variant:** Nigeria TertiaryInfra Claim Prep Pack — disbursement notice log → works/evidence checklist → photo + invoice index → auditor handoff PDF.
+  - **Established solution:** Submittable grant-management software (developed-market grant evidence software).
+  - **Variant:** TertiaryInfra N38.93bn Claim Prep Pack, the Nigeria version of that software. It logs the disbursement notice, works evidence, and a photo and invoice index for auditor handoff. It is not TETFund, the Ministry of Education, or a payment portal.
 - **Target:** Bursary/works units at federal/state tertiary institutions, campus project SMEs.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not TETFund/MoE official; not a payment portal.
@@ -280,8 +280,8 @@
 
 - **Problem / trend:** Product Hunt (Oct 2026): Openstatus offers branded status pages + multi-region uptime and timestamped incident logs for small teams. Nigerian fintech/SaaS SMEs still paste “we are fixing it” into WhatsApp when rails flap.
 - **Solution:**
-  - **Established solution:** Openstatus / Statuspage.io incident status products (software).
-  - **Variant:** Openstatus NG SME Status Lite — single branded status page + WhatsApp incident blast template + NDPA-aware log retention note, Paystack billing.
+  - **Established solution:** Openstatus / Atlassian Statuspage (developed-market uptime status software).
+  - **Variant:** Openstatus NG SME Status Lite, the Nigeria version of that software. It runs one branded status page, a WhatsApp incident template, and an NDPA-aware log note, billed with Paystack. It is not a regulator outage bulletin.
 - **Target:** Nigeria SaaS, fintech ops, and agency teams that need public status without enterprise Statuspage pricing.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for incident subscriber lists; not a regulator outage bulletin.
@@ -326,7 +326,11 @@
 | 14 | **ran** | OWID internet snippet fetch ok; used as weak global digital-adoption backdrop for S7/S11 adaptations + crude stress framing. |
 | 15 | **skipped** | Default skip (`--with-strategy15` not used); prior telecom figures not overwritten. |
 
-**Data freshness:** Fetch `20261026_060112` UTC morning; headline dates mostly 25–26 Oct 2026; FIJ S1 cites Aug 2026 (still unresolved pattern). Partial: Techpoint/FN RSS empty; StartupList 429; PH product pages may Cloudflare-block — used RSS + hunted.space/upvote0 secondaries.
+**Data freshness:** Fetch `20261026_060112` UTC morning. Headline dates are mostly 25-26 Oct 2026. FIJ S1 cites are Aug 2026 (still an unresolved pattern). Partial gaps: Techpoint/FN RSS empty, StartupList 429, and PH product pages may Cloudflare-block. Used RSS plus hunted.space/upvote0 secondaries.
+
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-26. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
 
 ---
 
@@ -334,7 +338,7 @@
 
 | Step | Owner | Target date |
 |------|-------|-------------|
-| Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` → schema → one-shot Docx | Automation B / Hub Pass 2 | 2026-10-26 (11:00 WAT) or next pack window |
+| Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. | Automation B | 2026-10-26 |
 | Spot-check StapleAdulteration WhatsApp checklist with 5 Mile-12 shoppers | Founder | 2026-10-29 |
 | Time a dry-run FinalClose27 pack against one authorised broker channel before/after 27 Oct close | Founder | 2026-10-27 |
 | Confirm OPay FailedPOS SLA fields against one live ticket export | Founder | 2026-10-30 |
@@ -342,5 +346,4 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
