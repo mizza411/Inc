@@ -1,0 +1,683 @@
+{
+  "generated_at": "2026-10-26T06:01:16.349290",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "NDLEA arrests South African woman with 36.65kg of cocaine at Lagos airport",
+          "summary": "The National Drug Law Enforcement Agency (NDLEA) has arrested a 34-year-old South African woman with 36.65kg of cocaine at the Murtala\nThe post NDLEA arrests South African woman with 36.65kg of cocaine at Lagos airport appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/10/25/ndlea-arrests-south-african-woman-with-36-65kg-of-cocaine-at-lagos-airport/",
+          "published": "Sun, 25 Oct 2026 19:31:03 +0000"
+        },
+        {
+          "title": "IG proposes 200% gratuity and pension for retired police officers",
+          "summary": "The Inspector-General of Police (IG), Olatunji Disu, has proposed a 200 per cent gratuity and pension for retired police officers as part of ongoing\nThe post IG proposes 200% gratuity and pension for retired police officers appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/10/25/ig-proposes-200-gratuity-and-pension-for-retired-police-officers/",
+          "published": "Sun, 25 Oct 2026 19:19:30 +0000"
+        },
+        {
+          "title": "FG disburses N38.93 billion to 166 tertiary institutions for infrastructure",
+          "summary": "The Federal Government has disbursed N38.93 billion to 166 public tertiary institutions across Nigeria under the Needs Assessment Revitalisation Fund to address infrastructure gaps and improve teaching and learning facilities. This was revealed in a statement issued by the Head of Media at the Federal Ministry of Finance, Mrs Efe Ovuakporie, in Abuja on Sunday, [&#8230;]\nThe post FG disburses N38.",
+          "link": "https://nairametrics.com/2026/10/25/fg-disburses-n38-93-billion-to-166-tertiary-institutions-for-infrastructure/",
+          "published": "Sun, 25 Oct 2026 19:11:49 +0000"
+        },
+        {
+          "title": "NCDC identifies two suspected Ebola cases, traces 53 primary contacts",
+          "summary": "The Nigeria Centre for Disease Control and Prevention (NCDC) has identified two additional suspected cases of Ebola virus disease and 53 primary contacts as authorities intensify efforts to contain the infection in Nigeria. The Director-General of the NCDC, Dr Jide Idris, disclosed this during a press briefing in Abuja on Sunday, October 25, 2026, amid [&#8230;]\nThe post NCDC identifies two suspec",
+          "link": "https://nairametrics.com/2026/10/25/ncdc-identifies-two-suspected-ebola-cases-traces-53-primary-contacts/",
+          "published": "Sun, 25 Oct 2026 15:58:46 +0000"
+        },
+        {
+          "title": "Robert Mbonu and the N200 billion Nigerian art market",
+          "summary": "The Nigerian Art market is valued at about $144 million, which gives us roughly N200 billion. The market however remains in its infancy. You can count Nigerian artists who have broken into the mainstream global art world with the fingers on your right hand. Robert Mbonu, the stylish former banker and Art collector, is poised [&#8230;]\nThe post Robert Mbonu and the N200 billion Nigerian art market ",
+          "link": "https://nairametrics.com/2026/10/25/robert-mbonu-and-the-n200-billion-nigerian-art-market/",
+          "published": "Sun, 25 Oct 2026 15:37:31 +0000"
+        },
+        {
+          "title": "Polysmart Packaging Pays Off ₦5.7bn Across Four CP Series,Quietly Building Africa’s Largest Food-Grade rPET Plant",
+          "summary": "In a market where bold announcements often outrun delivery, one Nigerian manufacturer is letting its repayments do the talking. Polysmart Packaging Limited, Nigeria&#8217;s largest plastic recycling company, has fully paid the maturity amounts of its non-interest commercial paper (NICP) programme across series 1 to 4, a combined &#8358;5,711,405,308.33 in maturity payments, with Marble Advisory Li",
+          "link": "https://nairametrics.com/2026/10/25/polysmart-packaging-pays-off-%e2%82%a65-7bn-across-four-cp-seriesquietly-building-africas-largest-food-grade-rpet-plant/",
+          "published": "Sun, 25 Oct 2026 11:48:01 +0000"
+        },
+        {
+          "title": "Domestic equity trading hits N13.52 trillion, surpasses full-year 2025",
+          "summary": "Domestic investors traded N13.52 trillion worth of equities on the Nigerian Exchange (NGX) in the first nine months of 2026, exceeding the N9.27 trillion recorded throughout 2025 by N4.24 trillion, or 45.73%.\nThe post Domestic equity trading hits N13.52 trillion, surpasses full-year 2025 appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/10/25/domestic-equity-trading-hits-n13-52-trillion-surpasses-full-year-2025/",
+          "published": "Sun, 25 Oct 2026 11:29:25 +0000"
+        },
+        {
+          "title": "IMF blames over-optimistic tax estimates, weak implementation for revenue shortfalls",
+          "summary": "The International Monetary Fund (IMF) has identified over-optimistic tax revenue projections, weak policy implementation and limited administrative capacity as key reasons governments often fall short of their revenue targets.\nThe post IMF blames over-optimistic tax estimates, weak implementation for revenue shortfalls appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/10/25/imf-blames-over-optimistic-tax-estimates-weak-implementation-for-revenue-shortfalls/",
+          "published": "Sun, 25 Oct 2026 08:40:31 +0000"
+        },
+        {
+          "title": "AfDB raises $2.5 billion in global bond as orders hit $4.8 billion",
+          "summary": "The African Development Bank (AfDB) has raised $2.5 billion through a three-year global benchmark bond after investor orders reached $4.8 billion, nearly twice the amount issued.\nThe post AfDB raises $2.5 billion in global bond as orders hit $4.8 billion appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/10/25/afdb-raises-2-5-billion-in-global-bond-as-orders-hit-4-8-billion/",
+          "published": "Sun, 25 Oct 2026 07:52:25 +0000"
+        },
+        {
+          "title": "Nigeria’s net FX flows rise to $22.5 billion in Q2 2026, highest since Q4 2019",
+          "summary": "Nigeria’s net foreign exchange (FX) flows rose to $22.50 billion in the second quarter of 2026, the highest level since the fourth quarter of 2019.\nThe post Nigeria’s net FX flows rise to $22.5 billion in Q2 2026, highest since Q4 2019 appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/10/25/nigerias-net-fx-flows-rise-to-22-5-billion-in-q2-2026-highest-since-q4-2019/",
+          "published": "Sun, 25 Oct 2026 06:56:01 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "NDLEA nabs S’African, US-based grandma with cocaine, loud shipments",
+          "summary": "&#8230;Arrests physically challenged lady in Delta, recovers illicit drugs Operatives of the National Drug Law Enforcement Agency (NDLEA) have arrested",
+          "link": "https://businessday.ng/news/article/ndlea-nabs-safrican-us-based-grandma-with-cocaine-loud-shipments/",
+          "published": "Mon, 26 Oct 2026 05:40:23 +0000"
+        },
+        {
+          "title": "Protection of personal privacy and rights is central to NDPC’s mandate – Olatunji",
+          "summary": "Vincent O. Olatunji, pioneer commissioner and chief executive officer of the Nigeria Data Protection Commission (NDPC), has led the country’s",
+          "link": "https://businessday.ng/interview/article/protection-of-personal-privacy-and-rights-is-central-to-ndpcs-mandate-olatunji/",
+          "published": "Mon, 26 Oct 2026 05:29:40 +0000"
+        },
+        {
+          "title": "Africa’s rare earth economy: The next front in the global minerals race",
+          "summary": "The next great contest for Africa’s natural resources will increasingly revolve around the minerals powering electric vehicles, wind turbines, missiles,",
+          "link": "https://businessday.ng/insight-2/article/africas-rare-earth-economy-the-next-front-in-the-global-minerals-race/",
+          "published": "Mon, 26 Oct 2026 05:22:01 +0000"
+        },
+        {
+          "title": "Nigeria Airways: A reward that came too late",
+          "summary": "The Federal Government’s ₦18 billion payment to former Nigeria Airways workers is welcome, but it comes more than two decades",
+          "link": "https://businessday.ng/editorial/article/nigeria-airways-a-reward-that-came-too-late/",
+          "published": "Mon, 26 Oct 2026 05:21:42 +0000"
+        },
+        {
+          "title": "Toxic Food Series: How food safety failures turned consumers into food inspectors",
+          "summary": "Adulterated staples and weak enforcement have forced every Nigerian to become their own food inspectors. With the influx of adulterated",
+          "link": "https://businessday.ng/agriculture/article/toxic-food-series-how-food-safety-failures-turned-consumers-into-food-inspectors/",
+          "published": "Mon, 26 Oct 2026 04:17:43 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Otti mourns Okonjo-Iweala’s mother",
+          "summary": "Abia State Governor, Alex Otti, has commiserated with the WTO DG, Dr Ngozi Okonjo-Iweala, over the death of her 96-year-old mother, Mrs Kamene Okonjo.\n\nRead More: https://punchng.com/otti-mourns-okonjo-iwealas-mother/",
+          "link": "https://punchng.com/otti-mourns-okonjo-iwealas-mother/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 06:51:17 +0000"
+        },
+        {
+          "title": "Madrid play for La Liga, not Camp Nou wins — Mourinho",
+          "summary": "José Mourinho says Real Madrid&#8217;s focus is on winning La Liga, not just their 2-1 El Clásico victory over Barcelona at the Camp Nou.\n\nRead More: https://punchng.com/madrid-play-for-la-liga-not-camp-nou-wins-mourinho/",
+          "link": "https://punchng.com/madrid-play-for-la-liga-not-camp-nou-wins-mourinho/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 06:41:38 +0000"
+        },
+        {
+          "title": "Morning recap: Ebola contacts hit 53, IG seeks 200% gratuity, other top stories",
+          "summary": "Read the latest on Nigeria&#8217;s Ebola response as contacts reach 53, the IG&#8217;s proposal for 200% police gratuity, and other top stories from PUNCH.\n\nRead More: https://punchng.com/morning-recap-ebola-contacts-hit-53-ig-seeks-200-gratuity-other-top-stories/",
+          "link": "https://punchng.com/morning-recap-ebola-contacts-hit-53-ig-seeks-200-gratuity-other-top-stories/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 06:27:52 +0000"
+        },
+        {
+          "title": "Ebola: SDP presidential candidate warns against shifting 2027 elections",
+          "summary": "SDP presidential candidate, Adewole Adebayo, has warned against any attempt to cancel campaigns or shift the 2027 general election over the Ebola outbreak.\n\nRead More: https://punchng.com/ebola-sdp-presidential-candidate-warns-against-shifting-2027-elections/",
+          "link": "https://punchng.com/ebola-sdp-presidential-candidate-warns-against-shifting-2027-elections/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 05:46:54 +0000"
+        },
+        {
+          "title": "Police arrest school driver for kidnapping, raping Delta student",
+          "summary": "Police in Delta State have arrested a 28-year-old school bus driver for allegedly kidnapping and sexually assaulting a 14-year-old student in Sapele.\n\nRead More: https://punchng.com/police-arrest-school-driver-for-kidnapping-raping-delta-student/",
+          "link": "https://punchng.com/police-arrest-school-driver-for-kidnapping-raping-delta-student/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 05:13:39 +0000"
+        },
+        {
+          "title": "NAF burns 10m litres fuel in 2,900 security missions",
+          "summary": "The Nigerian Air Force says it consumed nearly 10 million litres of aviation fuel, flying over 6,100 hours in 2,900 security missions since November 2025.\n\nRead More: https://punchng.com/naf-burns-10m-litres-fuel-in-2900-security-missions/",
+          "link": "https://punchng.com/naf-burns-10m-litres-fuel-in-2900-security-missions/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 05:13:07 +0000"
+        },
+        {
+          "title": "Two container trucks overturn in Lagos, kill mother, child",
+          "summary": "A mother and her child have been killed after two container trucks overturned at Mile 2, inward Apapa in Lagos, trapping them beneath the vehicles.\n\nRead More: https://punchng.com/two-container-trucks-overturn-in-lagos-kill-mother-child/",
+          "link": "https://punchng.com/two-container-trucks-overturn-in-lagos-kill-mother-child/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 05:12:48 +0000"
+        },
+        {
+          "title": "Fulani leaders seek ranches, 30% farm budget allocation",
+          "summary": "Fulani leaders have urged President Tinubu to allocate 30% of the agricultural budget to the livestock ministry and establish pilot ranches across Nigeria.\n\nRead More: https://punchng.com/fulani-leaders-seek-ranches-30-farm-budget-allocation/",
+          "link": "https://punchng.com/fulani-leaders-seek-ranches-30-farm-budget-allocation/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 05:11:55 +0000"
+        },
+        {
+          "title": "NDLEA arrests S’African with 36.65kg cocaine at Lagos airport",
+          "summary": "The NDLEA has arrested a 34-year-old South African woman, Qhina Beauty, with 36.65kg of cocaine at the Murtala Muhammed International Airport, Lagos.\n\nRead More: https://punchng.com/ndlea-arrests-safrican-with-36-65kg-cocaine-at-lagos-airport/",
+          "link": "https://punchng.com/ndlea-arrests-safrican-with-36-65kg-cocaine-at-lagos-airport/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 05:10:48 +0000"
+        },
+        {
+          "title": "Hidden cost of shielding underperforming executives",
+          "summary": "Shielding underperforming executives has hidden costs. It demoralises capable employees, erodes trust, and creates an unfair asymmetry of accountability.\n\nRead More: https://punchng.com/hidden-cost-of-shielding-underperforming-executives/",
+          "link": "https://punchng.com/hidden-cost-of-shielding-underperforming-executives/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Mon, 26 Oct 2026 01:45:34 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Nigeria must manufacture meters locally, secure sustainable financing — Experts",
+          "summary": "By Esther Ihejirika Electricity sector experts have called for increased local meter manufacturing, sustainable financing and wider adoption of smart technology to accelerate meter deployment and close Nigeria’s metering gap. They made the call during a webinar on rapid meter rollout, stressing the need for a coordinated national metering plan to improve revenue collection, reduce [&#8230;]\nThe po",
+          "link": "https://www.vanguardngr.com/2026/10/nigeria-must-manufacture-meters-locally-secure-sustainable-financing-experts/",
+          "published": "Mon, 26 Oct 2026 05:57:55 +0000"
+        },
+        {
+          "title": "Dangote charts path to Africa’s industrial revolution, prioritises power, financing",
+          "summary": "Africa’s ambition to become global industrial powerhouse hinges on its ability to mobilize long-term financing, deliver reliable electricity and adopt policies that turn its vast natural resources into manufactured products, President/Chief Executive, Dangote Industries Limited, Aliko Dangote, has declared. Dangote, who has outlined a $50 billion investment programme for 2026 to 2030, said the con",
+          "link": "https://www.vanguardngr.com/2026/10/dangote-charts-path-to-africas-industrial-revolution-prioritises-power-financing/",
+          "published": "Mon, 26 Oct 2026 05:52:08 +0000"
+        },
+        {
+          "title": "Domestic crude supply to refineries declines 6.3% to 15.97mb —NMDPRA",
+          "summary": "By Obas Esiedesa Domestic crude oil supply to Nigerian refineries declined by 6.3 per cent to 15.97 million barrels in September 2026 from 17.05 million barrels in August. This comes as petrol supply from domestic refineries and imports fell sharply during the month. The September 2026 Midstream and Downstream Report released by the Nigerian Midstream [&#8230;]\nThe post Domestic crude supply to re",
+          "link": "https://www.vanguardngr.com/2026/10/domestic-crude-supply-to-refineries-declines-6-3-to-15-97mb-nmdpra/",
+          "published": "Mon, 26 Oct 2026 05:46:37 +0000"
+        },
+        {
+          "title": "Stock market extend losses, 55 stocks depreciate",
+          "summary": "…As 20 record capital gains By Peter Egwuatu Share prices of 55 companies listed on the Nigerian Exchange Limited (NGX) depreciated last week following profit taking by the investors. However, 20 stocks appreciated in price during the week under review. The week’s performance highlights the market correction facing the stock market as investors reassess their [&#8230;]\nThe post Stock market extend",
+          "link": "https://www.vanguardngr.com/2026/10/stock-market-extend-losses-55-stocks-depreciate/",
+          "published": "Mon, 26 Oct 2026 05:37:20 +0000"
+        },
+        {
+          "title": "Omitted candidates: PDP, ADC, NDC, LP meet INEC’s condition",
+          "summary": "•INEC to clarify omitted candidate’s status this week By Henry Umoru, John Alechenu, Luminous Jannamike &#38; Emma Una ABUJA &#8211; The Peoples Democratic Party, PDP, has met the Independent National Electoral Commission’s, INEC, October 24 deadline for correcting the names of candidates omitted from its published list, the party’s National Organising Secretary, Captain Umar Bature, [&#8230;]\nThe",
+          "link": "https://www.vanguardngr.com/2026/10/omitted-candidates-pdp-adc-ndc-lp-meet-inecs-condition/",
+          "published": "Mon, 26 Oct 2026 04:22:12 +0000"
+        },
+        {
+          "title": "Soldiers earn peanuts, APC youth leader flaunts billion-naira SUVs  —  Utomi",
+          "summary": "“Each of the SUVs in this video costs more than ₦100 million. I wonder how many world-class ambulances the millions being spent on these vehicles could buy\"\nThe post Soldiers earn peanuts, APC youth leader flaunts billion-naira SUVs  —  Utomi appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/10/soldiers-earn-peanuts-apc-youth-leader-flaunts-billion-naira-suvs-utomi/",
+          "published": "Mon, 26 Oct 2026 04:20:00 +0000"
+        },
+        {
+          "title": "‘We are not bandits’ – Herdsmen; want 30% of agric budget, 417 grazing reserves",
+          "summary": "\"Security agencies and the media to should stop ethnic profiling but arrest and prosecute criminals as individuals, not as an ethnic group\" \nThe post &#8216;We are not bandits&#8217; &#8211; Herdsmen; want 30% of agric budget, 417 grazing reserves appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/10/killings-we-are-not-bandits-herdsmen-reject-profiling-demand-dialogue/",
+          "published": "Mon, 26 Oct 2026 04:16:00 +0000"
+        },
+        {
+          "title": "Health hazzard: Fruit vendors use laundry detergents to sparkle produce for profit",
+          "summary": "“It gives the fruits a beautiful, shiny coat that looks fresh from the farm. It helps us sell faster and reduces waste, which means more profit for us at the end of the day”\nThe post Health hazzard: Fruit vendors use laundry detergents to sparkle produce for profit appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/10/health-hazzard-fruit-vendors-use-laundry-detergents-to-sparkle-produce-for-profit/",
+          "published": "Mon, 26 Oct 2026 04:03:58 +0000"
+        },
+        {
+          "title": "IPoB alleges secret transfer of 68 detainees",
+          "summary": "IPOB disowned an audio message circulating online that announced the return of an enforced Monday sit-at-home across the South-East\nThe post IPoB alleges secret transfer of 68 detainees  appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/10/ipob-alleges-secret-transfer-of-68-detainees/",
+          "published": "Mon, 26 Oct 2026 03:53:21 +0000"
+        },
+        {
+          "title": "Banks’ credit to manufacturers falls 26.8% to N5.19trn",
+          "summary": "The decline in outstanding credit does not establish whether it resulted from reduced new lending, loan repayments or other changes in banks’ credit portfolios\nThe post Banks’ credit to manufacturers falls 26.8% to N5.19trn appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/10/banks-credit-to-manufacturers-falls-26-8-to-n5-19trn/",
+          "published": "Mon, 26 Oct 2026 03:40:39 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Nigerian govt disburses N38.93 billion to 166 tertiary institutions",
+          "summary": "She said the disbursement was under the Needs Assessment Revitalisation Fund, covering 79 universities, 46 polytechnics and 41 colleges of education.\nThe post Nigerian govt disburses N38.93 billion to 166 tertiary institutions appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/920262-nigerian-govt-disburses-n38-93-billion-to-166-tertiary-institutions.html",
+          "published": "Mon, 26 Oct 2026 05:58:04 +0000"
+        },
+        {
+          "title": "NiMet forecasts Nigeria’s weather for next three days",
+          "summary": "It said thunderstorms accompanied by light rain were expected across most parts of the southern region later on Tuesday.\nThe post NiMet forecasts Nigeria&#8217;s weather for next three days appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/920260-nimet-forecasts-nigerias-weather-for-next-three-days.html",
+          "published": "Mon, 26 Oct 2026 05:52:39 +0000"
+        },
+        {
+          "title": "2027: Tinubu appoints Keyamo director of APC air mobilisation – Official",
+          "summary": "The appointment places Mr Keyamo at the head of a campaign directorate responsible for coordinating air travel and aviation logistics for nationwide campaign activities.\nThe post 2027: Tinubu appoints Keyamo director of APC air mobilisation &#8211; Official appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/920259-2027-tinubu-appoints-keyamo-director-of-apc-air-mobilisation-official.html",
+          "published": "Mon, 26 Oct 2026 05:46:23 +0000"
+        },
+        {
+          "title": "Dele Cole (1940-2026) and his public service, By Eric Teniola",
+          "summary": "On 29 July, 1975, General Murtala Mohammed GCFR (8 November, 1938 – 13 February, 1976) became head of state by overthrowing General Yakubu Gowon GCFR (92). On 7 August, 1975, General Mohammed set up a committee on the creation of more states in the country. At that time, Nigeria had 12 states. The committee was [&#8230;]\nThe post Dele Cole (1940-2026) and his public service, By Eric Teniola  appea",
+          "link": "https://www.premiumtimesng.com/opinion/920257-dele-cole-1940-2026-and-his-public-service-by-eric-teniola.html",
+          "published": "Mon, 26 Oct 2026 05:27:35 +0000"
+        },
+        {
+          "title": "Kaduna rally as the North’s referendum on Tinubu, By Abdulaziz Abdulaziz",
+          "summary": "The gathering was beyond a rented crowd; it was organic, massive, and emotional. A few photos from the event displayed that spectacularly: the excited trio waving so happily at their president who wound down the window to greet them; the many people who kept vigil at the venue so they could get a good spot [&#8230;]\nThe post Kaduna rally as the North&#8217;s referendum on Tinubu, By Abdulaziz Abdu",
+          "link": "https://www.premiumtimesng.com/opinion/920243-kaduna-rally-as-the-norths-referendum-on-tinubu-by-abdulaziz-abdulaziz.html",
+          "published": "Mon, 26 Oct 2026 04:59:55 +0000"
+        },
+        {
+          "title": "EDITORIAL: Why the US midterm elections matter",
+          "summary": "Trump administration has been an ill-wind that has served the world poorly over the last 24 months.\nThe post EDITORIAL: Why the US midterm elections matter appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/headlines/920249-editorial-why-the-us-midterm-elections-matter.html",
+          "published": "Mon, 26 Oct 2026 04:48:52 +0000"
+        },
+        {
+          "title": "President Lula da Silva of Brazil elected for fourth term",
+          "summary": "Mr Lula’s victory now leaves Mexico and Brazil, Latin America’s two most populous nations, with left-wing leaders.\nThe post President Lula da Silva of Brazil elected for fourth term appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/920238-president-lula-da-silva-of-brazil-elected-for-fourth-term.html",
+          "published": "Mon, 26 Oct 2026 04:37:32 +0000"
+        },
+        {
+          "title": "NPFL: Bendel Insurance end Rivers United’s unbeaten run as Southwest derby ends in stalemate",
+          "summary": "Rivers United maintained their position at the top of the Nigeria Premier Football League (NPFL) table despite suffering their first defeat of the season, losing 2-1 to Bendel Insurance in Matchday 10.\nThe post NPFL: Bendel Insurance end Rivers United’s unbeaten run as Southwest derby ends in stalemate appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/sports/football/920231-npfl-bendel-insurance-end-rivers-uniteds-unbeaten-run-as-southwest-derby-ends-in-stalemate.html",
+          "published": "Mon, 26 Oct 2026 01:26:32 +0000"
+        },
+        {
+          "title": "U-17 WWC: Flamingos face Mexico as Africa’s last four battle for quarter-final tickets",
+          "summary": "Nigeria will face Mexico in the Round of 16 on Thursday at the 2026 FIFA U-17 Women’s World Cup in Morocco, leading four African teams into the knockout stage\nThe post U-17 WWC: Flamingos face Mexico as Africa’s last four battle for quarter-final tickets appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/920228-u-17-wwc-flamingos-face-mexico-as-africas-last-four-battle-for-quarter-final-tickets.html",
+          "published": "Mon, 26 Oct 2026 01:19:26 +0000"
+        },
+        {
+          "title": "Outrage as APC youth leader shares new Prado SUVs to mobilisers, then deletes post",
+          "summary": "Dayo Israel, the national youth leader of the APC, deleted a post he earlier shared showing seven Toyota Prado SUVs presented to selected party youth leaders for election mobilisation after Nigerians criticised the reported cost of the vehicles amid economic hardship.\nThe post Outrage as APC youth leader shares new Prado SUVs to mobilisers, then deletes post appeared first on Premium Times Nigeria",
+          "link": "https://www.premiumtimesng.com/news/headlines/920224-outrage-as-apc-youth-leader-shares-new-prado-suvs-to-mobilisers-then-deletes-post.html",
+          "published": "Mon, 26 Oct 2026 01:12:15 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": "error",
+    "error": "429 Client Error: Too Many Requests for url: https://www.startuplist.africa/startups"
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "AgentGrid.io",
+        "summary": "Shared workspace for humans and agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/agentgrid-io",
+        "published": "2026-10-24T22:39:16-07:00"
+      },
+      {
+        "title": "Llama Windows",
+        "summary": "One local AI server for all your Windows apps\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/llama-windows",
+        "published": "2026-10-23T19:40:27-07:00"
+      },
+      {
+        "title": "Yourcast 2.0",
+        "summary": "AI summaries with tap-to-jump timestamps, right in Telegram\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/yourcast",
+        "published": "2026-10-24T07:42:59-07:00"
+      },
+      {
+        "title": "Specsight",
+        "summary": "Product observability for teams shipping fast with AI\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/specsight",
+        "published": "2026-10-18T11:03:42-07:00"
+      },
+      {
+        "title": "Moli by Lexmount",
+        "summary": "The fastest headless browser for agents and harnesses\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/lexmount-browser",
+        "published": "2026-10-12T23:39:58-07:00"
+      },
+      {
+        "title": "Papermark Data Rooms",
+        "summary": "Secure data rooms your AI agents can run. Live in \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/papermark-2",
+        "published": "2026-10-24T12:09:46-07:00"
+      },
+      {
+        "title": "Clips by Plastic",
+        "summary": "Lyric video ads for every part of your song, on the beat\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/clips-by-plastic",
+        "published": "2026-10-17T09:42:43-07:00"
+      },
+      {
+        "title": "How It Spread",
+        "summary": "See how anything went viral, from the first post\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/how-it-spread",
+        "published": "2026-10-19T18:40:44-07:00"
+      },
+      {
+        "title": "MRRaudit",
+        "summary": "Understand why your MRR differs and get a number you trust\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/mrraudit",
+        "published": "2026-10-22T04:47:53-07:00"
+      },
+      {
+        "title": "pawl",
+        "summary": "a tiny mac focus timer you start by pulling a paw\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/pawl",
+        "published": "2026-10-20T18:23:11-07:00"
+      },
+      {
+        "title": "Badgey",
+        "summary": "Your iPhone becomes a name badge that faces the room\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/badgey",
+        "published": "2026-10-08T03:03:51-07:00"
+      },
+      {
+        "title": "Openstatus Incident Management",
+        "summary": "Incident management for small teams\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/openstatus-2",
+        "published": "2026-10-17T08:11:58-07:00"
+      },
+      {
+        "title": "git-flow-next",
+        "summary": "Your favorite Git workflow. Reimagined.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/tower",
+        "published": "2026-10-19T06:39:44-07:00"
+      },
+      {
+        "title": "sideOS.ai",
+        "summary": "Local AI for dictation, meetings, background tasks and more\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/sideos-ai",
+        "published": "2026-10-23T06:28:40-07:00"
+      },
+      {
+        "title": "Shedi",
+        "summary": "Get back the space Xcode, Docker and node_modules ate\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/shedi",
+        "published": "2026-10-20T23:38:11-07:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related TopicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts.Just under a tenth of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is sh"
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NDLEA arrests South African woman with 36.65kg of cocaine at Lagos airport",
+        "url": "https://nairametrics.com/2026/10/25/ndlea-arrests-south-african-woman-with-36-65kg-of-cocaine-at-lagos-airport/",
+        "published": "Sun, 25 Oct 2026 19:31:03 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "IG proposes 200% gratuity and pension for retired police officers",
+        "url": "https://nairametrics.com/2026/10/25/ig-proposes-200-gratuity-and-pension-for-retired-police-officers/",
+        "published": "Sun, 25 Oct 2026 19:19:30 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "FG disburses N38.93 billion to 166 tertiary institutions for infrastructure",
+        "url": "https://nairametrics.com/2026/10/25/fg-disburses-n38-93-billion-to-166-tertiary-institutions-for-infrastructure/",
+        "published": "Sun, 25 Oct 2026 19:11:49 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "NCDC identifies two suspected Ebola cases, traces 53 primary contacts",
+        "url": "https://nairametrics.com/2026/10/25/ncdc-identifies-two-suspected-ebola-cases-traces-53-primary-contacts/",
+        "published": "Sun, 25 Oct 2026 15:58:46 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Robert Mbonu and the N200 billion Nigerian art market",
+        "url": "https://nairametrics.com/2026/10/25/robert-mbonu-and-the-n200-billion-nigerian-art-market/",
+        "published": "Sun, 25 Oct 2026 15:37:31 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "NDLEA nabs S’African, US-based grandma with cocaine, loud shipments",
+        "url": "https://businessday.ng/news/article/ndlea-nabs-safrican-us-based-grandma-with-cocaine-loud-shipments/",
+        "published": "Mon, 26 Oct 2026 05:40:23 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Protection of personal privacy and rights is central to NDPC’s mandate – Olatunji",
+        "url": "https://businessday.ng/interview/article/protection-of-personal-privacy-and-rights-is-central-to-ndpcs-mandate-olatunji/",
+        "published": "Mon, 26 Oct 2026 05:29:40 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Africa’s rare earth economy: The next front in the global minerals race",
+        "url": "https://businessday.ng/insight-2/article/africas-rare-earth-economy-the-next-front-in-the-global-minerals-race/",
+        "published": "Mon, 26 Oct 2026 05:22:01 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Nigeria Airways: A reward that came too late",
+        "url": "https://businessday.ng/editorial/article/nigeria-airways-a-reward-that-came-too-late/",
+        "published": "Mon, 26 Oct 2026 05:21:42 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Toxic Food Series: How food safety failures turned consumers into food inspectors",
+        "url": "https://businessday.ng/agriculture/article/toxic-food-series-how-food-safety-failures-turned-consumers-into-food-inspectors/",
+        "published": "Mon, 26 Oct 2026 04:17:43 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Otti mourns Okonjo-Iweala’s mother",
+        "url": "https://punchng.com/otti-mourns-okonjo-iwealas-mother/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 26 Oct 2026 06:51:17 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Madrid play for La Liga, not Camp Nou wins — Mourinho",
+        "url": "https://punchng.com/madrid-play-for-la-liga-not-camp-nou-wins-mourinho/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 26 Oct 2026 06:41:38 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Morning recap: Ebola contacts hit 53, IG seeks 200% gratuity, other top stories",
+        "url": "https://punchng.com/morning-recap-ebola-contacts-hit-53-ig-seeks-200-gratuity-other-top-stories/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 26 Oct 2026 06:27:52 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Ebola: SDP presidential candidate warns against shifting 2027 elections",
+        "url": "https://punchng.com/ebola-sdp-presidential-candidate-warns-against-shifting-2027-elections/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 26 Oct 2026 05:46:54 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Police arrest school driver for kidnapping, raping Delta student",
+        "url": "https://punchng.com/police-arrest-school-driver-for-kidnapping-raping-delta-student/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Mon, 26 Oct 2026 05:13:39 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Nigeria must manufacture meters locally, secure sustainable financing — Experts",
+        "url": "https://www.vanguardngr.com/2026/10/nigeria-must-manufacture-meters-locally-secure-sustainable-financing-experts/",
+        "published": "Mon, 26 Oct 2026 05:57:55 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Dangote charts path to Africa’s industrial revolution, prioritises power, financing",
+        "url": "https://www.vanguardngr.com/2026/10/dangote-charts-path-to-africas-industrial-revolution-prioritises-power-financing/",
+        "published": "Mon, 26 Oct 2026 05:52:08 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Domestic crude supply to refineries declines 6.3% to 15.97mb —NMDPRA",
+        "url": "https://www.vanguardngr.com/2026/10/domestic-crude-supply-to-refineries-declines-6-3-to-15-97mb-nmdpra/",
+        "published": "Mon, 26 Oct 2026 05:46:37 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Stock market extend losses, 55 stocks depreciate",
+        "url": "https://www.vanguardngr.com/2026/10/stock-market-extend-losses-55-stocks-depreciate/",
+        "published": "Mon, 26 Oct 2026 05:37:20 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Omitted candidates: PDP, ADC, NDC, LP meet INEC’s condition",
+        "url": "https://www.vanguardngr.com/2026/10/omitted-candidates-pdp-adc-ndc-lp-meet-inecs-condition/",
+        "published": "Mon, 26 Oct 2026 04:22:12 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "==========\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /workspace/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmp2051c8nr/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
