@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-27 ~06:00–07:00 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-10-27 ~06:00-07:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-27 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261027.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261027_060053.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-10-26 (esp. StapleAdulteration Spot Desk, RefineryIPO FinalClose27 Checklist, OPay×Moniepoint FailedPOS 5Day Refund Clock, LocalMeter VendorFinance Ready Pack, PalmPay FuelDispense 2Year Refund Clock, DataLocal Jan2027 Capacity Crisis Pack, FMDQ N551tn FX/OMO Concentration Desk, GTBank UnauthDebit ForcedLoan Clock, PublicDeposit CRR75 Liquidity Stress Board, ABC Transport N6.5bn RightsBond Diligence Pack, CoastalHighway Section3yr Evidence Pack, OMO N2.63tn Overallot Rate Desk, FirstBank×Paga PhoneUpdate Debit Clock, FX $1.01bn Turnover Stress Board, GTBank FailedXfer 17Month Clock, OPay RecipientRefuse ErroneousCredit Clock, RefineryIPO AllotmentRefund Timeline Desk, PalmPay RecoveredNotCredited Clock, OPay×PalmPay ElevenMonth Flag Clock, ChinaCrossBorder Pay Prep Desk, CapMarket MasterPlan Retail Onboard Desk); older `business_ideas_20261011.md` / `business_ideas_20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx. Do not treat Word as final from this pass.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. NELFUND MultiYear Funding Floor Desk — Development Levy transparency + multi-year footing (**S12 Mode A**)
 
-- **Problem:** BusinessDay (27 Oct 2026): Alliance for Economic Research and Ethics notes NELFUND has disbursed **N372.62bn** (N192.89bn fees to 319 institutions + N179.73bn upkeep) with 1.66m processed applications, while Tax Act 2025 removed the old Student Loans Act 1% FIRS carve-out and routes NELFUND via **15% of Development Levy** receipts — families and bursars still lack a plain board separating applications / approvals / failed payments / levy transfers.
+- **Problem / trend:** BusinessDay (27 Oct 2026): Alliance for Economic Research and Ethics notes NELFUND has disbursed **N372.62bn** (N192.89bn fees to 319 institutions + N179.73bn upkeep) with 1.66m processed applications, while Tax Act 2025 removed the old Student Loans Act 1% FIRS carve-out and routes NELFUND via **15% of Development Levy** receipts — families and bursars still lack a plain board separating applications / approvals / failed payments / levy transfers.
 - **Solution:**
-  - **Established solution:** US / UK student-aid dashboards and state education-finance transparency portals (FAFSA-style status + public fund reporting).
-  - **Variant:** Nigeria NELFUND multi-year funding-floor board with Development Levy transfer fields, institution vs upkeep split, and failed-payment complaint log in Naira — not a loan broker.
+  - **Established solution:** US Federal Student Aid dashboard (developed-market student-aid status software).
+  - **Variant:** NELFUND MultiYear Funding Floor Desk, the Nigeria version of that software. It logs applications, approvals, failed payments, and Development Levy transfers in Naira, split between institution fees and student upkeep. It is not a NELFUND, FIRS, or loan-broker portal.
 - **Target:** University bursars, parent associations, campus NGOs tracking NELFUND continuity into 2027.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NELFUND, FIRS, or Ministry of Education official; not lobbying; NDPA for student IDs.
@@ -86,10 +86,10 @@
 
 ### 2. Counterfeit Spirits Spot Desk — seal / authorised-outlet consumer checklist (**S12 Mode A**)
 
-- **Problem:** BusinessDay (27 Oct 2026): Spirits & Wines Association of Nigeria (SWAN) backs stronger enforcement against counterfeit alcohol, cites seizures/arrests, glass-recovery projects that remove empty bottles from illicit refill loops, and urges consumers to buy from trusted outlets and check that packaging/seals are intact — retail buyers still lack a pocket spirits-spot checklist distinct from food-staple adulteration desks.
+- **Problem / trend:** BusinessDay (27 Oct 2026): Spirits & Wines Association of Nigeria (SWAN) backs stronger enforcement against counterfeit alcohol, cites seizures/arrests, glass-recovery projects that remove empty bottles from illicit refill loops, and urges consumers to buy from trusted outlets and check that packaging/seals are intact — retail buyers still lack a pocket spirits-spot checklist distinct from food-staple adulteration desks.
 - **Solution:**
-  - **Established solution:** EU / US brand-protection consumer apps and Authentix / Digimarc-style pack authentication for spirits.
-  - **Variant:** Nigeria spirits spot desk with seal/pack photo checklist, authorised-outlet note, and NAFDAC/SWAN tip handoff PDF — Naira, WhatsApp-first, not a lab.
+  - **Established solution:** Authentix pack-authentication software (developed-market spirits brand-protection software).
+  - **Variant:** Counterfeit Spirits Spot Desk, the Nigeria version of that software. It logs seal and pack photos, an authorised-outlet note, and a NAFDAC or SWAN tip handoff. It takes a Naira Paystack tip and works WhatsApp-first. It is not a lab and it does not certify drinks.
 - **Target:** Nightlife buyers, event caterers, off-licence SMEs in Lagos/Abuja/Port Harcourt.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NAFDAC, SWAN, or Customs enforcement; not product certification.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** PalmPay (mass Nigeria digital MFB / merchant payment rail). **Recurring complaint:** after a customer’s money landed in a defunct PalmPay Merchant account, PalmPay made the trader sign a consent form to return N8,150, yet after ~10 months the funds were still trapped (FIJ, 26 Aug 2026). **Variation:** Consent-form → release/refund evidence clock for defunct-merchant traps — not PalmPay RecoveredNotCredited (fraud recovery held) and not PalmPay FuelDispense 2Year Refund Clock.
 - **Complaint citations:** FIJ (26 Aug 2026), https://fij.ng/article/palmpay-made-lagos-trader-sign-consent-form-for-n8150-refund-he-got-nothing-after-10-months/ (consent form completed, money still trapped in discontinued Merchant account). Success signal: PalmPay mass merchant/consumer footprint in FIJ coverage and Nigeria wallet market.
 - **Solution:**
-  - **Established solution:** US dispute-clock tools (e.g. CFPB complaint packet builders) and Stripe/PayPal dispute timelines for closed merchant accounts.
-  - **Variant:** Nigeria PalmPay defunct-merchant consent clock with SMS/consent PDF capture, dual-app balance mismatch log, and CBN CPD export — Naira session IDs, not US ACH.
+  - **Established solution:** Stripe dispute timeline (developed-market closed-merchant dispute software).
+  - **Variant:** PalmPay DefunctMerchant Consent Clock, the Nigeria version of that software. It logs the signed consent, the dual-app balance mismatch, and the days since PalmPay promised to release a defunct-merchant refund. It can export a CBN consumer-protection note. It is not PalmPay official and it is not a US ACH tool.
 - **Target:** Traders whose old PalmPay Merchant numbers still receive mistaken credits, and senders waiting on consent-authorised returns.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not PalmPay official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** BusinessDay (27 Oct 2026): CBN sectoral FX data show industrial utilisation down 21.2% to **$3.72bn** in H1 2026 (from $4.72bn), a ~$1bn cut analysts link to backward integration, while manufactured-products FX more than doubled to $2.14bn — mid manufacturers still keep localisation claims in WhatsApp when approaching banks/BoI.
 - **Solution:**
-  - **Established solution:** EU / US supplier-localisation scorecards and World Bank import-substitution evidence packs for industrial lenders.
-  - **Variant:** Nigeria manufacturer local-sourcing evidence pack with input-substitution log, FX-invoice before/after sheet, and lender handoff PDF — Naira + NFEM fields.
+  - **Established solution:** SAP Ariba supplier-localisation software (developed-market industrial sourcing software).
+  - **Variant:** LocalSourcing FX Cut Evidence Pack, the Nigeria version of that software. It logs input substitution, FX invoices before and after, and a lender handoff for BoI or a bank. It uses Naira and NFEM fields. It is not a CBN FX desk.
 - **Target:** Mid manufacturers, agro-processors, boutique treasury consultants preparing BoI/bank facilities.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational only — not CBN FX allocation or BoI official.
@@ -147,8 +147,8 @@
 - **Formula:** **Successful business:** GTBank, First Bank, and Moniepoint (mass Nigeria deposit / fintech rails). **Recurring complaint:** after N2.058m life savings were wiped by unauthorised debits across three accounts, GTBank and First Bank denied responsibility while Moniepoint required a court order before recovery (FIJ, 10 Sep 2026; partial Moniepoint refund after FIJ follow-up). **Variation:** Multi-bank blame-shift evidence clock — not GTBank UnauthDebit ForcedLoan Clock (loan-shaped debit) and not GTBank FailedXfer 17Month Clock (failed transfer).
 - **Complaint citations:** FIJ (10 Sep 2026), https://fij.ng/article/lecturer-lost-n2-058m-to-unauthorised-debits-moniepoint-attempted-recovery-but-gtbank-first-bank-denied-responsibility/ (multi-bank wipe, liability denial, court-order demand). Follow-up: FIJ (11 Sep 2026), https://fij.ng/article/after-fijs-intervention-moniepoint-returns-n64000-to-lecturer-who-reported-unauthorised-debit/ (Moniepoint returns N64,000 after FIJ). Success signal: named Tier-1 banks + Moniepoint mass footprint.
 - **Solution:**
-  - **Established solution:** US multi-institution dispute kits (CFPB + bank forms) and Truebill/dispute timeline tools for unauthorised ACH.
-  - **Variant:** Nigeria multi-bank unauth-debit clock with per-rail ticket timeline, denial-letter capture, court-order status, and CPD export — NIBSS session IDs.
+  - **Established solution:** Rocket Money unauthorised-debit timelines (developed-market consumer dispute software).
+  - **Variant:** MultiBank UnauthDebit BlameShift Clock, the Nigeria version of that software. It logs each GTBank, First Bank, and Moniepoint ticket, denial letters, and court-order status on one clock, with NIBSS session IDs. It is not a law firm and it is not a bank portal.
 - **Target:** Consumers and SMEs hit across bank + fintech wallets in one attack window.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA; CBN CPD notes; not legal practice.
@@ -164,10 +164,10 @@
 
 ### 6. BoI Industrial Facility Ready Pack — €2.22bn / N250bn pipeline readiness kit (S5, S12, S9)
 
-- **Problem:** Vanguard (27 Oct 2026): Bank of Industry MD Olasupo Olusi says BoI secured **>€2.22bn+** and **N250bn** (incl. oversubscribed 2026 development bond, EIB €85m agri + €50m healthcare manufacturing) while aiming to double loan book under 2025–2027 strategy — MSMEs still arrive with incomplete sector/docs packs.
+- **Problem / trend:** Vanguard (27 Oct 2026): Bank of Industry MD Olasupo Olusi says BoI secured **>€2.22bn+** and **N250bn** (incl. oversubscribed 2026 development bond, EIB €85m agri + €50m healthcare manufacturing) while aiming to double loan book under 2025–2027 strategy — MSMEs still arrive with incomplete sector/docs packs.
 - **Solution:**
-  - **Established solution:** US SBA / UK British Business Bank readiness checklists and KfW-style development-bank applicant kits.
-  - **Variant:** Nigeria BoI industrial facility ready pack with 15-priority-sector map, women/MSME flag fields, and document naming checklist — Naira, not a BoI portal clone.
+  - **Established solution:** nCino commercial loan readiness software (developed-market development-finance application software).
+  - **Variant:** BoI Industrial Facility Ready Pack, the Nigeria version of that software. It logs the priority-sector map, women and MSME flags, and the named documents a manufacturer still owes before a BoI approach. It is not a BoI portal and it does not decide credit.
 - **Target:** Manufacturers, agro-processors, healthcare manufacturers preparing BoI / intervention approaches.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not BoI application service or credit decision.
@@ -183,10 +183,10 @@
 
 ### 7. NGX Record Rally Retail Risk Board — FOMO board after N163.1tn market-cap record (S5, S9, S12)
 
-- **Problem:** Nairametrics (26 Oct 2026): NGX market capitalisation hit a record **N163.16tn** as ASI reached 251,290.54, led by Dangote Cement’s 10% limit-up and banking/premium gains, while volume fell ~46% — retail buyers risk chasing headlines without a dated risk board.
+- **Problem / trend:** Nairametrics (26 Oct 2026): NGX market capitalisation hit a record **N163.16tn** as ASI reached 251,290.54, led by Dangote Cement’s 10% limit-up and banking/premium gains, while volume fell ~46% — retail buyers risk chasing headlines without a dated risk board.
 - **Solution:**
-  - **Established solution:** US retail risk dashboards (broker volatility/FOMO boards) and FINRA investor-alert checklists after melt-ups.
-  - **Variant:** Nigeria NGX rally risk board with ASI/market-cap snapshot, top-gainer concentration note, and “not advice” hold checklist — Naira, CSCS-aware.
+  - **Established solution:** Morningstar investor risk dashboards (developed-market retail market software).
+  - **Variant:** NGX Record Rally Retail Risk Board, the Nigeria version of that software. It logs the ASI and market-cap snapshot, top-gainer concentration, and a plain hold note that says this is not advice. It is Naira and CSCS aware. It is not a broker and it is not NGX or SEC official.
 - **Target:** First-time retail equity buyers, diaspora relatives funding NGX purchases, SME owners watching Premium/Banking indices.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not investment advice; not SEC/NGX official.
@@ -204,8 +204,8 @@
 
 - **Problem / trend:** Nairametrics (26 Oct 2026): Flutterwave appoints Guo Songmei as Regional VP Sales & Partnerships, Greater China and Asia, to scale Asia–Africa enterprise payment corridors (multi-currency accounts, local payouts, compliant settlement) after ~US$1bn East Asia→Africa volume in H1 2025 — Nigeria importers/exporters still lack a Flutterwave-named corridor prep sheet.
 - **Solution:**
-  - **Established solution:** Stripe Atlas / Airwallex / Wise Platform cross-border merchant onboarding kits.
-  - **Variant:** Nigeria Flutterwave Asia-corridor merchant prep with document checklist, FX-settlement delay fields, and partner-rail note — Naira/Paystack-aware, not ChinaCrossBorder generic pay prep.
+  - **Established solution:** Airwallex cross-border merchant software (developed-market corridor payments software).
+  - **Variant:** Flutterwave AsiaCorridor Merchant Prep, the Nigeria version of that software. It logs merchant documents, FX settlement delay fields, and the Asia partner rail before a Flutterwave enterprise call. It is Paystack and Naira aware. It is not Flutterwave official KYC and it is not the generic China pay prep desk.
 - **Target:** Nigeria merchants buying from Shenzhen/HK suppliers or selling into Asia via Flutterwave enterprise rails.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not Flutterwave KYC official; NDPA for merchant docs.
@@ -221,10 +221,10 @@
 
 ### 9. ESG Shareholder Admin Evidence Lite — registrar evidence checklist for listed issuers (S5, S9, S12)
 
-- **Problem:** Nairametrics (26 Oct 2026, Coronation Registrars note): ESG for listed Nigerian issuers is shifting from policy PDFs to evidenced shareholder administration (register integrity, dividend mandates, AGM/proxy audit trails, NDPA-aware digital channels) — mid issuers still treat registrar ops as “back office.”
+- **Problem / trend:** Nairametrics (26 Oct 2026, Coronation Registrars note): ESG for listed Nigerian issuers is shifting from policy PDFs to evidenced shareholder administration (register integrity, dividend mandates, AGM/proxy audit trails, NDPA-aware digital channels) — mid issuers still treat registrar ops as “back office.”
 - **Solution:**
-  - **Established solution:** Broadridge / Computershare issuer governance evidence suites.
-  - **Variant:** Nigeria ESG shareholder-admin lite checklist with AGM/proxy evidence fields, mandate reconciliation note, and NDPA privacy row — not a full registrar platform.
+  - **Established solution:** Broadridge issuer governance software (developed-market shareholder-administration software).
+  - **Variant:** ESG Shareholder Admin Evidence Lite, the Nigeria version of that software. It logs AGM and proxy evidence, dividend-mandate reconciliation, and an NDPA privacy row for a listed issuer. It is not a registrar and it is not an SEC licence.
 - **Target:** Company secretaries, IR teams, and boutique counsel for Growth/Main Board issuers.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only — not SEC registrar licence; NDPA for shareholder PII.
@@ -242,8 +242,8 @@
 
 - **Problem / trend:** BusinessDay (27 Oct 2026): flight delays persist despite **$274m** investment in aircraft — passengers and SMEs still lack a structured delay-evidence pack for refunds / rebooking disputes.
 - **Solution:**
-  - **Established solution:** EU261 claim assistants (AirHelp / ClaimCompass) and airline disruption evidence apps.
-  - **Variant:** Nigeria flight-delay evidence desk with photo/boarding log, aircraft-cap news note, and airline/NCAA complaint export — Naira refund fields, not EU261 auto-file.
+  - **Established solution:** AirHelp flight-disruption software (developed-market airline delay software).
+  - **Variant:** FlightDelay AircraftCap Evidence Desk, the Nigeria version of that software. It logs boarding photos, delay minutes, and an airline or NCAA complaint note with Naira refund fields. It does not auto-file an EU261 claim.
 - **Target:** Frequent domestic flyers, SME travellers, travel agents.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NCAA official; not legal practice.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Product Hunt lists **desigma** as a free Figma alternative built on Rust — Nigerian design SMEs still struggle with Figma seat cost, unstable bandwidth, and client handoff friction.
 - **Solution:**
-  - **Established solution:** Figma / Penpot collaborative design suites.
-  - **Variant:** Nigeria desigma-style handoff pack with offline export checklist, Naira pricing sheet for agency retainers, and WhatsApp client-review flow — not a full design-tool rebuild.
+  - **Established solution:** Figma design handoff software (developed-market collaborative design software).
+  - **Variant:** desigma NG Design Handoff, the Nigeria version of that software. It keeps an offline-friendly design file, a Naira agency retainer price, and a WhatsApp client review step. It is a workflow on top of a Figma alternative, not a full design-tool rebuild.
 - **Target:** Lagos/Abuja boutique agencies, freelancers serving SMEs.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for client assets; respect desigma/Figma licences — wrapper/workflow only.
@@ -280,8 +280,8 @@
 
 - **Problem / trend:** Nairametrics (26 Oct 2026): MBO Capital notes Nollywood shoots up to **~90%** of films without proper script development — producers burn cash on sets without a gate checklist.
 - **Solution:**
-  - **Established solution:** Hollywood script-coverage / Final Draft production-gate workflows.
-  - **Variant:** Nigeria Nollywood script gate pack with coverage rubric, budget-risk flags, and investor one-pager — Naira budgets, not US studio software.
+  - **Established solution:** Final Draft production-gate software (developed-market script development software).
+  - **Variant:** Nollywood Script Gate Pack, the Nigeria version of that software. It logs a coverage rubric and budget-risk flags before a shoot, with Naira budgets. It is not a US studio tool and it is not an NFC licence service.
 - **Target:** Indie producers, streamer suppliers, film financiers.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NFC/film-board licence service.
@@ -329,14 +329,17 @@
 
 **Data freshness:** Fetch `20261027_060053` UTC. Techpoint + Financial Nigeria **0** headlines. Punch lifestyle/politics-heavy — lean BusinessDay + Nairametrics + Vanguard for commercial Mode A. Partial run: S6 directory blocked (429); S15 skipped; S1 collector subprocess not required (agent-native web research used).
 
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-27. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. Schema check runs before Docx. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | Step | Owner | Target date |
 |------|-------|-------------|
-| Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` | Automation B / Hub Pass 2 | **2026-10-27** (~11:00 WAT) |
-| Optional `idea_card_schema.py` before Docx | Pass 2 agent | Same day |
+| Pass 2 pack applied on this same file (same ranks, section 14 subheads, Established solution and Variant). One-shot in-repo Docx, desktop Word not opened. | Automation B | 2026-10-27 |
 | Spot-check FIJ + BusinessDay URLs still live | Owner / agent | 2026-10-28 |
 | Interview 3 bursars / parent groups on NELFUND levy confusion | Founder | 2026-11-03 |
 | Interview 5 nightlife buyers on spirits seal checklist WTP | Founder | 2026-11-03 |
@@ -344,5 +347,4 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
