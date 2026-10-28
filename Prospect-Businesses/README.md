@@ -53,3 +53,4 @@ Each prospect can have a sibling `{slug}-funding.md` copied from [`FUNDING_TEMPL
 | `cert-privacy-readiness.md` | Certification / privacy readiness |
 | `sme-hybrid-loss-prevention-ng.md` | SME workshop loss prevention |
 | `public-iron-asset-protect.md` | B2G iron-theft detect/respond (GOV-IRON-THEFT-1) |
+| `wedding.md` | Wedding prospect, not started |
