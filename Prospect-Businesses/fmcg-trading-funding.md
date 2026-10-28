@@ -41,7 +41,7 @@ Not used: the Devon Kings brand site still says N50 for a 100ml pack, and that p
 
 One of each cited pack, at the shelf prices above: N215 + N305 + N1,769 + N200 = N2,489. That sum uses only the four prices read on 28 October 2026. It is one pack of each line at shelf price. It is not a wholesaler quote for a 14-day lot.
 
-Wholesale price for a mixed first lot: `(blank)`. Those shop pages did not show that invoice.
+Wholesale price for a mixed first lot: `(blank)`. On 28 October 2026 no public page showed one invoice for Viva 80g, Maggi, a 45ml oil sachet, and Indomie 70g together. Wigmore Wholesale did not load. Fresh to Domot opened and showed no price. Bibiara listed Viva Plus 80g at N9,000 with no piece count, so that figure was not used. Deeski listed Viva 800g by 7 at N16,000 and Maggi 100 cubes by 16 pouches at N31,000, which are different pack sizes. Nimtaa listed Power Oil, 96 by 45ml, at N17,500, which is a different oil brand and not a mixed lot. https://deeski.com/wholesale?limit=75&order=ASC&sort=p.price https://take.app/bmstraderlink/p/cmd8jyak1000ila04wk7nznet https://nimtaa.com/product/power-oil-carton-96-x-45ml-sachets/
 
 ## Other options
 
