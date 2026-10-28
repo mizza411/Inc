@@ -41,6 +41,8 @@ Not used: the Devon Kings brand site still says N50 for a 100ml pack, and that p
 
 One of each cited pack, at the shelf prices above: N215 + N305 + N1,769 + N200 = N2,489. That sum uses only the four prices read on 28 October 2026. It is one pack of each line at shelf price. It is not a wholesaler quote for a 14-day lot.
 
+One wholesale price that did show: Viva Plus detergent, 330g, one pack, N965. Abuja Wholesale Prices, read 28 October 2026. https://abujawholesaleprices.com/product/63-viva-plus-detergent-330g-x-1-standard/ This is a larger pack than the 80g shelf price above. It is not the mixed lot.
+
 Wholesale price for a mixed first lot: `(blank)`. On 28 October 2026 no public page showed one invoice for Viva 80g, Maggi, a 45ml oil sachet, and Indomie 70g together. Wigmore Wholesale did not load. Fresh to Domot opened and showed no price. Bibiara listed Viva Plus 80g at N9,000 with no piece count, so that figure was not used. Deeski listed Viva 800g by 7 at N16,000 and Maggi 100 cubes by 16 pouches at N31,000, which are different pack sizes. Nimtaa listed Power Oil, 96 by 45ml, at N17,500, which is a different oil brand and not a mixed lot. https://deeski.com/wholesale?limit=75&order=ASC&sort=p.price https://take.app/bmstraderlink/p/cmd8jyak1000ila04wk7nznet https://nimtaa.com/product/power-oil-carton-96-x-45ml-sachets/
 
 ## Other options
@@ -49,6 +51,35 @@ Wholesale price for a mixed first lot: `(blank)`. On 28 October 2026 no public p
 - Debt financing: `(blank)`. No public loan quote for this test was found.
 - Grants: `(blank)`. No public grant amount for this test was found.
 - Customer revenue: `(blank)`. The shelf prices above are what those shops ask. A selling price for this test is not set here.
+
+## Links to open again
+
+Checked 28 October 2026. Open these before asking for a new price. A link here is not a mixed-lot invoice.
+
+Pages that showed a price:
+
+- Viva Plus 80g, N215: https://www.jumia.com.ng/mlp-laundry-powder/
+- Viva Plus 80g, N200: https://store.overite.co/product/viva-plus-detergent-powder---80g
+- Viva Plus 330g, N965: https://abujawholesaleprices.com/product/63-viva-plus-detergent-330g-x-1-standard/
+- Indomie Chicken 70g, N305, and 40 packs at N12,200: https://www.supermart.ng/collections/indomie
+- Maggi cubes, 100 by 4g, N1,769: https://www.jumia.com.ng/mixed-spices-seasonings/nestle-maggi/
+- Devon Kings oil, 45ml, N200: https://www.familyhousesupermarket.com/product/devon-kings-pure-vegetable-oil-sachet-45ml-x1
+- Deeski cartons for other pack sizes: https://deeski.com/wholesale?limit=75&order=ASC&sort=p.price
+- Power Oil, 96 by 45ml, N17,500: https://nimtaa.com/product/power-oil-carton-96-x-45ml-sachets/
+
+Dealer sites that did not show the four-pack lot:
+
+- 360 Delights: https://360delights.com
+- Wigmore Trading: https://wigmoretrading.com
+- Wigmore Wholesale shop: https://wigmorewholesale.com
+- FirstMarket FMCG directory (names and contacts, no pack prices): https://smeconnect.firstbanknigeria.com/sme/directories?category=FMCG
+- Abuja Wholesale Prices home: https://abujawholesaleprices.com
+- Trade With Africa: https://tradewithafrica.co
+- Bibiara Viva Plus 80g listing, N9,000, no piece count: https://take.app/bmstraderlink/p/cmd8jyak1000ila04wk7nznet
+- Costprice.ng refused to open (HTTP 500): https://costprice.ng
+- Soklo.org refused to open (HTTP 500): https://soklo.org
+
+TradeDepot, Alerzo, and OmniBiz need a shop account before prices show. Do not create that account from this file.
 
 ## Next decision
 
