@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-10-28 ~06:00-07:00 UTC. **Pass 1 Discover** only.  
+**Generated:** 2026-10-28 ~06:00-07:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-10-28 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261028.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261028_060120.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-10-27 (esp. NELFUND MultiYear Funding Floor Desk, Counterfeit Spirits Spot Desk, PalmPay DefunctMerchant Consent Clock, LocalSourcing FX Cut Evidence Pack, MultiBank UnauthDebit BlameShift Clock, StapleAdulteration Spot Desk, RefineryIPO FinalClose27 Checklist, OPay×Moniepoint FailedPOS 5Day Refund Clock, LocalMeter VendorFinance Ready Pack, PalmPay FuelDispense 2Year Refund Clock, DataLocal Jan2027 Capacity Crisis Pack, FMDQ N551tn FX/OMO Concentration Desk, GTBank UnauthDebit ForcedLoan Clock, PublicDeposit CRR75 Liquidity Stress Board, FirstBank×Paga PhoneUpdate Debit Clock, OPay RecipientRefuse ErroneousCredit Clock, PalmPay RecoveredNotCredited Clock, OPay×PalmPay ElevenMonth Flag Clock, ChinaCrossBorder Pay Prep Desk, CapMarket MasterPlan Retail Onboard Desk, TelcoQoS Oct28 Hearing Evidence Pack); older `business_ideas_20261011.md` / `business_ideas_20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -69,7 +69,7 @@
 
 - **Problem / trend:** Punch and Guardian (28 Oct 2026): Lagos Governor Babajide Sanwo-Olu flagged enforcement of compulsory health insurance under EO/BOS/01/2024, with a grace window through **31 December 2026** and enforcement from **1 January 2027**. The state also unveiled Lagos Private Health Plans / Private Health Plus with about **21 HMOs**, while LASHMA equity funding rose toward covering more vulnerable residents. Employers, workers, and informal residents still lack a plain enrol / HMO-choice / MDA-compliance evidence board before the deadline.
 - **Solution:**
-  - **Established solution:** US state exchange / Covered California-style enrolment checklist software (developed-market mandatory-cover enrolment software).
+  - **Established solution:** Covered California (developed-market mandatory-cover enrolment software).
   - **Variant:** Lagos Health Insurance Dec31 Enrol Desk, the Nigeria version of that software. It logs Ilera Eko vs Private Health Plus choice, employer/worker/resident status, HMO shortlist, and days-to-Dec31. It takes Naira Paystack tips and works WhatsApp-first. It is not LASHMA or an HMO sales portal.
 - **Target:** Lagos SME employers, HR leads, resident associations, and accredited agents helping informal households enrol before Dec 31.
 - **MVP cost:** $6k–$14k.
@@ -88,7 +88,7 @@
 
 - **Problem / trend:** BusinessDay and Guardian (28 Oct 2026): after Ministry of Labour conciliation with NLC on 27 Oct, FG agreed a **N70,000 monthly transport intervention for six months from November 2026**, peculiar-allowance arrears in three instalments from November, and **19 months of health-worker allowance arrears** within three months from December. Minimum-wage talks start, but tax relief stays referred to NEC. Workers and unions still lack a plain payment-floor board separating promises, payroll hits, and missed tranches.
 - **Solution:**
-  - **Established solution:** US federal employee payroll / leave-balance transparency dashboards (developed-market public-pay status software).
+  - **Established solution:** DFAS myPay (developed-market federal employee pay-status software).
   - **Variant:** FG N70k Transport Payment Floor Desk, the Nigeria version of that software. It logs expected vs received N70k months, peculiar-allowance instalments, and health-worker arrears windows in Naira. It is not IPPIS, MoL, or a union dues portal.
 - **Target:** Federal worker associations, health-worker units, and state labour desks tracking Nov 2026–Apr 2027 delivery.
 - **MVP cost:** $5k–$12k.
@@ -108,7 +108,7 @@
 - **Formula:** **Successful business:** Zenith Bank (mass Nigeria retail deposit / debit-card rail). **Recurring complaint:** after unsolicited OTPs arrived, N249,500 left a Lagos technician’s account without his authorisation. Branch staff blamed a compromised card he still held, calls failed, and more than a year later he still had no refund (FIJ, 17 Sep 2026). **Variation:** Unsolicited-OTP→debit evidence clock with branch-visit and CBN-note pack — not MultiBank UnauthDebit BlameShift Clock and not GTBank UnauthDebit ForcedLoan Clock.
 - **Complaint citations:** FIJ (17 Sep 2026), https://fij.ng/article/unsolicited-otps-came-then-n249500-left-lagos-technicians-account-zenith-bank-offered-no-solution-or-refund/ (unsolicited OTPs, N249,500 debit, no refund after >1 year). Success signal: Zenith Bank mass retail footprint in FIJ coverage and Nigeria banking market.
 - **Solution:**
-  - **Established solution:** US bank fraud-case timeline / Reg E dispute software (developed-market unauthorised-debit case software).
+  - **Established solution:** Rocket Money (developed-market unauthorised-charge timeline software).
   - **Variant:** Zenith UnsolicitedOTP Debit Clock, the Nigeria version of that software. It logs OTP timestamps, debit alert, branch visits, and days since first report. It can export a CBN consumer-protection note. It is not Zenith official and it is not a US ACH tool.
 - **Target:** Zenith retail customers hit by OTP-storm debits who need an evidence pack before CBN or counsel.
 - **MVP cost:** $8k–$18k.
@@ -128,8 +128,8 @@
 - **Formula:** **Successful business:** FCMB + Stanbic IBTC (mass Nigeria commercial bank rails). **Recurring complaint:** an Oyo businesswoman mistakenly sent N100,050 from FCMB to a Stanbic IBTC account instead of Sterling Bank, obtained the court order both sides requested, and still waited about nine months for recall (FIJ, 16 Sep 2026; refund later after FIJ follow-up). **Variation:** Dual-bank wrong-transfer court-order clock with consent-vs-order status — not OPay RecipientRefuse ErroneousCredit Clock and not GTBank FailedXfer 17Month Clock.
 - **Complaint citations:** FIJ (16 Sep 2026), https://fij.ng/article/fcmb-stanbic-ibtc-have-court-order-yet-businesswomans-n100050-wrong-transfer-issue-remains-unresolved-after-9-months/ (wrong Stanbic IBTC destination, court order submitted, ~9 months unresolved). Follow-up: https://fij.ng/article/6-days-after-fijs-story-fcmb-stanbic-ibtc-return-oyo-womans-n100050-end-9-month-delay/ (24 Sep 2026). Success signal: FCMB and Stanbic IBTC mass retail footprints in FIJ coverage.
 - **Solution:**
-  - **Established solution:** US NACHA / Zelle mistaken-payment dispute timeline software (developed-market wrong-transfer recall software).
-  - **Variant:** FCMB×Stanbic WrongTransfer CourtOrder Clock, the Nigeria version of that software. It logs session IDs, court-order PDF handoff, sending vs receiving bank replies, and days since order. It can export a CBN note. It is not either bank’s official recall tool.
+  - **Established solution:** Zelle (Early Warning Services) mistaken-payment dispute software (developed-market wrong-transfer recall software).
+  - **Variant:** FCMB×Stanbic WrongTransfer CourtOrder Clock, the Nigeria version of that software. It logs session IDs, court-order handoff date, sending vs receiving bank replies, and days since order. It stores a CBN consumer-protection timeline. It is not either bank’s official recall tool.
 - **Target:** Senders who mistyped bank-name on same account number patterns across FCMB / Stanbic / Sterling-style rails.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not bank official.
@@ -147,7 +147,7 @@
 
 - **Problem / trend:** Vanguard (28 Oct 2026): NCC-linked path shows 5G share of connections rose only to about **4.92% by August 2026** while 4G leads at ~54.77%. Device prices keep rising (Omdia notes Nigeria smartphone market contraction, Africa sub-$100 shipments down sharply), and city coverage gaps leave many 5G-capable phones on older networks. Buyers and SME IT leads lack a plain device-cost vs coverage-gap evidence desk before upgrade spend.
 - **Solution:**
-  - **Established solution:** Ookla / OpenSignal coverage-vs-device decision software (developed-market network readiness software).
+  - **Established solution:** OpenSignal (developed-market coverage-map software).
   - **Variant:** 5G DeviceCoverage Gap Evidence Desk, the Nigeria version of that software. It logs phone model, claimed 5G support, city gap notes, and Naira upgrade cost. It is not an NCC QoS portal and it does not sell phones.
 - **Target:** Lagos/Abuja SMEs and households deciding whether a 5G handset upgrade is worth it in their LGA.
 - **MVP cost:** $6k–$14k.
@@ -166,7 +166,7 @@
 
 - **Problem / trend:** Nairametrics (28 Oct 2026): as Google Pay launches in Nigeria, GTCO put GTBank debit cards in Google Wallet and turned Google Pay on by default for HabariPay **Squad** merchants, so the group sits on both sides of checkout. SME merchants still need a plain enablement / dispute / diaspora-accept checklist so they do not leave the default on without ops ready.
 - **Solution:**
-  - **Established solution:** Stripe Radar + Apple/Google Pay merchant readiness checklists (developed-market wallet-accept ops software).
+  - **Established solution:** Stripe payment-method activation (developed-market wallet-accept software, including Google Pay).
   - **Variant:** GTCO GooglePay DualRail Merchant Pack, the Nigeria version of that software. It logs Squad Google Pay on/off, international-accept flag, refund path, and Naira settlement notes. It is not GTBank or Squad official onboarding.
 - **Target:** Squad SMEs and GTBank-card merchants going live with Google Pay in the first weeks of launch.
 - **MVP cost:** $8k–$18k.
@@ -185,7 +185,7 @@
 
 - **Problem / trend:** BusinessDay (28 Oct 2026): NSIA MD/CEO Aminu Umar-Sadiq said the Authority has mobilised about **$1bn in third-party capital** over a decade on roughly $400–500m of its own capital, and is shifting emphasis toward jobs and measurable impact (MedServe, renewables, INFRAGROW, Kasi Cloud). Project sponsors still lack a plain co-invest evidence pack that separates catalytic capital claims from job/outcome metrics lenders and partners ask for.
 - **Solution:**
-  - **Established solution:** IFC / development-finance co-invest diligence software (developed-market blended-finance evidence software).
+  - **Established solution:** eFront (BlackRock) private-capital portfolio software (developed-market co-invest monitoring software).
   - **Variant:** NSIA ThirdParty CoInvest Evidence Pack, the Nigeria version of that software. It logs own capital vs third-party, sector thesis, and job-metric placeholders in Naira/USD. It is not an NSIA application portal.
 - **Target:** Infrastructure and healthcare project sponsors seeking NSIA-adjacent co-invest narratives for IFC/World Bank-style partners.
 - **MVP cost:** $8k–$18k.
@@ -204,7 +204,7 @@
 
 - **Problem / trend:** BusinessDay opinion (28 Oct 2026): Nigeria’s financial-inclusion push must guard against money-mule recruitment as more citizens open wallets and accounts. Agent networks and HR teams still lack a plain mule-risk checklist for new hires and new wallet sign-ups.
 - **Solution:**
-  - **Established solution:** UK/US mule-account detection playbooks + HR screening software (developed-market mule-risk software).
+  - **Established solution:** Featurespace ARIC (developed-market mule-detection software).
   - **Variant:** Money Mule Inclusion Guard Desk, the Nigeria version of that software. It logs agent/hire red flags, wallet velocity notes, and escalate-to-compliance steps. It takes Naira tips. It is not EFCC or CBN enforcement.
 - **Target:** PoS agent network managers, MFB compliance juniors, and SME HR onboarding staff.
 - **MVP cost:** $6k–$14k.
@@ -223,7 +223,7 @@
 
 - **Problem / trend:** Nairametrics (28 Oct 2026): CBN offers about **N800 billion** in Treasury Bills while banks are reported holding around **N6 trillion**. Treasury desks and SME CFOs watching rates still lack a plain stress board tying auction size, bank idle cash, and near-term funding cost.
 - **Solution:**
-  - **Established solution:** Bloomberg / treasury auction calendar software (developed-market rates desk software).
+  - **Established solution:** Bloomberg Terminal (developed-market treasury auction software).
   - **Variant:** CBN N800bn TBill Liquidity Stress Board, the Nigeria version of that software. It logs auction size, reported bank cash overhang, and simple Naira funding-stress notes. It is not investment advice and not a CBN portal.
 - **Target:** Corporate treasurers and informed retail fixed-income watchers (education, not brokerage).
 - **MVP cost:** $5k–$12k.
@@ -242,7 +242,7 @@
 
 - **Problem / trend:** Nairametrics (27 Oct 2026): EFCC recovered an additional **$40 million** from Nestoil, taking a repayment arrangement total to **$100 million** with lenders still noting substantial unpaid obligations after earlier $60m and related court path notes. Creditors and counterparties lack a plain recovery-vs-residual stake board.
 - **Solution:**
-  - **Established solution:** US creditor committee recovery-tracking software (developed-market distressed recovery board software).
+  - **Established solution:** Octus (formerly Reorg) distressed-credit tracking software (developed-market recovery board software).
   - **Variant:** EFCC Nestoil $100m Recovery Stake Board, the Nigeria version of that software. It logs announced recoveries, dates, and residual-claim placeholders. It is not EFCC, court, or lender official.
 - **Target:** Professional observers, counterparties, and diligence juniors tracking the public recovery narrative.
 - **MVP cost:** $8k–$18k.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Vanguard (28 Oct 2026): FG kicks off a **$100m Southeast gas pipeline** project. Local contractors and industrial SMEs along the corridor still lack a plain readiness pack for localisation, safety, and offtake evidence when EPC and community engagement windows open.
 - **Solution:**
-  - **Established solution:** US pipeline contractor prequalification / offtake readiness software (developed-market energy-project SME pack software).
-  - **Variant:** Southeast Gas Pipeline SME Ready Pack, the Nigeria version of that software. It logs capability statements, HSE notes, and community-engagement checklists in Naira. It is not NNPC or the concessionaire portal.
+  - **Established solution:** ISNetworld (developed-market contractor prequalification software for energy projects).
+  - **Variant:** Southeast Gas Pipeline SME Ready Pack, the Nigeria version of that software. It logs capability statements, HSE notes, and community-engagement steps in Naira. It is not NNPC or the concessionaire portal.
 - **Target:** Southeast industrial SMEs and contractors watching the $100m corridor.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not DPR/NMDPRA licensing tool; not community brokerage.
@@ -280,8 +280,8 @@
 
 - **Problem / trend:** Product Hunt (late Oct 2026) lists **Off Grid AI** (“Private AI on your phone and computer”). Combined with Vanguard’s 5G/device-cost story and OWID internet-adoption framing, Nigeria knowledge workers in low-connectivity or privacy-sensitive settings still lack a plain offline/edge AI kit brief that is not a US SaaS login.
 - **Solution:**
-  - **Established solution:** Off Grid AI / private on-device LLM apps (developed-market edge AI software).
-  - **Variant:** Off Grid AI NG Edge Kit, the Nigeria version of that product category. It prioritises offline model notes, Naira pricing guidance, and NDPA-minded local file handling. It is not a banned-content tool.
+  - **Established solution:** Off Grid AI (developed-market private on-device AI software).
+  - **Variant:** Off Grid AI NG Edge Kit, the Nigeria version of that software. It logs offline model notes, Naira price guidance, and NDPA-minded local file handling. It is not a foreign-cloud login and it is not a banned-content tool.
 - **Target:** Lawyers, clinics, and field teams that cannot send documents to foreign clouds.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for on-device personal data; not a medical device.
@@ -329,19 +329,22 @@
 
 **Data freshness:** Fetch JSON stamped **2026-10-28T06:01:25**. Partial feeds: Techpoint **0**, Financial Nigeria **0**, StartupList **429**. Soft-fail continued.
 
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-10-28. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | Date | Step |
 |------|------|
-| 2026-10-28 | **Pass 2 Pack** — paste `prompts/agent_formulation_pack.txt` on this same file. Do not invent a new ranked set. |
+| 2026-10-28 | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, Established solution and Variant). |
 | 2026-10-28–29 | Spot-check LASHMA Dec31 / Private Health Plus enrol UX with 3 Lagos SME employers (no live personal IDs in repo). |
 | 2026-10-29 | Confirm Zenith OTP-storm and FCMB×Stanbic court-order clock fields against FIJ PDFs/screenshots (owner-held only). |
-| 2026-10-30 | Optional: schema check `python agent-business-idea-runs/idea_card_schema.py agent-business-idea-runs/outputs/business_ideas_20261028.md` after Pass 2. |
+| 2026-10-28 | Schema check `python agent-business-idea-runs/idea_card_schema.py agent-business-idea-runs/outputs/business_ideas_20261028.md --strict-full` before the one-shot Docx. |
 | 2026-11-03 | Revisit FG N70k first November payment reports before any paid MVP spend. |
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
