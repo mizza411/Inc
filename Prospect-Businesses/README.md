@@ -41,7 +41,7 @@ Checklist when you approve graduating prospect **X**:
 
 Use [`TEMPLATE.md`](TEMPLATE.md) for each new prospect.
 
-Each prospect can have a sibling `{slug}-funding.md` copied from [`FUNDING_TEMPLATE.md`](FUNDING_TEMPLATE.md), which is a funding note and not a second prospect, and moving a prospect to Started businesses still needs an explicit yes.
+Each prospect idea card must have a sibling `{slug}-funding.md` copied from [`FUNDING_TEMPLATE.md`](FUNDING_TEMPLATE.md). That file is a funding note, not a second prospect. Amounts stay `(blank)`. Moving a prospect to Started businesses still needs an explicit yes.
 
 ## Active shortlist (pointers)
 

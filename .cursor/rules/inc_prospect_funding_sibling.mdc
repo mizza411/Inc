@@ -1,0 +1,33 @@
+---
+description: Every Prospect-Businesses idea card has a blank funding sibling file
+alwaysApply: true
+---
+
+# Prospect funding sibling
+
+## When this applies
+
+Use this when adding or editing an idea card in `Prospect-Businesses/`. Skip `TEMPLATE.md`, `FUNDING_TEMPLATE.md`, `README.md`, `MANUAL_TEST.md`, and files that are already funding notes.
+
+## Do
+
+- Give every idea card a sibling `{slug}-funding.md` in the same folder.
+- Copy `Prospect-Businesses/FUNDING_TEMPLATE.md`.
+- Keep amounts, percents, and investor names as `(blank)`.
+- List own cash, debt financing, grants, customer revenue, and equity financing.
+- In one plain line, equity financing means people put in cash and receive an ownership share.
+- Point the funding note at the idea card. Keep funding details out of the idea card.
+- If an idea card has no sibling, add the blank file when that card is next touched.
+
+## Do not
+
+- Invent amounts, percents, or investor names.
+- Treat the funding note as a second prospect on the shortlist.
+- Graduate the prospect into `Started-Businesses/` from this rule.
+- Create a funding file for the template, the README, or the manual test.
+
+## Example
+
+Bad: add `fmcg-trading.md` and leave it with no funding note.
+
+Good: add `fmcg-trading.md` and `fmcg-trading-funding.md`, with amount `(blank)` and percent `(blank)`.
