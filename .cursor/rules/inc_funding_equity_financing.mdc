@@ -1,0 +1,33 @@
+---
+description: When suggesting funding options, always include equity financing (cash for an ownership share)
+alwaysApply: true
+---
+
+# Equity financing in funding suggestions
+
+## When this applies
+
+Use this when suggesting how to fund a business in this repo. Skip it when nobody is asking for funding options.
+
+## Do
+
+- Always include equity financing as one option.
+- Say the name equity financing.
+- In one plain line, equity financing means people put in cash and receive an ownership share.
+- Also list other fitting options, such as own cash, debt financing, grants, or customer revenue.
+- Leave percents and investor names as `(blank)` until the owner chooses them.
+- A money amount in a prospect funding note may be a cited public figure under the prospect funding-sibling rule. Write the source name, the date, and the link beside it. If no public source is found, leave the amount `(blank)`.
+- The owner's own money still belongs in a local-only file, not in the tracked note.
+
+## Do not
+
+- Invent amounts, percents, or investor names.
+- Create funding files from this rule alone. A blank `{slug}-funding.md` beside a Prospect-Businesses idea card comes from the prospect funding-sibling rule.
+- Change Inc Hub, trays, or launchers.
+- Treat equity financing as an order to sell the company. It is one option in the list.
+
+## Example
+
+Bad: fund it with a loan and a grant.
+
+Good: own cash, debt financing (borrow and pay it back), a grant, and equity financing. Equity financing means people put in cash and receive an ownership share. Amount from a cited public source, or `(blank)` if none was found. Percent `(blank)`.

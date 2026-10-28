@@ -1,5 +1,5 @@
 ---
-description: Every Prospect-Businesses idea card has a blank funding sibling file
+description: Every Prospect-Businesses idea card has a funding sibling. A cited public figure may replace a blank amount.
 alwaysApply: true
 ---
 
@@ -7,27 +7,31 @@ alwaysApply: true
 
 ## When this applies
 
-Use this when adding or editing an idea card in `Prospect-Businesses/`. Skip `TEMPLATE.md`, `FUNDING_TEMPLATE.md`, `README.md`, `MANUAL_TEST.md`, and files that are already funding notes.
+Use this when adding or editing an idea card in `Prospect-Businesses/`, and when writing that card's funding note. Skip `TEMPLATE.md`, `FUNDING_TEMPLATE.md`, `README.md`, and `MANUAL_TEST.md`.
 
 ## Do
 
 - Give every idea card a sibling `{slug}-funding.md` in the same folder.
 - Copy `Prospect-Businesses/FUNDING_TEMPLATE.md`.
-- Keep amounts, percents, and investor names as `(blank)`.
 - List own cash, debt financing, grants, customer revenue, and equity financing.
 - In one plain line, equity financing means people put in cash and receive an ownership share.
+- Keep percents and investor names as `(blank)` until the owner chooses them.
+- A money amount may replace `(blank)` only when it is copied from a public source. Write the source name, the date, and the link beside the figure.
+- If no public source is found, leave the amount `(blank)` and name the failed search.
 - Point the funding note at the idea card. Keep funding details out of the idea card.
-- If an idea card has no sibling, add the blank file when that card is next touched.
+- If an idea card has no sibling, add the funding file when that card is next touched.
 
 ## Do not
 
 - Invent amounts, percents, or investor names.
+- Put the owner's own money, account, address, or phone number in the tracked funding file.
+- Treat a researched lot cost as an order to sell the company.
 - Treat the funding note as a second prospect on the shortlist.
 - Graduate the prospect into `Started-Businesses/` from this rule.
 - Create a funding file for the template, the README, or the manual test.
 
 ## Example
 
-Bad: add `fmcg-trading.md` and leave it with no funding note.
+Bad: write a naira amount with no source.
 
-Good: add `fmcg-trading.md` and `fmcg-trading-funding.md`, with amount `(blank)` and percent `(blank)`.
+Good: write the published pack price with the page name, the date, and the link. Percent stays `(blank)`. Investor name stays `(blank)`.
