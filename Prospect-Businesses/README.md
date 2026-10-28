@@ -54,3 +54,4 @@ Each prospect idea card must have a sibling `{slug}-funding.md` copied from [`FU
 | `sme-hybrid-loss-prevention-ng.md` | SME workshop loss prevention |
 | `public-iron-asset-protect.md` | B2G iron-theft detect/respond (GOV-IRON-THEFT-1) |
 | `wedding.md` | Wedding prospect, not started |
+| `fmcg-trading.md` | FMCG trading test, detergent first, not started |
