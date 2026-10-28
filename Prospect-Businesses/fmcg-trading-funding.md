@@ -49,7 +49,9 @@ Abuja Wholesale Prices, read 28 October 2026: Indomie Chicken carton 70g by 40, 
 
 Abuja Wholesale Prices, read 28 October 2026. The site search for Maggi, cube, and seasoning returned no Maggi product. The Cooking Oil list has 10 packs, and none is a 45ml sachet. The smallest packs on that list are bottles. Power Oil 75cl, one bottle, N3,565. https://abujawholesaleprices.com/product/170-power-oil-75cl-x-1-power-oil-standard/ Devon Kings oil, 1L, one bottle, N4,180. https://abujawholesaleprices.com/product/171-devon-kings-oil-1l-x-1-devon-kings-standard/ Both are larger than the 45ml test sachet. They are not the mixed lot.
 
-Wholesale price for a mixed first lot: `(blank)`. On 28 October 2026 no public page showed one invoice for Viva 80g, Maggi, a 45ml oil sachet, and Indomie 70g together. Wigmore Wholesale did not load. Fresh to Domot opened and showed no price. Bibiara listed Viva Plus 80g at N9,000 with no piece count, so that figure was not used. Deeski listed Viva 800g by 7 at N16,000 and Maggi 100 cubes by 16 pouches at N31,000, which are different pack sizes. Nimtaa listed Power Oil, 96 by 45ml, at N17,500, which is a different oil brand and not a mixed lot. https://deeski.com/wholesale?limit=75&order=ASC&sort=p.price https://take.app/bmstraderlink/p/cmd8jyak1000ila04wk7nznet https://nimtaa.com/product/power-oil-carton-96-x-45ml-sachets/
+Wigmore Wholesale, read 28 October 2026. The shop loaded. Maggi Cube (20 by 4g) by 60, Maggi Mixpy Classic (10 by 6g) by 65, and Maggi Seasoning Powder 100g by 60 each say price on application, so no naira figure was copied. A search for 45ml did not list a cooking-oil sachet. Devon Kings oil, 25 liters, one unit, N95,000, minimum quantity 5. https://wigmorewholesale.com/product/devon-kings-oil-25liters Devon Kings 2 liter and 5 liter say price on application. Kings cooking oil by 100 shows a total estimate of N50,000 and a price per unit of N500, minimum quantity 20. https://wigmorewholesale.com/product/kings-cooking-oil-x-100-16134 That page does not say the pack is a 45ml sachet, so those two figures are not used as the test sachet. None of these is the mixed lot.
+
+Wholesale price for a mixed first lot: `(blank)`. On 28 October 2026 no public page showed one invoice for Viva 80g, Maggi, a 45ml oil sachet, and Indomie 70g together. Wigmore Wholesale loaded later the same day, and that result is in the paragraph above. Fresh to Domot opened and showed no price. Bibiara listed Viva Plus 80g at N9,000 with no piece count, so that figure was not used. Deeski listed Viva 800g by 7 at N16,000 and Maggi 100 cubes by 16 pouches at N31,000, which are different pack sizes. Nimtaa listed Power Oil, 96 by 45ml, at N17,500, which is a different oil brand and not a mixed lot. https://deeski.com/wholesale?limit=75&order=ASC&sort=p.price https://take.app/bmstraderlink/p/cmd8jyak1000ila04wk7nznet https://nimtaa.com/product/power-oil-carton-96-x-45ml-sachets/
 
 ## Other options
 
@@ -69,6 +71,8 @@ Pages that showed a price:
 - Viva Plus 330g, N965: https://abujawholesaleprices.com/product/63-viva-plus-detergent-330g-x-1-standard/
 - Power Oil 75cl, N3,565: https://abujawholesaleprices.com/product/170-power-oil-75cl-x-1-power-oil-standard/
 - Devon Kings oil 1L, N4,180: https://abujawholesaleprices.com/product/171-devon-kings-oil-1l-x-1-devon-kings-standard/
+- Devon Kings oil 25 liters, N95,000: https://wigmorewholesale.com/product/devon-kings-oil-25liters
+- Kings cooking oil by 100, total estimate N50,000, price per unit N500, pack size not stated: https://wigmorewholesale.com/product/kings-cooking-oil-x-100-16134
 - Indomie Chicken 70g, N305, and 40 packs at N12,200: https://www.supermart.ng/collections/indomie
 - Indomie Chicken 70g by 40, N9,250: https://360delights.com/product/indomie-chicken-70g/
 - Indomie Chicken carton 70g by 40, N10,280: https://abujawholesaleprices.com/product/77-indomie-chicken-carton-70g-x-40-indomie-standard/
@@ -81,7 +85,7 @@ Dealer sites that did not show the four-pack lot:
 
 - 360 Delights home (Indomie carton is listed above): https://360delights.com
 - Wigmore Trading: https://wigmoretrading.com
-- Wigmore Wholesale shop: https://wigmorewholesale.com
+- Wigmore Wholesale shop (Maggi is price on application, no 45ml sachet, larger oil prices are above): https://wigmorewholesale.com
 - FirstMarket FMCG directory (names and contacts, no pack prices): https://smeconnect.firstbanknigeria.com/sme/directories?category=FMCG
 - Abuja Wholesale Prices home (no Maggi, no 45ml oil sachet, bottle prices are above): https://abujawholesaleprices.com
 - Trade With Africa: https://tradewithafrica.co
