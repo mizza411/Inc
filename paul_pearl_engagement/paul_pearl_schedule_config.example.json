@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "weekdays_only": true,
+  "slots": ["10:00", "17:00"],
+  "show_window_on_scheduled": false,
+  "minimize_to_tray_after_scheduled": false,
+  "scheduled_cooldown_minutes": 25,
+  "require_internet_for_scheduled": false,
+  "scheduled_open_docx": true,
+  "startup_open_docx": true
+}

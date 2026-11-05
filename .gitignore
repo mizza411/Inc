@@ -50,7 +50,12 @@ problem_identification_tool/data/*.csv
 # problem_identification_tool/data/
 
 # Logs
-*.log 
+*.log
+
+# Paul Pearl engagement — local UI geometry / runtime schedule (not hand-edit path)
+paul_pearl_engagement/paul_pearl_ui_geometry.json
+paul_pearl_engagement/paul_pearl_schedule_config.json
+
 
 # Business bookmark sorter — local/personal data (never commit)
 business_bookmark_sorter/data/**

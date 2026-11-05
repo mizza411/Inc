@@ -102,6 +102,113 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ---
 
+## PAUL-PEARL-UPSTREAM-1 — Paul Pearl note (Inc home; one tray sibling)
+
+**Moved here:** 31/10/2026 from `project_reminder` `.cursor/rules/task.md`.  
+**Brand lock:** Registered main biz = **Paul Pearl**. Tray title = **Paul Pearl/Upstream Drive** (one product). App home = **Inc**.  
+**Sibling (do not merge):** **UDC-1** · **PAUL-PEARL-TRAY-INC-1** (tray host **0–1d ✅**).  
+**Tray host:** Inc `paul_pearl_engagement/`. PR `upstream_drive_engagement/` = retire stub only.  
+**Do not** create a second Drive tray. **Do not** restart Project Manager to prove. No secrets / money amounts in tracked notes.
+
+| Status | 🟢 Phase **0–1b** ✅ 05/11/2026 |
+|--------|---------|
+| Priority | Medium |
+| Est. | done |
+| Layout | Locked below |
+
+### Phase 0 locks (05/11/2026) — names/share only · **no note file yet**
+
+| Lock | Value |
+|------|--------|
+| Note directory | `C:\dev\Inc\Paul-Pearl\` (create when **1a** writes) |
+| Note filename | `paul_pearl_market_airgap.md` |
+| Full path | `C:\dev\Inc\Paul-Pearl\paul_pearl_market_airgap.md` |
+| Content scope | Market / Air-gap framing for Paul Pearl. **No** money amounts, secrets, tokens, passwords |
+| Share with `offer_lines.docx` | **Extra tray menu item** — do **not** replace offer_lines |
+| Startup / weekday schedule | Still **offer_lines.docx** only (unchanged) |
+| Second schedule slot for the note | **No** (v1) |
+| Replace offer_lines as default open | **No** |
+| Tray menu label (for **1b**) | `Open Paul Pearl note` |
+| Hover/action (for **1b**) | `Open the Paul Pearl market / Air-gap note` |
+| Second tray | **Forbidden** |
+
+| Phase | Goal | Status | Est. |
+|-------|------|--------|------|
+| **0** | Lock exact note filename + share model with `offer_lines.docx` | ✅ 05/11/2026 | ~15 |
+| **1a** | Write `paul_pearl_market_airgap.md` (research note). No money amounts | ✅ 05/11/2026 | ~45 |
+| **1b** | Wire **extra** menu item on Inc `paul_pearl_engagement` tray to open that path (not a new tray; not replace offer_lines). One-app smoke | ✅ 05/11/2026 | ~25 |
+
+**1a record (05/11/2026):** Created `Paul-Pearl/paul_pearl_market_airgap.md` — market + air-gap framing, offer-line map, discovery checklist, no money amounts / secrets.
+
+**1b record (05/11/2026):** Tray menu **Open Paul Pearl note** → `open_paul_pearl_note.py`. Startup/schedule still `offer_lines.docx` only. Smoke `test_paul_pearl_engagement_smoke.py` **PASS**. Parent 🟢.
+
+**Done when:** Note file exists and opens from the Inc **Paul Pearl/Upstream Drive** tray via the extra menu item. **Met.**
+
+**Next when picked:** none for this parent (optional phrase-skim later from the note section 6).
+
+---
+
+## PAUL-PEARL-TRAY-INC-1 — Existing Upstream tray → **Paul Pearl/Upstream Drive** (Inc) · **one product**
+
+**Added:** 05/11/2026 (draft → Inc backlog).  
+**Owner lock:** Change the **existing** Upstream engagement tray into **Paul Pearl/Upstream Drive**. **Do not** create a separate second tray. Inc `paul_pearl_engagement/` is the live host. PR `upstream_drive_*` = retire stubs (**1d ✅**).  
+**Registered / main biz:** Paul Pearl. **Owner-facing tray title:** exactly **Paul Pearl/Upstream Drive** (slash form).  
+**Sibling:** **PAUL-PEARL-UPSTREAM-1** (note content) · **UDC-1** (company pack / `offer_lines.docx` — do not merge).  
+**PR leftovers (stubs only):** `upstream_drive_engagement/README.md` + `upstream_drive_engagement_tray_launcher.py` · PM key `upstream_drive_engagement_tray` **enabled: false**.  
+**Do not** create a second Drive tray. **Do not** restart Project Manager to prove. Ask owner before any auto-launch wiring. No secrets / money amounts in tracked notes.
+
+| Status | 🟢 Phase **0–1d** ✅ 05/11/2026 · Phase **2** deferred |
+|--------|---------|
+| Priority | Medium |
+| Est. | Phase **2** optional later only |
+| Layout | Locked below · **one tray only** |
+
+### Phase 0 locks (05/11/2026 · title tightened same day) — **no file moves this rewrite**
+
+| Lock | Value |
+|------|--------|
+| Main registered biz | **Paul Pearl** |
+| Owner-facing tray title | **Paul Pearl/Upstream Drive** (not “Paul Pearl” alone, not a second Upstream app) |
+| Product shape | **One** engagement tray — existing Upstream **renamed**, not duplicated |
+| App home | **Inc** (not project_reminder as product home) |
+| Inc package folder | `C:\dev\Inc\paul_pearl_engagement\` (host for the renamed product) |
+| Tray launcher | `C:\dev\Inc\paul_pearl_engagement_tray_launcher.py` |
+| Lifecycle log | `C:\dev\Inc\paul_pearl_engagement\paul_pearl_engagement.log` |
+| Future PM / Hub key | **Not wired** — owner **1c** = neither Hub nor PM (manual `pythonw` only) |
+| Paul Pearl note dir | `C:\dev\Inc\Paul-Pearl\` (note write = **PAUL-PEARL-UPSTREAM-1**) |
+| `Upstream-Drive-Consultancy/` | **Keep as-is** for now (UDC pack + `offer_lines.docx`). Folder rename is **not** required for this tray title lock |
+| `offer_lines.docx` open | Same one tray (menu / schedule as already wired). Share details = **PAUL-PEARL-UPSTREAM-1** Phase 0 |
+| Second tray | **Forbidden** |
+| Auto-launch | **Neither** (05/11/2026 owner) — manual `pythonw` only. PR `upstream_drive_engagement_tray` **enabled: false** |
+
+| Phase | Goal | Status | Est. |
+|-------|------|--------|------|
+| **0** | Lock Inc paths + **one-product** rename (not a second app) | ✅ 05/11/2026 | ~20 |
+| **1a** | Port host into Inc (same product). Smoke PASS. Keep PR copy until 1d | ✅ 05/11/2026 | ~60 |
+| **1b** | Settings stub + hover strings | ✅ 05/11/2026 | ~25 |
+| **1b-fix** | Retitle owner-facing strings to **Paul Pearl/Upstream Drive** (APP_TITLE, menu hover, README, Settings window). Still one tray. No second package | ✅ 05/11/2026 | ~15 |
+| **1c** | Auto-launch ask. Prove **one** Inc tray. Disable PR `upstream_drive_engagement_tray` so legacy name cannot auto-start beside it | ✅ 05/11/2026 | ~30 |
+| **1d** | Remove/stub PR `upstream_drive_engagement/` + old launcher. PR pointer only. UDC: tray host = Inc **Paul Pearl/Upstream Drive** | ✅ 05/11/2026 | ~25 |
+| **2** | Optional later: a **new** Upstream-only biz (only if owner asks) — **not** the current tray | ⏳ deferred | TBD |
+
+**1a record (05/11/2026):** Inc package + launcher + smoke **PASS**. PR copy kept. No auto-launch.
+
+**1b record (05/11/2026):** Settings stub + `menu_labels.py`. Title was **Paul Pearl** only — fixed in **1b-fix**.
+
+**1b-fix record (05/11/2026):** `APP_TITLE` / hover / Settings / README / toasts / skip lines → **Paul Pearl/Upstream Drive**. Smoke **PASS**. Still one tray. No second package.
+
+**1c record (05/11/2026):** Owner = **neither** Hub nor PM. PR `launcher_config.json` `upstream_drive_engagement_tray.enabled` → **false**. Stopped live legacy Upstream PID (no PM restart). Started Inc `paul_pearl_engagement_tray_launcher.py` once (log `starting`, pid seen), then stopped. Smoke **PASS**. No Inc Hub / PM wire for Paul Pearl.
+
+**1d record (05/11/2026):** PR live modules removed. `upstream_drive_engagement/README.md` + launcher = retire stubs pointing at Inc. Retire smoke + Inc smoke **PASS**. UDC satellite updated (tray host = Inc). PM key stays disabled. **Did not** restart Project Manager. Parent core **🟢** (Phase **2** still deferred).
+
+**Backlog rewrite record (05/11/2026):** Owner: existing Upstream → title **Paul Pearl/Upstream Drive**, **not** a separate tray.
+
+**Done when:** One tray titled **Paul Pearl/Upstream Drive** runs from Inc, PR legacy Upstream host is gone, no second engagement tray. **Met** for 0–1d.
+
+**Next when picked:** none for core move — optional Phase **2** only if owner wants a separate Upstream biz later. Manual: `pythonw C:\dev\Inc\paul_pearl_engagement_tray_launcher.py`.
+
+---
+
 ## NICHE-EVENT-1 + AGRIC-IDEAS-1 — Niche event series + agric ideas (pointer)
 
 **Status:** 🟢 **Pilot ID 2 · Week 1 scaffold done** (2026-08-08) — owner field next  
