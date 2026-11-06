@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-06 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-11-06 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-11-06 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261106.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261106_060052.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on; Nairametrics commercial-heavy + Punch Lagos Energy Summit + BusinessDay NISO gas/hydro + FIJ S1 cites)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-10-28 (esp. Lagos Health Insurance Dec31 Enrol Desk, FG N70k Transport Payment Floor Desk, Zenith UnsolicitedOTP Debit Clock, FCMB×Stanbic WrongTransfer CourtOrder Clock, 5G DeviceCoverage Gap Evidence Desk, NELFUND MultiYear Funding Floor Desk, Counterfeit Spirits Spot Desk, PalmPay DefunctMerchant Consent Clock, MultiBank UnauthDebit BlameShift Clock, DataLocal Jan2027 Capacity Crisis Pack, GTBank UnauthDebit ForcedLoan Clock, OPay RecipientRefuse ErroneousCredit Clock, PalmPay RecoveredNotCredited Clock, CapMarket MasterPlan Retail Onboard Desk, TelcoQoS Oct28 Hearing Evidence Pack, AccessBank LostPhone Loan Clock); older `business_ideas_20261011.md` / `business_ideas_20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx. Do not convert or open Word in this pass.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -108,7 +108,7 @@
 - **Formula:** **Successful business:** United Bank for Africa / UBA (mass Nigeria retail and corporate deposit rail). **Recurring complaint:** SMS claims an account issue and pushes identity verification within 24 hours via **ubagroupid.com**, a lookalike domain created in October 2026, while the real site is **ubagroup.com** (FIJ, 31 Oct 2026). **Variation:** SMS→domain WHOIS→official-URL verify clock — not AccessBank LostPhone Loan Clock and not MultiBank UnauthDebit BlameShift Clock.
 - **Complaint citations:** FIJ (31 Oct 2026), https://fij.ng/article/alert-cybercriminals-phishing-for-uba-customers-details-through-fake-website/ (SMS, ubagroupid.com vs ubagroup.com, WHOIS October creation). Success signal: UBA mass retail footprint and FIJ’s prior AlatByWema fake-site take-down pattern.
 - **Solution:**
-  - **Established solution:** Norton Phishing Protection / browser Safe Browsing (developed-market phishing-domain check software).
+  - **Established solution:** Norton Phishing Protection (developed-market phishing-domain check software).
   - **Variant:** UBA FakeDomain Phish Verify Desk, the Nigeria version of that product. It compares SMS links to official UBA domains, logs WHOIS age, and exports a “do not enter credentials” pack. It is not UBA official and it is not an antivirus suite.
 - **Target:** UBA retail customers who receive urgent “verify or restriction” SMS and need a one-screen domain check before clicking.
 - **MVP cost:** $6k–$14k.
@@ -128,7 +128,7 @@
 - **Formula:** **Successful business:** Moniepoint (mass Nigeria merchant / PoS / MFB rail). **Recurring complaint:** Ashley Songo’s uncle wrongly sent **N310,000** from her Moniepoint merchant terminal to an unknown pharmacy in May 2025. She obtained a Benue court order (14 May 2025), visited Abuja/Benue offices, and waited ~17 months until FIJ contact triggered a recall (FIJ, 2 Nov 2026). **Variation:** Wrong-PoS→court-order→recall clock for merchants — not PalmPay DefunctMerchant Consent Clock and not OPay×Moniepoint FailedPOS 5Day Refund Clock.
 - **Complaint citations:** FIJ (2 Nov 2026), https://fij.ng/article/after-fijs-story-moniepoint-recovers-customers-n310000-from-17-month-old-transaction/ (N310,000 recall after ~17 months, court order ignored until media). Success signal: Moniepoint mass merchant footprint and FIJ recovery follow-ups.
 - **Solution:**
-  - **Established solution:** Square / Toast dispute timeline tools (developed-market merchant wrong-send evidence software).
+  - **Established solution:** Square (developed-market merchant dispute-timeline software).
   - **Variant:** Moniepoint 17Month WrongPOS Recall Clock, the Nigeria version of that software. It logs terminal receipt, court-order serve date, branch visits, and days open. It can export a CBN CPD note. It is not Moniepoint official and it is not legal practice.
 - **Target:** Moniepoint terminal operators and SMEs stuck after wrong PoS sends when court orders stall.
 - **MVP cost:** $8k–$18k.
@@ -147,8 +147,8 @@
 
 - **Problem / trend:** Nairametrics (6 Nov 2026): EFCC Enugu probes former bank Head of Operations Obinna Nwaobi over alleged diversion of **N515 million** from DAHUA Paper Company’s BOI loan Debt Service Reserve Account in three tranches after June 2024 reactivation without Post No Debit, using forged documents and bypassing Account Officer / Regional Manager / Credit Monitoring approvals. Industrial borrowers still lack a plain DSRA control checklist (PND, dual approval, forged-doc flags).
 - **Solution:**
-  - **Established solution:** Dual Control / treasury workstation software (developed-market bank DSRA control software, e.g. FIS / Temenos treasury dual-control patterns).
-  - **Variant:** BOI DSRA Debit Control Pack, the Nigeria version of that control kit for borrowers (not a core-banking product). It logs PND status, approval chain, and abnormal third-party debit flags. It is not EFCC, BOI, or the custodian bank.
+  - **Established solution:** FIS (developed-market treasury dual-control software).
+  - **Variant:** BOI DSRA Debit Control Pack, the Nigeria version of that software for borrowers (not a core-banking product). It logs PND status, approval chain, and abnormal third-party debit flags. It is not EFCC, BOI, or the custodian bank.
 - **Target:** BOI-financed manufacturers and CFOs monitoring Debt Service Reserve Accounts after large facilities.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not EFCC, BOI, or CBN enforcement; not legal practice; NDPA for account metadata.
@@ -166,7 +166,7 @@
 
 - **Problem / trend:** BusinessDay (5 Nov 2026): Nigerian Independent System Operator (NISO) blamed tight gas supply to thermal plants and weaker hydropower inflows for reduced DisCo allocations and more load shedding. SMEs already fill gaps with petrol/diesel generators or solar, raising costs, but lack a simple week-by-week outage-cost board tied to the NISO explanation.
 - **Solution:**
-  - **Established solution:** EnergyHub / utility bill analytics (developed-market SME energy-cost software).
+  - **Established solution:** EnergyHub (developed-market SME energy-cost software).
   - **Variant:** NISO GasHydro SME Cost Board, the Nigeria version of that software. It logs grid hours, generator litres, and solar top-ups in Naira against NISO shortfall weeks. It is not NISO or a DisCo billing portal.
 - **Target:** Lagos/Ogun manufacturers and shop clusters measuring outage cost during gas/hydro slumps.
 - **MVP cost:** $6k–$14k.
@@ -185,7 +185,7 @@
 
 - **Problem / trend:** Nairametrics (5 Nov 2026): Trade Union Congress rejected another temporary wage award and demanded a sustainable salary increase, recalling incomplete delivery of the Oct 2023 wage-award pact (workers averaged ~3 of 10 months) and renewing a call to raise the lowest federal salary from **N70,000** toward **N300,000**. Workers still confuse temporary awards with a permanent floor tracker.
 - **Solution:**
-  - **Established solution:** ADP Workforce Now pay-status boards (developed-market salary-floor tracking software).
+  - **Established solution:** ADP Workforce Now (developed-market salary-floor tracking software).
   - **Variant:** TUC Permanent Salary Floor Desk, the Nigeria version of that software. It separates temporary wage-award months from proposed permanent floor steps in Naira. It is not MoL, IPPIS, or a union dues portal.
 - **Target:** Public-sector affiliates and worker associations comparing award months vs permanent-floor demands.
 - **MVP cost:** $5k–$12k.
@@ -205,7 +205,7 @@
 - **Formula:** **Successful business:** Sterling Bank (mass Nigeria retail deposit rail). **Recurring complaint:** after a **N25,000** transfer failed and principal reversed within 24 hours, the **N50** electronic money transfer levy (“stamp duty”) stayed withheld for about a month until a lawyer’s demand letter citing Electronic Money Transfer Levy Regulations 2022 Paragraph 6 triggered same-day refund (FIJ, 19 Sep 2026). **Variation:** Failed-xfer→stamp-duty reverse clock — not GTBank FailedXfer 17Month Clock and not OPay×Moniepoint FailedPOS 5Day.
 - **Complaint citations:** FIJ (19 Sep 2026), https://fij.ng/article/sterling-bank-makes-month-old-n50-stamp-duty-refund-only-after-customer-threatens-legal-action/ (failed transfer, principal reversed, N50 levy held ~1 month). Success signal: Sterling Bank mass retail footprint in FIJ coverage.
 - **Solution:**
-  - **Established solution:** Mint / bank fee dispute trackers (developed-market failed-payment fee reclaim software).
+  - **Established solution:** Mint (Intuit) (developed-market fee and bill tracking software).
   - **Variant:** Sterling StampDuty FailedXfer Clock, the Nigeria version of that software. It logs failed NIP, principal reverse, EMT levy status, and regulation cite pack. It is not Sterling or FIRS official.
 - **Target:** Sterling (and similar) retail customers who recover principal but lose the N50 levy on failed transfers.
 - **MVP cost:** $5k–$12k.
@@ -224,7 +224,7 @@
 
 - **Problem / trend:** Product Hunt (fetch 6 Nov 2026) lists **Bridge** as “Video conferencing for the agentic era.” Nigeria SMEs adopting AI agents still lack a low-bandwidth, Naira-billed meet layer that works on unstable power/data (OWID internet adoption context: global online share still incomplete, Nigeria gaps remain).
 - **Solution:**
-  - **Established solution:** Bridge / Zoom AI Companion (developed-market agent-aware video software).
+  - **Established solution:** Bridge (developed-market agent-aware video software).
   - **Variant:** Bridge AgentMeet NG Lite, the Nigeria version of that product. It prioritises low-bandwidth rooms, offline join notes, and Paystack Naira seats. It is not a full Zoom clone.
 - **Target:** Nigeria SaaS founders and ops teams running agent workflows with remote staff.
 - **MVP cost:** $10k–$22k.
@@ -244,7 +244,7 @@
 - **Formula:** **Successful business:** UBA (mass Nigeria deposit rail) plus OPay float used by PoS agents. **Recurring complaint:** PoS agent Edokhafue Isuku borrowed float on OPay and mistakenly sent **N121,000** to UBA customer Chukwuemeka Chioma Patricia. OPay said UBA reported funds withdrawn and demanded a court order. Magistrate process was quoted as costly and ~3 months (FIJ, 12 Oct 2026). **Variation:** PoS wrong-UBA→court-order clock — not UBA×OPay PoS WrongCredit Claim Clock (prior wrong-credit path) and not OPay RecipientRefuse.
 - **Complaint citations:** FIJ (12 Oct 2026), https://fij.ng/article/uba-customer-chukwuemeka-chioma-patricia-claims-n121000-transfer-that-isnt-hers-and-pos-agent-suffers-for-it/ (N121,000 wrong UBA account, court-order ask, PoS agent loss). Success signal: UBA and OPay mass footprints in FIJ PoS coverage.
 - **Solution:**
-  - **Established solution:** Venmo / Cash App wrong-send dispute flows (developed-market person-to-person mis-send software).
+  - **Established solution:** Venmo (developed-market person-to-person mis-send software).
   - **Variant:** UBA PoS WrongAccount CourtOrder Clock, the Nigeria version of that software for PoS agents. It logs float source, wrong UBA receipt, OPay/UBA tickets, and court-order cost/time. It is not UBA or OPay official.
 - **Target:** PoS agents who mis-send to UBA accounts and face court-order hurdles.
 - **MVP cost:** $8k–$18k.
@@ -263,8 +263,8 @@
 
 - **Problem / trend:** BusinessDay (fetch 6 Nov 2026): “Interest rates are falling. What should you do with your money?” Retail savers and SME treasurers still lack a plain Nigeria decision board (T-bills vs deposits vs debt refinance) that stays non-advisory.
 - **Solution:**
-  - **Established solution:** Bankrate rate-decision tools (developed-market rates explainer software).
-  - **Variant:** Falling Rates Decision Board, the Nigeria version of that software. It maps checklist questions only (no product picks). It is not investment advice.
+  - **Established solution:** Bankrate (developed-market rates explainer software).
+  - **Variant:** Falling Rates Decision Board, the Nigeria version of that software. It maps rate questions only and does not pick products. It is not investment advice.
 - **Target:** SME treasurers and salaried savers reading rate-cut headlines.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Not investment advice; not CBN/DMO official.
@@ -282,7 +282,7 @@
 
 - **Problem / trend:** Product Hunt (fetch 6 Nov 2026) lists **Living Brain** as an interoperable memory layer for agentic AI. Nigeria builders still need an offline-tolerant memory edge when connectivity is intermittent (OWID internet adoption still incomplete globally).
 - **Solution:**
-  - **Established solution:** Living Brain / Mem0-style agent memory (developed-market memory-layer software).
+  - **Established solution:** Living Brain (developed-market agent memory-layer software).
   - **Variant:** LivingBrain Memory NG Edge, the Nigeria version of that product. It caches memory locally first and syncs when data returns. It is not a US cloud-only memory SaaS.
 - **Target:** Nigeria AI builders and SMEs running agents on intermittent data.
 - **MVP cost:** $8k–$18k.
@@ -332,6 +332,10 @@
 
 **Partial runs:** S6 directory blocked (429). S1 collector subprocess skipped (agent-native web research used). S15 skipped by design.
 
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-11-06. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has an Established solution (developed-market product) and a Variant (Nigeria version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
@@ -339,7 +343,8 @@
 | Date | Step |
 |------|------|
 | 2026-11-06 | Owner skims Best ideas 1–5. Confirm no accidental DataLocal / N70k Transport re-propose. |
-| 2026-11-06–07 | **Pass 2 Pack** (`prompts/agent_formulation_pack.txt`) on this same file → schema optional → one-shot Docx. |
+| 2026-11-06 | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, Established solution and Variant). |
+| 2026-11-06 | Schema check `python agent-business-idea-runs/idea_card_schema.py agent-business-idea-runs/outputs/business_ideas_20261106.md --strict-full` before the one-shot Docx. |
 | 2026-11-07 | Spot-check FIJ/Nairametrics/Punch URLs still live. |
 | 2026-11-10–12 | If pursuing idea 1, observe Lagos Energy Summit outcomes and refresh Band A evidence fields. |
 | 2026-11-12–23 | If pursuing idea 2, validate Airtel election dates against Coronation circular. |
@@ -347,6 +352,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before Docx. Do not convert or open Word in Pass 1.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
