@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-07 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-11-07 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-11-07 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261107.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261107_060437.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on; Nairametrics commercial-heavy + BusinessDay TRCN/exam + oil earn-out + FIJ S1 Jumia/CREDICORP/Lotus cites)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-11-06 (esp. Lagos Energy Summit BandA Evidence Desk, Airtel Dividend Currency Election Desk, UBA FakeDomain Phish Verify Desk, Moniepoint 17Month WrongPOS Recall Clock, BOI DSRA Debit Control Pack, Lagos Health Insurance Dec31 Enrol Desk, FG N70k Transport Payment Floor Desk, Zenith UnsolicitedOTP Debit Clock, DataLocal Jan2027 Capacity Crisis Pack, CNG FarePass Financing Stake Pack, PalmPay FuelDispense 2Year Refund Clock, PalmPay DefunctMerchant Consent Clock, FirstBank×Paga PhoneUpdate Debit Clock, GTBank UnauthDebit ForcedLoan Clock, OPay RecipientRefuse ErroneousCredit Clock); older `business_ideas_20261011.md` / `business_ideas_20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. TRCN 75% ExamCentre Dec11 Desk — roster→portal readiness before 11 Dec 2026 (**S12 Mode A**)
 
-- **Problem:** BusinessDay (7 Nov 2026): private schools face a hard rule — examination centres must have at least **75% TRCN-licensed teachers by 11 December 2026** or lose approval to present candidates for WAEC/NECO and related exams. Proprietors still track certification in WhatsApp/Excel and risk last-week portal failure or exam-centre shopping that overcrowds other schools.
+- **Problem / trend:** BusinessDay (7 Nov 2026): private schools face a hard rule — examination centres must have at least **75% TRCN-licensed teachers by 11 December 2026** or lose approval to present candidates for WAEC/NECO and related exams. Proprietors still track certification in WhatsApp/Excel and risk last-week portal failure or exam-centre shopping that overcrowds other schools.
 - **Solution:**
-  - **Established solution:** PowerSchool / Teachable staff-compliance dashboards and US state teacher-certification trackers that map licence status to school accreditation windows.
-  - **Variant:** Nigeria TRCN roster % calculator + Dec 11 portal evidence pack (licence IDs, NTI abridged path notes, upload checklist) priced in Naira for private-school proprietors — not a TRCN filing portal.
+  - **Established solution:** PowerSchool (developed-market staff-compliance software).
+  - **Variant:** TRCN 75% ExamCentre Dec11 Desk, the Nigeria version of that software. It tracks licence status against the 75% threshold and the 11 Dec 2026 exam-centre window, priced in Naira. It is not a TRCN, WAEC, or NECO portal.
 - **Target:** Private secondary school owners, group-school admins, PTA boards preparing 2027 exam-centre renewals.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not TRCN, WAEC, NECO, or Ministry of Education official; not legal advice; NDPA for staff ID fields.
@@ -86,10 +86,10 @@
 
 ### 2. SEC NigSac Freeze Ready Desk — subscribe→screen→freeze/report checklist for small CMREs (**S12 Mode A**)
 
-- **Problem:** Nairametrics (6 Nov 2026): SEC directed capital-market regulated entities to immediately freeze funds/assets of UN-designated terrorist financiers (including TTP / Noor Wali Mehsud and follow-on Oct 19/22 names) and to use NigSac alerts — yet interviews show many operators are **unaware** of the Oct circulars while obligations are immediate under TPPA/ISA.
+- **Problem / trend:** Nairametrics (6 Nov 2026): SEC directed capital-market regulated entities to immediately freeze funds/assets of UN-designated terrorist financiers (including TTP / Noor Wali Mehsud and follow-on Oct 19/22 names) and to use NigSac alerts — yet interviews show many operators are **unaware** of the Oct circulars while obligations are immediate under TPPA/ISA.
 - **Solution:**
-  - **Established solution:** Dow Jones Risk & Compliance / Refinitiv World-Check style sanctions screening suites with alert subscription and freeze workflows for broker-dealers.
-  - **Variant:** Nigeria NigSac alert signup + name-match / freeze / NSC+NFIU report one-pager for boutique CMREs and inherited client books — Naira-priced, not a full World-Check replacement.
+  - **Established solution:** Refinitiv World-Check (developed-market sanctions screening software).
+  - **Variant:** SEC NigSac Freeze Ready Desk, the Nigeria version of that software for boutique CMREs. It logs NigSac alerts, name matches, and freeze or report steps for NSC and NFIU. It is not SEC, NSC, or NFIU official.
 - **Target:** Small asset managers, receiving agents, and CMRE compliance officers who missed CCCOCIN/website circular blasts.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational AML/CFT hygiene only — not SEC, NSC, or NFIU official; not legal advice; NDPA for client screening logs.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** Jumia Nigeria (mass e-commerce marketplace running a month-long Black Friday 2026 campaign). **Recurring complaint:** shoppers used a publicly posted X voucher, completed checkout (some marked shipped), then saw mass cancellations after Jumia cited a “backend sync delay” / exhausted redemption pool — customers cite FCCPC misleading-representation concerns (FIJ, 2–3 Nov 2026). **Variation:** Voucher post capture → order/ship status timeline → cancel/refund evidence clock — not a generic returns portal and not Instagram thrift-scam escrow.
 - **Complaint citations:** FIJ (2 Nov 2026), https://fij.ng/article/customers-accuse-jumia-of-breaking-fccpc-law-by-cancelling-orders-with-black-friday-voucher/ (voucher posted then deleted; checkout confirmed; orders cancelled). FIJ (3 Nov 2026), https://fij.ng/article/jumia-blames-backend-sync-delay-for-cancelled-orders-as-customers-threaten-legal-action/ (“backend sync delay”; chronological honour claim; legal threats). Success signal: BusinessDay (1 Nov 2026) Jumia Black Friday campaign launch — https://businessday.ng/life/article/jumias-consumer-engagement-strengthens-better-options-shopping-experience-for-nigerians/
 - **Solution:**
-  - **Established solution:** Chargebacks911 / Ordergroove promo-dispute evidence tools and US FTC unfair-promotion complaint packs that timeline ad → checkout → cancel.
-  - **Variant:** Nigeria Jumia voucher screenshot + order-ID timeline exporter aimed at FCCPC complaint notes and support escalations — Naira self-serve, not a law firm.
+  - **Established solution:** Chargebacks911 (developed-market promo-dispute evidence software).
+  - **Variant:** Jumia VoucherCancel Evidence Clock, the Nigeria version of that software. It logs the voucher post, order ID, ship status, and cancel time for FCCPC notes. It is not Jumia official and it is not a law firm.
 - **Target:** Black Friday shoppers and small resellers hit by voucher cancellations during Nov 2026 Explosion Fridays.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** FCCPC consumer notes path; NDPA; not legal practice; not Jumia official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** Nairametrics (6 Nov 2026): TCN accused Ikeja Electric of misleading customers by blaming Nov 3–4 Band A feeder outages on transmission/grid instability, while TCN/NISO figures point to low generation load-shedding and DisCo allocation/faults (e.g. 68% frequency-control shedding on Nov 1–2; 29 of 46 named 33kV interruptions from low generation). SMEs on Band A still lack a dated evidence pack when DisCo SMS and TCN statements conflict — distinct from the Lagos Energy Summit hearing desk (10–12 Nov summons).
 - **Solution:**
-  - **Established solution:** GridOps / outage-management systems (OMS) used by US utilities that classify cause codes (generation, distribution, transmission) for customer evidence.
-  - **Variant:** Nigeria Band A feeder log + public TCN/NISO statement checklist that produces a blame-attribution PDF for landlord/SME negotiations — not a NERC filing tool.
+  - **Established solution:** Oracle Utilities Network Management System (developed-market outage cause-code software).
+  - **Variant:** TCN×Ikeja Feeder Blame Evidence Desk, the Nigeria version of that software. It logs Band A feeder notices against public TCN and NISO statements so an SME can see generation, DisCo, or transmission cause. It is not NERC, NISO, TCN, or a DisCo portal.
 - **Target:** Lagos Band A SMEs, estates, and facility managers under Ikeja Electric feeders named in outage notices.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NERC, NISO, TCN, or DisCo official; not legal advice.
@@ -146,8 +146,8 @@
 
 - **Problem / trend:** FIJ (3 Nov 2026): Office of the SA on Social Media announced CREDICORP SPARK USSD `*347*333#` for first-time / thin-file borrowers with no internet required — FIJ tests on MTN and Glo returned “USSD code is currently unavailable,” and X applicants reported the same, with no published rate/amount limits in the launch post.
 - **Solution:**
-  - **Established solution:** Bankrate / NerdWallet “is this offer live” launch checkers and US CFPB credit-product disclosure checklists.
-  - **Variant:** Nigeria SPARK dial-test log (network, timestamp, response text) + rate/amount disclosure gap sheet before a borrower travels or pays agents — not a CREDICORP loan product.
+  - **Established solution:** NerdWallet (developed-market credit-offer checker software).
+  - **Variant:** CREDICORP SPARK USSD Live Desk, the Nigeria version of that software. It logs network, timestamp, and the `*347*333#` response, plus missing rate and amount fields. It is not CREDICORP and it is not a lender.
 - **Target:** First-time borrowers, market traders, and NGO credit counsellors verifying SPARK after the Nov 2026 announcement.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not CREDICORP or CBN official; not a lender; NDPA for any phone logs.
@@ -165,8 +165,8 @@
 
 - **Problem / trend:** Nairametrics (6 Nov 2026): national CNG stations hit **106** with **$2.6bn** private investment, while Lagos plans to commission **five** more stations by **12 November** (Agege/Ojota/Oshodi already live) toward 29 by Q1 2028. Fleet operators still lack a station-access + conversion-centre readiness pack as pumps open.
 - **Solution:**
-  - **Established solution:** GasBuddy / PlugShare-style station finders plus fleet CNG conversion readiness checklists used in US/India gas-mobility rollouts.
-  - **Variant:** Lagos Nov 12 station commission tracker + NMDPRA licence-stage notes + conversion-centre shortlist for danfo/SME fleets — Naira, offline-friendly.
+  - **Established solution:** GasBuddy (developed-market station-finder software).
+  - **Variant:** Lagos CNG Nov12 Station Access Desk, the Nigeria version of that software. It tracks the five Lagos stations due by 12 November, licence stage, and fleet conversion centres, with Naira and offline notes. It is not Pi-CNG, NMDPRA, or a fuel vendor.
 - **Target:** Lagos fleet owners, logistics SMEs, and estate shuttle operators switching from PMS.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not Pi-CNG, NMDPRA, or MDGIF official; not a fuel vendor.
@@ -185,8 +185,8 @@
 - **Formula:** **Successful business:** Lotus Bank (digital bank partner on UNILAG Smart ID / campus wallet rails). **Recurring complaint:** FIJ’s Smart ID investigation led NDPC to probe UNILAG, Lotus Bank, and Heckerbella over student data-law issues (consent, optional-vs-forced account activation, DPIA gaps); as of 4 Nov 2026 FIJ reports **no public NDPC update three months** after the Aug statement, leaving students without a status/evidence clock. **Variation:** Consent/form capture → optional-vs-forced wallet timeline → NDPC case-status evidence pack — not CBN DataLocal Jan2027 capacity planning.
 - **Complaint citations:** FIJ (4 Nov 2026), https://fij.ng/article/no-update-3-months-into-ndpcs-probe-of-unilag-lotus-bank-over-data-law-violations/ (no NDPC update since 12 Aug statement; Smart ID NIN/address collection; optional account activation disputes). Success signal: Lotus Bank’s mass campus/retail positioning referenced in the same FIJ Smart ID coverage chain.
 - **Solution:**
-  - **Established solution:** OneTrust / TrustArc privacy-request and regulator-case trackers used by universities and fintechs for DPIA and supervisory follow-ups.
-  - **Variant:** Nigeria student Smart ID consent + Lotus wallet coercion timeline pack aimed at NDPC/FCCPC notes — campus Naira pricing, not a DPO suite.
+  - **Established solution:** OneTrust (developed-market privacy-request and regulator-case software).
+  - **Variant:** Lotus×UNILAG SmartID NDPC Clock, the Nigeria version of that software. It logs Smart ID consent, optional versus forced Lotus wallet steps, and days since the NDPC statement. It is not NDPC or Lotus official.
 - **Target:** UNILAG students/staff and similar campus-card cohorts watching the NDPC probe.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA/NDPC educational path; not legal practice; not NDPC or Lotus official.
@@ -204,8 +204,8 @@
 
 - **Problem / trend:** BusinessDay (7 Nov 2026): seven listed oil/gas names grew combined 9M 2026 revenue ~58.6% to N11.81tn while combined PAT fell ~9.6% to N525.3bn — led by Aradel’s contingent-consideration unwind (~N529bn finance charge) and earn-out cash (~N543.9bn) after ND Western/Renaissance consolidation, plus Oando financing costs. Boards and IR teams still blur accounting unwind vs cash earn-out when briefing lenders.
 - **Solution:**
-  - **Established solution:** BoardEffects / Diligent-style M&A earn-out dashboards used by energy IR teams to separate contingent consideration accounting from cash milestones.
-  - **Variant:** Nigeria listed E&P earn-out vs cash-ops one-pager template (Aradel-style fields) for board packs — not investment advice.
+  - **Established solution:** Diligent Boards (developed-market board and earn-out tracking software).
+  - **Variant:** OilEarnout Contingent Charge Board, the Nigeria version of that software. It separates accounting unwind of contingent consideration from cash earn-out for listed E&P board packs. It is not investment advice and it is not a fairness opinion.
 - **Target:** IR/CFO teams at consolidating upstream names and credit analysts covering earn-out heavy names.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational only — not SEC investment advice; not a fairness opinion.
@@ -223,8 +223,8 @@
 
 - **Problem / trend:** FIJ (6 Nov 2026): Lagos buyer Godspower Agu lost **N830,000** to Instagram page “Thriftsmugg” after staged camera/lens payments into a Carbon personal account, then “outlet fee” escalations and a PalmPay-debt excuse blocking refund — a recurring thrift-scam pattern.
 - **Solution:**
-  - **Established solution:** Escrow.com / PayPal Goods & Services buyer-protection flows plus FTC thrift-scam red-flag checklists.
-  - **Variant:** Nigeria Instagram thrift red-flag + staged-payment stop sheet (business vs personal account, fee escalation, escrow alternatives) — not a payments licence.
+  - **Established solution:** Escrow.com (developed-market buyer-protection escrow software).
+  - **Variant:** Instagram Thrift Escrow Spot Desk, the Nigeria version of that software for Instagram thrift buyers. It holds a staged payment note until the item is confirmed, and it flags personal-account receipts before more money is sent. It is not a payments licence and it is not police or EFCC official.
 - **Target:** Lagos/Abuja gadget thrift buyers paying via Instagram DMs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Consumer-education only — not police/EFCC official; not escrow licensing.
@@ -242,8 +242,8 @@
 
 - **Problem / trend:** Product Hunt (Nov 2026): **Kivo** trends as free on-device dictation for Mac apps/AI agents. Nigeria SME and school admins still type long TRCN/NDPA notes on weak data links and need offline voice capture without shipping audio to foreign clouds by default.
 - **Solution:**
-  - **Established solution:** Kivo / Whisper.cpp on-device dictation products that keep audio local.
-  - **Variant:** Android-first Naira dictation lite tuned for TRCN roster notes and customer-complaint clocks, with optional offline model pack — not a Mac-only port.
+  - **Established solution:** Kivo (developed-market on-device dictation software).
+  - **Variant:** Kivo Dictation NG Lite, the Nigeria version of that product. It runs Android-first, keeps audio on the phone, and prices seats in Naira for school admins and complaint desks. It is not a Mac-only port.
 - **Target:** School admins, PoS support agents, and field compliance officers drafting evidence notes offline.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for voice samples; clear on-device vs cloud toggle.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Nairametrics (6 Nov 2026): NGX shed another **N540bn** as MTN Nigeria, Zenith Bank, GTCO and peers extended selling after prior sharp declines — retail holders still panic-sell from WhatsApp without a simple horizon/liquidity checklist.
 - **Solution:**
-  - **Established solution:** Personal Capital / Morningstar portfolio drawdown decision worksheets used by retail advisors after multi-day selloffs.
-  - **Variant:** Nigeria NGX multi-session drawdown one-pager (horizon, liquidity need, fee drag) with hard “not advice” banner — Naira examples only.
+  - **Established solution:** Morningstar Investor (developed-market drawdown decision software).
+  - **Variant:** NGX Drawdown Decision Board, the Nigeria version of that software. It logs multi-session NGX loss, horizon, and liquidity need in Naira, with a hard not-advice banner. It is not SEC investment advice or a brokerage.
 - **Target:** Retail NGX holders and diaspora relatives funding family portfolios.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not SEC investment advice or brokerage.
@@ -280,8 +280,8 @@
 
 - **Problem / trend:** BusinessDay (7 Nov 2026): commentary urges Nigeria to **reskill teachers for AI**, not replace them, while the same week’s TRCN 75% rule already strains private schools — heads need a short staff development brief that does not pretend to be ministry curriculum.
 - **Solution:**
-  - **Established solution:** ISTE / Coursera for Teachers AI literacy pathway planners used by school districts.
-  - **Variant:** One-week Nigeria private-school AI literacy rota (phone-first, low-data) tied to classroom tasks — not a ChatGPT wrapper product.
+  - **Established solution:** Coursera (developed-market teacher learning-path software).
+  - **Variant:** Teacher AI Reskill Brief NG, the Nigeria version of that software. It sets a one-week phone-first, low-data staff rota for private-school heads. It is not Ministry of Education curriculum and it is not a ChatGPT wrapper.
 - **Target:** Private-school heads already juggling TRCN compliance.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not Ministry of Education curriculum approval.
@@ -332,7 +332,9 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). StartupList Africa **429** (continued with PH + Nigeria synthesis). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used (egress blocks). TheCable not required this run. S15 skipped by design. Fresh CBN DataLocal Jan2027 headline noted and **not** turned into a new idea (dedup).
 
-**Pass 2 pack:** Required next. Same dated `.md` — normalize every idea to section 14 subheads, then one-shot in-repo Docx. Do **not** invent/re-rank in Pass 2.
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-11-07. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
 
 ---
 
@@ -340,7 +342,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-11-07** | Pass 2 pack on this same file (same ranks, section 14 subheads). Optional `idea_card_schema.py` before Docx. One-shot in-repo Docx only (no desktop Word open). |
+| **2026-11-07** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, Established solution and Variant). |
 | **2026-11-08** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve. |
 | **2026-11-10** | Owner pick: TRCN 75% ExamCentre Dec11 Desk checklist pilot with 3 private schools before portal rush (no owner PII in git). |
 | **2026-11-11** | Owner pick: SEC NigSac Freeze Ready Desk subscribe walkthrough with 2 boutique CMREs (no client names in git). |
@@ -348,6 +350,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-**Pass 2 pack required before Docx** — paste `prompts/agent_formulation_pack.txt` against this same dated `.md`.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
