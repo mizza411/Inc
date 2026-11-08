@@ -144,7 +144,8 @@ cd C:\dev\Inc\field_intelligence_radar
 
 **Done when:** Note file exists and opens from the Inc **Paul Pearl/Upstream Drive** tray via the extra menu item. **Met.**
 
-**Next when picked:** none for this parent (optional phrase-skim later from the note section 6).
+**Next when picked:** none for this parent.  
+**Moved out (08/11/2026):** Nigeria intent-phrase gap skim is **not** Paul Pearl work. Lives in project_reminder **ENTREPRENEUR-NG-GAP-SKIM-1** (Entrepreneur Skim Routine). Do **not** re-attach that skim here. Do **not** call the owner phrase board “MacroDroid phrases” in backlog copy.
 
 ---
 
