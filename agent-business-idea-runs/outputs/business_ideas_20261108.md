@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-08 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** required next (do not Docx yet).  
+**Generated:** 2026-11-08 ~06:00-07:30 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-11-08 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261108.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261108_060232.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on; Nairametrics commercial-heavy + Punch/Premium Times power/NTI + BusinessDay LFZ + FIJ S1 NERSI/bed-delivery cites)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-11-07 (esp. TRCN 75% ExamCentre Dec11 Desk, SEC NigSac Freeze Ready Desk, Jumia VoucherCancel Evidence Clock, TCN×Ikeja Feeder Blame Evidence Desk, CREDICORP SPARK USSD Live Desk, Lagos Energy Summit BandA Evidence Desk, Airtel Dividend Currency Election Desk, UBA FakeDomain Phish Verify Desk, Moniepoint 17Month WrongPOS Recall Clock, BOI DSRA Debit Control Pack, DataLocal Jan2027 Capacity Crisis Pack, Instagram Thrift Escrow Spot Desk / Thriftsmugg, Lotus×UNILAG SmartID NDPC Clock, CNG FarePass / Lagos CNG Nov12 Station Access Desk, OMO N2.63tn Overallot Rate Desk, PublicDeposit CRR75 Liquidity Stress Board, UnitedNigeria Airline CP Diligence Pack); older `business_ideas_20261011.md` / `business_ideas_20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -69,8 +69,8 @@
 
 - **Problem / trend:** Punch, Vanguard, and ThisDay (7–8 Nov 2026): the Federal Ministry of Education cancelled **all 2026 admissions** into the National Teachers’ Institute (NTI) NCE and degree programmes (full-time, part-time, and Distance Learning), directed NTI to discontinue university affiliations/degree-awarding arrangements, and warned the public **not to apply, accept offers, or make payments**. Existing NCE II–IV DLS students face an NCCE accreditation sweep across geopolitical zones. Families still see old NTI ads and affiliate university offers in WhatsApp groups.
 - **Solution:**
-  - **Established solution:** College Board / accreditation-status checkers (developed-market admissions compliance software).
-  - **Variant:** NTI 2026 Admissions Cancel Desk, the Nigeria version of that checker. It logs the FME cancel notice, stop-pay steps, refund evidence, and NCCE/NUC affiliation status for NTI-linked offers, priced in Naira. It is not an FME, NTI, NCCE, NUC, or JAMB portal.
+  - **Established solution:** National Student Clearinghouse (developed-market enrollment and credential verification software).
+  - **Variant:** NTI 2026 Admissions Cancel Desk, the Nigeria version of that software. It logs the FME cancel notice, stop-pay steps, refund evidence, and NCCE/NUC affiliation status for NTI-linked offers, priced in Naira. It is not an FME, NTI, NCCE, NUC, or JAMB portal.
 - **Target:** Prospective NTI applicants and parents, serving teachers seeking NCE/degree upgrades, study-centre agents who still market 2026 intake.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not FME, NTI, NCCE, NUC, or JAMB official; not legal advice; NDPA for applicant ID fields.
@@ -88,8 +88,8 @@
 
 - **Problem / trend:** TheSun (8 Nov 2026): national generation fell to **2,692MW** with many plants at zero output; Minister Joseph Tegbe cited Egbin maintenance, gas constraints, load shedding, and sabotage of transmission routes, promising a 48–72 hour recovery. Punch/Premium Times/ThisDay (8 Nov): **NNPC** insists its gas transportation network (NGIC) has **no transport constraints** explaining the drop, separates production/commercial offtake/plant readiness from pipe availability, and calls for a coordinated NISO review. SMEs still get one-line “gas” or “DisCo” excuses without a citeable chain.
 - **Solution:**
-  - **Established solution:** OSIsoft PI / grid incident evidence suites (developed-market power operations software).
-  - **Variant:** PowerGen 2692 BlameChain Evidence Desk, the Nigeria version of that evidence suite for SMEs and estate boards. It timestamps NISO/minister/NNPC/DisCo statements, generation snapshots, and diesel-spend logs for Band A and commercial users. It is not a NERC, NISO, NNPC, or DisCo portal.
+  - **Established solution:** OSIsoft PI (developed-market power operations software).
+  - **Variant:** PowerGen 2692 BlameChain Evidence Desk, the Nigeria version of that software for SMEs and estate boards. It timestamps NISO, minister, NNPC, and DisCo statements, generation snapshots, and diesel-spend logs for Band A and commercial users. It is not a NERC, NISO, NNPC, or DisCo portal.
 - **Target:** Lagos/Abuja SMEs on Band A or generator hybrid, cold-chain operators, estate facility managers, corporate IR teams writing outage notes.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NERC, NISO, NNPC, TCN, or DisCo official; not legal advice; NDPA for site logs.
@@ -105,12 +105,11 @@
 
 ### 3. NERSI Monthly vs OneOff Evidence Clock — announcement vs wallet-terms mismatch for N50k relief (S1)
 
-- **Formula (S1):** Successful business **Wema Bank ALAT** (and peer NERSI rails **MoMo PSB** / **NairaGram**) + recurring complaint that FG/minister messaging said **monthly** N50,000 NERSI relief while the ministry website described a **one-off** wallet payment = profitable variation: beneficiary evidence clock that freezes announcement screenshots, FAQ text, SMS sender IDs, and wallet credit terms before households plan monthly budgets.
-- **Problem:** FIJ (1 Nov 2026): Humanitarian Affairs Minister Bernard Doro announced a **monthly** N50,000 National Emergency Relief and Stabilisation Intervention (NERSI); the ministry site FAQ called it **one-off** support into a mobile wallet via ALAT, MoMo PSB, and NairaGram. FIJ (5 Nov 2026): after the story, FG removed the misleading “one-off” website wording — proving the mismatch was real and costly for household planning.
-- **Success signal:** ALAT (Wema), MoMo PSB, and NairaGram are named official NERSI payment providers in FIJ’s reporting — mass consumer rails already trusted for government disbursements.
+- **Formula:** **Successful business:** Wema Bank ALAT, plus peer NERSI rails MoMo PSB and NairaGram. **Recurring complaint:** Humanitarian Affairs Minister Bernard Doro announced a monthly N50,000 NERSI relief while the ministry site FAQ called it one-off support into a mobile wallet (FIJ, 1 Nov 2026). After that story, FG removed the misleading one-off website wording (FIJ, 5 Nov 2026). **Variation:** a beneficiary evidence clock that freezes announcement screenshots, FAQ text, SMS sender IDs, and wallet credit terms before households plan monthly budgets.
+- **Complaint citations:** FIJ, https://fij.ng/article/fg-promised-monthly-n50000-relief-to-nigerians-but-ministry-website-shows-one-off-payment/ (1 Nov 2026). FIJ follow-up, https://fij.ng/article/after-fijs-story-fg-removes-misleading-one-off-description-of-n50000-relief-from-website/ (5 Nov 2026). Success signal: ALAT (Wema), MoMo PSB, and NairaGram are named official NERSI payment providers in that reporting.
 - **Solution:**
-  - **Established solution:** Benefits.gov / SNAP eligibility explainer tools (developed-market benefits-clarity software).
-  - **Variant:** NERSI Monthly vs OneOff Evidence Clock, the Nigeria version of that clarity tool. It stores announcement vs wallet-terms evidence and phase SMS logs for NERSI beneficiaries. It is not a Humanitarian Ministry, NASSCO, or wallet-operator portal.
+  - **Established solution:** Benefits.gov (developed-market benefits-clarity software).
+  - **Variant:** NERSI Monthly vs OneOff Evidence Clock, the Nigeria version of that software. It stores announcement versus wallet-terms evidence and phase SMS logs for NERSI beneficiaries. It is not a Humanitarian Ministry, NASSCO, or wallet-operator portal.
 - **Target:** Vulnerable households selected on the National Social Register, NGO case workers, LGA social-welfare desks verifying claims.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not FMHAPR/NERSI official; not legal advice; NDPA for beneficiary IDs.
@@ -119,8 +118,7 @@
   - **ALAT / MoMo / NairaGram support** — payment ops only. Why a Nigeria buyer might still choose this idea: announcement-vs-terms mismatch clock.
   - **FG N70k Transport Payment Floor Desk (prior)** — transport allowance floor. Why a Nigeria buyer might still choose this idea: **NERSI monthly vs one-off** job.
   - **NGO helpdesks** — uneven coverage. Why a Nigeria buyer might still choose this idea: self-serve Naira pack.
-- **GUEMF (Mode B):** 5/5/4/4/5 = **23**.
-- **Complaint citations:** FIJ — https://fij.ng/article/fg-promised-monthly-n50000-relief-to-nigerians-but-ministry-website-shows-one-off-payment/ (1 Nov 2026); FIJ follow-up — https://fij.ng/article/after-fijs-story-fg-removes-misleading-one-off-description-of-n50000-relief-from-website/ (5 Nov 2026).
+- **GUEMF:** Mode B **5/5/4/4/5 = 23**.
 - **Commercial viability:** High — cash-transfer confusion at national scale.
 - **Dedup:** High vs N70k Transport / CREDICORP SPARK USSD Live.
 - **Founder fit:** Strong.
@@ -129,8 +127,8 @@
 
 - **Problem / trend:** Nairametrics (7 Nov 2026) and BusinessDay (6 Nov 2026): FG/Customs began releasing **98 of over 300** containers of transmission equipment (transformers, cables, switchgear) stranded at Lagos ports for **14–20 years**. Engineers must verify, test, and refurbish before deployment to corridors including Kaduna, Ajaokuta, Lokoja, and Enugu; **200+** containers remain. Contractors and community boards lack a public deploy-readiness clock.
 - **Solution:**
-  - **Established solution:** SAP Project System / Primavera (developed-market project deployment software).
-  - **Variant:** StrandedTx 98Container Deploy Clock, the Nigeria version of that project clock for released vs remaining transmission containers. It tracks release batches, inspection status, and site allocation without claiming Customs clearance authority.
+  - **Established solution:** Oracle Primavera P6 (developed-market project deployment software).
+  - **Variant:** StrandedTx 98Container Deploy Clock, the Nigeria version of that software for released versus remaining transmission containers. It tracks release batches, inspection status, and site allocation without claiming Customs clearance authority.
 - **Target:** Transmission EPC subcontractors, state power desks, community advocacy boards near overloaded substations, investigative journalists.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not Customs, Power Ministry, or TCN official; not procurement advice.
@@ -139,7 +137,7 @@
   - **Big EPC PMO tools** — heavy; not public. Why a Nigeria buyer might still choose this idea: Naira micro-desk for SMEs/boards.
   - **LocalMeter VendorFinance Ready Pack (prior)** — meter financing. Why a Nigeria buyer might still choose this idea: **20-year stranded container release** job.
   - **CoastalHighway Section3yr Evidence Pack (prior)** — road corridor. Why a Nigeria buyer might still choose this idea: transmission container deploy clock.
-- **GUEMF (Mode B):** 5/4/5/4/4 = **22**.
+- **GUEMF:** Mode B 5/4/5/4/4 = **22**.
 - **Evidence:** Nairametrics — https://nairametrics.com/2026/11/07/fg-releases-98-of-300-containers-of-power-equipment-stranded-for-20-years/ ; BusinessDay — https://businessday.ng/news/article/nigeria-customs-begins-clearing-power-equipment-trapped-at-lagos-ports-for-20-years/
 - **Commercial viability:** Medium-high — consultant/EPC WTP around release wave.
 - **Dedup:** High vs LocalMeter / CoastalHighway / Summit BandA.
@@ -149,8 +147,8 @@
 
 - **Problem / trend:** Nairametrics and BusinessDay (7 Nov 2026): Enugu Air will commence **four weekly** London Gatwick operations on **10 December 2026**, tickets on sale, using an Airbus A330-200 on ACMI from EuroAtlantic via partnership with Omni-Blu Aviation, with Enugu passengers starting at Akanu Ibiam. New-route launches historically attract fake booking pages and confused wet-lease branding.
 - **Solution:**
-  - **Established solution:** FlightAware / airline official-channel booking checkers (developed-market travel verification software).
-  - **Variant:** Enugu Air Gatwick Dec10 Booking Verify Desk, the Nigeria version of that checker. It verifies official booking domains, operator names (Enugu Air / Omni-Blu / EuroAtlantic ACMI), and schedule windows before card payment. It is not an airline or NCAA ticket desk.
+  - **Established solution:** FlightAware (developed-market flight and schedule verification software).
+  - **Variant:** Enugu Air Gatwick Dec10 Booking Verify Desk, the Nigeria version of that software. It verifies official booking domains, operator names (Enugu Air, Omni-Blu, EuroAtlantic ACMI), and schedule windows before card payment. It is not an airline or NCAA ticket desk.
 - **Target:** Southeast diaspora families, Lagos–London travellers comparing Gatwick options, travel agents onboarding the new carrier.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NCAA, FAAN, or airline official; not a ticket reseller; NDPA for passenger fields.
@@ -159,7 +157,7 @@
   - **OTA aggregators** — convenient; may lag new ACMI routes. Why a Nigeria buyer might still choose this idea: Dec 10 launch-specific verify.
   - **UnitedNigeria Airline CP Diligence Pack (prior)** — CP/investor diligence. Why a Nigeria buyer might still choose this idea: **passenger booking verify** for Enugu Air Gatwick.
   - **Travel agents WhatsApp** — human; uneven. Why a Nigeria buyer might still choose this idea: self-serve checklist.
-- **GUEMF (Mode B):** 5/5/3/3/4 = **20**.
+- **GUEMF:** Mode B 5/5/3/3/4 = **20**.
 - **Evidence:** Nairametrics — https://nairametrics.com/2026/11/07/enugu-air-launches-four-weekly-direct-flights-to-london-gatwick-from-december-10/ ; BusinessDay — https://businessday.ng/aviation/article/enugu-airs-london-gatwick-flights-begin-december-10-tickets-now-on-sale/
 - **Commercial viability:** Medium-high — launch window through Dec 10.
 - **Dedup:** High vs UnitedNigeria CP / AutoNARP.
@@ -169,8 +167,8 @@
 
 - **Problem / trend:** Nairametrics (7 Nov 2026): banking-system SDF balances rose to **N8.311 trillion** even after CBN allotted **N724.32 billion** at the 6 Nov OMO auction (1.89× bid-to-cover, selective allotment leaving N1.163tn unallocated). Treasurers need a same-week board that separates parked SDF cash from OMO stop-rate selectivity ahead of the week of 9 Nov.
 - **Solution:**
-  - **Established solution:** Bloomberg OMO / liquidity dashboards (developed-market rates software).
-  - **Variant:** Banks SDF 8.31tn OMO Selectivity Board, the Nigeria version of that board for bank treasury and corporate IR teams, with Naira SDF/OMO snapshots. It is not a CBN trading desk.
+  - **Established solution:** Bloomberg Terminal (developed-market rates and liquidity software).
+  - **Variant:** Banks SDF 8.31tn OMO Selectivity Board, the Nigeria version of that software for bank treasury and corporate IR teams, with Naira SDF and OMO snapshots. It is not a CBN trading desk.
 - **Target:** Bank ALM desks, corporate treasurers, fixed-income PMs, financial journalists.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Not investment advice; not CBN official.
@@ -179,7 +177,7 @@
   - **OMO N2.63tn Overallot Rate Desk (prior)** — prior auction overallot story. Why a Nigeria buyer might still choose this idea: **SDF N8.31tn + N724bn selective allotment** week.
   - **PublicDeposit CRR75 Liquidity Stress Board (prior)** — CRR stress. Why a Nigeria buyer might still choose this idea: SDF vs OMO selectivity job.
   - **Bloomberg terminals** — global; costly. Why a Nigeria buyer might still choose this idea: Nigeria-first Naira micro-board.
-- **GUEMF (Mode B):** 5/4/4/3/4 = **20**.
+- **GUEMF:** Mode B 5/4/4/3/4 = **20**.
 - **Evidence:** Nairametrics — https://nairametrics.com/2026/11/07/banks-park-n8-31-trillion-at-cbn-despite-n724-billion-omo-mop-up/
 - **Commercial viability:** Medium — treasury niche with recurring auction weeks.
 - **Dedup:** High vs OMO Overallot / CRR75 / FMDQ concentration desks.
@@ -189,8 +187,8 @@
 
 - **Problem / trend:** BusinessDay (8 Nov 2026): Lagos Free Zone MD Adesuwa Ladoja, at the Nigeria–Belgium–Luxembourg Business Forum (Brussels, 28–30 Oct 2026), invited European manufacturers into LFZ serviced land, ready-builts, utilities, Lekki Deep Sea Port access, and regulator facilitation for local manufacturing and agro-processing. Nigerian JV partners still lack a one-pack EU factory readiness checklist (standards, power, port, NEPZA steps).
 - **Solution:**
-  - **Established solution:** Jebel Ali / Shannon Free Zone investor readiness kits (developed-market SEZ software/playbooks).
-  - **Variant:** Lagos Free Zone EU Factory Ready Pack, the Nigeria version of that readiness kit for Belgium/Luxembourg and Nigerian JV teams evaluating LFZ. It is not NEPZA or LFZ official.
+  - **Established solution:** ZoomProspector (developed-market site-selection software).
+  - **Variant:** Lagos Free Zone EU Factory Ready Pack, the Nigeria version of that software for Belgium, Luxembourg, and Nigerian JV teams evaluating LFZ. It logs serviced land, power, Lekki port access, and NEPZA steps. It is not NEPZA or LFZ official.
 - **Target:** EU mid-size manufacturers scouting Nigeria, Nigerian JV partners, agro-processors seeking port-integrated sites.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NEPZA/LFZ/Customs official; not investment advice.
@@ -199,7 +197,7 @@
   - **Big Four location studies** — thorough; expensive. Why a Nigeria buyer might still choose this idea: Naira micro-pack.
   - **ChinaCrossBorder Pay Prep Desk (prior)** — China payments. Why a Nigeria buyer might still choose this idea: **Belgium/Luxembourg LFZ factory** job.
   - **LocalSourcing FX Cut Evidence Pack (prior)** — FX sourcing. Why a Nigeria buyer might still choose this idea: SEZ factory site readiness.
-- **GUEMF (Mode B):** 5/3/4/3/3 = **18**.
+- **GUEMF:** Mode B 5/3/4/3/3 = **18**.
 - **Evidence:** BusinessDay — https://businessday.ng/life/article/lagos-free-zone-courts-european-manufacturers-for-industrial-investments-in-nigeria/ ; ThisDay — https://www.thisdaylive.com/2026/11/06/lfz-courts-european-manufacturers-for-industrial-investments-in-nigeria/
 - **Commercial viability:** Medium — early courtship, longer sales cycle.
 - **Dedup:** High vs ChinaCrossBorder / LocalSourcing / India export drive notes.
@@ -207,12 +205,11 @@
 
 ### 8. Michael Ugboma Bed Delivery Escrow Clock — Instagram furniture non-delivery evidence (S1)
 
-- **Formula (S1):** Successful business **Instagram** (mass social-commerce discovery surface in Nigeria) + recurring complaint that sellers collect large deposits for furniture/home goods then stall for months = profitable variation: bed/furniture delivery escrow + evidence clock (deposit timeline, WhatsApp excuses, delivery SLA) distinct from thrift-camera scams.
-- **Problem:** FIJ (7 Nov 2026): Rapper Michael Ugboma Uchechukwu allegedly collected a Lagos woman’s **N175,000** for a bed and made excuses for **10 months** instead of delivering. Pattern matches social-commerce non-delivery where buyers lack structured evidence packs for police/FCCPC.
-- **Success signal:** Instagram remains a primary discovery channel for Nigeria home-goods and thrift commerce (FIJ’s own social-commerce investigations treat it as the default marketplace surface).
+- **Formula:** **Successful business:** Instagram (mass social-commerce discovery surface in Nigeria). **Recurring complaint:** sellers collect large deposits for furniture and home goods, then stall for months. FIJ (7 Nov 2026) reported that rapper Michael Ugboma Uchechukwu allegedly collected a Lagos woman’s N175,000 for a bed and made excuses for 10 months instead of delivering. **Variation:** a bed and furniture delivery escrow with an evidence clock for the deposit, WhatsApp excuses, and the delivery date, distinct from thrift-camera scams.
+- **Complaint citations:** FIJ, https://fij.ng/article/rapper-michael-ugboma-uchechukwu-collects-lagos-womans-n175000-but-makes-excuses-throughout-10-months-instead-of-delivering-bed/ (7 Nov 2026). Success signal: Instagram remains a primary discovery channel for Nigeria home-goods commerce in that reporting.
 - **Solution:**
-  - **Established solution:** Escrow.com / PayPal Goods & Services (developed-market escrow software).
-  - **Variant:** Michael Ugboma Bed Delivery Escrow Clock, the Nigeria version of that escrow pattern for Instagram/WhatsApp furniture orders. It logs deposit proofs, promised delivery dates, and excuse timelines. It is not Instagram, Paystack, or a bank.
+  - **Established solution:** PayPal Goods & Services (developed-market buyer-protection software).
+  - **Variant:** Michael Ugboma Bed Delivery Escrow Clock, the Nigeria version of that software for Instagram and WhatsApp furniture orders. It logs deposit proofs, promised delivery dates, and excuse timelines. It is not Instagram, Paystack, or a bank.
 - **Target:** Lagos furniture/home-goods buyers using Instagram/WhatsApp sellers, FCCPC complainants, small interior vendors wanting trust signals.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not police/EFCC/FCCPC official; not legal practice; NDPA for chat exports.
@@ -221,8 +218,7 @@
   - **Jumia / Konga** — formal marketplace; higher prices. Why a Nigeria buyer might still choose this idea: Instagram-native furniture deal flow.
   - **Instagram Thrift Escrow Spot Desk / Thriftsmugg (prior)** — thrift camera scam. Why a Nigeria buyer might still choose this idea: **bed/furniture 10-month non-delivery** job.
   - **Police report DIY** — slow without evidence pack. Why a Nigeria buyer might still choose this idea: pre-built timeline pack.
-- **GUEMF (Mode B):** 4/4/4/2/4 = **18**.
-- **Complaint citation:** FIJ — https://fij.ng/article/rapper-michael-ugboma-uchechukwu-collects-lagos-womans-n175000-but-makes-excuses-throughout-10-months-instead-of-delivering-bed/ (7 Nov 2026).
+- **GUEMF:** Mode B **4/4/4/2/4 = 18**.
 - **Commercial viability:** Medium — high complaint volume, escrow trust needed.
 - **Dedup:** High vs Thriftsmugg camera escrow / Jumia VoucherCancel.
 - **Founder fit:** Good.
@@ -231,8 +227,8 @@
 
 - **Problem / trend:** Product Hunt (6 Nov 2026): **Capnot** — “Make Screen Demos Clear, Even on Mute.” Nigeria SME sellers demo products on WhatsApp/Instagram where sound is often off on mobile data; silent demos lose conversion.
 - **Solution:**
-  - **Established solution:** Capnot / Loom captioned demo tools (developed-market demo software).
-  - **Variant:** Capnot MuteDemo NG Lite, the Nigeria version of mute-safe demos with Naira pricing, low-bandwidth exports, and WhatsApp-first share. It is not Capnot itself.
+  - **Established solution:** Capnot (developed-market mute-safe screen-demo software).
+  - **Variant:** Capnot MuteDemo NG Lite, the Nigeria version of that software. It prices in Naira, exports a low-bandwidth file, and shares first on WhatsApp. It is not Capnot itself.
 - **Target:** Instagram/WhatsApp merchants, PoS trainers, fintech onboarding teams.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for recorded demos; not a payments licence.
@@ -241,7 +237,7 @@
   - **Loom / CapCut DIY** — capable; cluttered for mute-only job. Why a Nigeria buyer might still choose this idea: single mute-safe checklist.
   - **Kivo Dictation NG Lite (prior)** — dictation. Why a Nigeria buyer might still choose this idea: **mute product-demo** job.
   - **Phone screen-record DIY** — free; no captions/checklist. Why a Nigeria buyer might still choose this idea: guided mute demo pack.
-- **GUEMF (Mode B):** 4/3/3/2/4 = **16**.
+- **GUEMF:** Mode B 4/3/3/2/4 = **16**.
 - **Evidence:** Product Hunt Capnot — https://www.producthunt.com/products/capnot
 - **Commercial viability:** Medium — clear SME pain, crowded creator tools.
 - **Dedup:** Medium-high vs Kivo Dictation / Onepin VoiceReceipt.
@@ -251,8 +247,8 @@
 
 - **Problem / trend:** BusinessDay (3 Nov 2026): GTBank cut energy expenses ~**5%** in H1 2026 to N9.01bn via rooftop solar across branches, while many listed peers saw energy bills jump **>60%** on petrol/diesel (~N1,333/L petrol, ~N1,858/L diesel cited). Multi-branch SMEs and MFBs still lack a simple Capex→savings brief tied to Nigeria retail fuel prices.
 - **Solution:**
-  - **Established solution:** HelioScope / EnergySage commercial solar estimators (developed-market solar software).
-  - **Variant:** GTBank Solar Branch Capex Brief, the Nigeria version of that estimator for branch networks, using public bank energy-cost contrasts and local fuel prices. It is not GTBank or a DisCo product.
+  - **Established solution:** HelioScope (developed-market commercial solar design software).
+  - **Variant:** GTBank Solar Branch Capex Brief, the Nigeria version of that software for branch networks. It uses public bank energy-cost contrasts and local fuel prices. It is not GTBank or a DisCo product.
 - **Target:** Multi-branch retailers, MFBs, clinic chains, school groups.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Not NERC/SON metering official; not investment advice.
@@ -261,7 +257,7 @@
   - **GTBank sustainability notes** — bank-specific. Why a Nigeria buyer might still choose this idea: peer-branch savings template for other operators.
   - **PowerGen 2692 BlameChain (this run)** — outage blame. Why a Nigeria buyer might still choose this idea: **solar Capex savings** job.
   - **Excel fuel logs** — common; weak Capex framing. Why a Nigeria buyer might still choose this idea: filled brief with citeable peer example.
-- **GUEMF (Mode B):** 4/3/4/2/3 = **16**.
+- **GUEMF:** Mode B 4/3/4/2/3 = **16**.
 - **Evidence:** BusinessDay — https://businessday.ng/companies/article/solar-power-shields-gtbank-from-nigerias-soaring-energy-costs/
 - **Commercial viability:** Medium — clear cost story, longer sales cycle.
 - **Dedup:** High vs generic solar pitches / CNG station desks.
@@ -271,8 +267,8 @@
 
 - **Problem / trend:** FIJ (6 Nov 2026): MundX Analytics volunteer audit found **453** more polling-unit records and **83,938** more voter entries than INEC’s published preliminary figures; INEC says final Register of Voters certification is due **15 December 2026**. Civic groups need a lightweight gap tracker, not a parallel voter register.
 - **Solution:**
-  - **Established solution:** Democracy Works / election-monitor dashboards (developed-market election software).
-  - **Variant:** INEC Register Excess Watch Lite, the Nigeria version of that monitor for civic groups tracking preliminary vs volunteer-count gaps through 15 Dec. It is not an INEC portal.
+  - **Established solution:** Democracy Works (developed-market election information software).
+  - **Variant:** INEC Register Excess Watch Lite, the Nigeria version of that software for civic groups tracking preliminary versus volunteer-count gaps through 15 Dec. It is not an INEC portal.
 - **Target:** Civic tech groups, party agents, journalists, university election clubs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Civic education only — not INEC official; not a voter register; NDPA for any personal data (prefer aggregates).
@@ -281,7 +277,7 @@
   - **MundX reports** — source; not a recurring desk product. Why a Nigeria buyer might still choose this idea: countdown-to-15-Dec pack.
   - **Party war rooms** — closed. Why a Nigeria buyer might still choose this idea: public civic lite tool.
   - **Excel volunteer sheets** — fragile. Why a Nigeria buyer might still choose this idea: shared gap dashboard.
-- **GUEMF (Mode B):** 4/3/3/3/3 = **16**.
+- **GUEMF:** Mode B 4/3/3/3/3 = **16**.
 - **Evidence:** FIJ — https://fij.ng/article/voluteers-audited-inecs-register-they-found-excess-of-453-polling-units-83938-voter-entries/
 - **Commercial viability:** Medium niche — grant/civic funding more likely than SME SaaS.
 - **Dedup:** High vs generic election tools.
@@ -291,8 +287,8 @@
 
 - **Problem / trend:** Product Hunt (3 Nov 2026): **Fleeep** — “The notes app for people who make things.” Nigeria hardware/software makers still juggle WhatsApp + Google Docs for build notes across unreliable connectivity.
 - **Solution:**
-  - **Established solution:** Fleeep / Notion maker workspaces (developed-market notes software).
-  - **Variant:** Fleeep MakerNotes NG Lite, the Nigeria version with offline-first sync and Naira pricing for small maker teams. It is not Fleeep itself.
+  - **Established solution:** Fleeep (developed-market maker-notes software).
+  - **Variant:** Fleeep MakerNotes NG Lite, the Nigeria version of that software. It syncs offline-first and prices in Naira for small maker teams. It is not Fleeep itself.
 - **Target:** Hardware startups, FabLab users, indie game/app makers.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** NDPA for notes content.
@@ -301,7 +297,7 @@
   - **WhatsApp DIY** — ubiquitous; unsearchable. Why a Nigeria buyer might still choose this idea: structured maker notes.
   - **Google Docs** — common; poor offline on mobile data. Why a Nigeria buyer might still choose this idea: maker-specific templates.
   - **Capnot MuteDemo NG Lite (this run)** — demos. Why a Nigeria buyer might still choose this idea: **build notes** job.
-- **GUEMF (Mode B):** 3/2/2/1/3 = **11**.
+- **GUEMF:** Mode B 3/2/2/1/3 = **11**.
 - **Evidence:** Product Hunt Fleeep — https://www.producthunt.com/products/fleeep
 - **Commercial viability:** Low-medium — crowded notes category.
 - **Dedup:** Medium vs prior note/dictation adaptations.
@@ -339,7 +335,11 @@
 | **14** OWID / macro | **ran** | OWID internet + renewable topic fetches **200**; used as soft context for energy/solar ideas. |
 | **15** Telecom figures | **skipped** | Default skip (no `--with-strategy15`). |
 
-**Data freshness:** Fetch JSON timestamp `20261108_060232` UTC. Soft-fails: Techpoint/FN empty RSS; StartupList 429; Trustpilot/Cable not used.
+**Data freshness:** Fetch JSON timestamp `20261108_060232` UTC. Soft-fails: Techpoint/FN empty RSS, StartupList 429, Trustpilot/Cable not used.
+
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-11-08. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
 
 ---
 
@@ -347,15 +347,11 @@
 
 | When | Step |
 |------|------|
-| **2026-11-08 (today)** | Pass 2 Pack: paste `prompts/agent_formulation_pack.txt` against this same file; normalize section-14 subheads; optional `idea_card_schema.py`; one-shot in-repo Docx only. |
+| **2026-11-08** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, Established solution and Variant). | |
 | **By 2026-11-10** | Spot-check NTI cancel still stands; confirm no 2026 intake reopen before marketing the stop-pay desk. |
 | **By 2026-11-11** | Re-check generation/NISO/NNPC statements after the minister’s 48–72h window; refresh BlameChain cites if narrative shifts. |
 | **By 2026-11-12** | NERSI: confirm current ministry FAQ wording (monthly vs one-off) still matches FIJ follow-up. |
 | **By 2026-12-08** | Enugu Air: verify Dec 10 Gatwick ops still on sale via official channels before booking-verify MVP copy. |
 | **By 2026-12-15** | INEC: final Register certification date — update Excess Watch Lite or park. |
 
-**Pass 2 pack is required before Docx.** Do not treat Word as final until Automation B / Hub Pass 2 packs this draft.
-
----
-
-_PENDING_PASS_2_PACK_
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
