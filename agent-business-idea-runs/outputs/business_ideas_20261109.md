@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-09 ~06:00–08:00 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-11-09 ~06:00-08:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-11-09 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261109.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261109_060330.json` (`strategy_12_run` **ok** Mode B aid only; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-11-08 (esp. NTI 2026 Admissions Cancel Desk, PowerGen 2692 BlameChain Evidence Desk, NERSI Monthly vs OneOff Evidence Clock, StrandedTx 98Container Deploy Clock, Enugu Air Gatwick Dec10 Booking Verify Desk, TRCN 75% ExamCentre Dec11 Desk, SEC NigSac Freeze Ready Desk, Jumia VoucherCancel Evidence Clock, TCN×Ikeja Feeder Blame Evidence Desk, CREDICORP SPARK USSD Live Desk, Lagos Energy Summit BandA Evidence Desk, Airtel Dividend Currency Election Desk, UBA FakeDomain Phish Verify Desk, Moniepoint 17Month WrongPOS Recall Clock, BOI DSRA Debit Control Pack, DataLocal Jan2027 Capacity Crisis Pack); older `business_ideas_20261011.md` / `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,17 +67,17 @@
 
 ### 1. GasFlare IdlePlant Evidence Desk — flare-up vs idle-plant board for SME energy decisions (**S12 Mode A**)
 
-- **Problem:** BusinessDay (9 Nov 2026): Nigeria’s gas endowment is not reaching GenCos — grid print ~**1,232.10 MW** at 9 a.m. Friday with **25 of 33** listed plants at zero output, while associated-gas flaring rose a third straight year to an estimated **323.2 mscf** in 2025 (NOSDRA / Oil Spill Monitor). Households and SMEs in Lagos, Abuja, Ogun, Kwara and Oyo report longer outages even as Decade of Gas messaging continues.
+- **Problem / trend:** BusinessDay (9 Nov 2026): Nigeria’s gas endowment is not reaching GenCos — grid print ~**1,232.10 MW** at 9 a.m. Friday with **25 of 33** listed plants at zero output, while associated-gas flaring rose a third straight year to an estimated **323.2 mscf** in 2025 (NOSDRA / Oil Spill Monitor). Households and SMEs in Lagos, Abuja, Ogun, Kwara and Oyo report longer outages even as Decade of Gas messaging continues.
 - **Solution:**
-  - **Established solution:** Grid/outage dashboards and energy-procurement suites used by commercial sites in developed markets (software).
-  - **Variant:** Nigeria SME board that pairs a dated plant-idle snapshot with flare/penalty context and a captive/CNG/generator decision checklist in Naira terms (software + optional field meter note sheet).
+  - **Established solution:** FlareIntel by Capterio (developed-market gas-flaring analytics software).
+  - **Variant:** GasFlare IdlePlant Evidence Desk, the Nigeria version of that software for factory and cold-chain SMEs. It pairs a dated plant-idle snapshot with flare context and a captive, CNG, or generator decision in Naira. It is not an NUPRC, NGFCP, NISO, or DisCo portal.
 - **Target:** Factory/warehouse SMEs, cold-chain operators, and boutique energy consultants deciding whether to wait on grid gas or fund captive options.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NUPRC, NGFCP, NISO, or DisCo official; not investment or engineering certification.
 - **Competitors / alternatives:**
   - **NISO / GenCo WhatsApp updates** — official fragments; hard to archive. Why a Nigeria buyer might still choose this idea: one dated idle-vs-flare board.
   - **PowerGen 2692 BlameChain Evidence Desk (prior)** — generation blame / sabotage narrative. Why a Nigeria buyer might still choose this idea: **25/33 idle + flaring soar** job, not the 2,692 MW blame chain.
-  - **DIY spreadsheet + Twitter screenshots** — free; decays fast. Why a Nigeria buyer might still choose this idea: structured handoff PDF.
+  - **DIY spreadsheet + Twitter screenshots** — free, decays fast. Why a Nigeria buyer might still choose this idea: a dated software board a consultant can reuse.
   - **Big energy consultancies** — expensive. Why a Nigeria buyer might still choose this idea: Naira micro-desk.
 - **GUEMF:** Mode A **5/5/5/4/5 = 24** (Growing outage chatter; Urgent weekly blackouts; Expensive diesel/CNG wrong-bets; Near-mandatory fuel decisions for continuous ops; Frequent plant-idle prints). Evidence: BusinessDay — https://businessday.ng/energy/oilandgas/article/gas-rich-nigeria-watches-flaring-soar-as-households-endure-darkness/
 - **Commercial viability:** High — named idle count + multi-year flare rise.
@@ -86,15 +86,15 @@
 
 ### 2. InfraGrow WB Timing Diligence Desk — $500m platform calendar vs inauguration window (**S12 Mode A**)
 
-- **Problem:** Punch (9 Nov 2026): FG seeks a fresh **$500m** World Bank facility for the Nigeria Infrastructure Financing and De-Risking Platform (**INFRAGROW**) under a wider ~**$3.85bn** structure. Finance is borrower; **NSIA** is implementing agency. World Bank PID (updated 4 Nov 2026) schedules technical design review **21 Jan 2027** and estimated approval **25 May 2027** — four days before the constitutional **29 May 2027** inauguration — while the annual infrastructure gap is cited at ~**$100bn**.
+- **Problem / trend:** Punch (9 Nov 2026): FG seeks a fresh **$500m** World Bank facility for the Nigeria Infrastructure Financing and De-Risking Platform (**INFRAGROW**) under a wider ~**$3.85bn** structure. Finance is borrower; **NSIA** is implementing agency. World Bank PID (updated 4 Nov 2026) schedules technical design review **21 Jan 2027** and estimated approval **25 May 2027** — four days before the constitutional **29 May 2027** inauguration — while the annual infrastructure gap is cited at ~**$100bn**.
 - **Solution:**
-  - **Established solution:** Infrastructure project-finance data rooms and milestone calendars used by sponsors in developed markets (software).
-  - **Variant:** Nigeria sponsor pack that maps WB/NSIA milestones, equity asks, and political-calendar risk into a single diligence PDF without brokering the loan (software).
+  - **Established solution:** Datasite (developed-market virtual data-room software).
+  - **Variant:** InfraGrow WB Timing Diligence Desk, the Nigeria version of that software for mid-ticket sponsors. It maps World Bank and NSIA milestones, equity asks, and the May 2027 approval window. It does not broker the loan, and it is not a World Bank, NSIA, DMO, or Ministry of Finance portal.
 - **Target:** Mid-ticket infra SPVs, state PPP desks, and boutique arrangers preparing INFRAGROW-adjacent pipelines.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational only — not World Bank, NSIA, DMO, or MoF official; not investment advice.
 - **Competitors / alternatives:**
-  - **World Bank PID DIY** — free; dense. Why a Nigeria buyer might still choose this idea: filled timing checklist.
+  - **World Bank PID DIY** — free, dense. Why a Nigeria buyer might still choose this idea: a filled timing board in software.
   - **MissingMiddle Bundle Pack (prior)** — mid-ticket aggregation. Why a Nigeria buyer might still choose this idea: **named $500m INFRAGROW + May 2027 approval window** job.
   - **Big Four project finance** — expensive. Why a Nigeria buyer might still choose this idea: Naira micro-desk.
   - **WhatsApp term sheets** — common; fail institutional screens. Why a Nigeria buyer might still choose this idea: dated milestone board.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** United Bank for Africa (mass Nigeria retail/mobile banking). **Recurring complaint:** customer receives two unauthorised transfers totaling ~**N200,107** to a SportyBet wallet they never used; bank first sets a **23-working-day** clock, then says login details were compromised and “there is nothing UBA can do.” **Variation:** Strange betting-merchant debit → wait-clock → liability-refusal evidence pack — not UBA FakeDomain Phish Verify (domain spoof) and not UBA×OPay PoS WrongCredit.
 - **Complaint citations:** FIJ — https://fij.ng/article/uba-tells-artisan-theres-nothing-we-can-do-after-strange-n200000-sportybet-debit/ (artisan Clancy Owie; twin N100k SportyBet debits; “nothing we can do” after wait). Earlier wait story: https://fij.ng/article/uba-tells-artisan-to-wait-23-working-days-before-reversing-strange-sportybet-n200000-transaction/ (23-working-day instruction). Follow-up distress: https://fij.ng/article/artisan-in-distress-as-uba-insists-on-23-day-wait-to-reverse-strange-n200000-sportybet-debit/
 - **Solution:**
-  - **Established solution:** Consumer dispute / chargeback evidence apps used with card networks in developed markets (software).
-  - **Variant:** Nigeria bank→betting-merchant debit clock that timestamps alerts, wait promises, and liability refusals for CBN CPD / bank dispute notes (software).
+  - **Established solution:** Ethoca Alerts (developed-market unauthorized-transaction alert software).
+  - **Variant:** UBA SportyBet StrangeDebit Clock, the Nigeria version of that software for retail customers. It timestamps unauthorised betting-merchant debits, the 23-working-day wait, and the liability refusal for a CBN consumer-protection note. It is not a UBA or SportyBet portal, and it is not legal practice.
 - **Target:** Retail banking customers hit with unauthorised transfers into betting wallets.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not UBA or SportyBet official.
@@ -127,13 +127,13 @@
 
 - **Problem / trend:** Punch (9 Nov 2026): APC PCC / Minister Alake says the **203 km** Kaduna–Zaria–Kano SGR is ~**90%** complete, with President Tinubu set to inaugurate the completed **190 km** Jaji–Kano section on **3 Dec 2026** (and a **250 km** Dawanu–Katsina section of Kano–Maradi at **70%**). Outstanding Kaduna metropolis land acquisition/compensation was flagged for immediate resolution.
 - **Solution:**
-  - **Established solution:** Construction readiness / go-live checklists used by corridor operators in developed markets (software).
-  - **Variant:** Nigeria corridor SME pack covering inauguration date, compensation open items, and passenger/freight ops questions in plain Naira English (software).
+  - **Established solution:** Procore (developed-market construction readiness software).
+  - **Variant:** KadunaKano Rail Dec3 Ready Desk, the Nigeria version of that software for corridor logistics and warehouse SMEs. It tracks the 3 Dec 2026 inauguration window, open land-compensation items, and passenger or freight questions in plain language and Naira. It is not an NRC or Ministry of Transport portal.
 - **Target:** Logistics SMEs, hotel/warehouse operators along Kaduna–Zaria–Kano, and local governments preparing for Dec traffic.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NRC, MoT, or APC PCC official.
 - **Competitors / alternatives:**
-  - **MoT / NRC press DIY** — free; sparse ops UX. Why a Nigeria buyer might still choose this idea: filled Dec 3 checklist.
+  - **MoT / NRC press DIY** — free, sparse ops detail. Why a Nigeria buyer might still choose this idea: a filled Dec 3 readiness record in software.
   - **CoastalHighway Section3yr Evidence Pack (prior)** — coastal highway evidence. Why a Nigeria buyer might still choose this idea: **Kaduna–Kano Dec 3 inauguration** job.
   - **Big infra consultancies** — expensive. Why a Nigeria buyer might still choose this idea: Naira micro-desk.
   - **WhatsApp rumour threads** — common. Why a Nigeria buyer might still choose this idea: dated source board.
@@ -147,8 +147,8 @@
 - **Formula:** **Successful business:** Union Bank of Nigeria (mass Nigeria retail bank with on-premise ATMs). **Recurring complaint:** after a Union Bank ATM retains an elderly customer’s debit card and staff say retrieval waits until Monday, a rapid stream of unauthorised debits drains ~**N2.38m** while USSD block codes fail and the official call line rejects the caller. **Variation:** ATM retain → velocity alerts → channel-failure evidence clock — not FirstBank×Paga PhoneUpdate Debit (phone-update remote debit) and not Zenith UnsolicitedOTP Debit.
 - **Complaint citations:** FIJ (7 Jul 2026) — https://fij.ng/article/union-bank-atm-trapped-80-year-old-pensioners-debit-card-someone-steals-n2-37m-from-his-account-afterwards/ (card retained at Union Bank ATM Jos; ~N2,379,984.88 velocity attack; failed USSD/call paths). Pattern piece: https://fij.ng/article/insertion-retraction-strange-debits-how-seconds-long-atm-fraud-on-bank-premises-puts-every-customer-at-risk/
 - **Solution:**
-  - **Established solution:** ATM dispute / card-fraud evidence workflows used by retail banks in developed markets (software).
-  - **Variant:** Nigeria ATM-retain timeline pack that logs retain message, staff assurance, velocity alerts, and failed block attempts for CPD/police notes (software).
+  - **Established solution:** FICO Falcon Fraud Manager (developed-market card and ATM fraud software).
+  - **Variant:** UnionBank ATM CardTrap Velocity Clock, the Nigeria version of that software for retail customers and families. It logs the card-retain message, the staff Monday assurance, the velocity debits, and failed USSD or call blocks. It is not a Union Bank portal, and it is not legal practice.
 - **Target:** Retail customers (especially pensioners/families) hit after on-premise card retention.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN e-payment / consumer-protection notes; NDPA; not legal practice; not Union Bank official.
@@ -166,8 +166,8 @@
 
 - **Problem / trend:** Nairametrics (8 Nov 2026): World Bank NDU *Beyond the Federal Purse* finds **26 of 34** states with data grew expenditure faster than revenue (2023–2025), median real spend growth ~**134%** vs revenue ~**79%**, with Abia, Kaduna, Benue and Gombe among the widest gaps.
 - **Solution:**
-  - **Established solution:** Subnational fiscal dashboards used by treasuries and rating desks in developed markets (software).
-  - **Variant:** Nigeria state board that compares spend vs revenue growth and flags IGR/FAAC concentration for SME contractors and local boards (software).
+  - **Established solution:** OpenGov (developed-market state and local fiscal software).
+  - **Variant:** StateSpend Gap Evidence Board, the Nigeria version of that software for contractor SMEs and civic-finance desks. It compares state spend growth with revenue growth and flags IGR and FAAC concentration. It is not a World Bank, DMO, or state Ministry of Finance portal.
 - **Target:** State treasury analysts, contractor SMEs bidding into state capex, and civic-finance desks.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only — not World Bank, DMO, or state MoF official.
@@ -185,8 +185,8 @@
 
 - **Problem / trend:** Vanguard (9 Nov 2026): food warehouses increasingly split **50 kg** sacks and full cartons into half/quarter wholesale tiers so undercapitalised retailers can restock rice, beans, garri, noodles and oil — while associations push digital scales at loading bays against weight disputes.
 - **Solution:**
-  - **Established solution:** Wholesale trade / weighbridge trust apps used in developed market produce depots (software + hardware scale integration).
-  - **Variant:** Nigeria half-bag ticket that logs scale reading, sealed weight, and dispute photo for market associations (software + optional Bluetooth scale).
+  - **Established solution:** METTLER TOLEDO IND780 (developed-market weighing terminal and software).
+  - **Variant:** HalfBag Wholesale Trust Desk, the Nigeria version of that product for market depots. It logs the scale reading, sealed weight, and dispute photo for half-bag and quarter-bag wholesale tiers, with an optional Bluetooth scale. It is not a SON enforcement tool.
 - **Target:** Corner-shop owners, market stall traders, and depot associations in major food markets.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational / weights-trust aid — not SON enforcement arm.
@@ -202,10 +202,10 @@
 
 ### 8. TaxOmbud Regional Ready Desk — 82% resolve rate → six-zone expansion pack (S5, S9, S12)
 
-- **Problem:** Punch (9 Nov 2026): Office of the Tax Ombud reports ~**82%** of taxpayer complaints resolved since inception and seeks presidential approval for **six** regional offices before end-2026, plus desks inside all **36** state tax authorities.
+- **Problem / trend:** Punch (9 Nov 2026): Office of the Tax Ombud reports ~**82%** of taxpayer complaints resolved since inception and seeks presidential approval for **six** regional offices before end-2026, plus desks inside all **36** state tax authorities.
 - **Solution:**
-  - **Established solution:** Tax ombuds / dispute-resolution intake portals in developed markets (software).
-  - **Variant:** Nigeria taxpayer pack that prepares complaint chronology and evidence before regional desks open (software).
+  - **Established solution:** Taxpayer Advocate Service (developed-market taxpayer complaint intake software).
+  - **Variant:** TaxOmbud Regional Ready Desk, the Nigeria version of that software for SMEs and individuals outside Abuja. It stores the complaint chronology and evidence before the six regional desks open. It is not a Tax Ombud or FIRS portal.
 - **Target:** SMEs and individuals with pending FIRS/state tax disputes outside Abuja.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not Tax Ombud or FIRS official.
@@ -213,7 +213,7 @@
   - **Tax Ombud channels DIY** — official; Abuja-centric today. Why a Nigeria buyer might still choose this idea: pre-desk evidence pack.
   - **Tax lawyer only** — expensive for mid disputes. Why a Nigeria buyer might still choose this idea: Naira first screen.
   - **Accountant WhatsApp** — uneven. Why a Nigeria buyer might still choose this idea: chronology template.
-  - **DIY Google Drive** — common. Why a Nigeria buyer might still choose this idea: checklist + export.
+  - **DIY Google Drive** — common. Why a Nigeria buyer might still choose this idea: a dated software export.
 - **GUEMF:** Mode B **4/4/3/4/4 = 19**. Evidence: Punch — https://punchng.com/tax-ombud-settles-82-of-cases-seeks-expansion/
 - **Commercial viability:** Medium — expansion still pending approval.
 - **Dedup:** High vs generic tax-filing aids.
@@ -221,10 +221,10 @@
 
 ### 9. DangoteIPO AccessGap NextOffer Desk — post-close access-literacy for the next retail IPO (S5, S9, S12)
 
-- **Problem:** BusinessDay (9 Nov 2026): Aliko Dangote says the refinery “People’s IPO” missed the **10 million** investor goal despite ~**N6.4tn** demand, citing time constraints and people who “didn’t know how to access,” after a Sep 14–Oct 27 window (min **N5,250** / 10 shares at **N525**).
+- **Problem / trend:** BusinessDay (9 Nov 2026): Aliko Dangote says the refinery “People’s IPO” missed the **10 million** investor goal despite ~**N6.4tn** demand, citing time constraints and people who “didn’t know how to access,” after a Sep 14–Oct 27 window (min **N5,250** / 10 shares at **N525**).
 - **Solution:**
-  - **Established solution:** Retail IPO onboarding / CSCS readiness tools in developed markets (software).
-  - **Variant:** Nigeria next-offer access checklist (CSCS, channel list, payment rail dry-run) taught from this access-gap post-mortem (software).
+  - **Established solution:** Computershare Investor Centre (developed-market retail shareholder access software).
+  - **Variant:** DangoteIPO AccessGap NextOffer Desk, the Nigeria version of that software for first-time investors. It walks CSCS readiness, offer channels, and a payment-rail dry run before the next mass IPO. It does not give investment advice, and it is not an SEC, NGX, or issuing-house portal.
 - **Target:** First-time retail investors and diaspora relatives preparing for the next mass IPO.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only — not SEC/NGX/issuing-house official; not investment advice.
@@ -240,15 +240,15 @@
 
 ### 10. Heych LocalGarment SME Link Pack — design-to-Lagos-factory supplier pack (S6, S7, S11)
 
-- **Problem / niche:** BusinessDay (9 Nov 2026): Alero Ebigbeyi’s **Heych** moves from design into Lagos garment manufacturing for affordable unisex RTW — highlighting the gap between creative brands and local cut-make-trim capacity. StartupList Africa directory fetch returned **429**, so niche synthesis uses PH + Nigeria press.
+- **Problem / trend:** BusinessDay (9 Nov 2026): Alero Ebigbeyi’s **Heych** moves from design into Lagos garment manufacturing for affordable unisex RTW — highlighting the gap between creative brands and local cut-make-trim capacity. StartupList Africa directory fetch returned **429**, so niche synthesis uses PH + Nigeria press.
 - **Solution:**
-  - **Established solution:** Apparel PLM / supplier-network tools used by fashion brands in developed markets (software).
-  - **Variant:** Nigeria micro-brand pack linking design brief → Lagos CMT capability sheet → sample cost in Naira (software).
+  - **Established solution:** Centric PLM (developed-market fashion product-lifecycle software).
+  - **Variant:** Heych LocalGarment SME Link Pack, the Nigeria version of that software for emerging labels and Lagos cut-make-trim workshops. It links a design brief to a local factory capability record and a sample cost in Naira. It is not a SON or fashion-council licence.
 - **Target:** Emerging fashion labels and small CMT workshops seeking buyer-ready capability sheets.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not SON or fashion-council licensing.
 - **Competitors / alternatives:**
-  - **WhatsApp tailor networks** — common; weak docs. Why a Nigeria buyer might still choose this idea: capability one-pager.
+  - **WhatsApp tailor networks** — common, weak docs. Why a Nigeria buyer might still choose this idea: a capability record the workshop can reuse.
   - **Foreign PLM SaaS** — FX heavy. Why a Nigeria buyer might still choose this idea: Naira-local workflow.
   - **AutoLocal70 Component Link Pack (prior)** — auto parts. Why a Nigeria buyer might still choose this idea: **garment CMT** niche.
   - **DIY Excel** — free; inconsistent. Why a Nigeria buyer might still choose this idea: template + sample cost fields.
@@ -261,8 +261,8 @@
 
 - **Problem / trend:** Product Hunt (fetch 9 Nov 2026) lists **outages.live** as a free live outage feed for AI agents. Nigeria SMEs still stitch DisCo Twitter, generator fuel chats, and staff WhatsApp when power or payment rails fail.
 - **Solution:**
-  - **Established solution:** outages.live / status-page aggregators for agent tooling (software).
-  - **Variant:** Nigeria-filtered outage feed (DisCo corridors, major PSBs, card rails) with WhatsApp digest for shop floors (software).
+  - **Established solution:** outages.live (developed-market live outage feed software for agents).
+  - **Variant:** outages.live NG AgentFeed Lite, the Nigeria version of that software for multi-branch shops and small network desks. It tags DisCo corridors, major payment firms, and card rails, then sends a WhatsApp digest. It is not outages.live itself, and it is not a DisCo or CBN portal.
 - **Target:** Multi-branch retailers, POS aggregators, and small NOCs watching power/payment incidents.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for subscriber contacts; not DisCo/CBN official.
@@ -278,18 +278,18 @@
 
 ### 12. FMDQ ARM PrivateDebt Access Pack — Series 1 listing literacy (S5, S9)
 
-- **Problem:** Punch (9 Nov 2026): FMDQ lists **10 billion** units of ARM Investment Managers Series 1 Private Debt Fund at **N1.00** under a **N200bn** programme — retail/HNWI still lack a plain access checklist for private debt vs equities.
+- **Problem / trend:** Punch (9 Nov 2026): FMDQ lists **10 billion** units of ARM Investment Managers Series 1 Private Debt Fund at **N1.00** under a **N200bn** programme — retail/HNWI still lack a plain access checklist for private debt vs equities.
 - **Solution:**
-  - **Established solution:** Private-credit investor education portals in developed markets (software).
-  - **Variant:** Nigeria private-debt access one-pager (eligibility, risks, FMDQ listing facts) without selling units (software).
+  - **Established solution:** iCapital (developed-market private-market access software).
+  - **Variant:** FMDQ ARM PrivateDebt Access Pack, the Nigeria version of that software for family offices and SME treasurers. It explains eligibility, risks, and the FMDQ Series 1 listing facts without selling units. It is not an FMDQ or ARM portal, and it is not investment advice.
 - **Target:** HNWI/family offices and SME treasurers exploring private debt.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not FMDQ/ARM official; not investment advice.
 - **Competitors / alternatives:**
-  - **ARM / FMDQ notices DIY** — official; dense. Why a Nigeria buyer might still choose this idea: plain checklist.
+  - **ARM / FMDQ notices DIY** — official, dense. Why a Nigeria buyer might still choose this idea: plain software that states the listing facts.
   - **Stockbroker WhatsApp** — conflicted. Why a Nigeria buyer might still choose this idea: independent literacy pack.
   - **BalancedFund Compare Lite (prior)** — fund compare. Why a Nigeria buyer might still choose this idea: **private debt Series 1 listing** job.
-  - **DIY PDF prospectus** — free; hard. Why a Nigeria buyer might still choose this idea: short access sheet.
+  - **DIY PDF prospectus** — free, hard. Why a Nigeria buyer might still choose this idea: a short software access guide.
 - **GUEMF:** Mode B **3/2/3/2/3 = 13**. Evidence: Punch — https://punchng.com/fmdq-lists-10-billion-units-of-arm-debt-fund-2/
 - **Commercial viability:** Low-medium niche.
 - **Dedup:** High vs BalancedFund Compare Lite.
@@ -327,7 +327,11 @@
 | **14** OWID | **ran** | internet-users + renewable-energy snippets **200**; used as soft context for StateSpend / energy boards. |
 | **15** Telecom | **skipped** | Default skip (no `--with-strategy15`). |
 
-**Data freshness:** Fetch `agent_strategy_inputs_20261109_060330.json` morning of 2026-11-09. Soft-fails: Techpoint/FN RSS empty; StartupList 429; Trustpilot not used.
+**Data freshness:** Fetch `agent_strategy_inputs_20261109_060330.json` morning of 2026-11-09. Soft-fails: Techpoint/FN RSS empty, StartupList 429, Trustpilot not used.
+
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-11-09. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
 
 ---
 
@@ -335,7 +339,7 @@
 
 | Date | Step |
 |------|------|
-| **2026-11-09** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same file → schema optional → one-shot Docx in-repo only. |
+| **2026-11-09** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, Established solution and Variant). |
 | **2026-11-10** | Owner skim Best ideas 1–3; pick one for a 5-customer problem interview. |
 | **2026-11-11** | For GasFlare IdlePlant: capture one fresh NISO/plant-idle screenshot + NOSDRA flare cite into a one-page sample board. |
 | **2026-11-12** | For InfraGrow: confirm WB PID dates still match public page before any sponsor outreach. |
@@ -345,6 +349,4 @@
 
 ## Docx status
 
-`_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before Docx. Next: paste `prompts/agent_formulation_pack.txt` against `agent-business-idea-runs/outputs/business_ideas_20261109.md`.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
