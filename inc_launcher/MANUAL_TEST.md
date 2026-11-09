@@ -199,6 +199,18 @@ python -m pytest inc_launcher/tests/test_tray_restart_menu.py inc_launcher/tests
 - [x] Tray lifecycle log file (2026-10-17) - `tray_lifecycle.log` + `test_lifecycle_log.py`
 - [x] Optional live Restart click glance (2026-10-17) - log showed Restart selected + spawn ok + starting handoff=yes
 
+### L. Networking list scroll (NET-WIN-SCROLL-1)
+
+**Automated (required):** from `C:\dev\Inc`, `python -m pytest inc_launcher/tests/test_networking_window.py -q`. That file checks the tall list, Close outside the cards, the empty sentence, the wheel on this window, Page Up and Page Down, Close, and the hub wheel after Close. 13 passed on 9 Nov 2026.
+
+**Eyes-only:** start the Inc hub again if it was already open, so this window is the new one. Do not restart Project Manager.
+
+- [x] Open Networking after the prospect check. If every card already fits, shorten the window until the last card is cut off. Seen 9 Nov 2026. The bar was on, and Close was on screen.
+- [x] Scroll with the bar, the wheel, or Page Down until Wedding is visible. The header and Close stay on screen. Seen 9 Nov 2026.
+- [x] Close Networking with Close, Escape, or the title-bar X. Waived 9 Nov 2026. `test_close_button_then_hub_wheel_still_scrolls` presses Close. Escape is already tested. The title-bar X uses that same close.
+- [x] Scroll the hub list with the wheel. It still moves. Waived 9 Nov 2026. The same test scrolls the hub after Close.
+
+Wedding and Close on the live window were seen 9 Nov 2026. Close and the hub wheel are pytest.
 
 ## Sign-off summary
 
@@ -211,6 +223,7 @@ python -m pytest inc_launcher/tests/test_tray_restart_menu.py inc_launcher/tests
 | Prospect Businesses Hub card | Yes - prospect folder config test (2026-07-12) | Tray restart glance (section H) |
 | Phase 7 formulation catch-up | Yes - Phase 7.8 signoff + module tests (2026-10-10) | Optional Word glance (section I) |
 | Tray Restart (INC-TRAY-RESTART-1) | Yes - menu + handoff + one-process smoke (2026-10-17) | Optional click glance (section K) |
+| Networking list scroll (NET-WIN-SCROLL-1) | Yes, 13 tests (2026-11-09), including Close then hub wheel | Block L ticked. Wedding seen. Close and hub wheel waived into pytest |
 | External boot | - | section D if desired |
 
 **Phase 5 v1:** Dev sign-off **passed via automation** (┬ºG). Optional: Cursor **Enter** when you run a live agent session.  

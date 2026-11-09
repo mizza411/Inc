@@ -235,6 +235,7 @@ class HubWindow(tk.Toplevel):
         self._on_close = on_close
         self._active_pillar_id: str | None = None
         self._sidebar_buttons: Dict[str, tk.Button] = {}
+        self._networking_window = None
 
         self.title(config.get("app_name", "Inc Launcher"))
         self.geometry("920x560")
@@ -554,12 +555,33 @@ class HubWindow(tk.Toplevel):
         self._select_pillar("established")
         self.deiconify()
         self.lift()
-        # No on_closed chain (avoid loops). Start opens the folder via run_action.
+        # Start still opens the folder. Either button then opens Networking.
         show_agent_run_modal(
             self,
             nudge,
             on_started=lambda: self._after_option_b_started(nudge),
+            on_closed=self.open_networking_window,
         )
+
+    def open_networking_window(self) -> None:
+        """Third window. Closes only itself. Does not send a message."""
+        if not self.winfo_exists():
+            return
+        existing = self._networking_window
+        if existing is not None:
+            try:
+                if existing.winfo_exists():
+                    existing.deiconify()
+                    existing.lift()
+                    existing.focus_force()
+                    return
+            except tk.TclError:
+                self._networking_window = None
+        from inc_launcher.networking_window import NetworkingWindow
+
+        path_text = self.config_data.get("_config_path")
+        path = Path(path_text) if path_text else None
+        self._networking_window = NetworkingWindow(self, config_path=path)
 
     def _restore_network_ask(self) -> None:
         """Phase 1b: bring Ask modal back after dismiss (Hub sidebar)."""
