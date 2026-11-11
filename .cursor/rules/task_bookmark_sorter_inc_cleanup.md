@@ -67,7 +67,7 @@ That end state is on hold for the business choice. BB-KEYWORD-DOOR-1 (below) is 
 
 ## BB-KEYWORD-DOOR-1 - Keyword front door, business stays on the Inc view
 
-**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 3, Phase 4, Phase 5, Phase 7, Phase 9, and Phase 14 are not started.  
+**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 4, Phase 5, Phase 7, Phase 9, and Phase 14 are not started.  
 **Attempt:** 1  
 **Where this lives:** this file. The main task list is overloaded, so this entry is not copied there.  
 **Owner lock (menu 3, 11/11/2026):** Choosing business keeps the business list and the Inc files. Any other keyword gets its own list and does not write the Inc business files.  
@@ -159,12 +159,14 @@ Done when: choosing business shows that page, and a filed link still lands in In
 
 Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py::test_business_choice_keeps_the_inc_files -q` from `C:\dev\project_reminder`. The business page keeps the accepted title and the Business Links line. Its list path is `C:\dev\Inc\business_bookmark_sorter\Business Links.md`, and the Word file is the `.docx` beside it. Destination folders stay under `C:\dev\Inc`. No second list is created under `bookmark_sorter\data\keyword_homes\business`. The test does not write a link into the live Inc files.
 
-#### Phase 3 - Other keywords stay off the Inc files (~40 min)
+#### Phase 3 - Other keywords stay off the Inc files (~40 min) ✅ 11/11/2026
 
-- [ ] **3a** A keyword other than business uses its own list. (~20 min)
-- [ ] **3b** A smoke shows that list is not `Business Links.md` and not an Inc destination folder. (~20 min)
+- [x] **3a** A keyword other than business uses its own list. (~20 min)
+- [x] **3b** A smoke shows that list is not `Business Links.md` and not an Inc destination folder. (~20 min)
 
 Done when: a non-business keyword cannot append to the business document.
+
+Proof: `python -m pytest bookmark_sorter/tests/test_keyword_home.py::test_phase3_other_keyword_stays_off_the_inc_files -q` from `C:\dev\project_reminder`. A health list is `bookmark_sorter\data\keyword_homes\health\Links.md`. That path is not `Business Links.md` and not under `C:\dev\Inc`. Filing a health link writes `Links.md` and `Links.docx` beside it. The Business Links text is unchanged. The test uses a temporary list, so it does not create the live health folder and does not write the live Inc files.
 
 #### Phase 4 - Auto-launch uses the front door (~45 min)
 
@@ -275,7 +277,7 @@ Added 11/11/2026. Not started. This is a rule for all projects. It is not a proj
 
 Done when: the rule is in the one place that actually applies, and the owner can see it. No second copy is added beside a working automatic rule.
 
-**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 2 is done. Phase 14 is still 25 minutes. Remaining for this parent: 225 minutes (Phases 3, 4, 5, 7, 9, and 14).
+**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 3 is done. Phase 14 is still 25 minutes. Remaining for this parent: 185 minutes (Phases 4, 5, 7, 9, and 14).
 
 ### Out of scope
 
