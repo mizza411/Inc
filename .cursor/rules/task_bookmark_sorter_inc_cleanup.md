@@ -67,7 +67,7 @@ That end state is on hold for the business choice. BB-KEYWORD-DOOR-1 (below) is 
 
 ## BB-KEYWORD-DOOR-1 - Keyword front door, business stays on the Inc view
 
-**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 5, Phase 6, Phase 7, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 9 and Phase 14 are not started.  
+**Status:** ⏳ Phases 0 through 13 done 11/11/2026. Phase 14 is not started.  
 **Attempt:** 1  
 **Where this lives:** this file. The main task list is overloaded, so this entry is not copied there.  
 **Owner lock (menu 3, 11/11/2026):** Choosing business keeps the business list and the Inc files. Any other keyword gets its own list and does not write the Inc business files.  
@@ -218,14 +218,16 @@ Done when: health (or any new word) has its own page, and business is still the 
 
 Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py -q` from `C:\dev\project_reminder`, 16 passed. The Inc reviewer was not edited. The health page heading is the word health and List: health. The business page heading stays Bookmark Reviewer, and its list stays Business Links. A link shows on the new page only when the word is in that link's title, address, or Chrome folder. If none match, the page says there are no pending links for that keyword.
 
-#### Phase 9 - Save a typed keyword from the main page (~35 min)
+#### Phase 9 - Save a typed keyword from the main page (~35 min) ✅ 11/11/2026
 
-Added 11/11/2026. Not started.
+Added 11/11/2026.
 
-- [ ] **9a** Choose a keyword has Save. Hover label: Save this keyword for later. Save adds the typed word to Saved keywords and does not open a page. (~20 min)
-- [ ] **9b** The word is still in Saved keywords the next time the main page opens. A word under 3 letters is refused. Save does not write Business Links. (~15 min)
+- [x] **9a** Choose a keyword has Save. Hover label: Save this keyword for later. Save adds the typed word to Saved keywords and does not open a page. (~20 min)
+- [x] **9b** The word is still in Saved keywords the next time the main page opens. A word under 3 letters is refused. Save does not write Business Links. (~15 min)
 
 Done when: type a word, Save, leave, and come back, and the word is in the list. Continue is still what opens the page.
+
+Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py::test_phase9_save_keeps_a_typed_keyword_and_does_not_open -q` from `C:\dev\project_reminder`. Save on Choose a keyword stores the typed word and leaves the window open. A word under 3 letters is refused. The next open still lists the word. Continue is still what opens a page. Business Links was not changed. The Inc reviewer was not edited.
 
 #### Phase 10 - Tray icon with Choose a keyword (~25 min) ✅ 11/11/2026
 
@@ -283,7 +285,7 @@ Added 11/11/2026. Not started. This is a rule for all projects. It is not a proj
 
 Done when: the rule is in the one place that actually applies, and the owner can see it. No second copy is added beside a working automatic rule.
 
-**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 7 is done. Phase 14 is still 25 minutes. Remaining for this parent: 60 minutes (Phases 9 and 14).
+**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 9 is done. Remaining for this parent: 25 minutes (Phase 14).
 
 ### Out of scope
 
