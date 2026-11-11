@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-11 ~06:00–08:00 UTC. **Pass 1 Discover** only.  
+**Generated:** 2026-11-11 ~06:00-08:00 UTC. **Pass 1 Discover**. **Pass 2 Pack:** 2026-11-11 (same ranked set, no re-rank).  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261111.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261111_060026.json` (`strategy_12_run` **ok** Mode B aid only; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles available, taglines from secondary Product Hunt / site pages; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-11-10 (esp. MinPension Guarantee Eligibility Desk, DisCo Unbilled N568bn Meter Gap Desk, GTBank FailedPoS Refund Clock, EastWest SuperGrid Procurement Diligence Desk, Insurance EarningsQuality Dilution Desk, GasFlare IdlePlant Evidence Desk, InfraGrow WB Timing Diligence Desk, UBA SportyBet StrangeDebit Clock, KadunaKano Rail Dec3 Ready Desk, UnionBank ATM CardTrap Velocity Clock, DataLocal Jan2027 Capacity Crisis Pack, OPay×PalmPay ElevenMonth Flag Clock, GTBank UnauthDebit ForcedLoan Clock); older `business_ideas_20261011.md` / `business_ideas_20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -69,7 +69,7 @@
 
 - **Problem / trend:** Nairametrics (11 Nov 2026) and BusinessDay (10 Nov 2026): FCCPC CEO Tunji Bello says if Brent’s fall from ~**$115** (Sep) to below **$90** is sustained, refiners and marketers have **no justification** to keep petrol and diesel relatively high. Pumps still average ~**N1,405–N1,420**/L in Abuja and ~**N1,325–N1,370**/L in Lagos, versus ~**N839–N925**/L just before the Feb conflict spike. Fleets, logistics SMEs, and households still lack a dated pump-vs-wholesale pass-through pack when arguing delayed relief with stations or FCCPC/NMDPRA notes.
 - **Solution:**
-  - **Established solution:** GasBuddy / Fuelly-style pump-price intelligence software (developed-market fuel price and fleet fuel software).
+  - **Established solution:** GasBuddy (developed-market pump-price software).
   - **Variant:** FCCPC PumpPass-Through Evidence Desk, the Nigeria version of that software for fleet and SME buyers. It logs station pump bands against cited Brent/FCCPC statements and keeps a dated pass-through evidence record for consumer or association complaints. It is not an FCCPC or NMDPRA portal and does not set prices.
 - **Target:** Logistics fleets, generator-heavy SMEs, transport unions, and household buyers documenting delayed pump relief.
 - **MVP cost:** $6k–$14k.
@@ -88,7 +88,7 @@
 
 - **Problem / trend:** BusinessDay (11 Nov 2026): at the S&P Global Ratings Africa Summit in Lagos, Finance Minister Taiwo Oyedele proposed connecting Nigeria, Ghana, and eight CFA-franc WAEMU markets under a regional **bond passport**, unified investor identification, linked trading/settlement/payment rails for local-currency settlement, a regional local-currency bond index, and a credit-enhancement facility. The framework is still at planning stage. Mid-tier Nigerian issuers and boutique arrangers still keep “regional raise” notes in WhatsApp without a readiness map against passport/ID/settlement gaps.
 - **Solution:**
-  - **Established solution:** DealRoom / Intralinks-style capital-markets deal readiness software (developed-market dealroom and checklist software).
+  - **Established solution:** Intralinks (developed-market capital-markets deal-room software).
   - **Variant:** WAEMU Bond Passport Readiness Desk, the Nigeria version of that software for issuers and arrangers. It maps passport, investor-ID, PAPSS/settlement, and credit-enhancement gaps into a dated readiness board before counsel hours. It is not an SEC, FMDQ, or DMO filing portal and is not investment advice.
 - **Target:** Mid-ticket infrastructure SPVs, state PPP desks, boutique DCM arrangers preparing cross-border local-currency raises.
 - **MVP cost:** $8k–$18k.
@@ -109,7 +109,7 @@
 - **Success signal:** FIJ coverage of GTBank/First Bank/Moniepoint as mass consumer rails handling the same customer’s balances (10 Sep 2026).
 - **Complaint citations:** FIJ, 10 Sep 2026, lecturer lost N2.058m across GTBank, First Bank, and Moniepoint to GoMoney receivers within minutes on 11 Aug 2026, https://fij.ng/article/lecturer-lost-n2-058m-to-unauthorised-debits-moniepoint-attempted-recovery-but-gtbank-first-bank-denied-responsibility/ . Follow-up: FIJ, Moniepoint returned N64,000 after intervention while other rails stayed unresolved, https://fij.ng/article/after-fijs-intervention-moniepoint-returns-n64000-to-lecturer-who-reported-unauthorised-debit/ .
 - **Solution:**
-  - **Established solution:** Resolver / FairShake-style consumer dispute-case software (developed-market complaint-case software).
+  - **Established solution:** FairShake (developed-market consumer dispute-case software).
   - **Variant:** MultiBank GoMoney Wipe Evidence Clock, the Nigeria version of that software for multi-bank savers. It timestamps each rail’s debit, stores receiver identifiers, and keeps a court-order and CBN consumer-protection case record in the app. It does not litigate for the customer.
 - **Target:** Savers and SMEs holding balances across deposit banks plus Moniepoint-class wallets who need a single evidence clock after a multi-rail wipe.
 - **MVP cost:** $8k–$18k.
@@ -128,7 +128,7 @@
 
 - **Problem / trend:** Nairametrics (9 Nov 2026): NGX industrial-goods firms spent a combined **N820.7bn** on fuel and power in 9M 2026 (+**6.3%** from N771.9bn), with Dangote Cement alone at **N580.5bn** and BUA Cement **N216.6bn**. CPPE’s Muda Yusuf links pressure to diesel/gas after the Feb 2026 Middle East shock and slow grid progress; MAN separately reported manufacturers spent **N1.34trn** on alternative power in 2025. CFOs still lack a simple board separating captive-power opex from DisCo bills under FCCPC/S&P diesel narratives.
 - **Solution:**
-  - **Established solution:** EnergyCAP / Urjanet-style utility-cost analytics software (developed-market energy spend software).
+  - **Established solution:** EnergyCAP (developed-market utility-cost analytics software).
   - **Variant:** Industrial Energy N820bn Margin Stress Board, the Nigeria version of that software for manufacturer CFOs. It splits diesel/gas/captive vs DisCo lines against peer 9M prints and keeps a margin-stress board for board packs. It is not a DisCo or NERC portal.
 - **Target:** Mid-market manufacturers, cement-adjacent suppliers, and industrial SME CFOs benchmarking energy opex.
 - **MVP cost:** $8k–$18k.
@@ -149,7 +149,7 @@
 - **Success signal:** FIJ coverage of Access Bank as a mass consumer debit-card rail (6 Jan 2026).
 - **Complaint citations:** FIJ, 6 Jan 2026, Access Bank acknowledged N87,039 (21 Nov 2025) and N27,900 (22 Nov 2025) unauthorised card debits and promised refunds while merchant details stayed missing, https://fij.ng/article/access-bank-takes-lagos-customers-n87039-for-transaction-he-never-made/ .
 - **Solution:**
-  - **Established solution:** Resolver-style consumer dispute-case software (developed-market complaint-case software).
+  - **Established solution:** Resolver (developed-market consumer dispute-case software).
   - **Variant:** AccessBank UnauthCard Refund Clock, the Nigeria version of that software for Access cardholders. It stores the bank’s acknowledgement email, dual-debit timeline, and a CBN consumer-protection case record in the app. It does not litigate for the customer.
 - **Target:** Access Bank debit-card retail customers and SME owners hit by acknowledged unauthorised e-commerce debits.
 - **MVP cost:** $8k–$18k.
@@ -168,7 +168,7 @@
 
 - **Problem / trend:** Nairametrics/Punch (10 Nov 2026): EFCC handed RMAFC **$3m + N1.303bn** recovered from Aiteo and Newcross over unremitted stamp duty (OML 29 / Nembe Creek Trunkline) and crude transportation/pipeline fees spanning **2010–2019**, with larger alleged liabilities still cited. Midstream JV partners and service SMEs still keep remittance proofs in scattered PDFs when EFCC/RMAFC queries arrive.
 - **Solution:**
-  - **Established solution:** Thomson Reuters ONESOURCE / Avalara-style tax remittance readiness software (developed-market statutory remittance software).
+  - **Established solution:** Thomson Reuters ONESOURCE (developed-market tax remittance software).
   - **Variant:** OilStampDuty Remit Readiness Pack, the Nigeria version of that software for midstream operators and service SMEs. It maps stamp-duty and trunkline-fee evidence fields into a dated remittance readiness board before counsel. It is not an EFCC, RMAFC, or FIRS portal.
 - **Target:** Oil midstream JV partners, pipeline users, and boutique energy counsel supporting remittance queries.
 - **MVP cost:** $8k–$18k.
@@ -187,7 +187,7 @@
 
 - **Problem / trend:** Nairametrics/Leadership (9 Nov 2026): NITDA DG says FG, JICA, and NSIA are planning **six** startup funds, with a **$50m** seed vehicle facilitated by NITDA. Access talk points founders to Nigerian Startup Portal registration and Startup Act **labelling** before incentives. September 2026 funding was reported sharply down. Early teams still treat labelling as a someday PDF, not a readiness pack.
 - **Solution:**
-  - **Established solution:** Carta / Pulley-style startup readiness and equity-ops software (developed-market startup admin software) plus grant-readiness checklists.
+  - **Established solution:** Carta (developed-market startup admin software).
   - **Variant:** StartupAct Label $50m Seed Ready Pack, the Nigeria version of that software for founders. It walks Startup Portal labelling fields, document gaps, and a dated evidence board before fund conversations. It does not promise allocation from NSIA/JICA.
 - **Target:** Pre-seed/seed Nigerian tech startups chasing labelled status and the $50m vehicle conversation.
 - **MVP cost:** $6k–$14k.
@@ -206,7 +206,7 @@
 
 - **Problem / trend:** Nairametrics/CNBC Africa (10 Nov 2026): Dangote Cement and selling shareholder DIL halt the proposed secondary LSE listing/offering “at this time,” citing market conditions and strategic priorities, while shares stay on NGX (~**N1,469.90** close 9 Nov, ~**141%** YTD in cited print). Retail and diaspora holders still confuse halt headlines with NGX trading status and revisit timing.
 - **Solution:**
-  - **Established solution:** Bloomberg Terminal / FactSet-style issuer event brief software (developed-market investor-event software) in a lightweight form.
+  - **Established solution:** Bloomberg Terminal (developed-market issuer-event software).
   - **Variant:** DangoteCement LSE Halt Investor Brief Desk, the Nigeria version of that software for retail/diaspora holders. It separates halt vs NGX-listed facts, cites the company notice fields, and keeps a dated “not investment advice” brief. It is not a broker.
 - **Target:** NGX retail holders, diaspora relatives, and SME treasurers holding Dangote Cement.
 - **MVP cost:** $5k–$12k.
@@ -225,7 +225,7 @@
 
 - **Problem / trend:** BusinessDay (9 Nov 2026): CBN capital requirements of up to **N15bn** for foreign-currency-referenced stablecoin issuers, **N10bn** for naira-referenced stablecoin issuers, and **N1bn** for other non-security virtual-asset service providers (exchanges, custodians, wallets, P2P facilitators), plus multiple tax obligations, threaten smaller indigenous platforms with merge/scale-down pressure.
 - **Solution:**
-  - **Established solution:** ComplyAdvantage / Chainalysis-adjacent compliance readiness software plus capital-planning worksheets (developed-market VAS compliance software).
+  - **Established solution:** ComplyAdvantage (developed-market compliance-readiness software).
   - **Variant:** CryptoCapital Wall Compliance Prep Desk, the Nigeria version of that software for local exchanges and wallet operators. It maps CBN capital tiers, document gaps, and a dated board pack for counsel and investors. It is not a CBN licence broker.
 - **Target:** Indigenous VAS operators, stablecoin-project teams, and counsel supporting capital raises.
 - **MVP cost:** $8k–$18k.
@@ -244,7 +244,7 @@
 
 - **Problem / trend:** BusinessDay (11 Nov 2026): S&P Global Ratings warns Nigeria’s recovery faces renewed diesel/energy inflation and expensive financing even as the naira showed relative resilience; government interest is projected to absorb **~22.2%** of general government revenue with net debt ~**49.4%** of GDP and deficit ~**4.4%** of GDP. Import SMEs still lack a board separating diesel-cost pass-through from local borrowing costs when planning 30–90 day cash.
 - **Solution:**
-  - **Established solution:** Adaptive Insights / Anaplan-lite FP&A stress software (developed-market planning software) in a micro form.
+  - **Established solution:** Anaplan (developed-market planning software).
   - **Variant:** S&P Diesel Inflation Financing Stress Board, the Nigeria version of that software for import and logistics SMEs. It combines diesel/fuel assumptions with local financing-cost notes into a 30–90 day stress board. It is not CBN or S&P advisory.
 - **Target:** Import SMEs, logistics operators, and boutique treasurers.
 - **MVP cost:** $6k–$14k.
@@ -264,7 +264,7 @@
 - **Problem / trend:** Product Hunt (fetched 11 Nov 2026) surfaces **Alsona** — AI agents that turn buying signals into booked sales calls (hiring, funding, tech changes, reviews, ad spend). Nigeria B2B SMEs still chase leads via cold WhatsApp without a lightweight intent-signal board priced in Naira/Paystack.
 - **Solution:**
   - **Established solution:** Alsona (developed-market intent-signal sales software).
-  - **Variant:** Alsona NG Intent Outreach Lite, the Nigeria version of that product for B2B SMEs. It focuses on a short local signal set (hiring posts, funding headlines, NGX filings) and Paystack-friendly pricing, without claiming Alsona’s full 32+ signal stack on day one.
+  - **Variant:** Alsona NG Intent Outreach Lite, the Nigeria version of that software for B2B SMEs. It focuses on a short local signal set (hiring posts, funding headlines, NGX filings) and Paystack-friendly pricing, without claiming Alsona’s full 32+ signal stack on day one.
 - **Target:** Nigeria B2B SaaS, agencies, and industrial suppliers booking discovery calls.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for prospect lists; anti-spam hygiene; not a bulk-spam tool.
@@ -283,7 +283,7 @@
 - **Problem / trend:** Product Hunt / OpenVibe.sh (fetched 11 Nov 2026): **Open Vibe** turns coding agents into a SaaS tutor while founders ship a real app (auth, payments, deploy). Nigerian vibe-coding founders still bounce between Discord tips and paid foreign courses without a cohort pack that emphasises Paystack, NDPA basics, and local deploy paths.
 - **Solution:**
   - **Established solution:** Open Vibe (developed-market AI SaaS tutor / open-source agent skills).
-  - **Variant:** OpenVibe NG SaaS Tutor Cohort Pack, the Nigeria version of that product for local founder cohorts. It keeps the tutor pattern but swaps payment/auth examples toward Paystack and local hosting notes. It is not a degree programme.
+  - **Variant:** OpenVibe NG SaaS Tutor Cohort Pack, the Nigeria version of that software for local founder cohorts. It keeps the tutor pattern in the app and swaps payment and auth examples toward Paystack and local hosting notes. It is not a degree programme and not a PDF.
 - **Target:** Aspiring Nigeria SaaS founders and campus builder clubs.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only; NDPA for learner data; not NITDA certification.
@@ -329,14 +329,19 @@
 
 **Data freshness:** Fetch generated_at **2026-11-11T06:00:31Z**. Techpoint + Financial Nigeria RSS **0**. StartupList **429**. Soft-fail paths did not abort the run.
 
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-11-11. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | Step | Owner | Target date |
 |------|-------|-------------|
-| Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` — fixed subheads, then one-shot Docx in-repo | Automation B / Hub Pass 2 | **2026-11-11** (~11:00 WAT) |
-| Optional `idea_card_schema.py` after pack, before Docx | Pass 2 agent | Same day |
+| Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, Established solution and Variant) | Automation B | **2026-11-11** |
+| Optional `idea_card_schema.py` before Docx | Pass 2 agent | **2026-11-11** (before the one-shot convert) |
+| One-shot in-repo Docx (desktop Word not opened) | Pass 2 only | **2026-11-11** (once, after the pack) |
 | Spot-check FCCPC pump bands vs one Lagos + one Abuja station sample (photos only, no confrontation) | Founder | **2026-11-14** |
 | Confirm Startup Portal labelling field list against NITDA public docs for Seed Ready Pack MVP | Founder | **2026-11-18** |
 | Soft customer interviews (n=5): multi-bank wipe victims + fleet fuel buyers | Founder | **2026-11-25** |
@@ -344,6 +349,6 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+## Docx status
 
-Pass 2 pack is required before Docx. Do not treat Word as final until Pass 2 runs against this same dated markdown.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
