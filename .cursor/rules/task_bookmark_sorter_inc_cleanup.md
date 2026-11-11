@@ -67,7 +67,7 @@ That end state is on hold for the business choice. BB-KEYWORD-DOOR-1 (below) is 
 
 ## BB-KEYWORD-DOOR-1 - Keyword front door, business stays on the Inc view
 
-**Status:** ⏳ Phase 0, Phase 1, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 2, Phase 7, Phase 9, and Phase 14 are not started.  
+**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 3, Phase 4, Phase 5, Phase 7, Phase 9, and Phase 14 are not started.  
 **Attempt:** 1  
 **Where this lives:** this file. The main task list is overloaded, so this entry is not copied there.  
 **Owner lock (menu 3, 11/11/2026):** Choosing business keeps the business list and the Inc files. Any other keyword gets its own list and does not write the Inc business files.  
@@ -148,14 +148,16 @@ Done when: a cold start shows the picker. Starting the Inc reviewer the old way 
 
 Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py bookmark_sorter/tests/test_bb_links_ux_phase3.py::test_run_review_panel_second_launch_requests_focus -q` from `C:\dev\project_reminder`. The Inc package was not edited. The Inc menu still runs `python -m business_bookmark_sorter review`.
 
-#### Phase 2 - business keeps the accepted page and the Inc files (~50 min)
+#### Phase 2 - business keeps the accepted page and the Inc files (~50 min) ✅ 11/11/2026
 
 Revised 11/11/2026 after the owner accepted the Bookmark Reviewer page (Keyword: business, List: Business Links). Do not open a different window in its place.
 
-- [ ] **2a** Choosing business shows that accepted page. (~25 min)
-- [ ] **2b** Filing still uses `Business Links.md`, `Business Links.docx`, and the Inc destination folders. No move and no second copy of the document. (~25 min)
+- [x] **2a** Choosing business shows that accepted page. (~25 min)
+- [x] **2b** Filing still uses `Business Links.md`, `Business Links.docx`, and the Inc destination folders. No move and no second copy of the document. (~25 min)
 
 Done when: choosing business shows that page, and a filed link still lands in Inc.
+
+Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py::test_business_choice_keeps_the_inc_files -q` from `C:\dev\project_reminder`. The business page keeps the accepted title and the Business Links line. Its list path is `C:\dev\Inc\business_bookmark_sorter\Business Links.md`, and the Word file is the `.docx` beside it. Destination folders stay under `C:\dev\Inc`. No second list is created under `bookmark_sorter\data\keyword_homes\business`. The test does not write a link into the live Inc files.
 
 #### Phase 3 - Other keywords stay off the Inc files (~40 min)
 
@@ -273,7 +275,7 @@ Added 11/11/2026. Not started. This is a rule for all projects. It is not a proj
 
 Done when: the rule is in the one place that actually applies, and the owner can see it. No second copy is added beside a working automatic rule.
 
-**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 13 is done. Phase 14 is still 25 minutes. Remaining for this parent: 275 minutes (Phases 2, 3, 4, 5, 7, 9, and 14).
+**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 2 is done. Phase 14 is still 25 minutes. Remaining for this parent: 225 minutes (Phases 3, 4, 5, 7, 9, and 14).
 
 ### Out of scope
 
