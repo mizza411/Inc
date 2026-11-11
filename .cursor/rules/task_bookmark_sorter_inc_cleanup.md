@@ -67,7 +67,7 @@ That end state is on hold for the business choice. BB-KEYWORD-DOOR-1 (below) is 
 
 ## BB-KEYWORD-DOOR-1 - Keyword front door, business stays on the Inc view
 
-**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 5, Phase 7, Phase 9, and Phase 14 are not started.  
+**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 5, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 7, Phase 9, and Phase 14 are not started.  
 **Attempt:** 1  
 **Where this lives:** this file. The main task list is overloaded, so this entry is not copied there.  
 **Owner lock (menu 3, 11/11/2026):** Choosing business keeps the business list and the Inc files. Any other keyword gets its own list and does not write the Inc business files.  
@@ -177,13 +177,15 @@ Done when: the case in the screenshot no longer hides the picker. Formulated ide
 
 Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py::test_phase4_autolaunch_uses_the_front_door -q` from `C:\dev\project_reminder`. The Project Manager row runs `pythonw -m bookmark_sorter review`, and that command calls the picker before any review page. If a review is already open, the launch focuses that page and does not build a second one. The Inc menu command stays `python -m business_bookmark_sorter review`, and that Inc review has no Choose a keyword. Project Manager was not restarted. `launcher_config.json` was not edited.
 
-#### Phase 5 - Proof the rest still works (~35 min)
+#### Phase 5 - Proof the rest still works (~35 min) ✅ 11/11/2026
 
-- [ ] **5a** Inc title and banner still match the current business view. (~10 min)
-- [ ] **5b** Existing keyword-home and export checks still pass. (~15 min)
-- [ ] **5c** Record that the Chrome bookmarks path warning stays out of this parent. No code for that warning here. (~10 min)
+- [x] **5a** Inc title and banner still match the current business view. (~10 min)
+- [x] **5b** Existing keyword-home and export checks still pass. (~15 min)
+- [x] **5c** Record that the Chrome bookmarks path warning stays out of this parent. No code for that warning here. (~10 min)
 
 Done when: the checks pass and the Inc business files are still in place.
+
+Proof: `python -m pytest bookmark_sorter/tests/test_keyword_home.py bookmark_sorter/tests/test_export.py bookmark_sorter/tests/test_file_workflow.py bookmark_sorter/tests/test_preserve_links.py bookmark_sorter/tests/test_bb_links_ux_phase4.py bookmark_sorter/tests/test_keyword_gate.py::test_business_choice_keeps_the_inc_files -q` from `C:\dev\project_reminder`, 29 passed. The business page still uses Bookmark Reviewer and Business Links. Keyword lists and export checks passed. `C:\dev\Inc\business_bookmark_sorter\Business Links.md` and `Business Links.docx` are still there. No link was written into them. The Chrome bookmarks path warning (Errno 2) stays out of this parent. No code was added for that warning.
 
 #### Phase 6 - Back to Choose a keyword (~40 min) ✅ 11/11/2026
 
@@ -279,7 +281,7 @@ Added 11/11/2026. Not started. This is a rule for all projects. It is not a proj
 
 Done when: the rule is in the one place that actually applies, and the owner can see it. No second copy is added beside a working automatic rule.
 
-**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 4 is done. Phase 14 is still 25 minutes. Remaining for this parent: 140 minutes (Phases 5, 7, 9, and 14).
+**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 5 is done. Phase 14 is still 25 minutes. Remaining for this parent: 105 minutes (Phases 7, 9, and 14).
 
 ### Out of scope
 
