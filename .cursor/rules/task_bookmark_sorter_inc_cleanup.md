@@ -67,7 +67,7 @@ That end state is on hold for the business choice. BB-KEYWORD-DOOR-1 (below) is 
 
 ## BB-KEYWORD-DOOR-1 - Keyword front door, business stays on the Inc view
 
-**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 4, Phase 5, Phase 7, Phase 9, and Phase 14 are not started.  
+**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 5, Phase 7, Phase 9, and Phase 14 are not started.  
 **Attempt:** 1  
 **Where this lives:** this file. The main task list is overloaded, so this entry is not copied there.  
 **Owner lock (menu 3, 11/11/2026):** Choosing business keeps the business list and the Inc files. Any other keyword gets its own list and does not write the Inc business files.  
@@ -168,12 +168,14 @@ Done when: a non-business keyword cannot append to the business document.
 
 Proof: `python -m pytest bookmark_sorter/tests/test_keyword_home.py::test_phase3_other_keyword_stays_off_the_inc_files -q` from `C:\dev\project_reminder`. A health list is `bookmark_sorter\data\keyword_homes\health\Links.md`. That path is not `Business Links.md` and not under `C:\dev\Inc`. Filing a health link writes `Links.md` and `Links.docx` beside it. The Business Links text is unchanged. The test uses a temporary list, so it does not create the live health folder and does not write the live Inc files.
 
-#### Phase 4 - Auto-launch uses the front door (~45 min)
+#### Phase 4 - Auto-launch uses the front door (~45 min) ✅ 11/11/2026
 
-- [ ] **4a** The Project Manager bookmark row opens the picker, not straight into whichever review is already up. (~25 min)
-- [ ] **4b** If a review is already open, a cold auto-launch still shows Choose a keyword. Continue with business then shows the accepted business page, and keeps that page's info if it was already open. (~20 min)
+- [x] **4a** The Project Manager bookmark row opens the picker, not straight into whichever review is already up. (~25 min)
+- [x] **4b** If a review is already open, a cold auto-launch still shows Choose a keyword. Continue with business then shows the accepted business page, and keeps that page's info if it was already open. (~20 min)
 
 Done when: the case in the screenshot no longer hides the picker. Formulated ideas, Bookmark review, still opens the Inc view directly. No Project Manager restart.
+
+Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py::test_phase4_autolaunch_uses_the_front_door -q` from `C:\dev\project_reminder`. The Project Manager row runs `pythonw -m bookmark_sorter review`, and that command calls the picker before any review page. If a review is already open, the launch focuses that page and does not build a second one. The Inc menu command stays `python -m business_bookmark_sorter review`, and that Inc review has no Choose a keyword. Project Manager was not restarted. `launcher_config.json` was not edited.
 
 #### Phase 5 - Proof the rest still works (~35 min)
 
@@ -277,7 +279,7 @@ Added 11/11/2026. Not started. This is a rule for all projects. It is not a proj
 
 Done when: the rule is in the one place that actually applies, and the owner can see it. No second copy is added beside a working automatic rule.
 
-**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 3 is done. Phase 14 is still 25 minutes. Remaining for this parent: 185 minutes (Phases 4, 5, 7, 9, and 14).
+**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 4 is done. Phase 14 is still 25 minutes. Remaining for this parent: 140 minutes (Phases 5, 7, 9, and 14).
 
 ### Out of scope
 
