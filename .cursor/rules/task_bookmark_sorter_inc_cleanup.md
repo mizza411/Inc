@@ -67,7 +67,7 @@ That end state is on hold for the business choice. BB-KEYWORD-DOOR-1 (below) is 
 
 ## BB-KEYWORD-DOOR-1 - Keyword front door, business stays on the Inc view
 
-**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 5, Phase 6, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 7, Phase 9, and Phase 14 are not started.  
+**Status:** ⏳ Phase 0, Phase 1, Phase 2, Phase 3, Phase 4, Phase 5, Phase 6, Phase 7, Phase 8, Phase 10, Phase 11, Phase 12, and Phase 13 done 11/11/2026. Phase 9 and Phase 14 are not started.  
 **Attempt:** 1  
 **Where this lives:** this file. The main task list is overloaded, so this entry is not copied there.  
 **Owner lock (menu 3, 11/11/2026):** Choosing business keeps the business list and the Inc files. Any other keyword gets its own list and does not write the Inc business files.  
@@ -196,16 +196,18 @@ Done when: from the business page, Back shows Choose a keyword, and the business
 
 Close on Choose a keyword, when a page is already open, returns to that page. Close when no page is open still exits. Phase 12 changes that close: the window hides, the icon stays, and a banner shows. Quit still exits. Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py -q` from `C:\dev\project_reminder`. The Inc reviewer was not edited. Owner confirmed 11/11/2026: Back returned to Choose a keyword, and the same keyword page was still there.
 
-#### Phase 7 - Keyword page info persists (~45 min)
+#### Phase 7 - Keyword page info persists (~45 min) ✅ 11/11/2026
 
-Added 11/11/2026. Not started.
+Added 11/11/2026.
 
-- [ ] **7a** Choose the same keyword again and the page still shows the same time left, the same link, and the same counts. (~25 min)
-- [ ] **7b** Each keyword keeps its own page. Opening one does not reset another. (~20 min)
+- [x] **7a** Choose the same keyword again and the page still shows the same time left, the same link, and the same counts. (~25 min)
+- [x] **7b** Each keyword keeps its own page. Opening one does not reset another. (~20 min)
 
 Done when: business, then Back, then business again, shows the same page. A second keyword has its own page and does not clear business.
 
 The owner saw a new keyword still open the business page. That screen is Phase 8. Phase 7 stays the timer, link, and counts.
+
+Proof: `python -m pytest bookmark_sorter/tests/test_keyword_gate.py::test_phase7_keyword_page_keeps_its_info -q` from `C:\dev\project_reminder`. Back, then business again, keeps the same timer, the same link, and the same counts. Opening health uses a different timer and does not clear the business link or counts. Returning to business shows that same page. The test does not write the live Inc files.
 
 #### Phase 8 - A new keyword gets its own page (~50 min) ✅ 11/11/2026
 
@@ -281,7 +283,7 @@ Added 11/11/2026. Not started. This is a rule for all projects. It is not a proj
 
 Done when: the rule is in the one place that actually applies, and the owner can see it. No second copy is added beside a working automatic rule.
 
-**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 5 is done. Phase 14 is still 25 minutes. Remaining for this parent: 105 minutes (Phases 7, 9, and 14).
+**This parent:** 530 minutes (Phase 0 through Phase 14, including the sub-phases above). Phase 7 is done. Phase 14 is still 25 minutes. Remaining for this parent: 60 minutes (Phases 9 and 14).
 
 ### Out of scope
 
