@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-12 ~06:00–07:00 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-11-12 ~06:00–07:00 UTC. Pass 1 Discover, then Pass 2 pack on this same file.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261112.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261112_060031.json` (`strategy_12_run` **ok** Mode B aid; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles present, product pages may Cloudflare-block; Trustpilot not relied on; lean Nairametrics + Punch + Vanguard + Premium Times + FIJ/web cites)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-10-10→2026-11-11 (esp. **2026-11-11 Best set** FCCPC PumpPass-Through Evidence Desk, WAEMU Bond Passport Readiness Desk, MultiBank GoMoney Wipe Evidence Clock, Industrial Energy N820bn Margin Stress Board, AccessBank UnauthCard Refund Clock; **2026-11-10** MinPension Guarantee Eligibility Desk, DisCo Unbilled N568bn Meter Gap Desk, GTBank FailedPoS Refund Clock, EastWest SuperGrid Procurement Diligence Desk, Insurance EarningsQuality Dilution Desk; plus Oct anchors FirstBank×Paga PhoneUpdate Debit Clock, FloodFacility Asset Desk, NELFUND MultiYear Funding Floor Desk, Zenith UnsolicitedOTP Debit Clock)  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. AfreximDBN ExportSME Ready Pack — PFI + export-readiness evidence before $75m channel (**S12 Mode A**)
 
-- **Problem:** Nairametrics and Afreximbank (11 Nov 2026): Afreximbank committed **$75m** to the Development Bank of Nigeria to finance Nigerian SMEs (including creative/export-oriented firms) via participating financial institutions, with capacity-building and trade-platform access (MANSA, TRADAR, PAPSS, ATEX). Creative and export SMEs still keep working-capital and export-readiness evidence in WhatsApp folders that PFIs reject.
+- **Problem / trend:** Nairametrics and Afreximbank (11 Nov 2026): Afreximbank committed **$75m** to the Development Bank of Nigeria to finance Nigerian SMEs (including creative/export-oriented firms) via participating financial institutions, with capacity-building and trade-platform access (MANSA, TRADAR, PAPSS, ATEX). Creative and export SMEs still keep working-capital and export-readiness evidence in WhatsApp folders that PFIs reject.
 - **Solution:**
-  - **Established solution:** Export-credit application workspaces and SME readiness platforms used by development banks and trade agencies in developed markets (software).
-  - **Variant:** Nigeria PFI-facing pack that maps DBN/Afreximbank eligibility fields, creative-sector asset/working-capital evidence, and PAPSS/trade-platform signup notes in Naira terms — not a DBN loan portal.
+  - **Established solution:** Intralinks (developed-market virtual data-room software).
+  - **Variant:** AfreximDBN ExportSME Ready Pack, the Nigeria version of that software for creative and export SMEs. It maps DBN and Afreximbank eligibility fields, creative-sector working-capital evidence, and PAPSS signup notes in Naira, and keeps a dated readiness record in the app. It is not a DBN loan portal.
 - **Target:** Fashion/film/music/design SMEs and export-oriented manufacturers preparing PFI applications under the new facility.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not DBN, Afreximbank, or CBN official; not a lender; NDPA for KYC fields.
@@ -86,10 +86,10 @@
 
 ### 2. ACReSAL FloodLandscape Bid Desk — northern flood/landscape AF bid evidence (**S12 Mode A**)
 
-- **Problem:** Punch (12 Nov 2026) and World Bank (6 Nov 2026): additional **$500m** financing for the Agro-Climatic Resilience in Semi-Arid Landscapes (ACReSAL) project to scale flood management, watershed rehabilitation, erosion control, and resilient livelihoods across **19** northern states and the FCT (expanded program toward **1.4m** hectares / **6.6m** people by 2031). Local contractors and community implementers still lack a bid-ready evidence desk when state PIUs open packages.
+- **Problem / trend:** Punch (12 Nov 2026) and World Bank (6 Nov 2026): additional **$500m** financing for the Agro-Climatic Resilience in Semi-Arid Landscapes (ACReSAL) project to scale flood management, watershed rehabilitation, erosion control, and resilient livelihoods across **19** northern states and the FCT (expanded program toward **1.4m** hectares / **6.6m** people by 2031). Local contractors and community implementers still lack a bid-ready evidence desk when state PIUs open packages.
 - **Solution:**
-  - **Established solution:** Public-works bid management and climate-project proposal software used by contractors in developed markets (software).
-  - **Variant:** Nigeria ACReSAL-facing bid desk with flood/erosion/landscape evidence fields, LGA site photos, and FMEnv/state PIU handoff notes — not a World Bank procurement portal.
+  - **Established solution:** BuildingConnected (Autodesk developed-market bid-management software).
+  - **Variant:** ACReSAL FloodLandscape Bid Desk, the Nigeria version of that software for northern contractors and cooperative implementers. It stores flood, erosion, and landscape evidence, LGA site photos, and state PIU handoff notes in the app. It is not a World Bank procurement portal.
 - **Target:** Northern civil/agro contractors, cooperative implementers, boutique bid consultants serving ACReSAL packages.
 - **MVP cost:** $8k–$20k.
 - **Regulatory:** Informational only — not World Bank, FMEnv, or state PIU official; not a tender guarantee.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** Zenith Bank (mass Nigeria retail bank / debit-card rail). **Recurring complaint:** customer paid a LASTMA fine via Zenith card on an **FCMB PoS** at the agency office, account was debited **N200,000**, LASTMA did not see the credit, and the impounded car stayed held for days until FIJ pressure produced a reversal (FIJ, 6 May 2026). **Variation:** Agency-fee PoS → debit-without-credit → car-hold evidence clock — not GTBank FailedPoS Refund Clock (GTB PoS refund) and not OPay×Moniepoint FailedPOS 5Day Refund Clock (fintech PoS SLA).
 - **Complaint citations:** FIJ (6 May 2026), https://fij.ng/article/after-fijs-intervention-zenith-bank-reverses-failed-n200000-transaction-that-nearly-cost-lagos-resident-his-car/ (LASTMA Oshodi FCMB PoS, Zenith debit, no credit, car held, reversed after intervention). Related pattern: FIJ, https://fij.ng/article/transaction-fails-but-zenith-bank-tells-customer-to-see-pos-merchant-for-his-money/ (Zenith failed PoS, customer told to chase merchant).
 - **Solution:**
-  - **Established solution:** Bank dispute / chargeback evidence apps and receipt vaults in developed markets (software).
-  - **Variant:** Nigeria agency-fee failed-PoS clock with LASTMA/FCMB/Zenith ticket fields, demurrage note, and CBN CPD handoff PDF — not Zenith official support.
+  - **Established solution:** Chargebacks911 (developed-market card-dispute evidence software).
+  - **Variant:** Zenith LASTMA FailedPoS CarHold Clock, the Nigeria version of that software for Lagos motorists. It stores LASTMA, FCMB, and Zenith ticket fields, a demurrage note, and a CBN consumer-protection case record in the app. It does not litigate for the customer, and it is not Zenith official support.
 - **Target:** Lagos motorists and SMEs paying agency fines/fees on bank PoS rails who need proof while a vehicle or service is held.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not LASTMA/Zenith/FCMB official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** BusinessDay/Pluboard/Vanguard (11 Nov 2026): Champion Breweries proposes Champion Brands as NGX-listed HoldCo, one-for-one share swap, Breweries delist path, enJOYbev/Bullet transfer, and scheme documents noting possible migration of a **N30bn** bond. Court-ordered shareholder meeting set for **3 Dec 2026** (BusinessDay). Retail holders still treat scheme circulars as WhatsApp screenshots.
 - **Solution:**
-  - **Established solution:** Corporate-action / scheme-of-arrangement briefing tools for retail shareholders in developed markets (software).
-  - **Variant:** Nigeria NGX HoldCo-scheme vote desk with Dec 3 agenda fields, one-for-one swap checklist, and bond-migration “ask your broker” notes — not SEC/NGX advice.
+  - **Established solution:** Broadridge ProxyVote (developed-market shareholder-voting software).
+  - **Variant:** Champion Brands Dec3 Scheme Vote Desk, the Nigeria version of that software for retail holders and family brokers. It stores the 3 Dec 2026 agenda, the one-for-one swap facts, and bond-migration questions to ask a broker. It is not SEC or NGX advice.
 - **Target:** Retail Champion Breweries holders, diaspora relatives, boutique stockbrokers coaching family accounts before the COM.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only — not SEC, NGX, or issuing-house official; not investment advice.
@@ -147,8 +147,8 @@
 - **Formula:** **Successful business:** First Bank (mass Nigeria retail bank) with Paga as receiving wallet rail. **Recurring complaint:** Ogun teacher Agnes Agbo reported **N960,000** left her First Bank account for a Paga wallet without authorisation while her phone was updating; bank asked for a police report and would not guarantee refund after funds moved onward (FIJ). **Variation:** Phone-update unauth sweep → police-report → Paga onward-move evidence clock — not FirstBank×Paga PhoneUpdate Debit Clock (prior phone-update debit framing) and not MultiBank GoMoney Wipe (GT/First/Moniepoint→GoMoney wipe).
 - **Complaint citations:** FIJ, https://fij.ng/article/ogun-teachers-n960000-left-account-in-unauthorised-debit-first-bank-couldnt-guarantee-refund/ (N960k First Bank→Paga during phone update, police report, onward transfers, no guaranteed refund).
 - **Solution:**
-  - **Established solution:** Account-takeover dispute and cross-rail recovery evidence apps in developed markets (software).
-  - **Variant:** Nigeria First Bank×Paga unauth-sweep clock with phone-update timeline, police-report fields, and CBN CPD handoff PDF — not First Bank or Paga official support.
+  - **Established solution:** Ethoca Alerts (Mastercard developed-market unauthorized-transaction alert software).
+  - **Variant:** FirstBank×Paga PhoneUpdate Unauth Sweep Clock, the Nigeria version of that software for First Bank customers. It stores the phone-update timeline, police-report fields, and a CBN consumer-protection case record in the app. It does not litigate, and it is not First Bank or Paga official support.
 - **Target:** First Bank customers hit by unauth wallet sweeps during device downtime who need a recoverable evidence pack.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN CPD notes; NDPA; not legal practice; not First Bank/Paga official.
@@ -166,8 +166,8 @@
 
 - **Problem / trend:** Punch/Premium Times (11–12 Nov 2026): PenCom says FG cleared a **21-month** accrued-rights backlog into a **41-month** surplus (funded through **Dec 2029**), claims **48-hour** retirement-benefit processing, and notes FG approval of additional exit benefits equal to **100%** of terminal emoluments for eligible retirees (from 1 Jan 2026). Retirees and near-retirees still lack a document-ready claims desk when HR/PFA packets stall. Distinct from MinPension Guarantee Eligibility Desk (N52,500 floor eligibility).
 - **Solution:**
-  - **Established solution:** Retirement-benefit claims checklists and benefits navigation tools in developed markets (software).
-  - **Variant:** Nigeria PenCom/PFA-facing exit-benefit claims desk with accrued-rights / 100% emolument document fields and 48h timeline log — not PenCom official.
+  - **Established solution:** Fidelity NetBenefits (developed-market retirement-benefits software).
+  - **Variant:** PensionExit 100% Emolument Claims Desk, the Nigeria version of that software for federal retirees and PFA officers. It stores accrued-rights and 100 percent terminal-emolument document fields and a 48-hour processing timeline in the app. It is not a PenCom portal.
 - **Target:** Federal retirees/near-retirees, PFA relationship officers, union help desks preparing exit packets.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not PenCom or PFA official; not legal advice; NDPA for ID fields.
@@ -185,8 +185,8 @@
 
 - **Problem / trend:** Vanguard (12 Nov 2026) and Guardian/NANS coverage: NELFUND and parents/NANS discuss stopping **double-dipping** where students take loan support while parents still pay tuition, with a planned parent portal that confirms fee status by matric number without showing amounts. Parents still pay blindly via WhatsApp school accounts.
 - **Solution:**
-  - **Established solution:** Parent tuition-status portals and student-aid verification tools in developed markets (software).
-  - **Variant:** Nigeria NELFUND-aware parent verify desk with matric/fee-status evidence fields and “do not pay twice” checklist until the official portal ships — not NELFUND official.
+  - **Established solution:** National Student Clearinghouse (developed-market enrollment and aid-status verification software).
+  - **Variant:** NELFUND Parent DoubleDip Verify Desk, the Nigeria version of that software for parents and campus counselors. It stores matric and fee-status evidence and a do-not-pay-twice record in the app until an official parent portal is universal. It is not a NELFUND portal, and it does not decide loans.
 - **Target:** Parents/guardians of tertiary students, campus counselors, NANS campus help desks.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NELFUND official; NDPA for student identifiers; not a loan decision engine.
@@ -202,10 +202,10 @@
 
 ### 8. NGX N293bn FUGAZ Wipe Stress Board — retail/SME equity stress after blue-chip wipe (S9, S14, S12)
 
-- **Problem:** Nairametrics (11 Nov 2026): NGX lost **N293.43bn** as Okomu (−10%), Nascon (−8.99%), and all **FUGAZ** banks closed lower (banking index −0.60%), ASI to **251,861.24**. SME treasurers and retail holders still lack a simple board separating one-day wipe headlines from their own liquidity/rebalance rules.
+- **Problem / trend:** Nairametrics (11 Nov 2026): NGX lost **N293.43bn** as Okomu (−10%), Nascon (−8.99%), and all **FUGAZ** banks closed lower (banking index −0.60%), ASI to **251,861.24**. SME treasurers and retail holders still lack a simple board separating one-day wipe headlines from their own liquidity/rebalance rules.
 - **Solution:**
-  - **Established solution:** Portfolio stress dashboards and retail risk boards in developed markets (software).
-  - **Variant:** Nigeria NGX wipe stress board with FUGAZ/blue-chip watchlist fields and Naira liquidity rules — not a brokerage or investment-advice product.
+  - **Established solution:** Morningstar Investor (developed-market portfolio risk software).
+  - **Variant:** NGX N293bn FUGAZ Wipe Stress Board, the Nigeria version of that software for retail holders and SME treasurers. It tracks a FUGAZ and blue-chip watchlist against the holder's own Naira liquidity rules. It is not a brokerage, and it is not investment advice.
 - **Target:** Retail equity holders, SME treasurers with listed holdings, boutique IFAs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not investment advice; not NGX/SEC official.
@@ -223,8 +223,8 @@
 
 - **Problem / trend:** Nairametrics/Punch/Oando (9–11 Nov 2026): Oando Clean Energy delivered **11** Yutong E12 electric buses to LAMATA (first batch toward **50**, long-term **552** ambition), with pilots already carrying ~**788k** passengers. Operators and depot partners still lack a charging/ops/spare-parts readiness pack as diesel phase-out rules tighten.
 - **Solution:**
-  - **Established solution:** Fleet depot readiness and EV charging ops platforms in developed markets (software + hardware planning).
-  - **Variant:** Nigeria LAMATA-corridor depot pack with charging, spare-parts, and training evidence fields for BRT-adjacent operators — not LAMATA tender software.
+  - **Established solution:** ChargePoint (developed-market EV charging and fleet-ops software).
+  - **Variant:** Oando LAMATA EBus Depot Ready Pack, the Nigeria version of that software for BRT-adjacent operators and depot partners. It stores charging, spare-parts, and training evidence in the app. It is not LAMATA tender software.
 - **Target:** Regulated bus operators, depot landlords, O&M SMEs near Lagos BRT corridors.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not LAMATA or Oando official; not a vehicle homologation service.
@@ -242,8 +242,8 @@
 
 - **Problem / trend:** Product Hunt (fetch 12 Nov 2026) lists **ScroogeFrog AI** (antifraud). Nigeria merchants on Paystack/Flutterwave/PoS still chase chargebacks and fake-order patterns with WhatsApp screenshots while foreign antifraud tools price in USD and ignore NIBSS/Naira dispute paths. StartupList directory fetch **429** this run — niche synthesis from PH + local rails.
 - **Solution:**
-  - **Established solution:** ScroogeFrog AI / similar merchant antifraud suites in developed markets (software).
-  - **Variant:** Nigeria merchant antifraud lite with Naira dispute fields, Paystack/Flutterwave ticket notes, and WhatsApp-export evidence — not a card-scheme fraud bureau.
+  - **Established solution:** ScroogeFrog AI (developed-market merchant antifraud software).
+  - **Variant:** ScroogeFrog Antifraud NG, the Nigeria version of that software for Paystack and Flutterwave merchants. It stores Naira dispute fields, processor ticket notes, and a WhatsApp-export evidence record in the app. It is not a card-scheme fraud bureau.
 - **Target:** Online/SME merchants, small marketplaces, boutique risk freelancers.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for buyer data; not CBN or NIBSS official.
@@ -259,10 +259,10 @@
 
 ### 11. Benue HerbalMixture Harm Spot Desk — acute herbal-harm incident evidence (S5, S12, S9)
 
-- **Problem:** Vanguard (12 Nov 2026): **4** dead and many hospitalised in Benue after consuming a herbal mixture. Families and local sellers still lack a fast incident-evidence desk (product photo, seller note, hospital timeline) before NAFDAC/police pathways.
+- **Problem / trend:** Vanguard (12 Nov 2026): **4** dead and many hospitalised in Benue after consuming a herbal mixture. Families and local sellers still lack a fast incident-evidence desk (product photo, seller note, hospital timeline) before NAFDAC/police pathways.
 - **Solution:**
-  - **Established solution:** Poison/incident reporting and consumer-harm evidence tools in developed markets (software).
-  - **Variant:** Nigeria herbal-harm spot desk with photo/seller/hospital fields and NAFDAC complaint handoff — not NAFDAC enforcement.
+  - **Established solution:** webPOISONCONTROL (National Capital Poison Center developed-market poison-incident reporting software).
+  - **Variant:** Benue HerbalMixture Harm Spot Desk, the Nigeria version of that software for families and patent-medicine sellers. It stores product photos, seller notes, and a hospital timeline, and keeps a NAFDAC complaint record in the app. It is not NAFDAC enforcement, and it is not medical advice.
 - **Target:** Affected families, patent-medicine retailers cleaning inventory, LGA health desks, journalists needing structured packs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NAFDAC or police official; not medical advice.
@@ -278,10 +278,10 @@
 
 ### 12. Airtel ATC Noise Suit Evidence Desk — tower noise civil-claim evidence pack (S5, S11)
 
-- **Problem:** Punch (12 Nov 2026): a widow sued Airtel and ATC for **N232m** over alleged noise pollution from telecom infrastructure. Neighbours near towers still keep noise diaries in notebooks that counsel reject.
+- **Problem / trend:** Punch (12 Nov 2026): a widow sued Airtel and ATC for **N232m** over alleged noise pollution from telecom infrastructure. Neighbours near towers still keep noise diaries in notebooks that counsel reject.
 - **Solution:**
-  - **Established solution:** Environmental noise logging and civil-claim evidence apps in developed markets (software + optional meter hardware).
-  - **Variant:** Nigeria tower-noise evidence desk with timed logs, neighbour attestations, and counsel handoff PDF — not NCC adjudication software.
+  - **Established solution:** Decibel X (SkyPaw developed-market noise-logging software).
+  - **Variant:** Airtel ATC Noise Suit Evidence Desk, the Nigeria version of that software for residents near base stations. It stores timed noise logs and neighbour attestations in the app for counsel to review. It is not NCC adjudication software, and it does not represent the user in court.
 - **Target:** Residents near base stations, community associations, boutique environmental counsel.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NCC/ATC/Airtel official; not legal representation.
@@ -329,13 +329,19 @@
 
 **Partial runs:** S6 directory blocked (429). S15 skipped by design. S1 collector subprocess not required (agent-native web research used).
 
+**Pass boundary:** Pass 1 Discover complete. Pass 2 pack applied on this same file.
+
+**Pass 2 pack:** 2026-11-12. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | Date | Step |
 |------|------|
-| **2026-11-12** | **Pass 2 Pack** — paste `prompts/agent_formulation_pack.txt` on this same `.md`, normalize §14 subheads, optional `idea_card_schema.py`, one-shot in-repo Docx (do not open desktop Word). |
+| **2026-11-12** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, one named Established solution and a Nigeria software Variant). |
+| **2026-11-12** | Optional `idea_card_schema.py` before Docx. |
+| **2026-11-12** | One-shot in-repo Docx (desktop Word not opened). |
 | **2026-11-13** | Spot-check AfreximDBN PFI eligibility fields vs DBN public guidance (no application filed). |
 | **2026-11-14** | Confirm Champion Brands **Dec 3** COM notice still current before any owner outreach. |
 | **2026-11-18** | If pursuing S1 clocks: walk one Zenith LASTMA-style dispute pack with synthetic receipts only (no live customer data in repo). |
@@ -343,6 +349,6 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**
+## Docx status
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
