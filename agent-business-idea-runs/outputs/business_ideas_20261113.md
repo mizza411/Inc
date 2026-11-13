@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-13 ~06:00–07:00 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-11-13 ~06:00-07:00 UTC. Pass 1 Discover, then Pass 2 pack on this same file.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261113.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261113_060117.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS product URLs only / Cloudflare risk on product pages; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-11-12→2026-10-10 (esp. AfreximDBN ExportSME Ready Pack, ACReSAL FloodLandscape Bid Desk, Zenith LASTMA FailedPoS CarHold Clock, Champion Brands Dec3 Scheme Vote Desk, FirstBank×Paga PhoneUpdate Unauth Sweep Clock, FCCPC PumpPass-Through Evidence Desk, WAEMU Bond Passport Readiness Desk, MultiBank GoMoney Wipe Evidence Clock, Industrial Energy N820bn Margin Stress Board, AccessBank UnauthCard Refund Clock, MinPension Guarantee Eligibility Desk, DisCo Unbilled N568bn Meter Gap Desk, GTBank FailedPoS Refund Clock); older `business_ideas_20261011.md` / `20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. GasToPower N639bn Invoice Evidence Desk — gas-to-power invoice vs settlement pack (**S12 Mode A**)
 
-- **Problem:** Punch (13 Nov 2026): at the Power Correspondents Association of Nigeria conference, NDPHC Gas Commercial GM Bashiru Adoke said the market owes **over N630bn** (coverage frames **N639bn**) for gas supplied into power generation, with invoices so weak that gas can take **60–75%** of production cost while energy settlement covers only about **40%**, and legacy FG interventions do not stop **post-2025** arrears from stacking.
+- **Problem / trend:** Punch (13 Nov 2026): at the Power Correspondents Association of Nigeria conference, NDPHC Gas Commercial GM Bashiru Adoke said the market owes **over N630bn** (coverage frames **N639bn**) for gas supplied into power generation, with invoices so weak that gas can take **60-75%** of production cost while energy settlement covers only about **40%**, and legacy FG interventions do not stop **post-2025** arrears from stacking.
 - **Solution:**
-  - **Established solution:** Settle (US) / Flux (US) style AP/AR invoice evidence and remittance-status software for B2B energy suppliers.
-  - **Variant:** Nigeria gas-to-power invoice desk that maps GenCo/gas invoices to market settlement receipts, FG intervention windows, and escalation notes in Naira with WhatsApp/email evidence export (not an NNPC or NERC portal).
+  - **Established solution:** Enverus OpenInvoice (developed-market oil-and-gas invoice and settlement software).
+  - **Variant:** GasToPower N639bn Invoice Evidence Desk, the Nigeria version of that software for gas marketers and GenCo commercial officers. It maps gas invoices to market settlement receipts and FG intervention windows in Naira, and keeps a dated evidence record in the app. It is not an NNPC or NERC portal.
 - **Target:** Independent gas marketers, GenCo commercial officers, boutique power lawyers/accountants preparing creditor packs.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NNPC, NDPHC, NERC, or FG Power Co official; not legal representation; NDPA for counterparty docs.
@@ -86,10 +86,10 @@
 
 ### 2. PH Airport 30yr Concession Transition Desk — worker/vendor transition evidence pack (**S12 Mode A**)
 
-- **Problem:** Nairametrics (12 Nov 2026) and Punch/BusinessDay mirrors: FG signed a **30-year** concession of Jeremiah Obafemi Awolowo International Airport, Port Harcourt, to Port Harcourt Airport Company Ltd (R28 Holdings–linked), with Keyamo citing loss-making airports, union history, and proposals for Benin/Yola next — airport workers, retail tenants, and SME contractors still lack a single transition document checklist.
+- **Problem / trend:** Nairametrics (12 Nov 2026) and Punch/BusinessDay mirrors: FG signed a **30-year** concession of Jeremiah Obafemi Awolowo International Airport, Port Harcourt, to Port Harcourt Airport Company Ltd (R28 Holdings-linked), with Keyamo citing loss-making airports, union history, and proposals for Benin/Yola next. Airport workers, retail tenants, and SME contractors still lack a single transition document record.
 - **Solution:**
-  - **Established solution:** Deloitte / PwC PPP transition playbooks and concession handoff checklists (software + advisory templates) used on developed-market airport PPPs.
-  - **Variant:** Nigeria airport-concession micro-desk: employment/vendor contract inventory, FAAN/concessionaire notice log, and union-welfare FAQ PDF in plain English/Pidgin (not FAAN registration, not legal counsel).
+  - **Established solution:** Aconex (Oracle developed-market project handover and document-control software).
+  - **Variant:** PH Airport 30yr Concession Transition Desk, the Nigeria version of that software for airport workers, tenants, and SME contractors. It stores employment and vendor contract inventories and concession notice logs in the app. It is not FAAN registration software, and it is not legal counsel.
 - **Target:** PH airport workers, retail/F&B tenants, ground-handling SMEs, local contractors bidding non-aeronautical works.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not FAAN, NCAA, or ministry official; labour notes are not union representation.
@@ -108,8 +108,8 @@
 - **Formula:** **Successful business:** PalmPay (mass Nigeria digital MFB / wallet). **Recurring complaint:** after a customer reported fraud, PalmPay (or the rail) reversed **N88,000** from the recipient’s account, the customer submitted a court order and session ID, yet the sender’s PalmPay balance stayed uncredited for months while support blamed the other bank (FIJ, 17 Jul 2026). **Variation:** Reverse-receipt → still-uncredited clock — not PalmPay DefunctMerchant Consent Clock (merchant consent) and not PalmPay FailedFuel 2-Year Refund (failed POS at pump).
 - **Complaint citations:** FIJ (17 Jul 2026), https://fij.ng/article/palmpay-recovered-kogi-businesswomans-n88000-due-to-suspected-fraud-it-hasnt-credited-her-4-months-later/ (N88,000 reversed from recipient, sender uncredited after court order). Related dual-rail delays: FIJ, https://fij.ng/article/opay-palmpay-keep-publisher-waiting-11-months-after-he-flagged-n480000-taken-by-fraudsters/
 - **Solution:**
-  - **Established solution:** Resolver / Fair (US/UK) style dispute-case timelines that bind merchant/bank reverse notices to customer credit status.
-  - **Variant:** Nigeria wallet reverse-credit clock that pairs recipient reverse SMS, court-order upload, and PalmPay ticket SLA in Naira with CBN CPD handoff PDF.
+  - **Established solution:** Chargebacks911 (developed-market payment-dispute evidence software).
+  - **Variant:** PalmPay Recovered-Not-Credited Clock, the Nigeria version of that software for PalmPay consumers and micro-traders. It stores the recipient reverse notice, the court-order upload, and the PalmPay ticket timeline in the app. It does not litigate, and it is not PalmPay official support.
 - **Target:** PalmPay consumers and micro-traders who see “refund” language without a matching credit.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not PalmPay official.
@@ -127,8 +127,8 @@
 
 - **Problem / trend:** Punch (13 Nov 2026): TRCN Registrar Ronke Soyombo said the council found **250** fake teaching certificates during a state recruitment aiming to hire about **1,000** teachers, and is rolling QR-coded certificates that link to the TRCN portal, with FG targets of **75%** licensed teachers by end-**2026** and **100%** certified before classroom entry by Dec **2027**.
 - **Solution:**
-  - **Established solution:** Sterling Teachers / Teacher Verification services and ClearedJobs-style credential APIs (software) used by US/UK school districts.
-  - **Variant:** Nigeria private-school hire desk that walks QR scan → portal screenshot → PQE/licence deadline fields → HR handoff PDF (not the TRCN portal itself).
+  - **Established solution:** EverCheck (First Advantage developed-market professional-licence verification software).
+  - **Variant:** TRCN FakeCert QR Hire Verify Desk, the Nigeria version of that software for private-school proprietors and SUBEB HR clerks. It stores the QR scan, the portal screenshot, and the licence-deadline fields in the app. It is not the TRCN portal.
 - **Target:** Private school proprietors, state SUBEB HR clerks, church/mosque school boards hiring before Dec 2026/2027 gates.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not TRCN official; not a substitute for portal verification; NDPA for candidate IDs.
@@ -146,8 +146,8 @@
 
 - **Problem / trend:** BusinessDay (13 Nov 2026): investors still leave Nigeria’s ~**N100bn** creative sector because producers arrive with scripts/budgets but lack IP ownership clarity, recovery paths, distribution plans, audited records, and a data room — a trust gap highlighted at the African Film Festival / World Bank-linked financing panel.
 - **Solution:**
-  - **Established solution:** Wrapbook / Entertainment Partners producer finance packs and DocSend-style data rooms used by developed-market film financing.
-  - **Variant:** Nigeria creative finance micro-desk: IP chain checklist, budget vs secured-funds fields, distribution note, and Naira investor one-pager (not a fund manager, not NEXIM filing).
+  - **Established solution:** Wrapbook (developed-market film production finance software).
+  - **Variant:** Creative IP Finance Ready Pack, the Nigeria version of that software for Nollywood and music SMEs. It stores the IP chain, budget versus secured funds, and the distribution note in the app. It is not a fund manager, and it is not a NEXIM filing desk.
 - **Target:** Nollywood/music SMEs, boutique producers pitching MBO Capital–style desks, diaspora angels funding single titles.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Educational only — not SMEDAN, NEXIM, or SEC fund registration; not investment advice.
@@ -166,8 +166,8 @@
 - **Formula:** **Successful business:** OPay (mass Nigeria fintech wallet / payments). **Recurring complaint:** a publisher flagged **N360,000 + N120,000** scam transfers from OPay to PalmPay accounts and waited **~11 months** with each side pointing at the other (FIJ). **Variation:** Dual-rail fraud-flag clock — not OPay RecipientRefuse / ErroneousCredit rails and not PalmPay Recovered-Not-Credited (single reverse-credit).
 - **Complaint citations:** FIJ, https://fij.ng/article/opay-palmpay-keep-publisher-waiting-11-months-after-he-flagged-n480000-taken-by-fraudsters/ (flagged scam transfers, 11-month wait, banks bounce responsibility).
 - **Solution:**
-  - **Established solution:** Unit21 / Sift case-management software that timelines multi-party fraud tickets across institutions.
-  - **Variant:** Nigeria dual-wallet fraud clock that binds OPay ticket IDs, PalmPay replies, and court-order asks into one CBN CPD export.
+  - **Established solution:** Unit21 (developed-market fraud case-management software).
+  - **Variant:** OPay×PalmPay FlaggedFraud 11-Month Wait Clock, the Nigeria version of that software for consumers who lost funds across both wallets. It stores OPay ticket IDs, PalmPay replies, and the court-order ask in the app. It does not litigate, and it is not OPay or PalmPay official support.
 - **Target:** Consumers and publishers who lost funds across OPay→PalmPay scam rails.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN CPD notes; NDPA; not legal practice.
@@ -185,8 +185,8 @@
 
 - **Problem / trend:** Nairametrics/Daily Post/TechCabal (12 Nov 2026): Mastercard and SMEDAN signed an MoU at the MSME Growth Forum to advance SME digitisation under a national MSME Digitization Programme — informal traders still lack a plain enrolment checklist beyond “get credit.”
 - **Solution:**
-  - **Established solution:** Square / Toast onboarding checklists (software) that take small merchants from cash to digital payments and records.
-  - **Variant:** Nigeria MSME digitise pack: payments/tools inventory, PEBEC/SMEDAN note fields, and masterclass follow-up PDF in Naira (not Mastercard or SMEDAN official enrolment).
+  - **Established solution:** Square (Block developed-market small-merchant payments and records software).
+  - **Variant:** SMEDAN×Mastercard Digitize Ready Pack, the Nigeria version of that software for informal retailers and agri-SMEs. It stores the payments and tools inventory and SMEDAN programme note fields in the app. It is not Mastercard or SMEDAN official enrolment.
 - **Target:** Informal retailers, agri-SMEs, and market associations preparing for digitisation programmes.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not Mastercard/SMEDAN/PEBEC official.
@@ -202,10 +202,10 @@
 
 ### 8. HEFAMAA Ajah Clinic Verify Desk — check registration before treatment (S5, S12, S9)
 
-- **Problem:** Punch (13 Nov 2026): Lagos HEFAMAA opened an Ajah annex and warned residents against unregistered hospitals/clinics, urging verification and reports of quackery — families in Ajah/Lekki corridor still rely on WhatsApp clinic recommendations.
+- **Problem / trend:** Punch (13 Nov 2026): Lagos HEFAMAA opened an Ajah annex and warned residents against unregistered hospitals and clinics, urging verification and reports of quackery. Families in the Ajah and Lekki corridor still rely on WhatsApp clinic recommendations.
 - **Solution:**
-  - **Established solution:** LegitScript / NPI Registry–style facility lookup tools (software) used by patients and insurers in developed markets.
-  - **Variant:** Lagos clinic verify desk: HEFAMAA registration fields, Ajah office contact note, photo evidence log, and report handoff PDF (not HEFAMAA enforcement).
+  - **Established solution:** LegitScript (developed-market healthcare business verification software).
+  - **Variant:** HEFAMAA Ajah Clinic Verify Desk, the Nigeria version of that software for Ajah and Lekki families and estate associations. It stores HEFAMAA registration fields, the Ajah office contact note, and a photo evidence log in the app. It is not HEFAMAA enforcement, and it is not medical advice.
 - **Target:** Ajah/Sangotedo/Lekki families, HR desks buying staff clinic panels, estate associations.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not HEFAMAA official; not medical advice.
@@ -223,8 +223,8 @@
 
 - **Problem / trend:** Nairametrics (12 Nov 2026): Power Minister Joseph Tegbe said the Presidential Metering Initiative has supplied meters to **more than 2.8 million** customers to cut collection losses — households still fight estimated bills when install claims and DisCo records disagree.
 - **Solution:**
-  - **Established solution:** UtilityAPI / Arcadia meter-data dispute workflows (software) used by US energy customers and aggregators.
-  - **Variant:** Nigeria PMI install-claim clock: meter photo + serial, install date, estimated-bill screenshots, and DisCo/NERC note pack (not a DisCo portal).
+  - **Established solution:** UtilityAPI (developed-market utility meter-data software).
+  - **Variant:** PMI 2.8m Meter Install Claim Clock, the Nigeria version of that software for households and shop owners still on estimated bills. It stores the meter photo, serial, install date, and estimated-bill screenshots in the app. It is not a DisCo or NERC portal.
 - **Target:** Newly “metered” households and SME shops still seeing estimated billing.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not DisCo/NERC complaint desk.
@@ -243,8 +243,8 @@
 - **Formula:** **Successful business:** PalmPay (mass Nigeria card/wallet at merchants). **Recurring complaint:** Ogun trader Opeoluwa Isaiah Olayinka was debited **N15,200** for a failed filling-station PalmPay card payment (21 Aug 2024) and chased a refund for **~2 years** via calls, email, and in-app complaints (FIJ). **Variation:** Failed-dispense debit clock — not Recovered-Not-Credited (fraud reverse) and not Zenith LASTMA FailedPoS CarHold.
 - **Complaint citations:** FIJ, https://fij.ng/article/palmpay-debited-n15200-despite-failed-payment-it-watched-ogun-trader-chase-refund-for-2-years/ (failed fuel payment, debit stuck ~2 years).
 - **Solution:**
-  - **Established solution:** ChargebackOps / Ethoca-style failed-auth dispute clocks used by card issuers in developed markets.
-  - **Variant:** Nigeria fuel-POS failed-debit clock with pump receipt, debit alert, and PalmPay ticket SLA export for CBN CPD.
+  - **Established solution:** Ethoca Alerts (Mastercard developed-market failed-transaction alert software).
+  - **Variant:** PalmPay FailedFuel Debit 2-Year Refund Clock, the Nigeria version of that software for motorists and traders paying for fuel with PalmPay. It stores the pump receipt, the debit alert, and the PalmPay ticket timeline in the app. It does not litigate, and it is not PalmPay official support.
 - **Target:** Motorists and traders paying fuel with PalmPay cards/wallets.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** CBN CPD notes; NDPA; not legal practice.
@@ -262,8 +262,8 @@
 
 - **Problem / trend:** Nairametrics (12 Nov 2026) profiles CanalBox democratising fibre internet — estates still lose weeks to unclear survey, pole permission, and CPE handover steps. Product Hunt this week surfaces adjacent productivity tools (YouArt, Sendr, Omnigraph) but fibre onboarding remains a Nigeria ops niche (StartupList directory **429** this run).
 - **Solution:**
-  - **Established solution:** Calix / Nokia fibre OSS customer-onboarding portals (software) used by developed-market ISPs.
-  - **Variant:** Nigeria estate fibre onboard desk: survey appointment, landlord/estate permission checklist, and CPE photo handoff in WhatsApp-friendly PDFs.
+  - **Established solution:** Calix (developed-market fibre subscriber onboarding software).
+  - **Variant:** CanalBox Fibre Onboard NG, the Nigeria version of that software for estate residents and small offices. It stores the survey appointment, the estate permission note, and the CPE photo handoff in the app. It is not an ISP licence, and it is not CanalBox official support.
 - **Target:** Lagos/Abuja estate residents and small offices switching to CanalBox-like fibre.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for install photos/IDs; not an ISP licence.
@@ -281,8 +281,8 @@
 
 - **Problem / trend:** BusinessDay (13 Nov 2026): rising FPI with near-zero FDI raises stability questions for growth — import SMEs still treat portfolio inflows as a green light for inventory without a simple board separating hot money from operating FX needs (OWID internet/energy context only soft backdrop this run).
 - **Solution:**
-  - **Established solution:** Bloomberg / Refinitiv brief boards and treasury policy templates (software + research) used by developed-market CFOs.
-  - **Variant:** Nigeria SME FPI-vs-FDI board: payable calendar, headline vs NFEM note fields, and 30-day inventory caution PDF (not investment advice).
+  - **Established solution:** Koyfin (developed-market macro brief software).
+  - **Variant:** FPI vs FDI Stability Board, the Nigeria version of that software for import SMEs and boutique treasury consultants. It stores the payable calendar and headline versus NFEM note fields in the app. It is not a CBN FX desk, and it is not investment advice.
 - **Target:** Import SMEs, freelancers with FX payables, boutique treasury consultants.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not CBN FX desk or investment advice.
@@ -330,13 +330,17 @@
 
 **Partial runs:** S6 directory blocked (429). S7 product pages not deep-fetched (Cloudflare risk). S1 collector subprocess not requested (`strategy_1_run` skipped). S15 skipped by design.
 
+**Pass 2 pack:** 2026-11-13. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
+
 ---
 
 ## Next validation steps
 
 | When | Step |
 |------|------|
-| **2026-11-13** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same file — normalize §14 subheads, then one-shot Docx (do not invent/re-rank) |
+| **2026-11-13** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, one named Established solution and a Nigeria software Variant). |
+| **2026-11-13** | Optional `idea_card_schema.py` before Docx. |
+| **2026-11-13** | One-shot in-repo Docx (desktop Word not opened). |
 | **2026-11-14** | Spot-check GasToPower desk fields with one GenCo/gas commercial contact (no live filing) |
 | **2026-11-15** | PalmPay Recovered-Not-Credited: script fixture from FIJ public timeline (no real customer PII) |
 | **2026-11-17** | TRCN QR hire verify: dry-run portal screenshot flow on one sample public cert path |
@@ -346,6 +350,4 @@
 
 ## Docx status
 
-_PENDING_PASS_2_PACK_
-
-Pass 2 pack is required before Docx. Next paste: `prompts/agent_formulation_pack.txt` against `agent-business-idea-runs/outputs/business_ideas_20261113.md`.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
