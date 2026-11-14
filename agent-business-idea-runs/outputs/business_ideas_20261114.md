@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-14 ~06:00-07:30 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-11-14 ~06:00-07:30 UTC. Pass 1 Discover, then Pass 2 pack on this same file.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261114.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261114_060111.json` (`strategy_12_run` **ok**; Punch/Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS product URLs only / Cloudflare risk on product pages; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-11-13→2026-10-10 (esp. GasToPower N639bn Invoice Evidence Desk, PH Airport 30yr Concession Transition Desk, PalmPay Recovered-Not-Credited Clock, TRCN FakeCert QR Hire Verify Desk, Creative IP Finance Ready Pack, AfreximDBN ExportSME Ready Pack, ACReSAL FloodLandscape Bid Desk, Zenith LASTMA FailedPoS CarHold Clock, Champion Brands Dec3 Scheme Vote Desk, FirstBank×Paga PhoneUpdate Unauth Sweep Clock, FCCPC PumpPass-Through Evidence Desk, MinPension Guarantee Eligibility Desk, DisCo Unbilled N568bn Meter Gap Desk, GTBank FailedPoS Refund Clock); older `business_ideas_20261011.md` / `20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -205,7 +205,7 @@
 
 - **Problem / trend:** Nairametrics/TechCabal (13 Nov 2026): NCC is consulting on an Incentive-Based Spectrum Investment Framework (IBSIF) as monthly data use hit **1.73m TB** (Sep 2026) vs ~**517,670 TB** (Jan 2023), with 5G population coverage still ~**13%** (Apr 2026). Operators and consumer advocates need a plain comment pack tying coverage/capacity claims to measurable commitments before the consultation closes (coverage cites ~**30 Nov 2026** feedback window).
 - **Solution:**
-  - **Established solution:** Regulations.gov comment management tools (developed-market regulatory consultation software).
+  - **Established solution:** Regulations.gov (developed-market public-comment docket software).
   - **Variant:** NCC IBSIF Spectrum Incentive Comment Desk, the Nigeria version of that software for operator policy desks and consumer advocates. It stores the consultation questions, the coverage/capacity evidence fields, and the submission deadline in the app. It is not an NCC portal.
 - **Target:** Mid-tier ISP/MVNO policy clerks, state ICT desks, consumer advocates filing IBSIF comments.
 - **MVP cost:** $6k–$14k.
@@ -330,7 +330,7 @@
 
 **Partial runs:** S6 directory blocked (429). S7 product pages not deep-fetched (Cloudflare risk). S1 collector subprocess not requested (`strategy_1_run` skipped). S15 skipped by design. Punch RSS empty — Mode A Bille cites from Premium Times/Nairametrics/Punch article URLs via web research.
 
-**Pass 2 pack:** Required before Docx. Do not invent/re-rank. Paste `prompts/agent_formulation_pack.txt` against this same dated `.md`.
+**Pass 2 pack:** 2026-11-14. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every idea. No new ideas and no re-rank.
 
 ---
 
@@ -338,9 +338,9 @@
 
 | When | Step |
 |------|------|
-| **2026-11-14** | Pass 2 pack on this same file (same 12 ideas, same ranks, section 14 subheads) — Automation B / Hub Pass 2 |
-| **2026-11-14** | Optional `idea_card_schema.py` before Docx |
-| **2026-11-14** | One-shot in-repo Docx after Pass 2 (desktop Word not opened) |
+| **2026-11-14** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, one named Established solution and a Nigeria software Variant). |
+| **2026-11-14** | Optional `idea_card_schema.py` before Docx. |
+| **2026-11-14** | One-shot in-repo Docx (desktop Word not opened). |
 | **2026-11-15** | Spot-check Dangote PFA allocation desk fields against public PenCom waiver note (no live PFA login) |
 | **2026-11-16** | OPay×Moniepoint FailedPOS: script fixture from FIJ public timeline (no real customer PII) |
 | **2026-11-18** | Bille wells desk: dry-run risk-tier fields from NUPRC public statement only |
@@ -350,6 +350,4 @@
 
 ## Docx status
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-Pass 2 pack is required before Docx. Do not convert or open Word in Pass 1.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
