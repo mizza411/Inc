@@ -1,0 +1,12 @@
+/**
+ * LOCAL ONLY — gitignored. Never commit this file.
+ * Copy from config.local.js.example and fill privately on your machine.
+ *
+ * Example:
+ *   WHATSAPP_E164: "2348012345678"
+ */
+window.PWCP_LANDING_LOCAL = {
+  WHATSAPP_E164: "",
+  CONTACT_URL: "",
+  APP_URL: "",
+};

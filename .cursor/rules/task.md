@@ -1402,7 +1402,9 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 #### Out of scope (v1)
 - MC/planner SaaS · native App Store app · full wedding suite · print ops · WhatsApp API required
 
-**Priority:** Set public `CONTACT_URL` (Form/mailto/IG — no phone in git) → push → Streamlit Cloud → short manual §B/§D → IG/0b.
+**Priority:** Set public `CONTACT_URL` (brand Form / product IG / brand mailto — **no phone in git**, **no personal name on Form**) → push → Streamlit Cloud → short manual §B/§D → IG/0b. Guide: `landing/SET_CONTACT_URL.md`.
+
+**Conversation handoff (this §7 landing / CONTACT_URL thread):** **Safe to delete this chat.** Durable state = this §7 + `landing/` + `DEPLOY.md` + `SET_CONTACT_URL.md` (incl. brand-Form privacy lock). Nothing unique left only in transcript. Re-open with: “Continue §7 CONTACT_URL” or “Wire landing CONTACT_URL”.
 
 > **Manual UI:** Only remaining human steps live in [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md) (“Your minimum checklist”). Policy: `.cursor/rules/deferred-manual-testing.mdc`.
 
