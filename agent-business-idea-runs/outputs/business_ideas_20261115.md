@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-15 ~06:00–07:15 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-11-15 ~06:00-07:15 UTC. Pass 1 Discover, then Pass 2 pack on this same file.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261115.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261115_060109.json` (`strategy_12_run` **ok**; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles used for S7; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** memory tops 2026-11-14→2026-10-10 (esp. Dangote Refinery IPO PFA Allocation Evidence Desk, Bille Gas Seepage 13 High-Risk Wells Evidence Desk, OPay×Moniepoint FailedPOS 5-Day Promise Clock, SME Bank Rate 30% vs DFI Refinance Pack, Local Pharma N29bn CapEx Ready Pack, GasToPower N639bn Invoice Evidence Desk, PH Airport 30yr Concession Transition Desk, PalmPay Recovered-Not-Credited Clock, TRCN FakeCert QR Hire Verify Desk, Creative IP Finance Ready Pack); older `business_ideas_20261011.md` / `past_business_ideas.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. DBN DELTA Climate Ready Pack — MSME project-prep pack for $275m climate window (**S12 Mode A**)
 
-- **Problem:** Nairametrics (14 Nov 2026): Development Bank of Nigeria launches the **$275 million** DBN Enterprise Lending for Transition and Adaptation (DELTA) programme at COP31, including about **$100 million** from the Green Climate Fund, aimed at MSME solar, energy efficiency, and climate-resilient agriculture. DBN’s CEO explicitly lists limited project-preparation capacity among barriers, so SMEs still arrive at PFIs with WhatsApp quotes instead of bankable packs.
+- **Problem / trend:** Nairametrics (14 Nov 2026): Development Bank of Nigeria launches the **$275 million** DBN Enterprise Lending for Transition and Adaptation (DELTA) programme at COP31, including about **$100 million** from the Green Climate Fund, aimed at MSME solar, energy efficiency, and climate-resilient agriculture. DBN’s CEO explicitly lists limited project-preparation capacity among barriers, so SMEs still arrive at PFIs with WhatsApp quotes instead of bankable packs.
 - **Solution:**
-  - **Established solution:** Climate project-preparation / readiness software used with GCF and DFI pipelines (e.g. Convergence-style project prep and GCF readiness toolkits).
-  - **Variant:** Nigeria DELTA Ready Pack — solar/irrigation evidence checklist, Naira cost fields, and PFI handoff PDF tuned for DBN-participating banks, not a DBN portal and not a loan.
+  - **Established solution:** Convergence (developed-market blended-finance project preparation platform).
+  - **Variant:** DBN DELTA Climate Ready Pack, the Nigeria version of that software for diesel-dependent MSMEs and boutique climate consultants. It stores the solar and irrigation evidence fields, the Naira cost fields, and the PFI handoff notes in the app. It is not a DBN portal and it is not a loan.
 - **Target:** Diesel-dependent MSMEs, agri SMEs needing irrigation resilience, boutique climate consultants coaching first DELTA applications.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not DBN, GCF, or PFI official; not investment or lending advice; NDPA for firm docs.
@@ -86,10 +86,10 @@
 
 ### 2. Bakassi Deep Seaport PPP Diligence Desk — $3.5bn flag-off vs financing-arrangement checklist (**S12 Mode A**)
 
-- **Problem:** Premium Times (14 Nov 2026) and Cross River ceremony accounts (13 Nov 2026): President Tinubu (via VP Shettima) flags off the **$3.5 billion** Bakassi Deep Seaport (20m draft + ~260km superhighway). Governor Otu cites **$2.27 billion** initial FEC funding while Afreximbank **$3.5 billion** financing arrangements are still described as ongoing — local suppliers and logistics SMEs treat groundbreaking headlines as signed purchase orders without a PPP diligence pack.
+- **Problem / trend:** Premium Times (14 Nov 2026) and Cross River ceremony accounts (13 Nov 2026): President Tinubu (via VP Shettima) flags off the **$3.5 billion** Bakassi Deep Seaport (20m draft + ~260km superhighway). Governor Otu cites **$2.27 billion** initial FEC funding while Afreximbank **$3.5 billion** financing arrangements are still described as ongoing — local suppliers and logistics SMEs treat groundbreaking headlines as signed purchase orders without a PPP diligence pack.
 - **Solution:**
-  - **Established solution:** Infrastructure PPP diligence / concession readiness software (e.g. World Bank PPP toolkit-style checklists and InfraCo diligence workspaces).
-  - **Variant:** Nigeria Bakassi PPP Diligence Desk — FEC/funding milestone fields, supplier capability checklist, and Cross River corridor handoff PDF, not an NPA bidding portal.
+  - **Established solution:** Procore (developed-market construction project management software).
+  - **Variant:** Bakassi Deep Seaport PPP Diligence Desk, the Nigeria version of that software for Cross River logistics SMEs and marine contractors. It stores the FEC funding milestone fields, the supplier capability notes, and the corridor handoff notes in the app. It is not an NPA bidding portal.
 - **Target:** Cross River / South-South logistics SMEs, marine contractors, boutique PPP counsel supporting supplier readiness.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NPA, ICRC, or Cross River Investment Bureau official; not legal advice.
@@ -109,8 +109,8 @@
 - **Complaint citations:** FIJ (13 Oct 2026), https://fij.ng/article/gtbank-wont-help-civil-servant-recover-n977124-in-unauthorised-debits-but-it-wants-him-to-return-n408215-anyway/ (N977,124 total including N568,908 balance drain and N408,215 unauthorised loan; bank pushes loan repayment). Reader corroboration in the same thread notes similar GTBank + forced-loan patterns in other states (not treated as separate products).
 - **Success signal:** GTBank mass retail footprint in FIJ coverage and Nigeria consumer banking.
 - **Solution:**
-  - **Established solution:** Consumer dispute / unauthorized-transaction case trackers used with US/UK banks (e.g. dispute packet builders paired with CFPB-style complaint exports).
-  - **Variant:** Nigeria GT ForcedLoan Clock — alert timeline, loan-disbursement proof, and CBN CPD note pack with Naira fields, not a GTBank portal and not legal practice.
+  - **Established solution:** FairShake (developed-market consumer dispute resolution software).
+  - **Variant:** GTBank UnauthDebit ForcedLoan Clock, the Nigeria version of that software for GTBank retail customers. It stores the debit timeline, the unauthorised loan proof, and the CBN CPD notes in the app. It is not a GTBank portal and it is not legal practice.
 - **Target:** GTBank retail customers hit by unauthorised debits that also open a loan facility on their account.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not GTBank official.
@@ -128,8 +128,8 @@
 
 - **Problem / trend:** Nairametrics (14 Nov 2026): TTP Limited MD Jama Onwubuariri says electronic truck call-up (Ètò) has cut cargo transportation costs by as much as **65%** versus pre-system multi-week waits, with turnaround now generally **2–3 days** under normal conditions. Haulage SMEs and importers still argue freight quotes with landlords and buyers using WhatsApp screenshots instead of a dated cost-evidence pack.
 - **Solution:**
-  - **Established solution:** Freight cost benchmarking / TMS analytics software (e.g. freight audit tools used in US/EU logistics).
-  - **Variant:** Nigeria Ètò Cost Evidence Pack — call-up booking vs wait-day fields, Naira trip cost sheet, and bid handoff PDF, not TTP or NPA official software.
+  - **Established solution:** DAT Freight & Analytics (developed-market freight rate benchmarking software).
+  - **Variant:** Lagos Ètò Call-Up Cost Evidence Pack, the Nigeria version of that software for Lagos haulage SMEs and clearing agents. It stores the call-up booking versus wait-day fields, the Naira trip cost fields, and the bid notes in the app. It is not TTP or NPA official software.
 - **Target:** Lagos haulage SMEs, clearing agents, FMCG dispatch managers needing bid and landlord evidence.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NPA or TTP official; not a tariff regulator.
@@ -149,8 +149,8 @@
 - **Complaint citations:** FIJ, https://fij.ng/article/someone-stole-access-bank-customers-n2m-after-first-bank-atm-seized-his-card-15-weeks-on-banks-have-no-answers/ (card seize then dual N1m PoS drains). Follow-up: FIJ, https://fij.ng/article/after-fijs-story-first-bank-releases-cctv-footage-to-man-who-lost-n2m-following-atm-card-seizure/ (CCTV released after coverage; recovery still unresolved in that update).
 - **Success signal:** Access Bank and First Bank mass retail ATM/card footprints in FIJ coverage.
 - **Solution:**
-  - **Established solution:** Multi-party bank dispute case trackers (card-network chargeback workspaces + ATM incident evidence packs).
-  - **Variant:** Nigeria ATM-Seize Drain Clock — seize timeline, dual-bank ticket log, CCTV request checklist, and CBN CPD export, not either bank’s official app.
+  - **Established solution:** Chargebacks911 (developed-market payment-dispute evidence software).
+  - **Variant:** FirstBank ATM Seize × Access Drain Clock, the Nigeria version of that software for customers whose cards jam in another bank's ATM. It stores the seize timeline, the dual-bank ticket log, and the CCTV request notes in the app. It is not either bank's official app.
 - **Target:** Customers whose cards jam in another bank’s ATM and then see rapid PoS drains.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN CPD notes; NDPA; not legal practice; not Access or First Bank official.
@@ -168,8 +168,8 @@
 
 - **Problem / trend:** Legit.ng (8 Nov 2026) and Tribune: retail cooking gas hits about **N1,800/kg** in Lagos/Ogun (12.5kg ≈ **N22,500**), with most depots near **N1,445/kg** while Dangote is reported at **N1,150/kg**. Restaurant SMEs and households still argue “official” prices on WhatsApp without a dated depot-vs-retail spot sheet. Business Daily Nigeria (14 Nov 2026) also flags cooking gas at **N1,800/kg** in its executive digest.
 - **Solution:**
-  - **Established solution:** Fuel/LPG price transparency apps used in developed markets (depot vs pump compare tools).
-  - **Variant:** Nigeria LPG Gap Spot Desk — depot vs neighbourhood retail fields, cylinder-size cost sheet, and screenshot log, not an NMDPRA price board.
+  - **Established solution:** GasBuddy (developed-market fuel price comparison software).
+  - **Variant:** LPG N1800 Depot Gap Spot Desk, the Nigeria version of that software for Lagos and Ogun restaurants and LPG retail SMEs. It stores the depot versus neighbourhood retail fields, the cylinder-size cost fields, and the photo log in the app. It is not an NMDPRA price board.
 - **Target:** Lagos/Ogun/Oyo restaurants, estate bulk buyers, LPG retail SMEs defending margins.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NMDPRA or NALPGAM official price control.
@@ -185,10 +185,10 @@
 
 ### 7. NRS OML146 Tax Record Ready Pack — petroleum royalty record response kit (S5, S9, S12)
 
-- **Problem:** Nairametrics exclusive (14 Nov 2026): Nigeria Revenue Service files criminal charges against Sterling Global Oil Resources Limited and its CEO over alleged failure to produce OML 146 petroleum royalty books for **2016–2025** under the Nigeria Tax Administration Act 2025, with plea adjourned to **27 Jan 2027**. Other E&P SMEs still keep royalty evidence in email threads without a Section 57 response checklist.
+- **Problem / trend:** Nairametrics exclusive (14 Nov 2026): Nigeria Revenue Service files criminal charges against Sterling Global Oil Resources Limited and its CEO over alleged failure to produce OML 146 petroleum royalty books for **2016–2025** under the Nigeria Tax Administration Act 2025, with plea adjourned to **27 Jan 2027**. Other E&P SMEs still keep royalty evidence in email threads without a Section 57 response checklist.
 - **Solution:**
-  - **Established solution:** Tax information-request / audit-response workspaces used by energy companies (e.g. tax controversy document vaults).
-  - **Variant:** Nigeria NRS Record Ready Pack — notice timeline, document index for royalty periods, and counsel handoff PDF, not NRS e-filing and not tax advice.
+  - **Established solution:** Thomson Reuters ONESOURCE (developed-market tax compliance and audit-response software).
+  - **Variant:** NRS OML146 Tax Record Ready Pack, the Nigeria version of that software for indigenous E&P operators and boutique tax counsel. It stores the notice timeline, the royalty-period document index, and the counsel handoff notes in the app. It is not NRS e-filing and it is not tax advice.
 - **Target:** Indigenous E&P operators, oil-service SMEs supporting royalty records, boutique tax counsel.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational only — not NRS official; not a substitute for licensed tax counsel.
@@ -206,8 +206,8 @@
 
 - **Problem / trend:** BusinessDay (14 Nov 2026): SunTrust Bank and OPay sign a Terminal ID Services Agreement so SunTrust supplies TIDs, terminal management, settlement, and reconciliation for OPay POS merchants and agents nationwide. Agents still reconcile failed settlements with screenshots across two brands.
 - **Solution:**
-  - **Established solution:** Merchant settlement reconciliation software used by US/EU acquirers (TID/MID recon dashboards).
-  - **Variant:** Nigeria SunTrust×OPay Recon Pack — TID/session fields, dual-party ticket log, and Naira mismatch sheet, not either company’s official merchant portal.
+  - **Established solution:** Fiserv (developed-market merchant settlement and reconciliation software).
+  - **Variant:** SunTrust×OPay TID Settlement Recon Pack, the Nigeria version of that software for OPay POS agents and SME merchants. It stores the TID and session fields, the dual-party ticket log, and the Naira mismatch fields in the app. It is not either company's official merchant portal.
 - **Target:** OPay POS agents and SME merchants whose settlement now involves SunTrust TID rails.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** NDPA; not SunTrust or OPay official; not a payments licence.
@@ -225,8 +225,8 @@
 
 - **Problem / trend:** Punch (15 Nov 2026): UK imported about **£1.02 billion** of refined petroleum products from Nigeria in one year as Dangote Refinery expands. Midstream and logistics SMEs still lack a simple export-lane readiness checklist separating headline demand from documentation, offtake, and quality evidence.
 - **Solution:**
-  - **Established solution:** Export documentation / trade-compliance readiness software (e.g. Incoterms + document checklist tools used by exporters).
-  - **Variant:** Nigeria Refined Export Lane Desk — UK-buyer doc fields, quality/lot evidence checklist, and freight handoff PDF, not a customs portal.
+  - **Established solution:** Descartes (developed-market export documentation and trade-compliance software).
+  - **Variant:** UK £1bn Refined Export Lane Desk, the Nigeria version of that software for logistics SMEs and boutique traders. It stores the UK-buyer document fields, the quality and lot evidence fields, and the freight handoff notes in the app. It is not a customs portal.
 - **Target:** Logistics SMEs, boutique traders, and service firms around refined-product export corridors.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not Customs, NPA, or NMDPRA official; not trade advice.
@@ -244,8 +244,8 @@
 
 - **Problem / trend:** Product Hunt (fetch 2026-11-15): **MAP & GO!** trends as “See your day on the map.” Nigeria field sales, PoS float runners, and micro-logistics agents still plan multi-stop Lagos days in WhatsApp voice notes without a simple offline-friendly day map.
 - **Solution:**
-  - **Established solution:** MAP & GO! / consumer day-map planning software (Product Hunt: https://www.producthunt.com/products/expert-chase-deleted-1107920).
-  - **Variant:** Lagos Field Day NG — Naira trip-cost notes, offline stop list, and agent handoff PDF for dense city routes, not a full Google Maps competitor.
+  - **Established solution:** MAP & GO! (developed-market day-on-a-map planning software, Product Hunt RSS title in this run's fetch).
+  - **Variant:** Lagos Field Day NG, the Nigeria version of that software for PoS agents and last-mile runners. It stores the stop list, the Naira trip-cost notes, and the agent handoff notes in the app. It works offline on dense city routes. It is not a full Google Maps competitor.
 - **Target:** PoS agents, FMCG merchandisers, last-mile runners in Lagos/Ibadan/PH.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for location traces; not a mapping authority.
@@ -263,8 +263,8 @@
 
 - **Problem / trend:** Product Hunt lists **Restoration Scope** as field data and monitoring software for reforestation. OWID renewable-energy topic (fetch status **200**) underscores the global shift toward low-carbon energy and land restoration. Nigerian community and estate tree projects still track survival in paper notebooks after planting drives.
 - **Solution:**
-  - **Established solution:** Restoration Scope (https://www.producthunt.com/products/restoration-scope) — field monitoring for reforestation.
-  - **Variant:** NG Community Plot — plot photo log, survival checklist, and LGA/NGO handoff PDF with offline-first phone capture, not NESREA enforcement software.
+  - **Established solution:** Restoration Scope (developed-market reforestation field-monitoring software, https://www.producthunt.com/products/restoration-scope).
+  - **Variant:** Restoration Scope NG Community Plot, the Nigeria version of that software for estate associations and NGO field officers. It stores the plot photo log, the survival notes, and the LGA handoff notes in the app. Phone capture works offline. It is not NESREA enforcement software.
 - **Target:** Estate associations, school green clubs, NGO field officers, CSR tree programmes.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** Informational / ops tool — not NESREA or state forestry official.
@@ -280,10 +280,10 @@
 
 ### 12. High-Altitude Transit Health Brief — Addis transit advisory checklist (S5, S9)
 
-- **Problem:** Nairametrics (14 Nov 2026): Federal Government issues a high-altitude travel advisory after **16 Nigerians** die in Addis Ababa, warning about health risks for Nigerians transiting high-altitude hubs. Families and SME travel bookers still share only WhatsApp rumours without a plain checklist of questions for agents and clinics.
+- **Problem / trend:** Nairametrics (14 Nov 2026): Federal Government issues a high-altitude travel advisory after **16 Nigerians** die in Addis Ababa, warning about health risks for Nigerians transiting high-altitude hubs. Families and SME travel bookers still share only WhatsApp rumours without a plain checklist of questions for agents and clinics.
 - **Solution:**
-  - **Established solution:** Travel-health advisory / itinerary risk checklists used by CDC-style travel clinics and corporate travel tools.
-  - **Variant:** Nigeria High-Altitude Transit Brief — route questions, medication reminder fields, and agent handoff PDF, not medical diagnosis and not NCDC care.
+  - **Established solution:** International SOS (developed-market travel-health risk software).
+  - **Variant:** High-Altitude Transit Health Brief, the Nigeria version of that software for diaspora families and SME travel agents. It stores the route questions, the medication reminder fields, and the agent handoff notes in the app. It is not a medical diagnosis and it is not NCDC care.
 - **Target:** Diaspora families booking Addis connections, SME travel agents, HR travel desks.
 - **MVP cost:** $4k–$10k.
 - **Regulatory:** Educational only — not NCDC, FAAN, or medical advice.
@@ -335,7 +335,7 @@
 
 **Partial runs / soft fails:** Techpoint and Financial Nigeria RSS returned **0** headlines (continued). StartupList Africa **429** (S6 synthesized). Product Hunt product-page taglines may be Cloudflare-limited — used RSS titles/summaries. Trustpilot not used. S15 skipped by design.
 
-**Pass 2 pack:** Required before Docx. Same dated `.md` — do not invent a new ranked set. Paste `prompts/agent_formulation_pack.txt` next.
+**Pass 2 pack:** 2026-11-15. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
 
 ---
 
@@ -343,14 +343,14 @@
 
 | Date | Step |
 |------|------|
-| **2026-11-15** | Pass 2 pack on this same file (same ranks, section 14 subheads). One-shot in-repo Docx only after pack. Desktop Word not opened. |
-| **2026-11-16** | Smoke: confirm ≥2 primary **S12** Mode A + S1 citation URLs still resolve; optional `idea_card_schema.py` after pack. |
+| **2026-11-15** | Pass 2 pack applied on this same file (same 12 ideas, same ranks, section 14 subheads, one named Established solution and a Nigeria software Variant). |
+| **2026-11-15** | Optional `idea_card_schema.py` before Docx. |
+| **2026-11-15** | One-shot in-repo Docx (desktop Word not opened). |
+| **2026-11-16** | Smoke: confirm at least 2 primary **S12** Mode A ideas, and that S1 citation URLs still resolve. |
 | **2026-11-17** | Owner pick: DBN DELTA Climate Ready Pack landing copy test with 3 solar-SME interviews (no secrets / owner PII in git). |
 | **2026-11-18** | Owner pick: Bakassi PPP Diligence Desk checklist pilot with 2 Cross River supplier inquiries (no owner PII in git). |
 | **2026-11-20** | Soft kill / merge decision on GTBank ForcedLoan vs FirstBank ATM Seize clocks after support-path probes (no customer PII in git). |
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-**Pass 2 pack is required before Docx.** Use `prompts/agent_formulation_pack.txt` against this same file. Do not convert or open Word in Pass 1.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
