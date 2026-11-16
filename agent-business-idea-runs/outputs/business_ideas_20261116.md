@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-16 ~06:00–07:30 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-11-16 ~06:00–07:30 UTC — Pass 1 Discover, then Pass 2 pack on this same file.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261116.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261116_060405.json` (`strategy_1_discovery` **ok** leads=20, `strategy_12_run` **ok** Mode B aid, StartupList **429**, Techpoint/Financial Nigeria RSS **0**, Product Hunt RSS 15 titles)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-11-15→2026-10-10 (esp. DBN DELTA Climate Ready Pack, Bakassi Deep Seaport PPP Diligence Desk, GTBank UnauthDebit ForcedLoan Clock, Lagos Ètò Call-Up Cost Evidence Pack, FirstBank ATM Seize × Access Drain Clock, Dangote Refinery IPO PFA Allocation Evidence Desk, Bille Gas Seepage 13 High-Risk Wells Evidence Desk, OPay×Moniepoint FailedPOS 5-Day Promise Clock, SME Bank Rate 30% vs DFI Refinance Pack, Local Pharma N29bn CapEx Ready Pack, GasToPower N639bn Invoice Evidence Desk, PalmPay Recovered-Not-Credited Clock, MinPension Guarantee Eligibility Desk, PowerGen 2692 BlameChain Evidence Desk, TCN×Ikeja Feeder Blame Evidence Desk); older `business_ideas_20261011.md` / `past_business_ideas.md` skim  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. Ogun Sagamu–Abeokuta Gas Connect Ready Pack — diesel-to-piped-gas switch evidence (**S12 Mode A**)
 
-- **Problem:** BusinessDay (16 Nov 2026): NIPCO Gas and NNPC Gas Marketing commissioned a natural-gas distribution network into Abeokuta for Ogun’s Sagamu–Abeokuta industrial corridor under an NMDPRA licence with **25 years** exclusivity. Factories still run costly diesel/generators and lack a buyer-side connection readiness pack (load profile, switching checklist, tariff-compare fields, host-community note) before offtake talks.
+- **Problem / trend:** BusinessDay (16 Nov 2026): NIPCO Gas and NNPC Gas Marketing commissioned a natural-gas distribution network into Abeokuta for Ogun’s Sagamu–Abeokuta industrial corridor under an NMDPRA licence with **25 years** exclusivity. Factories still run costly diesel/generators and lack a buyer-side connection readiness pack (load profile, switching checklist, tariff-compare fields, host-community note) before offtake talks.
 - **Solution:**
-  - **Established solution:** Industrial gas connection / fuel-switch project packs used by midstream distributors and energy consultants in developed markets (software checklists + engineering readiness sheets).
-  - **Variant:** Nigeria Ogun-corridor gas-connect readiness pack priced in Naira, with diesel-vs-gas compare fields, NMDPRA-licence awareness notes, and WhatsApp-friendly evidence export for SMEs that are not grid-stable.
+  - **Established solution:** EnergyCAP (developed-market facility energy and fuel-cost software).
+  - **Variant:** Ogun Sagamu-Abeokuta Gas Connect Ready Pack, the Nigeria version of that software for factories on the corridor. It stores the load profile, the diesel-versus-gas cost fields, and the offtake handoff notes in the app. It is not an NMDPRA portal and it is not engineering certification.
 - **Target:** Food, packaging, building-materials, and FMCG plants on the Sagamu–Abeokuta axis, boutique energy consultants, Ogun industrial-estate managers.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NMDPRA, NNPC, NIPCO, or NERC official; not engineering certification or tariff advice.
@@ -86,10 +86,10 @@
 
 ### 2. PenCom MPG N52,500 + PenCare Enrol Desk — dual retiree eligibility evidence (**S12 Mode A**)
 
-- **Problem:** BusinessDay (16 Nov 2026): Access Pensions backs PenCom’s launch of a **N52,500** monthly Minimum Pension Guarantee for **173,209** eligible CPS retirees plus PenCare free essential healthcare for low-income pensioners, with more than **N400bn** cited behind the Pension Protection Fund. Retirees and families still lack a plain dual-enrol evidence pack (RSA/PFA fields, eligibility checklist, PenCare vs MPG split, complaint note) when alerts do not match the announced floor.
+- **Problem / trend:** BusinessDay (16 Nov 2026): Access Pensions backs PenCom’s launch of a **N52,500** monthly Minimum Pension Guarantee for **173,209** eligible CPS retirees plus PenCare free essential healthcare for low-income pensioners, with more than **N400bn** cited behind the Pension Protection Fund. Retirees and families still lack a plain dual-enrol evidence pack (RSA/PFA fields, eligibility checklist, PenCare vs MPG split, complaint note) when alerts do not match the announced floor.
 - **Solution:**
-  - **Established solution:** Benefits-eligibility / retiree onboarding checklists used by pension administrators and benefits brokers in developed markets (software + document packs).
-  - **Variant:** Nigeria MPG+PenCare dual enrol desk in plain English/Pidgin-friendly fields, Naira amount checks against the **N52,500** floor, and export for PFA/PenCom consumer paths — not a PFA account portal.
+  - **Established solution:** Fidelity NetBenefits (developed-market retirement benefits portal).
+  - **Variant:** PenCom MPG N52,500 + PenCare Enrol Desk, the Nigeria version of that software for low-balance CPS retirees and family helpers. It stores the RSA and PFA fields, the MPG versus PenCare split, and the enrol handoff notes in the app. It is not a PFA account portal.
 - **Target:** Low-balance CPS retirees, family helpers managing RSA paperwork, boutique pension advisors, retiree associations.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not PenCom, PFA, or PenCare official; not legal or investment advice; NDPA for ID fields.
@@ -107,9 +107,10 @@
 
 - **Formula:** **Successful business:** Carbon (mass Nigeria digital MFB / wallet rail). **Recurring complaint:** after a wrong transfer (N60,000) to a Moniepoint account, Carbon and Moniepoint each point the customer to the other side and recovery stays unresolved (FIJ). **Variation:** Wrong-send → dual-rail ticket timeline → ping-pong evidence clock — not OPay×Moniepoint FailedPOS (POS fail) and not Flutterwave WrongDigit Recover Clock (wrong digit on Flutterwave).
 - **Complaint citations:** FIJ — https://fij.ng/article/delta-resident-mistakenly-sent-n60000-to-wrong-account-carbon-moniepoint-point-her-to-both-directions-when-she-asks-for-help/ (wrong transfer to Moniepoint, Carbon/Moniepoint redirect loop). Context explainer: FIJ — https://fij.ng/article/explainer-why-some-erroneous-bank-transfers-are-more-difficult-to-reverse-than-others/ (consent / court order / funded account gates).
+- **Success signal:** Carbon's mass consumer footprint in FIJ coverage.
 - **Solution:**
-  - **Established solution:** Erroneous-transfer dispute / evidence clocks used by neobanks and payment ops teams in developed markets (software timelines + export packs).
-  - **Variant:** Nigeria Carbon→Moniepoint ping-pong clock with NIBSS-style reference fields, SMS/chat capture, and CBN CPD handoff PDF priced for mid-ticket transfers.
+  - **Established solution:** FairShake (developed-market consumer dispute resolution software).
+  - **Variant:** Carbon x Moniepoint WrongTransfer Ping-Pong Clock, the Nigeria version of that software for people who mis-send between Carbon and Moniepoint. It stores the dual-rail ticket timeline, the transfer reference fields, and the CBN CPD notes in the app. It is not a Carbon or Moniepoint portal.
 - **Target:** Consumers and micro-merchants who mis-send between Carbon and Moniepoint (or similar MFB↔agent rails).
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice; not Carbon or Moniepoint official.
@@ -127,8 +128,8 @@
 
 - **Problem / trend:** Nairametrics (15 Nov 2026): Power Minister Joseph Tegbe lists gas shortages, transmission limits, vandalism, metering gaps, and commercial challenges, while proposing corridor-based 24-hour energy zones with Lagos–Ogun (and Abuja franchise) as pilots covering more than **50%** of national demand. SMEs still lack a dated readiness board separating ministry corridor talk from their own feeder, genset, and band evidence.
 - **Solution:**
-  - **Established solution:** Utility reliability / site energy readiness dashboards used by industrial parks and facility managers in developed markets.
-  - **Variant:** Nigeria Lagos–Ogun corridor SME prep desk with DisCo feeder notes, outage log, diesel-spend fields, and “pilot readiness” PDF — not a DisCo portal.
+  - **Established solution:** GridPoint (developed-market commercial site energy management software).
+  - **Variant:** Lagos-Ogun 24h Energy Zone SME Prep Desk, the Nigeria version of that software for manufacturers on the Lagos-Ogun axis. It stores the feeder notes, the outage log, the diesel-spend fields, and the pilot-readiness notes in the app. It is not a DisCo portal.
 - **Target:** Manufacturers and logistics SMEs on Lagos–Ogun axis, estate managers, boutique energy advisors.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not NERC, NISO, TCN, or DisCo official.
@@ -146,9 +147,10 @@
 
 - **Formula:** **Successful business:** FairMoney (mass Nigeria digital MFB / consumer lender). **Recurring complaint:** customer paid a credit-repair intermediary (PebbleScore) to clear a FairMoney loan; FairMoney reversed funds back to the intermediary for account-limit reasons, the loan stayed open, court threats arrived, and the intermediary still held **N585,000** (FIJ). **Variation:** Pay intermediary → FairMoney reverse → funds-held clock — not FairMoney DiscountSettle Clock (discount not applied) and not FairMoney WrongDebt Shield (loan denied).
 - **Complaint citations:** FIJ — https://fij.ng/article/pebblescore-puts-abuja-customer-in-risky-legal-position-by-holding-on-to-n585000-fairmoney-refund/ (FairMoney reverse to PebbleScore, loan still open, funds held).
+- **Success signal:** FairMoney's mass lending footprint in FIJ coverage.
 - **Solution:**
-  - **Established solution:** Loan-settlement / third-party payment escrow dispute clocks used by consumer-finance ops in developed markets.
-  - **Variant:** Nigeria FairMoney×intermediary refund-hold clock with receipt, reverse alert, loan-still-open timeline, and CPD handoff PDF.
+  - **Established solution:** Escrow.com (developed-market payment-hold and escrow software).
+  - **Variant:** PebbleScore FairMoney Refund Hold Clock, the Nigeria version of that software for borrowers who settle through a third party. It stores the receipt, the reverse alert, the loan-still-open timeline, and the CPD notes in the app. It is not a FairMoney portal and it is not legal practice.
 - **Target:** FairMoney borrowers who settle via third-party “credit repair” or agent accounts.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes; NDPA; not legal practice.
@@ -164,10 +166,10 @@
 
 ### 6. Waybill StoreKeep Charge Evidence Pack — motor-park demurrage receipts (S5, S12, S9)
 
-- **Problem:** Vanguard (16 Nov 2026): traders decry rising, often receipt-less “store keep” charges at motor parks on delayed waybills (examples **N3,500–N8,000**, sometimes before goods enter a store), eroding thin margins for market women and micro-importers.
+- **Problem / trend:** Vanguard (16 Nov 2026): traders decry rising, often receipt-less “store keep” charges at motor parks on delayed waybills (examples **N3,500–N8,000**, sometimes before goods enter a store), eroding thin margins for market women and micro-importers.
 - **Solution:**
-  - **Established solution:** Last-mile demurrage / detention charge evidence tools used by shippers and 3PLs in developed markets.
-  - **Variant:** Nigeria waybill store-keep evidence pack with photo receipt fields, park/union note, grace-period log, and association complaint PDF.
+  - **Established solution:** project44 (developed-market shipment visibility and exception software).
+  - **Variant:** Waybill StoreKeep Charge Evidence Pack, the Nigeria version of that software for market traders on interstate waybills. It stores the charge photo, the park note, the grace-period log, and the association handoff notes in the app. It is not an NURTW portal.
 - **Target:** Market traders using interstate waybills, market associations, boutique logistics helpers.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NURTW, police, or FCCPC enforcement arm.
@@ -183,10 +185,10 @@
 
 ### 7. Reserves $391m Drop Import Timing Board — FX buffer under drawdown (S5, S14, S12)
 
-- **Problem:** Nairametrics (16 Nov 2026): gross external reserves fell about **$390.94m** over 16 days to **$54.87bn** (from $55.26bn on 27 Oct), the largest comparable drop since April, while importers still face NFEM/parallel timing stress.
+- **Problem / trend:** Nairametrics (16 Nov 2026): gross external reserves fell about **$390.94m** over 16 days to **$54.87bn** (from $55.26bn on 27 Oct), the largest comparable drop since April, while importers still face NFEM/parallel timing stress.
 - **Solution:**
-  - **Established solution:** Treasury FX exposure / payable-timing boards used by importers in developed markets.
-  - **Variant:** Nigeria importer timing board linking CBN reserve headlines to invoice calendar and NFEM vs parallel note fields — not a bureau.
+  - **Established solution:** Kyriba (developed-market treasury and FX exposure software).
+  - **Variant:** Reserves $391m Drop Import Timing Board, the Nigeria version of that software for import SMEs. It stores the invoice calendar, the reserve-headline fields, and the NFEM versus parallel notes in the app. It is not a bureau and it is not a CBN desk.
 - **Target:** Import SMEs, freelancers with FX payables, boutique treasury consultants.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Educational only — not CBN FX allocation or investment advice.
@@ -202,10 +204,10 @@
 
 ### 8. Dangote IPO Retail Allotment Confirm Desk — full retail allotment receipt vault (S5, S9, S12)
 
-- **Problem:** BusinessDay (16 Nov 2026): retail subscribers are expected to receive **full** allotments despite ~**$4bn** bids vs ~**$1.6bn** raise (~3.8m applicants), with SEC allotment possibly as early as **16 Nov** and NGX trading ~15 business days later — retail still needs a receipt/allotment-confirm vault distinct from institutional PFA allocation diligence.
+- **Problem / trend:** BusinessDay (16 Nov 2026): retail subscribers are expected to receive **full** allotments despite ~**$4bn** bids vs ~**$1.6bn** raise (~3.8m applicants), with SEC allotment possibly as early as **16 Nov** and NGX trading ~15 business days later — retail still needs a receipt/allotment-confirm vault distinct from institutional PFA allocation diligence.
 - **Solution:**
-  - **Established solution:** IPO allotment confirmation / custody receipt vaults used by retail brokerages in developed markets.
-  - **Variant:** Nigeria retail allotment confirm desk for Dangote Refinery IPO with channel receipt capture, allotment notice log, and “not investment advice” PDF — not a broker.
+  - **Established solution:** Computershare Investor Centre (developed-market shareholder allotment and registry portal).
+  - **Variant:** Dangote IPO Retail Allotment Confirm Desk, the Nigeria version of that software for retail applicants and family helpers. It stores the channel receipt, the allotment notice log, and the trading-start notes in the app. It is not a broker and it is not investment advice.
 - **Target:** Retail IPO applicants and family helpers tracking allotment vs trading start.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not SEC, NGX, or issuing-house official; not investment advice.
@@ -223,8 +225,8 @@
 
 - **Problem / trend:** Nairametrics (16 Nov 2026): Izedon Carbonates acquires Sonnex Masterbatch assets targeting local supply — converters still keep supplier capability notes in WhatsApp while import FX stays tight.
 - **Solution:**
-  - **Established solution:** Supplier qualification / local-content link packs used by plastics converters in developed markets.
-  - **Variant:** Nigeria masterbatch/local-input link pack with capability checklist and buyer handoff PDF for Lagos/Ogun converters.
+  - **Established solution:** SAP Ariba (developed-market supplier qualification software).
+  - **Variant:** Izedon Local Masterbatch Supply Link Pack, the Nigeria version of that software for plastics converters. It stores the capability fields, the local-input notes, and the buyer handoff notes in the app. It is not a SON or customs portal.
 - **Target:** Plastics converters, packaging SMEs, boutique industrial buyers.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not SON or customs official.
@@ -242,16 +244,16 @@
 
 - **Problem / trend:** Product Hunt (16 Nov 2026 fetch): Privacyboard markets “privacy compliance on autopilot.” Nigeria SMEs face NDPA duties with WhatsApp-heavy ops and weak English legal UX. StartupList Africa directory fetch returned **429**, so niche synthesis uses PH + Nigeria NDPA context.
 - **Solution:**
-  - **Established solution:** Privacyboard-style privacy compliance software (developed-market SaaS).
-  - **Variant:** Nigeria NDPA SME Lite checklist + processing-record stub + vendor note fields, Naira pricing path, offline-first PDF export.
+  - **Established solution:** Privacyboard (developed-market privacy compliance software, https://www.producthunt.com/products/privacyboard).
+  - **Variant:** Privacyboard NDPA SME Lite, the Nigeria version of that software for SMEs that store customer phone numbers. It stores the NDPA processing-record fields, the vendor notes, and the Naira pricing path in the app. The export step works offline. It is not NDPC legal practice.
 - **Target:** Nigeria SaaS/e-commerce SMEs storing customer phone numbers, boutique agencies.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA awareness tooling only — not legal practice or NDPC official.
 - **Competitors / alternatives:**
-  - **Privacyboard / OneTrust-class foreign SaaS** — strong abroad; FX and Nigeria-form gaps. Why a Nigeria buyer might still choose this idea: NDPA-shaped Lite + Naira path.
-  - **Lawyer retainers** — thorough; expensive for micro-SaaS. Why a Nigeria buyer might still choose this idea: self-serve checklist.
-  - **DIY Google Doc policies** — common. Why a Nigeria buyer might still choose this idea: dated processing-record stub.
-  - **Unknown local clones** — say so if unnamed. Why a Nigeria buyer might still choose this idea: plain NDPA fields.
+  - **OneTrust** — developed-market privacy suite, FX and Nigeria-form gaps for micro-SMEs. Why a Nigeria buyer might still choose this idea: NDPA-shaped fields and a Naira path.
+  - **Lawyer retainers** — thorough, expensive for micro-SaaS. Why a Nigeria buyer might still choose this idea: self-serve fields in the app.
+  - **DIY Google Doc policies** — common. Why a Nigeria buyer might still choose this idea: dated processing-record fields.
+  - **Iubenda** — developed-market privacy policy tool, weak Nigeria NDPA defaults. Why a Nigeria buyer might still choose this idea: plain NDPA fields for phone-number SMEs.
 - **GUEMF:** Mode B **4/3/3/4/3 = 17**. PH lead: https://www.producthunt.com/products/privacyboard
 - **Commercial viability:** Medium.
 - **Dedup:** Medium-high vs generic compliance priors.
@@ -261,8 +263,8 @@
 
 - **Problem / trend:** Product Hunt: Emayler offers custom email on your domain. Nigeria SMEs still run client mail from free Gmail while brand trust and NDPA mailbox hygiene lag.
 - **Solution:**
-  - **Established solution:** Emayler / Google Workspace / Microsoft 365-style domain email products.
-  - **Variant:** Nigeria SME domain-email onboarding lite with Naira billing notes, DNS checklist, and WhatsApp support script — not a full Workspace clone.
+  - **Established solution:** Emayler (developed-market custom domain email software, https://www.producthunt.com/products/emayler).
+  - **Variant:** Emayler Domain Email NG, the Nigeria version of that software for solo founders and small agencies. It stores the DNS steps, the Naira billing notes, and the support script in the app. It is not a full Google Workspace clone.
 - **Target:** Solo founders and small agencies needing branded mail.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** NDPA for mailbox content; not a telecom licence play.
@@ -280,16 +282,16 @@
 
 - **Problem / trend:** Product Hunt: TwoBucket is beginner-friendly mobile detailing booking software. Nigeria detailers still take bookings on WhatsApp with no deposit trail.
 - **Solution:**
-  - **Established solution:** TwoBucket / Jobber-style field-service booking software.
-  - **Variant:** Nigeria auto-detail booking lite with Paystack deposit link fields and WhatsApp confirm scripts.
+  - **Established solution:** TwoBucket (developed-market mobile detailing booking software, https://www.producthunt.com/products/twobucket).
+  - **Variant:** TwoBucket AutoDetail Booking NG, the Nigeria version of that software for independent detailers. It stores the booking calendar, the Paystack deposit fields, and the confirm notes in the app. It is not a foreign card checkout.
 - **Target:** Independent detailers and small wash bays in Lagos/Abuja.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Ordinary business registration notes only.
 - **Competitors / alternatives:**
   - **WhatsApp + cash DIY** — dominant. Why a Nigeria buyer might still choose this idea: deposit + calendar.
   - **TwoBucket foreign SaaS** — PH product; FX. Why a Nigeria buyer might still choose this idea: Paystack path.
-  - **Generic booking tools** — broad. Why a Nigeria buyer might still choose this idea: detailing-specific fields.
-  - **Unknown local apps** — say so if unnamed. Why a Nigeria buyer might still choose this idea: simple offline-first lite.
+  - **Jobber** — developed-market field-service booking, broader than detailing. Why a Nigeria buyer might still choose this idea: detailing fields plus a Paystack path.
+  - **Paper appointment books** — common. Why a Nigeria buyer might still choose this idea: a deposit trail stored in the app.
 - **GUEMF:** Mode B **3/2/2/1/3 = 11**. PH lead: https://www.producthunt.com/products/twobucket
 - **Commercial viability:** Low-medium.
 - **Dedup:** Medium.
@@ -325,14 +327,17 @@
 
 **Data freshness:** Morning of **2026-11-16** (Africa/Lagos). Techpoint + Financial Nigeria RSS empty. StartupList 429 soft-failed. Product Hunt taglines from RSS (product pages may Cloudflare-block).
 
+**Pass 2 pack:** 2026-11-16. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
+
 ---
 
 ## Next validation steps
 
 | Step | Owner | Target date |
 |------|-------|-------------|
-| Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same `.md` | Automation B / Hub card | **2026-11-16** (same day) |
-| Optional `idea_card_schema.py` before Docx | Agent | After Pass 2 rewrite |
+| Pass 2 pack applied on this same file (same 12 ideas, same ranks) | Automation B | **2026-11-16** |
+| `idea_card_schema.py --strict-full` before Docx | Agent | **2026-11-16** |
+| One-shot in-repo Docx (desktop Word not opened) | Agent | **2026-11-16** |
 | Spot-check Ogun gas tariff/connection wait with 2 factory operators | Founder | by **2026-11-23** |
 | Confirm PenCom MPG/PenCare enrol fields with 1 PFA FAQ + 2 retirees | Founder | by **2026-11-23** |
 | Reproduce Carbon×Moniepoint wrong-transfer support path with screenshots (no live funds) | Founder | by **2026-11-20** |
@@ -340,5 +345,4 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
