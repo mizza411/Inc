@@ -10,6 +10,11 @@ PACK = REPO / "prompts" / "agent_formulation_pack.txt"
 DISCOVER = REPO / "prompts" / "agent_formulation_run.txt"
 
 # Keep in sync with prompts/agent_formulation_pack.txt + FORMULATION_PASS_CONTRACT.md
+# IDEA-APP-NAME-1: both prompts must name these lists.
+JOB_WORDS = "Check, Scan, Verify, Track, Alert, Record, Register, Monitor, Guard"
+BANNED_ENDINGS = (
+    "Desk, Pack, Clock, Board, Brief, Kit, Checklist, Playbook, Plot, Spot, Cohort, or Sheet"
+)
 MARKERS = (
     "Pass 2",
     "Regulatory",
@@ -46,6 +51,14 @@ class TestFormulationPackPrompt(unittest.TestCase):
         text = DISCOVER.read_text(encoding="utf-8")
         self.assertGreater(len(text), 500)
         self.assertIn("include strategies", text)
+
+    def test_both_prompts_name_app_title_rule(self):
+        """Product titles use a job word and name the banned endings."""
+        for path in (DISCOVER, PACK):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn(JOB_WORDS, text, msg=f"{path.name} missing job words")
+            self.assertIn(BANNED_ENDINGS, text, msg=f"{path.name} missing banned endings")
+            self.assertIn("Product title rule", text, msg=f"{path.name} missing title rule")
 
 
 if __name__ == "__main__":
