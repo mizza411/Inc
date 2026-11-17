@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-17 ~06:00–07:15 UTC — **Pass 1 Discover only**.  
+**Generated:** 2026-11-17 ~06:00–07:15 UTC — **Pass 1 Discover**, packed **Pass 2** 2026-11-17 (Africa/Lagos). Same 12 ideas, same ranks.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261117.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261117_060037.json` (`strategy_12_run` **ok** Mode B aid; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary sources for taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory tops 2026-11-16 → 2026-10-10 (esp. Ogun Sagamu–Abeokuta Gas Connect Ready Pack, PenCom MPG N52,500 + PenCare Enrol Desk, Carbon×Moniepoint WrongTransfer Ping-Pong Clock, Lagos–Ogun 24h Energy Zone SME Prep Desk, PebbleScore FairMoney Refund Hold Clock, DBN DELTA Climate Ready Pack, Bakassi Deep Seaport PPP Diligence Desk, GTBank UnauthDebit ForcedLoan Clock, Lagos Ètò Call-Up Cost Evidence Pack, FirstBank ATM Seize × Access Drain Clock, Dangote Refinery IPO PFA Allocation Evidence Desk, OPay×Moniepoint FailedPOS 5-Day Promise Clock, MultiBank GoMoney Wipe Evidence Clock, SEC NigSac Freeze Ready Desk, MinPension Guarantee Eligibility Desk); older `business_ideas_20261011.md` / `20260715.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -67,10 +67,10 @@
 
 ### 1. NigeriaTaxAct ETR Levy Check — ETR floor + 4% development levy impact check (**S12 Mode A**)
 
-- **Problem:** Nairametrics (16 Nov 2026): forty-one NGX-listed companies booked **N4.52 trillion** income-tax expense for the nine months to September (**+71%** YoY) while pre-tax profit rose **36%**, lifting the group effective tax rate to **38.1%** from **30.3%**. The jump lands in year one of the **Nigeria Tax Act 2025** (15% ETR floor for large companies, single **4%** development levy replacing a cluster of earmarked levies). Mid-market finance teams still reconcile CIT, levy, and PIA hydrocarbon tax lines in WhatsApp/Excel without a dated ETR impact check before year-end close.
+- **Problem / trend:** Nairametrics (16 Nov 2026): forty-one NGX-listed companies booked **N4.52 trillion** income-tax expense for the nine months to September (**+71%** YoY) while pre-tax profit rose **36%**, lifting the group effective tax rate to **38.1%** from **30.3%**. The jump lands in year one of the **Nigeria Tax Act 2025** (15% ETR floor for large companies, single **4%** development levy replacing a cluster of earmarked levies). Mid-market finance teams still reconcile CIT, levy, and PIA hydrocarbon tax lines in WhatsApp/Excel without a dated ETR impact check before year-end close.
 - **Solution:**
-  - **Established solution:** Avalara / Thomson Reuters ONESOURCE-style corporate tax provision and effective-tax-rate workpapers (software).
-  - **Variant:** NigeriaTaxAct ETR Levy Check — Naira-first ETR + 4% development-levy impact checklist mapped to Tax Act 2025 line items, Paystack-priced SME tiers, offline PDF export for auditors (not a filing portal).
+  - **Established solution:** Thomson Reuters ONESOURCE (developed-market corporate tax provision software).
+  - **Variant:** NigeriaTaxAct ETR Levy Check, the Nigeria version of that software for mid-market finance teams. It stores the CIT, development-levy, and ETR fields for the Tax Act 2025, and the year-end close notes, in the app. It is not an NRS or FIRS filing portal and it is not tax advice.
 - **Target:** NGX mid-caps, large private manufacturers, boutique accounting firms preparing Q4/year-end packs.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational / bookkeeping aid only — not NRS or FIRS official, not licensed tax advice, NDPA for client docs.
@@ -87,10 +87,10 @@
 
 ### 2. StatePension PayGap Track — 14/36 states paying-up evidence track (**S12 Mode A**)
 
-- **Problem:** Nairametrics (16 Nov 2026): PenCom DG Omolola Oloworaran told Arise TV only **14 of 36** states are “paying up” on pension obligations, with some states “doing very badly,” while retirees still report unpaid pensions/gratuities years after exit. Federal CPS got a **N758bn** intervention bond narrative, but state retirees and LGA HR still lack a simple pay-gap evidence track (which scheme, which arrears months, which desk).
+- **Problem / trend:** Nairametrics (16 Nov 2026): PenCom DG Omolola Oloworaran told Arise TV only **14 of 36** states are “paying up” on pension obligations, with some states “doing very badly,” while retirees still report unpaid pensions/gratuities years after exit. Federal CPS got a **N758bn** intervention bond narrative, but state retirees and LGA HR still lack a simple pay-gap evidence track (which scheme, which arrears months, which desk).
 - **Solution:**
-  - **Established solution:** UK Pension Tracing Service / MyPension-style status and evidence portals (software).
-  - **Variant:** StatePension PayGap Track — Nigeria state/LGA retiree pay-gap log with scheme split (state DBS vs CPS), arrears month checklist, and PenCom/state desk handoff PDF (not a benefits payer).
+  - **Established solution:** Fidelity NetBenefits (developed-market retirement benefits portal).
+  - **Variant:** StatePension PayGap Track, the Nigeria version of that software for state and LGA retirees. It stores the scheme split, the arrears months, and the PenCom or state desk handoff notes in the app. It is not a PenCom or PTAD benefits portal.
 - **Target:** State civil-service retirees, retiree associations, state HR/pension desks preparing engagement packs.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not PenCom, PTAD, or state treasury official, not legal representation.
@@ -111,8 +111,8 @@
 - **Complaint citations:** FIJ (9 Nov 2026), https://fij.ng/article/lagos-resident-turns-to-court-after-moremonee-customer-took-his-n750009-via-strange-debit/ (Wema→MoreMonee N750,009, court path stalled). Follow-up headline on same day: https://fij.ng/article/court-ordered-moremonee-microfinance-to-return-lagos-residents-n750009-nothing-happened-after-1-month/
 - **Success signal:** MoreMonee operates as a licensed Nigeria MFB receiving rail in FIJ dispute coverage (same articles).
 - **Solution:**
-  - **Established solution:** Dispute.com / Chargeback-style payment dispute evidence workspaces (software).
-  - **Variant:** MoreMonee CourtOrder Refund Track — Nigeria inter-bank strange-debit pack with court-doc type check, Wema/MoreMonee ticket timeline, and CBN CPD note export (not a law firm).
+  - **Established solution:** FairShake (developed-market consumer dispute resolution software).
+  - **Variant:** MoreMonee CourtOrder Refund Track, the Nigeria version of that software for people chasing a strange debit into a smaller MFB. It stores the court-doc type, the Wema and MoreMonee ticket timeline, and the CBN CPD notes in the app. It is not a law firm and it is not a MoreMonee portal.
 - **Target:** Consumers and SMEs hit by unauthorised outbound transfers into smaller MFBs who are told to “get a court order.”
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** CBN consumer-protection path notes, NDPA, not legal practice, not MoreMonee/Wema official.
@@ -131,8 +131,8 @@
 
 - **Problem / trend:** Vanguard (17 Nov 2026): cooking-gas retail rose **14%** to **N1,600/kg** in November from **N1,400** in October as commercial stocks ran out in Lagos and other cities, with Dangote among the few suppliers still showing product. NALPGAM says national supply still lags consumption, and inland haulage/storage gaps drive regional price spreads.
 - **Solution:**
-  - **Established solution:** GasBuddy / fuel-price crowdsource monitors (software).
-  - **Variant:** CookingGas Shortage Price Monitor — Nigeria LPG kg-price + stockout map with depot vs retail spread notes and SMS/WhatsApp alerts for refill week (not a depot allocator).
+  - **Established solution:** GasBuddy (developed-market fuel-price monitor software).
+  - **Variant:** CookingGas Shortage Price Monitor, the Nigeria version of that software for households and canteen SMEs. It stores the kg price, the stockout notes, and the depot-versus-retail spread in the app. It is not an NMDPRA price setter.
 - **Target:** Households, canteen SMEs, LPG retailers planning refill runs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not NMDPRA price control, not a commodities exchange.
@@ -153,8 +153,8 @@
 - **Complaint citations:** FIJ (10 Nov 2026), https://fij.ng/article/the-money-isnt-mine-upright-opay-customer-wants-to-return-n250000-erroneous-credit-to-sender-ashiegbu-peace/
 - **Success signal:** OPay mass wallet footprint in FIJ erroneous-transfer coverage (same article notes many prior OPay wrong-credit cases).
 - **Solution:**
-  - **Established solution:** Zelle / bank “return payment” dispute flows (software + bank ops).
-  - **Variant:** OPay ErroneousCredit Return Verify — Nigeria wallet reverse-credit checklist with sender match fields, dual-rail ticket export, and freeze-until-return timer notes (not a bank).
+  - **Established solution:** Zelle (developed-market payment-return software).
+  - **Variant:** OPay ErroneousCredit Return Verify, the Nigeria version of that software for people who want to return a wrong credit. It stores the sender match fields, the dual-rail ticket timeline, and the freeze-until-return notes in the app. It is not an OPay or Moniepoint portal.
 - **Target:** Honest recipients who want to return wrong credits, and senders coordinating with them.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** NDPA, not OPay/Moniepoint official, not legal practice.
@@ -173,8 +173,8 @@
 
 - **Problem / trend:** Nairametrics (16 Nov 2026): **33 states** submitted eligibility documents for review under additional **$500 million** World Bank financing for NG-CARES. State delivery units still scramble WhatsApp folders for eligibility evidence without a shared verify checklist.
 - **Solution:**
-  - **Established solution:** World Bank project readiness / PIM checklist tools (software + process).
-  - **Variant:** NGCARES Eligibility Verify — Nigeria state CARES eligibility doc checklist with missing-item flags and PIU handoff PDF (not a World Bank portal).
+  - **Established solution:** DevResults (developed-market development-program monitoring software).
+  - **Variant:** NGCARES Eligibility Verify, the Nigeria version of that software for state CARES teams. It stores the eligibility document list, the missing-item flags, and the PIU handoff notes in the app. It is not a World Bank portal.
 - **Target:** State CARES PIUs, NGO implementers, consultants assembling eligibility packs.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Informational only — not World Bank or federal CARES official.
@@ -193,8 +193,8 @@
 
 - **Problem / trend:** Premium Times / Vanguard (17 Nov 2026): VP Shettima directed immediate arrangements to produce and release **over three million bags** of fertiliser for dry-season farming, with ONSA tasked to monitor declared stocks and include security-challenged communities. Agro-dealers and farmer groups still lack a public stock-declaration track.
 - **Solution:**
-  - **Established solution:** Agrible / farm-input inventory and distribution trackers (software).
-  - **Variant:** DrySeason Fertiliser Stock Track — Nigeria declared-stock vs release checklist with LGA pickup notes and ONSA/FMARD handoff fields (not an allocator).
+  - **Established solution:** Agworld (developed-market farm input and crop records software).
+  - **Variant:** DrySeason Fertiliser Stock Track, the Nigeria version of that software for farmer co-ops and agro-dealers. It stores the declared stock, the release bag count, and the LGA pickup notes in the app. It is not an FMARD allocator.
 - **Target:** Farmer co-ops, agro-dealers, state agric desks ahead of dry season.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not FMARD or ONSA official.
@@ -213,8 +213,8 @@
 
 - **Problem / trend:** Premium Times (17 Nov 2026): Kano’s CNG buses remain off the roads **seven months** after launch, with the state transport commissioner confirming operations had not started. Civic monitors and fleet SMEs need an idle-asset evidence monitor while FG cites **106** CNG stations nationally.
 - **Solution:**
-  - **Established solution:** Fleetio / Samsara-style fleet uptime monitors (software + hardware optional).
-  - **Variant:** KanoCNG BusIdle Monitor — Nigeria public-fleet idle-day log with commissioning vs operations checklist and civic evidence PDF (not a Pi-CNG console).
+  - **Established solution:** Samsara (developed-market fleet uptime software and hardware).
+  - **Variant:** KanoCNG BusIdle Monitor, the Nigeria version of that software for civic monitors and state fleet desks. It stores the idle-day log, the commissioning-versus-operations notes, and the civic evidence fields in the app. It is not a Pi-CNG console.
 - **Target:** Civic journalists, transport CSOs, state fleet desks, CNG conversion SMEs.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Informational only — not Pi-CNG or state transport official.
@@ -233,8 +233,8 @@
 
 - **Problem / trend:** Nairametrics (17 Nov 2026): MTN extended the IHS acquisition completion deadline to **17 December 2026** while still working outstanding conditions. Parallel coverage notes FCCPC conditional approval requiring sell-down of up to **30%** of the Nigerian IHS component (**$900m–$1.1bn** raise narrative). Local co-investors and counsel need a condition-precedent timeline check, not another tower-strategy essay.
 - **Solution:**
-  - **Established solution:** DealRoom / Midaxo-style M&A closing checklists (software).
-  - **Variant:** MTN IHS Divest Timeline Check — Nigeria condition-precedent calendar with FCCPC 30% sell-down fields and Dec 17 countdown export (not investment advice).
+  - **Established solution:** DealRoom (developed-market M&A closing software).
+  - **Variant:** MTN IHS Divest Timeline Check, the Nigeria version of that software for local co-investors and boutique counsel. It stores the condition-precedent dates, the FCCPC 30 percent sell-down fields, and the 17 December countdown in the app. It is not investment advice and it is not an FCCPC portal.
 - **Target:** Nigeria co-invest prospects, boutique M&A counsel, corporate development teams watching tower assets.
 - **MVP cost:** $8k–$18k.
 - **Regulatory:** Educational only — not FCCPC, SEC, or NCC official, not a broker.
@@ -255,8 +255,8 @@
 - **Complaint citations:** FIJ (28 Aug 2026), https://fij.ng/article/palmpay-debited-n15200-despite-failed-payment-it-watched-ogun-trader-chase-refund-for-2-years/
 - **Success signal:** PalmPay mass consumer/MFB footprint in FIJ failed-transaction coverage.
 - **Solution:**
-  - **Established solution:** Card-network chargeback evidence tools (software).
-  - **Variant:** PalmPay FuelDispense Refund Track — Nigeria failed-dispense debit pack with merchant/POS fields and long-tail refund clock export (not PalmPay support).
+  - **Established solution:** Chargebacks911 (developed-market card-dispute evidence software).
+  - **Variant:** PalmPay FuelDispense Refund Track, the Nigeria version of that software for traders hit by a failed fuel dispense. It stores the merchant and POS fields, the debit-still-stands timeline, and the long-tail refund clock in the app. It is not PalmPay support.
 - **Target:** Drivers and traders hit by fuel-station card dispense errors on PalmPay rails.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** NDPA, CBN CPD notes, not legal practice.
@@ -275,8 +275,8 @@
 
 - **Problem / trend:** Nairametrics (16 Nov 2026): weekly FX turnover rebounded **89.17%** to **$3.42bn** (week ended 13 Nov) after a prior plunge, while the naira softened near **N1,358.50/$** official and parallel near **N1,445/$** (**~N86.50** gap), with BDCs citing festive-season demand. Import SMEs still lack a simple gap+payable monitor.
 - **Solution:**
-  - **Established solution:** Xe / Bloomberg FX dashboard style monitors (software).
-  - **Variant:** FestiveFX Gap Monitor — Nigeria NFEM vs parallel gap board with payable calendar and festive demand note fields (not a bureau).
+  - **Established solution:** Xe (developed-market foreign-exchange rate software).
+  - **Variant:** FestiveFX Gap Monitor, the Nigeria version of that software for import SMEs. It stores the NFEM versus parallel gap, the payable calendar, and the festive demand notes in the app. It is not a bureau and it is not a CBN FX desk.
 - **Target:** Import SMEs, freelancers with USD payables, boutique treasury consultants.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational only — not CBN FX allocation or investment advice.
@@ -295,8 +295,8 @@
 
 - **Problem / trend:** Product Hunt (Nov 2026): **LingoMic** (“Speak your language in meetings, they hear theirs”) trends as real-time meeting translation hardware/software. Nigeria remote/hybrid teams mix English with Yoruba/Hausa/Igbo/Pidgin on WhatsApp calls without a low-bandwidth meeting language monitor.
 - **Solution:**
-  - **Established solution:** LingoMic / Interprefy-style meeting interpretation products (software, hardware, or both).
-  - **Variant:** LingoMic Meeting NG Monitor — Nigeria-first meeting language monitor tuned for noisy mobile networks, Naira billing, and offline glossary packs for common business Pidgin/English pairs (not a full conference-interpreting firm).
+  - **Established solution:** LingoMic (developed-market meeting interpretation software).
+  - **Variant:** LingoMic Meeting NG Monitor, the Nigeria version of that software for teams that mix English with Yoruba, Hausa, Igbo, or Pidgin. It stores the meeting language pair, the low-bandwidth session notes, and the offline glossary in the app. It bills in naira. It is not a full conference-interpreting firm.
 - **Target:** Distributed SMEs, customer-support pods, training facilitators across language regions.
 - **MVP cost:** $10k–$22k.
 - **Regulatory:** NDPA for voice data, not a telecoms licence substitute.
@@ -345,13 +345,15 @@
 
 **Data freshness:** Fetch generated **2026-11-17T06:00:40Z**. Headline spine is **16–17 Nov 2026**. Soft-fails: Techpoint **0**, Financial Nigeria **0**, StartupList **429**.
 
+**Pass 2 pack:** 2026-11-17. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula** plus **Complaint citations**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product). Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
+
 ---
 
 ## Next validation steps
 
 | Date | Step |
 |------|------|
-| **2026-11-17** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this same file — normalize subheads, then one-shot Docx in-repo only. |
+| **2026-11-17** | Pass 2 pack applied on this same file (same 12 ideas, same ranks). Schema check, then one-shot in-repo Docx. |
 | **2026-11-18** | Spot-check Tax Act 2025 ETR/levy fields with one accountant (no filing). |
 | **2026-11-19** | Interview 2 state retirees or retiree-association leads on pay-gap evidence fields. |
 | **2026-11-20** | Mystery-shop one Wema/MoreMonee-style dispute script (no real case filing). |
@@ -360,5 +362,4 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
