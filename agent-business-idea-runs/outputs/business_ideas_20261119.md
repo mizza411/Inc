@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-19 ~06:00–07:30 UTC — **Pass 1 Discover** only.  
+**Generated:** 2026-11-19 ~06:00–07:30 UTC — **Pass 1 Discover**, packed **Pass 2** 2026-11-19 (Africa/Lagos). Same 12 ideas, same ranks.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261119.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261119_060048.json` (`strategy_12_run` **ok** Mode B aid / fixture scores only — Mode A synthesized separately; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary taglines; Trustpilot not relied on)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory Best tops 2026-11-18→2026-11-10 (esp. NSW Phase2 ExportPermit Check, Airport vPASS Yuletide Enrol Monitor, OPay Netflix BillPingPong Track, Cocoa EUDR FarmMap Track, AfDB Sterling SME Docs Check, NigeriaTaxAct ETR Levy Check, StatePension PayGap Track, MoreMonee CourtOrder Refund Track, CookingGas Shortage Price Monitor, OPay ErroneousCredit Return Verify, Carbon×Moniepoint WrongTransfer Ping-Pong Clock, PalmPay FuelDispense Refund Track, PalmPay Recovered-Not-Credited Clock, AccessBank UnauthCard Refund Clock, Zenith LASTMA FailedPoS CarHold Clock), plus older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -132,7 +132,7 @@
 - **Problem / trend:** Nairametrics (19 Nov 2026): EFCC arraigned Halimat Adenike Tejuosho over an alleged **N603.4 million** scam promising to facilitate appointment as NNPC GMD (charges include advance-fee fraud; co-defendant earlier arraigned; forged “Presidential Villa / NSA” document cited in related coverage). EFCC notes prior employment-scam convictions (e.g. N120.58m / 60+ seekers). Job seekers still pay “facilitation” fees on WhatsApp before any verify step.
 - **Solution:**
   - **Established solution:** HireRight (developed-market employment-verification software).
-  - **Variant:** NNPC JobOffer Scam Verify, the Nigeria version of that software for senior and mid-tier job seekers. It stores the offer claims, the payment-request red flags, and the official-channel checklist in the app. It is not an NNPC, EFCC, or recruitment portal.
+  - **Variant:** NNPC JobOffer Scam Verify, the Nigeria version of that software for senior and mid-tier job seekers. It stores the offer claims, the payment-request red flags, and the official-channel fields in the app. It is not an NNPC, EFCC, or recruitment portal.
 - **Target:** Job seekers approached for “federal/NNPC facilitation,” family sponsors wiring fees, career coaches.
 - **MVP cost:** $5k–$12k.
 - **Regulatory:** Educational anti-fraud aid only — not EFCC investigation; not NNPC hiring.
@@ -194,7 +194,7 @@
 - **Problem / trend:** Nairametrics (18 Nov 2026): Tinubu receives the State Police bill for assent after **36 states** approve the constitutional amendment; Vanguard notes operational-guidelines work moving toward the Justice Ministry. Businesses, schools, and LGA desks still lack a simple monitor of assent status vs what changes on day one (recruitment, overlapping federal/state authority, insurance/security contracts).
 - **Solution:**
   - **Established solution:** LexisNexis Legislative Insights (developed-market legislative-tracking software).
-  - **Variant:** StatePolice Assent Prep Monitor, the Nigeria version of that software for SME security buyers and LGA desks. It stores the assent status, the guideline milestones, and the local prep checklist fields in the app. It is not a police or Justice Ministry portal.
+  - **Variant:** StatePolice Assent Prep Monitor, the Nigeria version of that software for SME security buyers and LGA desks. It stores the assent status, the guideline milestones, and the local prep fields in the app. It is not a police or Justice Ministry portal.
 - **Target:** SME security managers, school admins, LGA planning desks, insurers watching coverage wording.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Informational only — not NPF, state police, or Justice Ministry official; not legal advice.
@@ -214,7 +214,7 @@
 - **Problem / trend:** BusinessDay (19 Nov 2026): Duchess International Hospital Ikeja marks five years and commits to reversing medical tourism. Families still decide abroad vs Nigeria care with WhatsApp price hearsay and no structured cost/risk compare.
 - **Solution:**
   - **Established solution:** Amino (developed-market care-cost comparison software).
-  - **Variant:** MedicalTourism Cost Check, the Nigeria version of that software for families weighing local tertiary care vs travel. It stores the procedure quote fields, the travel-cost notes, and the hospital checklist in the app. It is not a hospital booking engine and not medical advice.
+  - **Variant:** MedicalTourism Cost Check, the Nigeria version of that software for families weighing local tertiary care vs travel. It stores the procedure quote fields, the travel-cost notes, and the hospital compare fields in the app. It is not a hospital booking engine and not medical advice.
 - **Target:** Middle-class families, diaspora sponsors, HR medical desks.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Not medical advice; not hospital credentialing; NDPA for health notes.
@@ -294,7 +294,7 @@
 - **Problem / trend:** Vanguard (Nov 2026): House members are divided over calls to write off farmers’ about **N1trn** Anchor Borrowers Scheme loans. Farmer cooperatives and state agric desks still lack a simple track of who owes what documentation if waiver, restructuring, or enforcement paths diverge.
 - **Solution:**
   - **Established solution:** FarmRaise (developed-market farm-loan documentation software).
-  - **Variant:** AnchorBorrowers Waiver Track, the Nigeria version of that software for cooperatives and state agric desks. It stores the loan ID fields, the repayment notes, and the waiver/restructure status checklist in the app. It is not a CBN or NIRSAL decision portal.
+  - **Variant:** AnchorBorrowers Waiver Track, the Nigeria version of that software for cooperatives and state agric desks. It stores the loan ID fields, the repayment notes, and the waiver and restructure status fields in the app. It is not a CBN or NIRSAL decision portal.
 - **Target:** Farmer co-op secretaries, state agric credit desks, SME agri-input dealers tied to ABS borrowers.
 - **MVP cost:** $6k–$14k.
 - **Regulatory:** Not CBN/NIRSAL official; not debt forgiveness authority.
@@ -302,7 +302,7 @@
   - **Bank recovery units** — adversarial. Why a Nigeria buyer might still choose this idea: borrower-side evidence track.
   - **State agric WhatsApp ledgers** — common; weak. Why a Nigeria buyer might still choose this idea: dated waiver-status fields.
   - **Big agri consultancies** — expensive. Why a Nigeria buyer might still choose this idea: Naira micro-track.
-  - **DIY Excel** — fragile. Why a Nigeria buyer might still choose this idea: checklist + export pack.
+  - **DIY Excel** — fragile. Why a Nigeria buyer might still choose this idea: dated status fields in the app.
 - **GUEMF:** Mode B **4/3/4/3/3 = 17**. Evidence: https://www.vanguardngr.com/2026/11/anchor-borrowers-scheme-reps-divided-over-calls-to-write-off-farmers-n1trn-loans-waiver/
 - **Commercial viability:** Medium — policy-contingent.
 - **Dedup:** High vs generic agri credit desks.
@@ -337,7 +337,7 @@
 
 **Data freshness:** Fetch `agent_strategy_inputs_20261119_060048.json` morning of 2026-11-19. Partial: Techpoint/FN **0**, StartupList **429**. Soft-fail continued.
 
-**Pass 1 note:** Draft complete with Best ideas, ranked table, viability snapshot, idea details, execution summary, next-validation steps. **Pass 2 pack is required before Docx** — paste `prompts/agent_formulation_pack.txt` against this same dated `.md` (no re-rank).
+**Pass 2 pack:** 2026-11-19. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula**, **Complaint citations**, and **Success signal**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product): Guidewire ClaimCenter, LoanMarket, Ethoca Alerts, HireRight, Chargebacks911, Platts, LexisNexis Legislative Insights, Amino, Ariba Supplier Management, Robinhood, KaDeep AI, FarmRaise. Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
 
 ---
 
@@ -345,7 +345,7 @@
 
 | When | Step |
 |------|------|
-| **2026-11-19 (today)** | Pass 2 Automation B / manual pack on this same file (same 12 ideas, same ranks). Optional `idea_card_schema.py` then one-shot in-repo Docx. |
+| **2026-11-19 (same day)** | Pass 2 pack applied on this same file (same 12 ideas, same ranks). Schema check, then one-shot in-repo Docx. |
 | **2026-11-20** | Spot-check Cornerstone final NAICOM wording vs NGX notice; confirm FIN→Cornerstone General customer messaging. |
 | **2026-11-24** | After MPC 23–24 Nov: update LoanRate Monitor assumptions (hold vs cut) with 5 SME quote interviews. |
 | **2026-11-25** | 5 dual-rail fraud-flag interviews (OPay↔PalmPay / similar): which session fields matter most. |
@@ -354,6 +354,4 @@
 
 ---
 
-**Docx status:** `_PENDING_PASS_2_PACK_`
-
-**Pass 2 pack required before Docx.** Use `prompts/agent_formulation_pack.txt` on this same file.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
