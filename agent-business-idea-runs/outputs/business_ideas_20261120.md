@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-20 ~06:00–07:30 UTC (WAT morning) — **Pass 1 Discover** only.  
+**Generated:** 2026-11-20 ~06:00–07:30 UTC (WAT morning) — **Pass 1 Discover**, packed **Pass 2** 2026-11-20 (Africa/Lagos). Same 12 ideas, same ranks.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261120.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261120_060422.json` (`strategy_12_run` **ok** Mode B aid / fixture scores only — Mode A synthesized separately; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary taglines; Punch/Nairametrics/BusinessDay/Vanguard/Premium Times RSS ok)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory Best tops 2026-11-19→2026-11-10 (esp. Cornerstone HoldCo PolicyPath Check, MPC Week LoanRate Monitor, OPay×PalmPay FraudFlag Track, NNPC JobOffer Scam Verify, Zenith GhostDebit Evidence Track, NSW Phase2 ExportPermit Check, Airport vPASS Yuletide Enrol Monitor, OPay Netflix BillPingPong Track, Cocoa EUDR FarmMap Track, AfDB Sterling SME Docs Check, NigeriaTaxAct ETR Levy Check, StatePension PayGap Track, MoreMonee CourtOrder Refund Track, CookingGas Shortage Price Monitor, OPay ErroneousCredit Return Verify, PalmPay FuelDispense Refund Track, PalmPay Recovered-Not-Credited Clock, Local Pharma N29bn CapEx Ready Pack), plus older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -121,7 +121,7 @@
   - **NNPC JobOffer Scam Verify (prior Best)** — GMD-appointment scam path. Why a Nigeria buyer might still choose this idea: **NMDPRA recruitment-fee** impersonation job.
   - **WhatsApp “verify for me” groups** — noisy/scam-prone. Why a Nigeria buyer might still choose this idea: dated official-channel checklist.
   - **DIY Google image search of letters** — incomplete. Why a Nigeria buyer might still choose this idea: fee-demand + channel match fields.
-- **GUEMF (Mode B):** 5/5/5/5/4 = **24**.
+- **GUEMF:** Mode B **5/5/5/5/4 = 24**.
 - **Commercial viability:** High — repeated agency disclaimers (NMDPRA, FAAN, NUPRC, FCSC, NRS) show durable demand.
 - **Dedup:** High vs NNPC JobOffer Scam Verify.
 - **Founder fit:** Strong.
@@ -131,7 +131,7 @@
 
 - **Problem / trend:** Nairametrics (19 Nov 2026) / Guardian (20 Nov 2026): AfricaNenda SIIPS 2026 reports **71.4 billion** instant-payment transactions worth **$1.8 trillion** in 2025 across 39 systems, yet **55%** of surveyed digital-payment users still use cash for about half of transactions citing trust, failures, and weak complaint handling. Nigeria’s NIBSS NIP remains Africa’s only “mature” IPS; NIBSS National Payment Stack piloted dispute-management features. MSME merchants still lose sales when customers refuse digital rails after a failed transfer without a clean dispute evidence path.
 - **Solution:**
-  - **Established solution:** Chargebacks911 / Ethoca-class dispute-operations software (developed-market payment dispute tooling).
+  - **Established solution:** Ethoca Alerts (developed-market payment-dispute software).
   - **Variant:** NIBSS CashTrust Dispute Monitor, the Nigeria version of that software for MSME merchants rebuilding trust after failed instant payments. It stores the NIP reference, failure screenshot, complaint ticket, and cash-fallback note in the app. It is not NIBSS or a bank switch.
 - **Target:** Market traders and SME merchants on NIP/OPay/PalmPay rails who still take cash “because last transfer failed.”
 - **MVP cost:** $8k–$18k.
@@ -141,7 +141,7 @@
   - **OPay×PalmPay FraudFlag Track (prior)** — scam-flag recovery. Why a Nigeria buyer might still choose this idea: **merchant cash-trust / failed-pay dispute** job.
   - **WhatsApp “send proof” threads** — default DIY. Why a Nigeria buyer might still choose this idea: dated ticket fields.
   - **Spreadsheet of failed txs** — common. Why a Nigeria buyer might still choose this idea: cash-fallback reminder + dispute pack.
-- **GUEMF (Mode B):** 5/4/4/4/5 = **22**.
+- **GUEMF:** Mode B **5/4/4/4/5 = 22**.
 - **Commercial viability:** High — continent-scale data + Nigeria mature-IPS leadership.
 - **Dedup:** High vs FraudFlag / ErroneousCredit / GhostDebit.
 - **Founder fit:** Strong.
@@ -151,7 +151,7 @@
 
 - **Problem / trend:** Guardian / QNC (20 Nov 2026): Minister Dele Alake says solid-minerals revenue crossed **N100 billion** in 2026 (from ~N6bn when the administration began; N38bn 2024; N70bn 2025) at the Nigeria NOW investment summit; Presidency reiterates push away from raw unprocessed mineral exports. Separate industry reporting: raw **lithium concentrate** export ban scheduled for **January 2027**, with miners already seeking more time to build processing. Exporters holding concentrate inventory need a licence/processing/Certificate-of-Origin readiness check before the ban bites.
 - **Solution:**
-  - **Established solution:** Descartes / Trade compliance software (developed-market export-control readiness tooling).
+  - **Established solution:** Descartes Visual Compliance (developed-market export-control software).
   - **Variant:** Lithium Concentrate Export Ban Check, the Nigeria version of that software for solid-minerals exporters and processors. It stores mineral type, processing stage, licence IDs, and ban-countdown fields in the app. It is not the Ministry of Solid Minerals portal and does not broker exports.
 - **Target:** Lithium and critical-minerals junior miners, toll processors, export compliance consultants.
 - **MVP cost:** $8k–$16k.
@@ -161,7 +161,7 @@
   - **Cocoa EUDR FarmMap Track (prior)** — agri EUDR map job. Why a Nigeria buyer might still choose this idea: **lithium concentrate export ban** job.
   - **Customs agent WhatsApp** — opaque. Why a Nigeria buyer might still choose this idea: processing-stage fields.
   - **DIY Excel licence list** — common. Why a Nigeria buyer might still choose this idea: Jan 2027 countdown + document gaps.
-- **GUEMF (Mode B):** 5/4/5/5/3 = **22**.
+- **GUEMF:** Mode B **5/4/5/5/3 = 22**.
 - **Commercial viability:** High — dated ban + revenue push.
 - **Dedup:** High vs Cocoa EUDR / mineral PPP desks.
 - **Founder fit:** Good.
@@ -171,7 +171,7 @@
 
 - **Problem / trend:** Punch (20 Nov 2026): CBN withdrew **>N90tn** via OMO in the first 11 months of 2026 (vs N40.9tn in 2025) to contain inflation ahead of 2027 polls; MPC members warn election spending could re-inject liquidity; CRR on public-sector deposits already elevated. This is a **liquidity absorption / credit availability** stress signal for SME treasurers — distinct from MPC Week LoanRate Monitor (MPR vs quoted loan rate this week).
 - **Solution:**
-  - **Established solution:** Bloomberg Liquidity / bank treasury dashboard software (developed-market liquidity-monitoring tooling).
+  - **Established solution:** Bloomberg Terminal (developed-market liquidity and rates software).
   - **Variant:** CBN OMO Liquidity Stress Monitor, the Nigeria version of that software for SME CFOs watching whether mop-ups tighten local credit. It stores recent OMO allotment notes, bank RM feedback, and facility-availability fields in the app. It is not a CBN OMO desk and is not investment advice.
 - **Target:** SME CFOs, boutique treasurers, trade-finance desks renewing lines into 2027.
 - **MVP cost:** $6k–$14k.
@@ -181,7 +181,7 @@
   - **Bank RM calls** — opaque. Why a Nigeria buyer might still choose this idea: dated OMO stress log.
   - **Punch/FMDA tables alone** — raw. Why a Nigeria buyer might still choose this idea: SME facility fields beside the print.
   - **DIY WhatsApp economist groups** — noisy. Why a Nigeria buyer might still choose this idea: personal facility checklist.
-- **GUEMF (Mode B):** 5/4/5/3/4 = **21**.
+- **GUEMF:** Mode B **5/4/5/3/4 = 21**.
 - **Commercial viability:** High — hard N90tn figure + election-cycle narrative.
 - **Dedup:** High vs MPC Week LoanRate Monitor / SME Bank Rate 30% Pack.
 - **Founder fit:** Strong.
@@ -193,7 +193,7 @@
 - **Complaint citations:** FIJ, “PalmPay Made Lagos Trader Sign Consent Form for N8,150 Refund. He Got Nothing After 10 Months,” 26 Aug 2026 — https://fij.ng/article/palmpay-made-lagos-trader-sign-consent-form-for-n8150-refund-he-got-nothing-after-10-months/ ; related FIJ PalmPay failed-payment refund pattern — https://fij.ng/article/palmpay-debited-n15200-despite-failed-payment-it-watched-ogun-trader-chase-refund-for-2-years/
 - **Success signal:** PalmPay’s continued mass merchant/consumer footprint in the same FIJ complaint series.
 - **Solution:**
-  - **Established solution:** Chargebee / Stripe Billing dispute + credit-note software patterns (developed-market merchant refund tooling).
+  - **Established solution:** Chargebacks911 (developed-market dispute-evidence software).
   - **Variant:** PalmPay DeadMerchant Refund Track, the Nigeria version of that software for senders and merchants stuck after a merchant-app shutdown. It stores the old merchant account number, consent-form date, and escalation tickets in the app. It is not PalmPay support.
 - **Target:** Traders whose customers still pay old PalmPay Merchant numbers; senders chasing trapped credits.
 - **MVP cost:** $8k–$18k.
@@ -203,7 +203,7 @@
   - **PalmPay FuelDispense Refund Track (prior)** — fuel dispense-error debit. Why a Nigeria buyer might still choose this idea: **dead merchant-app trapped credit** job.
   - **CBN CPD letter DIY** — heavy. Why a Nigeria buyer might still choose this idea: pre-escalation pack.
   - **Lawyer demand letter** — costly for N8k–N15k. Why a Nigeria buyer might still choose this idea: low-ticket evidence track first.
-- **GUEMF (Mode B):** 4/5/4/3/4 = **20**.
+- **GUEMF:** Mode B **4/5/4/3/4 = 20**.
 - **Commercial viability:** High — citeable multi-month trap pattern on a mass rail.
 - **Dedup:** High vs FuelDispense / Recovered-Not-Credited / FraudFlag.
 - **Founder fit:** Strong.
@@ -213,7 +213,7 @@
 
 - **Problem / trend:** BusinessDay (20 Nov 2026) / Academy investiture coverage (17 Nov 2026): NAIP national chairman Aminu Ezebuilo urges FG to declare medicine a **national security** matter and back local manufacturers with tax relief, single-digit loans, FX access, infrastructure, faster approvals, and public-hospital patronage — citing import dependence exposed by COVID-era export curbs. Distinct from Local Pharma N29bn CapEx Ready Pack (project CapEx readiness): this is an **incentive/policy-watch checklist** for indigenous manufacturers tracking which reliefs actually land.
 - **Solution:**
-  - **Established solution:** PolicyNote / FiscalNote-class regulatory-change monitoring software (developed-market policy tracking).
+  - **Established solution:** FiscalNote (developed-market regulatory-change monitoring software).
   - **Variant:** Medicine Sovereignty Incentive Check, the Nigeria version of that software for local pharma CEOs and NAIP members. It stores requested incentive types, gazette/circular dates, and eligibility evidence fields in the app. It is not NAFDAC or NAIP official and is not a CapEx financing pack.
 - **Target:** Indigenous pharma manufacturers, industry association desks, health-procurement SMEs.
 - **MVP cost:** $8k–$16k.
@@ -223,7 +223,7 @@
   - **NAIP/PSN circulars** — intermittent. Why a Nigeria buyer might still choose this idea: dated incentive checklist.
   - **Consultant retainers** — expensive. Why a Nigeria buyer might still choose this idea: lighter watch tool.
   - **DIY Excel of FG announcements** — common. Why a Nigeria buyer might still choose this idea: eligibility evidence fields.
-- **GUEMF (Mode B):** 4/4/5/4/3 = **20**.
+- **GUEMF:** Mode B **4/4/5/4/3 = 20**.
 - **Commercial viability:** Medium-high — durable import-dependence pain; policy still aspirational.
 - **Dedup:** High vs Local Pharma CapEx pack.
 - **Founder fit:** Good.
@@ -233,7 +233,7 @@
 
 - **Problem / trend:** Nairametrics (20 Nov 2026): Glovo reports a **230%** surge in healthy/high-protein food orders across six African markets including Nigeria as urban consumers shift from conventional fast food. Delivery kitchens and cloud vendors need a protein/freshness/claim-compliance track so “healthy” SKUs do not trigger customer chargebacks or NAFDAC hygiene complaints — niche combo of Glovo demand (S7) with local cloud-kitchen ops (S6 synthesis after StartupList 429).
 - **Solution:**
-  - **Established solution:** Toast / MarketMan restaurant inventory + compliance software (developed-market vendor ops tooling).
+  - **Established solution:** MarketMan (developed-market restaurant inventory software).
   - **Variant:** Glovo HealthyVendor Protein Track, the Nigeria version of that software for Glovo/cloud kitchens selling high-protein menus. It stores SKU protein claims, cold-chain checks, and complaint tickets in the app. It is not Glovo official.
 - **Target:** Lagos/Abuja cloud kitchens and healthy-meal vendors on Glovo.
 - **MVP cost:** $8k–$16k.
@@ -243,7 +243,7 @@
   - **WhatsApp kitchen checklists** — DIY. Why a Nigeria buyer might still choose this idea: dated complaint track.
   - **Generic POS inventory** — not claim-focused. Why a Nigeria buyer might still choose this idea: “healthy” SKU compliance job.
   - **Nutritionist PDF menus** — static. Why a Nigeria buyer might still choose this idea: live order-complaint loop.
-- **GUEMF (Mode B):** 4/3/3/2/4 = **16**.
+- **GUEMF:** Mode B **4/3/3/2/4 = 16**.
 - **Commercial viability:** Medium — demand signal strong; willingness-to-pay unproven.
 - **Dedup:** High vs cooking-gas / food-price monitors.
 - **Founder fit:** Good.
@@ -253,7 +253,7 @@
 
 - **Problem / trend:** BusinessDay (20 Nov 2026): “Cyber resilience: Boards must govern the ability to recover” — argues cyberattacks now threaten continuity, not only data, and boards must own recovery capability. Nigerian SMEs often have antivirus but no tested restore/runbook evidence when ransomware or account-takeover hits Paystack/bank admin users. Pair with PH-style agent/ops tools (Netlify Server / Fieldwork Code trend) as a reminder that always-on agents raise recovery stakes.
 - **Solution:**
-  - **Established solution:** Veeam / Coveware-adjacent cyber-recovery readiness software (developed-market backup + incident readiness tooling).
+  - **Established solution:** Veeam Backup & Replication (developed-market backup and recovery software).
   - **Variant:** SME CyberRecover Board Check, the Nigeria version of that software for SME boards and founders. It stores backup-test dates, admin-account owners, and restore drill results in the app. It is not CERT-NG and does not offer incident response retainers.
 - **Target:** 10–200 person Nigerian tech-enabled SMEs, fintech ops, e-commerce admins.
 - **MVP cost:** $8k–$18k.
@@ -263,7 +263,7 @@
   - **Big-4 cyber audits** — expensive. Why a Nigeria buyer might still choose this idea: lighter SME pack.
   - **DIY Google Drive “backup”** — common failure mode. Why a Nigeria buyer might still choose this idea: tested-restore fields.
   - **Managed SOC retainers** — overkill for many SMEs. Why a Nigeria buyer might still choose this idea: governance check before retainer.
-- **GUEMF (Mode B):** 4/4/4/4/3 = **19**.
+- **GUEMF:** Mode B **4/4/4/4/3 = 19**.
 - **Commercial viability:** Medium-high — clear board framing; sales cycle educational.
 - **Dedup:** High vs generic IT “kits.”
 - **Founder fit:** Good.
@@ -283,7 +283,7 @@
   - **CookingGas Shortage Price Monitor (prior)** — household LPG price. Why a Nigeria buyer might still choose this idea: **CNG fleet transition** job.
   - **Consultant transport studies** — slow/expensive. Why a Nigeria buyer might still choose this idea: lighter pilot checklist.
   - **DIY Excel fleet list** — common. Why a Nigeria buyer might still choose this idea: CNG depot fields.
-- **GUEMF (Mode B):** 4/3/4/3/3 = **17**.
+- **GUEMF:** Mode B **4/3/4/3/3 = 17**.
 - **Commercial viability:** Medium — plant still planned; early buyers are agencies.
 - **Dedup:** High vs cooking-gas / energy-zone desks.
 - **Founder fit:** Moderate.
@@ -293,7 +293,7 @@
 
 - **Problem / trend:** Product Hunt trending: **Spellar for Chrome** — free, no-bot meeting notes with memory in the browser. Nigerian SME founders run most “meetings” as WhatsApp voice notes, Zoom with bad bandwidth, and bilingual (English/Pidgin) customer calls; they need a lightweight call-note monitor that stores action items without a heavy bot stack — S7 trending adapt + S11 analogy to browser note tools; S6 niche = Nigeria SMB sales calls after StartupList 429 soft-fail.
 - **Solution:**
-  - **Established solution:** Spellar / Fireflies-class meeting-notes software (developed-market).
+  - **Established solution:** Spellar (developed-market meeting-notes software).
   - **Variant:** Spellar NG CallNotes Monitor, the Nigeria version of that software for SME founders. It stores call date, counterparty, and action-item fields in the app, with optional voice-note upload. It is not a call-centre suite and does not claim courtroom transcription accuracy.
 - **Target:** Solo founders, agency account managers, field sales leads.
 - **MVP cost:** $10k–$22k.
@@ -303,7 +303,7 @@
   - **WhatsApp starred messages** — default DIY. Why a Nigeria buyer might still choose this idea: action-item monitor.
   - **Otter.ai** — FX/card friction. Why a Nigeria buyer might still choose this idea: local packaging.
   - **Notebook + memory** — lossy. Why a Nigeria buyer might still choose this idea: dated follow-up fields.
-- **GUEMF (Mode B):** 3/3/3/2/4 = **15**.
+- **GUEMF:** Mode B **3/3/3/2/4 = 15**.
 - **Commercial viability:** Medium — crowded category; differentiation is packaging/distribution.
 - **Dedup:** Medium-high vs prior generic “brief/desk” note tools (title uses Monitor).
 - **Founder fit:** Moderate.
@@ -343,13 +343,15 @@
 **Data freshness:** Fetch `agent_strategy_inputs_20261120_060422.json` generated **2026-11-20T06:04:25Z**. Web cites pulled same morning (WAT).  
 **Partial runs:** Techpoint/FN RSS empty; StartupList 429; S15 skipped; S1 collector subprocess skipped (agent-native web research used).
 
+**Pass 2 pack:** 2026-11-20. Same 12 ideas and same ranks. Non-S1 problem spines use **Problem / trend**. S1 cards keep **Formula**, **Complaint citations**, and **Success signal**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product): Qualia, FourKites, LinkedIn Jobs, Ethoca Alerts, Descartes Visual Compliance, Bloomberg Terminal, Chargebacks911, FiscalNote, MarketMan, Veeam Backup & Replication, Fleetio, Spellar. Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
+
 ---
 
 ## Next validation steps
 
 | Date (WAT) | Step |
 |------------|------|
-| **2026-11-20** | Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this file → fixed subheads → one-shot Docx (**do not start in Automation A**). |
+| **2026-11-20 (same day)** | Pass 2 pack applied on this same file (same 12 ideas, same ranks). Schema check, then one-shot in-repo Docx. |
 | **2026-11-21** | 5 customer interviews: offplan buyers with FCCPC tickets; Lagos–Ibadan 3PL dispatchers; job seekers who paid “processing” fees. |
 | **2026-11-24** | After MPC 23–24 Nov: refresh OMO/liquidity monitor assumptions (hold vs cut) without inventing a new ranked set mid-week. |
 | **2026-11-28** | Smoke landing pages for top 2 Mode A ideas; track waitlist. |
@@ -357,5 +359,4 @@
 
 ---
 
-**Pass 2 pack is required before Docx.**  
-**Docx status:** `_PENDING_PASS_2_PACK_`
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
