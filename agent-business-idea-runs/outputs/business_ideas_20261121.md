@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-21 ~06:00–07:30 UTC (WAT morning) — **Pass 1 Discover** only.  
+**Generated:** 2026-11-21 ~06:00–07:30 UTC (WAT morning) — **Pass 1 Discover**, packed **Pass 2** 2026-11-21 (Africa/Lagos). Same 12 ideas, same ranks.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261121.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261121_060213.json` (`strategy_12_run` **ok** Mode B aid / fixture scores only — Mode A synthesized separately; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary taglines; Punch/Nairametrics/BusinessDay/Vanguard/Premium Times RSS ok)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory Best tops 2026-11-20→2026-11-10 (esp. FCCPC Offplan Delivery Evidence Track, Aseese Corridor Freight Delay Track, NMDPRA OfficialRecruit Verify, NIBSS CashTrust Dispute Monitor, Lithium Concentrate Export Ban Check, Cornerstone HoldCo PolicyPath Check, MPC Week LoanRate Monitor, OPay×PalmPay FraudFlag Track, NNPC JobOffer Scam Verify, Zenith GhostDebit Evidence Track, NSW Phase2 ExportPermit Check, Airport vPASS Yuletide Enrol Monitor, OPay Netflix BillPingPong Track, Cocoa EUDR FarmMap Track, AfDB Sterling SME Docs Check, NigeriaTaxAct ETR Levy Check, StatePension PayGap Track, MoreMonee CourtOrder Refund Track, CookingGas Shortage Price Monitor, OPay ErroneousCredit Return Verify, PalmPay FuelDispense Refund Track, Carbon×Moniepoint WrongTransfer Ping-Pong Clock, AccessBank UnauthCard Refund Clock, OPay×Moniepoint FailedPOS 5-Day Promise Clock), plus older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_`
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -17,7 +17,7 @@
 |------|------|-------------------|
 | **1** | **Customs FCC Recruit Invite Verify** (**S12 Mode A**) | Punch/Nairametrics (20–21 Nov 2026): NCS suspended training for **3,852** newly recruited officers after FCC flagged list-vs-invite mismatches and **500+** applicants who completed medicals but were excluded — candidates need a published-list ↔ invite ↔ college-report evidence verify ≠ NMDPRA OfficialRecruit Verify (fake fee letters). |
 | **2** | **BOFIA PSP Safeguard Compliance Check** (**S12 Mode A**) | Tribune/BusinessDay/TheRadar (18–19 Nov 2026): House-passed BOFIA Amendment 2026 would require payment-service providers to segregate customer funds, keep daily reconciliation, and enable CBN/NDIC-ordered orderly transfer on severe distress — PSPs and treasury leads need a readiness check before assent ≠ NIBSS CashTrust / fintech refund clocks. |
-| **3** | **Sparkle FailedPoS Chargeback Track** (S1) | Dispute.com / Chargebacks911-class chargeback evidence software is the successful pattern; FIJ (14 May 2025): Sparkle customer debited **2× N110,900** after UBA PoS “Server Error,” chargeback declined, still unpaid **~17 months** — evidence track ≠ OPay×Moniepoint FailedPOS 5-Day Promise Clock. |
+| **3** | **Sparkle FailedPoS Chargeback Track** (S1) | Dispute.com chargeback evidence software is the successful pattern; FIJ (14 May 2025): Sparkle customer debited **2× N110,900** after UBA PoS “Server Error,” chargeback declined, still unpaid **~17 months** — evidence track ≠ OPay×Moniepoint FailedPOS 5-Day Promise Clock. |
 | **4** | **Petrol Import Share Monitor** (S5→S12) | Punch/Leadership (21 Nov 2026): NMDPRA October fact sheet — petrol imports **+47%** to **15m L/day**, ~**32%** of **46.9m L/day** receipts, stock sufficiency down to **21.8 days** — marketers/fleet buyers need import-share vs domestic-supply monitor ≠ CookingGas Shortage Price Monitor / FuelDispense refund. |
 | **5** | **Passport Booklet Capacity Track** (S5→S9) | Punch/Guardian/Leadership (20–21 Nov 2026): FG broke ground on a **$70m** NIS passport booklet plant (Iris Smart) aiming **6m→10m** booklets/year by May 2027 — travel agencies and HR mobility desks need a capacity/commissioning track ≠ Airport vPASS Yuletide Enrol Monitor. |
 
@@ -58,7 +58,7 @@
 | Access UnauthDebit Merchant Reveal Track | **High** — bank-acknowledged debit without merchant name | Yes | CBN CPD; NDPA; not Access official | High vs Access UnauthCard Refund Clock | Strong |
 | CBN Credit Conditions SME Monitor | **Medium-high** — Q3 credit survey demand/spread | Yes | Not CBN survey official; not loan broker | High vs MPC LoanRate | Good |
 | Scam Link Check NG | **Medium-high** — PH scam-link pattern + local SMS fraud | Yes | Not EFCC/NITDA official; NDPA | High | Strong |
-| Palm Oil Cost Stress Monitor | **Medium** — cost/import pressure narrative | Yes | Not NAFDAC/customs duty calculator alone | High | Good |
+| Palm Oil Cost Stress Monitor | **Medium** — cited 1.5m t output vs 2.2–2.6m t use and N91.62bn H1 imports | Yes | Not NAFDAC/customs duty calculator alone | High | Good |
 | Airport Biometric Queue Alert | **Medium** — passenger-fear + biometric rollout | Yes | Not FAAN/NIS control system | High vs vPASS Enrol | Good |
 
 ---
@@ -69,7 +69,7 @@
 
 - **Problem / trend:** Punch (21 Nov 2026) and Nairametrics (20 Nov 2026): Nigeria Customs Service suspended training at two colleges for **3,852** newly recruited officers after Federal Character Commission engagements over alleged irregularities — including candidates whose names appeared on final lists (published 28–30 Jul 2026) but who were not invited, and invitations allegedly sent to names not on the published lists; FCC cited complaints from **>500** applicants who completed screening/medicals yet were excluded. The exercise drew **>573,000** applications after a 27 Dec 2024 advert. Candidates and parents need a structured published-list ↔ invite ↔ college-report evidence verify before they pay travel/hostel costs or hire lawyers.
 - **Solution:**
-  - **Established solution:** Checkr / Sterling (developed-market background and identity-verification software for hiring pipelines).
+  - **Established solution:** Checkr (developed-market background and identity-verification software for hiring pipelines).
   - **Variant:** Customs FCC Recruit Invite Verify, the Nigeria version of that software for NCS applicants caught in list/invite disputes. It stores the published cadre list screenshot, invite SMS/email, medical receipt, and college-report status in the app. It is not an NCS or FCC portal and does not sell “slots.”
 - **Target:** Shortlisted NCS candidates and families; campus career desks; small employment-rights clinics’ intake.
 - **MVP cost:** $5k–$12k.
@@ -89,7 +89,7 @@
 
 - **Problem / trend:** Nigerian Tribune (19 Nov 2026), BusinessDay, and TheRadar (18–19 Nov 2026): House adopted the BOFIA Amendment Bill 2026 (Senate already passed) empowering CBN to sanction distressed fintechs/PSPs, designate Systemically Important Institutions, and — per Tribune — require prompt return/orderly transfer of safeguarded customer balances with NDIC consultation; customer funds must be segregated, reconciled daily, held in trust, and kept out of general-creditor pools (without automatically expanding NDIC cover). Licensed PSPs and their auditors need a readiness check mapping segregation, reconciliation, governance, and distress-transfer playbooks before presidential assent — not another consumer refund clock.
 - **Solution:**
-  - **Established solution:** ComplyAdvantage / Alloy (developed-market financial compliance and controls software).
+  - **Established solution:** ComplyAdvantage (developed-market financial-compliance software).
   - **Variant:** BOFIA PSP Safeguard Compliance Check, the Nigeria version of that software for payment-service operators preparing for BOFIA SII/safeguard rules. It stores control checklists, daily-recon evidence fields, and distress-transfer contact trees in the app. It is not a CBN or NDIC supervisor console and is not legal advice.
 - **Target:** OPay/Moniepoint-class PSP compliance leads, MFB treasurers, external auditors serving fintech clients.
 - **MVP cost:** $8k–$18k.
@@ -107,9 +107,9 @@
 
 ### 3. Sparkle FailedPoS Chargeback Track — double debit after “Server Error” (S1)
 
-- **Formula:** **Successful business:** Dispute.com / Chargebacks911 (developed-market chargeback and payment-dispute evidence software that packages receipts, scheme timelines, and merchant responses). **Recurring complaint:** Sparkle customer Rita Adepeju was debited **N110,900 twice** (total **N221,800**) at a Total station after a UBA PoS showed “Server Error”; bank exceeded CBN 72-hour card-dispute norms, then said the merchant declined the chargeback; FIJ reported she was still unpaid about **17 months** later and was told to confront the merchant herself despite disability (FIJ, 14 May 2025). **Variation:** Nigeria PoS decline→debit→chargeback evidence track with CBN-timeline fields — not OPay×Moniepoint FailedPOS 5-Day Promise Clock (wallet→agent withdrawal rail) and not PalmPay FuelDispense Refund Track.
+- **Formula:** **Successful business:** Dispute.com (developed-market chargeback and payment-dispute evidence software that packages receipts, scheme timelines, and merchant responses). **Recurring complaint:** Sparkle customer Rita Adepeju was debited **N110,900 twice** (total **N221,800**) at a Total station after a UBA PoS showed “Server Error”; bank exceeded CBN 72-hour card-dispute norms, then said the merchant declined the chargeback; FIJ reported she was still unpaid about **17 months** later and was told to confront the merchant herself despite disability (FIJ, 14 May 2025). **Variation:** Nigeria PoS decline→debit→chargeback evidence track with CBN-timeline fields — not OPay×Moniepoint FailedPOS 5-Day Promise Clock (wallet→agent withdrawal rail) and not PalmPay FuelDispense Refund Track.
 - **Complaint citations:** FIJ, “Sparkle Refuses to Help Disabled Mother Recover N221,800 Lost With ‘Service Error’ for 17 Months,” 14 May 2025 — https://fij.ng/article/sparkle-refuses-to-help-disabled-mother-recover-n221800-lost-with-service-error-for-17-months/
-- **Success signal:** Dispute.com and Chargebacks911 remain widely marketed developed-market dispute/chargeback ops platforms for card programs and merchants.
+- **Success signal:** Dispute.com remains a widely marketed developed-market dispute/chargeback ops platform for card programs and merchants.
 - **Solution:**
   - **Established solution:** Dispute.com (developed-market chargeback / dispute-ops software).
   - **Variant:** Sparkle FailedPoS Chargeback Track, the Nigeria version of that software for cardholders stuck after declined PoS debits. It stores PoS decline photos, session IDs, bank emails, and chargeback outcome dates in the app. It is not Sparkle support and does not adjudicate scheme rules.
@@ -131,7 +131,7 @@
 
 - **Problem / trend:** Punch and Leadership (21 Nov 2026): NMDPRA October 2026 fact sheet shows petrol imports **+47%** from **10.2m** to **15m L/day** even as domestic refinery supply rose **12%** to **31.9m L/day**; imports were ~**32%** of **46.9m L/day** total receipts (vs **26.4%** in September); petrol stock sufficiency fell to **21.8 days**. Marketers, fleet operators, and state fuel desks need a month-by-month import-share vs domestic-supply and stock-days monitor — not a pump-price complaint sheet and not a fuel PoS refund track.
 - **Solution:**
-  - **Established solution:** OPIS / Platts downstream analytics dashboards (developed-market fuel-market monitoring software).
+  - **Established solution:** OPIS (developed-market downstream fuel-market monitoring software).
   - **Variant:** Petrol Import Share Monitor, the Nigeria version of that software for marketers and fleet buyers watching NMDPRA receipt mixes. It stores monthly import/domestic litres, import share %, and stock-sufficiency days in the app. It is not NMDPRA licensing and not trading advice.
 - **Target:** Independent marketers, haulage fleets, state fuel-task desks, energy journalists’ research aids.
 - **MVP cost:** $6k–$14k.
@@ -151,7 +151,7 @@
 
 - **Problem / trend:** Punch, Guardian, Leadership (20–21 Nov 2026): Interior Minister Tunji-Ojo broke ground on a **$70m** National Passport Booklet Production Centre at NIS HQ Abuja with Iris Smart Technologies — off-grid, AI-driven, targeting **6 million** booklets/year by May 2027 (scale to **10 million**), vs domestic need ~**1.8–2 million**/year, with ECOWAS export ambition; NIS CG Nandap tied past booklet shortages to lack of supply-chain control after the Sep 2025 personalisation centre. Travel agencies, university mobility offices, and corporate HR need a commissioning/capacity track so they stop promising “passport by X date” from rumour alone — not Airport vPASS enrolment.
 - **Solution:**
-  - **Established solution:** Jira / Monday.com project capacity trackers (developed-market delivery-milestone software).
+  - **Established solution:** Jira (developed-market delivery-milestone software).
   - **Variant:** Passport Booklet Capacity Track, the Nigeria version of that software for travel and HR teams watching NIS booklet capacity milestones. It stores groundbreaking, commissioning target, and booklet-capacity announcements in the app. It is not an NIS passport application portal.
 - **Target:** Travel agencies, study-abroad counsellors, corporate mobility HR, diaspora family facilitators.
 - **MVP cost:** $6k–$14k.
@@ -171,7 +171,7 @@
 
 - **Problem / trend:** BusinessDay (21 Nov 2026): NFEM dollar print **N1,389.73** (≈**N13.15** weaker day-on-day), approaching **N1,400/$**; external reserves down ~**$610m** in under a month to **$54.65bn** (19 Nov) from **$55.26bn** (27 Oct); analysts cite election uncertainty, festive dollar demand, and softer FPI. Importers and SME treasurers need a reserve-gap + NFEM print alert with dated sources — not MPC Week LoanRate Monitor (policy-rate week) and not CBN OMO Liquidity Stress Monitor (mop-up volume).
 - **Solution:**
-  - **Established solution:** XE / Bloomberg FX alert apps (developed-market FX monitoring software).
+  - **Established solution:** Bloomberg Terminal (developed-market FX and reserves monitoring software).
   - **Variant:** NFEM Reserve Gap Alert, the Nigeria version of that software for SME treasurers watching official NFEM and CBN reserve prints. It stores daily NFEM mid, parallel gap notes, and reserve level changes in the app. It is not a BDCs desk and not investment advice.
 - **Target:** Import SMEs, school-fee remitters’ advisors, corporate treasuries without a Bloomberg seat.
 - **MVP cost:** $6k–$14k.
@@ -189,9 +189,9 @@
 
 ### 7. FCCPC Retail Price Fairness Check — Africa Retail Congress enforcement signal (S5→S9)
 
-- **Problem / trend:** Punch (coverage of FCCPC at Africa Retail Congress, Lagos Business School): FCCPC warned retailers against price fixing, gouging, hidden charges, and anti-competitive mergers; noted ~**three** Lagos business seals this year and stressed education-first compliance across formal retail, informal markets, and digital platforms. Retail chains and marketplace sellers need a pricing-transparency readiness check (label, hidden fee, promo honesty) — not FCCPC Offplan Delivery Evidence Track (estate seal / undelivered duplex).
+- **Problem / trend:** Punch (18 Nov 2026): at the Africa Retail Congress, Lagos Business School, FCCPC zonal coordinator Olubunmi Otti warned retailers against price fixing, gouging, hidden charges, and anti-competitive mergers; she said the commission had sealed about **three** Lagos businesses this year and stressed education-first compliance across formal retail, informal markets, and digital platforms. Retail chains and marketplace sellers need a pricing-transparency readiness check (label, hidden fee, promo honesty) — not FCCPC Offplan Delivery Evidence Track (estate seal / undelivered duplex). https://punchng.com/nigeria-steps-up-scrutiny-of-retail-pricing-practice/
 - **Solution:**
-  - **Established solution:** Pricefx / PROS (developed-market pricing-governance software).
+  - **Established solution:** Pricefx (developed-market pricing-governance software).
   - **Variant:** FCCPC Retail Price Fairness Check, the Nigeria version of that software for retailers preparing FCCPC-facing price transparency. It stores SKU label photos, fee disclosures, and complaint-response fields in the app. It is not an FCCPC portal.
 - **Target:** Supermarket/pharmacy chains, large open-market associations, digital marketplace 1P/3P sellers.
 - **MVP cost:** $6k–$14k.
@@ -209,9 +209,9 @@
 
 ### 8. Access UnauthDebit Merchant Reveal Track — bank acknowledges debit, hides merchant (S1)
 
-- **Formula:** **Successful business:** Plaid / MX (developed-market transaction-detail and consumer-finance data software that surfaces merchant identity on card rails). **Recurring complaint:** FIJ (6 Jan 2026): Access Bank removed **N87,039** (then **N27,900**) from Lagos entrepreneur Bamidele Moses for online card transactions he says he never made; Access **acknowledged** the debits as unauthorised and logged a complaint, yet did not reply when he asked for the **merchant/organisation name** that received the funds; he also reported a prior ~**N17,000** unresolved case. **Variation:** Merchant-identity evidence track after bank acknowledgement — not AccessBank UnauthCard Refund Clock (refund SLA focus) and not Zenith GhostDebit Evidence Track.
+- **Formula:** **Successful business:** Plaid (developed-market transaction-detail and consumer-finance data software that surfaces merchant identity on card rails). **Recurring complaint:** FIJ (6 Jan 2026): Access Bank removed **N87,039** (then **N27,900**) from Lagos entrepreneur Bamidele Moses for online card transactions he says he never made; Access **acknowledged** the debits as unauthorised and logged a complaint, yet did not reply when he asked for the **merchant/organisation name** that received the funds; he also reported a prior ~**N17,000** unresolved case. **Variation:** Merchant-identity evidence track after bank acknowledgement — not AccessBank UnauthCard Refund Clock (refund SLA focus) and not Zenith GhostDebit Evidence Track.
 - **Complaint citations:** FIJ, “Access Bank Takes Lagos Customer’s N87,039 for Transaction He Never Made,” 6 Jan 2026 — https://fij.ng/article/access-bank-takes-lagos-customers-n87039-for-transaction-he-never-made/
-- **Success signal:** Plaid/MX-class merchant enrichment remains the developed-market default for explaining card debits to consumers and fintech apps.
+- **Success signal:** Plaid remains a developed-market default for explaining card debits, including merchant identity, to consumers and fintech apps.
 - **Solution:**
   - **Established solution:** Plaid (developed-market transaction enrichment / merchant-identity software).
   - **Variant:** Access UnauthDebit Merchant Reveal Track, the Nigeria version of that software for customers whose bank admits an unauthorised debit but will not name the merchant. It stores debit alerts, bank acknowledgement emails, and merchant-name request/response dates in the app. It is not Access support.
@@ -233,7 +233,7 @@
 
 - **Problem / trend:** Punch (CBN Q3 2026 Credit Conditions Survey): banks raised credit supply; secured household demand index **25.6** (consumer loans **42.9**); corporate demand **18.9** (small businesses **22.6**); yet lending-rate spreads vs MPR widened in several categories — more credit available does not mean cheaper credit. SME CFOs need a demand/approval/spread monitor from the survey series — not MPC Week LoanRate Monitor (policy meeting week).
 - **Solution:**
-  - **Established solution:** Moody’s Analytics / S&P credit-conditions dashboards (developed-market credit-cycle monitoring software).
+  - **Established solution:** Moody’s Analytics (developed-market credit-cycle monitoring software).
   - **Variant:** CBN Credit Conditions SME Monitor, the Nigeria version of that software for SME finance leads reading CBN credit-conditions releases. It stores demand indices, approval notes, and spread commentary fields in the app. It is not a loan marketplace.
 - **Target:** SME CFOs, MFB credit teams, DFI relationship managers.
 - **MVP cost:** $6k–$14k.
@@ -252,7 +252,7 @@
 
 - **Problem / trend:** Product Hunt (21 Nov 2026 fetch): **Scam Link Check** — “Paste a suspicious text or link, get a plain-English verdict.” Nigeria SMS/WhatsApp investment and “customs recruitment fee” scams remain frequent (see today’s Customs FCC and prior NMDPRA fake-recruit rails). A Nigeria-localised scam-link check with Naira-scam phrase packs and .ng domain heuristics is a Strategy 7 adaptation — not a full EFCC case manager.
 - **Solution:**
-  - **Established solution:** Scam Link Check / similar developed-market link-safety checkers (PH-listed pattern).
+  - **Established solution:** Norton Safe Web (developed-market link and site-safety software).
   - **Variant:** Scam Link Check NG, the Nigeria version of that software for WhatsApp/SMS links. It stores the pasted URL/text, plain-English verdict, and report-to-bank fields in the app. It is not NITDA/EFCC official.
 - **Target:** Retail users, campus students, SME owners screening vendor payment links.
 - **MVP cost:** $5k–$12k.
@@ -270,9 +270,9 @@
 
 ### 11. Palm Oil Cost Stress Monitor — import-driven demand vs producer costs (S5→S9)
 
-- **Problem / trend:** BusinessDay RSS (20 Nov 2026 lead): “Nigeria’s palm oil producers battle cost pressures amid import-driven demand opportunity” (BusinessDay market-intelligence). Processors and large kitchen buyers need a cost/import-pressure monitor tied to public trade and input-cost notes — soft-fail if full article body is gated; use headline + secondary trade stats in Pass 2 enrichment.
+- **Problem / trend:** BusinessDay (21 Nov 2026): Nigeria produces about **1.5 million** tonnes of palm oil a year against domestic use of about **2.2–2.6 million** tonnes, and NBS foreign-trade data in the same piece shows crude palm oil imports of **N91.62 billion** in January–June 2026 versus **N15.61 billion** a year earlier. Processors and large kitchen buyers need a cost/import-pressure monitor tied to those public trade and input-cost notes — not a customs-duty calculator alone. https://businessday.ng/market-intelligence/article/nigerias-palm-oil-import-surge-creates-growth-opportunity-for-local-producers-despite-rising-costs/
 - **Solution:**
-  - **Established solution:** Gro Intelligence / Agribusiness commodity monitors (developed-market ag-commodity software).
+  - **Established solution:** Expana (developed-market agri-commodity price software).
   - **Variant:** Palm Oil Cost Stress Monitor, the Nigeria version of that software for millers and food manufacturers. It stores import-pressure notes and local cost stress fields in the app. It is not a customs duty calculator alone.
 - **Target:** Palm-oil millers, biscuit/noodle manufacturers, large caterers.
 - **MVP cost:** $6k–$14k.
@@ -282,17 +282,16 @@
   - **Trader WhatsApp groups** — opaque. Why a Nigeria buyer might still choose this idea: dated source fields.
   - **Foreign ag terminals** — FX heavy. Why a Nigeria buyer might still choose this idea: Nigeria palm-oil focus.
 - **GUEMF:** Mode B **4/3/4/2/4 = 17**.
-- **Commercial viability:** Medium — headline-led; needs Pass 2 cite enrichment if BusinessDay body stays gated.
+- **Commercial viability:** Medium — cited import-gap and NBS import jump; willingness-to-pay still unproven.
 - **Dedup:** High vs Cocoa EUDR FarmMap Track.
 - **Founder fit:** Good.
 - **Strategy trace:** S5 → S9 → S14.
-- **Note:** Primary BusinessDay URL from RSS soft-failed on full fetch (404/path drift); keep headline provenance from fetch JSON and refresh URL in Pass 2.
 
 ### 12. Airport Biometric Queue Alert — passenger fear of domestic biometric chaos (S5→S7)
 
-- **Problem / trend:** Vanguard RSS (21 Nov 2026): “Passengers fear proposed biometric checks may cause chaos at domestic airports.” Distinct from Airport vPASS Yuletide Enrol Monitor (enrolment readiness): this job is **day-of-travel queue chaos evidence** — travellers and SMEs flying staff need a terminal wait/exception alert when biometric gates fail or queues spike.
+- **Problem / trend:** Vanguard (21 Nov 2026): passengers fear the proposed mandatory domestic biometric checks from **1 Jan 2027** (v-PASS, NIN-linked) could repeat the Go Cashless gridlock. Distinct from Airport vPASS Yuletide Enrol Monitor (enrolment readiness): this job is **day-of-travel queue chaos evidence** — travellers and SMEs flying staff need a terminal wait/exception alert when biometric gates fail or queues spike. https://www.vanguardngr.com/2026/11/passengers-fear-proposed-biometric-checks-may-cause-chaos-at-domestic-airports/
 - **Solution:**
-  - **Established solution:** FlightAware / airport wait apps (developed-market airport-status software).
+  - **Established solution:** MyTSA (developed-market airport security-wait software).
   - **Variant:** Airport Biometric Queue Alert, the Nigeria version of that software for domestic travellers facing biometric gate rollouts. It stores terminal, wait reports, and failure notes in the app. It is not FAAN operations control.
 - **Target:** Domestic business travellers, travel desks, same-day courier escorts.
 - **MVP cost:** $6k–$14k.
@@ -336,13 +335,15 @@
 
 **Data freshness:** Fetch `agent_strategy_inputs_20261121_060213.json` morning of 2026-11-21; web cites dated 18–21 Nov 2026 for news spine; S1 FIJ cites 2025–2026.
 
+**Pass 2 pack:** 2026-11-21. Same 12 ideas and same ranks. Non-S1 problem spines stay **Problem / trend**. S1 cards keep **Formula**, **Complaint citations**, and **Success signal**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product): Checkr, ComplyAdvantage, Dispute.com, OPIS, Jira, Bloomberg Terminal, Pricefx, Plaid, Moody’s Analytics, Norton Safe Web, Expana, MyTSA. Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
+
 ---
 
 ## Next validation steps
 
 | Date | Step |
 |------|------|
-| **2026-11-21 (Pass 2)** | Run Automation B / `prompts/agent_formulation_pack.txt` on this same file — normalize §14 subheads; optional `idea_card_schema.py`; one-shot Docx in-repo only. |
+| **2026-11-21 (same day)** | Pass 2 pack applied on this same file (same 12 ideas, same ranks). Schema check, then one-shot in-repo Docx. |
 | **2026-11-22** | Re-check Customs/FCC training suspension outcome; refresh NMDPRA October fact-sheet mirror if Punch URL drifts. |
 | **2026-11-24** | Confirm BOFIA amendment assent status (still bill until signed); update Safeguard Compliance Check regulatory line. |
 | **2026-11-25** | Spot-check Sparkle/Access complaint patterns for newer FIJ/Techparley follow-ups before any customer interviews. |
@@ -350,8 +351,4 @@
 
 ---
 
-## Docx status
-
-`_PENDING_PASS_2_PACK_`
-
-Pass 2 Pack (`prompts/agent_formulation_pack.txt`) is required before Docx convert/open. Do not treat Word as final from this Pass 1 Discover run.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
