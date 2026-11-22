@@ -68,3 +68,11 @@ business_bookmark_sorter/*.docx
 # Post-Wedding landing — never commit real phone / local overrides
 Strategy-2-Problem-Solving/post-wedding-comms-pack/landing/config.local.js
 
+# Entrepreneur skim last-analyzed marker. One filename. Not a hand-edit path.
+agent-business-idea-runs/last_business_ideas_analyzed.txt
+
+
+# Word lock files
+~$*.docx
+**/~$*.docx
+
