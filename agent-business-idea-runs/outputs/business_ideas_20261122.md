@@ -1,13 +1,13 @@
 # Nigeria Business Ideas — Multi-Strategy Agent Run
 
-**Generated:** 2026-11-22 ~06:00–07:30 UTC (WAT morning) — **Pass 1 Discover only**  
+**Generated:** 2026-11-22 ~06:00–07:30 UTC (WAT morning) — **Pass 1 Discover**, packed **Pass 2** 2026-11-22 (Africa/Lagos). Same 12 ideas, same ranks.  
 **Output file:** `agent-business-idea-runs/outputs/business_ideas_20261122.md`  
 **Fetch JSON:** `agent-business-idea-runs/inputs/agent_strategy_inputs_20261122_060418.json` (`strategy_12_run` **ok** Mode B aid / fixture scores only — Mode A synthesized separately; Techpoint/Financial Nigeria RSS **0** headlines; StartupList Africa **429**; Product Hunt RSS titles + secondary taglines; Punch/Nairametrics/BusinessDay/Vanguard/Premium Times RSS ok; BusinessDay RSS skewed to life/faith this morning — campaign-finance + NISO cites via BusinessDay article URLs + Leadership)  
 **Strategies included:** 1, 5, 6, 7, 9, 11, 12, 13, 14, 15  
 **Strategies skipped:** 2, 3, 4, 8, 10  
 **Dedup sources:** automation memory Best tops 2026-11-21→2026-11-10 (esp. Customs FCC Recruit Invite Verify, BOFIA PSP Safeguard Compliance Check, Sparkle FailedPoS Chargeback Track, Petrol Import Share Monitor, Passport Booklet Capacity Track, FCCPC Offplan Delivery Evidence Track, Aseese Corridor Freight Delay Track, NMDPRA OfficialRecruit Verify, NIBSS CashTrust Dispute Monitor, Lithium Concentrate Export Ban Check, Cornerstone HoldCo PolicyPath Check, MPC Week LoanRate Monitor, OPay×PalmPay FraudFlag Track, NNPC JobOffer Scam Verify, Zenith GhostDebit Evidence Track, NSW Phase2 ExportPermit Check, Airport vPASS Yuletide Enrol Monitor, OPay Netflix BillPingPong Track, Cocoa EUDR FarmMap Track, AfDB Sterling SME Docs Check, NigeriaTaxAct ETR Levy Check, StatePension PayGap Track, MoreMonee CourtOrder Refund Track, CookingGas Shortage Price Monitor, OPay ErroneousCredit Return Verify, PalmPay FuelDispense Refund Track, Access UnauthDebit Merchant Reveal Track, NFEM Reserve Gap Alert, MultiBank GoMoney Wipe Evidence Clock, GTBank UnauthDebit ForcedLoan Clock), plus older `business_ideas_20261011.md` / `20261010.md`  
 **S12 gate check:** ≥2 ideas with **primary** trace **S12** (Mode A); ≥1 Mode A in Best ideas; Mode B GUEMF 1–5 on all other-origin ideas; mid-hop `→ S12` alone ≠ Mode A.  
-**Docx:** `_PENDING_PASS_2_PACK_` — Pass 2 pack required before Docx.
+**Docx:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
 
 ---
 
@@ -69,7 +69,7 @@
 
 - **Problem / trend:** BusinessDay (22 Nov 2026): weak campaign-finance oversight ahead of 2027, with Electoral Act 2026 Section 92 ceilings (presidential **N10bn**, governorship **N3bn**, Senate **N500m**, Reps **N250m**) summing to a combined candidate spend ceiling of about **N3.88tn**; parallel naira moved **N1,360→N1,460/$** (3 Oct–18 Nov) and reserves fell ~**$406m** in a month while CBN OMO mop-up exceeded **N90tn** YTD. Leadership and civil-society voices question whether INEC can verify ads, billboards, rallies, and third-party spend. Party finance officers and watchdog desks need a structured spend-evidence check before returns are due.
 - **Solution:**
-  - **Established solution:** FiscalNote / Quorum-style political-compliance evidence software (developed-market campaign and lobbying disclosure tracking).
+  - **Established solution:** FiscalNote (developed-market campaign-finance and lobbying disclosure software).
   - **Variant:** Campaign Spend Cap Evidence Check, the Nigeria version of that software for party treasurers and CSOs logging ad invoices, billboard photos, rally cost sheets, and donor ID thresholds under Electoral Act 2026. It stores dated evidence packs in the app. It is not an INEC portal and does not file statutory returns.
 - **Target:** Party finance secretariats; campaign compliance consultants; election CSOs; media fact-desks covering spend.
 - **MVP cost:** $8k–$18k.
@@ -79,7 +79,7 @@
   - **Excel + WhatsApp invoice dumps** — common; miss third-party attribution fields. Why a Nigeria buyer might still choose this idea: Act-aligned category prompts.
   - **Foreign political-finance SaaS** — US/EU-centric. Why a Nigeria buyer might still choose this idea: Naira ceilings + INEC return vocabulary.
   - **NigeriaTaxAct ETR Levy Check (prior)** — tax levy job. Why a Nigeria buyer might still choose this idea: **campaign spend cap evidence** job.
-- **GUEMF (Mode A):** Growing — 2027 cycle + higher Act ceilings; Urgent — campaigning already stressing FX narrative; Expensive — N10bn/N3bn caps and N3.88tn aggregate; Mandatory — Electoral Act + INEC return rules; Frequent — daily ad/rally spend. Evidence: https://businessday.ng/politics/article/weak-campaign-finance-oversight-threatens-nigerias-fragile-economic-recovery/ ; https://leadership.ng/2027-elections-questions-trail-inecs-campaign-finance-oversight/
+- **GUEMF:** Mode A **5/5/5/5/4 = 24** (Growing — 2027 cycle and higher Act ceilings; Urgent — campaigning already stressing the FX narrative; Expensive — N10bn and N3bn caps and the N3.88tn aggregate; Mandatory — Electoral Act and INEC return rules; Frequent — daily ad and rally spend). Evidence: https://businessday.ng/politics/article/weak-campaign-finance-oversight-threatens-nigerias-fragile-economic-recovery/ ; https://leadership.ng/2027-elections-questions-trail-inecs-campaign-finance-oversight/
 - **Commercial viability:** High — hard statutory numbers + recurring compliance buyers.
 - **Dedup:** High vs Tax ETR / generic civic apps.
 - **Founder fit:** Strong — evidence-checklist software, not lobby shop.
@@ -89,7 +89,7 @@
 
 - **Problem / trend:** Punch (22 Nov 2026): dry-season fear as hydro reservoir inflows fall and gas constraints bite; NISO data cited ~**3,180 MW** generated (19 Nov) with DisCos allocated **~2,885 MW**. BusinessDay (22 Nov 2026): NISO clarified Friday’s disturbance was transmission-line trips (Omotosho–Ikeja West, Ihovbor–Oshogbo, Benin–Egbin, Ihovbor–Ajaokuta) restored by ~14:49 — **not** a system-wide collapse. Factories and cold-chain SMEs need a stress alert that pairs hydro/gas outlook with official trip-vs-collapse wording.
 - **Solution:**
-  - **Established solution:** GridStatus / Energy-grid monitoring software (developed-market ISO outage and generation dashboards).
+  - **Established solution:** GridStatus (developed-market ISO generation and grid-disturbance monitoring software).
   - **Variant:** Dry Season Grid Stress Alert, the Nigeria version of that software for SME ops managers watching NISO/TCN public signals in the dry season. It stores MW prints, gas/hydro constraint notes, and trip clarifications in the app. It is not a DisCo prepaid meter app.
 - **Target:** Manufacturers, cold-storage, hospitals’ facility managers, coworking/data rooms without SCADA seats.
 - **MVP cost:** $6k–$14k.
@@ -99,7 +99,7 @@
   - **Twitter “grid collapse” rumours** — noisy. Why a Nigeria buyer might still choose this idea: official trip-vs-collapse field.
   - **Diesel-generator WhatsApp groups** — reactive. Why a Nigeria buyer might still choose this idea: dated MW + constraint evidence before fuel buy.
   - **DisCo Unbilled Meter Gap Desk (prior)** — metering/AR job. Why a Nigeria buyer might still choose this idea: **generation/transmission stress** job.
-- **GUEMF (Mode A):** Growing — seasonal dry-season cycle; Urgent — already short hours; Expensive — diesel backup; Mandatory — operations continuity; Frequent — daily MW and trip risk. Evidence: https://punchng.com/dry-season-fear-mounts-over-worsening-power-crisis/ ; https://businessday.ng/life/article/niso-clarifies-fridays-grid-disturbance/
+- **GUEMF:** Mode A **5/5/5/4/5 = 24** (Growing — seasonal dry-season cycle; Urgent — already short hours; Expensive — diesel backup; Mandatory — operations continuity; Frequent — daily MW and trip risk). Evidence: https://punchng.com/dry-season-fear-mounts-over-worsening-power-crisis/ ; https://businessday.ng/life/article/niso-clarifies-fridays-grid-disturbance/
 - **Commercial viability:** High — recurring seasonal urgency with clear SME buyer.
 - **Dedup:** High vs Meter Gap / EastWest SuperGrid procurement.
 - **Founder fit:** Strong.
@@ -131,7 +131,7 @@
 
 - **Problem / trend:** Punch / Nairametrics / Premium Times (20–21 Nov 2026): NAFDAC destroyed fake, banned, expired and substandard products with estimated street value **N100bn** at Ogwama Dumpsite, Ogere Remo (Ogun), including banned sachet/PET alcohol &lt;200ml, Analgin, expired codeine syrups, Oxytocin, counterfeit cosmetics; raids also found illegal cosmetics/pharma production in a Lagos hardware warehouse and counterfeit alcohol plants; mop-up of **>100,000** cartons of banned sachet alcohol across Lagos–Ogun. Pharmacies, patent-medicine vendors, and FMCG distributors need a lot/registration scan before restock.
 - **Solution:**
-  - **Established solution:** TraceLink / PharmaGuard-style product authentication software (developed-market serialisation and lot verification).
+  - **Established solution:** TraceLink (developed-market pharmaceutical serialisation and lot-verification software).
   - **Variant:** NAFDAC Counterfeit Lot Scan, the Nigeria version of that software for retailers checking NAFDAC registration cues and lot photos before accepting stock. It stores scan results and supplier invoices in the app. It is not a NAFDAC enforcement portal.
 - **Target:** Community pharmacies, PPMVs, cosmetics distributors, supermarket compliance leads.
 - **MVP cost:** $8k–$18k.
@@ -151,7 +151,7 @@
 
 - **Problem / trend:** Punch / Channels (21–22 Nov 2026) and NUPRC portal: 2026 licensing round offers **40** Petroleum Prospecting Licences (**17** onshore, **14** shallow water, **9** deep offshore); registration opened **20 Nov 2026**, pre-bid conference **16 Dec 2026**, registration closes **15 Jan 2027 16:30 WAT**. Missed uploads are rejected regardless of reason. Bid consortia and local content partners need a register/docs checklist with calendar gates — not NSW Phase2 ExportPermit Check (trade permits).
 - **Solution:**
-  - **Established solution:** Diligent / deal-room bid-compliance software (developed-market licensing and RFP document trackers).
+  - **Established solution:** Intralinks (developed-market virtual data room for licensing and bid-document packs).
   - **Variant:** NUPRC Bid Register Check, the Nigeria version of that software for upstream bid teams tracking PIA 2021 round registration packs. It stores terrain category, fee receipts, and portal upload timestamps in the app. It is not the NUPRC br2026 portal.
 - **Target:** Independent E&P teams, service-company JV desks, local-content advisors.
 - **MVP cost:** $8k–$18k.
@@ -171,7 +171,7 @@
 
 - **Problem / trend:** Nairametrics op-ed (21 Nov 2026): October SEC-based ranking showed First Ally MMF YTD **21.17%** (STL tenth still **18.93%**), yet top-ten funds held only **N241.97bn** (**3.51%** of **N6.90tn** MMF AUM); seven of ten publish no current portfolio mix; where sheets exist, large shares sit in bank placements/CP not named T-bills, while 11 Nov T-bill stops were ~**15.4–15.9%** after MPR cut to **23%**. Unitholders and IFAs need a fact-sheet holdings check before chasing headline YTD.
 - **Solution:**
-  - **Established solution:** Morningstar / Lipper fund-holdings transparency software (developed-market fund analytics).
+  - **Established solution:** Morningstar (developed-market fund-holdings and fact-sheet analytics software).
   - **Variant:** MMF FactSheet Holdings Check, the Nigeria version of that software for unitholders comparing YTD tables to published asset-mix fields. It stores fact-sheet excerpts, TER, and withdrawal-rule notes in the app. It is not a fund distributor.
 - **Target:** Retail unitholders, IFAs, treasury desks parking surplus Naira.
 - **MVP cost:** $6k–$14k.
@@ -213,7 +213,7 @@
 
 - **Problem / trend:** Nairametrics (22 Nov 2026): PICTT chair Muhammed Dahiru announced an MoU with Valmont Industries (Valley Irrigation) for a Nigeria irrigation-equipment manufacturing plant with NASENI, plus a **40,000-hectare** Adamawa pilot with NIRSAL/NADF under Irrigate Nigeria; Valley cited as &gt;**40%** of global centre-pivots (**250,000+** pivots, ~**12m** ha). CapEx, capacity, and completion dates were **not** disclosed. Only **5.8%** of agricultural land irrigated under command-area development (Greenview CEO, FirstBank Agric Expo, Sep 2026). Agribusinesses and state ADPs need a localization/pilot milestone monitor — not Ogun Sagamu–Abeokuta Gas Connect Ready Pack.
 - **Solution:**
-  - **Established solution:** agtech project-milestone software (developed-market irrigation rollout trackers used by dealers and cooperatives).
+  - **Established solution:** DevResults (developed-market program and pilot milestone-tracking software).
   - **Variant:** Valmont Irrigation Localize Monitor, the Nigeria version of that software for ADP and cooperative desks watching factory-MoU and Adamawa pilot milestones. It stores MoU dates, pilot hectare claims, and partner roles in the app. It is not a Valmont dealer portal.
 - **Target:** State ADPs, irrigation cooperatives, NIRSAL-linked aggregators, NASENI ecosystem SMEs.
 - **MVP cost:** $6k–$14k.
@@ -233,7 +233,7 @@
 
 - **Problem / trend:** Nairametrics (21 Nov 2026): North Central Nigeria Investment (NCNI) Plc opened a Niger State–backed offer to raise up to **N70bn** via a **10-year** fixed-rate private bond at **24%**. Institutional and HNW desks need an offer-document checklist (sponsor support, use of proceeds, coupon vs T-bill stops ~15–16%) before allocation — not WAEMU Bond Passport Readiness Desk (regional passporting).
 - **Solution:**
-  - **Established solution:** Bloomberg Fixed Income / bond-diligence checklist software (developed-market).
+  - **Established solution:** Bloomberg Terminal (developed-market fixed-income diligence software).
   - **Variant:** NCNI State Bond Offer Check, the Nigeria version of that software for desks reviewing state-sponsored private bond offers. It stores term-sheet fields, sponsor notes, and comparison-to-T-bill stops in the app. It is not a placement agent.
 - **Target:** Pension/asset managers’ junior analysts; family offices; state-debt monitors.
 - **MVP cost:** $6k–$14k.
@@ -253,7 +253,7 @@
 
 - **Problem / trend:** Product Hunt (week of 17 Nov 2026): **AlterContacts** — “AI client relationship assistant that thinks and does ahead.” Nigeria SMEs already run sales on WhatsApp/Instagram with missed follow-ups; StartupList Africa directory fetch returned **429** this run, so niche synthesis pairs PH CRM automation with Lagos service/trade SMEs who cannot afford Salesforce. Need a lightweight follow-up track — not generic Scam Link Check NG (yesterday).
 - **Solution:**
-  - **Established solution:** AlterContacts / HubSpot CRM assistants (developed-market relationship automation software).
+  - **Established solution:** HubSpot (developed-market CRM follow-up software).
   - **Variant:** AlterContacts SME FollowUp Track, the Nigeria version of that software for WhatsApp-first SMEs logging promised call-backs and unpaid invoices. It stores contact next-actions in the app. It is not Meta WhatsApp Business API resale alone.
 - **Target:** Lagos/Abuja service SMEs, freelancers, small agencies.
 - **MVP cost:** $5k–$12k.
@@ -273,7 +273,7 @@
 
 - **Problem / trend:** Punch (22 Nov 2026): FG announced **19** international vacancies for Nigerians at the African Space Agency and OIC General Secretariat (deadlines into late Dec 2026). Official lists routinely attract fake “processing fee” and “guarantee letter” scams (pattern seen in prior NMDPRA/NNPC recruit frauds). Applicants need an official-source verify — not NMDPRA OfficialRecruit Verify (fake petroleum recruit letters) and not Customs FCC Recruit Invite Verify (list-vs-invite mismatch).
 - **Solution:**
-  - **Established solution:** Handshake / government-jobs verification software (developed-market official vacancy authenticity checkers).
+  - **Established solution:** Handshake (developed-market campus and employer job-posting software).
   - **Variant:** AfSA OIC Job Vacancy Verify, the Nigeria version of that software for applicants cross-checking FG international vacancy posts against fee-request red flags. It stores official URL screenshots and fee-demand evidence in the app. It is not an MFA application portal.
 - **Target:** Graduates, mid-career professionals, campus career desks.
 - **MVP cost:** $5k–$12k.
@@ -292,7 +292,7 @@
 
 - **Problem / trend:** Punch (22 Nov 2026): Nigerian-Canadian Abraham Osakpolor was killed crossing Lagos Airport Road after searching for missing luggage, renewing concern that pedestrians ignore (or lack usable) footbridges around MMA. Travellers and pick-up drivers need a luggage-delay + safe-crossing risk alert — not Airport vPASS Yuletide Enrol Monitor (biometric enrolment).
 - **Solution:**
-  - **Established solution:** FlightAware / airport ops passenger-alert software (developed-market irregular-operations alerts).
+  - **Established solution:** FlightAware (developed-market flight-status and irregular-operations alert software).
   - **Variant:** Airport Luggage Road Risk Alert, the Nigeria version of that software for MMA arrivals logging bag delays and safe pick-up/crossing reminders. It stores delay notes and bridge/reminder prompts in the app. It is not FAAN road control.
 - **Target:** Arriving passengers’ families, airport taxi/dispatch desks, travel agents.
 - **MVP cost:** $5k–$12k.
@@ -336,13 +336,15 @@
 **Partial runs:** Techpoint/FN RSS 0; StartupList 429; BusinessDay RSS life/faith-heavy — supplemented with BusinessDay politics/energy URLs.  
 **Soft-fail:** No abort on S6 429 or empty Techpoint/FN feeds.
 
+**Pass 2 pack:** 2026-11-22. Same 12 ideas and same ranks. Non-S1 problem spines stay **Problem / trend**. S1 cards keep **Formula**, **Complaint citations**, and **Success signal**. Each **Solution** has one Established solution (a named developed-market product) and a Variant (the Nigeria software version of that product): FiscalNote, GridStatus, Chargeback.com, TraceLink, Intralinks, Morningstar, Sift, DevResults, Bloomberg Terminal, HubSpot, Handshake, FlightAware. Regulatory and Competitors / alternatives stay on every card. Docx convert is the one-shot in-repo step after this pack. Desktop Word is not opened.
+
 ---
 
 ## Next validation steps
 
 | Step | Owner | Target date |
 |------|-------|-------------|
-| Pass 2 Pack (`prompts/agent_formulation_pack.txt`) on this file → schema → one-shot Docx | Automation B / Hub Pass 2 | **2026-11-22** (11:00 WAT schedule) or same-day manual |
+| Pass 2 pack applied on this same file (same 12 ideas, same ranks). Schema check, then one-shot in-repo Docx | Automation B | **2026-11-22** |
 | Spot-check INEC/Electoral Act ceiling figures vs PLAC factsheet | Operator | **2026-11-24** |
 | Confirm NUPRC portal calendar (15 Jan 2027 16:30 WAT) still live | Operator | **2026-11-25** |
 | Customer interviews (n=5): unauth debit wait + OTP ATO evidence packs | Founder | **2026-12-05** |
@@ -353,6 +355,4 @@
 
 ## Docx status
 
-_PENDING_PASS_2_PACK_
-
-Pass 2 pack is required before Docx. Next: paste `prompts/agent_formulation_pack.txt` against `agent-business-idea-runs/outputs/business_ideas_20261122.md`.
+**Docx status:** Pass 2 packed. One-shot in-repo convert (desktop Word not opened).
