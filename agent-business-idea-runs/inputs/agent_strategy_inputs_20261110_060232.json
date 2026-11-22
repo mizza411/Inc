@@ -1,0 +1,683 @@
+{
+  "generated_at": "2026-11-10T06:02:35.850321",
+  "strategies_skipped": [
+    2,
+    3,
+    4,
+    8,
+    10
+  ],
+  "strategy_5_9_rss": [
+    {
+      "source": "nairametrics",
+      "feed": "https://nairametrics.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Air Peace removes passenger after threat to burn plane forces ramp return",
+          "summary": "Air Peace removed a passenger from one of its aircraft after his threat to burn the plane prompted the captain to return it to the airport ramp before take-off.\nThe post Air Peace removes passenger after threat to burn plane forces ramp return appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/10/air-peace-removes-passenger-after-threat-to-burn-plane-forces-ramp-return/",
+          "published": "Tue, 10 Nov 2026 05:59:32 +0000"
+        },
+        {
+          "title": "Investors punish Nigerian insurance stocks even as profits surge",
+          "summary": "In general, the Insurance Index fell 5.52% in October and is down 13.64% year to date, the only major sector index in negative territory. Over the same period, the banking index had gained 60% and the oil-and-gas index 128%. The All-Share Index was up 60%.\nThe post Investors punish Nigerian insurance stocks even as profits surge appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/10/investors-punish-nigerian-insurance-stocks-even-as-profits-surge/",
+          "published": "Tue, 10 Nov 2026 05:52:45 +0000"
+        },
+        {
+          "title": "Midea Introduces Space Master Refrigerator in Nigeria, Bringing More Room to Everyday Living",
+          "summary": "Midea is introducing the Space Master Refrigerator to Nigerian consumers, placing practical food storage at the centre of its &#8220;More Room for Nigeria&#8221; campaign. The introduction speaks to a familiar household situation: a major grocery shop, a weekend of hosting or a family celebration can quickly turn refrigerator space into a daily planning challenge.Space Master [&#8230;]\nThe post Mi",
+          "link": "https://nairametrics.com/2026/11/09/midea-introduces-space-master-refrigerator-in-nigeria-bringing-more-room-to-everyday-living/",
+          "published": "Mon, 09 Nov 2026 20:23:55 +0000"
+        },
+        {
+          "title": "Nvidia CEO Jensen Huang loses $7.8 billion in 24 hours",
+          "summary": "Nvidia co-founder and Chief Executive Officer Jensen Huang has lost $7.8 billion of his fortune, bringing his estimated net worth to $154.4 billion amid renewed scrutiny of the semiconductor giant's leadership.\nThe post Nvidia CEO Jensen Huang loses $7.8 billion in 24 hours appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/09/nvidia-ceo-jensen-huang-loses-7-8-billion-in-24-hours/",
+          "published": "Mon, 09 Nov 2026 18:49:45 +0000"
+        },
+        {
+          "title": "Dangote Cement, Transcorp Power, Oando drive N2.32 trillion stock market rebound",
+          "summary": "The Nigerian equities market bounced back strongly on Monday, November 9, 2026, gaining N2.32 trillion in market capitalization or 1.44% to close higher at N163.92 trillion, up from N161.59 trillion and driven by robust gains in industrial stocks led by Dangote Cement and Transcorp Power Plc.\nThe post Dangote Cement, Transcorp Power, Oando drive N2.32 trillion stock market rebound appeared first o",
+          "link": "https://nairametrics.com/2026/11/09/dangote-cement-transcorp-power-oando-drive-n2-32-trillion-stock-market-rebound/",
+          "published": "Mon, 09 Nov 2026 18:44:48 +0000"
+        },
+        {
+          "title": "FG suspends broadcast licence fee reviews ‘over rising costs’",
+          "summary": "The Federal Government has suspended all reviews of broadcast licence fees until further notice, amid complaints about rising costs raised by the Broadcasting Organisations of Nigeria (BON).\nThe post FG suspends broadcast licence fee reviews ‘over rising costs’ appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/09/fg-suspends-broadcast-licence-fee-reviews-over-rising-costs/",
+          "published": "Mon, 09 Nov 2026 18:38:21 +0000"
+        },
+        {
+          "title": "Meta expands AI age detection globally to protect teens online",
+          "summary": "Meta has announced the global expansion of its artificial intelligence (AI) age-estimation technology to identify teenagers who misrepresent their ages online and automatically place them under its Teen Account protections on Instagram.\nThe post Meta expands AI age detection globally to protect teens online appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/09/meta-expands-ai-age-detection-globally-to-protect-teens-online/",
+          "published": "Mon, 09 Nov 2026 18:24:21 +0000"
+        },
+        {
+          "title": "Nigeria’s dollar trading plunges to $1.81 billion as turnover declines 51%",
+          "summary": "The value of dollars traded in Nigeria's foreign exchange market fell by 51.29% to $1.81 billion in the week ended November 6, 2026, from $3.71 billion in the preceding week, representing a decline of approximately $1.90 billion.\nThe post Nigeria’s dollar trading plunges to $1.81 billion as turnover declines 51% appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/09/nigerias-dollar-trading-plunges-to-1-81-billion-as-turnover-declines-51/",
+          "published": "Mon, 09 Nov 2026 17:59:04 +0000"
+        },
+        {
+          "title": "NELFUND student loan disbursements hit N375.28 billion",
+          "summary": "The Nigerian Education Loan Fund (NELFUND) has disbursed a total of N375.28 billion in student loans to Nigerian students since the launch of its student loan portal in May 2024.\nThe post NELFUND student loan disbursements hit N375.28 billion appeared first on Nairametrics.",
+          "link": "https://nairametrics.com/2026/11/09/nelfund-student-loan-disbursements-hit-n375-28-billion/",
+          "published": "Mon, 09 Nov 2026 15:28:03 +0000"
+        },
+        {
+          "title": "INFRAGROW: Why investors should care about FG’s $500 million World Bank loan",
+          "summary": "The Federal Government wants a fresh $500 million from the World Bank. The money would seed an infrastructure financing platform called INFRAGROW, short for the Nigeria Infrastructure Financing and De-Risking Platform for Growth and Jobs. The headline loan is small. The structure behind it is the real story. What is on the table The $500 [&#8230;]\nThe post INFRAGROW: Why investors should care abou",
+          "link": "https://nairametrics.com/2026/11/09/infragrow-why-investors-should-care-about-fgs-500-million-world-bank-loan/",
+          "published": "Mon, 09 Nov 2026 15:24:24 +0000"
+        }
+      ]
+    },
+    {
+      "source": "businessday",
+      "feed": "https://businessday.ng/feed/",
+      "count": 5,
+      "articles": [
+        {
+          "title": "After 12-year delay, Nigeria’s Minimum Pension Guarantee targets retirement poverty",
+          "summary": "Nigeria’s long-delayed Minimum Pension Guarantee (MPG) is set to provide a critical safety net for retirees whose years of service\nread more After 12-year delay, Nigeria’s Minimum Pension Guarantee targets retirement poverty",
+          "link": "https://businessday.ng/insurance/article/after-12-year-delay-nigerias-minimum-pension-guarantee-targets-retirement-poverty/",
+          "published": "Tue, 10 Nov 2026 03:15:30 +0000"
+        },
+        {
+          "title": "INVESTIGATION: Police abandon surveillance tech after spending billions",
+          "summary": "&#8230;$470 spent, N2.89 bn allocated in six years In this report, BusinessDay Investigations found that despite billions of naira appropriated\nread more INVESTIGATION: Police abandon surveillance tech after spending billions",
+          "link": "https://businessday.ng/investigation/article/investigation-police-abandon-surveillance-tech-after-spending-billions/",
+          "published": "Tue, 10 Nov 2026 03:00:09 +0000"
+        },
+        {
+          "title": "First Holdco, Dangote Cement, Aradel drive 60% NGX surge after FTSE reclassification",
+          "summary": "The Nigerian Exchange (NGX) has recorded a strong rally this year, led by heavyweight stocks including First Holdco, Dangote Cement,\nread more First Holdco, Dangote Cement, Aradel drive 60% NGX surge after FTSE reclassification",
+          "link": "https://businessday.ng/markets/article/first-holdco-dangote-cement-aradel-drive-60-ngx-surge-after-ftse-reclassification/",
+          "published": "Tue, 10 Nov 2026 02:50:36 +0000"
+        },
+        {
+          "title": "Abandoned projects, budget rollovers slow Nigeria’s $2.3trn infrastructure ambition",
+          "summary": "…Only 52% of 2024 federal capital projects completed Nigeria’s ambition to bridge its estimated $2.3 trillion infrastructure deficit through public\nread more Abandoned projects, budget rollovers slow Nigeria’s $2.3trn infrastructure ambition",
+          "link": "https://businessday.ng/news/article/abandoned-projects-budget-rollovers-slow-nigerias-2-3trn-infrastructure-ambition/",
+          "published": "Tue, 10 Nov 2026 02:30:42 +0000"
+        },
+        {
+          "title": "DisCos lose N568bn to unbilled electricity in eight months",
+          "summary": "Nigeria’s electricity distribution companies (DisCos) failed to bill for about N568.70 billion worth of electricity in the first eight months\nread more DisCos lose N568bn to unbilled electricity in eight months",
+          "link": "https://businessday.ng/energy/article/discos-lose-n568bn-to-unbilled-electricity-in-eight-months/",
+          "published": "Tue, 10 Nov 2026 02:00:11 +0000"
+        }
+      ]
+    },
+    {
+      "source": "punch",
+      "feed": "https://punchng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Niger gov sings ‘I’m born again’ at Christian concert",
+          "summary": "Niger State Governor, Mohammed Bago, a Muslim, has drawn attention after joining worshippers on stage to sing gospel songs at a Christian concert in Minna.\n\nRead More: https://punchng.com/niger-gov-sings-im-born-again-at-christian-concert/",
+          "link": "https://punchng.com/niger-gov-sings-im-born-again-at-christian-concert/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 06:55:38 +0000"
+        },
+        {
+          "title": "Canada makes rural immigration programme permanent to attract skilled workers",
+          "summary": "Canada has made its Rural Community Immigration Pilot a permanent programme to attract and retain skilled foreign workers in smaller communities.\n\nRead More: https://punchng.com/canada-makes-rural-immigration-programme-permanent-to-attract-skilled-workers/",
+          "link": "https://punchng.com/canada-makes-rural-immigration-programme-permanent-to-attract-skilled-workers/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 06:51:57 +0000"
+        },
+        {
+          "title": "I sold arms to anyone with money — Kalu",
+          "summary": "Senator Orji Kalu has disclosed that he was a former international arms dealer, selling heavy weapons to any country or buyer with money before he stopped.\n\nRead More: https://punchng.com/i-sold-arms-to-anyone-with-money-kalu/",
+          "link": "https://punchng.com/i-sold-arms-to-anyone-with-money-kalu/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 06:45:24 +0000"
+        },
+        {
+          "title": "I’ll restore subsidy to ease hardship, Atiku insists",
+          "summary": "ADC presidential candidate, Atiku Abubakar, has reiterated his pledge to restore petrol subsidy if elected president in 2027 to make life affordable.\n\nRead More: https://punchng.com/ill-restore-subsidy-to-ease-hardship-atiku-insists/",
+          "link": "https://punchng.com/ill-restore-subsidy-to-ease-hardship-atiku-insists/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 06:40:11 +0000"
+        },
+        {
+          "title": "2027: Tinubu will win by landslide — Kalu",
+          "summary": "Former Abia governor, Orji Uzor Kalu, has predicted that President Bola Tinubu will win the 2027 presidential election by a landslide, citing economic refo\n\nRead More: https://punchng.com/2027-tinubu-will-win-by-landslide-kalu/",
+          "link": "https://punchng.com/2027-tinubu-will-win-by-landslide-kalu/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 06:39:04 +0000"
+        },
+        {
+          "title": "Outrage as 4,300 corps members cram into Ogun camp",
+          "summary": "A viral video shows over 4,300 corps members in an overcrowded Ogun NYSC camp, sparking public outrage over their welfare and living conditions.\n\nRead More: https://punchng.com/outrage-as-4300-corps-members-cram-into-ogun-camp/",
+          "link": "https://punchng.com/outrage-as-4300-corps-members-cram-into-ogun-camp/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 05:51:37 +0000"
+        },
+        {
+          "title": "Again, OK Movement, Natasha clash over constituency cash giveaway",
+          "summary": "The Obi-Kwankwaso Movement and Senator Natasha Akpoti-Uduaghan clash over her constituency cash giveaway, with the group demanding an EFCC probe for vote-b\n\nRead More: https://punchng.com/again-ok-movement-natasha-clash-over-constituency-cash-giveaway/",
+          "link": "https://punchng.com/again-ok-movement-natasha-clash-over-constituency-cash-giveaway/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 05:49:50 +0000"
+        },
+        {
+          "title": "AI photos: Southern, M’Belt leaders seek voters’ register audit",
+          "summary": "The Southern and Middle Belt Leaders Forum has urged INEC to conduct an urgent forensic audit of the voters’ register over alleged AI-generated photos.\n\nRead More: https://punchng.com/ai-photos-southern-mbelt-leaders-seek-voters-register-audit/",
+          "link": "https://punchng.com/ai-photos-southern-mbelt-leaders-seek-voters-register-audit/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 05:49:48 +0000"
+        },
+        {
+          "title": "NDIC laments debtors’ refusal to repay failed bank loans",
+          "summary": "The Nigeria Deposit Insurance Corporation has expressed concern over debtors&#8217; refusal to repay failed bank loans, citing tactics like asset concealment and\n\nRead More: https://punchng.com/ndic-laments-debtors-refusal-to-repay-failed-bank-loans/",
+          "link": "https://punchng.com/ndic-laments-debtors-refusal-to-repay-failed-bank-loans/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 05:47:48 +0000"
+        },
+        {
+          "title": "NGF unveils 10-year plan to establish leadership academy",
+          "summary": "The Nigeria Governors’ Forum has approved a 10-year plan to establish a leadership academy to offer training and advisory services to improve governance.\n\nRead More: https://punchng.com/ngf-unveils-10-year-plan-to-establish-leadership-academy/",
+          "link": "https://punchng.com/ngf-unveils-10-year-plan-to-establish-leadership-academy/?utm_source=rss.punchng.com&utm_medium=web",
+          "published": "Tue, 10 Nov 2026 05:46:46 +0000"
+        }
+      ]
+    },
+    {
+      "source": "vanguard",
+      "feed": "https://www.vanguardngr.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "Oluwo seeks Yoruba language as medium for teaching science",
+          "summary": "By Shina Abubakar, Osogbo The Oluwo of Iwo, Oba Abdulrosheed Akanbi, has called for the development and promotion of Yoruba language as a medium of instruction for academic subjects, including Physics and other specialised courses. The monarch made the call on Monday during the 2026 Odun Olodumare celebration and his 11th coronation anniversary at his [&#8230;]\nThe post Oluwo seeks Yoruba language",
+          "link": "https://www.vanguardngr.com/2026/11/oluwo-seeks-yoruba-language-as-medium-for-teaching-science/",
+          "published": "Tue, 10 Nov 2026 05:48:15 +0000"
+        },
+        {
+          "title": "US-mediated talks with Russia and Ukraine to start in Abu Dhabi",
+          "summary": "Russia occupies large swathes of Ukraine but, while its troops have grinded westwards, they have not been able to seize the whole of the Donetsk region.\nThe post US-mediated talks with Russia and Ukraine to start in Abu Dhabi appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/us-mediated-talks-with-russia-and-ukraine-to-start-in-abu-dhabi/",
+          "published": "Tue, 10 Nov 2026 05:25:52 +0000"
+        },
+        {
+          "title": "Rivers community that forbids female dogs explains tradition to NYSC members",
+          "summary": "“In the past, the King would order it killed. But in this modern society, you cannot order the killing of the female dog\"\nThe post Rivers community that forbids female dogs explains tradition to NYSC members appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/rivers-community-that-forbids-female-dogs-explains-tradition-to-nysc-members/",
+          "published": "Tue, 10 Nov 2026 05:19:46 +0000"
+        },
+        {
+          "title": "I won’t surrender my senatorial ticket — Uzodimma",
+          "summary": "Meanwhile, Okorocha described the ruling nullifying Uzodimma’s candidacy as a victory for the nation’s judiciary and democracy\nThe post I won’t surrender my senatorial ticket — Uzodimma appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/i-wont-surrender-my-senatorial-ticket-uzodimma/",
+          "published": "Tue, 10 Nov 2026 05:06:58 +0000"
+        },
+        {
+          "title": "Man hammers father to death in Edo over prophecy",
+          "summary": "He was reportedly killed by his son who used a sledgehammer to hit him on the head. Witnesses said the suspect returned home from Lagos at the weekend  \nThe post Man hammers father to death in Edo over prophecy  appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/man-hammers-father-to-death-in-edo-over-prophecy/",
+          "published": "Tue, 10 Nov 2026 04:55:01 +0000"
+        },
+        {
+          "title": "Cartoon: Politicians’ sons can’t be thugs?",
+          "summary": "Cartoon: Politicians' sons can't be thugs?\nThe post Cartoon: Politicians&#8217; sons can&#8217;t be thugs? appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/cartoon-politicians-sons-cant-be-thugs-2/",
+          "published": "Tue, 10 Nov 2026 04:43:51 +0000"
+        },
+        {
+          "title": "Explainer: Election results collation chain that decides Nigeria’s president",
+          "summary": "Under the Electoral Act 2022, the Supreme Court held that IREV is a public viewing tool, not a legal collation system...cannot by itself invalidate election\nThe post Explainer: Election results collation chain that decides Nigeria&#8217;s president appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/explainer-election-results-collation-chain-that-decides-nigerias-president/",
+          "published": "Tue, 10 Nov 2026 04:39:41 +0000"
+        },
+        {
+          "title": "Power outages remain despite rise in generation, ministerial promise",
+          "summary": "Power Minister, Tegbe, said electricity had been restored to communities affected by recent disruptions, particularly in Lagos, Ogun, Oyo, Kwara and FCT \nThe post Power outages remain despite rise in generation, ministerial promise appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/power-outages-remain-despite-rise-in-generation-ministerial-promise/",
+          "published": "Tue, 10 Nov 2026 04:23:25 +0000"
+        },
+        {
+          "title": "2027: Tinubu’s projects’ll transform South-East economy – Shettima",
+          "summary": "“It is now clear to all Nigerians that APC is putting no stops in suffocating all opposition. From clumsy attempts to interfere in internal affairs of the opposition parties, to the use of state muscle\"\nThe post 2027: Tinubu’s projects’ll transform South-East economy &#8211; Shettima appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/2027-tinubus-projectsll-transform-south-east-economy-shettima/",
+          "published": "Tue, 10 Nov 2026 04:15:38 +0000"
+        },
+        {
+          "title": "Flamingos: Presidency, Obi bicker over access to players at Abuja airport",
+          "summary": "“To spin standard security and administrative protocols into a narrative of political victimisation is a disservice to the unity that sport is meant to foster in our country”\nThe post Flamingos: Presidency, Obi bicker over access to players at Abuja airport appeared first on Vanguard News.",
+          "link": "https://www.vanguardngr.com/2026/11/flamingos-presidency-obi-bicker-over-access-to-players-at-abuja-airport/",
+          "published": "Tue, 10 Nov 2026 04:08:25 +0000"
+        }
+      ]
+    },
+    {
+      "source": "premium_times",
+      "feed": "https://www.premiumtimesng.com/feed/",
+      "count": 10,
+      "articles": [
+        {
+          "title": "APC chairman speaks on 11th NASS leadership, says lawmakers will determine Akpabio’s fate",
+          "summary": "\"The Senate actually determines it (Senate President). Let's wait for the election first. Do you know what? I don't have anybody in mind. The Senate will determine whoever they want to make as senate president. Well, the party will only just bring the majority leader,” Mr Yilwatda said.\nThe post APC chairman speaks on 11th NASS leadership, says lawmakers will determine Akpabio&#8217;s fate appeare",
+          "link": "https://www.premiumtimesng.com/news/top-news/924040-apc-chairman-speaks-on-11th-nass-leadership-says-lawmakers-will-determine-akpabios-fate.html",
+          "published": "Tue, 10 Nov 2026 05:58:26 +0000"
+        },
+        {
+          "title": "2027: Wike promises N10m reward for FCT councillors who deliver wards for Tinubu",
+          "summary": "\"Any councillor that delivers his ward will get N10 million reward. Therefore, go and meet your leaders, go and meet your youth groups, go and consult with associations. Let’s deliver our ward to Mr President.\"\nThe post 2027: Wike promises N10m reward for FCT councillors who deliver wards for Tinubu appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/regional/north-central/924038-2027-wike-promises-n10m-reward-for-fct-councillors-who-deliver-wards-for-tinubu.html",
+          "published": "Tue, 10 Nov 2026 05:39:57 +0000"
+        },
+        {
+          "title": "Navy rescues Bayelsa commissioner, NSCDC official, 5 others from drowning",
+          "summary": "The naval spokesperson said one passenger, identified as a police officer, remained missing and assured that search and rescue efforts continued to locate the officer.\nThe post Navy rescues Bayelsa commissioner, NSCDC official, 5 others from drowning appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/924019-navy-rescues-bayelsa-commissioner-nscdc-official-5-others-from-drowning.html",
+          "published": "Mon, 09 Nov 2026 22:24:13 +0000"
+        },
+        {
+          "title": "Tinubu acknowledges challenges facing Nigerian youths, promises more opportunities",
+          "summary": "“I understand the challenges confronting our young people. I know that many of you are concerned about employment, the cost of living, access to education, opportunities to start businesses and the security of your communities,” he said.\nThe post Tinubu acknowledges challenges facing Nigerian youths, promises more opportunities appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/924028-tinubu-acknowledges-challenges-facing-nigerian-youths-promises-more-opportunities.html",
+          "published": "Mon, 09 Nov 2026 22:15:47 +0000"
+        },
+        {
+          "title": "INEC yet to receive court order on ADC, Tinubu, says Amupitan",
+          "summary": "\"As of today, I have not received a Certified True Copy of the judgement of the Federal High Court because we don’t just act on the basis of what is on social media.\"\nThe post INEC yet to receive court order on ADC, Tinubu, says Amupitan appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/924026-inec-yet-to-receive-court-order-on-adc-tinubu-says-amupitan.html",
+          "published": "Mon, 09 Nov 2026 22:14:08 +0000"
+        },
+        {
+          "title": "Tinubu driving economic, security transformation in South-east – Shettima",
+          "summary": "The vice-president stated this on Monday at the All Progressives Congress presidential campaign rally in Abakaliki, Ebonyi State.\nThe post Tinubu driving economic, security transformation in South-east – Shettima appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/924016-tinubu-driving-economic-security-transformation-in-south-east-shettima.html",
+          "published": "Mon, 09 Nov 2026 22:07:14 +0000"
+        },
+        {
+          "title": "INEC removes 1.6 million names from voters’ register, fingers 54 officials",
+          "summary": "“Fifty-four persons cutting across 10 states have been identified as complicit, and necessary disciplinary action will be taken against them, including possible prosecution,” the INEC chairman said.\nThe post INEC removes 1.6 million names from voters&#8217; register, fingers 54 officials appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/top-news/924021-inec-removes-1-6-million-names-from-voters-register-fingers-54-officials.html",
+          "published": "Mon, 09 Nov 2026 21:59:48 +0000"
+        },
+        {
+          "title": "Enugu governor appoints another Nollywood star as aide",
+          "summary": "PREMIUM TIMES earlier reported that the governor appointed popular Nollywood actress and filmmaker Eucharia Anunobi as his senior special assistant on women's mobilisation for the Enugu North District in September.\nThe post Enugu governor appoints another Nollywood star as aide appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/924017-enugu-governor-appoints-another-nollywood-star-as-aide.html",
+          "published": "Mon, 09 Nov 2026 21:16:17 +0000"
+        },
+        {
+          "title": "Stallion Group partners with Access Bank",
+          "summary": "The partnership brings 10 exclusive automotive brands and 72 models within reach of customers, thereby making vehicle ownership more accessible.\nThe post Stallion Group partners with Access Bank appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/promoted/924011-stallion-group-partners-with-access-bank.html",
+          "published": "Mon, 09 Nov 2026 20:44:50 +0000"
+        },
+        {
+          "title": "Gombe: PDP ex-chairman, ex-SSG, others join APC",
+          "summary": "The development followed a meeting between the PDP defectors and Governor Muhammadu Yahaya\nThe post Gombe: PDP ex-chairman, ex-SSG, others join APC appeared first on Premium Times Nigeria.",
+          "link": "https://www.premiumtimesng.com/news/more-news/924009-gombe-pdp-ex-chairman-ex-ssg-others-join-apc.html",
+          "published": "Mon, 09 Nov 2026 20:38:55 +0000"
+        }
+      ]
+    },
+    {
+      "source": "techpoint",
+      "feed": "https://techpoint.africa/feed/",
+      "count": 0,
+      "articles": []
+    },
+    {
+      "source": "financial_nigeria",
+      "feed": "https://financialnigeria.com/rss.xml",
+      "count": 0,
+      "articles": []
+    }
+  ],
+  "strategy_6_startup_directory": {
+    "source": "startuplist_africa",
+    "url": "https://www.startuplist.africa/startups",
+    "status": "error",
+    "error": "429 Client Error: Too Many Requests for url: https://www.startuplist.africa/startups"
+  },
+  "strategy_7_trending": {
+    "source": "product_hunt",
+    "feed": "https://www.producthunt.com/feed",
+    "count": 15,
+    "products": [
+      {
+        "title": "Dageno AI 2.0",
+        "summary": "See why AI recommends your competitors instead of you\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/agent-powered-geo-by-dageno",
+        "published": "2026-11-03T02:49:37-08:00"
+      },
+      {
+        "title": "Voyager",
+        "summary": "✴️ An agentic file browser to navigate your work context\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/vygr",
+        "published": "2026-10-01T00:18:43-07:00"
+      },
+      {
+        "title": "Jotform App for Shopify",
+        "summary": "Build powerful forms for your Shopify store\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/jotform",
+        "published": "2026-11-04T05:07:24-08:00"
+      },
+      {
+        "title": "Flic Cue",
+        "summary": "The AI Voice Button: hold to talk, shake to undo, open SDKs\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/flic-cue",
+        "published": "2026-11-06T00:39:34-08:00"
+      },
+      {
+        "title": "Egoist AI Passport",
+        "summary": "Secure and share your personal data with AI tools.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/egoist-ai-passport",
+        "published": "2026-11-07T08:27:33-08:00"
+      },
+      {
+        "title": "ProtoMap",
+        "summary": "Stop wasting AI tokens rediscovering dependencies\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/hounddog-ai-static-code-scanner-2",
+        "published": "2026-10-28T11:27:44-07:00"
+      },
+      {
+        "title": "Watchflows",
+        "summary": "Visual automation for your Mac, with AI built in\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/watchflows",
+        "published": "2026-10-27T21:13:10-07:00"
+      },
+      {
+        "title": "Pawse.ai",
+        "summary": "Sound engineered for dogs, not humans\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/pawse-ai",
+        "published": "2026-11-02T03:48:42-08:00"
+      },
+      {
+        "title": "Arcjet AI security models",
+        "summary": "A family of custom-trained security models for coding agents\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/arcjet",
+        "published": "2026-11-06T07:23:25-08:00"
+      },
+      {
+        "title": "Cardboard AI",
+        "summary": "Best way to edit videos with AI\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/cardboard-3",
+        "published": "2026-11-05T07:56:52-08:00"
+      },
+      {
+        "title": "GitHub New PR Overview",
+        "summary": "See what's blocking a PR before you scroll\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/github",
+        "published": "2026-11-08T19:34:44-08:00"
+      },
+      {
+        "title": "Sign Language by Panda Video",
+        "summary": "Add a sign language interpreter to videos already online\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/panda-video",
+        "published": "2026-11-05T10:00:46-08:00"
+      },
+      {
+        "title": "CozyZip",
+        "summary": "Zip and unzip without the surprises.\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/cozyzip",
+        "published": "2026-11-04T15:09:36-08:00"
+      },
+      {
+        "title": "Databox CLI",
+        "summary": "Your agentic analytics platform in the terminal\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/databox",
+        "published": "2026-10-26T06:19:37-07:00"
+      },
+      {
+        "title": "ClipsPal",
+        "summary": "AI video editor that edits your talking-head videos\n          \n          \n            Discussion\n            |\n            Link",
+        "link": "https://www.producthunt.com/products/clipspal",
+        "published": "2026-11-08T05:34:07-08:00"
+      }
+    ],
+    "note": "Adapt for Nigeria with niche combo; Crunchbase screenshot optional legacy."
+  },
+  "strategy_14_owid": [
+    {
+      "topic": "internet-users",
+      "url": "https://ourworldindata.org/internet",
+      "status": 200,
+      "snippet": "Internet | Our World in DataMany of us cannot imagine our lives without the Internet — but the technology is still young. Only 63% of the world’s population was online in 2023.The Internet provides an almost endless list of services: it allows us to communicate and collaborate worldwide, send money internationally (including remittances), learn and educate others, form cross-border social connections, share news, and many others.On this page, you can find all our data, visualizations, and writing relating to the Internet.Related TopicsTechnological ChangeGlobal EducationLoneliness and Social ConnectionsSpace Exploration and SatellitesResearch & WritingOctober 3, 2018The Internet's history has just begunThe Internet has already changed the world, but the big changes it will bring still lie ahead.Max RoserSeptember 18, 2019The rise of social mediaSocial media sites are used by more than two-thirds of Internet users. How has social media grown over time?Esteban Ortiz-OspinaSeptember 9, 2019Are Facebook and other social media platforms bad for our well-being?What does the research tell us about the causal impact of social media use on our well-being?Esteban Ortiz-OspinaKey Charts on InternetSee all charts on this topicNumber of people using the InternetShare of the population using the InternetAdoption of communication technologiesAbsolute numbersAdoption of communication technologies per 100 peopleDaily hours spent with digital media in the United StatesLandline Internet subscriptionsLandline Internet subscriptions by download speedLandline Internet subscriptions per 100 peopleShare of the population that owns a mobile phoneChart 1 of 9Featured Data on InternetCite this workOur articles and data visualizations rely on work from many different people and organizations. When citing this topic page, please also cite the underlying data sources. This topic page can be cited as:Hannah Ritchie, Edouard Mathieu, Max Roser, and Esteban Ortiz-Ospina (2023) - “Internet” Published online at OurWorldinData.org. Retrieved from: 'https://ourworldindata.org/internet' [Online Resource]BibTeX citation@article{owid-internet, author = {Hannah Ritchie and Edouard Mathieu and Max Roser and Esteban Ortiz-Ospina}, title = {Internet}, journal = {Our World in Data}, year = {2023}, note = {https://ourworldindata.org/internet} }Reuse this work freelyAll visualizations, data, and articles produced by Our World in Data are completely open access under the Creative Commons BY license. You"
+    },
+    {
+      "topic": "renewable-energy",
+      "url": "https://ourworldindata.org/renewable-energy",
+      "status": 200,
+      "snippet": "Renewable Energy | Our World in DataContentsSince the Industrial Revolution, the energy mix of most countries across the world has become dominated by fossil fuels. This has major implications for the global climate, as well as for human health. Three-quarters of global greenhouse gas emissions result from the burning of fossil fuels for energy. Fossil fuels are responsible for large amounts of local air pollution – a health problem that leads to at least 5 million premature deaths each year.To reduce CO2 emissions and local air pollution, the world needs to rapidly shift towards low-carbon sources of energy – nuclear and renewable technologies.Renewable energy will play a key role in decarbonizing our energy systems in the coming decades. But how rapidly is our production of renewable energy changing? What technologies look most promising in transforming our energy mix?In this article we look at the data on renewable energy technologies across the world; what share of energy they account for today, and how quickly this is changing.Renewable energy generationHow much of our primary energy comes from renewables?We often hear about the rapid growth of renewable technologies in media reports. But how much of an impact has this growth had on our energy systems?In this interactive chart, we see the share of primary energy that came from renewable technologies – the combination of hydropower, solar, wind, geothermal, wave, tidal, and modern biofuels. Traditional biomass – which can be an important energy source in lower-income settings is not included.Note that this data measures primary energy in terms of total energy supply. For more details, read how primary energy measurement has changed across our charts.Just under a tenth of the world's primary energy is now sourced from renewable technologies.Note that this is based on renewable energy's share in the energy mix. Energy consumption represents the sum of electricity, transport, and heating. We look at the electricity mix later in this article.Breakdown of renewables in the energy mixIn the section above we looked at what share renewable technologies collectively accounted for in the energy mix.In the charts shown here, we look at the breakdown of renewable technologies by their components – hydropower, solar, wind, and others.The first chart shows this as a stacked area chart, which allows us to more readily see the breakdown of the renewable mix and the relative contribution of each. The second chart is sh"
+    }
+  ],
+  "strategy_1_discovery": {
+    "status": "ok",
+    "primary": "agent_native_web_research",
+    "formula": "Successful Business + Recurring Complaint = Profitable Variation",
+    "requirements": [
+      "Cite success_url (or equivalent) for the successful business",
+      "Cite complaint source_url (http/https) with title/quote/date when available",
+      "Differentiate variation — not Strategy 6 niche-combo or Strategy 7 trending-adapt alone"
+    ],
+    "forbidden": [
+      "seed_businesses.json / archived example_complaints",
+      "strategy_1_seeds (removed)",
+      "AI-invented gaps without URLs"
+    ],
+    "discovery_leads_count": 20,
+    "discovery_leads": [
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Air Peace removes passenger after threat to burn plane forces ramp return",
+        "url": "https://nairametrics.com/2026/11/10/air-peace-removes-passenger-after-threat-to-burn-plane-forces-ramp-return/",
+        "published": "Tue, 10 Nov 2026 05:59:32 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Investors punish Nigerian insurance stocks even as profits surge",
+        "url": "https://nairametrics.com/2026/11/10/investors-punish-nigerian-insurance-stocks-even-as-profits-surge/",
+        "published": "Tue, 10 Nov 2026 05:52:45 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Midea Introduces Space Master Refrigerator in Nigeria, Bringing More Room to Everyday Living",
+        "url": "https://nairametrics.com/2026/11/09/midea-introduces-space-master-refrigerator-in-nigeria-bringing-more-room-to-everyday-living/",
+        "published": "Mon, 09 Nov 2026 20:23:55 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Nvidia CEO Jensen Huang loses $7.8 billion in 24 hours",
+        "url": "https://nairametrics.com/2026/11/09/nvidia-ceo-jensen-huang-loses-7-8-billion-in-24-hours/",
+        "published": "Mon, 09 Nov 2026 18:49:45 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "nairametrics",
+        "title": "Dangote Cement, Transcorp Power, Oando drive N2.32 trillion stock market rebound",
+        "url": "https://nairametrics.com/2026/11/09/dangote-cement-transcorp-power-oando-drive-n2-32-trillion-stock-market-rebound/",
+        "published": "Mon, 09 Nov 2026 18:44:48 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "After 12-year delay, Nigeria’s Minimum Pension Guarantee targets retirement poverty",
+        "url": "https://businessday.ng/insurance/article/after-12-year-delay-nigerias-minimum-pension-guarantee-targets-retirement-poverty/",
+        "published": "Tue, 10 Nov 2026 03:15:30 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "INVESTIGATION: Police abandon surveillance tech after spending billions",
+        "url": "https://businessday.ng/investigation/article/investigation-police-abandon-surveillance-tech-after-spending-billions/",
+        "published": "Tue, 10 Nov 2026 03:00:09 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "First Holdco, Dangote Cement, Aradel drive 60% NGX surge after FTSE reclassification",
+        "url": "https://businessday.ng/markets/article/first-holdco-dangote-cement-aradel-drive-60-ngx-surge-after-ftse-reclassification/",
+        "published": "Tue, 10 Nov 2026 02:50:36 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "Abandoned projects, budget rollovers slow Nigeria’s $2.3trn infrastructure ambition",
+        "url": "https://businessday.ng/news/article/abandoned-projects-budget-rollovers-slow-nigerias-2-3trn-infrastructure-ambition/",
+        "published": "Tue, 10 Nov 2026 02:30:42 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "businessday",
+        "title": "DisCos lose N568bn to unbilled electricity in eight months",
+        "url": "https://businessday.ng/energy/article/discos-lose-n568bn-to-unbilled-electricity-in-eight-months/",
+        "published": "Tue, 10 Nov 2026 02:00:11 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Niger gov sings ‘I’m born again’ at Christian concert",
+        "url": "https://punchng.com/niger-gov-sings-im-born-again-at-christian-concert/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 10 Nov 2026 06:55:38 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "Canada makes rural immigration programme permanent to attract skilled workers",
+        "url": "https://punchng.com/canada-makes-rural-immigration-programme-permanent-to-attract-skilled-workers/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 10 Nov 2026 06:51:57 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "I sold arms to anyone with money — Kalu",
+        "url": "https://punchng.com/i-sold-arms-to-anyone-with-money-kalu/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 10 Nov 2026 06:45:24 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "I’ll restore subsidy to ease hardship, Atiku insists",
+        "url": "https://punchng.com/ill-restore-subsidy-to-ease-hardship-atiku-insists/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 10 Nov 2026 06:40:11 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "punch",
+        "title": "2027: Tinubu will win by landslide — Kalu",
+        "url": "https://punchng.com/2027-tinubu-will-win-by-landslide-kalu/?utm_source=rss.punchng.com&utm_medium=web",
+        "published": "Tue, 10 Nov 2026 06:39:04 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Oluwo seeks Yoruba language as medium for teaching science",
+        "url": "https://www.vanguardngr.com/2026/11/oluwo-seeks-yoruba-language-as-medium-for-teaching-science/",
+        "published": "Tue, 10 Nov 2026 05:48:15 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "US-mediated talks with Russia and Ukraine to start in Abu Dhabi",
+        "url": "https://www.vanguardngr.com/2026/11/us-mediated-talks-with-russia-and-ukraine-to-start-in-abu-dhabi/",
+        "published": "Tue, 10 Nov 2026 05:25:52 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Rivers community that forbids female dogs explains tradition to NYSC members",
+        "url": "https://www.vanguardngr.com/2026/11/rivers-community-that-forbids-female-dogs-explains-tradition-to-nysc-members/",
+        "published": "Tue, 10 Nov 2026 05:19:46 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "I won’t surrender my senatorial ticket — Uzodimma",
+        "url": "https://www.vanguardngr.com/2026/11/i-wont-surrender-my-senatorial-ticket-uzodimma/",
+        "published": "Tue, 10 Nov 2026 05:06:58 +0000",
+        "use": "optional_lead_only"
+      },
+      {
+        "kind": "news_headline",
+        "source": "vanguard",
+        "title": "Man hammers father to death in Edo over prophecy",
+        "url": "https://www.vanguardngr.com/2026/11/man-hammers-father-to-death-in-edo-over-prophecy/",
+        "published": "Tue, 10 Nov 2026 04:55:01 +0000",
+        "use": "optional_lead_only"
+      }
+    ],
+    "note": "discovery_leads are optional starting points from this fetch only. Agent must verify online and cite real complaint/success URLs. CLI: business_variation_collector.py --non-interactive --inputs fixtures/sample_inputs.json"
+  },
+  "strategy_1_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy1-run to enable non-interactive collector"
+  },
+  "strategy_12_run": {
+    "status": "ok",
+    "inputs": "/agent/repos/Inc/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json",
+    "returncode": 0,
+    "selected_indices": [
+      0
+    ],
+    "ranked_preview": [
+      {
+        "description": "SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds",
+        "source": "S5-News-fixture",
+        "total_score": 5,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 1,
+          "Expensive to Solve": 1,
+          "Mandatory": 1,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees",
+        "source": "S1-fixture",
+        "total_score": 3,
+        "criteria_scores": {
+          "Growing": 1,
+          "Urgent": 0,
+          "Expensive to Solve": 1,
+          "Mandatory": 0,
+          "Frequent": 1
+        }
+      },
+      {
+        "description": "One-off curiosity about a foreign productivity app with no Nigeria buyer pain",
+        "source": "noise-fixture",
+        "total_score": 0,
+        "criteria_scores": {
+          "Growing": 0,
+          "Urgent": 0,
+          "Expensive to Solve": 0,
+          "Mandatory": 0,
+          "Frequent": 0
+        }
+      }
+    ],
+    "stdout_tail": "====\nNON-INTERACTIVE MODE (--non-interactive)\n============================================================\nReading: /agent/repos/Inc/Business-Idea-Formulation-Strategy-12-High-Value-Problem-Filtering/fixtures/sample_inputs.json\n✓ Loaded and scored 3 problems.\n\n============================================================\nSTEP 3: Ranked Problems\n============================================================\n\nProblems ranked by total score (0–5):\n\n1. [S5-News-fixture] SMEs miss tax filing deadlines even when CIT owed is zero under new small-company thresholds (Score: 5/5, Growing:1, Urgent:1, Expensive:1, Mandatory:1, Frequent:1)\n2. [S1-fixture] Marketplace 3P sellers lack a clear fee-versus-sales breakeven after monthly platform fees (Score: 3/5, Growing:1, Urgent:0, Expensive:1, Mandatory:0, Frequent:1)\n3. [noise-fixture] One-off curiosity about a foreign productivity app with no Nigeria buyer pain (Score: 0/5, Growing:0, Urgent:0, Expensive:0, Mandatory:0, Frequent:0)\n✓ Selected 1 problem(s) for prompts (min_score=4 or explicit indices).\n\n============================================================\nSTEP 5: Generate Prompt Text for ChatGPT\n============================================================\n\n✓ Prompt templates saved to 'chatgpt_strategy12_prompts.txt'.\n\n✓ Summary saved to '/tmp/tmp5yhh_93g/strategy12_summary.json'.\n\n============================================================\nNon-interactive process complete!\n============================================================\n",
+    "stderr_tail": "",
+    "note": "Mode B scoring aid only — agent still must synthesize Mode A (S12-traced GUEMF discovery ideas) per prompt dual-mode."
+  },
+  "strategy_15_run": {
+    "status": "skipped",
+    "reason": "use --with-strategy15 to enable"
+  }
+}
