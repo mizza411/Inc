@@ -38,7 +38,7 @@ def load_schedule_bundle(base_dir: Optional[str] = None) -> PaulPearlScheduleBun
     defaults = PaulPearlScheduleBundle(
         schedule=ScheduleConfig(
             slots=DEFAULT_SLOTS,
-            show_window_on_scheduled=False,
+            show_window_on_scheduled=True,
             require_internet_for_scheduled=False,
             minimize_to_tray_after_scheduled=False,
         ),

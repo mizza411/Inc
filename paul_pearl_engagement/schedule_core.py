@@ -24,7 +24,7 @@ class ScheduleConfig:
     enabled: bool = True
     weekdays_only: bool = True
     slots: Tuple[str, ...] = DEFAULT_SLOTS
-    show_window_on_scheduled: bool = False
+    show_window_on_scheduled: bool = True
     minimize_to_tray_after_scheduled: bool = False
     scheduled_cooldown_minutes: int = DEFAULT_COOLDOWN_MINUTES
     require_internet_for_scheduled: bool = False
@@ -76,7 +76,7 @@ class ScheduleConfig:
             enabled=bool(data.get("enabled", True)),
             weekdays_only=bool(data.get("weekdays_only", True)),
             slots=tuple(slots),
-            show_window_on_scheduled=bool(data.get("show_window_on_scheduled", False)),
+            show_window_on_scheduled=bool(data.get("show_window_on_scheduled", True)),
             minimize_to_tray_after_scheduled=bool(
                 data.get("minimize_to_tray_after_scheduled", False)
             ),

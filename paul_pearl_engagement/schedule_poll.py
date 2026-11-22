@@ -1,4 +1,4 @@
-"""Weekday poll — opens offer_lines.docx only (no hub window required)."""
+"""Weekday poll — opens offer_lines.docx and the main window (owner ask 22 Nov 2026)."""
 
 from __future__ import annotations
 
@@ -7,6 +7,8 @@ import time
 from datetime import datetime
 from typing import Optional, Set
 
+from main_ui import open_main
+from menu_labels import APP_TITLE
 from open_offer_lines import open_offer_lines_docx
 from paths import PACKAGE_DIR
 from schedule import (
@@ -24,8 +26,6 @@ from schedule_core import (
     within_scheduled_cooldown,
 )
 
-from menu_labels import APP_TITLE
-
 logger = logging.getLogger(__name__)
 
 
@@ -35,7 +35,7 @@ def _show_toast(slot: str) -> None:
 
         notification.notify(
             title=APP_TITLE,
-            message=f"Opening offer lines ({slot})",
+            message=f"Opening offer lines and main window ({slot})",
             app_name=APP_TITLE,
             timeout=4,
         )
@@ -86,6 +86,8 @@ def _open_slot(app, slot: str) -> None:
         _show_toast(slot)
         result = open_offer_lines_docx()
         logger.info("scheduled open %s -> %s", slot, result)
+
+        app.after(0, lambda: open_main(app))
     finally:
         app._opening_docx = False
         app._last_scheduled_run_finished_at = time.time()

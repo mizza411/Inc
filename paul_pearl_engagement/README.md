@@ -6,9 +6,9 @@ Owner-facing title: **Paul Pearl/Upstream Drive**. Product home = **Inc** (not p
 
 | Event | Behaviour |
 |-------|-----------|
-| Tray start | Opens `offer_lines.docx` if `startup_open_docx` |
-| Weekday slots | Default **10:00** and **17:00** (config) |
-| Tray menu | Open offer lines / Open Paul Pearl note / Settings… / Restart / Exit |
+| Tray start | Opens `offer_lines.docx` and the main window if `startup_open_docx` |
+| Weekday slots | Default **10:00** and **17:00** (config). Opens the Word file and the main window |
+| Tray menu | Open offer lines / Open Paul Pearl note / Show main window / Settings… / Restart / Exit |
 
 ## Run
 
@@ -16,8 +16,9 @@ Owner-facing title: **Paul Pearl/Upstream Drive**. Product home = **Inc** (not p
 pythonw paul_pearl_engagement_tray_launcher.py
 ```
 
-Auto-launch: **neither** Inc Hub nor Project Manager (owner lock 05/11/2026). Run manually with `pythonw` above.  
-Legacy PR key `upstream_drive_engagement_tray` is **disabled** so it does not auto-start beside this tray.
+Auto-launch: Project Manager key `paul_pearl_engagement_tray` (owner ask 22 Nov 2026). Not an Inc Hub card.  
+The old Project Reminder key `upstream_drive_engagement_tray` stays disabled so the retired stub does not start beside this tray.  
+When this tray starts, it opens `offer_lines.docx` and the main window. Weekday slots stay 10:00 and 17:00 and open both. Settings stays on the menu only.
 
 ## Config
 
@@ -26,12 +27,12 @@ Example: `paul_pearl_schedule_config.example.json`.
 
 ## Lifecycle log
 
-`paul_pearl_engagement.log` in this folder (absolute path). Breadcrumbs: starting, tray Exit / Restart selected, shutting down.
+`paul_pearl_engagement.log` in this folder (absolute path). Breadcrumbs: starting, tray Exit / Restart selected, shutting down. Each time the offer sheet opens, one line is `opened offer_lines.docx`. The date and time are at the start of that line.
 
 ## Settings
 
-Tray **Settings…** opens a stub window (read-only schedule summary for now).  
-Window position/size is remembered. Do not hand-edit JSON for day-to-day settings.
+Tray **Show main window** opens the small main UI. **Settings…** is a separate stub (read-only schedule summary for now).  
+Window position/size is remembered for each. Do not hand-edit JSON for day-to-day settings.
 
 Hover/action text for menu rows lives in `menu_labels.py` (pystray has no tooltip API on Windows).
 

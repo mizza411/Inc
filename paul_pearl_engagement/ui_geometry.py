@@ -1,4 +1,4 @@
-"""Save/restore Paul Pearl Settings window position and size."""
+"""Save/restore Paul Pearl window position and size."""
 
 from __future__ import annotations
 
@@ -19,38 +19,45 @@ def geometry_path() -> Path:
     return PACKAGE_DIR / GEOMETRY_FILENAME
 
 
-def load_geometry() -> Optional[str]:
+def _read_all() -> dict[str, Any]:
     path = geometry_path()
     if not path.is_file():
-        return None
+        return {}
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(data, dict):
-            raw = data.get("settings_geometry")
-            if isinstance(raw, str) and raw.strip():
-                return raw.strip()
+            return data
     except (OSError, json.JSONDecodeError, TypeError, ValueError):
         pass
+    return {}
+
+
+def load_geometry(key: str = "settings_geometry") -> Optional[str]:
+    data = _read_all()
+    raw = data.get(key)
+    if isinstance(raw, str) and raw.strip():
+        return raw.strip()
     return None
 
 
-def save_geometry(value: str) -> None:
+def save_geometry(value: str, key: str = "settings_geometry") -> None:
     path = geometry_path()
-    payload: dict[str, Any] = {"settings_geometry": value}
+    payload = _read_all()
+    payload[key] = value
     try:
         path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     except OSError as exc:
         logger.debug("geometry save failed: %s", exc)
 
 
-def bind_geometry_persist(window) -> None:
+def bind_geometry_persist(window, key: str = "settings_geometry") -> None:
     """Debounced save on move/resize. Call after window is mapped."""
 
     after_id: dict[str, Any] = {"id": None}
 
     def _persist(_event=None) -> None:
         try:
-            save_geometry(window.geometry())
+            save_geometry(window.geometry(), key=key)
         except Exception:
             pass
 
@@ -66,9 +73,15 @@ def bind_geometry_persist(window) -> None:
     window.bind("<Configure>", _schedule)
 
 
-def place_on_screen(window, geometry: Optional[str] = None) -> None:
+def place_on_screen(
+    window,
+    geometry: Optional[str] = None,
+    *,
+    key: str = "settings_geometry",
+    default: str = DEFAULT_GEOMETRY,
+) -> None:
     """Apply saved or default geometry; nudge on-screen if off-screen."""
-    geo = geometry or load_geometry() or DEFAULT_GEOMETRY
+    geo = geometry or load_geometry(key) or default
     try:
         window.geometry(geo)
         window.update_idletasks()
@@ -79,7 +92,7 @@ def place_on_screen(window, geometry: Optional[str] = None) -> None:
         sw = window.winfo_screenwidth()
         sh = window.winfo_screenheight()
         if w < 80 or h < 80:
-            window.geometry(DEFAULT_GEOMETRY)
+            window.geometry(default)
             return
         nx = min(max(0, x), max(0, sw - w))
         ny = min(max(0, y), max(0, sh - h))
@@ -87,6 +100,6 @@ def place_on_screen(window, geometry: Optional[str] = None) -> None:
             window.geometry(f"{w}x{h}+{nx}+{ny}")
     except Exception:
         try:
-            window.geometry(DEFAULT_GEOMETRY)
+            window.geometry(default)
         except Exception:
             pass

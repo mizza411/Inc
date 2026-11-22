@@ -17,6 +17,9 @@ OPEN_OFFER_HOVER = "Open the offer lines Word document"
 OPEN_NOTE_MENU = "Open Paul Pearl note"
 OPEN_NOTE_HOVER = "Open the Paul Pearl market / Air-gap note"
 
+SHOW_MAIN_MENU = "Show main window"
+SHOW_MAIN_HOVER = "Open the Paul Pearl/Upstream Drive main window"
+
 SETTINGS_MENU = "Settings…"
 SETTINGS_HOVER = "Open Paul Pearl/Upstream Drive Settings"
 

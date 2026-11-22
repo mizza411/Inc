@@ -65,6 +65,8 @@ def main() -> int:
         RESTART_HOVER,
         SETTINGS_HOVER,
         SETTINGS_MENU,
+        SHOW_MAIN_HOVER,
+        SHOW_MAIN_MENU,
     )
 
     print("  OK  package imports")
@@ -81,7 +83,13 @@ def main() -> int:
         print(f"FAIL: note hover unexpected: {OPEN_NOTE_HOVER!r}")
         return 1
 
-    for label in (OPEN_OFFER_HOVER, SETTINGS_HOVER, RESTART_HOVER, EXIT_HOVER):
+    for label in (
+        OPEN_OFFER_HOVER,
+        SHOW_MAIN_HOVER,
+        SETTINGS_HOVER,
+        RESTART_HOVER,
+        EXIT_HOVER,
+    ):
         if not label or len(label) < 8:
             print(f"FAIL: hover/action text too short: {label!r}")
             return 1
@@ -91,9 +99,15 @@ def main() -> int:
     if SETTINGS_MENU != "Settings…":
         print(f"FAIL: Settings menu caption unexpected: {SETTINGS_MENU!r}")
         return 1
+    if SHOW_MAIN_MENU != "Show main window":
+        print(f"FAIL: main menu caption unexpected: {SHOW_MAIN_MENU!r}")
+        return 1
     tray_src = (PKG / "tray_host.py").read_text(encoding="utf-8")
     if "SETTINGS_MENU" not in tray_src or "open_settings" not in tray_src:
         print("FAIL: Settings not wired in tray_host")
+        return 1
+    if "SHOW_MAIN_MENU" not in tray_src or "open_main" not in tray_src:
+        print("FAIL: main window not wired in tray_host")
         return 1
     if "OPEN_NOTE_MENU" not in tray_src or "open_paul_pearl_note" not in tray_src:
         print("FAIL: Paul Pearl note menu not wired in tray_host")
@@ -104,7 +118,17 @@ def main() -> int:
     if 'APP_TITLE = "Paul Pearl"' in tray_src:
         print("FAIL: tray_host still hardcodes old Paul Pearl-only title")
         return 1
-    print("  OK  Settings stub + note menu + hover action strings")
+    if not (PKG / "main_ui.py").is_file():
+        print("FAIL: main_ui.py missing")
+        return 1
+    poll_src_early = (PKG / "schedule_poll.py").read_text(encoding="utf-8")
+    if "open_settings" in poll_src_early:
+        print("FAIL: schedule must open main window, not Settings")
+        return 1
+    if "open_main" not in poll_src_early:
+        print("FAIL: schedule must open main window")
+        return 1
+    print("  OK  main window + Settings stub + note menu + hover action strings")
 
     pkg_src = "\n".join(
         p.read_text(encoding="utf-8")

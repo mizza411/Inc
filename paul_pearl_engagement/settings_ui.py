@@ -1,4 +1,4 @@
-"""Paul Pearl/Upstream Drive Settings stub — real schedule fields can expand later."""
+"""Paul Pearl/Upstream Drive Settings stub — schedule summary only (not the main window)."""
 
 from __future__ import annotations
 

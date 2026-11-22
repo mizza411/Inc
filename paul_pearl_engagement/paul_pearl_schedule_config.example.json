@@ -2,7 +2,7 @@
   "enabled": true,
   "weekdays_only": true,
   "slots": ["10:00", "17:00"],
-  "show_window_on_scheduled": false,
+  "show_window_on_scheduled": true,
   "minimize_to_tray_after_scheduled": false,
   "scheduled_cooldown_minutes": 25,
   "require_internet_for_scheduled": false,

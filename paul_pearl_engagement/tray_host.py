@@ -17,6 +17,7 @@ import pystray
 from PIL import Image, ImageDraw
 
 from lifecycle_log import append_lifecycle
+from main_ui import open_main
 from menu_labels import (
     APP_TITLE,
     EXIT_HOVER,
@@ -29,6 +30,8 @@ from menu_labels import (
     RESTART_MENU,
     SETTINGS_HOVER,
     SETTINGS_MENU,
+    SHOW_MAIN_HOVER,
+    SHOW_MAIN_MENU,
 )
 from open_offer_lines import maybe_open_on_startup, open_offer_lines_docx
 from open_paul_pearl_note import open_paul_pearl_note
@@ -39,7 +42,14 @@ from settings_ui import open_settings
 from single_instance import notify_already_running, release, try_acquire
 
 # Documented action text (pystray has no tooltip API on Windows).
-_ = (OPEN_OFFER_HOVER, OPEN_NOTE_HOVER, SETTINGS_HOVER, RESTART_HOVER, EXIT_HOVER)
+_ = (
+    OPEN_OFFER_HOVER,
+    OPEN_NOTE_HOVER,
+    SHOW_MAIN_HOVER,
+    SETTINGS_HOVER,
+    RESTART_HOVER,
+    EXIT_HOVER,
+)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("paul_pearl")
@@ -122,7 +132,9 @@ def main() -> int:
     install_schedule(app)
 
     def on_startup() -> None:
+        # Owner ask 22 Nov 2026: main UI + offer_lines.docx both open on start.
         maybe_open_on_startup(enabled=bundle.startup_open_docx)
+        open_main(app)
 
     app.after(800, on_startup)
 
@@ -133,6 +145,9 @@ def main() -> int:
 
     def tray_open_note(_icon=None, _item=None) -> None:
         app.after(0, open_paul_pearl_note)
+
+    def tray_show_main(_icon=None, _item=None) -> None:
+        app.after(0, lambda: open_main(app))
 
     def tray_settings(_icon=None, _item=None) -> None:
         app.after(0, lambda: open_settings(app))
@@ -164,6 +179,7 @@ def main() -> int:
     menu = pystray.Menu(
         pystray.MenuItem(OPEN_OFFER_MENU, tray_open, default=True),
         pystray.MenuItem(OPEN_NOTE_MENU, tray_open_note),
+        pystray.MenuItem(SHOW_MAIN_MENU, tray_show_main),
         pystray.MenuItem(SETTINGS_MENU, tray_settings),
         pystray.Menu.SEPARATOR,
         pystray.MenuItem(RESTART_MENU, tray_restart),
