@@ -27,8 +27,8 @@
 
 | Metric | Count | @ 1 task/day | @ 2 tasks/day |
 |--------|------:|-------------:|--------------:|
-| Pending checkboxes (`task.md`, excl. deferred/optional) | **242** | ~242 days | ~121 days |
-| Open Current Priority packages (§1–§19 with remaining work) + FIR/OTI/Tegrid + EVENT/AGRIC + NET-ASK + HB-LC-NG-1 + BB-TIMED + **GOV-IRON-THEFT-1** tracks | **22** (12 CP + FIR-INC-1 + FIR-ABUJA-MON-1 + OTI-INC-1 + TEGRID-RE-GTM-1 + NICHE-EVENT-1 + AGRIC-IDEAS-1 + NET-ASK-REMIND-1 + HB-LC-NG-1 + BB-TIMED-1 + GOV-IRON-THEFT-1) | ~22 days | ~11 days |
+| Pending checkboxes (`task.md`, excl. deferred/optional) | **238** | ~238 days | ~119 days |
+| Open Current Priority packages (§1–§19 with remaining work) + FIR/OTI/Tegrid + EVENT/AGRIC + NET-ASK + BB-TIMED + **GOV-IRON-THEFT-1** tracks | **21** (12 CP + FIR-INC-1 + FIR-ABUJA-MON-1 + OTI-INC-1 + TEGRID-RE-GTM-1 + NICHE-EVENT-1 + AGRIC-IDEAS-1 + NET-ASK-REMIND-1 + BB-TIMED-1 + GOV-IRON-THEFT-1) | ~21 days | ~11 days |
 | Bold unchecked parents (nested phases; finer grain) | **71** | ~71 days | ~36 days |
 | Open `MANUAL_TEST.md` checkboxes (Inc apps) | **80** | (sign-off / human steps; not all are parallel “build” tasks) | — |
 | Open Abuja monetization manual (`ABUJA_MONETIZATION_MANUAL_TESTS.md`) | **42** | owner field/ops steps | — |
@@ -102,11 +102,21 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ---
 
+## UDC-1 — Upstream Drive Consultancy (completed 22 Nov 2026)
+
+**Status:** Done. Phases 0, 1, 2a, 2b, 2c, 3, and 5 were already done. Phase 4, the brand one-pager, was written on 22 Nov 2026.
+**Pack:** `Upstream-Drive-Consultancy/`
+**Pitch skeleton:** `Upstream-Drive-Consultancy/brand_one_pager.md`
+**Satellite:** `.cursor/rules/task_udc_upstream_drive.md` deleted the same day. The pack stays. Do not merge this into Paul Pearl.
+**Daily open:** still `offer_lines.docx` only. The one-pager is not on the schedule.
+
+---
+
 ## PAUL-PEARL-UPSTREAM-1 — Paul Pearl note (Inc home; one tray sibling)
 
 **Moved here:** 31/10/2026 from `project_reminder` `.cursor/rules/task.md`.  
 **Brand lock:** Registered main biz = **Paul Pearl**. Tray title = **Paul Pearl/Upstream Drive** (one product). App home = **Inc**.  
-**Sibling (do not merge):** **UDC-1** · **PAUL-PEARL-TRAY-INC-1** (tray host **0–1d ✅**).  
+**Sibling (do not merge):** **UDC-1** (completed 22 Nov 2026, section above) · **PAUL-PEARL-TRAY-INC-1** (tray host **0–1d ✅**).  
 **Tray host:** Inc `paul_pearl_engagement/`. PR `upstream_drive_engagement/` = retire stub only.  
 **Do not** create a second Drive tray. **Do not** restart Project Manager to prove. No secrets / money amounts in tracked notes.
 
@@ -144,8 +154,7 @@ cd C:\dev\Inc\field_intelligence_radar
 
 **Done when:** Note file exists and opens from the Inc **Paul Pearl/Upstream Drive** tray via the extra menu item. **Met.**
 
-**Next when picked:** none for this parent.  
-**Moved out (08/11/2026):** Nigeria intent-phrase gap skim is **not** Paul Pearl work. Lives in project_reminder **ENTREPRENEUR-NG-GAP-SKIM-1** (Entrepreneur Skim Routine). Do **not** re-attach that skim here. Do **not** call the owner phrase board “MacroDroid phrases” in backlog copy.
+**Next when picked:** none for this parent (optional phrase-skim later from the note section 6).
 
 ---
 
@@ -154,7 +163,7 @@ cd C:\dev\Inc\field_intelligence_radar
 **Added:** 05/11/2026 (draft → Inc backlog).  
 **Owner lock:** Change the **existing** Upstream engagement tray into **Paul Pearl/Upstream Drive**. **Do not** create a separate second tray. Inc `paul_pearl_engagement/` is the live host. PR `upstream_drive_*` = retire stubs (**1d ✅**).  
 **Registered / main biz:** Paul Pearl. **Owner-facing tray title:** exactly **Paul Pearl/Upstream Drive** (slash form).  
-**Sibling:** **PAUL-PEARL-UPSTREAM-1** (note content) · **UDC-1** (company pack / `offer_lines.docx` — do not merge).  
+**Sibling:** **PAUL-PEARL-UPSTREAM-1** (note content) · **UDC-1** (completed 22 Nov 2026, pack stays, do not merge).  
 **PR leftovers (stubs only):** `upstream_drive_engagement/README.md` + `upstream_drive_engagement_tray_launcher.py` · PM key `upstream_drive_engagement_tray` **enabled: false**.  
 **Do not** create a second Drive tray. **Do not** restart Project Manager to prove. Ask owner before any auto-launch wiring. No secrets / money amounts in tracked notes.
 
@@ -180,7 +189,7 @@ cd C:\dev\Inc\field_intelligence_radar
 | `Upstream-Drive-Consultancy/` | **Keep as-is** for now (UDC pack + `offer_lines.docx`). Folder rename is **not** required for this tray title lock |
 | `offer_lines.docx` open | Same one tray (menu / schedule as already wired). Share details = **PAUL-PEARL-UPSTREAM-1** Phase 0 |
 | Second tray | **Forbidden** |
-| Auto-launch | **Neither** (05/11/2026 owner) — manual `pythonw` only. PR `upstream_drive_engagement_tray` **enabled: false** |
+| Auto-launch | **Project Manager** key `paul_pearl_engagement_tray` enabled 22 Nov 2026 (owner asked for the window again). Old PR key `upstream_drive_engagement_tray` stays **false**. Not an Inc Hub card. |
 
 | Phase | Goal | Status | Est. |
 |-------|------|--------|------|
@@ -206,6 +215,8 @@ cd C:\dev\Inc\field_intelligence_radar
 
 **Done when:** One tray titled **Paul Pearl/Upstream Drive** runs from Inc, PR legacy Upstream host is gone, no second engagement tray. **Met** for 0–1d.
 
+**22 Nov 2026:** Owner asked why the window no longer auto-opens. Cause: the 05/11/2026 move left Project Manager not starting this tray. Wired `paul_pearl_engagement_tray` to the Inc launcher and left the retired PR key off. Owner then asked for a **main UI** (not Settings) plus `offer_lines.docx` at tray start and at weekday **10:00** / **17:00**. `main_ui.py` holds that window. Settings stays menu-only. The log records `opened offer_lines.docx` and `opened main window`. Project Manager starts the tray so both come up that way.
+
 **Next when picked:** none for core move — optional Phase **2** only if owner wants a separate Upstream biz later. Manual: `pythonw C:\dev\Inc\paul_pearl_engagement_tray_launcher.py`.
 
 ---
@@ -225,7 +236,7 @@ cd C:\dev\Inc\field_intelligence_radar
 **Authoritative backlog:** [`.cursor/rules/task_net_ask_remind.md`](task_net_ask_remind.md)  
 **You:** `network_ask_reminder/MANUAL_TEST.md` once · ≥3 real asks · `log-add` each  
 **Automation already green:** Phases 2–4 smokes (20) · Hub 09:30 M/W/F · PR docx boot key  
-**Next cadence day:** Mon **2026-08-10** (today Sat = off-cadence; early asks still fine)
+**Next cadence day:** Mon / Wed / Fri 09:30 (refreshed 2026-11-19; next hit Fri **2026-11-20**). Phase 6 owner steps 6.1–6.5 still open. Chat not yet deletable: satellite still needed.
 
 ---
 
@@ -305,23 +316,6 @@ cd C:\dev\Inc\field_intelligence_radar
 
 ---
 
-## HB-LC-NG-1 — High-barrier, low-competition NG opportunities AI is not doing (pointer)
-
-**Status:** 🟡 **Discovery (chat 2026-08-17)** — not a product yet; durable pack not written until owner approves  
-**Attempt:** 1  
-**Owner ask (2026-08-17):** Research high-barrier, low-competition Nigerian market opportunities that AI is not currently doing.  
-**Filter (locked for this scan):** (1) **High barrier** = licence / capital kit / certified people / physical site / legal liability; (2) **Low competition** = few *formal* operators vs demand, or legally mandated capacity still missing; (3) **AI-resistant** = a chatbot or code agent cannot hold the licence, move the goods, stamp a lab result, or take statutory liability.  
-**Do not merge with:** AGRIC-IDEAS-1 (farm-input pilot), FIR-ABUJA-MON-1 (site *reports*), TEGRID-RE-GTM-1, §18 SME Compliance Lite (checklist app), Prospect-Businesses software shortlist (ExamFee / SCIMLite / AgentDispute).  
-**Layout (recommend, wait approve):** keep discovery under `business_research/` (existing deep-research folder) — e.g. `business_research/high_barrier_ai_resistant_ng_20260817.md` + optional `.docx`. **No** new product folder, Hub card, or tray until a single opportunity is picked.  
-**Next:** owner picks 1–2 rows from the 2026-08-17 chat table → Phase 0 one-pager (buyer, licence path, capex band, 30–90d test) **or** skip.
-
-- [ ] Owner confirms this track (or parks it)
-- [ ] Owner picks 1–2 opportunities for a Phase 0 one-pager
-- [ ] If go: write durable md under `business_research/` (pandoc docx optional); **do not** auto-graduate to `Prospect-Businesses/`
-- [ ] If no-go: leave pointer only; do not build
-
----
-
 ## GOV-IRON-THEFT-1 — Gov iron theft mitigation (B2G detect / respond)
 
 **Status:** 🟢 **Phases 0–4 ✅** · **Solution Playbook ✅** (2026-10-13) — owner fills LGA/fee blanks  
@@ -354,7 +348,7 @@ cd C:\dev\Inc\field_intelligence_radar
 - [x] **Phase 4** — Ops HTML desk (`/ops`), WhatsApp webhook stub, `tests/test_phase4_smoke.py`, `MANUAL_TEST.md` leftovers documented
 - [x] **Solution Playbook** — Start-to-finish ops (`SOLUTION_PLAYBOOK.md`): Prepare, Prevent, Detect, Respond, Deny cash-out, Learn/scale
 
-**Related (do not merge):** FIR-ABUJA-MON-1 (site reports) · TEGRID-RE-GTM-1 · HB-LC-NG-1 discovery · §18 compliance lite  
+**Related (do not merge):** FIR-ABUJA-MON-1 (site reports) · TEGRID-RE-GTM-1 · §18 compliance lite  
 
 **Next:** follow `SOLUTION_PLAYBOOK.md` with a named LGA **or** stage/commit/push playbook **or** fill sell blanks  
 
@@ -500,6 +494,37 @@ cd C:\dev\Inc\field_intelligence_radar
 **Conversation handoff (2026-07-31):** Phase **0–4** on disk. **MANUAL_TEST Attempt 1:** agent passed scriptable steps (17/17 smokes, route pack, tag/outcome/STOP, `live_send=false`). **You still owe:** Maps link click-check + `DEMO_CHECKLIST.md` walk vs Tegrid UI — then sign the MANUAL_TEST footer.
 
 **Next owner action:** Finish remaining MANUAL_TEST rows (Maps + demo checklist) → sign off — or Phase 5 / live-send only after that.
+
+---
+
+## Sidebar chat batch assess (image — 2026-11-19)
+
+**Attempt:** 2. Status sync only. No product code this pass.
+**Source:** Cursor Archived sidebar, 10 chats. Problem survey integration was the selected row.
+**Goal:** Each title has a durable tracker, any owner step sits in a manual-test file, and the delete answer is recorded here.
+
+| # | Sidebar title | Chat | Progress / status | Pending (not chat-only) | Manual tests (you) | Safe to delete chat? |
+|---|----------------|------|-------------------|-------------------------|--------------------|----------------------|
+| 1 | Pending tasks and priorities | 89511c2c | Count and focus notes are the 2026-07-23 handoff above. On 2026-07-30 you locked the public form rule: your personal name must not show. | Set the public contact link for the wedding landing | `post-wedding-comms-pack/MANUAL_TEST.md` public contact link, plus `landing/SET_CONTACT_URL.md` | **Yes** |
+| 2 | Inc Hub funding options | 9a838204 | Prospect funding notes and the equity-financing rule are done (2026-10-21). Do not copy that track into this file. Hub open-times window is in `inc_launcher`. Network-ask phase 7c is done. Conference fetch refusals were handled. | GRC prep stays in the project_reminder task file as RJF-GRC-CV-1. The 25 Oct window list was not saved, because you did not send an order. A later priority pass can rebuild it. | None new in Inc | **Yes** |
+| 3 | Image task and deletion | 4116b3c7 | This chat wrote the 2026-07-24 batch below. | None in that chat | None | **Yes** |
+| 4 | Run all executable business-idea... | 9087a2f2 (19 Jul). A second archived chat with the same title is 5a956e53 (15 Jul). | Formulation runs and the Crunchbase source change are in section 8 and section 14. | Optional live Hub two-run | Optional Cursor Enter in `inc_launcher/MANUAL_TEST.md` section G, and `agent-business-idea-runs/MANUAL_TEST.md` | **Yes**, both chats |
+| 5 | Inc Hub strategy automation | 3feaaaa3 | Section 4 Phase 5 Hub front door is closed. | Optional Phase 5.5 schedule, only after you pick a weekday and time | Optional section G Enter | **Yes** |
+| 6 | Business bookmarks organization | 25183a48 | Sorter import and review are shipped. The queue is still yours to file. | Hygiene, then batch file. Phase 3 auto de-bookmark is not built. | `business_bookmark_sorter/MANUAL_TEST.md` sections A-F | **Yes** |
+| 7 | Problem survey integration | 11c21132 | Section 1 Phases A-C2 are done. The survey is on GitHub Pages. | C3, retire the Google Form, then the live dashboard check | `problem_identification_tool/MANUAL_TEST.md` C3 | **Yes** |
+| 8 | Wedding business ideas exploration | 00da8ab7 | Section 7 Phase 1b and the landing files are shipped. The chat's last line is older than that. | Publish the landing, set the public contact link, host the app, then Phase 0b | `post-wedding-comms-pack/MANUAL_TEST.md` sections B, D, and P1 once at sign-off, plus the public contact link | **Yes** |
+| 9 | Pending tasks overview | d0e628f0 | Same handoff as the 2026-07-23 block at the top of this file | Online-tasks Day 1 signups, and the wedding host work in row 8 | `online_tasks_income/MANUAL_TEST.md` Day 1 | **Yes** |
+| 10 | Business idea formulation strategy | 299b05fe | You stopped after section 15-17 were pushed (`d47a07d`). Section 15 and section 16 are still planning. | Pick hypothesis A, B, or C in section 16 before any build | None until you pick | **Yes** |
+
+### Batch delete verdict (2026-11-19)
+
+| Verdict | Detail |
+|---------|--------|
+| Can you delete all 10 Archived chats in the image? | Yes. Nothing those chats still need is only in chat. |
+| Not blockers (open work stays on disk) | Wedding public link and host. Problem-survey C3. Bookmark filing. Online-tasks Day 1. Section 15 and section 16 are unstarted. Optional Hub Enter. GRC prep in the other repo. |
+| Would become a blocker | A decision, a signup result, or a secret that exists only in one of these chats. None found. The unsaved 25 Oct window list is not a decision. |
+
+**New task file?** No. This batch stays next to the 2026-07-24 and 2026-07-20 batches. The finished prospect-funding track stays out of this file, as that track already required.
 
 ---
 
@@ -1402,9 +1427,7 @@ Final link storage format (per-destination `.md` link lists vs `links.json` regi
 #### Out of scope (v1)
 - MC/planner SaaS · native App Store app · full wedding suite · print ops · WhatsApp API required
 
-**Priority:** Set public `CONTACT_URL` (brand Form / product IG / brand mailto — **no phone in git**, **no personal name on Form**) → push → Streamlit Cloud → short manual §B/§D → IG/0b. Guide: `landing/SET_CONTACT_URL.md`.
-
-**Conversation handoff (this §7 landing / CONTACT_URL thread):** **Safe to delete this chat.** Durable state = this §7 + `landing/` + `DEPLOY.md` + `SET_CONTACT_URL.md` (incl. brand-Form privacy lock). Nothing unique left only in transcript. Re-open with: “Continue §7 CONTACT_URL” or “Wire landing CONTACT_URL”.
+**Priority:** Set public `CONTACT_URL` (Form/mailto/IG — no phone in git) → push → Streamlit Cloud → short manual §B/§D → IG/0b.
 
 > **Manual UI:** Only remaining human steps live in [MANUAL_TEST.md](../Strategy-2-Problem-Solving/post-wedding-comms-pack/MANUAL_TEST.md) (“Your minimum checklist”). Policy: `.cursor/rules/deferred-manual-testing.mdc`.
 
@@ -1760,7 +1783,7 @@ Treat cybersecurity as a **vertical filter** on **Strategy 5** (general Nigerian
 
 
 ### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
-**Status:** Automation A+B **Active**; Phase 3 proof PR **#67**; **Phase 7 core COMPLETE 2026-10-10** (7.2–7.8 + 7.10). **7.9.1** fetch shipped **2026-10-11**. **Phase 7.11 COMPLETE 2026-10-25** (7.11.1–7.11.6, including live proof).
+**Status:** Automation A+B **Active**; Phase 3 proof PR **#67**; **Phase 7 core COMPLETE 2026-10-10** (7.2–7.8 + 7.10). **7.9.1** fetch shipped **2026-10-11**. **Phase 7.11 COMPLETE 2026-10-25** (7.11.1–7.11.6, including live proof). **IDEA-APP-NAME-1 done** 2026-11-16 (`6c7f15a`). Detail is in Notes, section 19.
 **One-liner:** Daily Cursor Automations (Pass 1 → Pass 2 → `.md`+`.docx`) plus Inc tray catch-up that syncs `main` and opens **every not-yet-shown** formulation `.docx` — **without** daily owner merge/pull/open clicks on the happy path.
 **Full phased backlog:** see **§19** under Notes (Phases **0–7**).
 **Locks:** Phase 0 cloud/PR table still holds for Automations. **Phase 7 (2026-10-10)** supersedes old **0.4b / today-only** open rule — see Notes §19 Phase 7 decision table (**7.R1–7.R10**). Cloud never opens Word. Local owns pull/sync + Word open + shown-state.
@@ -2604,6 +2627,7 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 
 ### 19. Daily unattended formulation Pass 1→2 (Cursor Automations) (NEW — 2026-07-23)
 **Status:** Automation A+B **Active**; Phase 3 PR **#67** merged; **Phase 7 COMPLETE 2026-10-10**. **7.9** deferred (2c).
+**IDEA-APP-NAME-1 done 2026-11-16, pushed `6c7f15a`.** Pass 1 and Pass 2 product titles end in Check, Scan, Verify, Track, Alert, Record, Register, Monitor, Guard, or App. Titles do not end in Desk, Pack, Clock, Board, Brief, Kit, Checklist, Playbook, Plot, Spot, Cohort, or Sheet. Older idea files were left as they were. The 17, 18, and 19 Nov 2026 runs used the job words. No Agents window change. The short task file was removed after this note.
 **Parent / Current Priority:** §19
 **Related:** §14 (Pass 1/2 contract — CLOSED v1); §4 Phase 5.5 (tray Hub modal schedule — **do not merge** into this task); `prompts/agent_formulation_run.txt`; `prompts/agent_formulation_pack.txt`; `prompts/FORMULATION_PASS_CONTRACT.md`; `prompts/CLOUD_FORMULATION_AUTOMATIONS.md`; `agent-business-idea-runs/`; Hub `agent_formulation_run` / `agent_formulation_pack`.
 
@@ -2698,7 +2722,7 @@ Contract: prompts/FORMULATION_PASS_CONTRACT.md.
 - [x] **2.1 — Create Automation A** (Cursor Automations): **Inc §19 A — Pass 1 Discover**; daily cron; repo Inc `main`; instructions = Pass 1 spine (2026-07-24 Active).
 - [x] **2.2 — Outputs (contract):** Writes `agent-business-idea-runs/outputs/business_ideas_YYYYMMDD.md` with `_PENDING_PASS_2_PACK_`; no Pass 2 in same run.
 - [x] **2.3 — Persist per Phase 0 git policy:** Open PR from `formulation/auto-YYYYMMDD`; no direct `main` push (in instructions).
-- [ ] **2.4 — Prove once:** First cloud Pass 1 artifact reviewed (scheduled **2026-07-25 07:00 GMT+1** or manual Play); Hub manual path still works.
+- [ ] **2.4 — Prove once:** First cloud Pass 1 artifact reviewed (scheduled **2026-07-25 07:00 GMT+1** or manual Play); Hub manual path still works. **Evidence 2026-11-19:** Pass 1 runs have run since 2026-07-25 (first PR #1, branch `cursor/formulation-automation-a-discover-de67`; later Pass 1 PRs include #3, #6, #18, #20, #25, #30, #42, #46, #47). None of those PRs is merged yet, so the owner's review is still open. Owner: review one PR, then tick 2.4. Hub path not re-checked in this pass.
 - [x] **2.5 — Checkpoint:** Automation A enabled 2026-07-24; **do not** build Pass 2 until 2.4 or user approves Phase 3 early.
 
 **Phase 2 definition of done (create):** ✅ Daily Pass 1 Automation exists and is **Active**. **Proof (2.4)** still open until first run succeeds.
